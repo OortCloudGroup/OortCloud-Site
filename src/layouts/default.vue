@@ -17,6 +17,7 @@
         <img src="@/assets/img/dashboard.png" />
       </div>
     </div>
+    <div style="height: 64px;width: 100%;"></div>
     <slot />
     <div style="height: 100px; width: 100%">
       <div style="height: 100px; width: 100%"></div>
@@ -129,6 +130,10 @@ function handleSelect(path: string) {
 <style scoped lang="scss">
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
   display: flex;
   flex-direction: row;
   width: 100%;
