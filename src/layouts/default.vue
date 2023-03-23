@@ -116,16 +116,14 @@
 </template>
 
 <script setup lang="ts">
-
-const activeIndex = ref('/')
+const route = useRoute()
+const activeIndex = ref(route.path)
 const router = useRouter()
 function handleSelect(path: string) {
   activeIndex.value = path
   router.push(path)
 }
-
 </script>
-
 
 <style scoped lang="scss">
 

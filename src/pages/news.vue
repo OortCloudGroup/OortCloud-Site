@@ -5,17 +5,13 @@
       <span>官方发布的最新动态或消息，为您提供第一手资讯</span>
     </div>
     <div class="div_item">
-        <a v-for="(item, index) in newsList" :href="'http://oortcloudsmart.com/oort-news/oortnews/' + item.ID">
-          <div class="div_item_box">
-            <div class="news">
-              <img :src="item.CoverImg">
-            </div>
-            <div>
-                <span class="div_item_span">{{ item.Title }}</span>
-                <span class="div_item_span1">{{ item.Time }}</span>
-            </div>
-          </div>
-      </a>
+      <NewsItem
+        v-for="(item, index) in newsList"
+       :key="index"
+       :title="item.Title"
+       :time="item.Time"
+       :cover-img="item.CoverImg">
+      </NewsItem>
     </div>
     <!--分页-->
     <div class="div_ie9_4" style="display: flex;align-items: center;justify-content: center;min-width: 348px;">
@@ -111,48 +107,6 @@ function nextPage() {
     padding-top: 3rem;
     max-width: 1240px;
 }
-.div_item>a{
-    display: block;
-}
-
-
-.div_item_box {
-    width: 350px;
-    min-height: 310px;
-    display: flex;
-    margin: 0 20px;
-    flex-direction: column;
-    padding-bottom: 41px;
-}
-
-.div_item_box div {
-    display: flex;
-    flex-direction: column;
-    background: #F8F8F8;
-    min-height: 170px;
-}
-
-.div_item_box img {
-    width: 350px;
-    height: 270px;
-    object-fit: cover;
-    margin-bottom: 2px;
-}
-
-.div_item_span {
-    font-size: 18px;
-    padding: 34px 26px 18px 26px;
-    min-height: 68px;
-    color: #333333;
-    font-weight: bold;
-    line-height: 24px;
-}
-
-.div_item_span1 {
-    font-size: 16px;
-    color: #999999;
-    margin: 20px 0 0 28px;
-}
 
 #page {
     display: flex;
@@ -215,23 +169,6 @@ function nextPage() {
     font-size: 14px;
     color: #FFFFFF;
     letter-spacing: 0;
-}
-
-.news {
-    overflow: hidden;
-}
-
-.news img {
-    cursor: pointer;
-    transition: transform 0.6s; /*设置过渡时间*/
-}
-
-.news img:hover {
-    transform: scale(1.1, 1.1);
-}
-
-.div_item_span:hover {
-    color: #5378B7;
 }
 
 #pre_page {
