@@ -202,7 +202,7 @@ const hardwareMenu = ref<Menu[]>([
     title: '移动存储',
     showTitle: true,
     menus: [
-      { name: 'U盘', logo: new URL('@/assets/img/app/icon_u.png', import.meta.url).href },
+      { name: 'U盘', logo: new URL('assets/img/app/icon_u.png', import.meta.url).href },
       { name: '移动硬盘', logo: new URL('assets/img/app/icon_mobileu.png', import.meta.url).href }
     ]
   },
