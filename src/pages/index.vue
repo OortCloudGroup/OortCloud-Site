@@ -4,7 +4,7 @@
       <Carousel :carouse-list="carouseList"></Carousel>
     </div>
     <div>
-      
+
 
     </div>
   </div>
