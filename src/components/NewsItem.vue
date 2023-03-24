@@ -2,7 +2,7 @@
   <a :href="'http://oortcloudsmart.com/oort-news/oortnews/' + id">
     <div class="div_item_box">
       <div class="news">
-        <img :src="coverImage">
+        <img :src="baseUrl + coverImage">
       </div>
       <div>
         <span class="div_item_span">{{ title }}</span>
@@ -20,7 +20,8 @@ const props = defineProps({
   id: Number
 })
 
-const coverImage = computed(()=> props.coverImg?.split('32610')[1])
+const baseUrl = ref('https://www.oortcloudsmart.com')
+const coverImage = computed(() => props.coverImg?.split('32610')[1])
 
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="header_wrapper">
-      <div ~click="backToHome" class="header_logo">
+      <div @click="backToHome" class="header_logo">
         <img src="@/assets/img/logo_white.png" />
       </div>
       <div class="header_menu">
@@ -104,10 +104,6 @@
             <span class="dropdown_col_item_label">门户与应用仓库</span>
           </div>
           <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="@/assets/img/home/xl_4.png">
-            <span class="dropdown_col_item_label">XMobileStudio移动应用开发支撑平台</span>
-          </div>
-          <div class="dropdown_col_item">
             <img class="dropdown_col_item_logo" src="@/assets/img/home/xl_5.png">
             <span class="dropdown_col_item_label">安全管控MDM</span>
           </div>
@@ -119,9 +115,6 @@
             <img class="dropdown_col_item_logo" src="@/assets/img/home/xl_7.png">
             <span class="dropdown_col_item_label">定制安全Pad终端</span>
           </div>
-        </div>
-        <div class="dropdown_col" style="flex: 1.5; padding-top: 22px;">
-          <p class="dropdown_col_title"></p>
           <div class="dropdown_col_sort">
             <img class="dropdown_col_sort_logo" src="@/assets/img/home/zhdd.png">
             <span class="dropdown_col_sort_label">指挥调度与IOC大数据可视化</span>
@@ -142,6 +135,9 @@
             <img class="dropdown_col_item_logo" src="@/assets/img/app/icon_xdata.png">
             <span class="dropdown_col_item_label">XDataStudio大数据底座</span>
           </div>
+        </div>
+        <div class="dropdown_col" style="flex: 1.5; padding-top: 22px;">
+          <p class="dropdown_col_title"></p>
           <div class="dropdown_col_sort">
             <img class="dropdown_col_sort_logo" src="@/assets/img/home/dzh.png">
             <span class="dropdown_col_sort_label">私有云</span>
@@ -153,6 +149,10 @@
           <div class="dropdown_col_item">
             <img class="dropdown_col_item_logo" src="@/assets/img/home/xl_12.png">
             <span class="dropdown_col_item_label">移动端服务化能力支撑平台（mPaaS）</span>
+          </div>
+          <div class="dropdown_col_item">
+            <img class="dropdown_col_item_logo" src="@/assets/img/home/xl_4.png">
+            <span class="dropdown_col_item_label">XMobileStudio移动应用开发支撑平台</span>
           </div>
           <div class="dropdown_col_item">
             <img class="dropdown_col_item_logo" src="@/assets/img/home/xl_8.png">
