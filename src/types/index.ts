@@ -4,3 +4,14 @@ export interface Carousel {
   desc: string,
   buttons: []
 }
+
+export interface Menu {
+  title: string,
+  showTitle: boolean,
+  menus: MenuItem[]
+}
+
+interface MenuItem{
+  name: string,
+  logo: string
+}
