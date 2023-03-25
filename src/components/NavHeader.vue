@@ -25,31 +25,31 @@
           <div class="header_dialog_item_title">双系统安全移动办公</div>
           <div class="header_dialog_item_main">
             <div class="header_dialog_item_main_div">
-              <img src="@/assets/img/app/chat.png">
+              <img src="/img/app/chat.png">
               <div>即时通讯</div>
             </div>
             <div class="header_dialog_item_main_div">
-              <img src="@/assets/img/app/syy.png">
+              <img src="/img/app/syy.png">
               <div>私有云部署的移动安全办公云平台</div>
             </div>
             <div class="header_dialog_item_main_div">
-              <img src="@/assets/img/home/xl_3.png">
+              <img src="/img/home/xl_3.png">
               <div>门户与应用仓库</div>
             </div>
             <div class="header_dialog_item_main_div">
-              <img src="@/assets/img/app/mobile.png">
+              <img src="/img/app/mobile.png">
               <div>移动应用开发支撑平台</div>
             </div>
             <div class="header_dialog_item_main_div">
-              <img src="@/assets/img/home/xl_5.png">
+              <img src="/img/home/xl_5.png">
               <div>安全管控MDM</div>
             </div>
             <div class="header_dialog_item_main_div">
-              <img src="@/assets/img/home/xl_6.png">
+              <img src="/img/home/xl_6.png">
               <div>定制手机型安全终端</div>
             </div>
             <div class="header_dialog_item_main_div">
-              <img src="@/assets/img/home/xl_7.png">
+              <img src="/img/home/xl_7.png">
               <div>定制安全Pad终端</div>
             </div>
           </div>
@@ -58,19 +58,19 @@
           <div class="header_dialog_item_title">双系统安全移动办公</div>
           <div class="header_dialog_item_main">
             <div class="header_dialog_item_main_div">
-              <img src="@/assets/img/home/xl_9.png">
+              <img src="/img/home/xl_9.png">
               <div>指挥调度一张图</div>
             </div>
             <div class="header_dialog_item_main_div">
-              <img src="@/assets/img/home/xl_10.png">
+              <img src="/img/home/xl_10.png">
               <div>XSmart大数据IOC可视化平台</div>
             </div>
             <div class="header_dialog_item_main_div">
-              <img src="@/assets/img/app/icon_apache.png">
+              <img src="/img/app/icon_apache.png">
               <div>Apache Superset</div>
             </div>
             <div class="header_dialog_item_main_div">
-              <img src="@/assets/img/app/icon_xdata.png">
+              <img src="/img/app/icon_xdata.png">
               <div>XDataStudio大数据底座</div>
             </div>
           </div>
@@ -87,95 +87,95 @@
         <div class="dropdown_col" style="flex: 1.5">
           <p class="dropdown_col_title">基础软件</p>
           <div class="dropdown_col_sort">
-            <img class="dropdown_col_sort_logo" src="@/assets/img/home/sxt.png">
+            <img class="dropdown_col_sort_logo" src="/img/home/sxt.png">
             <span class="dropdown_col_sort_label">安全移动办公</span>
           </div>
           <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="@/assets/img/home/xl_1.png">
+            <img class="dropdown_col_item_logo" src="/img/home/xl_1.png">
             <span class="dropdown_col_item_label">即时通讯</span>
             <!-- <span>NEW</span> -->
           </div>
           <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="@/assets/img/home/xl_2.png">
+            <img class="dropdown_col_item_logo" src="/img/home/xl_2.png">
             <span class="dropdown_col_item_label">私有云部署的移动安全办公云平台</span>
           </div>
           <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="@/assets/img/home/xl_3.png">
+            <img class="dropdown_col_item_logo" src="/img/home/xl_3.png">
             <span class="dropdown_col_item_label">门户与应用仓库</span>
           </div>
           <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="@/assets/img/home/xl_5.png">
+            <img class="dropdown_col_item_logo" src="/img/home/xl_5.png">
             <span class="dropdown_col_item_label">安全管控MDM</span>
           </div>
           <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="@/assets/img/home/xl_6.png">
+            <img class="dropdown_col_item_logo" src="/img/home/xl_6.png">
             <span class="dropdown_col_item_label">定制手机型安全终端</span>
           </div>
           <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="@/assets/img/home/xl_7.png">
+            <img class="dropdown_col_item_logo" src="/img/home/xl_7.png">
             <span class="dropdown_col_item_label">定制安全Pad终端</span>
           </div>
           <div class="dropdown_col_sort">
-            <img class="dropdown_col_sort_logo" src="@/assets/img/home/zhdd.png">
+            <img class="dropdown_col_sort_logo" src="/img/home/zhdd.png">
             <span class="dropdown_col_sort_label">指挥调度与IOC大数据可视化</span>
           </div>
           <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="@/assets/img/home/xl_9.png">
+            <img class="dropdown_col_item_logo" src="/img/home/xl_9.png">
             <span class="dropdown_col_item_label">指挥调度一张图</span>
           </div>
           <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="@/assets/img/home/xl_10.png">
+            <img class="dropdown_col_item_logo" src="/img/home/xl_10.png">
             <span class="dropdown_col_item_label">XSmart大数据IOC可视化平台</span>
           </div>
           <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="@/assets/img/app/icon_apache.png">
+            <img class="dropdown_col_item_logo" src="/img/app/icon_apache.png">
             <span class="dropdown_col_item_label">Apache Superset</span>
           </div>
           <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="@/assets/img/app/icon_xdata.png">
+            <img class="dropdown_col_item_logo" src="/img/app/icon_xdata.png">
             <span class="dropdown_col_item_label">XDataStudio大数据底座</span>
           </div>
         </div>
         <div class="dropdown_col" style="flex: 1.5; padding-top: 22px;">
           <p class="dropdown_col_title"></p>
           <div class="dropdown_col_sort">
-            <img class="dropdown_col_sort_logo" src="@/assets/img/home/dzh.png">
+            <img class="dropdown_col_sort_logo" src="/img/home/dzh.png">
             <span class="dropdown_col_sort_label">私有云</span>
           </div>
           <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="@/assets/img/home/xl_11.png">
+            <img class="dropdown_col_item_logo" src="/img/home/xl_11.png">
             <span class="dropdown_col_item_label">智慧云aPaaS应用支撑平台（aPaaS）</span>
           </div>
           <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="@/assets/img/home/xl_12.png">
+            <img class="dropdown_col_item_logo" src="/img/home/xl_12.png">
             <span class="dropdown_col_item_label">移动端服务化能力支撑平台（mPaaS）</span>
           </div>
           <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="@/assets/img/home/xl_4.png">
+            <img class="dropdown_col_item_logo" src="/img/home/xl_4.png">
             <span class="dropdown_col_item_label">XMobileStudio移动应用开发支撑平台</span>
           </div>
           <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="@/assets/img/home/xl_8.png">
+            <img class="dropdown_col_item_logo" src="/img/home/xl_8.png">
             <span class="dropdown_col_item_label">PGIS地图引擎能力支撑平台(PGISPaaS)</span>
           </div>
           <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="@/assets/img/home/xl_13.png">
+            <img class="dropdown_col_item_logo" src="/img/home/xl_13.png">
             <span class="dropdown_col_item_label">XDevStudio“奥尔特云”开发平台</span>
           </div>
           <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="@/assets/img/app/icon_cloud.png">
+            <img class="dropdown_col_item_logo" src="/img/app/icon_cloud.png">
             <span class="dropdown_col_item_label">XProxy跨网智能网关</span>
           </div>
           <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="@/assets/img/app/icon_kuboard.png">
+            <img class="dropdown_col_item_logo" src="/img/app/icon_kuboard.png">
             <span class="dropdown_col_item_label">Kuboard</span>
           </div>
           <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="@/assets/img/app/icon_cloud.png">
+            <img class="dropdown_col_item_logo" src="/img/app/icon_cloud.png">
             <span class="dropdown_col_item_label">XFileStor分布式文件存储系统</span>
           </div>
           <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="@/assets/img/app/icon_tianqin.png">
+            <img class="dropdown_col_item_logo" src="/img/app/icon_tianqin.png">
             <span class="dropdown_col_item_label">XCompute天琴虚拟化软件</span>
           </div>
         </div>
@@ -202,37 +202,37 @@ const hardwareMenu = ref<Menu[]>([
     title: '移动存储',
     showTitle: true,
     menus: [
-      { name: 'U盘', logo: new URL('assets/img/app/icon_u.png', import.meta.url).href },
-      { name: '移动硬盘', logo: new URL('assets/img/app/icon_mobileu.png', import.meta.url).href }
+      { name: 'U盘', logo: '/img/app/icon_u.png' },
+      { name: '移动硬盘', logo: '/img/app/icon_mobileu.png' }
     ]
   },
   {
     title: '网络产品',
     showTitle: true,
     menus: [
-      { name: '网关', logo: new URL('assets/img/home/router.png', import.meta.url).href },
-      { name: '4G工业路由器', logo: new URL('assets/img/app/dhhz.png', import.meta.url).href },
-      { name: '5G工业路由器', logo: new URL('assets/img/app/5Gdh.png', import.meta.url).href },
-      { name: '交换机', logo: new URL('assets/img/app/dhjhj.png', import.meta.url).href },
+      { name: '网关', logo: '/img/home/router.png' },
+      { name: '4G工业路由器', logo: '/img/app/dhhz.png' },
+      { name: '5G工业路由器', logo: '/img/app/5Gdh.png' },
+      { name: '交换机', logo: '/img/app/dhjhj.png' },
     ]
   },
   {
     title: '智能终端',
     showTitle: true,
     menus: [
-      { name: '国产化笔记本', logo: new URL('assets/img/app/icon_pc.png', import.meta.url).href },
-      { name: '国产化平板电脑', logo: new URL('assets/img/app/icon_pad.png', import.meta.url).href },
-      { name: '消费电子', logo: new URL('assets/img/app/icon_cpu.png', import.meta.url).href },
-      { name: 'IOT元件库', logo: new URL('assets/img/app/icon_iot.png', import.meta.url).href }
+      { name: '国产化笔记本', logo: '/img/app/icon_pc.png' },
+      { name: '国产化平板电脑', logo: '/img/app/icon_pad.png' },
+      { name: '消费电子', logo: '/img/app/icon_cpu.png' },
+      { name: 'IOT元件库', logo: '/img/app/icon_iot.png' }
     ]
   },
   {
     title: '数据采集',
     showTitle: true,
     menus: [
-      { name: '动环盒子', logo: new URL('assets/img/app/icon_box.png', import.meta.url).href },
-      { name: '动环交换机', logo: new URL('assets/img/app/icon_change.png', import.meta.url).href },
-      { name: '动环网关', logo: new URL('assets/img/app/icon_wlan.png', import.meta.url).href }
+      { name: '动环盒子', logo: '/img/app/icon_box.png' },
+      { name: '动环交换机', logo: '/img/app/icon_change.png' },
+      { name: '动环网关', logo: '/img/app/icon_wlan.png' }
     ]
   }
 ])
@@ -241,33 +241,33 @@ const softwareMenu = ref<Menu[]>([
     title: '应用产品',
     showTitle: true,
     menus: [
-      { name: 'XOA数字化办公', logo: new URL('assets/img/app/icon_xoa.png', import.meta.url).href },
-      { name: 'XCreator敏捷发布平台', logo: new URL('assets/img/app/icon_xcreator.png', import.meta.url).href },
-      { name: '警卫宝', logo: new URL('assets/img/home/yycp_10.png', import.meta.url).href },
-      { name: '视频宝', logo: new URL('assets/img/home/yycp_12.png', import.meta.url).href },
-      { name: '天琴智宝', logo: new URL('assets/img/home/yycp_17.png', import.meta.url).href },
+      { name: 'XOA数字化办公', logo: '/img/app/icon_xoa.png' },
+      { name: 'XCreator敏捷发布平台', logo: '/img/app/icon_xcreator.png' },
+      { name: '警卫宝', logo: '/img/home/yycp_10.png' },
+      { name: '视频宝', logo: '/img/home/yycp_12.png' },
+      { name: '天琴智宝', logo: '/img/home/yycp_17.png' },
     ]
   },
   {
     title: '云SaaS软件',
     showTitle: true,
     menus: [
-      { name: '交通微劝导系统', logo: new URL('assets/img/home/aqcp_1.png', import.meta.url).href },
-      { name: '反诈中心推广统计平台', logo: new URL('assets/img/home/aqcp_2.png', import.meta.url).href },
-      { name: '互联网+公安政务服务', logo: new URL('assets/img/home/aqcp_3.png', import.meta.url).href },
-      { name: '群防群治', logo: new URL('assets/img/home/aqcp_4.png', import.meta.url).href },
-      { name: '辅警平台', logo: new URL('assets/img/home/yycp_22.png', import.meta.url).href },
+      { name: '交通微劝导系统', logo: '/img/home/aqcp_1.png' },
+      { name: '反诈中心推广统计平台', logo: '/img/home/aqcp_2.png' },
+      { name: '互联网+公安政务服务', logo: '/img/home/aqcp_3.png' },
+      { name: '群防群治', logo: '/img/home/aqcp_4.png' },
+      { name: '辅警平台', logo: '/img/home/yycp_22.png' },
     ]
   },
   {
     title: '安全产品',
     showTitle: true,
     menus: [
-      { name: '安全管控MDM', logo: new URL('assets/img/home/aqcp_01.png', import.meta.url).href },
-      { name: '枪弹装备室', logo: new URL('assets/img/home/aqcp_5.png', import.meta.url).href },
-      { name: '定制手机型安全终端', logo: new URL('assets/img/home/dzh.png', import.meta.url).href },
-      { name: '定制安全Pad终端', logo: new URL('assets/img/home/xl_7.png', import.meta.url).href },
-      { name: '计算机保密防范', logo: new URL('assets/img/app/icon_lock.png', import.meta.url).href },
+      { name: '安全管控MDM', logo: '/img/home/aqcp_01.png' },
+      { name: '枪弹装备室', logo: '/img/home/aqcp_5.png' },
+      { name: '定制手机型安全终端', logo: '/img/home/dzh.png' },
+      { name: '定制安全Pad终端', logo: '/img/home/xl_7.png' },
+      { name: '计算机保密防范', logo: '/img/app/icon_lock.png' },
     ]
   }
 ])
@@ -276,41 +276,41 @@ const solutionMenu = ref<Menu[]>([
     title: '',
     showTitle: false,
     menus: [
-      { name: '公安', logo: new URL('assets/img/app/jinghui.png', import.meta.url).href },
-      { name: '智慧派出所', logo: new URL('assets/img/app/jinghui.png', import.meta.url).href },
-      { name: '交警', logo: new URL('assets/img/app/jiaojing.png', import.meta.url).href },
-      { name: '检察', logo: new URL('assets/img/app/jiancha.png', import.meta.url).href },
-      { name: '司法监狱', logo: new URL('assets/img/app/jinghui.png', import.meta.url).href },
+      { name: '公安', logo: '/img/app/jinghui.png' },
+      { name: '智慧派出所', logo: '/img/app/jinghui.png' },
+      { name: '交警', logo: '/img/app/jiaojing.png' },
+      { name: '检察', logo: '/img/app/jiancha.png' },
+      { name: '司法监狱', logo: '/img/app/jinghui.png' },
     ]
   },
   {
     title: '',
     showTitle: false,
     menus: [
-      { name: '法院', logo: new URL('assets/img/app/fayuan.png', import.meta.url).href },
-      { name: '档案', logo: new URL('assets/img/app/dangan.png', import.meta.url).href },
-      { name: '智慧边海防', logo: new URL('assets/img/app/zgbhf.png', import.meta.url).href },
-      { name: '政府', logo: new URL('assets/img/app/zhengfu.png', import.meta.url).href },
+      { name: '法院', logo: '/img/app/fayuan.png' },
+      { name: '档案', logo: '/img/app/dangan.png' },
+      { name: '智慧边海防', logo: '/img/app/zgbhf.png' },
+      { name: '政府', logo: '/img/app/zhengfu.png' },
     ]
   },
   {
     title: '',
     showTitle: false,
     menus: [
-      { name: '企业', logo: new URL('assets/img/app/qiye.png', import.meta.url).href },
-      { name: '应急', logo: new URL('assets/img/app/yingji.png', import.meta.url).href },
-      { name: '消防', logo: new URL('assets/img/app/xiaofang.png', import.meta.url).href },
-      { name: '疫情防控', logo: new URL('assets/img/app/yiqingfangkong.png', import.meta.url).href },
+      { name: '企业', logo: '/img/app/qiye.png' },
+      { name: '应急', logo: '/img/app/yingji.png' },
+      { name: '消防', logo: '/img/app/xiaofang.png' },
+      { name: '疫情防控', logo: '/img/app/yiqingfangkong.png' },
     ]
   },
   {
     title: '',
     showTitle: false,
     menus: [
-      { name: '城管', logo: new URL('assets/img/app/chengguan.png', import.meta.url).href },
-      { name: '物联网', logo: new URL('assets/img/app/wlw.png', import.meta.url).href },
-      { name: '应用软件定制与运维服务外包', logo: new URL('assets/img/app/yyrjdz.png', import.meta.url).href },
-      { name: '海外[一带一路] English', logo: new URL('assets/img/app/haiwai.png', import.meta.url).href },
+      { name: '城管', logo: '/img/app/chengguan.png' },
+      { name: '物联网', logo: '/img/app/wlw.png' },
+      { name: '应用软件定制与运维服务外包', logo: '/img/app/yyrjdz.png' },
+      { name: '海外[一带一路] English', logo: '/img/app/haiwai.png' },
     ]
   }
 ])

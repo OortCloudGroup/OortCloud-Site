@@ -5,22 +5,22 @@
       <div class="bottom_content">
         <div class="bottom_tips">
           <div class="bottom_tips_item">
-            <img src="@/assets/img/home/footer_icon1.png" />
+            <img src="/img/home/footer_icon1.png" />
             <span>国家AAA信用企业</span>
           </div>
           <div class="bottom_tips_item">
-            <img src="@/assets/img/home/footer_icon2.png" />
+            <img src="/img/home/footer_icon2.png" />
             <span>180+软件著作权和专利</span>
           </div>
           <div class="bottom_tips_item">
-            <img src="@/assets/img/home/footer_icon3.png" />
+            <img src="/img/home/footer_icon3.png" />
             <span>通过ISO三大国际体系认证</span>
           </div>
         </div>
         <!-- 产品中心 -->
         <div class="bottom_href">
           <div class="bottom_href_item bottom_href_item_first">
-            <img style="width: 156px;height:53px;text-align: left;" src="@/assets/img/home/oort_logo.png" />
+            <img style="width: 156px;height:53px;text-align: left;" src="/img/home/oort_logo.png" />
             <span class="text2">300多种企业级产品累计服务1.5亿用户</span>
           </div>
           <div class="bottom_href_item bottom_href_item_text" style="margin-left: 20px;margin-right: 50px;">
@@ -74,7 +74,7 @@
           </div>
           <div class="bottom_href_item bottom_href_item_first" style="border: none;">
             <span class="bottom_href_item_first_text1">关注奥尔特云</span>
-            <img src="@/assets/img/logo_googn.jpg" />
+            <img src="/img/logo_googn.jpg" />
             <span class="text2">官方微信公众号</span>
           </div>
         </div>

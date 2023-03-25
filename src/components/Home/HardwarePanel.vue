@@ -110,21 +110,21 @@ defineProps({
   background-position: bottom 20px right 40px;
 }
 .hardware_pane_1 {
-  background-image: url('@/assets/img/index/hardware/mobile.png');
+  background-image: url('/img/index/hardware/mobile.png');
 }
 .hardware_pane_1:hover {
-  background-image: url('@/assets/img/index/hardware/mobile_active.png');
+  background-image: url('/img/index/hardware/mobile_active.png');
 }
 .hardware_pane_2 {
-  background-image: url('@/assets/img/index/hardware/network.png');
+  background-image: url('/img/index/hardware/network.png');
 }
 .hardware_pane_2:hover {
-  background-image: url('@/assets/img/index/hardware/network_active.png');
+  background-image: url('/img/index/hardware/network_active.png');
 }
 .hardware_pane_3 {
-  background-image: url('@/assets/img/index/hardware/terminal.png');
+  background-image: url('/img/index/hardware/terminal.png');
 }
 .hardware_pane_3:hover {
-  background-image: url('@/assets/img/index/hardware/terminal_active.png');
+  background-image: url('/img/index/hardware/terminal_active.png');
 }
 </style>

@@ -21,7 +21,7 @@
             </div>
             <div class="panel_item_content">
               <div v-for="link in mItem.list" :key="link.name" class="panel_item_content_wrap ">
-                <a>{{ link.name }}<img src="@/assets/img/index/software/icon_more.png"></a>
+                <a>{{ link.name }}<img src="/img/index/software/icon_more.png"></a>
               </div>
             </div>
           </div>
