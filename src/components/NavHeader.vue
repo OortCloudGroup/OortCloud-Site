@@ -2,7 +2,7 @@
   <div class="header">
     <div class="header_wrapper">
       <div @click="backToHome" class="header_logo">
-        <img src="@/assets/img/logo_white.png" />
+        <img src="/img/logo_white.png" />
       </div>
       <div class="header_menu">
         <div class="header_tabs">
@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="header_other">
-        <img src="@/assets/img/dashboard.png" />
+        <img src="/img/dashboard.png" />
         <div class="header_dialog">
         <div class="header_dialog_head">
           <div class="header_dialog_head_left">基础软件</div>

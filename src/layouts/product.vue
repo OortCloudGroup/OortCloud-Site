@@ -11,28 +11,28 @@
     <div class="cd_bottom">
     <div class="cd_bottom_list">
       <a href="./productdetail_mhyyyck.html" target="_blank" class="cd_bottom_list_item">
-        <img src="@/assets/img/home/xl_3.png" />
+        <img src="/img/home/xl_3.png" />
         <div class="cd_bottom_list_item_right">
           <span>门户与应用仓库</span>
           <span>把小程序搬进APP,快速打造超级APP</span>
         </div>
       </a>
       <a href="./productdetail_jstx.html" class="cd_bottom_list_item" target="_blank">
-        <img src="@/assets/img/home/xl_1.png" />
+        <img src="/img/home/xl_1.png" />
         <div class="cd_bottom_list_item_right">
           <span>即时通讯</span>
           <span>单聊、群聊、图文、视频等即时通讯IM</span>
         </div>
       </a>
       <a href="#" class="cd_bottom_list_item" target="_blank">
-        <img src="@/assets/img/home/xl_4.png" />
+        <img src="/img/home/xl_4.png" />
         <div class="cd_bottom_list_item_right">
           <span>移动应用开发支撑平台</span>
           <span>移动应用开发支撑平台</span>
         </div>
       </a>
       <a href="https://myoumuamua.com/" class="cd_bottom_list_item" target="_blank">
-        <img src="@/assets/img/home/xl_2.png" />
+        <img src="/img/home/xl_2.png" />
         <div class="cd_bottom_list_item_right">
           <span>私有云部署的移动安全办公云平台</span>
           <span>私有云部署的移动安全办公云平台</span>
@@ -41,7 +41,7 @@
     </div>
     <div class="cd_bottom_list">
       <div class="cd_bottom_list_item">
-        <img src="@/assets/img/home/xl_5.png" />
+        <img src="/img/home/xl_5.png" />
         <div class="cd_bottom_list_item_right">
           <span>安全管控MDM</span>
           <span>设备管家--MDM移动终端安全管理平台</span>
@@ -49,7 +49,7 @@
       </div>
       <a href="http://map.oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/console_manage/index.html#/"
         class="cd_bottom_list_item" target="_blank">
-        <img src="@/assets/img/home/xl_6.png" />
+        <img src="/img/home/xl_6.png" />
         <div class="cd_bottom_list_item_right">
           <span>定制手机型安全终端</span>
           <span>手机终端安全加固组件与刷机服务包</span>
@@ -57,18 +57,18 @@
       </a>
       <a href="http://map.oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/console_manage/index.html#/"
         class="cd_bottom_list_item" target="_blank">
-        <img src="@/assets/img/home/xl_7.png" />
+        <img src="/img/home/xl_7.png" />
         <div class="cd_bottom_list_item_right">
           <span>定制安全Pad终端</span>
           <span>Pad终端安全加固组件与刷机服务包</span>
         </div>
       </a>
       <a href="./more.html" class="cd_bottom_list_item" target="_blank">
-        <img src="@/assets/img/home/gd_1.png" />
+        <img src="/img/home/gd_1.png" />
         <div class="cd_bottom_list_item_right"
           style="display: flex; flex-direction: row; align-items: center; margin-left: 18px">
           <span style="color: #2e4bf1">更多</span>
-          <img src="@/assets/img/home/gd_2.png" style="width: 16px; height: 16px" />
+          <img src="/img/home/gd_2.png" style="width: 16px; height: 16px" />
         </div>
       </a>
     </div>
@@ -79,20 +79,15 @@
 </template>
 
 <script setup lang="ts">
-import jwb from '@/assets/img/home/jwb.png'
-import yzt_bg from '@/assets/img/home/yzt_bg.png'
-import sypt from '@/assets/img/home/sypt.png'
-import mhck from '@/assets/img/home/mhck.png'
-
 const carouseList = ref([
-  {url: jwb, title: '警务宝一体机', desc: '面向派出所、警务室的一体化智慧基层平台', buttons: [
+  {url: '/img/home/jwb.png', title: '警务宝一体机', desc: '面向派出所、警务室的一体化智慧基层平台', buttons: [
     {text: '立即购买'} , {text: '了解详情'}, {text: '立即体验'}, {text: '观看视频'}
   ]},
-  {url: yzt_bg, title: '智慧调度一张图', desc: '打造全警钟、全平台、资源整合、系统集成、信息共享，实现接警、指挥、调度为一体的指挥中心，从而更有效的提高治安预防、控制、制止的反应能力',
+  {url: '/img/home/yzt_bg.png', title: '智慧调度一张图', desc: '打造全警钟、全平台、资源整合、系统集成、信息共享，实现接警、指挥、调度为一体的指挥中心，从而更有效的提高治安预防、控制、制止的反应能力',
   buttons: [{text: '立即购买'} , {text: '了解详情'}, {text: '立即体验'}, {text: '观看视频'}]},
-  {url: sypt, title: '私有云部署的移动安全办公云平台', desc: '对标公有云上的钉钉，企业微信的专门私有化部署的数字化移动协同办公平台，数据自己掌握，安全可控。打造了一个涵盖即时消息、电子邮件、音视频会议、资料分享、流程申请与',
+  {url: '/img/home/sypt.png', title: '私有云部署的移动安全办公云平台', desc: '对标公有云上的钉钉，企业微信的专门私有化部署的数字化移动协同办公平台，数据自己掌握，安全可控。打造了一个涵盖即时消息、电子邮件、音视频会议、资料分享、流程申请与',
   buttons: [{text: '立即购买'} , {text: '了解详情'}, {text: '立即体验'}, {text: '观看视频'}]},
-  {url: mhck, title: '门户与应用仓库', desc: '快速打造数字化超级App，拥有领先于市场的小程序容器技术，可为您提供敏捷、安全的最佳实践，是数字化时代下企业移动开发的不二之选。',
+  {url: '/img/home/mhck.png', title: '门户与应用仓库', desc: '快速打造数字化超级App，拥有领先于市场的小程序容器技术，可为您提供敏捷、安全的最佳实践，是数字化时代下企业移动开发的不二之选。',
   buttons: [{text: '立即购买'} , {text: '了解详情'}, {text: '立即体验'}]}
 ])
 

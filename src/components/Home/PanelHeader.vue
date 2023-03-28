@@ -21,7 +21,6 @@ defineProps({
 <style lang="scss" scoped>
 .panel {
   &_header {
-    margin-bottom: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -99,6 +99,9 @@ const onBeforeLeave = (index) => {
     }
   }
 }
+.n-tabs {
+  margin-top: 60px;
+}
 :deep(.n-tabs-tab-pad) {
   width: 0;
 }
@@ -109,7 +112,7 @@ const onBeforeLeave = (index) => {
 }
 :deep(.n-tabs-tab--active) {
   color: #2290FF !important;
-  background-image: url('@/assets/img/home/program_selected_2x.png');
+  background-image: url('/img/home/program_selected_2x.png');
   background-size: 100% 100%;
 }
 :deep(.n-tabs-bar) {

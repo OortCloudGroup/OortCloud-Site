@@ -35,7 +35,7 @@ defineProps({
   max-width: 1280px;
   box-sizing: border-box;
   &_header {
-    margin-bottom: 60px;
+    margin: 60px 0;
     display: flex;
     flex-direction: column;
     align-items: center;

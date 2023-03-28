@@ -78,7 +78,7 @@ function nextPage() {
   .news_banner {
     width: 100%;
     height: 300px;
-    background-image: url('../assets/img/news_banner.png');
+    background-image: url('/img/news_banner.png');
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -104,7 +104,7 @@ function nextPage() {
     margin: auto;
     justify-content: center;
     align-items: center;
-    padding-top: 3rem;
+    padding-top: 6rem;
     max-width: 1240px;
 }
 

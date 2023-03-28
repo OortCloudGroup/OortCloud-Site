@@ -1,6 +1,6 @@
 <template>
   <div class="panel">
-    <HomePanelHeader title="合作伙伴" info="满足企业实际业务需求的定制化服务" />
+    <h2 class="panel_title">客户案例</h2>
 
     <div class="panel_content">
       <img v-for="(item, index) in data" :key="index" :src="item">
@@ -26,6 +26,11 @@ defineProps({
   justify-content: center;
   max-width: 1280px;
   box-sizing: border-box;
+  &_title {
+    margin-top: 60px;
+    font-size: 30px;
+    text-align: center;
+  }
   &_content {
     padding: 30px;
     margin-top: 60px;

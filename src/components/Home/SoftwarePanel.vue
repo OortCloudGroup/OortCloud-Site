@@ -43,7 +43,7 @@ defineProps({
 <style lang="scss" scoped>
 .panel {
   padding: 60px 0;
-  margin: 0 auto;
+  margin: 0 auto 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;

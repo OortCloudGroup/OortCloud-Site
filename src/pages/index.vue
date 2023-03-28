@@ -12,11 +12,20 @@
       <HomeSolutionPanel :data="tabsContent"/>
       <!-- 合作伙伴 -->
       <HomePartnerPanel :data="partnerData"/>
+      <!-- 新闻中心 -->
+      <HomeNewsPanel :data="newsList"/>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+interface Resp {
+  code: number,
+  data: any
+}
+
+const url =  'https://www.oortcloudsmart.com/oort/oortcloud-cetcnewsservice/api/v1/cetcnewservice/new_list'
+
 const carouseList = ref([
   { 
     url: '/img/home/bg_2.png',
@@ -312,6 +321,21 @@ const partnerData = ref<Array<string>>([
   '/img/home/11.png',
   '/img/home/12.png',
 ])
+
+const newsList = ref<Array<any>>([])
+
+// onBeforeMount(() => {
+//   getNews()
+// })
+// const { data: news } = useLazyFetch(url,  { body: {
+//     pageIndex: 1,
+//     pageSize: 4,
+//     newsType: 1,
+//     status: 1
+//   }, method: 'post'})
+// watch(news, (newData) => {
+//   console.log(news)
+// })
 
 </script>
 
