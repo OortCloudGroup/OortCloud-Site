@@ -322,7 +322,23 @@ const partnerData = ref<Array<string>>([
   '/img/home/12.png',
 ])
 
-const newsList = ref<Array<any>>([])
+const newsList = ref<Array<News>>([])
+
+getNewsList()
+
+async function getNewsList() {
+  const params = {
+    pageIndex: 1,
+    pageSize: 4,
+    newsType: 1,
+    status: 1
+  }
+  const { data } = await useFetch(url,  { body: params, method: 'post'})
+  const res:Resp = toRaw(data.value) as Resp
+  if (res.code === 200) {
+    newsList.value = res.data.list
+  }
+}
 
 // onBeforeMount(() => {
 //   getNews()

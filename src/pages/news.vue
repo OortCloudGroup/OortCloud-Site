@@ -32,7 +32,7 @@ interface Resp {
   data: any
 }
 
-const newsList = ref([])
+const newsList = ref<Array<News>>([])
 const pageIndex = ref(1)
 const total = ref(0)
 const url =  'https://www.oortcloudsmart.com/oort/oortcloud-cetcnewsservice/api/v1/cetcnewservice/new_list'

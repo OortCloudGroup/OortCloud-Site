@@ -4,7 +4,6 @@
     <div class="more">
       <n-button type="info" @click="toMoreNews">更多新闻</n-button>
     </div>
-    
   </div>
 </template>
 
