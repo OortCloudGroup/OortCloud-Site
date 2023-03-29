@@ -1,11 +1,11 @@
 <template>
   <div class="panel">
-    <div class="panel_header">
+    <div class="panel_header" v-if="data.title">
       <img class="panel_header_logo" :src="data.logo">
       <h3 class="panel_header_title">{{ data.title }}</h3>
     </div>
     
-    <n-grid x-gap="28" y-gap="40" :cols="3">
+    <n-grid x-gap="28" y-gap="12" :cols="3">
       <n-grid-item v-for="item in data.apps" :key="item.name">
         <div class="panel_item">
           <div class="panel_item_logo">
@@ -36,10 +36,11 @@ defineProps({
 
 <style lang="scss" scoped>
 .panel {
+  margin-bottom: 36px;
   width: 100%;
   &_header {
     padding: 0 16px;
-    margin: 36px 0 24px;
+    margin: 18px 0;
     display: flex;
     align-items: center;
     &_title {

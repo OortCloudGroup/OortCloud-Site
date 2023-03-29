@@ -4,11 +4,24 @@
     <div class="more">
       <n-button type="info" @click="toMoreNews">更多新闻</n-button>
     </div>
+    <n-grid x-gap="24" y-gap="24" :cols="2" style="margin-top: 36px; padding: 0 48px; box-sizing: border-box;">
+      <n-grid-item v-for="(item, index) in data" :key="index">
+        <div class="item">
+          <div>
+            <img :src="item.CoverImg">
+          </div>
+          <div>
+            <h3>{{ item.Title }}</h3>
+            <p>{{ item.Time }}</p>
+          </div>
+        </div>
+      </n-grid-item>
+    </n-grid>
   </div>
 </template>
 
-<script setup lang="ts">
-import { NButton } from 'naive-ui';
+<script setup>
+import { NButton, NGrid, NGridItem } from 'naive-ui';
 
 defineProps({
   data: {
@@ -36,5 +49,14 @@ const toMoreNews = () => {
 }
 .more {
   margin-top: 24px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+  img {
+    width: 200px;
+    height: 128px;
+  }
 }
 </style>

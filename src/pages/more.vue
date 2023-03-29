@@ -1,17 +1,23 @@
 <template>
-  <div class="page_container">
-    <div class="banner">
-      <h5>全栈解决方案</h5>
-      <span>奥尔特云面向丰富的业务场景，提供整套行业和技术解决方案，助力客户安全高效上云</span>
-      <span>奥尔特云解决方案涵盖公安、派出所、检察、司法、监狱、智慧边海防、政府等多个领域</span>
-    </div>
-
-    <!-- 热门方案 -->
-    <SolutionGrid :data="gridData"/>
-
-    <!-- 专业服务 -->
+  <div class="container">
     <div class="panel_wrapper">
-      <h2 class="panel_wrapper_title">全部专业服务</h2>
+      <h2 class="panel_title">基础软件</h2>
+      <!-- 双系统安全移动办公 -->
+      <AppPanel :data="doubleSysApp"/>
+      <!-- 指挥调度与IOC大数据可视化 -->
+      <AppPanel :data="viewableApp"/>
+      <!-- 多租户aPaaS云 -->
+      <AppPanel :data="aPaaSApp"/>
+
+      <h2 class="panel_title">应用产品</h2>
+      <AppPanel :data="application"/>
+      <h2 class="panel_title">云SaaS软件</h2>
+      <AppPanel :data="saasApp"/>
+      <h2 class="panel_title">安全产品</h2>
+      <AppPanel :data="securityApp"/>
+      
+      <!-- 计算机保密防范 -->
+      <AppPanel :data="privacyApp"/>
       <!-- 公安 -->
       <AppPanel :data="policeApp"/>
       <!-- 智慧派出所 -->
@@ -47,46 +53,344 @@
       <!-- 海外[一带一路] English -->
       <AppPanel :data="overseasApp"/>
     </div>
-
-    <!-- 客户案例 -->
-    <SolutionCasePanel :data="caseData" />
   </div>
 </template>
 
 <script setup>
-const gridData = ref([
-  {
-    title: '新一代移动警务',
-    content: '从基层一线民警反映强烈的应用需求入手，先后推出20多项平台产品，200多项基础服务能力，300多款实用APP， 着力打通大数据应用“最后一公里”。',
-    cover: '/img/solution/grid_bg.png'
-  },
-  {
-    title: '智慧派出所',
-    content: '数据随用即得，战法随想随用，应用随需随变。精准数据筛选、灵活碰撞分析，满足不同无技术背景用户对数据的应用需求，从根本上改变了传统软件的开发模式，让新需求在短时间内得到实现。',
-    cover: ''
-  },
-  {
-    title: '指挥调度一张图',
-    content: '融合指挥各大通信系统、请休假、签到、勤务等系统，将系统的各种功能都在公安的网内地图上应用，实现“一张图”展示，一键通话，一键视频，一键组队等，是真正的“看得见、呼得通”的扁平化指挥调度。',
-    cover: ''
-  },
-  {
-    title: '智慧政府',
-    content: '实现城市运行一网统管，公务办公一网协同，政务服务一网通办，公共资源一网通享，依托公司智慧化产品，将智慧化应用推向各局委办，比如出行拼车、顺风车、派车为机关单位提供公车出行服务；各局委办跨地区、跨层级、跨部门政务协同以及数据可视化决策支持。',
-    cover: ''
-  },
-  {
-    title: '智慧检务',
-    content: '通过服务检察干警移动办公办案业务的移动检务,以及服务人民群众、律师、人大政协、公司办理业务的阳光检务。检务移动终端辅助业务系统，移动阅卷系统，司法文书远程送达系统等产品助力智慧检务建设。',
-    cover: ''
-  },
-  {
-    title: '行业数字化转型&IT服务',
-    content: '涵盖30多个场景的行业数字化转型（行业各场景智能化建设）软件开发，系统建设，方案咨询， 人力资源外包，IT运营运维，物联网服务。',
-    cover: '/img/solution/grid_bg2.png'
-  },
-])
-
+// 双系统安全移动办公
+const doubleSysApp = ref({
+  title: '双系统安全移动办公',
+  logo: '/img/home/sxt.png',
+  apps: [
+    {
+      name: '即时通讯',
+      logo: '/img/home/xl_1.png',
+      excerpt: '单聊、群聊、图文、视频等即时通讯IM'
+    },
+    {
+      name: '私有云部署的移动安全办公云平台',
+      logo: '/img/home/xl_2.png',
+      excerpt: '私有云部署的移动安全办公云平台'
+    },
+    {
+      name: '门户与应用仓库',
+      logo: '/img/home/xl_3.png',
+      excerpt: '把小程序搬进APP,快速打造超级APP'
+    },
+    {
+      name: '移动应用开发支撑平台',
+      logo: '/img/home/xl_4.png',
+      excerpt: '移动应用开发支撑平台'
+    },
+    {
+      name: '安全管控MDM',
+      logo: '/img/home/xl_5.png',
+      excerpt: '设备管家--MDM移动终端安全管理平台'
+    },
+    {
+      name: '定制手机型安全终端',
+      logo: '/img/home/xl_6.png',
+      excerpt: '手机终端安全加固组件与刷机服务包'
+    },
+    {
+      name: '定制安全Pad终端',
+      logo: '/img/home/xl_7.png',
+      excerpt: 'Pad终端安全加固组件与刷机服务包'
+    },
+  ]
+})
+// 指挥调度与IOC大数据可视化
+const viewableApp = ref({
+  title: '指挥调度与IOC大数据可视化',
+  logo: '/img/home/zhdd.png',
+  apps: [
+    {
+      name: 'PGIS地图引擎能力支撑平台(PGISPaaS)',
+      logo: '/img/home/xl_8.png',
+      excerpt: 'PGIS地图引擎'
+    },
+    {
+      name: '指挥调度一张图',
+      logo: '/img/home/xl_9.png',
+      excerpt: '总揽指挥调度一张图，用于电子指挥大屏操作'
+    },
+    {
+      name: '大数据IOC可视化平台',
+      logo: '/img/home/xl_10.png',
+      excerpt: '大数据处理与IOC可视化系统'
+    },
+  ]
+})
+// 多租户aPaaS云
+const aPaaSApp = ref({
+  title: '多租户aPaaS云',
+  logo: '/img/home/dzh.png',
+  apps: [
+    {
+      name: '智慧云aPaaS应用支撑平台(aPaaS)',
+      logo: '/img/home/xl_11.png',
+      excerpt: '个性化需求快递迭代、支撑能力底座'
+    },
+    {
+      name: '移动端服务化能力支撑平台(mPaaS)',
+      logo: '/img/home/xl_11.png',
+      excerpt: '移动应用开发支撑平台'
+    },
+    {
+      name: '“奥尔特云”开发平台',
+      logo: '/img/home/xl_11.png',
+      excerpt: '低无代码快速开发平台'
+    }
+  ]
+})
+// 应用产品
+const application = ref({
+  title: '',
+  logo: '',
+  apps: [
+    {
+      name: '华为IdeaHub警务宝',
+      logo: '/img/home/yycp_1.png',
+      excerpt: '面向派出所、警务室的一体化智慧基层平台系统'
+    },
+    {
+      name: '警务宝一体机',
+      logo: '/img/home/yycp_1.png',
+      excerpt: '分局-派出所-警务站多任务多级联动'
+    },
+    {
+      name: '基层一站式工作平台',
+      logo: '/img/home/yycp_1.png',
+      excerpt: '图查要素，屏观态势，打造警务信息化基石'
+    },
+    {
+      name: '警务宝应用平台',
+      logo: '/img/home/yycp_4.png',
+      excerpt: '跨网段、多终端、全连接任务协同办理'
+    },
+    {
+      name: '办公宝',
+      logo: '/img/home/yycp_5.png',
+      excerpt: '私有云部署的移动安全办公云平台'
+    },
+    {
+      name: '指挥调度一张图',
+      logo: '/img/home/yycp_6.png',
+      excerpt: '可视化实战指挥调度一张图系统'
+    },
+    {
+      name: '警务服务总线',
+      logo: '/img/home/yycp_7.png',
+      excerpt: '基于OpenSergo统一微服务治理警务服务总线软件'
+    },
+    {
+      name: '档案宝',
+      logo: '/img/home/dab.png',
+      excerpt: '电子档案安全管理平台'
+    },
+    {
+      name: '党建宝',
+      logo: '/img/home/yycp_9.png',
+      excerpt: '党建宝平台'
+    },
+    {
+      name: '警卫宝',
+      logo: '/img/home/yycp_10.png',
+      excerpt: '面向传达室、来访人员预约、来访人员预判的一体化基层平台'
+    },
+    {
+      name: '治安宝',
+      logo: '/img/home/yycp_11.png',
+      excerpt: '面向群防群治的立体化作战指挥调度的一体化基层平台'
+    },
+    {
+      name: '视频宝',
+      logo: '/img/home/yycp_12.png',
+      excerpt: 'OpenGBS可视化国标(GB28181)指挥调度平台'
+    },
+    {
+      name: 'GB28181国标推流一体机',
+      logo: '/img/home/yycp_13.png',
+      excerpt: '支持设备或平台GB28181标准协议注册接入，向上级联'
+    },
+    {
+      name: '视频宝一体机',
+      logo: '/img/home/yycp_14.png',
+      excerpt: '国标流媒体服务'
+    },
+    {
+      name: '天琴智宝',
+      logo: '/img/home/yycp_17.png',
+      excerpt: '智慧校园人脸考勤推送'
+    },
+    {
+      name: '移动阅卷',
+      logo: '/img/home/yycp_18.png',
+      excerpt: '检务移动终端辅助业务系统'
+    },
+    {
+      name: '领导驾驶仓',
+      logo: '/img/home/yycp_19.png',
+      excerpt: '领导指挥一屏纵览'
+    },
+    {
+      name: '村警平台',
+      logo: '/img/home/yycp_21.png',
+      excerpt: '一村一警社区管控平台'
+    },
+    {
+      name: '辅警平台',
+      logo: '/img/home/yycp_22.png',
+      excerpt: '智慧新警务辅警管理平台'
+    },
+    {
+      name: '智能客服',
+      logo: '/img/home/yycp_23.png',
+      excerpt: '智能音视频通讯服务平台'
+    },
+    {
+      name: '社区警务',
+      logo: '/img/home/yycp_24.png',
+      excerpt: '结合辅警应用、 警务通民警应用，实现警务工作分流'
+    },
+    {
+      name: '合成作战',
+      logo: '/img/home/yycp_25.png',
+      excerpt: '“情指勤舆”一体化合成作战中心'
+    },
+    {
+      name: '110报警定位服务',
+      logo: '/img/home/yycp_27.png',
+      excerpt: '110报警精准位置服务'
+    },
+    {
+      name: '智能审批',
+      logo: '/img/home/yycp_28.png',
+      excerpt: '工作流引擎和自定义表单服务系统'
+    },
+    {
+      name: '综合预警平台',
+      logo: '/img/home/yycp_29.png',
+      excerpt: '移动端千万级消息推送平台'
+    },
+    {
+      name: '任务管理',
+      logo: '/img/home/yycp_30.png',
+      excerpt: '任务协作、流程管理'
+    },
+    {
+      name: '案事件督办协作',
+      logo: '/img/home/yycp_31.png',
+      excerpt: '案事件流转，督办协作管理平台'
+    },
+    {
+      name: '检务宝',
+      logo: '/img/app/jianwubao.png',
+      excerpt: '移动检务宝平台'
+    },
+    {
+      name: 'OA数字化办公',
+      logo: '/img/app/OAszh.png',
+      excerpt: '流程管理、信息门户、知识管理、移动办公、合同管理、人事管理、采购管理、费控管理等数字化办公'
+    },
+    {
+      name: 'XCreator敏捷发布平台',
+      logo: '/img/app/XCreator.png',
+      excerpt: '全媒体矩阵信息发布平台'
+    },
+  ]
+})
+// 云Saas软件
+const saasApp = ref({
+  title: '',
+  logo: '',
+  apps: [
+    {
+      name: '交通微劝导系统',
+      logo: '/img/home/aqcp_1.png',
+      excerpt: '落实公安部交管局“一盔一带”行动计划，助力文明城市迎检工作'
+    },
+    {
+      name: '反诈中心推广统计平台',
+      logo: '/img/home/aqcp_2.png',
+      excerpt: '反诈APP推广神器——反诈推广码'
+    },
+    {
+      name: '互联网+公安政务服务',
+      logo: '/img/home/aqcp_3.png',
+      excerpt: '政务服务“一网通办”'
+    },
+    {
+      name: '群防群治',
+      logo: '/img/home/aqcp_4.png',
+      excerpt: '“互联网+”大数据思维下建立的公安与群众的连接器'
+    },
+    {
+      name: '辅警平台',
+      logo: '/img/home/yycp_22.png',
+      excerpt: '智慧新警务辅警管理平台'
+    },
+  ]
+})
+// 安全产品
+const securityApp = ref({
+  title: '',
+  logo: '',
+  apps: [
+    {
+      name: '安全管控MDM',
+      logo: '/img/home/aqcp_01.png',
+      excerpt: '设备管家--MDM移动终端安全管理平台'
+    },
+    {
+      name: '枪弹装备室',
+      logo: '/img/home/aqcp_5.png',
+      excerpt: '枪弹柜、警用装备柜及其管理平台'
+    },
+    {
+      name: '定制手机型安全终端',
+      logo: '/img/home/xl_6.png',
+      excerpt: '手机终端安全加固组件与刷机服务包'
+    },
+    {
+      name: '定制安全Pad终端',
+      logo: '/img/home/xl_7.png',
+      excerpt: 'Pad终端安全加固组件与刷机服务包'
+    },
+  ]
+})
+// 计算机保密防范
+const privacyApp = ref({
+  title: '计算机保密防范',
+  logo: '/img/home/aqcp_05.png',
+  apps: [
+    {
+      name: '单向光导机',
+      logo: '/img/home/aqcp_06.png',
+      excerpt: '大容量信息设备光单向传输系统'
+    },
+    {
+      name: '新一代中间机',
+      logo: '/img/home/aqcp_07.png',
+      excerpt: '移动存储安全交换系统'
+    },
+    {
+      name: '红盘、蓝盘安全U盘系统',
+      logo: '/img/home/aqcp_08.png',
+      excerpt: '安全U盘系统'
+    },
+    {
+      name: '终端数据跨网安全传输系统',
+      logo: '/img/home/aqcp_11.png',
+      excerpt: '终端数据跨网安全传输系统'
+    },
+    {
+      name: '税务自助交换安全系统',
+      logo: '/img/home/yycp_22.png',
+      excerpt: '税务自助交换安全系统'
+    }
+  ]
+})
 // 公安
 const policeApp = ref({
   title: '公安',
@@ -506,46 +810,12 @@ const overseasApp = ref({
     }
   ]
 })
-
-// 客户案例
-const caseData = ref([
-  '/img/solution/1p.png',
-  '/img/solution/2p.png',
-  '/img/solution/3p.png',
-  '/img/solution/4p.png',
-  '/img/solution/5p.png',
-  '/img/solution/6p.png',
-  '/img/solution/7p.png',
-  '/img/solution/8p.png',
-  '/img/solution/9p.png',
-  '/img/solution/10p.png',
-  '/img/solution/11p.png',
-  '/img/solution/12p.png',
-])
 </script>
 
 <style lang="scss" scoped>
 .page_container {
   width: 100%;
   height: auto;
-}
-.banner {
-  width: 100%;
-  height: 300px;
-  background-image: url('/img/solution/banner.png');
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  h5 {
-    color: #fff;
-    font-size: 40px;
-  }
-  span {
-    font-size: 16px;
-    color: #fff;
-  }
 }
 .panel_wrapper {
   padding: 60px 0;
@@ -554,12 +824,11 @@ const caseData = ref([
   width: 100%;
   height: auto;
   box-sizing: border-box;
-  &_title {
-    padding: 60px 0;
-    font-size: 30px;
-    font-weight: 600;
-    text-align: center;
-    box-sizing: border-box;
-  }
+}
+.panel_title {
+  padding: 0 16px;
+  font-size: 24px;
+  color: #5378b7;
+  font-weight: 600;
 }
 </style>

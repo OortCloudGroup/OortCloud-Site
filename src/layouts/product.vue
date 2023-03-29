@@ -3,7 +3,11 @@
     <NavHeader></NavHeader>
     <div style="height: 64px;width: 100%;"></div>
     <div class="nav_container">
-      <div class="nav_menu">导航栏</div>
+      <!-- 侧边菜单 -->
+      <div class="nav_menu">
+        <SidebarMenu />
+      </div>
+      <!-- 轮播图 -->
       <div class="carousel_container">
         <Carousel :carouse-list="carouseList"></Carousel>
       </div>
@@ -63,14 +67,14 @@
           <span>Pad终端安全加固组件与刷机服务包</span>
         </div>
       </a>
-      <a href="./more.html" class="cd_bottom_list_item" target="_blank">
+      <NuxtLink to="/more" class="cd_bottom_list_item">
         <img src="/img/home/gd_1.png" />
         <div class="cd_bottom_list_item_right"
           style="display: flex; flex-direction: row; align-items: center; margin-left: 18px">
           <span style="color: #2e4bf1">更多</span>
           <img src="/img/home/gd_2.png" style="width: 16px; height: 16px" />
         </div>
-      </a>
+      </NuxtLink>
     </div>
   </div>
     <slot />
@@ -122,7 +126,7 @@ const carouseList = ref([
   flex-direction: column;
   width: 100%;
   /* height: 298px; */
-  background: url(../assets/img/home/cd_bg.png);
+  background: url(/img/home/cd_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   filter: progid:DXImageTransform.Microsoft.alphaImageLoader(src='imgs/home/cd_bg.png',sizingMethod='scale');
@@ -140,6 +144,7 @@ const carouseList = ref([
 }
 
 .cd_bottom_list_item {
+  padding: 0 24px;
   display: flex;
   align-items: center;
   width: 390px;
@@ -147,6 +152,9 @@ const carouseList = ref([
   background: #ffffff;
   margin: 0 10px 10px 0;
   cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: .3s;
 }
 .cd_bottom_list_item:hover {
   background: rgba(51, 146, 217, 0.07);
