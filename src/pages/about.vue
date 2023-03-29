@@ -222,6 +222,32 @@
         </div>
       </div>
     </div>
+
+    <div class="section" style="display: flex; background-color: #f7f7f7">
+      <div class="contactUs">
+        <div class="contactUs_body">
+          <div class="contactUs_body_1">
+            <!--页面嵌套腾讯地图-->
+            <div class="oort_map_area">
+              <div id="map_container" style="width: 100%; height: 100%"></div>
+            </div>
+            <!--<img src="./imgs/map.png">-->
+          </div>
+          <div class="contactUs_body_2 wow fadeInUp">
+            <span class="address">公司地址</span>
+            <span class="span8" style="font-size: 23px; font-weight: bold; color: #666666">奥尔特云（深圳）智慧科技有限公司</span>
+            <span class="span9">深圳市龙岗区南新路1983创意小镇岭南湾科创园</span>
+            <span class="span12">
+              <span class="span10">联系电话&nbsp;&nbsp;&nbsp;</span>
+              <span class="span11">18938083835 &nbsp;/ &nbsp;0755 2849 9790</span></span>
+            <span class="span131">
+              <span class="span10">联系邮箱&nbsp;&nbsp;&nbsp;</span>
+              <span class="span11">zhangxuelian@oortcloudsmart.com</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -230,13 +256,43 @@ import { NTabs, NTabPane, NGrid, NGridItem } from 'naive-ui';
 
 const activeTab = ref('chap1')
 
+const onClickTab = (val) => {
+  activeTab.value = val
+}
+
 onMounted(() => {
-  window.onload = loadScript
   init()
 })
 
-const onClickTab = (val) => {
-  activeTab.value = val
+const init = () => {
+  let myLatlng = new TMap.LatLng(22.602465, 114.14787) // 设置公司地点为地图中心点
+    //定义函数
+  let myOptions = {
+    zoom: 20, // 地图的缩放级别
+    center: myLatlng, //前面已定义好
+    viewMode: '2D',
+    // mapTypeId: TMap.MapTypeId.ROADMAP,
+    draggableCursor: 'default', // 地图的默认鼠标指针样式
+    draggingCursor: 'pointer', // 拖动地图时的鼠标指针样式
+    scaleControl: true, // 比例尺
+    draggable: true, // 禁止拖动地图
+    mapStyleId: 'style1' // 该key绑定的style1对应于经典地图样式，若未绑定将弹出无权限提示窗
+  }
+  //获取dom元素添加地图信息
+  let map = new TMap.Map(
+    document.getElementById('map_container'),
+    myOptions
+  )
+  // 给中心点一个指示图标
+  new TMap.MultiMarker({
+    map: map,
+    geometries: [{ //点标注数据数组
+      "position": new TMap.LatLng(22.602465, 114.14787),
+      "properties": {
+          "title": "marker"
+      }
+    }]
+  })
 }
 </script>
 
@@ -487,11 +543,78 @@ span:hover{
     margin-top: 2rem;
 }
 .address{
+  font-size: 30px;
+  color: #333333;
+  /*font-weight: bold;*/
+  margin-bottom: 21px;
+}
+.span8{
+    display: block;
+}
+.span9{
+    display: block;
+}
+.span12{
+    display: block;
+}
+.span131{
+    display: block;
+}
+.contactUs {
+  width: 100%;
+  max-width: 1190px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  &_tile {
+    width: 90%;
+    height: 100px;
+    margin-top: 100px;
     font-size: 30px;
-    color: #333333;
-    /*font-weight: bold;*/
-    margin-bottom: 21px;
-
+    color: #000000;
+    letter-spacing: 0;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 600;
+    img {
+      width: 25%;
+    }
+  }
+  &_body {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 50px 0rem;
+    &_1 {
+      width: 50%;
+    }
+    &_2 {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      text-align: justify;
+      justify-content: flex-start;
+      line-height: 30px;
+      margin-left: 30px;
+      margin-top: 20px;
+    }
+    &_3 {
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 133px;
+        height: 133px;
+      }
+    }
+  }
 }
 .hezuo{
     display: flex;
