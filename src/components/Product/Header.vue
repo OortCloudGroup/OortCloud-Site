@@ -25,8 +25,8 @@
         </p>
       </div>
     </div>
-    <div class="info_right">
-      <div class="card-outer">
+    <div v-if="isSwiper" class="info_right">
+      <div  class="card-outer">
         <div class="carousel">
           <n-carousel autoplay draggable>
             <img
@@ -38,6 +38,9 @@
           </n-carousel>
         </div>
       </div>
+    </div>
+    <div v-else class="info_right_img">
+      <img :src="swipes[0]" style="width: 100%; height: 100%; object-fit: contain;">
     </div>
   </div>
 </template>
@@ -71,6 +74,10 @@ defineProps({
     type: Array,
     default: null,
     required: true
+  },
+  isSwiper: {
+    type: Boolean,
+    default: true
   }
 })
 </script>
@@ -172,6 +179,11 @@ defineProps({
   &_right {
     // padding-top: 120px;
     margin-left: 200px;
+    &_img {
+      margin-left: 200px;
+      width: 480px;
+      height: 364px;
+    }
     .card-outer {
       display: flex;
       justify-content: center;

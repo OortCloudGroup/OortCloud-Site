@@ -372,17 +372,20 @@ const privacyApp = ref({
     {
       name: '单向光导机',
       logo: '/img/home/aqcp_06.png',
-      excerpt: '大容量信息设备光单向传输系统'
+      excerpt: '大容量信息设备光单向传输系统',
+      link: '/product_lightGuide'
     },
     {
       name: '新一代中间机',
       logo: '/img/home/aqcp_07.png',
-      excerpt: '移动存储安全交换系统'
+      excerpt: '移动存储安全交换系统',
+      link: '/product_midMachine'
     },
     {
       name: '红盘、蓝盘安全U盘系统',
       logo: '/img/home/aqcp_08.png',
-      excerpt: '安全U盘系统'
+      excerpt: '安全U盘系统',
+      link: '/product_uDisk'
     },
     {
       name: '终端数据跨网安全传输系统',
@@ -779,7 +782,8 @@ const customizeApp = ref({
     {
       name: '应用软件定制',
       logo: '/img/home/xl_13.png',
-      excerpt: '应用定制开发一站式服务'
+      excerpt: '应用定制开发一站式服务',
+      link: '/product_customizeApp'
     },
     {
       name: '运维服务外包',
@@ -789,7 +793,8 @@ const customizeApp = ref({
     {
       name: '流程自动化',
       logo: '/img/app/yw.png',
-      excerpt: '电子员工'
+      excerpt: '电子员工',
+      link: '/product_autoProcess'
     },
     {
       name: '微信公众号维护服务',
