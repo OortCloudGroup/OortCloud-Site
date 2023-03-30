@@ -12,71 +12,7 @@
         <Carousel :carouse-list="carouseList"></Carousel>
       </div>
     </div>
-    <div class="cd_bottom">
-    <div class="cd_bottom_list">
-      <a href="./productdetail_mhyyyck.html" target="_blank" class="cd_bottom_list_item">
-        <img src="/img/home/xl_3.png" />
-        <div class="cd_bottom_list_item_right">
-          <span>门户与应用仓库</span>
-          <span>把小程序搬进APP,快速打造超级APP</span>
-        </div>
-      </a>
-      <a href="./productdetail_jstx.html" class="cd_bottom_list_item" target="_blank">
-        <img src="/img/home/xl_1.png" />
-        <div class="cd_bottom_list_item_right">
-          <span>即时通讯</span>
-          <span>单聊、群聊、图文、视频等即时通讯IM</span>
-        </div>
-      </a>
-      <a href="#" class="cd_bottom_list_item" target="_blank">
-        <img src="/img/home/xl_4.png" />
-        <div class="cd_bottom_list_item_right">
-          <span>移动应用开发支撑平台</span>
-          <span>移动应用开发支撑平台</span>
-        </div>
-      </a>
-      <a href="https://myoumuamua.com/" class="cd_bottom_list_item" target="_blank">
-        <img src="/img/home/xl_2.png" />
-        <div class="cd_bottom_list_item_right">
-          <span>私有云部署的移动安全办公云平台</span>
-          <span>私有云部署的移动安全办公云平台</span>
-        </div>
-      </a>
-    </div>
-    <div class="cd_bottom_list">
-      <div class="cd_bottom_list_item">
-        <img src="/img/home/xl_5.png" />
-        <div class="cd_bottom_list_item_right">
-          <span>安全管控MDM</span>
-          <span>设备管家--MDM移动终端安全管理平台</span>
-        </div>
-      </div>
-      <a href="http://map.oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/console_manage/index.html#/"
-        class="cd_bottom_list_item" target="_blank">
-        <img src="/img/home/xl_6.png" />
-        <div class="cd_bottom_list_item_right">
-          <span>定制手机型安全终端</span>
-          <span>手机终端安全加固组件与刷机服务包</span>
-        </div>
-      </a>
-      <a href="http://map.oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/console_manage/index.html#/"
-        class="cd_bottom_list_item" target="_blank">
-        <img src="/img/home/xl_7.png" />
-        <div class="cd_bottom_list_item_right">
-          <span>定制安全Pad终端</span>
-          <span>Pad终端安全加固组件与刷机服务包</span>
-        </div>
-      </a>
-      <NuxtLink to="/more" class="cd_bottom_list_item">
-        <img src="/img/home/gd_1.png" />
-        <div class="cd_bottom_list_item_right"
-          style="display: flex; flex-direction: row; align-items: center; margin-left: 18px">
-          <span style="color: #2e4bf1">更多</span>
-          <img src="/img/home/gd_2.png" style="width: 16px; height: 16px" />
-        </div>
-      </NuxtLink>
-    </div>
-  </div>
+    
     <slot />
     <Bottom></Bottom>
   </div>

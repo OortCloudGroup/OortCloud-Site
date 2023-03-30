@@ -75,7 +75,8 @@ const doubleSysApp = ref({
     {
       name: '门户与应用仓库',
       logo: '/img/home/xl_3.png',
-      excerpt: '把小程序搬进APP,快速打造超级APP'
+      excerpt: '把小程序搬进APP,快速打造超级APP',
+      link: '/product'
     },
     {
       name: '移动应用开发支撑平台',
@@ -171,7 +172,8 @@ const application = ref({
     {
       name: '办公宝',
       logo: '/img/home/yycp_5.png',
-      excerpt: '私有云部署的移动安全办公云平台'
+      excerpt: '私有云部署的移动安全办公云平台',
+      link: '/product_office'
     },
     {
       name: '指挥调度一张图',
@@ -191,7 +193,8 @@ const application = ref({
     {
       name: '党建宝',
       logo: '/img/home/yycp_9.png',
-      excerpt: '党建宝平台'
+      excerpt: '党建宝平台',
+      link: '/product_partyBuilder'
     },
     {
       name: '警卫宝',
@@ -308,12 +311,14 @@ const saasApp = ref({
     {
       name: '交通微劝导系统',
       logo: '/img/home/aqcp_1.png',
-      excerpt: '落实公安部交管局“一盔一带”行动计划，助力文明城市迎检工作'
+      excerpt: '落实公安部交管局“一盔一带”行动计划，助力文明城市迎检工作',
+      link: '/product_microAdvice'
     },
     {
       name: '反诈中心推广统计平台',
       logo: '/img/home/aqcp_2.png',
-      excerpt: '反诈APP推广神器——反诈推广码'
+      excerpt: '反诈APP推广神器——反诈推广码',
+      link: '/product_antiFraud'
     },
     {
       name: '互联网+公安政务服务',

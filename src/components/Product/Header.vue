@@ -4,15 +4,23 @@
       <p class="icon_name"><img :src="logo"><span>{{ name }}</span></p>
       <p class="title">{{ title }}</p>
       
-      <slot name="intro" />
+      <div class="other">
+        <slot name="intro" />
 
-      <p>{{ excerpt }}</p>
-      
-      <slot name="desc" />
+        <p>{{ excerpt }}</p>
+
+        <slot name="desc" />
+      </div>
 
       <div class="review_button">
         <p v-for="(item, index) in buttons" :key="index">
           <a v-if="item.link" :href="item.link" target="_blank">{{ item.name  }}</a>
+          <n-popover v-else-if="item.img" trigger="hover" :show-arrow="false">
+            <template #trigger>
+              <a>{{ item.name }}</a>
+            </template>
+            <img :src="item.img" style="width: 160px; height: 160px;">
+          </n-popover>
           <a v-else>{{ item.name  }}<img :src="item.icon"></a>
         </p>
       </div>
@@ -35,7 +43,7 @@
 </template>
 
 <script setup>
-import { NCarousel } from 'naive-ui';
+import { NCarousel, NPopover } from 'naive-ui';
 
 defineProps({
   logo: {
@@ -69,6 +77,7 @@ defineProps({
 
 <style lang="scss" scoped>
 .info {
+  padding-top: 120px;
   padding-bottom: 64px;
   display: flex;
   justify-content: center;
@@ -79,6 +88,12 @@ defineProps({
     rgba(218, 233, 255, 0.27) 100%
   );
   &_left {
+    padding: 12px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    // min-height: 345px;
     .icon_name {
       margin: 20px 0;
       display: flex;
@@ -97,6 +112,17 @@ defineProps({
       color: #1f3f74;
       letter-spacing: 4.06px;
       font-weight: 700;
+    }
+    .other {
+      p {
+        margin: 20px 0;
+        width: 511px;
+        font-size: 14px;
+        color: #717781;
+        letter-spacing: 1.35px;
+        line-height: 22px;
+        font-weight: 500;
+      }
     }
     p {
       &:nth-of-type(6) {
@@ -144,7 +170,7 @@ defineProps({
     }
   }
   &_right {
-    margin-top: 120px;
+    // padding-top: 120px;
     margin-left: 200px;
     .card-outer {
       display: flex;

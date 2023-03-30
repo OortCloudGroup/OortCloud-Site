@@ -7,7 +7,18 @@
     
     <n-grid x-gap="28" y-gap="12" :cols="3">
       <n-grid-item v-for="item in data.apps" :key="item.name">
-        <div class="panel_item">
+        <NuxtLink :to="item.link" v-if="item.link" class="panel_item">
+          <div class="panel_item_logo">
+            <img :src="item.logo">
+          </div>
+          <div class="panel_item_info">
+            <h5 class="panel_item_title">{{ item.name }}</h5>
+            <n-ellipsis :line-clamp="2">
+              {{ item.excerpt }}
+            </n-ellipsis>
+          </div>
+        </NuxtLink>
+        <div v-else class="panel_item">
           <div class="panel_item_logo">
             <img :src="item.logo">
           </div>
