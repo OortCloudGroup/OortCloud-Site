@@ -97,7 +97,53 @@ const carouseList = ref([
 
 </script>
 
-
+<style>
+.user {
+  padding: 100px 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user .title {
+  font-size: 46px;
+  color: #051261;
+  letter-spacing: 4.45px;
+  text-align: center;
+  font-weight: 600;
+}
+.user .item {
+  margin-top: 60px;
+  width: 1100px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 14px;
+  color: #506079;
+  letter-spacing: 0;
+  line-height: 22px;
+  font-weight: 600;
+}
+.user .item .second_title {
+  font-size: 28px;
+  color: #051261;
+  letter-spacing: 2.71px;
+  line-height: 37px;
+}
+.user .item .third_title {
+  margin-top: 30px;
+  font-size: 24px;
+  color: #3f4151;
+  letter-spacing: 2.32px;
+}
+.user .item > div {
+  padding: 0;
+}
+.user .item > div:nth-of-type(1) {
+  margin-top: 30px;
+}
+</style>
 <style scoped lang="scss">
 
 .nav_container {
