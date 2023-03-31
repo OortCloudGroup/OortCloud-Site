@@ -41,6 +41,7 @@
     </div>
     <div v-else class="info_right_img">
       <img :src="swipes[0]" style="width: 100%; height: 100%; object-fit: contain;">
+      <slot name="bannerInfo" />
     </div>
   </div>
 </template>

@@ -580,12 +580,14 @@ const filesApp = ref({
     {
       name: '外包服务',
       logo: '/img/app/wbfw.png',
-      excerpt: '档案整理、数字化加工、档案信息化咨询/室，智慧档案库房'
+      excerpt: '档案整理、数字化加工、档案信息化咨询/室，智慧档案库房',
+      link: '/product_outService'
     },
     {
       name: '硬件产品',
       logo: '/img/app/yjcp.png',
-      excerpt: '密集架、扫描仪、除湿机、档案盒'
+      excerpt: '密集架、扫描仪、除湿机、档案盒',
+      link: '/product_hardware'
     }
   ]
 })
@@ -751,22 +753,26 @@ const iotApp = ref({
     {
       name: '动环盒子 (4G)',
       logo: '/img/app/dhhz.png',
-      excerpt: '带温湿度、光感、电源1进10路出，带电池和4G告警模块的动环监控'
+      excerpt: '带温湿度、光感、电源1进10路出，带电池和4G告警模块的动环监控',
+      link: '/product_dynamicRingBox'
     },
     {
       name: '动环交换机 (4G)',
       logo: '/img/app/dhjhj.png',
-      excerpt: '带交换机功能的动环监控'
+      excerpt: '带交换机功能的动环监控',
+      link: '/product_dynamicLoopSwitch'
     },
     {
       name: '5G动环网关',
       logo: '/img/app/5Gdh.png',
-      excerpt: '带5G数据网关，可以实现远程控制的动环监控'
+      excerpt: '带5G数据网关，可以实现远程控制的动环监控',
+      link: '/product_dynamicGateway'
     },
     {
       name: '路由器',
       logo: '/img/home/router.png',
-      excerpt: '多功能路由器、5G工业路由器、无线路由器、4G工业路由器'
+      excerpt: '多功能路由器、5G工业路由器、无线路由器、4G工业路由器',
+      link: '/product_router'
     },
     {
       name: '消费型电子',
