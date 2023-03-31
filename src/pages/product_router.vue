@@ -250,7 +250,7 @@ const handleClickBar = (index) => {
   margin-top: 75px;
   display: flex;
   flex-direction: column;
-  row-gap: 24px;
+  row-gap: 18px;
 }
 .product_intro_2 .content_item_bottom li {
   font-size: 18px;
