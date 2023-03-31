@@ -260,21 +260,21 @@ const tabsContent = ref([
     tab: '公安',
     title: '新一代移动警务平台',
     content: '让海量警务服务快速赋能基层派出所，从“汗水警务”迈向“智慧警务”',
-    site: './public_security.html',
+    site: '/index_publicSecurity',
     cover: '/img/home/smartcity.png'
   },
   {
     tab: '智慧派出所',
     title: '智慧派出所服务',
     content: '数据随用即得，战法随想随用，应用随需随变。精准数据筛选、灵活碰撞分析，满足不同无技术 背景用户对数据的应用需求，从根本上改变了传统软件的开发模式，让新需求在短时间内得到实现。',
-    site: './public_security.html',
+    site: '/index_policeSolve',
     cover: '/img/home/mt2.png'
   },
   {
     tab: '检察院',
     title: '检察服务',
     content: '智慧检务移动平台是基于国产化华为云、华为智慧屏、华为智能协作能力无缝结合的检务一体化平台，同时支持了面向基层的SaaS应用软件，以及为第三方应用开发提供个性化需求快速迭代底座。',
-    site: './medical_new.html',
+    site: '/index_medical',
     cover: '/img/home/education.png'
   },
   {

@@ -9,7 +9,9 @@
             <span class="pane_left_title">{{ item.title }}</span>
             <span class="pane_left_intro">{{ item.content }}</span>
             <n-button v-if="item.site" type="info">
-              了解详情
+              <NuxtLink :to="item.site">
+                了解详情
+              </NuxtLink>
             </n-button>
           </div>
           <div class="pane_right">
@@ -98,6 +100,10 @@ const onBeforeLeave = (index) => {
       object-fit: contain;
     }
   }
+}
+a {
+  color: #fff;
+  text-decoration: none;
 }
 .n-tabs {
   margin-top: 60px;
