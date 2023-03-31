@@ -65,7 +65,8 @@ const doubleSysApp = ref({
     {
       name: '即时通讯',
       logo: '/img/home/xl_1.png',
-      excerpt: '单聊、群聊、图文、视频等即时通讯IM'
+      excerpt: '单聊、群聊、图文、视频等即时通讯IM',
+      link: '/product_instantMsg'
     },
     {
       name: '私有云部署的移动安全办公云平台',
@@ -390,12 +391,14 @@ const privacyApp = ref({
     {
       name: '终端数据跨网安全传输系统',
       logo: '/img/home/aqcp_11.png',
-      excerpt: '终端数据跨网安全传输系统'
+      excerpt: '终端数据跨网安全传输系统',
+      link: '/product_terminalDataSys'
     },
     {
       name: '税务自助交换安全系统',
       logo: '/img/home/yycp_22.png',
-      excerpt: '税务自助交换安全系统'
+      excerpt: '税务自助交换安全系统',
+      link: '/product_taxExchangeSys'
     }
   ]
 })
@@ -481,7 +484,8 @@ const procuratorialApp = ref({
     {
       name: '移动检务',
       logo: '/img/app/ydjw.png',
-      excerpt: '服务检察干警移动办公办案业务'
+      excerpt: '服务检察干警移动办公办案业务',
+      link: '/product_mobileInspection'
     },
     {
       name: '阳光检务',
@@ -564,12 +568,14 @@ const filesApp = ref({
     {
       name: '档案宝',
       logo: '/img/app/dab.png',
-      excerpt: '电子档案管理系统、声像档案管理系统'
+      excerpt: '电子档案管理系统、声像档案管理系统',
+      link: '/product_archiveSoftware'
     },
     {
       name: '项目解决方案',
       logo: '/img/app/xmjjfa.png',
-      excerpt: '数字档案馆/室，智慧档案库房'
+      excerpt: '数字档案馆/室，智慧档案库房',
+      link: '/product_projectSolution'
     },
     {
       name: '外包服务',
