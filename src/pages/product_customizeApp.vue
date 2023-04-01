@@ -121,11 +121,11 @@
                 <p class="detail_group_list_text">微清单</p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_ video.png" alt="">
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_video.png" alt="">
                 <p class="detail_group_list_text">小视频</p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_ vacation.png" alt="">
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_vacation.png" alt="">
                 <p class="detail_group_list_text">请休假</p>
               </li>
               <li class="detail_group_list_item">
@@ -153,7 +153,7 @@
                 <p class="detail_group_list_text">问吧</p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_ video.png" alt="">
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_video.png" alt="">
                 <p class="detail_group_list_text">小视频</p>
               </li>
               <li class="detail_group_list_item">
@@ -203,11 +203,11 @@
                 <p class="detail_group_list_text">教育整顿</p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_ video.png" alt="">
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_video.png" alt="">
                 <p class="detail_group_list_text">位置上报</p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_ vacation.png" alt="">
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_vacation.png" alt="">
                 <p class="detail_group_list_text">公众号</p>
               </li>
               <li class="detail_group_list_item">
