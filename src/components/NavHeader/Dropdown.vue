@@ -3,10 +3,7 @@
     <slot />
     <div v-for="(item, index) in menu" :key="index" class="dropdown_col">
       <p class="dropdown_col_title" v-if="item.showTitle">{{ item.title }}</p>
-      <div class="dropdown_col_item" v-for="(mItem, mIndex) in item.menus" :key="mIndex">
-        <img class="dropdown_col_item_logo" :src="mItem.logo">
-        <span class="dropdown_col_item_label">{{ mItem.name }}</span>
-      </div>
+      <NavHeaderDropdownItem v-for="menu in item.menus" :key="menu.name" :menu="menu"/>
     </div>
   </div>
 </template>

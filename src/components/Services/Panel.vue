@@ -1,0 +1,82 @@
+<template>
+  <div class="panel" >
+    <n-tabs
+      class="card-tabs"
+      :default-value="activeTab"
+      size="large"
+      animated
+      style="margin: 0 -4px; height: 80px;"
+      pane-style="padding-left: 4px; padding-right: 4px; box-sizing: border-box;"
+    >
+      <n-tab-pane v-for="tab in tabs" :key="tab.name" :name="tab.name">
+        <template #tab>
+          <div class="custom_tab">
+            <img :src="tab.logo" :alt="tab.name">
+          </div>
+        </template>
+        <ServicesPanelItem :name="tab.name" :content="tab.content"/>
+      </n-tab-pane>
+    </n-tabs>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { NTabs, NTabPane } from 'naive-ui';
+
+import { Tab } from '~/types'
+
+const props = defineProps({
+  tabs: {
+    type: Array<Tab>,
+    required: true
+  }
+})
+
+const { tabs } = toRefs(props)
+
+const activeTab = ref(tabs.value[0].name)
+</script>
+
+<style lang="scss" scoped>
+.panel {
+  margin-bottom: 24px;
+  width: 100%;
+  height: 436px;
+}
+.custom_tab {
+  width: 40px;
+  height: 40px;
+  img {
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+  }
+}
+:deep(.n-tabs-tab) {
+  width: 60px;
+  height: 80px;
+  justify-content: center;
+}
+:deep(.n-tabs-wrapper) {
+  height: 80px;
+}
+:deep(.n-tabs-tab-pad) {
+  width: 12px;
+}
+:deep(.n-tabs-tab--active) {
+  img {
+    transform: scale(1.5);
+    transform-origin: bottom center;
+  }
+}
+:deep(.n-tabs-bar) {
+  width: 8px !important;
+  height: 8px;
+  border-radius: 9999px;
+  background-color: #2038EC;
+  transform: translateX(25px);
+}
+:deep(.n-tabs .n-tabs-pane-wrapper) {
+  overflow: visible;
+}
+</style>

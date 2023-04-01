@@ -11,7 +11,20 @@ export interface Menu {
   menus: MenuItem[]
 }
 
-interface MenuItem{
+export interface MenuItem{
   name: string,
-  logo: string
+  logo: string,
+  link?: any
+}
+
+export interface Anchor {
+  title: string,
+  href: string
+}
+
+
+export interface Tab {
+  name: string,
+  logo: string,
+  content: Object
 }
