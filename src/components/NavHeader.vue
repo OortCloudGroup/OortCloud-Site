@@ -276,7 +276,7 @@ const solutionMenu = ref<Menu[]>([
     title: '',
     showTitle: false,
     menus: [
-      { name: '公安', logo: '/img/app/jinghui.png' },
+      { name: '公安', logo: '/img/app/jinghui.png', link: '/services_publicSecurity' },
       { name: '智慧派出所', logo: '/img/app/jinghui.png' },
       { name: '交警', logo: '/img/app/jiaojing.png' },
       { name: '检察', logo: '/img/app/jiancha.png' },
