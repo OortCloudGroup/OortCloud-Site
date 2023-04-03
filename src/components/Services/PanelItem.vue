@@ -1,9 +1,23 @@
 <template>
   <div class="item">
     <div class="item_content">
-      <h3 class="item_content_title">{{ name }}</h3>
+      <div v-if="logo" class="item_content_header">
+        <img :src="logo">
+        <h3>{{ name }}</h3>
+      </div>
+      <h3 v-else class="item_content_title">{{ name }}</h3>
       <p class="item_content_desc">{{ content.desc }}</p>
-      <n-button ghost color="rgba(5,18,97,1)" size="large">了解更多</n-button>
+      <div class="item_content_btn">
+        <n-button
+          v-for="button in content.buttons"
+          :key="button.name"
+          :ghost="button.name !== '立即购买'"
+          :color="button.name === '了解更多' ? 'rgba(5,18,97,1)' : '#F93E3E'"
+          size="large"
+        >
+          {{ button.name }}
+        </n-button>
+      </div>
     </div>
     <div class="item_cover">
       <img :src="content.cover">
@@ -22,6 +36,10 @@ defineProps({
   content: {
     type: Object,
     requried: true
+  },
+  logo: {
+    type: String,
+    default: ''
   }
 })
 </script>
@@ -37,6 +55,18 @@ defineProps({
     flex-direction: column;
     align-items: flex-start;
     row-gap: 24px;
+    &_header {
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+      font-size: 24px;
+      color: #051261;
+      font-weight: 600;
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
     &_title {
       padding: 8px 0;
       font-size: 24px;
@@ -51,6 +81,10 @@ defineProps({
     &_desc {
       font-size: 14px;
       color: #051261;
+    }
+    &_btn {
+      display: flex;
+      column-gap: 16px;
     }
   }
   &_cover {

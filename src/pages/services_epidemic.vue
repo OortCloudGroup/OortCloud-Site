@@ -1,0 +1,107 @@
+<template>
+  <div class="container">
+    <div class="main">
+      <ServicesHeader  
+        :logo="header.logo"
+        :name="header.name"
+        :desc="header.desc"
+      />
+
+      <div class="content">
+        <ServicesSidebar :anchors="anchors" />
+
+        <div class="content_main">
+          <ServicesPanel :tabs="tabs1" id="疫情指挥调度"/>
+          <ServicesPanel :tabs="tabs2" id="疫情防控访客管理"/>
+          <ServicesPanel :tabs="tabs3" id="疫情卡口小战士"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { Anchor, Tab } from '~/types'
+
+interface Head {
+  logo: any,
+  name: string,
+  desc: string
+}
+
+const header = reactive<Head>({
+  logo: '/img/app/zgbhf.png',
+  name: '智慧边海防',
+  desc: '智慧检务移动平台是基于国产化华为云、华为智慧屏、华为智能协作能力无缝结合的检务一体化平台，同时支持了面向基层的SaaS应用软件，以及为第三方应用开发提供个性化需求快速迭代底座'
+})
+const anchors = ref<Anchor[]>([
+  { title: '疫情指挥调度', href: '#疫情指挥调度' },
+  { title: '疫情防控访客管理', href: '#疫情防控访客管理' },
+  { title: '疫情卡口小战士', href: '#疫情卡口小战士' }
+])
+const tabs1 = reactive<Tab[]>([
+  { 
+    name: '疫情指挥调度',
+    logo: '/img/app/yqzhdd.png',
+    content: {
+      desc: '基层社会治理可视化指挥调度一张图系统和智慧社区综合信息平台',
+      cover: '/img/services/smart_police_station/zhyzt.png',
+      buttons: [
+        { name: '了解更多', link: '' }
+      ]
+    } 
+  }
+])
+const tabs2 = reactive<Tab[]>([
+  { 
+    name: '疫情防控访客管理',
+    logo: '/img/home/yycp_10.png',
+    content: {
+      desc: '来访预约访客管理系统',
+      cover: '/img/services/epidemic/fk.png',
+      buttons: [
+        { name: '了解更多', link: '' }
+      ]
+    } 
+  }
+])
+const tabs3 = reactive<Tab[]>([
+  { 
+    name: '疫情卡口小战士',
+    logo: '/img/home/xzs.png',
+    content: {
+      desc: '疫情防控卡口电子哨兵',
+      cover: '/img/services/epidemic/xzs.png',
+      buttons: [
+        { name: '了解更多', link: '' }
+      ]
+    } 
+  }
+])
+</script>
+
+<style lang="scss" scoped>
+.container {
+  width: 100%;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+.main {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+.content {
+  position: sticky;
+  top: 90px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  column-gap: 60px;
+  &_main {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+</style>

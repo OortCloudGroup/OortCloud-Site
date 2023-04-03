@@ -1,6 +1,7 @@
 <template>
   <div class="panel" >
     <n-tabs
+      v-if="showTabs"
       class="card-tabs"
       :default-value="activeTab"
       size="large"
@@ -17,6 +18,9 @@
         <ServicesPanelItem :name="tab.name" :content="tab.content"/>
       </n-tab-pane>
     </n-tabs>
+    <div v-else>
+      <ServicesPanelItem v-for="tab in tabs" :key="tab.name" :name="tab.name" :content="tab.content" :logo="tab.logo"/>
+    </div>
   </div>
 </template>
 
@@ -29,6 +33,10 @@ const props = defineProps({
   tabs: {
     type: Array<Tab>,
     required: true
+  },
+  showTabs: {
+    type: Boolean,
+    default: false
   }
 })
 

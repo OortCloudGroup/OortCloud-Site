@@ -29,6 +29,7 @@ defineProps({
 
 <style lang="scss" scoped>
 .header {
+  margin: 0 auto;
   padding: 60px 0;
   display: flex;
   flex-direction: column;
@@ -52,10 +53,12 @@ defineProps({
   }
   &_info {
     margin-top: 18px;
+    max-width: 800px;
     &_text {
       font-size: 16px;
       color: #999999;
       letter-spacing: 1.5px;
+      text-align: center;
     }
   }
 }
