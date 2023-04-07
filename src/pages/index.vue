@@ -324,6 +324,11 @@ const partnerData = ref<Array<string>>([
 
 const newsList = ref<Array<News>>([])
 
+onBeforeMount(() => {
+  partnerData.value.map(el => replaceImgPrefix(el))
+  console.log(tabsContent.value)
+})
+
 getNewsList()
 
 async function getNewsList() {

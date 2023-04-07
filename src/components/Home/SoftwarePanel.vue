@@ -10,7 +10,7 @@
     <div class="panel_main">
       <div v-for="(item, index) in data" :key="index" class="panel_col">
         <div class="panel_col_title">
-          <img class="panel_col_title_logo" :src="item.logo">
+          <Image class="panel_col_title_logo" :src="item.logo" />
           <p class="panel_col_title_label">{{ item.title }}</p>
         </div>
         <div class="panel_wrapper">

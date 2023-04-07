@@ -15,7 +15,7 @@
             </n-button>
           </div>
           <div class="pane_right">
-            <img :src="item.cover">
+            <Image :src="item.cover" />
           </div>
         </div>
       </n-tab-pane>

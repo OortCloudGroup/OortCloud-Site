@@ -7,7 +7,7 @@
         <div class="grid_item" :style="[(index === 1 || index === 2) && blueBackground, (index === 3 || index === 4) && greenBackground]">
           <h3 class="grid_item_title">{{ item.title }}</h3>
           <p class="grid_item_content">{{ item.content }}</p>
-          <img v-if="item.cover" :src="item.cover" class="grid_item_cover">
+          <Image v-if="item.cover" :src="item.cover" class="grid_item_cover" />
         </div>
       </n-grid-item>
     </n-grid>

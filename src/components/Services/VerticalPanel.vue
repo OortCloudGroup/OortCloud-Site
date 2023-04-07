@@ -8,7 +8,7 @@
         @click="handleClickTab(tab)"
         :style="[tab.name === activeTab.name ? activeTabStyle : '']"
       >
-        <img :src="tab.logo">
+        <Image :src="tab.logo" />
         <p>{{ tab.name }}</p>
         <div v-show="tab.name === activeTab.name" class="triangle" />
       </div>

@@ -3,7 +3,7 @@
     <HomePanelHeader title="合作伙伴" info="满足企业实际业务需求的定制化服务" />
 
     <div class="panel_content">
-      <img v-for="(item, index) in data" :key="index" :src="item">
+      <Image v-for="(item, index) in data" :key="index" :src="item" />
     </div>
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="header_primary">
-      <img class="header_primary_logo" :src="logo">
+      <Image class="header_primary_logo" :src="logo" />
       <h1 class="header_primary_title">{{ name }}</h1>
     </div>
     <div class="header_info">

@@ -3,7 +3,7 @@
     <h2 class="panel_title">客户案例</h2>
 
     <div class="panel_content">
-      <img v-for="(item, index) in data" :key="index" :src="item">
+      <Image v-for="(item, index) in data" :key="index" :src="item" />
     </div>
   </div>
 </template>

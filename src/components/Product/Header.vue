@@ -19,7 +19,7 @@
             <template #trigger>
               <a>{{ item.name }}</a>
             </template>
-            <img :src="item.img" style="width: 160px; height: 160px;">
+            <Image :src="item.img" style="width: 160px; height: 160px;" />
           </n-popover>
           <a v-else>{{ item.name  }}<img :src="item.icon"></a>
         </p>
@@ -40,7 +40,7 @@
       </div>
     </div>
     <div v-else class="info_right_img">
-      <img :src="swipes[0]" style="width: 100%; height: 100%; object-fit: contain;">
+      <Image :src="swipes[0]" style="width: 100%; height: 100%; object-fit: contain;" />
       <slot name="bannerInfo" />
     </div>
   </div>

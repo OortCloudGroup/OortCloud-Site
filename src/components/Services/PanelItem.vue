@@ -2,7 +2,7 @@
   <div class="item">
     <div class="item_content">
       <div v-if="logo" class="item_content_header">
-        <img :src="logo">
+        <Image :src="logo" />
         <h3>{{ name }}</h3>
       </div>
       <h3 v-else class="item_content_title">{{ name }}</h3>
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="item_cover">
-      <img :src="content.cover">
+      <Image :src="content.cover" />
     </div>
   </div>
 </template>

@@ -1,10 +1,10 @@
 <template>
   <NuxtLink v-if="menu.link" :to="menu.link" class="dropdown_col_item">
-    <img class="dropdown_col_item_logo" :src="menu.logo">
+    <Image class="dropdown_col_item_logo" :src="menu.logo" />
     <span class="dropdown_col_item_label">{{ menu.name }}</span>
   </NuxtLink>
   <div v-else :to="menu.link" class="dropdown_col_item">
-    <img class="dropdown_col_item_logo" :src="menu.logo">
+    <Image class="dropdown_col_item_logo" :src="menu.logo" />
     <span class="dropdown_col_item_label">{{ menu.name }}</span>
   </div>
 </template>

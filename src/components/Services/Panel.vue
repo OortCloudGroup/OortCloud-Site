@@ -12,7 +12,7 @@
       <n-tab-pane v-for="tab in tabs" :key="tab.name" :name="tab.name">
         <template #tab>
           <div class="custom_tab">
-            <img :src="tab.logo" :alt="tab.name">
+            <Image :src="tab.logo" :alt="tab.name" />
           </div>
         </template>
         <ServicesPanelItem :name="tab.name" :content="tab.content"/>
