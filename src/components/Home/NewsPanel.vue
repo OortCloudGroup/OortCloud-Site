@@ -8,7 +8,7 @@
       <n-grid-item v-for="(item, index) in data" :key="index">
         <div class="item">
           <div>
-            <img :src="item.CoverImg">
+            <img :src="'https://www.oortcloudsmart.com' + item.CoverImg.split('32610')[1]">
           </div>
           <div>
             <h3>{{ item.Title }}</h3>
@@ -35,6 +35,7 @@ const router = useRouter()
 const toMoreNews = () => {
   router.push('/news')
 }
+
 </script>
 
 <style lang="scss" scoped>

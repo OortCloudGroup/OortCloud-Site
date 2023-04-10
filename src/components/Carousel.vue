@@ -8,7 +8,7 @@
     draggable>
     <div  class="carousel-img container" :class="{'first_carouse': index ===0}" v-for="(item, index) in carouseList"
      :key="index"
-     :style="'background-image:url('+item.url+')'">
+     :style="'background-image:url(/oort/oort-site/'+ item.url+')'">
      <div class="content">
       <div class="title">{{ item.title }}</div>
       <div class="desc">{{ item.desc }}</div>
