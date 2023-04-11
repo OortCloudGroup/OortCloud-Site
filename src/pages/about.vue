@@ -5,7 +5,8 @@
         <n-tab-pane name="chap1">
           <template #tab>
             <div class="tab">
-              <img :src="`/img/about/tab_1${activeTab === 'chap1' ? '_active' : ''}.png`">
+              <img v-if="activeTab === 'chap1'" src="/img/about/tab_1_active.png">
+              <img v-else src="/img/about/tab_1.png">
               <span>企业简介</span>
             </div>
           </template>
@@ -45,7 +46,8 @@
         <n-tab-pane name="chap2">
           <template #tab>
             <div class="tab">
-              <img :src="`/img/about/tab_2${activeTab === 'chap2' ? '_active' : ''}.png`">
+              <img v-if="activeTab === 'chap2'" src="/img/about/tab_2_active.png">
+              <img v-else src="/img/about/tab_2.png">
               <span>核心竞争力</span>
             </div>
           </template>
@@ -113,7 +115,8 @@
         <n-tab-pane name="chap3">
           <template #tab>
             <div class="tab">
-              <img :src="`/img/about/tab_3${activeTab === 'chap3' ? '_active' : ''}.png`">
+              <img v-if="activeTab === 'chap3'" src="/img/about/tab_3_active.png">
+              <img v-else src="/img/about/tab_3.png">
               <span>企业资质与荣誉</span>
             </div>
           </template>
