@@ -43,7 +43,7 @@ const tabs1 = reactive<Tab[]>([
       desc: '落实公安部交管局“一盔一带”行动计划，助力文明城市迎检工作',
       cover: '/img/services/traffic_police/wqd.png',
       buttons: [
-        { name: '了解更多', link: '' }
+        { name: '了解更多', link: '/product_microAdvice' }
       ]
     } 
   }

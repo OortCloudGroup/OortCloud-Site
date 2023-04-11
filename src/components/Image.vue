@@ -14,14 +14,19 @@ let { src } = toRefs(props)
 
 const imgSrc = ref('')
 
-// watch(src, () => {
-//   imgSrc.value = '/oort/oort-site' + src.value
-//   console.log(src.value, imgSrc.value)
-// })
+watch(src, () => {
+  if (window.location.hostname !== 'localhost') {
+    imgSrc.value = '/oort/oort-site' + src.value
+  } else {
+    imgSrc.value = src.value
+  }
+})
 
 onMounted(() => {
-  console.log(src.value, imgSrc.value)
-  imgSrc.value = '/oort/oort-site' + src.value
-  console.log(src.value, imgSrc.value)
+  if (window.location.hostname !== 'localhost') {
+    imgSrc.value = '/oort/oort-site' + src.value
+  } else {
+    imgSrc.value = src.value
+  }
 })
 </script>

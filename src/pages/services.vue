@@ -169,7 +169,8 @@ const procuratorialApp = ref({
     {
       name: '移动检务',
       logo: '/img/app/ydjw.png',
-      excerpt: '服务检察干警移动办公办案业务'
+      excerpt: '服务检察干警移动办公办案业务',
+      link: '/product_mobileInspection'
     },
     {
       name: '阳光检务',
@@ -252,22 +253,26 @@ const filesApp = ref({
     {
       name: '档案宝',
       logo: '/img/app/dab.png',
-      excerpt: '电子档案管理系统、声像档案管理系统'
+      excerpt: '电子档案管理系统、声像档案管理系统',
+      link: '/product_archiveSoftware'
     },
     {
       name: '项目解决方案',
       logo: '/img/app/xmjjfa.png',
-      excerpt: '数字档案馆/室，智慧档案库房'
+      excerpt: '数字档案馆/室，智慧档案库房',
+      link: '/product_projectSolution'
     },
     {
       name: '外包服务',
       logo: '/img/app/wbfw.png',
-      excerpt: '档案整理、数字化加工、档案信息化咨询/室，智慧档案库房'
+      excerpt: '档案整理、数字化加工、档案信息化咨询/室，智慧档案库房',
+      link: '/product_outService'
     },
     {
       name: '硬件产品',
       logo: '/img/app/yjcp.png',
-      excerpt: '密集架、扫描仪、除湿机、档案盒'
+      excerpt: '密集架、扫描仪、除湿机、档案盒',
+      link: '/product_hardware'
     }
   ]
 })
@@ -355,14 +360,15 @@ const trafficPoliceApp = ref({
     {
       name: '微劝导',
       logo: '/img/app/wqd.png',
-      excerpt: '落实公安部交管局“一盔一带”行动计划，助力文明城市迎检工作'
+      excerpt: '落实公安部交管局“一盔一带”行动计划，助力文明城市迎检工作',
+      link: '/product_microAdvice'
     }
   ]
 })
 // 企业
 const enterpriseApp = ref({
   title: '企业',
-  logo: '/img/app/jiaojing.png',
+  logo: '/img/app/qiye.png',
   apps: [
     {
       name: '内网“微信”',
@@ -433,22 +439,26 @@ const iotApp = ref({
     {
       name: '动环盒子 (4G)',
       logo: '/img/app/dhhz.png',
-      excerpt: '带温湿度、光感、电源1进10路出，带电池和4G告警模块的动环监控'
+      excerpt: '带温湿度、光感、电源1进10路出，带电池和4G告警模块的动环监控',
+      link: '/product_dynamicRingBox'
     },
     {
       name: '动环交换机 (4G)',
       logo: '/img/app/dhjhj.png',
-      excerpt: '带交换机功能的动环监控'
+      excerpt: '带交换机功能的动环监控',
+      link: '/product_dynamicLoopSwitch'
     },
     {
       name: '5G动环网关',
       logo: '/img/app/5Gdh.png',
-      excerpt: '带5G数据网关，可以实现远程控制的动环监控'
+      excerpt: '带5G数据网关，可以实现远程控制的动环监控',
+      link: '/product_dynamicGateway'
     },
     {
       name: '路由器',
       logo: '/img/home/router.png',
-      excerpt: '多功能路由器、5G工业路由器、无线路由器、4G工业路由器'
+      excerpt: '多功能路由器、5G工业路由器、无线路由器、4G工业路由器',
+      link: '/product_router'
     },
     {
       name: '消费型电子',
@@ -470,7 +480,8 @@ const customizeApp = ref({
     {
       name: '应用软件定制',
       logo: '/img/home/xl_13.png',
-      excerpt: '应用定制开发一站式服务'
+      excerpt: '应用定制开发一站式服务',
+      link: '/product_customizeApp'
     },
     {
       name: '运维服务外包',

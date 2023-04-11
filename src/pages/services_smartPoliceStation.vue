@@ -51,9 +51,9 @@ const tabs1 = reactive<Tab[]>([
       desc: '华为IdeaHub智慧屏+奥尔特云警务应用平台',
       cover: '/img/services/smart_police_station/ideaHub.png',
       buttons: [
-        { name: '了解更多', link: '' },
-        { name: '立即购买', link: '' },
-        { name: '在线体验', link: '' },
+        { name: '了解更多', link: '/JWBdetail' },
+        { name: '立即购买', link: 'https://marketplace.huaweicloud.com/contents/ee446d40-ce7c-447f-84e9-4ca0a1fe2f0f' },
+        { name: '在线体验', link: 'http://map.oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/console_manage/index.html#/' },
       ]
     } 
   }

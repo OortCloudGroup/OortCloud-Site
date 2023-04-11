@@ -19,7 +19,7 @@
         <div class="header_dialog">
         <div class="header_dialog_head">
           <div class="header_dialog_head_left">基础软件</div>
-          <div class="header_dialog_head_right"><a>查看更多</a></div>
+          <div class="header_dialog_head_right"><NuxtLink to="/more">查看更多</NuxtLink></div>
         </div>
         <div class="header_dialog_item">
           <div class="header_dialog_item_title">双系统安全移动办公</div>
@@ -90,19 +90,19 @@
             <img class="dropdown_col_sort_logo" src="/img/home/sxt.png">
             <span class="dropdown_col_sort_label">安全移动办公</span>
           </div>
-          <div class="dropdown_col_item">
+          <NuxtLink to="/product_instantMsg" class="dropdown_col_item">
             <img class="dropdown_col_item_logo" src="/img/home/xl_1.png">
             <span class="dropdown_col_item_label">即时通讯</span>
             <!-- <span>NEW</span> -->
-          </div>
+          </NuxtLink>
           <div class="dropdown_col_item">
             <img class="dropdown_col_item_logo" src="/img/home/xl_2.png">
             <span class="dropdown_col_item_label">私有云部署的移动安全办公云平台</span>
           </div>
-          <div class="dropdown_col_item">
+          <NuxtLink to="/product" class="dropdown_col_item">
             <img class="dropdown_col_item_logo" src="/img/home/xl_3.png">
             <span class="dropdown_col_item_label">门户与应用仓库</span>
-          </div>
+          </NuxtLink>
           <div class="dropdown_col_item">
             <img class="dropdown_col_item_logo" src="/img/home/xl_5.png">
             <span class="dropdown_col_item_label">安全管控MDM</span>
@@ -210,10 +210,10 @@ const hardwareMenu = ref<Menu[]>([
     title: '网络产品',
     showTitle: true,
     menus: [
-      { name: '网关', logo: '/img/home/router.png' },
-      { name: '4G工业路由器', logo: '/img/app/dhhz.png' },
-      { name: '5G工业路由器', logo: '/img/app/5Gdh.png' },
-      { name: '交换机', logo: '/img/app/dhjhj.png' },
+      { name: '网关', logo: '/img/home/router.png', link: '/product_router' },
+      { name: '4G工业路由器', logo: '/img/app/dhhz.png', link: '/product_router' },
+      { name: '5G工业路由器', logo: '/img/app/5Gdh.png', link: '/product_router' },
+      { name: '交换机', logo: '/img/app/dhjhj.png', link: '/product_router' },
     ]
   },
   {
@@ -230,9 +230,9 @@ const hardwareMenu = ref<Menu[]>([
     title: '数据采集',
     showTitle: true,
     menus: [
-      { name: '动环盒子', logo: '/img/app/icon_box.png' },
-      { name: '动环交换机', logo: '/img/app/icon_change.png' },
-      { name: '动环网关', logo: '/img/app/icon_wlan.png' }
+      { name: '动环盒子', logo: '/img/app/icon_box.png', link: '/product_dynamicRingBox' },
+      { name: '动环交换机', logo: '/img/app/icon_change.png', link: '/product_dynamicLoopSwitch' },
+      { name: '动环网关', logo: '/img/app/icon_wlan.png', link: '/product_dynamicGateway' }
     ]
   }
 ])
@@ -252,8 +252,8 @@ const softwareMenu = ref<Menu[]>([
     title: '云SaaS软件',
     showTitle: true,
     menus: [
-      { name: '交通微劝导系统', logo: '/img/home/aqcp_1.png' },
-      { name: '反诈中心推广统计平台', logo: '/img/home/aqcp_2.png' },
+      { name: '交通微劝导系统', logo: '/img/home/aqcp_1.png', link: '/product_microAdvice' },
+      { name: '反诈中心推广统计平台', logo: '/img/home/aqcp_2.png', link: '/product_antiFraud' },
       { name: '互联网+公安政务服务', logo: '/img/home/aqcp_3.png' },
       { name: '群防群治', logo: '/img/home/aqcp_4.png' },
       { name: '辅警平台', logo: '/img/home/yycp_22.png' },

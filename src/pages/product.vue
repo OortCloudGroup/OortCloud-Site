@@ -2,28 +2,28 @@
   <div class="page_container">
     <div class="cd_bottom">
       <div class="cd_bottom_list">
-        <a href="./productdetail_mhyyyck.html" target="_blank" class="cd_bottom_list_item">
+        <NuxtLink to="/product" class="cd_bottom_list_item">
           <img src="/img/home/xl_3.png" />
           <div class="cd_bottom_list_item_right">
             <span>门户与应用仓库</span>
             <span>把小程序搬进APP,快速打造超级APP</span>
           </div>
-        </a>
-        <a href="./productdetail_jstx.html" class="cd_bottom_list_item" target="_blank">
+        </NuxtLink>
+        <NuxtLink to="/product_instantMsg" class="cd_bottom_list_item">
           <img src="/img/home/xl_1.png" />
           <div class="cd_bottom_list_item_right">
             <span>即时通讯</span>
             <span>单聊、群聊、图文、视频等即时通讯IM</span>
           </div>
-        </a>
-        <a href="#" class="cd_bottom_list_item" target="_blank">
+        </NuxtLink>
+        <a href="#" class="cd_bottom_list_item">
           <img src="/img/home/xl_4.png" />
           <div class="cd_bottom_list_item_right">
             <span>移动应用开发支撑平台</span>
             <span>移动应用开发支撑平台</span>
           </div>
         </a>
-        <a href="https://myoumuamua.com/" class="cd_bottom_list_item" target="_blank">
+        <a href="https://myoumuamua.com/" class="cd_bottom_list_item">
           <img src="/img/home/xl_2.png" />
           <div class="cd_bottom_list_item_right">
             <span>私有云部署的移动安全办公云平台</span>

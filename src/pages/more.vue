@@ -675,14 +675,15 @@ const trafficPoliceApp = ref({
     {
       name: '微劝导',
       logo: '/img/app/wqd.png',
-      excerpt: '落实公安部交管局“一盔一带”行动计划，助力文明城市迎检工作'
+      excerpt: '落实公安部交管局“一盔一带”行动计划，助力文明城市迎检工作',
+      link: '/product_microAdvice'
     }
   ]
 })
 // 企业
 const enterpriseApp = ref({
   title: '企业',
-  logo: '/img/app/jiaojing.png',
+  logo: '/img/app/qiye.png',
   apps: [
     {
       name: '内网“微信”',

@@ -24,40 +24,40 @@
             <span class="text2">300多种企业级产品累计服务1.5亿用户</span>
           </div>
           <div class="bottom_href_item bottom_href_item_text" style="margin-left: 20px;margin-right: 50px;">
-            <span><a style="
+            <span><NuxtLink to="/more" style="
                     opacity: 1;
                     font-size: 14px;
                     color: #ffffff !important;
                     font-weight: 600;
-                  ">软件中心</a></span>
-            <span><a href="#" target="_blank">华为IdeaHub警务宝</a></span>
-            <span><a href="#" target="_blank">警务宝一体机</a></span>
+                  ">软件中心</NuxtLink></span>
+            <span><a href="https://marketplace.huaweicloud.com/contents/ee446d40-ce7c-447f-84e9-4ca0a1fe2f0f#productid=OFFI766131914498846720" target="_blank">华为IdeaHub警务宝</a></span>
+            <span><NuxtLink to="/JWBdetail">警务宝一体机</NuxtLink></span>
             <span><a href="https://onemap.oortcloudsmart.com" target="_blank">指挥调度一张图</a></span>
             <span><a href="#" target="_blank">私有云部署的移动安全办公云平台</a></span>
-            <span><a href="#" target="_blank">门户与应用仓库</a></span>
-            <span><a href="#" target="_blank">办公宝</a></span>
+            <span><NuxtLink to="/product">门户与应用仓库</NuxtLink></span>
+            <span><NuxtLink to="/product_office">办公宝</NuxtLink></span>
             <div style="margin-top: 10px">
-              <a style="
+              <NuxtLink style="
                     font-size: 14px;
                     color: #fff !important;
                     font-weight: 600;
-                  " href="./more.html">更多 ></a>
+                  " to="/more">更多 ></NuxtLink>
             </div>
           </div>
           <div class="bottom_href_item bottom_href_item_text">
-            <span><a style="opacity: 1; font-size: 14px; color: #fff !important">解决方案</a></span>
-            <span><a href="#" target="_blank">公安</a></span>
-            <span><a href="#" target="_blank">智慧派出所</a></span>
-            <span><a href="#" target="_blank">检察</a></span>
-            <span><a href="#" target="_blank">司法监狱</a></span>
-            <span><a href="#" target="_blank">智慧边海防</a></span>
-            <span><a href="#" target="_blank">政府</a></span>
+            <span><NuxtLink to="/services" style="opacity: 1; font-size: 14px; color: #fff !important">解决方案</NuxtLink></span>
+            <span><NuxtLink to="/services_publicSecurity">公安</NuxtLink></span>
+            <span><NuxtLink to="/services_smartPoliceStation">智慧派出所</NuxtLink></span>
+            <span><NuxtLink to="/services_inspection">检察</NuxtLink></span>
+            <span><NuxtLink to="/services_prison">司法监狱</NuxtLink></span>
+            <span><NuxtLink to="/services_borderSeaDefense">智慧边海防</NuxtLink></span>
+            <span><NuxtLink to="/services_goverment">政府</NuxtLink></span>
             <div style="margin-top: 10px">
-              <a style="
+              <NuxtLink style="
                     font-size: 14px;
                     color: #fff !important;
                     font-weight: 600;
-                  " href="./sulotion.html">更多 ></a>
+                  " to="/services">更多 ></NuxtLink>
             </div>
           </div>
           <div class="bottom_href_item bottom_href_item_text">
@@ -69,8 +69,8 @@
           </div>
           <div class="bottom_href_item bottom_href_item_text">
             <span><a style="opacity: 1; font-size: 14px; color: #fff !important" target="_blank">关于我们</a></span>
-            <span><a href="about.html" target="_blank">公司简介</a></span>
-            <span><a href="./about.html#hezuo" target="_blank">合作洽谈</a></span>
+            <span><NuxtLink to="/about">公司简介</NuxtLink></span>
+            <span><NuxtLink to="/about#hezuo">合作洽谈</NuxtLink></span>
           </div>
           <div class="bottom_href_item bottom_href_item_first" style="border: none;">
             <span class="bottom_href_item_first_text1">关注奥尔特云</span>

@@ -37,23 +37,40 @@ const carouseList = ref([
     url: '/img/home/jwb.png',
     title: '警务宝一体机',
     desc: '面向派出所、警务室的一体化智慧基层平台',
-    buttons: [{ text: '立即购买' } , { text: '了解详情' }, { text: '立即体验' }, { text: '观看视频' }]
+    buttons: [
+      { text: '立即购买', link: 'https://marketplace.huaweicloud.com/contents/ee446d40-ce7c-447f-84e9-4ca0a1fe2f0f' }, 
+      { text: '了解详情', link: '/JWBdetail' }, 
+      { text: '立即体验', link: 'http://map.oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/console_manage/index.html#/' }, 
+      { text: '观看视频', link: 'https://player.youku.com/embed/XNTExNzc3Mzg2NA==' }]
   },
   { url: '/img/home/yzt_bg.png',
     title: '智慧调度一张图',
     desc: '打造全警钟、全平台、资源整合、系统集成、信息共享，实现接警、指挥、调度为一体的指挥中心，从而更有效的提高治安预防、控制、制止的反应能力',
-    buttons: [{ text: '立即购买' } , { text: '了解详情' }, { text: '立即体验' }, { text: '观看视频' }]
+    buttons: [
+      { text: '立即购买', link: 'https://marketplace.huaweicloud.com/contents/ee446d40-ce7c-447f-84e9-4ca0a1fe2f0f' },
+      { text: '了解详情', link: 'https://onemap.oortcloudsmart.com/' },
+      { text: '立即体验', link: 'http://map.oort.oortcloudsmart.com:18080/onemap/main.jsp' },
+      { text: '观看视频', link: 'https://apd-4e60e46bf38bc31d13edc7803a4bad5eac58839c35f8314f.v.smtcdns.com/om.tc.qq.com/AmBtTMAOPHRR_6U15Ipb96FxUB6RB2lUNBiDS9T06JGA/uwMROfz2r5zIIaQXGdGnC2dfDmb_xYKxrIGz_bGUg2Lja6ru/h3155cunx94.mp4?sdtfrom=v1104&guid=dd8ff8f30a9538bd037f7e44d04ece34&vkey=D698E3A0DF1746FD6B737323AA03DD27C48C3374676FF8EE9EEEFCC4D2F80D118171B4BDF9DD9859CDCEBDDBDC8EE744D8CDE7B0A53AAA25B9E0BC79AC0D85D7B6A0D3BD6966DD4F513C5C74817E618D50D119813B8A5B921331C5100C55CCA87281D352246FC4E5E5F2DC2B909A15A820A527AB6BC4E9CC826851C316FA006A08C29DD7FFEE10E2' }
+    ]
   },
   { url: '/img/home/sypt.png',
     title: '私有云部署的移动安全办公云平台',
     desc: '对标公有云上的钉钉，企业微信的专门私有化部署的数字化移动协同办公平台，数据自己掌握，安全可控。打造了一个涵盖即时消息、电子邮件、音视频会议、资料分享、流程申请与',
-    buttons: [{ text: '立即购买' } , { text: '了解详情' }, { text: '立即体验' }, { text: '观看视频' }]
+    buttons: [
+      { text: '立即购买', link: 'https://marketplace.huaweicloud.com/contents/6b7d495c-97b6-4807-858d-48dbe3bcee75' },
+      { text: '了解详情', link: 'https://myoumuamua.com/' },
+      { text: '观看视频', link: 'https://player.youku.com/embed/XNTExNzc3Mzg2NA==' }
+    ]
   },
   { 
     url: '/img/home/mhck.png',
     title: '门户与应用仓库',
     desc: '快速打造数字化超级App，拥有领先于市场的小程序容器技术，可为您提供敏捷、安全的最佳实践，是数字化时代下企业移动开发的不二之选。',
-    buttons: [{ text: '立即购买' } , { text: '了解详情' }, { text: '立即体验' }]
+    buttons: [
+      { text: '立即购买', link: 'https://marketplace.huaweicloud.com/contents/e15d419a-1569-4d70-b093-36ce1d820cd9' },
+      { text: '了解详情', link: '/product' },
+      { text: '立即体验', link: 'https://myoumuamua.com/download.html' }
+    ]
   }
 ])
 
@@ -323,11 +340,6 @@ const partnerData = ref<Array<string>>([
 ])
 
 const newsList = ref<Array<News>>([])
-
-onBeforeMount(() => {
-  partnerData.value.map(el => replaceImgPrefix(el))
-  console.log(tabsContent.value)
-})
 
 getNewsList()
 

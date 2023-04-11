@@ -49,7 +49,7 @@ const tabs1 = reactive<Tab[]>([
       desc: '应用定制开发一站式服务',
       cover: '/img/services/asc/yyrjdz.png',
       buttons: [
-        { name: '了解更多', link: '' }
+        { name: '了解更多', link: '/product_customizeApp' }
       ]
     } 
   }

@@ -39,6 +39,7 @@ const activeTabStyle = {
 }
 
 const handleClickTab = (tab: Tab) => {
+  console.log(tab)
   activeTab.value = tab
 }
 </script>

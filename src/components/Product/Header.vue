@@ -1,7 +1,7 @@
 <template>
   <div class="info">
     <div class="info_left">
-      <p class="icon_name"><img :src="logo"><span>{{ name }}</span></p>
+      <p class="icon_name"><Image :src="logo" /><span>{{ name }}</span></p>
       <p class="title">{{ title }}</p>
       
       <div class="other">
@@ -21,7 +21,7 @@
             </template>
             <Image :src="item.img" style="width: 160px; height: 160px;" />
           </n-popover>
-          <a v-else>{{ item.name  }}<img :src="item.icon"></a>
+          <a v-else>{{ item.name  }}<Image :src="item.icon" /></a>
         </p>
       </div>
     </div>
@@ -29,12 +29,12 @@
       <div  class="card-outer">
         <div class="carousel">
           <n-carousel autoplay draggable>
-            <img
+            <Image
               v-for="(item, index) in swipes"
               :key="index"
               class="carousel-img"
               :src="item"
-            >
+            />
           </n-carousel>
         </div>
       </div>

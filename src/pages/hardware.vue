@@ -73,7 +73,7 @@ const tabs2 = reactive<Tab[]>([
       desc: '跨网通讯网关、跨网络安全通讯协议转换系统',
       cover: '/img/hardware/wg.png',
       buttons: [
-        { name: '了解更多', link: '' }
+        { name: '了解更多', link: '/product_router' }
       ]
     } 
   },
@@ -81,10 +81,10 @@ const tabs2 = reactive<Tab[]>([
     name: '4G工业路由器',
     logo: '/img/app/dhhz.png',
     content: {
-      desc: '奥尔特云|云终端 阅卷Pad',
+      desc: '4G工业路由器',
       cover: '/img/hardware/ly.png',
       buttons: [
-        { name: '了解更多', link: '' }
+        { name: '了解更多', link: '/product_router' }
       ]
     } 
   },
@@ -92,10 +92,10 @@ const tabs2 = reactive<Tab[]>([
     name: '5G工业路由器',
     logo: '/img/app/5Gdh.png',
     content: {
-      desc: '奥尔特云|云终端 阅卷Pad',
+      desc: '5G工业路由器',
       cover: '/img/hardware/5gly.png',
       buttons: [
-        { name: '了解更多', link: '' }
+        { name: '了解更多', link: '/product_router' }
       ]
     } 
   },
@@ -106,7 +106,7 @@ const tabs2 = reactive<Tab[]>([
       desc: '交换机',
       cover: '/img/hardware/jhj.png',
       buttons: [
-        { name: '了解更多', link: '' }
+        { name: '了解更多', link: '/product_router' }
       ]
     } 
   },
@@ -165,7 +165,7 @@ const tabs4 = reactive<Tab[]>([
       desc: '动环盒子',
       cover: '/img/hardware/dhhz.png',
       buttons: [
-        { name: '了解更多', link: '' }
+        { name: '了解更多', link: '/product_dynamicRingBox' }
       ]
     } 
   },
@@ -176,7 +176,7 @@ const tabs4 = reactive<Tab[]>([
       desc: '动环交换机',
       cover: '/img/hardware/dhjhj.png',
       buttons: [
-        { name: '了解更多', link: '' }
+        { name: '了解更多', link: '/product_dynamicLoopSwitch' }
       ]
     } 
   },
@@ -187,7 +187,7 @@ const tabs4 = reactive<Tab[]>([
       desc: '动环网关',
       cover: '/img/hardware/dhwg.png',
       buttons: [
-        { name: '了解更多', link: '' }
+        { name: '了解更多', link: '/product_dynamicGateway' }
       ]
     } 
   }

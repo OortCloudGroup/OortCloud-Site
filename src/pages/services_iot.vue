@@ -83,7 +83,7 @@ const tabs3 = reactive<Tab[]>([
       desc: '带温湿度、光感、电源1进10路出，带电池和4G告警模块的动环监控',
       cover: '/img/services/iot/dhhz.png',
       buttons: [
-        { name: '了解更多', link: '' }
+        { name: '了解更多', link: '/product_dynamicRingBox' }
       ]
     } 
   }
@@ -96,7 +96,7 @@ const tabs4 = reactive<Tab[]>([
       desc: '带交换机功能的动环监控',
       cover: '/img/services/iot/dhjhj.png',
       buttons: [
-        { name: '了解更多', link: '' }
+        { name: '了解更多', link: '/product_dynamicLoopSwitch' }
       ]
     } 
   }
@@ -109,7 +109,7 @@ const tabs5 = reactive<Tab[]>([
       desc: '带5G数据网关，可以实现远程控制的动环监控',
       cover: '/img/services/iot/dhwg.png',
       buttons: [
-        { name: '了解更多', link: '' }
+        { name: '了解更多', link: '/product_dynamicGateway' }
       ]
     } 
   }
@@ -122,7 +122,7 @@ const tabs6 = reactive<Tab[]>([
       desc: '多功能路由器、5G工业路由器、无线路由器、4G工业路由器',
       cover: '/img/services/iot/router.png',
       buttons: [
-        { name: '了解更多', link: '' }
+        { name: '了解更多', link: '/product_router' }
       ]
     } 
   }

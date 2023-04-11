@@ -49,7 +49,7 @@ const tabs1 = reactive<Tab[]>([
       desc: '电子档案安全管理平台、声像档案管理系统',
       cover: '/img/services/document/dab.png',
       buttons: [
-        { name: '了解更多', link: '' }
+        { name: '了解更多', link: '/product_archiveSoftware' }
       ]
     } 
   }
@@ -62,7 +62,7 @@ const tabs2 = reactive<Tab[]>([
       desc: '数字档案馆/室，智慧档案库房',
       cover: '/img/services/document/xmjjfa.png',
       buttons: [
-        { name: '了解更多', link: '' }
+        { name: '了解更多', link: '/product_projectSolution' }
       ]
     } 
   }
@@ -75,7 +75,7 @@ const tabs3 = reactive<Tab[]>([
       desc: '档案整理、数字化加工、档案信息化咨询',
       cover: '/img/services/document/wbfw.png',
       buttons: [
-        { name: '了解更多', link: '' }
+        { name: '了解更多', link: '/product_outService' }
       ]
     } 
   }
@@ -88,7 +88,7 @@ const tabs4 = reactive<Tab[]>([
       desc: '密集架、扫描仪、除湿机、档案盒',
       cover: '/img/services/document/yjcp.png',
       buttons: [
-        { name: '了解更多', link: '' }
+        { name: '了解更多', link: '/product_outService' }
       ]
     } 
   }

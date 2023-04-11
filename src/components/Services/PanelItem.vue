@@ -14,6 +14,7 @@
           :ghost="button.name !== '立即购买'"
           :color="button.name === '了解更多' ? 'rgba(5,18,97,1)' : '#F93E3E'"
           size="large"
+          @click="goto(button)"
         >
           {{ button.name }}
         </n-button>
@@ -27,6 +28,8 @@
 
 <script setup>
 import { NButton } from 'naive-ui';
+
+const router = useRouter()
 
 defineProps({
   name: {
@@ -42,6 +45,16 @@ defineProps({
     default: ''
   }
 })
+
+const goto = (data) => {
+  if (data.link) {
+    if (data.link.includes('http')) {
+      window.open(data.link, '_blank')
+    } else {
+      router.push(data.link)
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

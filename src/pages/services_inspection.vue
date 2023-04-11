@@ -64,7 +64,7 @@ const tabs2 = reactive<Tab[]>([
       desc: '服务检察干警移动办公办案业务',
       cover: '/img/services/inspection/ydjw.png',
       buttons: [
-        { name: '了解更多', link: '' }
+        { name: '了解更多', link: '/product_mobileInspection' }
       ]
     } 
   }

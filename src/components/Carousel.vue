@@ -13,22 +13,46 @@
       <div class="title">{{ item.title }}</div>
       <div class="desc">{{ item.desc }}</div>
       <div class="button" v-if="item.buttons && item.buttons.length > 0">
-        <div class="button_item" v-for="(it, ind) in item.buttons" :key="ind"><span>{{ it.text }}</span></div>
+        <div class="button_item" v-for="(it, ind) in item.buttons" :key="ind">
+          <a v-if="it.link && it.link.includes('http') && it.text !== '观看视频'" :href="it.link" target="_blank">{{ it.text }}</a>
+          <router-link v-else-if="it.link && !it.link.includes('http')" :to="it.link">{{ it.text }}</router-link>
+          <span v-else @click.stop="openModal(it)">{{ it.text }}</span>
+        </div>
       </div>
      </div>
     </div>
   </n-carousel>
+  <teleport to="body">
+    <n-modal v-model:show="showModal" title="观看视频" preset="dialog" :showIcon="false" style="width: 924px">
+      <iframe height=486 width=864 allowfullscreen :src="videoUrl" frameborder="0">
+      </iframe>
+    </n-modal>
+  </teleport>
 </template>
 
 <script setup lang="ts">
-import { NCarousel } from 'naive-ui'
+import { NCarousel, NModal } from 'naive-ui'
 import { Carousel } from '~/types'
+
 defineProps({
   carouseList: {
     type: Array<Carousel>,
     required: true,
   },
 })
+const showModal = ref(false)
+const videoUrl = ref('')
+
+const openModal = (data: object) => {
+  console.log(121323);
+  
+  if (data.link) {
+    if (data.text === '观看视频') {
+      videoUrl.value = data.link
+      showModal.value = true
+    }
+  }
+}
 </script>
 <style scoped lang="scss">
 .carousel-img {
@@ -51,7 +75,9 @@ defineProps({
   height: 60%;
   color: #000;
 }
-
+:deep(.n-dialog__icon) {
+  display: none !important;
+}
 .title {
   margin: 8px;
   font-size: 28px;
@@ -70,8 +96,8 @@ defineProps({
   &_item:nth-of-type(1) {
     border: 1px solid #fff;
     background: #ec2020;
-    span {
-      color: #fff;
+    a {
+      color: #fff !important;
     }
   }
   &_item {
@@ -85,6 +111,11 @@ defineProps({
     justify-content: center;
     align-items: center;
     span {
+      color: #ed2121;
+      font-weight: 600;
+      font-size: 18px;
+    }
+    a {
       color: #ed2121;
       font-weight: 600;
       font-size: 18px;
