@@ -1,5 +1,5 @@
 <template>
-  <n-carousel 
+  <n-carousel
     show-arrow
     autoplay
     centered-slides
@@ -8,7 +8,7 @@
     draggable>
     <div  class="carousel-img container" :class="{'first_carouse': index ===0}" v-for="(item, index) in carouseList"
      :key="index"
-     :style="'background-image:url(/oort/oort-site/'+ item.url+')'">
+     :style="'background-image:url('+ item.url+')'">
      <div class="content">
       <div class="title">{{ item.title }}</div>
       <div class="desc">{{ item.desc }}</div>
@@ -45,7 +45,7 @@ const videoUrl = ref('')
 
 const openModal = (data: object) => {
   console.log(121323);
-  
+
   if (data.link) {
     if (data.text === '观看视频') {
       videoUrl.value = data.link

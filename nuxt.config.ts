@@ -8,11 +8,14 @@ export default defineNuxtConfig({
   css:[
     'element-plus/dist/index.css',
   ],
+  devServer: {
+    port: 8080
+  },
   // ssr: false,
   app: {
-    buildAssetsDir: './',
-    baseURL: "/oort/oort-site/",
-    cdnURL: '/oort/oort-site/',
+    // buildAssetsDir: './',
+    // baseURL: "/oort/oort-site/",
+    // cdnURL: '/oort/oort-site/',
     head: {
       title: '奥尔特云(深圳)智慧科技_公共安全“私有云智能化应用建设解决方案”提供商',
       meta: [

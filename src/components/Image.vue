@@ -15,18 +15,10 @@ let { src } = toRefs(props)
 const imgSrc = ref('')
 
 watch(src, () => {
-  if (window.location.hostname !== 'localhost') {
-    imgSrc.value = '/oort/oort-site' + src.value
-  } else {
     imgSrc.value = src.value
-  }
 })
 
 onMounted(() => {
-  if (window.location.hostname !== 'localhost') {
-    imgSrc.value = '/oort/oort-site' + src.value
-  } else {
-    imgSrc.value = src.value
-  }
+    imgSrc.value =  src.value
 })
 </script>

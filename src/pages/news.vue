@@ -10,6 +10,7 @@
        :key="index"
        :title="item.Title"
        :time="item.Time"
+       :id="item.ID"
        :cover-img="item.CoverImg">
       </NewsItem>
     </div>
@@ -95,7 +96,7 @@ function nextPage() {
     }
   }
 
-  
+
 .div_item {
     display: flex;
     flex-direction: row;
@@ -189,5 +190,5 @@ a:link {
   text-decoration: none;
 }
 
-  
+
 </style>
