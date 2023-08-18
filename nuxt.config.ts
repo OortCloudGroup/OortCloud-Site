@@ -18,6 +18,9 @@ export default defineNuxtConfig({
     // cdnURL: '/oort/oort-site/',
     head: {
       title: '奥尔特云(深圳)智慧科技_公共安全“私有云智能化应用建设解决方案”提供商',
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico?v=4' }
+      ],
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { property: 'og:title', content: '奥尔特云(深圳)智慧科技_公共安全“私有云智能化应用建设解决方案”提供商' },
