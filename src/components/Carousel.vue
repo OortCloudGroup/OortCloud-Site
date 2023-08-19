@@ -74,6 +74,7 @@ const openModal = (data: object) => {
   width: 80%;
   height: 60%;
   color: #000;
+  justify-content: center;
 }
 :deep(.n-dialog__icon) {
   display: none !important;

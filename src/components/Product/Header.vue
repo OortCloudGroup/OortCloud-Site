@@ -3,7 +3,7 @@
     <div class="info_left">
       <p class="icon_name"><Image :src="logo" /><span>{{ name }}</span></p>
       <p class="title">{{ title }}</p>
-      
+
       <div class="other">
         <slot name="intro" />
 
@@ -19,7 +19,7 @@
             <template #trigger>
               <a>{{ item.name }}</a>
             </template>
-            <Image :src="item.img" style="width: 160px; height: 160px;" />
+            <Image :src="item.img" style="width: 10rem; height: 10rem;" />
           </n-popover>
           <a v-else>{{ item.name  }}<Image :src="item.icon" /></a>
         </p>

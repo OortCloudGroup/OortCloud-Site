@@ -70,8 +70,11 @@ defineProps({
       display: block;
       width: 6px;
       height: 6px;
-      background-color: rgb(248 113 113);
+      background-color: rgb(237, 27, 27);
       border-radius: 9999px;
+    }
+    &_info {
+      font-size: 16px;
     }
   }
   &_main {
@@ -99,6 +102,7 @@ defineProps({
       padding: 8px 16px;
       height: 88px;
       width: 100%;
+      font-size: 16px;
       background-image: linear-gradient(to right, #d6e4f9, #e5f0fe);
       transition: .3s;
       box-sizing: border-box;
@@ -170,6 +174,7 @@ defineProps({
         background: #3174e0;
       }
       &_label {
+        font-size: 16px;
         color: #051261;
       }
     }
@@ -179,6 +184,7 @@ defineProps({
       &_wrap {
         display: flex;
         a {
+          font-size: 16px;
           color: #2278ff;
           cursor: pointer;
           text-decoration: none;

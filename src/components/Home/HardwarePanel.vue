@@ -94,6 +94,7 @@ defineProps({
         cursor: pointer;
         transition: .3s;
         box-sizing: border-box;
+        font-size: 16px;
         &:hover {
           background-color: #fff;
           color: #2278ff;

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <n-anchor :trigger-top="64" :top="64" ignore-gap :show-rail="false" :show-background="false" style="position: sticky; top: 64px; background-color: #fff; z-index: 100;">
+    <n-anchor :trigger-top="64" :top="64" ignore-gap :show-rail="false" :show-background="false" style="position: sticky; top:4rem; background-color: #fff; z-index: 100;">
       <n-anchor-link title="商品详情" href="#商品详情" />
       <n-anchor-link title="用户案例" href="#用户案例" />
       <n-anchor-link title="服务支持" href="#服务支持" />

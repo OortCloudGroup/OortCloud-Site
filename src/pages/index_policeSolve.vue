@@ -48,10 +48,10 @@ definePageMeta({
 .b_m_t_one {
   width: 100%;
   background-image: url("/img/home/bg_2.png");
-  /*background-size: cover;*/
-  /*background-repeat: no-repeat;*/
-  background-size: revert;
-  background-repeat: round;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  //background-size: revert;
+  //background-repeat: round;
   height: 450px;
   filter: progid:DXImageTransform.Microsoft.alphaImageLoader(src='img/programdetails.png',sizingMethod='scale');
 }
@@ -132,7 +132,7 @@ definePageMeta({
   color: #333333;
   letter-spacing: 0;
   font-weight: 600;
- 
+
 }
 .section_last>div {
   display: flex;

@@ -1,7 +1,7 @@
 <template>
   <div class="panel_header">
     <span class="panel_header_title">{{ title }}</span>
-    <span>{{ info }}</span>
+    <span class="panel_header_info">{{ info }}</span>
   </div>
 </template>
 
@@ -29,6 +29,9 @@ defineProps({
       font-size: 30px;
       line-height: 36px;
       font-weight: 600;
+    }
+    &_info {
+      font-size: 16px;
     }
   }
 }

@@ -277,42 +277,49 @@ const tabsContent = ref([
     tab: '公安',
     title: '新一代移动警务平台',
     content: '让海量警务服务快速赋能基层派出所，从“汗水警务”迈向“智慧警务”',
-    site: '/index_publicSecurity',
+    site: '/index_policeSolve',
     cover: '/img/home/smartcity.png'
   },
   {
     tab: '智慧派出所',
     title: '智慧派出所服务',
     content: '数据随用即得，战法随想随用，应用随需随变。精准数据筛选、灵活碰撞分析，满足不同无技术 背景用户对数据的应用需求，从根本上改变了传统软件的开发模式，让新需求在短时间内得到实现。',
-    site: '/index_policeSolve',
+    site: '/index_publicSecurity',
     cover: '/img/home/mt2.png'
   },
   {
     tab: '检察院',
     title: '检察服务',
     content: '智慧检务移动平台是基于国产化华为云、华为智慧屏、华为智能协作能力无缝结合的检务一体化平台，同时支持了面向基层的SaaS应用软件，以及为第三方应用开发提供个性化需求快速迭代底座。',
-    site: '/index_medical',
+    site: '/services_inspection',
     cover: '/img/home/education.png'
   },
   {
     tab: '司法监狱',
     title: '司法监狱解决方案',
     content: '立足于智慧司法监狱领域实际业务需求，结合自身优势资源与丰富的产品项目经验，全面助力“智慧司法”建设，为其他司法机关提供定制化智慧司法、智慧监狱解决方案。',
-    site: '',
+    site: '/services_prison',
     cover: '/img/home/mt5.png'
   },
   {
     tab: '智慧边海防',
     title: '智慧边海防服务',
     content: '智慧边海防是维护边海防安全稳定的重要支撑,是边海防管理“五位一体”合力的技术支撑,是推动边海防建设创新发展的必由之路。着力破除“统、融、智、密、制”方面的体制障碍，在合力强边固防、数据融合共享、智能高效管控、安全便捷通联、体制机制配套上求突破、见成效。',
-    site: '',
+    site: '/services_borderSeaDefense',
     cover: '/img/home/mt5.png'
+  },
+  {
+    tab: '智慧医疗',
+    title: '远程诊疗、手术示教、远程看护',
+    content: ' 通过安全、可靠的云平台为医院、互联网医疗企业的业务提供稳定支撑，通过安全屋、人工智能等服务对数据进行分析、对医疗影像等进行辅助诊断。',
+    site: '/index_medical',
+    cover: '/img/home/mt6.png'
   },
   {
     tab: '政府',
     title: '智慧政府',
     content: '实现城市运行一网统管，公务办公一网协同，政务服务一网通办，公共资源一网通享，依托公司智慧化产品，将智慧化应用推向各局委办，比如出行拼车、顺风车、派车为机关单位提供公车出行服务；各局委办跨地区、跨层级、跨部门政务协同以及数据可视化决策支持。',
-    site: '',
+    site: '/services_goverment',
     cover: '/img/home/mt6.png'
   },
   {

@@ -6,8 +6,8 @@
       :default-value="activeTab"
       size="large"
       animated
-      style="margin: 0 -4px; height: 80px;"
-      pane-style="padding-left: 4px; padding-right: 4px; box-sizing: border-box;"
+      style="margin: 0 -0.25rem; height: 5rem;"
+      pane-style="padding-left: 0.25rem; padding-right: 0.25rem; box-sizing: border-box;"
     >
       <n-tab-pane v-for="tab in tabs" :key="tab.name" :name="tab.name">
         <template #tab>
