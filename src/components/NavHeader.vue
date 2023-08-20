@@ -14,6 +14,31 @@
           <NuxtLink to="/about">关于我们</NuxtLink>
         </div>
       </div>
+      <div class="header_right">
+        <n-popover trigger="hover" arrow-point-to-center placement="bottom">
+          <template #trigger>
+          <div class="header_right_demo" @mouseenter="handleMouseenter('demo')" @mouseleave="handleMouseleave('demo')">
+            <img src="/img/demo/menu/demo.png"/>
+            <span>在线演示</span>
+          </div>
+          </template>
+          <template #default>
+            <div class="demo_div">
+              <template v-for="(item, index) in demoMenu">
+                <NuxtLink :to="item.link">
+                  <div class="demo_div_item"  :key="index">
+                    <img :src="item.logo"/>
+                    <div>
+                      <span>{{item.name}}</span>
+                      <span>{{item.desc}}</span>
+                    </div>
+                  </div>
+                </NuxtLink>
+              </template>
+            </div>
+          </template>
+        </n-popover>
+      </div>
     </div>
     <div class="header_other">
       <img src="/img/dashboard.png" />
@@ -187,15 +212,16 @@
 </template>
 
 <script setup lang="ts">
-import { NCollapseTransition } from 'naive-ui';
+import { NCollapseTransition, NPopover } from 'naive-ui';
 
-import { Menu } from '~/types'
+import {Menu, MenuItem} from '~/types'
 
 const router = useRouter()
 
 const hardwareVisible = ref<boolean>(false)
 const softwareVisible = ref<boolean>(false)
 const solutionVisible = ref<boolean>(false)
+const demoVisible = ref(false)
 const hardwareMenu = ref<Menu[]>([
   {
     title: '移动存储',
@@ -313,6 +339,65 @@ const solutionMenu = ref<Menu[]>([
     ]
   }
 ])
+
+const demoMenu = ref<MenuItem[]>([
+  {
+    name: '智慧云aPaaS应用支撑平台(aPaaS)',
+    desc: '个性化需求快递迭代、支撑能力底座',
+    logo: '/img/demo/menu/apaas.png',
+    link: '/demoIndex'
+  },
+  {
+    name: 'XOA数字化办公',
+    desc: '生产力工具',
+    logo: '/img/demo/menu/oa.png',
+    link: '/demoIndex'
+  },
+  {
+    name: '门户与应用仓库',
+    desc: '把小程序搬进APP,快速打造超级APP',
+    logo: '/img/demo/menu/mh.png',
+    link: '/demoIndex'
+  },
+  {
+    name: '即时通讯',
+    desc: '单聊、群聊、图文、视频等即时通讯IM',
+    logo: '/img/demo/menu/im.png',
+    link: '/demoIndex'
+  },
+  {
+    name: '移动警务服务总线',
+    desc: '移动警务服务总线',
+    logo: '/img/demo/menu/bus.png',
+    link: '/demoIndex'
+  },
+  {
+    name: '交通微劝导系统',
+    desc: '落实公安部交管局“一盔一带”行动计划，助力文明',
+    logo: '/img/demo/menu/wqd.png',
+    link: '/demoIndex'
+  },
+  {
+    name: '指挥调度一张图',
+    desc: '总揽指挥调度一张图，用于电子指挥大屏操作',
+    logo: '/img/demo/menu/map.png',
+    link: '/demoIndex'
+  },
+  {
+    name: '反诈中心推广统计平台',
+    desc: '反诈APP推广神器——反诈推广码',
+    logo: '/img/demo/menu/fz.png',
+    link: '/demoIndex'
+  },
+  {
+    name: 'XCreator敏捷发布平台',
+    desc: '全媒体矩阵信息发布平台',
+    logo: '/img/demo/menu/xc.png',
+    link: '/demoIndex'
+  },
+
+])
+
 let timer:any = null
 
 const handleMouseenter = (nav: string): void => {
@@ -325,19 +410,14 @@ const handleMouseenter = (nav: string): void => {
   if (nav === 'software') {
     softwareVisible.value = true
   }
+  if (nav === 'demo') {
+    demoVisible.value = true
+  }
 }
 
 const handleMouseleave = (nav: string): void => {
   timer = setTimeout(() => {
-    if (nav === 'hardware') {
-      hardwareVisible.value = false
-    }
-    if (nav === 'solution') {
-      solutionVisible.value = false
-    }
-    if (nav === 'software') {
-      softwareVisible.value = false
-    }
+   panelLeave(nav)
   }, 300)
 }
 
@@ -357,6 +437,9 @@ const panelLeave = (nav: string): void =>{
   }
   if (nav === 'software') {
     softwareVisible.value = false
+  }
+  if (nav === 'demo') {
+    demoVisible.value = true
   }
 }
 
@@ -400,6 +483,31 @@ const backToHome = () => {
   &_menu {
     flex: 1;
   }
+  &_right{
+    height: 100%;
+    width: 450px;
+    display: flex;
+    flex-direction: row;
+    &_demo {
+      cursor: pointer;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      img {
+        width: 24px;
+        height: 24px;
+        margin: 8px;
+      }
+      span {
+        font-size: 16px;
+        color: #2278FF;
+        text-align: center;
+        font-weight: 400;
+      }
+    }
+  }
+
   &_other {
     position: fixed;
     top: 0;
@@ -611,5 +719,57 @@ const backToHome = () => {
 }
 .header_dialog:hover {
   transform: translateX(0px);
+}
+
+
+
+.demo_div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+  padding: 16px;
+  gap: 10px;
+  background: #fff;
+  border-radius: 4px;
+  a {
+    text-decoration: none !important;
+  }
+  &_item:active {
+    background-color: #f1f1f1;
+  }
+  &_item:hover {
+    background-color: #f7f7f7;
+  }
+  &_item {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    width: 360px;
+    margin: 4px;
+    img {
+      width: 48px;
+      height: 48px;
+    }
+    div {
+      margin:0 8px;
+      display: flex;
+      padding: 4px;
+      flex-direction: column;
+      justify-content: flex-start;
+      span:nth-of-type(1) {
+        height: 20px;
+        font-size: 14px;
+        color: #333333;
+        letter-spacing: 0;
+      }
+      span:nth-of-type(2) {
+        flex: 1;
+        font-size: 12px;
+        color: #999999;
+        letter-spacing: 0;
+        font-weight: 400;
+      }
+    }
+  }
 }
 </style>

@@ -14,7 +14,8 @@ export interface Menu {
 export interface MenuItem{
   name: string,
   logo: string,
-  link?: any
+  link?: any,
+  desc?: string
 }
 
 export interface Anchor {
