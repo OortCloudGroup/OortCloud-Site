@@ -58,9 +58,9 @@
         <NuxtLink to="/more" class="cd_bottom_list_item">
           <img src="/img/home/gd_1.png" />
           <div class="cd_bottom_list_item_right"
-            style="display: flex; flex-direction: row; align-items: center; margin-left: 18px">
+            style="display: flex; flex-direction: row; align-items: center; margin-left:1.125rem">
             <span style="color: #2e4bf1">更多</span>
-            <img src="/img/home/gd_2.png" style="width: 16px; height: 16px" />
+            <img src="/img/home/gd_2.png" style="width: 1rem; height:1rem" />
           </div>
         </NuxtLink>
       </div>
@@ -219,7 +219,7 @@
               </div>
             </n-grid-item>
           </n-grid>
-          
+
         </div>
       </div>
 

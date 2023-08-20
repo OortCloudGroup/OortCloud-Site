@@ -1,9 +1,10 @@
 <template>
   <div class="defalut_layout">
     <NavHeader></NavHeader>
-    <div style="height: 64px;width: 100%;"></div>
-    <slot />
-    <Bottom></Bottom>
+    <div class="page_body">
+      <slot />
+      <Bottom></Bottom>
+    </div>
   </div>
 </template>
 
@@ -11,4 +12,16 @@
 
 </script>
 
-<style></style>
+<style scoped>
+
+  .defalut_layout {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .page_body {
+    height: calc(100% - 64px);
+    overflow: auto;
+  }
+
+</style>

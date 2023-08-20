@@ -14,9 +14,10 @@
           <NuxtLink to="/about">关于我们</NuxtLink>
         </div>
       </div>
-      <div class="header_other">
-        <img src="/img/dashboard.png" />
-        <div class="header_dialog">
+    </div>
+    <div class="header_other">
+      <img src="/img/dashboard.png" />
+      <div class="header_dialog">
         <div class="header_dialog_head">
           <div class="header_dialog_head_left">基础软件</div>
           <div class="header_dialog_head_right"><NuxtLink to="/more">查看更多</NuxtLink></div>
@@ -76,14 +77,12 @@
           </div>
         </div>
       </div>
-      </div>
     </div>
-
     <n-collapse-transition :show="hardwareVisible" class="menu" @mouseenter="panelEnter" @mouseleave="panelLeave('hardware')">
-      <NavHeaderDropdown :menu="hardwareMenu" width="1280px" />
+      <NavHeaderDropdown :menu="hardwareMenu" width="80rem" />
     </n-collapse-transition>
     <n-collapse-transition :show="softwareVisible" class="menu" @mouseenter="panelEnter" @mouseleave="panelLeave('software')">
-      <NavHeaderDropdown :menu="softwareMenu" width="1560px">
+      <NavHeaderDropdown :menu="softwareMenu" width="97.5rem">
         <div class="dropdown_col" style="flex: 1.5">
           <p class="dropdown_col_title">基础软件</p>
           <div class="dropdown_col_sort">
@@ -136,7 +135,7 @@
             <span class="dropdown_col_item_label">XDataStudio大数据底座</span>
           </div>
         </div>
-        <div class="dropdown_col" style="flex: 1.5; padding-top: 22px;">
+        <div class="dropdown_col" style="flex: 1.5; padding-top: 1.375rem;">
           <p class="dropdown_col_title"></p>
           <div class="dropdown_col_sort">
             <img class="dropdown_col_sort_logo" src="/img/home/dzh.png">
@@ -182,7 +181,7 @@
       </NavHeaderDropdown>
     </n-collapse-transition>
     <n-collapse-transition :show="solutionVisible" class="menu" @mouseenter="panelEnter" @mouseleave="panelLeave('solution')">
-      <NavHeaderDropdown :menu="solutionMenu" width="1280px" />
+      <NavHeaderDropdown :menu="solutionMenu" width="80rem" />
     </n-collapse-transition>
   </div>
 </template>
@@ -198,7 +197,7 @@ const hardwareVisible = ref<boolean>(false)
 const softwareVisible = ref<boolean>(false)
 const solutionVisible = ref<boolean>(false)
 const hardwareMenu = ref<Menu[]>([
-  { 
+  {
     title: '移动存储',
     showTitle: true,
     menus: [
@@ -369,14 +368,15 @@ const backToHome = () => {
 <style scoped lang="scss">
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
+  //top: 0;
+  //left: 0;
   z-index: 9999;
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 64px;
+  min-height: 64px;
   background-color: #fff;
   box-shadow: 0 0.5rem 1rem 0 rgba(105, 123, 140, 0.1);
   &_wrapper {
@@ -401,14 +401,14 @@ const backToHome = () => {
     flex: 1;
   }
   &_other {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     padding: 0 36px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 64px;
     cursor: pointer;
     img {
       width: auto;

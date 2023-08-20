@@ -108,4 +108,8 @@ const goto = (data) => {
     }
   }
 }
+
+:deep(.n-button) {
+  font-size: 16px;
+}
 </style>
