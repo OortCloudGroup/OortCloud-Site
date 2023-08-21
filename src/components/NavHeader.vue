@@ -25,7 +25,7 @@
           <template #default>
             <div class="demo_div">
               <template v-for="(item, index) in demoMenu">
-                <NuxtLink :to="item.link">
+                <NuxtLink :to="item.link" target="_blank">
                   <div class="demo_div_item"  :key="index">
                     <img :src="item.logo"/>
                     <div>
