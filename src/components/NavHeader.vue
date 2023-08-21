@@ -561,18 +561,18 @@ const backToHome = () => {
   }
 }
 
-//.router-link-active {
-//  color: #1856a6 !important;
-//  &::after {
-//    content: "";
-//    width: 100% !important;;
-//    height: 2.5px !important;;
-//    background-color: #1856a6 !important;;
-//    position: absolute;
-//    left: 0!important;;
-//    bottom: 0!important;;
-//  }
-//}
+.router-link-active {
+  color: #1856a6 !important;
+  &::after {
+    content: "";
+    width: 100% !important;;
+    height: 2.5px !important;;
+    background-color: #1856a6 !important;;
+    position: absolute;
+    left: 0!important;;
+    bottom: 0px!important;
+  }
+}
 
 .menu {
   position: fixed;
