@@ -4,8 +4,8 @@
       <img class="panel_header_logo" :src="data.logo">
       <h3 class="panel_header_title">{{ data.title }}</h3>
     </div>
-    
-    <n-grid x-gap="28" y-gap="12" :cols="3">
+
+    <n-grid x-gap="28" y-gap="12" :cols="4">
       <n-grid-item v-for="item in data.apps" :key="item.name">
         <NuxtLink :to="item.link" v-if="item.link" class="panel_item">
           <div class="panel_item_logo">
@@ -48,7 +48,7 @@ defineProps({
 <style lang="scss" scoped>
 .panel {
   margin-bottom: 36px;
-  width: 100%;
+  width: 1200px;
   &_header {
     padding: 0 16px;
     margin: 18px 0;

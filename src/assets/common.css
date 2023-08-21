@@ -60,3 +60,7 @@ html , body {
 .page_container {
 
 }
+
+a {
+  text-decoration: none!important;
+}

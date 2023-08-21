@@ -1,55 +1,58 @@
 <template>
   <div class="container">
     <div class="nav">
-      <div class="nav_item">
-        <span class="nav_item_text">软件产品</span>
+      <div class="nav_item_t">
+        <span class="nav_item_t_text">软件产品</span>
       </div>
-      <div class="nav_item" @mouseenter="handleMouseenter('basic')" @mouseleave="handleMouseleave('basic')">
-        <span class="nav_item_text">基础软件</span>
-      </div>
-      <div class="nav_item" @mouseenter="handleMouseenter('app')" @mouseleave="handleMouseleave('app')">
-        <span class="nav_item_text">应用产品</span>
-      </div>
-      <div class="nav_item" @mouseenter="handleMouseenter('saas')" @mouseleave="handleMouseleave('saas')">
-        <span class="nav_item_text">云SaaS软件</span>
-      </div>
-      <div class="nav_item" @mouseenter="handleMouseenter('security')" @mouseleave="handleMouseleave('security')">
-        <span class="nav_item_text">安全产品</span>
-      </div>
+      <n-popover trigger="hover" placement="right">
+        <template #trigger>
+          <div class="nav_item"><span class="nav_item_text">基础软件</span><n-icon  :component="IosArrowForward" /></div>
+        </template>
+        <template #default>
+          <!-- 双系统安全移动办公 -->
+          <h3>双系统安全移动办公</h3>
+          <AppPanel :data="doubleSysApp"/>
+          <!-- 指挥调度与IOC大数据可视化 -->
+          <h3>指挥调度与IOC大数据可视化</h3>
+          <AppPanel :data="viewableApp"/>
+          <!-- 多租户aPaaS云 -->
+          <h3>指挥调度与IOC大数据可视化</h3>
+          <AppPanel :data="aPaaSApp"/>
+        </template>
+      </n-popover>
+      <n-popover trigger="hover" placement="right">
+        <template #trigger>
+          <div class="nav_item"><span class="nav_item_text">应用产品</span><n-icon  :component="IosArrowForward" /></div>
+        </template>
+        <template #default>
+          <AppPanel :data="application"/>
+        </template>
+      </n-popover>
+      <n-popover trigger="hover" placement="right">
+        <template #trigger>
+          <div class="nav_item"><span class="nav_item_text">云SaaS软件</span><n-icon  :component="IosArrowForward" /></div>
+        </template>
+        <template #default>
+          <h3>云SaaS软件</h3>
+          <AppPanel :data="saasApp"/>
+        </template>
+      </n-popover>
+      <n-popover trigger="hover" placement="right">
+        <template #trigger>
+          <div class="nav_item" ><span class="nav_item_text">安全产品</span><n-icon  :component="IosArrowForward" /></div>
+        </template>
+        <template #default>
+          <h3>安全产品</h3>
+          <AppPanel :data="securityApp"/>
+        </template>
+      </n-popover>
     </div>
-
-    <n-collapse-transition :show="basicVisible" class="nav_menu" @mouseenter="panelEnter" @mouseleave="panelLeave('basic')">
-      <!-- 双系统安全移动办公 -->
-      <h3>双系统安全移动办公</h3>
-      <AppPanel :data="doubleSysApp"/>
-      <!-- 指挥调度与IOC大数据可视化 -->
-      <h3>指挥调度与IOC大数据可视化</h3>
-      <AppPanel :data="viewableApp"/>
-      <!-- 多租户aPaaS云 -->
-      <h3>指挥调度与IOC大数据可视化</h3>
-      <AppPanel :data="aPaaSApp"/>
-    </n-collapse-transition>
-    <n-collapse-transition :show="appVisible" class="nav_menu" @mouseenter="panelEnter" @mouseleave="panelLeave('app')">
-      <AppPanel :data="application"/>
-    </n-collapse-transition>
-    <n-collapse-transition :show="saasVisible" class="nav_menu" @mouseenter="panelEnter" @mouseleave="panelLeave('saas')">
-      <h3>云SaaS软件</h3>
-      <AppPanel :data="saasApp"/>
-    </n-collapse-transition>
-    <n-collapse-transition :show="securityVisible" class="nav_menu" @mouseenter="panelEnter" @mouseleave="panelLeave('security')">
-      <h3>安全产品</h3>
-      <AppPanel :data="securityApp"/>
-    </n-collapse-transition>
   </div>
 </template>
 
 <script setup lang="ts">
-import { NCollapseTransition } from 'naive-ui';
-
-const basicVisible = ref<boolean>(false)
-const appVisible = ref<boolean>(false)
-const saasVisible = ref<boolean>(false)
-const securityVisible = ref<boolean>(false)
+import {  IosArrowForward } from '@vicons/ionicons4'
+import { NPopover, NIcon } from 'naive-ui';
 
 // 双系统安全移动办公
 const doubleSysApp = ref({
@@ -360,61 +363,6 @@ const securityApp = ref({
   ]
 })
 
-let timer:any = null
-
-const handleMouseenter = (nav: string): void => {
-  if (nav === 'basic') {
-    basicVisible.value = true
-  }
-  if (nav === 'app') {
-    appVisible.value = true
-  }
-  if (nav === 'saas') {
-    saasVisible.value = true
-  }
-  if (nav === 'security') {
-    securityVisible.value = true
-  }
-}
-
-const handleMouseleave = (nav: string): void => {
-  timer = setTimeout(() => {
-    if (nav === 'basic') {
-      basicVisible.value = false
-    }
-    if (nav === 'app') {
-      appVisible.value = false
-    }
-    if (nav === 'saas') {
-      saasVisible.value = false
-    }
-    if (nav === 'security') {
-      securityVisible.value = false
-    }
-  }, 300)
-}
-
-const panelEnter = () =>{
-  if(timer){
-    clearTimeout(timer)
-    return
-  }
-}
-
-const panelLeave = (nav: string): void =>{
-  if (nav === 'basic') {
-    basicVisible.value = false
-  }
-  if (nav === 'app') {
-    appVisible.value = false
-  }
-  if (nav === 'saas') {
-    saasVisible.value = false
-  }
-  if (nav === 'security') {
-    securityVisible.value = false
-  }
-}
 </script>
 
 <style lang="scss" scoped>
@@ -432,6 +380,26 @@ const panelLeave = (nav: string): void =>{
   height: 100%;
   box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 8%);
   box-sizing: border-box;
+  &_item_t {
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 18px;
+    &_text {
+      font-weight: 400;
+    }
+  }
+  &_item:hover {
+    color: #2856A5;
+   span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2856A5;
+    }
+  }
   &_item {
     padding: 0 40px;
     display: flex;
@@ -443,6 +411,7 @@ const panelLeave = (nav: string): void =>{
       box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 8%);
     }
     &_text {
+      font-size: 14px;
       font-weight: 600;
     }
   }

@@ -7,9 +7,130 @@
       <div class="header_menu">
         <div class="header_tabs">
           <NuxtLink to="/">首页</NuxtLink>
-          <NuxtLink to="/hardware" @mouseenter="handleMouseenter('hardware')" @mouseleave="handleMouseleave('hardware')">硬件产品</NuxtLink>
-          <NuxtLink to="/product" @mouseenter="handleMouseenter('software')" @mouseleave="handleMouseleave('software')">软件产品</NuxtLink>
-          <NuxtLink to="/services" @mouseenter="handleMouseenter('solution')" @mouseleave="handleMouseleave('solution')">专业服务</NuxtLink>
+          <n-popover trigger="hover" arrow-point-to-center placement="bottom">
+            <template #trigger>
+              <NuxtLink to="/hardware">硬件产品</NuxtLink>
+            </template>
+            <template #default>
+              <NavHeaderDropdown :menu="hardwareMenu" width="60rem" />
+            </template>
+          </n-popover>
+          <n-popover trigger="hover" arrow-point-to-center placement="bottom">
+            <template #trigger>
+              <NuxtLink  to="/product" @mouseenter="handleMouseenter('software')" @mouseleave="handleMouseleave('software')">软件产品</NuxtLink>
+            </template>
+            <template #default>
+              <NavHeaderDropdown :menu="softwareMenu" width="82rem">
+                <div class="dropdown_col" style="flex: 1.5">
+                  <p class="dropdown_col_title">基础软件</p>
+                  <div class="dropdown_col_sort">
+                    <img class="dropdown_col_sort_logo" src="/img/home/sxt.png">
+                    <span class="dropdown_col_sort_label">安全移动办公</span>
+                  </div>
+                  <NuxtLink to="/product_instantMsg" class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_1.png">
+                    <span class="dropdown_col_item_label">即时通讯</span>
+                    <!-- <span>NEW</span> -->
+                  </NuxtLink>
+                  <a href="https://www.myoumuamua.com/" target="_blank">
+                    <div class="dropdown_col_item">
+                      <img class="dropdown_col_item_logo" src="/img/home/xl_2.png">
+                      <span class="dropdown_col_item_label">私有云部署的移动安全办公云平台</span>
+                    </div>
+                  </a>
+                  <NuxtLink to="/product" class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_3.png">
+                    <span class="dropdown_col_item_label">门户与应用仓库</span>
+                  </NuxtLink>
+                  <div class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_5.png">
+                    <span class="dropdown_col_item_label">安全管控MDM</span>
+                  </div>
+                  <div class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_6.png">
+                    <span class="dropdown_col_item_label">定制手机型安全终端</span>
+                  </div>
+                  <div class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_7.png">
+                    <span class="dropdown_col_item_label">定制安全Pad终端</span>
+                  </div>
+                  <div class="dropdown_col_sort">
+                    <img class="dropdown_col_sort_logo" src="/img/home/zhdd.png">
+                    <span class="dropdown_col_sort_label">指挥调度与IOC大数据可视化</span>
+                  </div>
+                  <div class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_9.png">
+                    <span class="dropdown_col_item_label">指挥调度一张图</span>
+                  </div>
+                  <div class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_10.png">
+                    <span class="dropdown_col_item_label">XSmart大数据IOC可视化平台</span>
+                  </div>
+                  <div class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/app/icon_apache.png">
+                    <span class="dropdown_col_item_label">Apache Superset</span>
+                  </div>
+                  <div class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/app/icon_xdata.png">
+                    <span class="dropdown_col_item_label">XDataStudio大数据底座</span>
+                  </div>
+                </div>
+                <div class="dropdown_col" style="flex: 1.5; padding-top: 1.375rem;">
+                  <p class="dropdown_col_title"></p>
+                  <div class="dropdown_col_sort">
+                    <img class="dropdown_col_sort_logo" src="/img/home/dzh.png">
+                    <span class="dropdown_col_sort_label">私有云</span>
+                  </div>
+                  <a href="http://oort.oortcloudsmart.com:32610/oort/oortcloud-frontservice/apaas_web/" target="_blank">
+                    <div class="dropdown_col_item">
+                      <img class="dropdown_col_item_logo" src="/img/home/xl_11.png">
+                      <span class="dropdown_col_item_label">智慧云aPaaS应用支撑平台（aPaaS）</span>
+                    </div>
+                  </a>
+                  <div class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_12.png">
+                    <span class="dropdown_col_item_label">移动端服务化能力支撑平台（mPaaS）</span>
+                  </div>
+                  <div class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_4.png">
+                    <span class="dropdown_col_item_label">XMobileStudio移动应用开发支撑平台</span>
+                  </div>
+                  <div class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_8.png">
+                    <span class="dropdown_col_item_label">PGIS地图引擎能力支撑平台(PGISPaaS)</span>
+                  </div>
+                  <div class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_13.png">
+                    <span class="dropdown_col_item_label">XDevStudio“奥尔特云”开发平台</span>
+                  </div>
+                  <div class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/app/icon_cloud.png">
+                    <span class="dropdown_col_item_label">XProxy跨网智能网关</span>
+                  </div>
+                  <div class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/app/icon_kuboard.png">
+                    <span class="dropdown_col_item_label">Kuboard</span>
+                  </div>
+                  <div class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/app/icon_cloud.png">
+                    <span class="dropdown_col_item_label">XFileStor分布式文件存储系统</span>
+                  </div>
+                  <div class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/app/icon_tianqin.png">
+                    <span class="dropdown_col_item_label">XCompute天琴虚拟化软件</span>
+                  </div>
+                </div>
+              </NavHeaderDropdown>
+            </template>
+          </n-popover>
+          <n-popover trigger="hover" arrow-point-to-center placement="bottom">
+            <template #trigger>
+              <NuxtLink to="/services" @mouseenter="handleMouseenter('solution')" @mouseleave="handleMouseleave('solution')">专业服务</NuxtLink>
+            </template>
+            <template #default>
+              <NavHeaderDropdown :menu="solutionMenu" width="50rem" />
+            </template>
+          </n-popover>
           <NuxtLink to="/news">新闻动态</NuxtLink>
           <NuxtLink to="/about">关于我们</NuxtLink>
         </div>
@@ -103,124 +224,15 @@
         </div>
       </div>
     </div>
-    <n-collapse-transition :show="hardwareVisible" class="menu" @mouseenter="panelEnter" @mouseleave="panelLeave('hardware')">
-      <NavHeaderDropdown :menu="hardwareMenu" width="80rem" />
-    </n-collapse-transition>
-    <n-collapse-transition :show="softwareVisible" class="menu" @mouseenter="panelEnter" @mouseleave="panelLeave('software')">
-      <NavHeaderDropdown :menu="softwareMenu" width="97.5rem">
-        <div class="dropdown_col" style="flex: 1.5">
-          <p class="dropdown_col_title">基础软件</p>
-          <div class="dropdown_col_sort">
-            <img class="dropdown_col_sort_logo" src="/img/home/sxt.png">
-            <span class="dropdown_col_sort_label">安全移动办公</span>
-          </div>
-          <NuxtLink to="/product_instantMsg" class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="/img/home/xl_1.png">
-            <span class="dropdown_col_item_label">即时通讯</span>
-            <!-- <span>NEW</span> -->
-          </NuxtLink>
-          <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="/img/home/xl_2.png">
-            <span class="dropdown_col_item_label">私有云部署的移动安全办公云平台</span>
-          </div>
-          <NuxtLink to="/product" class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="/img/home/xl_3.png">
-            <span class="dropdown_col_item_label">门户与应用仓库</span>
-          </NuxtLink>
-          <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="/img/home/xl_5.png">
-            <span class="dropdown_col_item_label">安全管控MDM</span>
-          </div>
-          <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="/img/home/xl_6.png">
-            <span class="dropdown_col_item_label">定制手机型安全终端</span>
-          </div>
-          <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="/img/home/xl_7.png">
-            <span class="dropdown_col_item_label">定制安全Pad终端</span>
-          </div>
-          <div class="dropdown_col_sort">
-            <img class="dropdown_col_sort_logo" src="/img/home/zhdd.png">
-            <span class="dropdown_col_sort_label">指挥调度与IOC大数据可视化</span>
-          </div>
-          <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="/img/home/xl_9.png">
-            <span class="dropdown_col_item_label">指挥调度一张图</span>
-          </div>
-          <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="/img/home/xl_10.png">
-            <span class="dropdown_col_item_label">XSmart大数据IOC可视化平台</span>
-          </div>
-          <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="/img/app/icon_apache.png">
-            <span class="dropdown_col_item_label">Apache Superset</span>
-          </div>
-          <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="/img/app/icon_xdata.png">
-            <span class="dropdown_col_item_label">XDataStudio大数据底座</span>
-          </div>
-        </div>
-        <div class="dropdown_col" style="flex: 1.5; padding-top: 1.375rem;">
-          <p class="dropdown_col_title"></p>
-          <div class="dropdown_col_sort">
-            <img class="dropdown_col_sort_logo" src="/img/home/dzh.png">
-            <span class="dropdown_col_sort_label">私有云</span>
-          </div>
-          <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="/img/home/xl_11.png">
-            <span class="dropdown_col_item_label">智慧云aPaaS应用支撑平台（aPaaS）</span>
-          </div>
-          <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="/img/home/xl_12.png">
-            <span class="dropdown_col_item_label">移动端服务化能力支撑平台（mPaaS）</span>
-          </div>
-          <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="/img/home/xl_4.png">
-            <span class="dropdown_col_item_label">XMobileStudio移动应用开发支撑平台</span>
-          </div>
-          <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="/img/home/xl_8.png">
-            <span class="dropdown_col_item_label">PGIS地图引擎能力支撑平台(PGISPaaS)</span>
-          </div>
-          <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="/img/home/xl_13.png">
-            <span class="dropdown_col_item_label">XDevStudio“奥尔特云”开发平台</span>
-          </div>
-          <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="/img/app/icon_cloud.png">
-            <span class="dropdown_col_item_label">XProxy跨网智能网关</span>
-          </div>
-          <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="/img/app/icon_kuboard.png">
-            <span class="dropdown_col_item_label">Kuboard</span>
-          </div>
-          <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="/img/app/icon_cloud.png">
-            <span class="dropdown_col_item_label">XFileStor分布式文件存储系统</span>
-          </div>
-          <div class="dropdown_col_item">
-            <img class="dropdown_col_item_logo" src="/img/app/icon_tianqin.png">
-            <span class="dropdown_col_item_label">XCompute天琴虚拟化软件</span>
-          </div>
-        </div>
-      </NavHeaderDropdown>
-    </n-collapse-transition>
-    <n-collapse-transition :show="solutionVisible" class="menu" @mouseenter="panelEnter" @mouseleave="panelLeave('solution')">
-      <NavHeaderDropdown :menu="solutionMenu" width="80rem" />
-    </n-collapse-transition>
   </div>
 </template>
 
 <script setup lang="ts">
-import { NCollapseTransition, NPopover } from 'naive-ui';
+import { NPopover } from 'naive-ui';
 
-import {Menu, MenuItem} from '~/types'
+import { Menu, MenuItem } from '~/types'
 
 const router = useRouter()
-
-const hardwareVisible = ref<boolean>(false)
-const softwareVisible = ref<boolean>(false)
-const solutionVisible = ref<boolean>(false)
 const demoVisible = ref(false)
 const hardwareMenu = ref<Menu[]>([
   {
@@ -401,15 +413,6 @@ const demoMenu = ref<MenuItem[]>([
 let timer:any = null
 
 const handleMouseenter = (nav: string): void => {
-  if (nav === 'hardware') {
-    hardwareVisible.value = true
-  }
-  if (nav === 'solution') {
-    solutionVisible.value = true
-  }
-  if (nav === 'software') {
-    softwareVisible.value = true
-  }
   if (nav === 'demo') {
     demoVisible.value = true
   }
@@ -421,23 +424,7 @@ const handleMouseleave = (nav: string): void => {
   }, 300)
 }
 
-const panelEnter = () =>{
-  if(timer){
-    clearTimeout(timer)
-    return
-  }
-}
-
 const panelLeave = (nav: string): void =>{
-  if (nav === 'hardware') {
-    hardwareVisible.value = false
-  }
-  if (nav === 'solution') {
-    solutionVisible.value = false
-  }
-  if (nav === 'software') {
-    softwareVisible.value = false
-  }
   if (nav === 'demo') {
     demoVisible.value = true
   }
@@ -488,6 +475,11 @@ const backToHome = () => {
     width: 450px;
     display: flex;
     flex-direction: row;
+    &_demo:hover {
+      span {
+        color: #2278FF;
+      }
+    }
     &_demo {
       cursor: pointer;
       height: 100%;
@@ -501,7 +493,7 @@ const backToHome = () => {
       }
       span {
         font-size: 16px;
-        color: #2278FF;
+        color: #000;
         text-align: center;
         font-weight: 400;
       }
@@ -569,18 +561,18 @@ const backToHome = () => {
   }
 }
 
-.router-link-active {
-  color: #1856a6 !important;
-  &::after {
-    content: "";
-    width: 100% !important;;
-    height: 2.5px !important;;
-    background-color: #1856a6 !important;;
-    position: absolute;
-    left: 0!important;;
-    bottom: 0!important;;
-  }
-}
+//.router-link-active {
+//  color: #1856a6 !important;
+//  &::after {
+//    content: "";
+//    width: 100% !important;;
+//    height: 2.5px !important;;
+//    background-color: #1856a6 !important;;
+//    position: absolute;
+//    left: 0!important;;
+//    bottom: 0!important;;
+//  }
+//}
 
 .menu {
   position: fixed;
@@ -597,13 +589,14 @@ const backToHome = () => {
   // max-width: 1480px;
   // width: 100%;
   background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  //border-radius: 12px;
+  //box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   &_col {
     flex: 1;
     &_title {
-      padding: 0 16px;
+      padding: 0px 16px;
       font-size: 14px;
+      margin-bottom: 10px;
       color: #666666;
     }
     &_sort {
@@ -611,6 +604,7 @@ const backToHome = () => {
       display: flex;
       align-items: center;
       column-gap: 12px;
+      margin-bottom: 10px;
       &_logo {
         width: auto;
         height: 22px;
@@ -622,6 +616,7 @@ const backToHome = () => {
       }
     }
     &_item {
+      cursor: pointer;
       padding: 12px 16px;
       display: flex;
       align-items: center;
@@ -726,7 +721,7 @@ const backToHome = () => {
 .demo_div {
   display: flex;
   flex-wrap: wrap;
-  width: 800px;
+  width: 750px;
   padding: 16px;
   gap: 10px;
   background: #fff;

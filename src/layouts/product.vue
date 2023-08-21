@@ -12,7 +12,6 @@
         <Carousel :carouse-list="carouseList"></Carousel>
       </div>
     </div>
-    
     <slot />
     <Bottom></Bottom>
   </div>
@@ -20,20 +19,20 @@
 
 <script setup lang="ts">
 const carouseList = ref([
-  { 
+  {
     url: '/img/home/bg_2.png',
     title: '创造无限可能',
     desc:'公共安全“私有云智能化应用建设解决方案”提供商',
     buttons:[]
   },
-  { 
+  {
     url: '/img/home/jwb.png',
     title: '警务宝一体机',
     desc: '面向派出所、警务室的一体化智慧基层平台',
     buttons: [
-      { text: '立即购买', link: 'https://marketplace.huaweicloud.com/contents/ee446d40-ce7c-447f-84e9-4ca0a1fe2f0f' }, 
-      { text: '了解详情', link: '/JWBdetail' }, 
-      { text: '立即体验', link: 'http://map.oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/console_manage/index.html#/' }, 
+      { text: '立即购买', link: 'https://marketplace.huaweicloud.com/contents/ee446d40-ce7c-447f-84e9-4ca0a1fe2f0f' },
+      { text: '了解详情', link: '/JWBdetail' },
+      { text: '立即体验', link: 'http://map.oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/console_manage/index.html#/' },
       { text: '观看视频', link: 'https://player.youku.com/embed/XNTExNzc3Mzg2NA==' }]
   },
   { url: '/img/home/yzt_bg.png',
@@ -55,7 +54,7 @@ const carouseList = ref([
       { text: '观看视频', link: 'https://player.youku.com/embed/XNTExNzc3Mzg2NA==' }
     ]
   },
-  { 
+  {
     url: '/img/home/mhck.png',
     title: '门户与应用仓库',
     desc: '快速打造数字化超级App，拥有领先于市场的小程序容器技术，可为您提供敏捷、安全的最佳实践，是数字化时代下企业移动开发的不二之选。',

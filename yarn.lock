@@ -956,6 +956,11 @@
     node-gyp-build "^4.2.2"
     resolve-from "^5.0.0"
 
+"@vicons/ionicons4@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.npmmirror.com/@vicons/ionicons4/-/ionicons4-0.12.0.tgz#20fc1c76b048638a49e76880c10846843b63dc1f"
+  integrity sha512-i+7YwlpCrqD6m9esbZLy1bpVQlh4CKugtS3OzgfNw6BLTQQK6HT7drktaJgcESj/BTr4avdNbAtMQXx56wSVMg==
+
 "@vitejs/plugin-vue-jsx@^3.0.0":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue-jsx/-/plugin-vue-jsx-3.0.1.tgz#4c088ce445e34ae27e78a66e6dbf2cc2e85f827d"

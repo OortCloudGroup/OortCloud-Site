@@ -30,9 +30,9 @@ defineProps({
   display: flex;
   // max-width: 1280px;
   width: 100%;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  //background-color: #fff;
+  //border-radius: 12px;
+  //box-shadow: 0 1000px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   &_col {
     flex: 1;
     &_title {
@@ -41,6 +41,7 @@ defineProps({
       color: #666666;
     }
     &_item {
+      cursor: pointer;
       padding: 12px 16px;
       display: flex;
       align-items: center;

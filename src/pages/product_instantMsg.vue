@@ -288,10 +288,10 @@ const headerContent = ref({
   ],
   swipes: [
     '/img/product/instant_msg/swipe_1.png',
-    '/img/product/instant_msg/swipe_1.png',
-    '/img/product/instant_msg/swipe_1.png',
-    '/img/product/instant_msg/swipe_1.png',
-    '/img/product/instant_msg/swipe_1.png',
+    '/img/product/instant_msg/swipe_2.png',
+    '/img/product/instant_msg/swipe_3.png',
+    '/img/product/instant_msg/swipe_4.png',
+    '/img/product/instant_msg/swipe_5.png',
   ]
 })
 const support = ref(null)
