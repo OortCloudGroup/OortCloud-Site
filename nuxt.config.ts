@@ -73,5 +73,11 @@ export default defineNuxtConfig({
         landscapeWidth: 1920 // 横屏时使用的视窗宽度
       }
     }
+  },
+  nitro: {
+    compressPublicAssets: {
+      gzip: true,
+    },
+    sourceMap: false
   }
 })
