@@ -25,7 +25,9 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
       </div>
       <div class="demo_body_item">
         <span>二类网</span>
-        <img src="/img/demo/index/2_pc.png"/>
+        <a href="http://192.168.50.204:32610/oort/oortcloud-policefront/zxb_work_protal/index.html" target="_blank">
+          <img src="/img/demo/index/2_pc.png"/>
+        </a>
         <NuxtLink to="/demoDownload2">
           <img src="/img/demo/index/2_mobile.png"/>
         </NuxtLink>
@@ -38,7 +40,9 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
       </div>
       <div class="demo_body_item">
         <span>三类网</span>
-        <img src="/img/demo/index/3_pc.png"/>
+        <a href="http://192.168.60.204:32610/oort/oortcloud-policefront/zxb_work_protal/index.html" target="_blank">
+          <img src="/img/demo/index/3_pc.png"/>
+        </a>
         <NuxtLink to="/demoDownload3">
           <img src="/img/demo/index/3_mobile.png"/>
         </NuxtLink>
