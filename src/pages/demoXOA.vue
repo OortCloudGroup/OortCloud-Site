@@ -193,8 +193,8 @@ const videoUrl = ref('https://v.qq.com/txp/iframe/player.html?vid=h3155cunx94')
     }
     &_items {
       display: flex;
-      flex-direction: row;
-      gap: 8px;
+      flex-wrap: wrap;
+      gap: 20px;
     }
   }
   &_right {
@@ -256,18 +256,18 @@ const videoUrl = ref('https://v.qq.com/txp/iframe/player.html?vid=h3155cunx94')
 
 .demo_download  {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   display: flex;
   flex-direction: column;
-  background: #FFFFFF;
+  background: #FBFBFB;
   border-radius: 8px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   img {
-    width: 30px;
-    height: 35px;
+    width: 105px;
+    height: 105px;
     margin: 10px 0px;
   }
   span {
@@ -314,7 +314,7 @@ const videoUrl = ref('https://v.qq.com/txp/iframe/player.html?vid=h3155cunx94')
 }
 
 .demo_body_pdf {
-  height: 40px;
+  height: 80px;
   display: flex;
   flex-direction: row;
   align-items: center;

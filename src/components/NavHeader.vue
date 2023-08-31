@@ -202,7 +202,7 @@
           </div>
         </div>
         <div class="header_dialog_item">
-          <div class="header_dialog_item_title">双系统安全移动办公</div>
+          <div class="header_dialog_item_title">指挥调度</div>
           <div class="header_dialog_item_main">
             <div class="header_dialog_item_main_div">
               <img src="/img/home/xl_9.png">

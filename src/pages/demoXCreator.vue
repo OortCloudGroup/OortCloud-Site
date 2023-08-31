@@ -141,7 +141,7 @@ import { NPopover, NIcon } from 'naive-ui'
   padding-top: 63px;
   height: 560px;
   &_left {
-    width: 720px;
+    width: 800px;
     display: flex;
     flex-direction: column;
     &_title {
@@ -160,7 +160,7 @@ import { NPopover, NIcon } from 'naive-ui'
     &_items {
       display: flex;
       flex-direction: row;
-      gap: 8px;
+      gap: 20px;
     }
   }
   &_right {
@@ -244,8 +244,8 @@ import { NPopover, NIcon } from 'naive-ui'
 
 .demo_download  {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 180px;
+  height: 180px;
   display: flex;
   flex-direction: column;
   background: #FFFFFF;
@@ -254,8 +254,8 @@ import { NPopover, NIcon } from 'naive-ui'
   justify-content: center;
   cursor: pointer;
   img {
-    width: 30px;
-    height: 35px;
+    width: 105px;
+    height: 105px;
     margin: 10px 0px;
   }
   span {
@@ -302,7 +302,7 @@ import { NPopover, NIcon } from 'naive-ui'
 }
 
 .demo_body_pdf {
-  height: 40px;
+  height: 80px;
   display: flex;
   flex-direction: row;
   align-items: center;

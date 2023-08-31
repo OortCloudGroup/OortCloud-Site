@@ -50,8 +50,8 @@ const carouseList = ref([
     desc: '对标公有云上的钉钉，企业微信的专门私有化部署的数字化移动协同办公平台，数据自己掌握，安全可控。打造了一个涵盖即时消息、电子邮件、音视频会议、资料分享、流程申请与',
     buttons: [
       { text: '立即购买', link: 'https://marketplace.huaweicloud.com/contents/6b7d495c-97b6-4807-858d-48dbe3bcee75' },
-      { text: '了解详情', link: 'https://myoumuamua.com/' },
-      { text: '观看视频', link: 'https://player.youku.com/embed/XNTExNzc3Mzg2NA==' }
+      { text: '了解详情', link: 'https://www.myoumuamua.com/' },
+      { text: '观看视频', link: 'https://v.qq.com/txp/iframe/player.html?vid=h3155cunx94' }
     ]
   },
   {

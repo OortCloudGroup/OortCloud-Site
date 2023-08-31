@@ -7,36 +7,20 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
     <div class="demo_body">
       <div class="demo_body_left">
         <span class="demo_body_left_title">反诈中心推广统计平台</span>
-        <span class="demo_body_left_subtitle">落实公安部交管局“一盔一带”行动计划，助力文明城市迎检工作</span>
+        <span class="demo_body_left_subtitle">反诈App推广神器！<br/>推广人员生成推广二维码海报，引导群众下载，实现推广统计到个人，量化推广工作</span>
         <div class="demo_body_left_items">
           <n-popover trigger="hover" arrow-point-to-center placement="right">
             <template #trigger>
               <div class="demo_download">
-                <img src="/img/demo/download/android.png"/>
-                <span>Android 移动端</span>
+                <img src="/img/demo/download/wxmini.png"/>
+                <span>微信公众号</span>
               </div>
             </template>
             <template #default>
               <div class="demo_download demo_download_cov">
                 <div class="demo_download_code">
-                  <img src="/img/logo_googn.jpg"/>
-                  <span>扫码下载</span>
-                </div>
-              </div>
-            </template>
-          </n-popover>
-          <n-popover trigger="hover" arrow-point-to-center placement="right">
-            <template #trigger>
-              <div class="demo_download">
-                <img src="/img/demo/download/iphone.png"/>
-                <span>IOS 移动端</span>
-              </div>
-            </template>
-            <template #default>
-              <div class="demo_download demo_download_cov">
-                <div class="demo_download_code">
-                  <img src="/img/logo_googn.jpg"/>
-                  <span>扫码下载</span>
+                  <img src="/img/demo/fz/fz_h5.png"/>
+                  <span>扫码体验</span>
                 </div>
               </div>
             </template>
@@ -134,7 +118,7 @@ import { NPopover, NIcon } from 'naive-ui'
       &_items {
         display: flex;
         flex-direction: row;
-        gap: 8px;
+        gap: 20px;
       }
     }
     &_right {
@@ -161,8 +145,8 @@ import { NPopover, NIcon } from 'naive-ui'
 
   .demo_download  {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     background: #FFFFFF;
@@ -171,12 +155,12 @@ import { NPopover, NIcon } from 'naive-ui'
     justify-content: center;
     cursor: pointer;
     img {
-      width: 30px;
-      height: 35px;
+      width: 105px;
+      height: 105px;
       margin: 10px 0px;
     }
     span {
-      font-size: 10px;
+      font-size: 25px;
       color: #7789A8;
       letter-spacing: 0;
       font-weight: 400;
@@ -219,9 +203,10 @@ import { NPopover, NIcon } from 'naive-ui'
   }
 
   .demo_body_pdf {
-    height: 40px;
+    height: 80px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     &_item {
       cursor: pointer;
       display: flex;
