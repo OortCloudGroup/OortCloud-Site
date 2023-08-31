@@ -359,7 +359,7 @@ async function getNewsList() {
   }
   const { data } = await useFetch(url,  { body: params, method: 'post'})
   const res:Resp = toRaw(data.value) as Resp
-  if (res.code === 200) {
+  if (res && res.code === 200) {
     newsList.value = res.data.list
   }
 }

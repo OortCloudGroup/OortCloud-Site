@@ -38,10 +38,6 @@ const pageIndex = ref(1)
 const total = ref(0)
 const url =  'https://www.oortcloudsmart.com/oort/oortcloud-cetcnewsservice/api/v1/cetcnewservice/new_list'
 
-// onMounted(async ()=>{
-//     getNewsList()
-// })
-
 getNewsList()
 
 async function getNewsList() {
@@ -53,9 +49,9 @@ async function getNewsList() {
   }
   const { data } = await useFetch(url,  { body: params, method: 'post'})
   const res:Resp = toRaw(data.value) as Resp
-  if (res.code === 200) {
+  if (res && res.code === 200) {
     newsList.value = res.data.list
-    total.value = res.data.count / 6
+    total.value =  Math.ceil(res.data.count / 6)
   }
 }
 
