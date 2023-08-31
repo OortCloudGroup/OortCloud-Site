@@ -1,6 +1,6 @@
 <template>
   <div class="demo_header">
-    <img :src="meta.logo"/>
+    <a href="https://oortcloudsmart.com/"><img :src="meta.logo"/></a>
     <span>{{ meta.title }}</span>
     <span></span>
     <span>{{ meta.subTitle }}</span>
