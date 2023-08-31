@@ -27,7 +27,7 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
       </div>
       <div class="download_body_item">
         <img src="/img/demo/download/iphone.png"/>
-        <span>iOS 移动端</span>
+        <span>IOS 移动端</span>
         <img class="download_body_item_qrcode" src="/img/demo/download/qrcode.png"/>
         <div class="download_body_item_code">
           <img src="/img/logo_googn.jpg"/>

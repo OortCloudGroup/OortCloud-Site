@@ -1,15 +1,20 @@
 <!--演示页面的layout-->
 <template>
   <div class="defalut_layout">
-    <DemoHeader/>
+    <DemoHeader :meta="meta"/>
     <div class="page_body">
-      <slot />
+      <slot  />
       <Bottom></Bottom>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+
+// 获取当前路由
+const route = useRoute()
+// 获取元信息
+const { meta } = route
 
 </script>
 

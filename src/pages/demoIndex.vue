@@ -57,11 +57,16 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
 <script>
 
 definePageMeta({
-  layout: "demo"
+  layout: "demo",
+  title: "信息资源服务平台",
+  subTitle: "模拟跨多网入口",
+  logo: "/img/demo/logo_white.png"
 })
+
 export default {
   name: "demoIndex"
 }
+
 </script>
 
 <style lang="scss" scoped>

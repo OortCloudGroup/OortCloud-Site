@@ -228,7 +228,7 @@
 </template>
 
 <script setup lang="ts">
-import { NPopover } from 'naive-ui';
+import { NPopover } from 'naive-ui'
 
 import { Menu, MenuItem } from '~/types'
 
@@ -363,7 +363,7 @@ const demoMenu = ref<MenuItem[]>([
     name: 'XOA数字化办公',
     desc: '生产力工具',
     logo: '/img/demo/menu/oa.png',
-    link: '/demoIndex'
+    link: '/demoXOA'
   },
   {
     name: '门户与应用仓库',
@@ -375,7 +375,7 @@ const demoMenu = ref<MenuItem[]>([
     name: '即时通讯',
     desc: '单聊、群聊、图文、视频等即时通讯IM',
     logo: '/img/demo/menu/im.png',
-    link: '/demoIndex'
+    link: '/demoIM'
   },
   {
     name: '移动警务服务总线',
@@ -387,25 +387,25 @@ const demoMenu = ref<MenuItem[]>([
     name: '交通微劝导系统',
     desc: '落实公安部交管局“一盔一带”行动计划，助力文明',
     logo: '/img/demo/menu/wqd.png',
-    link: '/demoIndex'
+    link: '/demoWQD'
   },
   {
     name: '指挥调度一张图',
     desc: '总揽指挥调度一张图，用于电子指挥大屏操作',
     logo: '/img/demo/menu/map.png',
-    link: '/demoIndex'
+    link: '/demoOneMap'
   },
   {
     name: '反诈中心推广统计平台',
     desc: '反诈APP推广神器——反诈推广码',
     logo: '/img/demo/menu/fz.png',
-    link: '/demoIndex'
+    link: '/demoFZ'
   },
   {
     name: 'XCreator敏捷发布平台',
     desc: '全媒体矩阵信息发布平台',
     logo: '/img/demo/menu/xc.png',
-    link: '/demoIndex'
+    link: '/demoXCreator'
   },
 
 ])

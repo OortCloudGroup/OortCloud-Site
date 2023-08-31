@@ -1,13 +1,20 @@
 <template>
   <div class="demo_header">
-    <img src="/img/demo/logo_white.png"/>
-    <span>信息资源服务平台</span>
+    <img :src="meta.logo"/>
+    <span>{{ meta.title }}</span>
     <span></span>
-    <span>模拟跨多网入口</span>
+    <span>{{ meta.subTitle }}</span>
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
+
+defineProps({
+  meta: {
+    type: Object
+  }
+})
+
 
 </script>
 
@@ -22,7 +29,7 @@
     background-color: #2856A5;
     img {
       height: 48px;
-      margin: 0 32px;
+      margin: 0 0 0 32px;
     }
     span:nth-of-type(1) {
       font-size: 24px;
