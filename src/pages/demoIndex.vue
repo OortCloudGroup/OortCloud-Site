@@ -73,7 +73,7 @@ export default {
   .page_container {
     width: 70%;
     margin: 0 auto;
-    height: 1080px;
+    min-height: 1080px;
   }
 
   .demo_title {

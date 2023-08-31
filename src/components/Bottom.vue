@@ -1,6 +1,6 @@
 <template>
  <div style="height: 6.25rem; width: 100%">
-    <div style="height: 6.25rem; width: 100%"></div>
+<!--    <div style="height: 6.25rem; width: 100%"></div>-->
     <div class="bottom_body">
       <div class="bottom_content">
         <div class="bottom_tips">

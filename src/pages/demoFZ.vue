@@ -51,7 +51,7 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
             <template #default>
               <div class="demo_download demo_download_cov">
                 <div class="demo_download_code">
-                  <img src="/img/logo_googn.jpg"/>
+                  <img src="/img/demo/fz/fz_h5.png"/>
                   <span>扫码体验</span>
                 </div>
               </div>
@@ -64,13 +64,14 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
             </div>
           </a>
         </div>
-
         <div class="demo_body_pdf">
-          <div class="demo_body_pdf_item">
-<!--            <img src=""/>-->
-<!--            <span>资料下载</span>-->
-          </div>
-          d调度的
+          <a href="https://portal-data-cn.obs.cn-north-4.myhuaweicloud.com/marketplace/public/app/attachment/20220208/ee39408b-6a22-4088-9d4b-1c11c74db7cf/2202080741135427.pptx" target="_blank">
+            <div class="demo_body_pdf_item">
+              <img src="/img/demo/pdf_download.png"/>
+              <span>资料下载</span>
+              <n-icon  :component="IosArrowForward" />
+            </div>
+          </a>
         </div>
       </div>
       <div class="demo_body_right">
@@ -89,10 +90,11 @@ definePageMeta({
   layout: "demo",
   title: "反诈中心推广统计平台",
   subTitle: "演示环境",
-  logo: "/img/demo/menu/fz.png"
+  logo: "/img/demo/fz/fz_logo.png"
 })
 
-import { NPopover } from 'naive-ui'
+import {  IosArrowForward } from '@vicons/ionicons4'
+import { NPopover, NIcon } from 'naive-ui'
 
 </script>
 
@@ -101,7 +103,7 @@ import { NPopover } from 'naive-ui'
   .page_container {
     width: 100%;
     margin: 0 auto;
-    height: 1080px;
+    min-height: 1080px;
     background-image: url("/img/demo/fz/fz_bg.png");
     background-size: 100% 100%;
   }
@@ -150,6 +152,7 @@ import { NPopover } from 'naive-ui'
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 40px 0;
     img {
       height: 606px;
       width: auto;
@@ -197,8 +200,8 @@ import { NPopover } from 'naive-ui'
       align-items: center;
       justify-content: center;
       img {
-        width: 240px;
-        height: 240px;
+        width: 260px;
+        height: 260px;
       }
       span {
         margin: 10px 0px;
@@ -217,16 +220,26 @@ import { NPopover } from 'naive-ui'
 
   .demo_body_pdf {
     height: 40px;
-    display: flex
+    display: flex;
+    flex-direction: row;
+    &_item {
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      img {
+        width: 28px;
+        height: 28px;
+        margin: 0 4px;
+      }
+      span {
+        font-size: 20px;
+        color: #1B396C;
+        letter-spacing: 0;
+        text-align: right;
+        font-weight: 400;
+      }
+    }
   }
-
-
-  //.demo_download:hover {
-  //  .demo_download_code {
-  //    display: flex;
-  //  }
-  //}
-
-
 
 </style>
