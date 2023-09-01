@@ -28,7 +28,7 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
             <span>观看视频</span>
             <n-icon  :component="IosArrowForward" />
           </div>
-          <a href="https://portal-data-cn.obs.cn-north-4.myhuaweicloud.com/marketplace/public/app/attachment/20220813/52207152-e7d9-4e81-b173-9201244e81c1/2208130716126671.pdf" target="_blank">
+          <a href="http://oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/cloud_disk/index.html?accessToken=g02dce3c79a42653f0314ae2e1bdbebd0" target="_blank">
             <div class="demo_body_pdf_item">
               <img src="/img/demo/pdf_download.png"/>
               <span>资料下载</span>

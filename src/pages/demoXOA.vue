@@ -82,7 +82,7 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
             <span>观看视频</span>
             <n-icon  :component="IosArrowForward" />
           </div>
-          <a href="https://portal-data-cn.obs.cn-north-4.myhuaweicloud.com/marketplace/public/app/attachment/20220815/a41582a2-e2b6-4ff6-ab56-7ab89b43f34b/2208151111074016.pdf" target="_blank">
+          <a href="http://oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/cloud_disk/index.html?accessToken=g02dce3c79a42653f0314ae2e1bdbebd0" target="_blank">
             <div class="demo_body_pdf_item">
               <img src="/img/demo/pdf_download.png"/>
               <span>资料下载</span>
@@ -173,7 +173,7 @@ const videoUrl = ref('https://v.qq.com/txp/iframe/player.html?vid=h3155cunx94')
   display: flex;
   flex-direction: row;
   padding-top: 63px;
-  height: 650px;
+  min-height: 650px;
   &_left {
     width: 850px;
     display: flex;
