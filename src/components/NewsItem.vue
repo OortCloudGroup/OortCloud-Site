@@ -57,17 +57,18 @@ const coverImage = computed(() => props.coverImg?.split('32610')[1])
 
 .div_item_span {
     font-size: 18px;
-    padding: 34px 26px 18px 26px;
-    min-height: 68px;
+    padding: 20px 26px 18px 26px;
     color: #333333;
     font-weight: bold;
     line-height: 24px;
+    height: 80px;
+    overflow:hidden;
 }
 
 .div_item_span1 {
     font-size: 16px;
     color: #999999;
-    margin: 20px 0 0 28px;
+    margin: 10px 0 0 10px;
 }
 
 .news {
