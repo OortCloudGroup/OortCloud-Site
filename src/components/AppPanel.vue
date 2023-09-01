@@ -67,10 +67,10 @@ defineProps({
   }
   &_item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     column-gap: 8px;
     height: 78px;
-    padding: 0 16px;
+    padding: 16px 0  0 16px;
     box-sizing: border-box;
     transition: .2s;
     cursor: pointer;
@@ -90,7 +90,7 @@ defineProps({
     &_info {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: flex-start;
     }
   }
 }
