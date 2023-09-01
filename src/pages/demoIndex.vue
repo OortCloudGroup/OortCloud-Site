@@ -60,7 +60,8 @@ definePageMeta({
   layout: "demo",
   title: "信息资源服务平台",
   subTitle: "模拟跨多网入口",
-  logo: "/img/demo/logo_white.png"
+  logo: "/img/demo/logo_white.png",
+  isGetAjax: true  // 是否去获取配置信息
 })
 
 export default {

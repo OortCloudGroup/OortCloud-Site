@@ -1,7 +1,7 @@
 <template>
   <div class="demo_header">
-    <a href="https://oortcloudsmart.com/"><img :src="meta.logo"/></a>
-    <span>{{ meta.title }}</span>
+    <a href="https://oortcloudsmart.com/"><img :src="logo"/></a>
+    <span>{{ title }}</span>
     <span></span>
     <span>{{ meta.subTitle }}</span>
   </div>
@@ -9,12 +9,27 @@
 
 <script setup lang="ts">
 
-defineProps({
+const props = defineProps({
   meta: {
-    type: Object
+    type: Object,
+    default: {}
   }
 })
 
+const title = ref(props.meta.title )
+const logo = ref(props.meta.logo)
+
+
+if(props.meta.isGetAjax) {
+  getConfigA()
+}
+
+async function getConfigA() {
+  const { data } = await useFetch('http://oort.oortcloudsmart.com:31610/oort/oortcloud-sso/frontConf/v1/config.json',  { method: 'get'})
+  let res = toRaw(data.value) as any
+  title.value = res.common.login_logo_text
+  logo.value = res.logoWhite
+}
 
 </script>
 
@@ -28,7 +43,7 @@ defineProps({
     align-items: center;
     background-color: #2856A5;
     img {
-      height: 48px;
+      height: 40px;
       margin: 0 0 0 32px;
     }
     span:nth-of-type(1) {
