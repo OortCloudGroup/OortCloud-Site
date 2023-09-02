@@ -40,7 +40,7 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
       </div>
       <div class="demo_body_item">
         <span>三类网</span>
-        <a href="http://192.168.60.204:32610/oort/oortcloud-policefront/zxb_work_protal/index.html" target="_blank">
+        <a href="http://192.168.60.204:32610/oort/oortcloud-policefront/desktop_web/index.html" target="_blank">
           <img src="/img/demo/index/3_pc.png"/>
         </a>
         <NuxtLink to="/demoDownload3">
