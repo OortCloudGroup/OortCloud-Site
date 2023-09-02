@@ -615,9 +615,11 @@ const support = ref({
 }
 .product_detail2 .card_1 {
   background-image: url('/img/product/portal/card1_bg.png');
+  background-size: 100% 100%;
 }
 .product_detail2 .card_2 {
   background-image: url('/img/product/portal/card2_bg.png');
+  background-size: 100% 100%;
 }
 .product_detail2 .card_3,
 .product_detail2 .card_4,
@@ -628,13 +630,15 @@ const support = ref({
 }
 .product_detail2 .card_3 {
   background-image: url('/img/product/portal/card3_bg.png');
+  background-size: 100% 100%;
 }
 .product_detail2 .card_4 {
   background-image: url('/img/product/portal/card4_bg.png');
+  background-size: 100% 100%;
 }
 .product_detail2 .card_5 {
   background-image: url('/img/product/portal/card5_bg.png');
-  background-size: 380px 311px;
+  background-size: 100% 100%;
 }
 .product_detail3 {
   display: flex;
