@@ -10,13 +10,13 @@
         </template>
         <template #default>
           <!-- 双系统安全移动办公 -->
-          <h3>双系统安全移动办公</h3>
+          <h3 class="h3_title">双系统安全移动办公</h3>
           <AppPanel :data="doubleSysApp"/>
           <!-- 指挥调度与IOC大数据可视化 -->
-          <h3>指挥调度与IOC大数据可视化</h3>
+          <h3 class="h3_title">指挥调度与IOC大数据可视化</h3>
           <AppPanel :data="viewableApp"/>
           <!-- 多租户aPaaS云 -->
-          <h3>指挥调度与IOC大数据可视化</h3>
+          <h3 class="h3_title">应用与服务支撑平台</h3>
           <AppPanel :data="aPaaSApp"/>
         </template>
       </n-popover>
@@ -62,7 +62,7 @@ const doubleSysApp = ref({
     {
       name: '即时通讯',
       logo: '/img/home/xl_1.png',
-      excerpt: '单聊、群聊、图文、视频等即时通讯IM',
+      excerpt: '私有化部署的内网“微信”',
       link: '/product_instantMsg'
     },
     {
@@ -428,5 +428,9 @@ const securityApp = ref({
     box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 8%);
     box-sizing: border-box;
   }
+}
+
+.h3_title {
+  font-size: 16px;
 }
 </style>

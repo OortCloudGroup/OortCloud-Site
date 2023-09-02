@@ -202,7 +202,7 @@
           </div>
         </div>
         <div class="header_dialog_item">
-          <div class="header_dialog_item_title">指挥调度</div>
+          <div class="header_dialog_item_title">指挥调度与IOC大数据可视化</div>
           <div class="header_dialog_item_main">
             <div class="header_dialog_item_main_div">
               <img src="/img/home/xl_9.png">
@@ -631,6 +631,7 @@ const backToHome = () => {
         height: 36px;
       }
       &_label {
+        font-size: 14px;
         color: rgb(55 65 81)
       }
     }

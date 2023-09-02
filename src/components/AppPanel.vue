@@ -92,10 +92,15 @@ defineProps({
       flex-direction: column;
       justify-content: flex-start;
     }
+    &_title {
+      font-size: 14px;
+    }
   }
 }
 :deep(.n-ellipsis) {
   font-size: 12px;
   color: #666666;
 }
+
+
 </style>

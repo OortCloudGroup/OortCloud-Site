@@ -28,7 +28,8 @@ defineProps({
     &_item {
       padding: 12px 16px;
       display: flex;
-      align-items: center;
+      flex-direction: row;
+      align-items: flex-start;
       column-gap: 12px;
       transition: 0.15s;
       &:hover {
@@ -40,6 +41,7 @@ defineProps({
         height: 36px;
       }
       &_label {
+        font-size: 14px;
         color: rgb(55 65 81)
       }
     }

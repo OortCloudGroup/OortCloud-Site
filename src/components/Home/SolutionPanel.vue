@@ -7,9 +7,9 @@
             <div class="pane_left">
               <span class="pane_left_title">{{ item.title }}</span>
               <span class="pane_left_intro">{{ item.content }}</span>
-              <el-button v-if="item.site" type="primary">
+              <n-button v-if="item.site" type="info">
                 了解详情
-              </el-button>
+              </n-button>
             </div>
             <div class="pane_right">
               <Image :src="item.cover" />
@@ -133,4 +133,10 @@ a {
 :deep(.n-tabs-tab:hover) {
   color: #2290ff !important;
 }
+:deep(.n-button) {
+  font-size: 16px;
+  width: 100px;
+  height: 40px;
+}
+
 </style>
