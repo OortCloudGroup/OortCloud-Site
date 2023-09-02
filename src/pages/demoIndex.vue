@@ -64,6 +64,14 @@ definePageMeta({
   isGetAjax: true  // 是否去获取配置信息
 })
 
+useSeoMeta({
+  title: '信息资源服务平台',
+  ogTitle: '信息资源服务平台',
+  description: '模拟跨多网入口',
+  ogDescription: '模拟跨多网入口',
+  ogImage: '/img/demo/logo_white.png',
+})
+
 export default {
   name: "demoIndex"
 }

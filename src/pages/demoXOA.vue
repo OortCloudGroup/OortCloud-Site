@@ -148,6 +148,14 @@ definePageMeta({
   logo: "/img/demo/xoa/xoa_logo.png"
 })
 
+useSeoMeta({
+  title: 'XOA数字化办公',
+  ogTitle: 'XOA数字化办公-演示环境',
+  description: '新一代OA数字化办公生产力工具',
+  ogDescription: '新一代OA数字化办公生产力工具',
+  ogImage: '/img/demo/xoa/xoa_logo.png',
+})
+
 import {  IosArrowForward } from '@vicons/ionicons4'
 import { NPopover, NIcon, NModal } from 'naive-ui'
 

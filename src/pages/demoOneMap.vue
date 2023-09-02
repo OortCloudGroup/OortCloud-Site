@@ -81,6 +81,14 @@ definePageMeta({
   logo: "/img/demo/onemap/onemap_logo.png"
 })
 
+useSeoMeta({
+  title: '指挥调度一张图',
+  ogTitle: '指挥调度一张图-演示环境',
+  description: '指挥调度，警情、警力、现场、调度、过程可视。融合指挥融合各大通信系统、请休假、签到、勤务等系统，将系统的各种功能都在公安网内地图上应用，实现“一张图”展示，一键通话，一键视频，一键组队，是真正的“看得见、呼得通”的扁平化指挥调度',
+  ogDescription: '指挥调度，警情、警力、现场、调度、过程可视。融合指挥融合各大通信系统、请休假、签到、勤务等系统，将系统的各种功能都在公安网内地图上应用，实现“一张图”展示，一键通话，一键视频，一键组队，是真正的“看得见、呼得通”的扁平化指挥调度',
+  ogImage: '/img/demo/onemap/onemap_logo.png',
+})
+
 import {  IosArrowForward } from '@vicons/ionicons4'
 import { NIcon,NModal } from 'naive-ui'
 

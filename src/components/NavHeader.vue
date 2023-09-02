@@ -373,7 +373,7 @@ const demoMenu = ref<MenuItem[]>([
   },
   {
     name: '即时通讯',
-    desc: '单聊、群聊、图文、视频等即时通讯IM',
+    desc: '私有化部署的内网“微信”',
     logo: '/img/demo/menu/im.png',
     link: '/demoIM'
   },
@@ -385,7 +385,7 @@ const demoMenu = ref<MenuItem[]>([
   },
   {
     name: '交通微劝导系统',
-    desc: '落实公安部交管局“一盔一带”行动计划，助力文明',
+    desc: '提升交通安全意识，落实交通宣传劝导',
     logo: '/img/demo/menu/wqd.png',
     link: '/demoWQD'
   },

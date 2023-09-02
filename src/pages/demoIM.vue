@@ -94,6 +94,14 @@ definePageMeta({
   logo: "/img/demo/im/im_logo.png"
 })
 
+useSeoMeta({
+  title: '即时通信',
+  ogTitle: '即时通信-演示环境',
+  description: '私有化部署的内网“微信”',
+  ogDescription: '私有化部署的内网“微信”',
+  ogImage: '/img/demo/im/im_logo.png',
+})
+
 import {  IosArrowForward } from '@vicons/ionicons4'
 import { NPopover, NIcon, NModal } from 'naive-ui'
 

@@ -77,6 +77,14 @@ definePageMeta({
   logo: "/img/demo/fz/fz_logo.png"
 })
 
+useSeoMeta({
+  title: '反诈中心推广统计平台',
+  ogTitle: '反诈中心推广统计平台-演示环境',
+  description: '反诈App推广神器！推广人员生成推广二维码海报，引导群众下载，实现推广统计到个人，量化推广工作',
+  ogDescription: '反诈App推广神器！推广人员生成推广二维码海报，引导群众下载，实现推广统计到个人，量化推广工作',
+  ogImage: '/img/demo/fz/fz_logo.png',
+})
+
 import {  IosArrowForward } from '@vicons/ionicons4'
 import { NPopover, NIcon } from 'naive-ui'
 
