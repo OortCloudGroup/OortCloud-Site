@@ -4,7 +4,9 @@
       <div class="hardware_body">
         <!-- 智慧触摸屏 -->
         <div class="hardware_touch">
-          <h3 class="hardware_touch_title">智慧触摸屏</h3>
+          <h3 class="hardware_touch_title">
+            智慧触摸屏
+          </h3>
           <div class="epiboly_number_content">
             <div class="epiboly_number_content_text">
               <p>
@@ -13,7 +15,8 @@
 
               <p style="margin-top: 20px;">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密集架可分为手动、电动、智能三种，支持定制尺寸。产品遵循国家和行业标准：GB/T13667.3—2003《手动密集书架技术条件》、GB/T13667.4—2003《电动密集书架技术条件》、DA/T
-                7-1992 直列式档案密集架。</p>
+                7-1992 直列式档案密集架。
+              </p>
             </div>
             <img class="epiboly_number_content_img" src="/img/product/hardware/hardware_touch.png" />
           </div>
@@ -21,77 +24,137 @@
 
         <!-- 特点及优势 -->
         <div class="hardware_advantage">
-          <h3 class="hardware_advantage_title">特点及优势</h3>
+          <h3 class="hardware_advantage_title">
+            特点及优势
+          </h3>
           <div class="hardware_advantage_content">
             <div class="advantage_content_item">
               <div style="height: 145px;">
-                <p class="advantage_content_item_title">档案盒打印机</p>
-                <p class="advantage_content_item_text">各种档案盒、档案袋、卷皮等打印</p>
+                <p class="advantage_content_item_title">
+                  档案盒打印机
+                </p>
+                <p class="advantage_content_item_text">
+                  各种档案盒、档案袋、卷皮等打印
+                </p>
               </div>
 
               <ul class="advantage_content_item_ul">
                 <li class="advantage_content_item_li" style="margin-top: 35px;">
-                  <p class="advantage_content_item_li_title">•&nbsp;&nbsp;&nbsp;&nbsp;打印方式</p>
-                  <p class="advantage_content_item_li_text">支持喷墨式打印或色带打印</p>
+                  <p class="advantage_content_item_li_title">
+                    •&nbsp;&nbsp;&nbsp;&nbsp;打印方式
+                  </p>
+                  <p class="advantage_content_item_li_text">
+                    支持喷墨式打印或色带打印
+                  </p>
                 </li>
                 <li class="advantage_content_item_li">
-                  <p class="advantage_content_item_li_title">•&nbsp;&nbsp;&nbsp;&nbsp;打印速度</p>
-                  <p class="advantage_content_item_li_text">A4全幅优质照片模式输出约111秒</p>
+                  <p class="advantage_content_item_li_title">
+                    •&nbsp;&nbsp;&nbsp;&nbsp;打印速度
+                  </p>
+                  <p class="advantage_content_item_li_text">
+                    A4全幅优质照片模式输出约111秒
+                  </p>
                 </li>
                 <li class="advantage_content_item_li">
-                  <p class="advantage_content_item_li_title">•&nbsp;&nbsp;&nbsp;&nbsp;打印厚度</p>
-                  <p class="advantage_content_item_li_text">17cm，可增加至24cm</p>
+                  <p class="advantage_content_item_li_title">
+                    •&nbsp;&nbsp;&nbsp;&nbsp;打印厚度
+                  </p>
+                  <p class="advantage_content_item_li_text">
+                    17cm，可增加至24cm
+                  </p>
                 </li>
                 <li class="advantage_content_item_li">
-                  <p class="advantage_content_item_li_title">•&nbsp;&nbsp;&nbsp;&nbsp;高度检测</p>
-                  <p class="advantage_content_item_li_text">红外线感应</p>
+                  <p class="advantage_content_item_li_title">
+                    •&nbsp;&nbsp;&nbsp;&nbsp;高度检测
+                  </p>
+                  <p class="advantage_content_item_li_text">
+                    红外线感应
+                  </p>
                 </li>
                 <li class="advantage_content_item_li">
-                  <p class="advantage_content_item_li_title">•&nbsp;&nbsp;&nbsp;&nbsp;最高分辨率</p>
-                  <p class="advantage_content_item_li_text">5760×1440dpi</p>
+                  <p class="advantage_content_item_li_title">
+                    •&nbsp;&nbsp;&nbsp;&nbsp;最高分辨率
+                  </p>
+                  <p class="advantage_content_item_li_text">
+                    5760×1440dpi
+                  </p>
                 </li>
               </ul>
             </div>
             <div class="advantage_content_item">
               <div style="height: 145px;">
-                <p class="advantage_content_item_title">扫描仪</p>
-                <p class="advantage_content_item_text">图书、图纸、文件、档案资料等的数字化处理</p>
+                <p class="advantage_content_item_title">
+                  扫描仪
+                </p>
+                <p class="advantage_content_item_text">
+                  图书、图纸、文件、档案资料等的数字化处理
+                </p>
               </div>
               <ul class="advantage_content_item_ul">
                 <li class="advantage_content_item_li" style="margin-top: 35px;">
-                  <p class="advantage_content_item_li_title">•&nbsp;&nbsp;&nbsp;&nbsp;扫描技术</p>
-                  <p class="advantage_content_item_li_text">CCD/CIS</p>
+                  <p class="advantage_content_item_li_title">
+                    •&nbsp;&nbsp;&nbsp;&nbsp;扫描技术
+                  </p>
+                  <p class="advantage_content_item_li_text">
+                    CCD/CIS
+                  </p>
                 </li>
                 <li class="advantage_content_item_li">
-                  <p class="advantage_content_item_li_title">•&nbsp;&nbsp;&nbsp;&nbsp;扫描速度</p>
-                  <p class="advantage_content_item_li_text">馈纸式最高可达70ppm/140dpi(A4)平板式最高可达1.8秒张(A3)</p>
+                  <p class="advantage_content_item_li_title">
+                    •&nbsp;&nbsp;&nbsp;&nbsp;扫描速度
+                  </p>
+                  <p class="advantage_content_item_li_text">
+                    馈纸式最高可达70ppm/140dpi(A4)平板式最高可达1.8秒张(A3)
+                  </p>
                 </li>
                 <li class="advantage_content_item_li">
-                  <p class="advantage_content_item_li_title">•&nbsp;&nbsp;&nbsp;&nbsp;扫描模式</p>
-                  <p class="advantage_content_item_li_text">黑白、灰度、彩色</p>
+                  <p class="advantage_content_item_li_title">
+                    •&nbsp;&nbsp;&nbsp;&nbsp;扫描模式
+                  </p>
+                  <p class="advantage_content_item_li_text">
+                    黑白、灰度、彩色
+                  </p>
                 </li>
                 <li class="advantage_content_item_li">
-                  <p class="advantage_content_item_li_title">•&nbsp;&nbsp;&nbsp;&nbsp;扫描幅面</p>
-                  <p class="advantage_content_item_li_text">A4/A3</p>
+                  <p class="advantage_content_item_li_title">
+                    •&nbsp;&nbsp;&nbsp;&nbsp;扫描幅面
+                  </p>
+                  <p class="advantage_content_item_li_text">
+                    A4/A3
+                  </p>
                 </li>
                 <li class="advantage_content_item_li">
-                  <p class="advantage_content_item_li_title">•&nbsp;&nbsp;&nbsp;&nbsp;高度检测</p>
-                  <p class="advantage_content_item_li_text">红外线感应</p>
+                  <p class="advantage_content_item_li_title">
+                    •&nbsp;&nbsp;&nbsp;&nbsp;高度检测
+                  </p>
+                  <p class="advantage_content_item_li_text">
+                    红外线感应
+                  </p>
                 </li>
                 <li class="advantage_content_item_li">
-                  <p class="advantage_content_item_li_title">•&nbsp;&nbsp;&nbsp;&nbsp;最高分辨率</p>
-                  <p class="advantage_content_item_li_text">600dp</p>
+                  <p class="advantage_content_item_li_title">
+                    •&nbsp;&nbsp;&nbsp;&nbsp;最高分辨率
+                  </p>
+                  <p class="advantage_content_item_li_text">
+                    600dp
+                  </p>
                 </li>
               </ul>
             </div>
             <div class="advantage_content_item">
               <div style="height: 145px;">
-                <p class="advantage_content_item_title">档案盒</p>
-                <p class="advantage_content_item_text">文书、科技、人事、会计等各类档案</p>
+                <p class="advantage_content_item_title">
+                  档案盒
+                </p>
+                <p class="advantage_content_item_text">
+                  文书、科技、人事、会计等各类档案
+                </p>
               </div>
               <ul class="advantage_content_item_ul">
                 <li class="advantage_content_item_li" style="margin-top: 35px;">
-                  <p class="advantage_content_item_li_text">2CM-5CM等不同背脊的无酸档案盒，符合档案行业标准《DA/T 24-300无酸档案卷皮盒用纸及纸板》</p>
+                  <p class="advantage_content_item_li_text">
+                    2CM-5CM等不同背脊的无酸档案盒，符合档案行业标准《DA/T 24-300无酸档案卷皮盒用纸及纸板》
+                  </p>
                 </li>
               </ul>
             </div>
@@ -100,18 +163,20 @@
 
         <!-- 智慧触摸屏 -->
         <div class="hardware_touch">
-          <h3 class="hardware_touch_title">智慧触摸屏</h3>
+          <h3 class="hardware_touch_title">
+            智慧触摸屏
+          </h3>
           <ul class="touch_btn_ul">
             <li class="touch_btn_li">
-              <img class="touch_btn_li_icon" src="/img/product/hardware/touch_btn_li1.png" alt="">
+              <img class="touch_btn_li_icon" src="/img/product/hardware/touch_btn_li1.png" alt="" />
               <span class="touch_btn_li_text">动态信息展示</span>
             </li>
             <li class="touch_btn_li">
-              <img class="touch_btn_li_icon" src="/img/product/hardware/touch_btn_li2.png" alt="">
+              <img class="touch_btn_li_icon" src="/img/product/hardware/touch_btn_li2.png" alt="" />
               <span class="touch_btn_li_text">动态信息展示</span>
             </li>
             <li class="touch_btn_li">
-              <img class="touch_btn_li_icon" src="/img/product/hardware/touch_btn_li3.png" alt="">
+              <img class="touch_btn_li_icon" src="/img/product/hardware/touch_btn_li3.png" alt="" />
               <span class="touch_btn_li_text">前端管理</span>
             </li>
           </ul>
@@ -160,7 +225,7 @@ definePageMeta({
     justify-content: space-between;
     align-items: center;
     margin-bottom: 120px;
-    
+
 }
 
 .epiboly_number_content_text{
@@ -223,7 +288,7 @@ definePageMeta({
     color: #051261;
     font-weight: 600;
     /* margin-top: 35px; */
-    
+
 }
 .advantage_content_item_li_text{
     font-size: 14px;

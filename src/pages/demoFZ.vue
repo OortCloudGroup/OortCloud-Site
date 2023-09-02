@@ -7,19 +7,19 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
     <div class="demo_body">
       <div class="demo_body_left">
         <span class="demo_body_left_title">反诈中心推广统计平台</span>
-        <span class="demo_body_left_subtitle">反诈App推广神器！<br/>推广人员生成推广二维码海报，引导群众下载，实现推广统计到个人，量化推广工作</span>
+        <span class="demo_body_left_subtitle">反诈App推广神器！<br />推广人员生成推广二维码海报，引导群众下载，实现推广统计到个人，量化推广工作</span>
         <div class="demo_body_left_items">
           <n-popover trigger="hover" arrow-point-to-center placement="right">
             <template #trigger>
               <div class="demo_download">
-                <img src="/img/demo/download/wxmini.png"/>
+                <img src="/img/demo/download/wxmini.png" />
                 <span>微信公众号</span>
               </div>
             </template>
             <template #default>
               <div class="demo_download demo_download_cov">
                 <div class="demo_download_code">
-                  <img src="/img/demo/fz/fz_h5.png"/>
+                  <img src="/img/demo/fz/fz_h5.png" />
                   <span>扫码体验</span>
                 </div>
               </div>
@@ -28,14 +28,14 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
           <n-popover trigger="hover" arrow-point-to-center placement="right">
             <template #trigger>
               <div class="demo_download">
-                <img src="/img/demo/download/wxmini.png"/>
+                <img src="/img/demo/download/wxmini.png" />
                 <span>微信小程序</span>
               </div>
             </template>
             <template #default>
               <div class="demo_download demo_download_cov">
                 <div class="demo_download_code">
-                  <img src="/img/demo/fz/fz_h5.png"/>
+                  <img src="/img/demo/fz/fz_h5.png" />
                   <span>扫码体验</span>
                 </div>
               </div>
@@ -43,7 +43,7 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
           </n-popover>
           <a href="https://fztest.myoumuamua.com/fzmanage/#/" target="_blank">
             <div class="demo_download">
-              <img src="/img/demo/fz/pcm.png"/>
+              <img src="/img/demo/fz/pcm.png" />
               <span>PC管理后台</span>
             </div>
           </a>
@@ -51,19 +51,19 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
         <div class="demo_body_pdf">
           <a href="http://oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/cloud_disk/index.html?accessToken=g02dce3c79a42653f0314ae2e1bdbebd0" target="_blank">
             <div class="demo_body_pdf_item">
-              <img src="/img/demo/pdf_download.png"/>
+              <img src="/img/demo/pdf_download.png" />
               <span>资料下载</span>
-              <n-icon  :component="IosArrowForward" />
+              <n-icon :component="IosArrowForward" />
             </div>
           </a>
         </div>
       </div>
       <div class="demo_body_right">
-        <img src="/img/demo/fz/fz_right.png"/>
+        <img src="/img/demo/fz/fz_right.png" />
       </div>
     </div>
     <div class="demo_bottom">
-      <img src="/img/demo/fz/fz_content.png"/>
+      <img src="/img/demo/fz/fz_content.png" />
     </div>
   </div>
 </template>
@@ -71,10 +71,10 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
 <script setup lang="ts">
 
 definePageMeta({
-  layout: "demo",
-  title: "反诈中心推广统计平台",
-  subTitle: "演示环境",
-  logo: "/img/demo/fz/fz_logo.png"
+  layout: 'demo',
+  title: '反诈中心推广统计平台',
+  subTitle: '演示环境',
+  logo: '/img/demo/fz/fz_logo.png'
 })
 
 useSeoMeta({
@@ -82,10 +82,10 @@ useSeoMeta({
   ogTitle: '反诈中心推广统计平台-演示环境',
   description: '反诈App推广神器！推广人员生成推广二维码海报，引导群众下载，实现推广统计到个人，量化推广工作',
   ogDescription: '反诈App推广神器！推广人员生成推广二维码海报，引导群众下载，实现推广统计到个人，量化推广工作',
-  ogImage: '/img/demo/fz/fz_logo.png',
+  ogImage: '/img/demo/fz/fz_logo.png'
 })
 
-import {  IosArrowForward } from '@vicons/ionicons4'
+import { IosArrowForward } from '@vicons/ionicons4'
 import { NPopover, NIcon } from 'naive-ui'
 
 </script>

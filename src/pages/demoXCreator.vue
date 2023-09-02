@@ -12,14 +12,14 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
           <n-popover trigger="hover" arrow-point-to-center placement="right">
             <template #trigger>
               <div class="demo_download">
-                <img src="/img/demo/download/android.png"/>
+                <img src="/img/demo/download/android.png" />
                 <span>Android 移动端</span>
               </div>
             </template>
             <template #default>
               <div class="demo_download demo_download_cov">
                 <div class="demo_download_code">
-                  <img src="/img/logo_googn.jpg"/>
+                  <img src="/img/logo_googn.jpg" />
                   <span>扫码下载</span>
                 </div>
               </div>
@@ -28,14 +28,14 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
           <n-popover trigger="hover" arrow-point-to-center placement="right">
             <template #trigger>
               <div class="demo_download">
-                <img src="/img/demo/download/iphone.png"/>
+                <img src="/img/demo/download/iphone.png" />
                 <span>IOS 移动端</span>
               </div>
             </template>
             <template #default>
               <div class="demo_download demo_download_cov">
                 <div class="demo_download_code">
-                  <img src="/img/logo_googn.jpg"/>
+                  <img src="/img/logo_googn.jpg" />
                   <span>扫码下载</span>
                 </div>
               </div>
@@ -44,14 +44,14 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
           <n-popover trigger="hover" arrow-point-to-center placement="right">
             <template #trigger>
               <div class="demo_download">
-                <img src="/img/demo/download/wxmini.png"/>
+                <img src="/img/demo/download/wxmini.png" />
                 <span>微信小程序</span>
               </div>
             </template>
             <template #default>
               <div class="demo_download demo_download_cov">
                 <div class="demo_download_code">
-                  <img src="/img/logo_googn.jpg"/>
+                  <img src="/img/logo_googn.jpg" />
                   <span>扫码体验</span>
                 </div>
               </div>
@@ -59,7 +59,7 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
           </n-popover>
           <a href="" target="_blank">
             <div class="demo_download">
-              <img src="/img/demo/fz/pcm.png"/>
+              <img src="/img/demo/fz/pcm.png" />
               <span>PC管理后台</span>
             </div>
           </a>
@@ -67,15 +67,15 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
         <div class="demo_body_pdf">
           <a href="http://oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/cloud_disk/index.html?accessToken=g02dce3c79a42653f0314ae2e1bdbebd0" target="_blank">
             <div class="demo_body_pdf_item">
-              <img src="/img/demo/pdf_download.png"/>
+              <img src="/img/demo/pdf_download.png" />
               <span>资料下载</span>
-              <n-icon  :component="IosArrowForward" />
+              <n-icon :component="IosArrowForward" />
             </div>
           </a>
         </div>
       </div>
       <div class="demo_body_right">
-        <img src="/img/demo/xc/xc_right.png"/>
+        <img src="/img/demo/xc/xc_right.png" />
       </div>
     </div>
     <div class="demo_bottom">
@@ -85,24 +85,24 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
       </div>
       <div class="demo_bottom_group">
         <div>
-          <img src="/img/demo/xc/xc_d1.png"/>
+          <img src="/img/demo/xc/xc_d1.png" />
           <span>基础资源层面</span>
-          <span>云平台统一提供资源<br/>节约建设成本</span>
+          <span>云平台统一提供资源<br />节约建设成本</span>
         </div>
         <div>
-          <img src="/img/demo/xc/xc_d2.png"/>
+          <img src="/img/demo/xc/xc_d2.png" />
           <span>数据层面</span>
           <span>门户网站信息高度整合</span>
         </div>
         <div>
-          <img src="/img/demo/xc/xc_d3.png"/>
+          <img src="/img/demo/xc/xc_d3.png" />
           <span>业务层面</span>
           <span>站群大后台信息统一监管</span>
         </div>
         <div>
-          <img src="/img/demo/xc/xc_d4.png"/>
+          <img src="/img/demo/xc/xc_d4.png" />
           <span>信息安全方面</span>
-          <span>完善的信息安全体系<br/>集中防护<br/>保障信息安全</span>
+          <span>完善的信息安全体系<br />集中防护<br />保障信息安全</span>
         </div>
       </div>
     </div>
@@ -112,10 +112,10 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
 <script setup lang="ts">
 
 definePageMeta({
-  layout: "demo",
-  title: "XCreator敏捷发布平台",
-  subTitle: "演示环境",
-  logo: "/img/demo/xc/xc_logo.png"
+  layout: 'demo',
+  title: 'XCreator敏捷发布平台',
+  subTitle: '演示环境',
+  logo: '/img/demo/xc/xc_logo.png'
 })
 
 useSeoMeta({
@@ -123,10 +123,10 @@ useSeoMeta({
   ogTitle: 'XCreator敏捷发布平台-演示环境',
   description: 'XCreator敏捷发布平台基于顶层设计构建技术统一，功能统一，结构统一，资源向上归集、面向多服务对象、多渠道、多层级、多部门的网站集群平台，由多个构建在同一数据体系上的门户网站群构成。目前，该产品已在 20+ 门户网站项目中落地，并在客户信创环境中稳定运行，帮助客户实现安全可靠的集约化管理。 未来，品高软件将坚持以相关政府文件为总体指导，并积极运用大数据、云计算、人工智能等技术进行创新驱动，为政府行业用户统筹管理网站提供有力支撑。',
   ogDescription: 'XCreator敏捷发布平台基于顶层设计构建技术统一，功能统一，结构统一，资源向上归集、面向多服务对象、多渠道、多层级、多部门的网站集群平台，由多个构建在同一数据体系上的门户网站群构成。目前，该产品已在 20+ 门户网站项目中落地，并在客户信创环境中稳定运行，帮助客户实现安全可靠的集约化管理。 未来，品高软件将坚持以相关政府文件为总体指导，并积极运用大数据、云计算、人工智能等技术进行创新驱动，为政府行业用户统筹管理网站提供有力支撑。',
-  ogImage: '/img/demo/xc/xc_logo.png',
+  ogImage: '/img/demo/xc/xc_logo.png'
 })
 
-import {  IosArrowForward } from '@vicons/ionicons4'
+import { IosArrowForward } from '@vicons/ionicons4'
 import { NPopover, NIcon } from 'naive-ui'
 
 </script>

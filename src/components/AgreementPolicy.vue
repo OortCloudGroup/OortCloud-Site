@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <div class="title">{{ title }}</div>
+    <div class="title">
+      {{ title }}
+    </div>
     <article class="content">
       服务协议和隐私政策
     </article>

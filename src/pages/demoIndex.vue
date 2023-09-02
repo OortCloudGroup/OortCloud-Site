@@ -11,13 +11,13 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
       <div class="demo_body_item">
         <span>一类网</span>
         <a href="http://protal.oort.oortcloudsmart.com:31310/" target="_blank">
-          <img src="/img/demo/index/1_pc.png"/>
+          <img src="/img/demo/index/1_pc.png" />
         </a>
         <NuxtLink to="/demoDownload1">
-          <img src="/img/demo/index/1_mobile.png"/>
+          <img src="/img/demo/index/1_mobile.png" />
         </NuxtLink>
         <a href="http://192.168.88.204:32610/oort/oortcloud-policefront/console_manage/index.html" target="_blank">
-          <img src="/img/demo/index/1_manage.png"  style="margin-top: 5rem"/>
+          <img src="/img/demo/index/1_manage.png" style="margin-top: 5rem" />
         </a>
       </div>
       <div class="demo_body_gap">
@@ -26,13 +26,13 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
       <div class="demo_body_item">
         <span>二类网</span>
         <a href="http://192.168.50.204:32610/oort/oortcloud-policefront/zxb_work_protal/index.html" target="_blank">
-          <img src="/img/demo/index/2_pc.png"/>
+          <img src="/img/demo/index/2_pc.png" />
         </a>
         <NuxtLink to="/demoDownload2">
-          <img src="/img/demo/index/2_mobile.png"/>
+          <img src="/img/demo/index/2_mobile.png" />
         </NuxtLink>
         <a href="http://192.168.50.204:32610/oort/oortcloud-policefront/console_manage/index.html" target="_blank">
-          <img src="/img/demo/index/3_manage.png" style="margin-top: 5rem"/>
+          <img src="/img/demo/index/3_manage.png" style="margin-top: 5rem" />
         </a>
       </div>
       <div class="demo_body_gap">
@@ -41,13 +41,13 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
       <div class="demo_body_item">
         <span>三类网</span>
         <a href="http://192.168.60.204:32610/oort/oortcloud-policefront/desktop_web/index.html" target="_blank">
-          <img src="/img/demo/index/3_pc.png"/>
+          <img src="/img/demo/index/3_pc.png" />
         </a>
         <NuxtLink to="/demoDownload3">
-          <img src="/img/demo/index/3_mobile.png"/>
+          <img src="/img/demo/index/3_mobile.png" />
         </NuxtLink>
         <a href="http://192.168.60.204:32610/oort/oortcloud-policefront/console_manage/index.html" target="_blank">
-          <img src="/img/demo/index/3_manage.png" style="margin-top: 5rem"/>
+          <img src="/img/demo/index/3_manage.png" style="margin-top: 5rem" />
         </a>
       </div>
     </div>
@@ -57,11 +57,11 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
 <script>
 
 definePageMeta({
-  layout: "demo",
-  title: "信息资源服务平台",
-  subTitle: "模拟跨多网入口",
-  logo: "/img/demo/logo_white.png",
-  isGetAjax: true  // 是否去获取配置信息
+  layout: 'demo',
+  title: '信息资源服务平台',
+  subTitle: '模拟跨多网入口',
+  logo: '/img/demo/logo_white.png',
+  isGetAjax: true // 是否去获取配置信息
 })
 
 useSeoMeta({
@@ -69,11 +69,11 @@ useSeoMeta({
   ogTitle: '信息资源服务平台',
   description: '模拟跨多网入口',
   ogDescription: '模拟跨多网入口',
-  ogImage: '/img/demo/logo_white.png',
+  ogImage: '/img/demo/logo_white.png'
 })
 
 export default {
-  name: "demoIndex"
+  name: 'DemoIndex'
 }
 
 </script>
@@ -150,7 +150,5 @@ export default {
       }
     }
   }
-
-
 
 </style>

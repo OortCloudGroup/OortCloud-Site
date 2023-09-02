@@ -11,10 +11,12 @@
     />
 
     <div class="product_intro_2">
-      <img src="/img/product/terminal_data_sys/banner2.png" alt="">
+      <img src="/img/product/terminal_data_sys/banner2.png" alt="" />
     </div>
     <div class="product_intro_3">
-      <p class="title">「产品功能」</p>
+      <p class="title">
+        「产品功能」
+      </p>
       <div class="function">
         <div class="item">
           <p>系统管理</p>
@@ -35,7 +37,9 @@
       </div>
     </div>
     <div class="product_intro_4">
-      <p class="title">「产品特点」</p>
+      <p class="title">
+        「产品特点」
+      </p>
       <div class="function">
         <div class="item card-a">
           <p>数据传输多重保障</p>
@@ -74,31 +78,49 @@
       </div>
     </div>
     <div class="product_intro_5">
-      <p class="title">「产品价值」</p>
+      <p class="title">
+        「产品价值」
+      </p>
       <div class="function">
         <div class="left">
-          <div class="line"></div>
+          <div class="line" />
           <div class="main">
             <div>
-              <p class="title2">数据安全传输，保证合规</p>
-              <p class="paragraph">数据传输集中管控，满足公安、法院及检察等行业边界接入规范要求。</p>
+              <p class="title2">
+                数据安全传输，保证合规
+              </p>
+              <p class="paragraph">
+                数据传输集中管控，满足公安、法院及检察等行业边界接入规范要求。
+              </p>
             </div>
             <div>
-              <p class="title2">数据内外网交换，快速便捷</p>
-              <p class="paragraph">支持多种客户端传输文件，简单拖拉便可完成内外网文件传输。</p>
+              <p class="title2">
+                数据内外网交换，快速便捷
+              </p>
+              <p class="paragraph">
+                支持多种客户端传输文件，简单拖拉便可完成内外网文件传输。
+              </p>
             </div>
             <div>
-              <p class="title2">数据传输多保障，可靠无负担</p>
-              <p class="paragraph">多种安全检测、丰富行为审计、数据传输加密；可控制传输速度、可断点续传、可定义优先传输。</p>
+              <p class="title2">
+                数据传输多保障，可靠无负担
+              </p>
+              <p class="paragraph">
+                多种安全检测、丰富行为审计、数据传输加密；可控制传输速度、可断点续传、可定义优先传输。
+              </p>
             </div>
             <div>
-              <p class="title2">构建可管可控、安全高兴的传输方案</p>
-              <p class="paragraph">对于公安、检察、法院、税务、政务及企业等机构，利用本系统可构建安全高效的内外网数据传输方案。</p>
+              <p class="title2">
+                构建可管可控、安全高兴的传输方案
+              </p>
+              <p class="paragraph">
+                对于公安、检察、法院、税务、政务及企业等机构，利用本系统可构建安全高效的内外网数据传输方案。
+              </p>
             </div>
           </div>
         </div>
         <div class="right">
-          <img src="/img/product/terminal_data_sys/product_value.png">
+          <img src="/img/product/terminal_data_sys/product_value.png" />
         </div>
       </div>
     </div>
@@ -110,7 +132,7 @@
 
 <script setup>
 definePageMeta({
-  layout: "product"
+  layout: 'product'
 })
 
 const headerContent = ref({

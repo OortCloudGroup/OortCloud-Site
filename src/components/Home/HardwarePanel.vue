@@ -1,16 +1,18 @@
 <template>
   <div class="panel">
-    <HomePanelHeader title="硬件产品" info="红环main_loop消费类电子产品"/>
+    <HomePanelHeader title="硬件产品" info="红环main_loop消费类电子产品" />
 
     <div class="panel_main">
       <div v-for="(item, index) in data" :key="index" :class="`panel_wrapper hardware_pane hardware_${item.bg}`">
         <div class="panel_item">
-          <p class="panel_item_title">{{ item.title }}</p>
+          <p class="panel_item_title">
+            {{ item.title }}
+          </p>
           <div class="panel_item_info">
             <span v-for="btn in item.buttons" :key="btn.name" class="panel_item_info_btn">{{ btn.name }}</span>
           </div>
         </div>
-        <div class="panel_wrapper_right"></div>
+        <div class="panel_wrapper_right" />
       </div>
     </div>
   </div>

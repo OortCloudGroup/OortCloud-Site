@@ -15,10 +15,10 @@ let { src } = toRefs(props)
 const imgSrc = ref('')
 
 watch(src, () => {
-    imgSrc.value = src.value
+  imgSrc.value = src.value
 })
 
 onMounted(() => {
-    imgSrc.value =  src.value
+  imgSrc.value = src.value
 })
 </script>

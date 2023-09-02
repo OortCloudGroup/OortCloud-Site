@@ -12,14 +12,14 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
           <n-popover trigger="hover" arrow-point-to-center placement="right">
             <template #trigger>
               <div class="demo_download">
-                <img src="/img/demo/download/android.png"/>
+                <img src="/img/demo/download/android.png" />
                 <span>Android 移动端</span>
               </div>
             </template>
             <template #default>
               <div class="demo_download demo_download_cov">
                 <div class="demo_download_code">
-                  <img src="/img/logo_googn.jpg"/>
+                  <img src="/img/logo_googn.jpg" />
                   <span>扫码下载</span>
                 </div>
               </div>
@@ -28,14 +28,14 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
           <n-popover trigger="hover" arrow-point-to-center placement="right">
             <template #trigger>
               <div class="demo_download">
-                <img src="/img/demo/download/wxmini.png"/>
+                <img src="/img/demo/download/wxmini.png" />
                 <span>微信小程序</span>
               </div>
             </template>
             <template #default>
               <div class="demo_download demo_download_cov">
                 <div class="demo_download_code">
-                  <img src="/img/logo_googn.jpg"/>
+                  <img src="/img/logo_googn.jpg" />
                   <span>扫码体验</span>
                 </div>
               </div>
@@ -44,26 +44,30 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
         </div>
         <div class="demo_body_pdf">
           <div class="demo_body_pdf_item" @click="showModal=true">
-            <img src="/img/demo/sp.png"/>
+            <img src="/img/demo/sp.png" />
             <span>观看视频</span>
-            <n-icon  :component="IosArrowForward" />
+            <n-icon :component="IosArrowForward" />
           </div>
           <a href="http://oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/cloud_disk/index.html?accessToken=g02dce3c79a42653f0314ae2e1bdbebd0" target="_blank">
             <div class="demo_body_pdf_item">
-              <img src="/img/demo/pdf_download.png"/>
+              <img src="/img/demo/pdf_download.png" />
               <span>资料下载</span>
-              <n-icon  :component="IosArrowForward" />
+              <n-icon :component="IosArrowForward" />
             </div>
           </a>
         </div>
       </div>
       <div class="demo_body_right">
-        <img src="/img/demo/im/im_right.png"/>
+        <img src="/img/demo/im/im_right.png" />
       </div>
     </div>
     <div class="demo_bottom">
-      <div class="demo_bottom_title">基本介绍</div>
-      <div class="demo_bottom_subtitle">涵盖即时消息、电子邮件、音视频会议、资料分享、流程申请与审批、网络社交、疫情防控、健康管理等服务功能，打通企业工作编辑，助力工作效率，让工作更美好</div>
+      <div class="demo_bottom_title">
+        基本介绍
+      </div>
+      <div class="demo_bottom_subtitle">
+        涵盖即时消息、电子邮件、音视频会议、资料分享、流程申请与审批、网络社交、疫情防控、健康管理等服务功能，打通企业工作编辑，助力工作效率，让工作更美好
+      </div>
       <div class="demo_bottom_group">
         <div><span>全面适配 形态多样</span></div>
         <div><span>云交付 自主可控</span></div>
@@ -78,9 +82,8 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
         <div><span>云课堂</span></div>
       </div>
     </div>
-    <n-modal v-model:show="showModal" title="观看视频" preset="dialog" :showIcon="false" style="width: 924px">
-      <iframe height=486 width=864 allowfullscreen :src="videoUrl" frameborder="0">
-      </iframe>
+    <n-modal v-model:show="showModal" title="观看视频" preset="dialog" :show-icon="false" style="width: 924px">
+      <iframe height="486" width="864" allowfullscreen :src="videoUrl" frameborder="0" />
     </n-modal>
   </div>
 </template>
@@ -88,10 +91,10 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
 <script setup lang="ts">
 
 definePageMeta({
-  layout: "demo",
-  title: "即时通信",
-  subTitle: "演示环境",
-  logo: "/img/demo/im/im_logo.png"
+  layout: 'demo',
+  title: '即时通信',
+  subTitle: '演示环境',
+  logo: '/img/demo/im/im_logo.png'
 })
 
 useSeoMeta({
@@ -99,15 +102,14 @@ useSeoMeta({
   ogTitle: '即时通信-演示环境',
   description: '私有化部署的内网“微信”',
   ogDescription: '私有化部署的内网“微信”',
-  ogImage: '/img/demo/im/im_logo.png',
+  ogImage: '/img/demo/im/im_logo.png'
 })
 
-import {  IosArrowForward } from '@vicons/ionicons4'
+import { IosArrowForward } from '@vicons/ionicons4'
 import { NPopover, NIcon, NModal } from 'naive-ui'
 
 const showModal = ref(false)
 const videoUrl = ref('https://v.qq.com/txp/iframe/player.html?vid=h3155cunx94')
-
 
 </script>
 

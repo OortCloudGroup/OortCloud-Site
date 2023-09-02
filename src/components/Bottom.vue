@@ -1,6 +1,6 @@
 <template>
- <div style="height: 6.25rem; width: 100%">
-<!--    <div style="height: 6.25rem; width: 100%"></div>-->
+  <div style="height: 6.25rem; width: 100%">
+    <!--    <div style="height: 6.25rem; width: 100%"></div>-->
     <div class="bottom_body">
       <div class="bottom_content">
         <div class="bottom_tips">
@@ -24,12 +24,15 @@
             <span class="text2">300多种企业级产品累计服务1.5亿用户</span>
           </div>
           <div class="bottom_href_item bottom_href_item_text" style="margin-left: 20px;margin-right: 50px;">
-            <span><NuxtLink to="/more" style="
+            <span><NuxtLink
+              to="/more"
+              style="
                     opacity: 1;
                     font-size: 14px;
                     color: #ffffff !important;
                     font-weight: 600;
-                  ">软件中心</NuxtLink></span>
+                  "
+            >软件中心</NuxtLink></span>
             <span><a href="https://marketplace.huaweicloud.com/contents/ee446d40-ce7c-447f-84e9-4ca0a1fe2f0f#productid=OFFI766131914498846720" target="_blank">华为IdeaHub警务宝</a></span>
             <span><NuxtLink to="/JWBdetail">警务宝一体机</NuxtLink></span>
             <span><a href="https://onemap.oortcloudsmart.com" target="_blank">指挥调度一张图</a></span>
@@ -37,11 +40,16 @@
             <span><NuxtLink to="/product">门户与应用仓库</NuxtLink></span>
             <span><NuxtLink to="/product_office">办公宝</NuxtLink></span>
             <div style="margin-top: 10px">
-              <NuxtLink style="
+              <NuxtLink
+                style="
                     font-size: 14px;
                     color: #fff !important;
                     font-weight: 600;
-                  " to="/more">更多 ></NuxtLink>
+                  "
+                to="/more"
+              >
+                更多 >
+              </NuxtLink>
             </div>
           </div>
           <div class="bottom_href_item bottom_href_item_text">
@@ -53,11 +61,16 @@
             <span><NuxtLink to="/services_borderSeaDefense">智慧边海防</NuxtLink></span>
             <span><NuxtLink to="/services_goverment">政府</NuxtLink></span>
             <div style="margin-top: 10px">
-              <NuxtLink style="
+              <NuxtLink
+                style="
                     font-size: 14px;
                     color: #fff !important;
                     font-weight: 600;
-                  " to="/services">更多 ></NuxtLink>
+                  "
+                to="/services"
+              >
+                更多 >
+              </NuxtLink>
             </div>
           </div>
           <div class="bottom_href_item bottom_href_item_text">
@@ -81,13 +94,22 @@
         <!-- 底部 -->
         <div class="bottom_heee">
           <span><a href="about.html" style="opacity: 1; font-size: 14px">关于我们</a>&nbsp; | &nbsp;</span>
-          <span><a href="http://oortcloudsmart.com/servceAgreement.html" target="_blank"
-              style="opacity: 1; font-size: 14px">用户协议</a>&nbsp; | &nbsp;</span>
-          <span><a href="http://oortcloudsmart.com/privacypolicy.html" target="_blank"
-              style="opacity: 1; font-size: 14px">隐私政策</a>
+          <span><a
+            href="http://oortcloudsmart.com/servceAgreement.html"
+            target="_blank"
+            style="opacity: 1; font-size: 14px"
+          >用户协议</a>&nbsp; | &nbsp;</span>
+          <span><a
+            href="http://oortcloudsmart.com/privacypolicy.html"
+            target="_blank"
+            style="opacity: 1; font-size: 14px"
+          >隐私政策</a>
             &nbsp;| &nbsp;</span>
-          <span><a href="https://beian.miit.gov.cn/" target="_blank"
-              style="opacity: 1; font-size: 14px">粤ICP备19160414号</a></span>
+          <span><a
+            href="https://beian.miit.gov.cn/"
+            target="_blank"
+            style="opacity: 1; font-size: 14px"
+          >粤ICP备19160414号</a></span>
         </div>
       </div>
     </div>

@@ -1,27 +1,27 @@
 <template>
   <div class="panel">
-    <HomePanelHeader title="专业服务" info="适用于公安、派出所、检察、司法、监狱、智慧边海防、政府等多行业解决方案"/>
-      <n-tabs type="line" trigger="click" animated :bar-width="150" @before-leave="onBeforeLeave">
-        <n-tab-pane v-for="(item, index) in data" :key="index" :name="item.tab" :tab="item.tab">
-          <div class="pane">
-            <div class="pane_left">
-              <span class="pane_left_title">{{ item.title }}</span>
-              <span class="pane_left_intro">{{ item.content }}</span>
-              <n-button v-if="item.site" type="info">
-                了解详情
-              </n-button>
-            </div>
-            <div class="pane_right">
-              <Image :src="item.cover" />
-            </div>
+    <HomePanelHeader title="专业服务" info="适用于公安、派出所、检察、司法、监狱、智慧边海防、政府等多行业解决方案" />
+    <n-tabs type="line" trigger="click" animated :bar-width="150" @before-leave="onBeforeLeave">
+      <n-tab-pane v-for="(item, index) in data" :key="index" :name="item.tab" :tab="item.tab">
+        <div class="pane">
+          <div class="pane_left">
+            <span class="pane_left_title">{{ item.title }}</span>
+            <span class="pane_left_intro">{{ item.content }}</span>
+            <n-button v-if="item.site" type="info">
+              了解详情
+            </n-button>
           </div>
-        </n-tab-pane>
-      </n-tabs>
+          <div class="pane_right">
+            <Image :src="item.cover" />
+          </div>
+        </div>
+      </n-tab-pane>
+    </n-tabs>
   </div>
 </template>
 
 <script setup>
-import { NTabs, NTabPane, NButton } from 'naive-ui';
+import { NTabs, NTabPane, NButton } from 'naive-ui'
 
 const router = useRouter()
 
@@ -36,8 +36,7 @@ const onBeforeLeave = (index) => {
   if (index === '更多') {
     router.push('/services')
     return false
-  }
-  else return true
+  } else return true
 }
 
 </script>

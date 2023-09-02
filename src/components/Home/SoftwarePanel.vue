@@ -3,7 +3,7 @@
     <div class="panel_header">
       <NuxtLink to="/more" class="panel_header_title">
         <span style="color: #000; cursor: pointer;">软件产品</span>
-        <span class="panel_header_dot"></span>
+        <span class="panel_header_dot" />
       </NuxtLink>
       <span class="panel_header_info">高效、稳定的核心业务支撑</span>
     </div>
@@ -11,17 +11,19 @@
       <div v-for="(item, index) in data" :key="index" class="panel_col">
         <div class="panel_col_title">
           <Image class="panel_col_title_logo" :src="item.logo" />
-          <p class="panel_col_title_label">{{ item.title }}</p>
+          <p class="panel_col_title_label">
+            {{ item.title }}
+          </p>
         </div>
         <div class="panel_wrapper">
           <div v-for="(mItem, mIndex) in item.content" :key="index" class="panel_item">
             <div class="panel_item_title">
-              <span class="panel_item_title_img"></span>
+              <span class="panel_item_title_img" />
               <span class="panel_item_title_label">{{ mItem.title }}</span>
             </div>
             <div class="panel_item_content">
               <div v-for="link in mItem.list" :key="link.name" class="panel_item_content_wrap ">
-                <a>{{ link.name }}<img src="/img/index/software/icon_more.png"></a>
+                <a>{{ link.name }}<img src="/img/index/software/icon_more.png" /></a>
               </div>
             </div>
           </div>

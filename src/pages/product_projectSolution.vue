@@ -2,31 +2,39 @@
   <div class="page_container">
     <div class="product_detail">
       <div class="product_detail_1">
-        <h1 class="title">数字档案馆</h1>
-        <h1 class="title_shadow">数字档案馆</h1>
+        <h1 class="title">
+          数字档案馆
+        </h1>
+        <h1 class="title_shadow">
+          数字档案馆
+        </h1>
         <div class="intro1">
           <div class="typography">
             <p>
               本系统实现对各级政府、各单位电子政务、办公自动化、业务工作信息化等产生的档案数字资源的统一收集、管理、保存和利用。系统架构以互联网、政务网、局域网以及档案资源库的“三网一库”为主要模型，主要目标是建立数字档案资源长期保存平台，建立支撑档案馆业务的信息化管理平台，建立面向党政部门和社会各界的服务平台，发挥档案著录与鉴定的基础支撑作用。最终形成包括档案资源体系建设、档案利用体系建设和档案安全体系建设的“三个体系”的构想。
-            </p><br>
+            </p><br />
             <p>
               数字档案馆可实现三网相适应的档案资源利用共享平台，系统通过共享平台融入智慧城市建设，如“政务云”等，可以提高数字档案馆建设效率，还能在软、硬件建设上节约资金。系统可实现与其他公共服务互通共享，更为有效地扩大档案馆的服务范围，从而发挥档案的最大价值。
-            </p><br>
+            </p><br />
             <p>本系统在遵循国家《数字档案馆建设指南》、《企业数字档案馆（室）建设指南》、《数字档案馆系统测试办法》、《档案信息系统安全保护基本要求》档办发〔2016〕1 号等标准规范要求的基础上设计和研发。</p>
           </div>
           <div class="img">
-            <img src="/img/product/project_solution/intro.png">
+            <img src="/img/product/project_solution/intro.png" />
           </div>
         </div>
       </div>
 
       <div class="product_detail_2">
-        <div class="title">应用架构</div>
-        <div><img src="/img/product/project_solution/intro2.png"></div>
+        <div class="title">
+          应用架构
+        </div>
+        <div><img src="/img/product/project_solution/intro2.png" /></div>
       </div>
 
       <div class="product_detail_1">
-        <p class="title2">功能介绍</p>
+        <p class="title2">
+          功能介绍
+        </p>
         <div class="function">
           <div class="item card-a">
             <p>收集</p>
@@ -71,92 +79,108 @@
       </div>
 
       <div class="product_detail_3">
-        <h1 class="title">数字档案室</h1>
-        <h1 class="title_shadow">数字档案室</h1>
+        <h1 class="title">
+          数字档案室
+        </h1>
+        <h1 class="title_shadow">
+          数字档案室
+        </h1>
         <div class="intro3">
           <div class="typography">
             <p>
               数字档案室整体解决方案融合应用系统平台建设、数据资源建设以及基础设施建设等方面，实现档案收集、管理、保存、利用的高度集成化、信息化；实现各类档案资源的集中统一、规范管理，确保档案资源的长期安全有效保存；实现档案服务利用的流程化和网络化，全面提升档案管理工作水平，提高档案服务质量和利用效率。
-            </p><br>
+            </p><br />
             <p> 本系统在遵循国家《数字档案室建设指南》、《企业数字档案馆（室）建设指南》、《档案信息系统安全保护基本要求》档办发〔2016〕1号等标准规范要求的基础上设计和研发。</p>
           </div>
           <div class="img">
-            <img src="/img/product/project_solution/intro3.png">
+            <img src="/img/product/project_solution/intro3.png" />
           </div>
         </div>
       </div>
 
       <div class="product_detail_4">
         <div class="sys_intro">
-          <div class="title">系统核心</div>
+          <div class="title">
+            系统核心
+          </div>
           <div class="typography">
             数字档案室，是指机关、企事业单位在履行职能过程中，运行现代信息技术手段对电子档案和传统载体档案的数字副本等数字信息资源进行采集、整理、存储、管理，并且通过不同类型网络提供共享利用和有限公共档案信息服务的档案信息基础管理平台。
           </div>
         </div>
         <div class="imgs">
-          <img src="/img/product/project_solution/sys_core1.png">
-          <img src="/img/product/project_solution/sys_core2.png">
-          <img src="/img/product/project_solution/sys_core3.png">
-          <img src="/img/product/project_solution/sys_core4.png">
+          <img src="/img/product/project_solution/sys_core1.png" />
+          <img src="/img/product/project_solution/sys_core2.png" />
+          <img src="/img/product/project_solution/sys_core3.png" />
+          <img src="/img/product/project_solution/sys_core4.png" />
         </div>
       </div>
 
       <div class="product_detail_5">
-        <div class="title">应用功能</div>
+        <div class="title">
+          应用功能
+        </div>
         <div class="img">
-          <img src="/img/product/project_solution/func.png">
+          <img src="/img/product/project_solution/func.png" />
         </div>
       </div>
 
       <div class="product_detail_6">
-        <div class="title">系统特点</div>
+        <div class="title">
+          系统特点
+        </div>
         <div class="features">
           <div class="item">
-            <img src="/img/product/project_solution/feature1.png">
+            <img src="/img/product/project_solution/feature1.png" />
             <p>利用知识化</p>
           </div>
           <div class="item">
-            <img src="/img/product/project_solution/feature2.png">
+            <img src="/img/product/project_solution/feature2.png" />
             <p>资源数字化</p>
           </div>
           <div class="item">
-            <img src="/img/product/project_solution/feature3.png">
+            <img src="/img/product/project_solution/feature3.png" />
             <p>传递网络化</p>
           </div>
           <div class="item">
-            <img src="/img/product/project_solution/feature4.png">
+            <img src="/img/product/project_solution/feature4.png" />
             <p>系统管理化</p>
           </div>
           <div class="item">
-            <img src="/img/product/project_solution/feature5.png">
+            <img src="/img/product/project_solution/feature5.png" />
             <p>实体虚拟化</p>
           </div>
         </div>
       </div>
 
       <div class="product_detail_3">
-        <h1 class="title">智慧档案库房</h1>
-        <h1 class="title_shadow">智慧档案库房</h1>
+        <h1 class="title">
+          智慧档案库房
+        </h1>
+        <h1 class="title_shadow">
+          智慧档案库房
+        </h1>
         <div class="intro3">
           <div class="typography">
             <p>
               智慧档案库房解决方案通过以信息技术为核心，智能终端为基础，整合工业控制、物联网、大数据等前沿技术，通过全面感知、协同联动、智能运维的应用，构筑档案实体的管理体系。同时通过开放接口，打通智慧档案库房与档案系统间的屏障，实现实体档案与电子档案的一体化管理，即可在档案系统内通过电子档案，查看其对应的实体档案的信息、辅助完成实体借阅等业务，也可在智慧档案库房查阅实体档案对应的电子档案，形成立体的档案资源管理平台。通过智慧档案库房的应用，实现档案库房智能化运维，建设安全、高效、节能的智慧档案库房。
-            </p><br>
+            </p><br />
             <p>
               通过TCP/IP、UDP等多种物联网协议连接各类智能终端，实现智能终端的管理和控制。通过开放数据接口，利用2D、3D等方式进行库房可视化虚拟展示，远程集中管理运行在档案库房中的智能终端，进行大数据采集和分析后，进行多维度、多途径的展示，包括各类智能终端连接情况、实时状态、运行记录、历史记录、告警信息等。在此基础上，实现人员身份验证、进出记录自动登记、非法闯入报警、库房环境自动控制和报警、防盗报警等多种功能。
-            </p><br>
+            </p><br />
             <p>本系统遵循《档案馆建筑设计规范》JGJ25-2010、《关于进一步加强档案安全工作的意见》档发(2016)6号、《档案信息系统安全保护基本要求》档办发(2016)1号等标准及规范的要求设计研发。</p>
           </div>
           <div class="img">
-            <img src="/img/product/project_solution/intro4.png">
+            <img src="/img/product/project_solution/intro4.png" />
           </div>
         </div>
       </div>
 
       <div class="product_detail_7">
-        <div class="title">建设内容</div>
+        <div class="title">
+          建设内容
+        </div>
         <div class="intro5">
-          <img style="height: 587px; object-fit: cover" src="/img/product/project_solution/intro5.png">
+          <img style="height: 587px; object-fit: cover" src="/img/product/project_solution/intro5.png" />
           <div class="info">
             <div class="title2">
               建设效果
@@ -169,10 +193,12 @@
       </div>
 
       <div class="product_detail_8">
-        <div class="title">可集成外接设备</div>
+        <div class="title">
+          可集成外接设备
+        </div>
         <div class="intro1">
           <div class="item1">
-            <img src="/img/product/project_solution/device1.png">
+            <img src="/img/product/project_solution/device1.png" />
             <p class="title2">
               环境设备
             </p>
@@ -183,7 +209,7 @@
             <p>...</p>
           </div>
           <div class="item1">
-            <img src="/img/product/project_solution/device2.png">
+            <img src="/img/product/project_solution/device2.png" />
             <p class="title2">
               门禁系统
             </p>
@@ -192,7 +218,7 @@
             <p>...</p>
           </div>
           <div class="item1">
-            <img src="/img/product/project_solution/device3.png">
+            <img src="/img/product/project_solution/device3.png" />
             <p class="title2">
               电子标签系统
             </p>
@@ -202,7 +228,7 @@
             <p>...</p>
           </div>
           <div class="item1">
-            <img src="/img/product/project_solution/device4.png">
+            <img src="/img/product/project_solution/device4.png" />
             <p class="title2">
               发布系统
             </p>
@@ -214,7 +240,7 @@
         </div>
         <div class="intro2">
           <div class="item2">
-            <img src="/img/product/project_solution/device4.png">
+            <img src="/img/product/project_solution/device4.png" />
             <p class="title2">
               消防系统
             </p>
@@ -224,7 +250,7 @@
             <p>...</p>
           </div>
           <div class="item2">
-            <img src="/img/product/project_solution/device5.png">
+            <img src="/img/product/project_solution/device5.png" />
             <p class="title2">
               监控系统
             </p>
@@ -232,7 +258,7 @@
             <p>...</p>
           </div>
           <div class="item2">
-            <img src="/img/product/project_solution/device6.png">
+            <img src="/img/product/project_solution/device6.png" />
             <p class="title2">
               密集架系统
             </p>
@@ -242,7 +268,7 @@
             <p>...</p>
           </div>
           <div class="item2">
-            <img src="/img/product/project_solution/device7.png">
+            <img src="/img/product/project_solution/device7.png" />
             <p class="title2">
               移动端设备
             </p>
@@ -251,7 +277,7 @@
             <p>...</p>
           </div>
           <div class="item2">
-            <img src="/img/product/project_solution/device8.png">
+            <img src="/img/product/project_solution/device8.png" />
             <p class="title2">
               其他设备
             </p>

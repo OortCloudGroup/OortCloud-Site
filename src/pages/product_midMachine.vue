@@ -11,10 +11,12 @@
     />
 
     <div class="product_intro_2">
-      <img src="/img/product/mid_machine/banner2.png" alt="">
+      <img src="/img/product/mid_machine/banner2.png" alt="" />
     </div>
     <div class="product_intro_3">
-      <p class="title">「产品特点」</p>
+      <p class="title">
+        「产品特点」
+      </p>
       <div class="function">
         <div class="item card-a">
           <p>操作简单</p>
@@ -31,41 +33,40 @@
       </div>
     </div>
     <div class="product_intro_4">
-      <p class="title">「产品功能」</p>
+      <p class="title">
+        「产品功能」
+      </p>
       <div class="intro">
         <div class="item1">
           <div class="box">
-            <p><img src="/img/product/mid_machine/item1.png"><span>交换行为可控</span></p>
+            <p><img src="/img/product/mid_machine/item1.png" /><span>交换行为可控</span></p>
             <p>支持文本在线预览，预览文件时可以选择文件中的部分内容直接复制导剪切板中，并将剪切板中的内容单向导入导内部网络计算机中。</p>
           </div>
           <div class="box">
-            <p><img src="/img/product/mid_machine/item2.png"><span>直观人性化的数据统计</span></p>
+            <p><img src="/img/product/mid_machine/item2.png" /><span>直观人性化的数据统计</span></p>
             <p>支持文本在线预览，预览文件时可以选择文件中的部分内容直接复制导剪切板中，并将剪切板中的内容单向导入导内部网络计算机中。</p>
           </div>
           <div class="box">
-            <p><img src="/img/product/mid_machine/item3.png"><span>安全的全面检查</span></p>
+            <p><img src="/img/product/mid_machine/item3.png" /><span>安全的全面检查</span></p>
             <p>对交换文件进行全面的安全检查，包括文件类型真实性检查、格式合规性检查、病毒木马扫描、敏感信息（按关键字或密级）检查等。</p>
           </div>
         </div>
         <div class="item2">
           <div class="box">
-            <p><img src="/img/product/mid_machine/item4.png"><span>全面日志审计</span></p>
+            <p><img src="/img/product/mid_machine/item4.png" /><span>全面日志审计</span></p>
             <p>专用中间机上的所有数据交换都有日志生成，包括交换的文件中是否携带病毒、是否包含夹带信息、是否包含敏感词等，便于审计追溯。</p>
           </div>
           <div class="box">
-
-            <p><img src="/img/product/mid_machine/item5.png"><span>移动存储介质支持</span></p>
+            <p><img src="/img/product/mid_machine/item5.png" /><span>移动存储介质支持</span></p>
             <p>基于国产化Linux操作系统研发的中间机支持兼容所有普通移动存储介质（普通U盘、移动硬盘等）以及新研制适配的Linux安全U盘。</p>
           </div>
           <div class="box">
-            <p><img src="/img/product/mid_machine/item6.png"><span>图形报表、直观分析</span></p>
+            <p><img src="/img/product/mid_machine/item6.png" /><span>图形报表、直观分析</span></p>
             <p>提供了强大的系统功能，高校完善的二维报表，支持柱状图、折线图、饼图等图形展示，为管理者提供清晰视觉支持。</p>
-
           </div>
           <div class="box">
-            <p><img src="/img/product/mid_machine/item7.png"><span>精准的敏感信息检索</span></p>
+            <p><img src="/img/product/mid_machine/item7.png" /><span>精准的敏感信息检索</span></p>
             <p>精准的敏感信息检索，采用全文检索、文件密件智能分析与学习、自动检索等技术，实时动态监控计算机违规存储敏感文件的行为，及时向监控中心报警，以便保密管理人员事前管理、事中监控、事后追踪。</p>
-
           </div>
         </div>
       </div>
@@ -78,7 +79,7 @@
 
 <script setup>
 definePageMeta({
-  layout: "product"
+  layout: 'product'
 })
 
 const headerContent = ref({

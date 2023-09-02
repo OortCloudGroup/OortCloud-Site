@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="main">
-      <ServicesHeader  
+      <ServicesHeader
         :logo="header.logo"
         :name="header.name"
         :desc="header.desc"
@@ -42,7 +42,7 @@ const anchors = ref<Anchor[]>([
   { title: '指挥控制', href: '#指挥控制' }
 ])
 const tabs1 = reactive<Tab[]>([
-  { 
+  {
     name: '指挥调度',
     logo: '/img/app/yjzhdd.png',
     content: {
@@ -53,11 +53,11 @@ const tabs1 = reactive<Tab[]>([
         { name: '立即购买', link: '' },
         { name: '在线体验', link: '' },
       ]
-    } 
+    }
   }
 ])
 const tabs2 = reactive<Tab[]>([
-  { 
+  {
     name: '综合预警',
     logo: '/img/home/yycp_29.png',
     content: {
@@ -66,11 +66,11 @@ const tabs2 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs3 = reactive<Tab[]>([
-  { 
+  {
     name: '可视化指挥',
     logo: '/img/home/kshzh.png',
     content: {
@@ -80,11 +80,11 @@ const tabs3 = reactive<Tab[]>([
         { name: '了解更多', link: '' },
         { name: '在线体验', link: '' },
       ]
-    } 
+    }
   }
 ])
 const tabs4 = reactive<Tab[]>([
-  { 
+  {
     name: '指挥控制',
     logo: '/img/home/zhkz.png',
     content: {
@@ -94,7 +94,7 @@ const tabs4 = reactive<Tab[]>([
         { name: '了解更多', link: '' },
         { name: '在线体验', link: '' },
       ]
-    } 
+    }
   }
 ])
 </script>

@@ -1,9 +1,9 @@
 <template>
   <div class="defalut_layout">
-    <NavHeader></NavHeader>
+    <NavHeader />
     <div class="page_body">
       <slot />
-      <Bottom></Bottom>
+      <Bottom />
     </div>
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div class="defalut_layout">
     <slot />
-    <Bottom></Bottom>
+    <Bottom />
   </div>
 </template>
 

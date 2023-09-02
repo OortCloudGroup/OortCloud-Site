@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import { NAnchor, NAnchorLink } from 'naive-ui';
+import { NAnchor, NAnchorLink } from 'naive-ui'
 </script>
 
 <style lang="scss" scoped>

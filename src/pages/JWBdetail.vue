@@ -1,42 +1,43 @@
 <template>
-  <div id="jianjie" style="height: 30px; background-color: white;"></div>
+  <div id="jianjie" style="height: 30px; background-color: white;" />
   <!--top1-->
   <div class="all">
     <div class="pro_top_div">
       <span class="pro_span1">警务宝一体机</span>
       <div class="pro_top_div2">
-          <span class="pro_span2">
-              警务宝一体机是奥尔特云(深圳)智慧科技有限公司旗下产品，是面向派出所、警务室的一体化 智慧基层平台设
-          </span>
         <span class="pro_span2">
-              备。内置与华为云、华为IdeaHub、华为智能协作能力无缝结合的
-              </span>
+          警务宝一体机是奥尔特云(深圳)智慧科技有限公司旗下产品，是面向派出所、警务室的一体化 智慧基层平台设
+        </span>
         <span class="pro_span2">
-              警务宝一体化智慧基层平台产品，
-          </span>
+          备。内置与华为云、华为IdeaHub、华为智能协作能力无缝结合的
+        </span>
         <span class="pro_span2">
-              同时具备各类领先的面向基层实战的SaaS应用软件，
-          </span>
+          警务宝一体化智慧基层平台产品，
+        </span>
+        <span class="pro_span2">
+          同时具备各类领先的面向基层实战的SaaS应用软件，
+        </span>
         <span class="pro_span2">
           为公安智慧警务、警务机制创新、警务建制完善奠定基础。
-          </span>
+        </span>
       </div>
       <div class="video">
-        <video src="/img/details/JWB.mp4" controls width="800" height="600"></video>
+        <video src="/img/details/JWB.mp4" controls width="800" height="600" />
       </div>
       <div class="pro_top_div3">
         <div class="pro_top_div5">
           <span class="pro_span3">开箱即用的警务应用</span>
           <span class="pro_span4">为民服务</span>
-          <spna class="pro_span4">惠警应用</spna>
+          <spna class="pro_span4">
+            惠警应用
+          </spna>
           <span class="pro_span4">指挥调度</span>
           <span class="pro_span4">群防群治</span>
         </div>
         <div class="pro_top_div4">
-          <img src="/img/details/protets.png" style="width: 100%;height: 100%;">
+          <img src="/img/details/protets.png" style="width: 100%;height: 100%;" />
         </div>
       </div>
-
     </div>
   </div>
 
@@ -46,7 +47,7 @@
       <span class="pro_span1">警务宝应用图</span>
       <div class="pro_two_div2">
         <div class="div_ie9_5" style="width: 26%">
-          <img src="/img/details/pro2.png" style="width: 100%;height: 100%;">
+          <img src="/img/details/pro2.png" style="width: 100%;height: 100%;" />
         </div>
         <span class="pro_two_span1">机房</span>
       </div>
@@ -58,15 +59,17 @@
             <span class="pro_two_span4">运营商网络或公安专网</span>
           </div>
           <div class="div_ie9_6" style="width: 33%">
-            <img src="/img/details/pro3.png" style="width: 100%;height: 100%;">
+            <img src="/img/details/pro3.png" style="width: 100%;height: 100%;" />
           </div>
         </div>
       </div>
       <div class="pro_two_div4">
         <span class="pro_two_span5">外部设备</span>
         <div style="width: 100%">
-          <div style="width: 26%"><img src="/img/details/pro4.png" style="width: 100%;height: 100%;"></div>
-          <div style="width: 64%;"></div>
+          <div style="width: 26%">
+            <img src="/img/details/pro4.png" style="width: 100%;height: 100%;" />
+          </div>
+          <div style="width: 64%;" />
         </div>
       </div>
     </div>
@@ -77,10 +80,10 @@
     <div class="pro_three_div">
       <span class="pro_span1">一站式警务数字化入口</span>
       <div class="div_ie9_7" style="width: 40%; margin-bottom: 5rem;margin-top: 3rem;">
-        <img src="/img/details/three1.png" style="width: 100%;height: 100%;">
+        <img src="/img/details/three1.png" style="width: 100%;height: 100%;" />
       </div>
       <div class="div_ie9_8" style="width: 80%;height: 100%">
-        <img src="/img/details/three2.png" style="width: 100%;height: 100%;">
+        <img src="/img/details/three2.png" style="width: 100%;height: 100%;" />
       </div>
     </div>
   </div>
@@ -89,7 +92,9 @@
     <div class="pro_four">
       <span class="pro_span1" style="margin-bottom:4rem;">警务宝架构图</span>
       <div class="pro_four_div">
-        <div class="pro_four_div1 div_ie9_9"><img src="/img/details/four1.png" style="width: 80%;height: 60%;"></div>
+        <div class="pro_four_div1 div_ie9_9">
+          <img src="/img/details/four1.png" style="width: 80%;height: 60%;" />
+        </div>
         <div class="pro_four_div2 div_ie9_10">
           <span class="pro_four_span1">机房</span>
           <span class="pro_four_span2">警务宝一体机。</span>
@@ -100,10 +105,14 @@
           <span class="pro_four_span1">智慧屏</span>
           <span class="pro_four_span2">主要用于接待大厅、会议室/指挥室、所长办公室，警务站/警务室。</span>
         </div>
-        <div class="pro_four_div1 div_ie9_12"><img src="/img/details/four2.png" style="width: 80%;height: 100%;"></div>
+        <div class="pro_four_div1 div_ie9_12">
+          <img src="/img/details/four2.png" style="width: 80%;height: 100%;" />
+        </div>
       </div>
       <div class="pro_four_div">
-        <div class="pro_four_div1 div_ie9_13"><img src="/img/details/four3.png" style="width: 50%;height: 60%;"></div>
+        <div class="pro_four_div1 div_ie9_13">
+          <img src="/img/details/four3.png" style="width: 50%;height: 60%;" />
+        </div>
         <div class="pro_four_div2 div_ie9_14">
           <span class="pro_four_span1">可选外设</span>
           <span class="pro_four_span2">可选外设备主要有：5G摄像机、执法记录仪、行车记录仪、警务指挥车、警务通 、巡逻机器人、无人机、AR眼镜、社区卫士。</span>
@@ -117,7 +126,7 @@
     <div class="pro_sv_div">
       <span class="pro_span1">版本介绍</span>
       <div class="div_ie9_15" style="width: 75%;margin-top: 1.5rem;height: 100%">
-        <img src="/img/details/bbjs.png" style="width: 100%;height: 100%;">
+        <img src="/img/details/bbjs.png" style="width: 100%;height: 100%;" />
       </div>
     </div>
   </div>
@@ -127,7 +136,7 @@
     <div class="pro_sv_div2">
       <span class="pro_span1">版本默认配置</span>
       <div class="div_ie9_15" style="width: 75%;margin-top: 2rem;height: 100%">
-        <img src="/img/details/peiz.png" style="width: 100%;height: 100%;">
+        <img src="/img/details/peiz.png" style="width: 100%;height: 100%;" />
       </div>
     </div>
   </div>
@@ -137,7 +146,8 @@
     <div class="pro_four">
       <span class="pro_span1" style="margin-bottom:4rem;">警应用场景</span>
       <div class="pro_four_div">
-        <div class="pro_five_div1 div_ie9_9 div_ie78"><img src="/img/details/five1.png" style="width: 95%;height: 80%;">
+        <div class="pro_five_div1 div_ie9_9 div_ie78">
+          <img src="/img/details/five1.png" style="width: 95%;height: 80%;" />
         </div>
         <div class="pro_four_div2 div_ie9_10">
           <span class="pro_four_span1">普通视图</span>
@@ -149,10 +159,13 @@
           <span class="pro_four_span1">民警视图</span>
           <span class="pro_four_span2">民警日常工作学习平台，勤务排班、调度指挥、群防群治、视频会议等。</span>
         </div>
-        <div class="pro_five_div1 div_ie9_12"><img src="/img/details/five2.png" style="width: 95%;height: 80%;"></div>
+        <div class="pro_five_div1 div_ie9_12">
+          <img src="/img/details/five2.png" style="width: 95%;height: 80%;" />
+        </div>
       </div>
       <div class="pro_four_div">
-        <div class="pro_five_div1 div_ie9_13 div_ie78"><img src="/img/details/five3.png" style="width:95%;height: 80%;">
+        <div class="pro_five_div1 div_ie9_13 div_ie78">
+          <img src="/img/details/five3.png" style="width:95%;height: 80%;" />
         </div>
         <div class="pro_four_div2 div_ie9_14 div_ie9_15">
           <span class="pro_four_span1">所长视图</span>
@@ -168,22 +181,30 @@
       <span class="pro_span1">一体机的优势</span>
       <div class="pro_six_div2">
         <div class="pro_six_div3">
-          <div style="height: 200px;"><img src="/img/details/box1.png"></div>
+          <div style="height: 200px;">
+            <img src="/img/details/box1.png" />
+          </div>
           <span class="pro_six_span1">开箱即用</span>
           <span class="pro_six_span2">一体机出厂前已经完成 所有软 / 硬件安装调试 工作，用户完成上架安 装即可使用。</span>
         </div>
         <div class="pro_six_div3">
-          <div style="height: 200px;"><img src="/img/details/box2.png"></div>
+          <div style="height: 200px;">
+            <img src="/img/details/box2.png" />
+          </div>
           <span class="pro_six_span1">安全稳定</span>
           <span class="pro_six_span2">一体机已针对硬件设备 已经进行完备的系统测 试，为用户提供稳定可 靠的使用体验。</span>
         </div>
         <div class="pro_six_div3">
-          <div style="height: 200px;"><img src="/img/details/box3.png"></div>
+          <div style="height: 200px;">
+            <img src="/img/details/box3.png" />
+          </div>
           <span class="pro_six_span1">深度优化</span>
           <span class="pro_six_span2">一体机出厂前已经完成 备份、清理、并发处理 等多项优化设置，实现 了更佳的使用性能。</span>
         </div>
         <div class="pro_six_div3">
-          <div style="height: 200px;"><img src="/img/details/box4.png"></div>
+          <div style="height: 200px;">
+            <img src="/img/details/box4.png" />
+          </div>
           <span class="pro_six_span1"> 无忧使用</span>
           <span class="pro_six_span2">一体机内置基层SaaS软 件，并具备开放平台接 入能力，不同厂家的应 用均可在“警务宝”中集 成上架。</span>
         </div>

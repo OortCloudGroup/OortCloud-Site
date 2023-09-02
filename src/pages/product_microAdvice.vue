@@ -12,13 +12,13 @@
         />
 
         <div class="product_intro_2">
-          <img src="/img/product/micro_advice/banner2.png" alt="">
+          <img src="/img/product/micro_advice/banner2.png" alt="" />
         </div>
         <div class="product_intro_4">
           <div class="step">
             <div class="step__item">
               <div class="step__item__icon">
-                <img src="/img/product/micro_advice/1.png" alt="">
+                <img src="/img/product/micro_advice/1.png" alt="" />
                 <span>出示执勤码</span>
               </div>
               <div class="step__item__content">
@@ -27,7 +27,7 @@
             </div>
             <div class="step__item">
               <div class="step__item__icon">
-                <img src="/img/product/micro_advice/2.png" alt="">
+                <img src="/img/product/micro_advice/2.png" alt="" />
                 <span>群众扫码</span>
               </div>
               <div class="step__item__content">
@@ -36,7 +36,7 @@
             </div>
             <div class="step__item">
               <div class="step__item__icon">
-                <img src="/img/product/micro_advice/3.png" alt="">
+                <img src="/img/product/micro_advice/3.png" alt="" />
                 <span>统计后台</span>
               </div>
               <div class="step__item__content">
@@ -45,7 +45,7 @@
             </div>
           </div>
           <div class="img">
-            <img src="/img/product/micro_advice/intro_03.png">
+            <img src="/img/product/micro_advice/intro_03.png" />
           </div>
         </div>
         <div class="product_intro_5">
@@ -54,14 +54,14 @@
               推广场景
             </div>
             <div class="block__left__content">
-              <p>为有效提升交通工具驾乘人员和行人的交通安全意识，规范道路交通秩序，现推出“交通微劝导系统”，对路面各类存在不文明交通行为的群众进行宣传劝导，引导广大群众出行遵守交通规则。</p><br>
+              <p>为有效提升交通工具驾乘人员和行人的交通安全意识，规范道路交通秩序，现推出“交通微劝导系统”，对路面各类存在不文明交通行为的群众进行宣传劝导，引导广大群众出行遵守交通规则。</p><br />
               <p>重点对电动自行车驾乘人员不戴头盔、非机动车逆行、占用机动车道通行以及行人冲红灯、乱过马路等交通违法行为进行劝导教育。</p>
             </div>
           </div>
           <div class="block__right">
             <div class="block__right__imgs">
-              <img src="/img/product/micro_advice/intro_02.png" alt="">
-              <img src="/img/product/micro_advice/intro_01.png" alt="">
+              <img src="/img/product/micro_advice/intro_02.png" alt="" />
+              <img src="/img/product/micro_advice/intro_01.png" alt="" />
             </div>
           </div>
         </div>
@@ -93,10 +93,14 @@
         </div>
       </div>
 
-      <div class="user" id="用户案例">
-        <p class="title">用户案例</p>
+      <div id="用户案例" class="user">
+        <p class="title">
+          用户案例
+        </p>
         <div class="item">
-          <div class="second_title">东莞市</div>
+          <div class="second_title">
+            东莞市
+          </div>
           <p>有效提升交通工具乘驾人员和行人的交通安全意识</p>
           <p>为市民创造一个车与车和谐、车与人和谐的道路交通环境</p>
           <br />
@@ -112,7 +116,9 @@
           <p>“莞微劝导”小程序来了！对不文明的交通行为进行登记备案</p>
         </div>
         <div class="item">
-          <div class="second_title">惠州市</div>
+          <div class="second_title">
+            惠州市
+          </div>
           <p>分为群众使用和工作人员使用，以及后台管理人员使用，三个模式。</p>
           <p>1、群众</p>
           <p>使用主要是使用微信扫描工作人员出示的 执勤码 进入页面完善群众的个人信息，提交认证。</p>
@@ -139,7 +145,7 @@
 
 <script setup>
 definePageMeta({
-  layout: "product"
+  layout: 'product'
 })
 
 const headerContent = ref({
@@ -160,7 +166,7 @@ const headerContent = ref({
   swipes: [
     '/img/product/micro_advice/swipe_1.png',
     '/img/product/micro_advice/swipe_2.png',
-    '/img/product/micro_advice/swipe_3.png',
+    '/img/product/micro_advice/swipe_3.png'
   ]
 })
 const support = ref({

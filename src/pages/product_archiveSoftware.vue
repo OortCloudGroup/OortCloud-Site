@@ -1,12 +1,18 @@
 <template>
   <div class="page_container">
     <div class="product_detail">
-      <div class="product_detail_1" id="intro">
-        <h1 class="title">电子档案管理系统</h1>
-        <h1 class="title_shadow">电子档案管理系统</h1>
-        <p class="paragraph">本产品是实现对各门类档案的目录数据和原文数据的收集、管理、保存、利用四大环节业务全
+      <div id="intro" class="product_detail_1">
+        <h1 class="title">
+          电子档案管理系统
+        </h1>
+        <h1 class="title_shadow">
+          电子档案管理系统
+        </h1>
+        <p class="paragraph">
+          本产品是实现对各门类档案的目录数据和原文数据的收集、管理、保存、利用四大环节业务全
           方位功能的综合管理系统，产品设计符合《电子档案管理系统通用功能要求》GB/T 39784-2021等
-          国家及行业规范和标准。</p>
+          国家及行业规范和标准。
+        </p>
         <div class="function">
           <div class="item card-a">
             <p>收集</p>
@@ -50,137 +56,162 @@
         </div>
       </div>
       <div class="product_detail_2">
-        <p class="title">功能介绍</p>
+        <p class="title">
+          功能介绍
+        </p>
         <div class="main">
           <div class="card">
-            <img src="/img/product/archive_software/detail2_item1.png">
+            <img src="/img/product/archive_software/detail2_item1.png" />
             <p>档案数据手机</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail2_item2.png">
+            <img src="/img/product/archive_software/detail2_item2.png" />
             <p>整理归档</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail2_item3.png">
+            <img src="/img/product/archive_software/detail2_item3.png" />
             <p>档案数据管理</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail2_item4.png">
+            <img src="/img/product/archive_software/detail2_item4.png" />
             <p>数据导入导出</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail2_item5.png">
+            <img src="/img/product/archive_software/detail2_item5.png" />
             <p>综合管理</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail2_item6.png">
+            <img src="/img/product/archive_software/detail2_item6.png" />
             <p>档案检索</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail2_item7.png">
+            <img src="/img/product/archive_software/detail2_item7.png" />
             <p>专题编研</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail2_item8.png">
+            <img src="/img/product/archive_software/detail2_item8.png" />
             <p>查档登记</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail2_item9.png">
+            <img src="/img/product/archive_software/detail2_item9.png" />
             <p>鉴定与销毁</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail2_item10.png">
+            <img src="/img/product/archive_software/detail2_item10.png" />
             <p>用户管理</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail2_item11.png">
+            <img src="/img/product/archive_software/detail2_item11.png" />
             <p>数据统计</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail2_item12.png">
+            <img src="/img/product/archive_software/detail2_item12.png" />
             <p>系统设置</p>
           </div>
         </div>
       </div>
       <div class="product_detail_3">
-        <p class="title">系统特点</p>
+        <p class="title">
+          系统特点
+        </p>
         <div class="main">
           <div class="card">
-            <p class="title2">灵活丰富的自定义设置</p>
-            <p class="paragraph">系统提供丰富的系统初始化自定义设置，可对档案门类、档号规则、著录界面、报表、组织机构、著录项属性等按照用户实际需求进行灵活自定义。</p>
+            <p class="title2">
+              灵活丰富的自定义设置
+            </p>
+            <p class="paragraph">
+              系统提供丰富的系统初始化自定义设置，可对档案门类、档号规则、著录界面、报表、组织机构、著录项属性等按照用户实际需求进行灵活自定义。
+            </p>
           </div>
           <div class="card">
-            <p class="title2">安全可靠的权限控制体系</p>
-            <p class="paragraph">系统通过严格的功能权限和数据权限控制体系，对用户组和用户的可操作功能、可访问数据实现有效控制，防止越权操作。</p>
+            <p class="title2">
+              安全可靠的权限控制体系
+            </p>
+            <p class="paragraph">
+              系统通过严格的功能权限和数据权限控制体系，对用户组和用户的可操作功能、可访问数据实现有效控制，防止越权操作。
+            </p>
           </div>
           <div class="card">
-            <p class="title2">支持跨平台、多数据库；无缝对接国产化配套环境</p>
-            <p class="paragraph">系统支持Windows、Linux等操作系统和SQL Server、Mysql、Oralce、DB2等数据库软件；与国产操作系统和数据库等国产化软硬件环境可以无缝对接。
+            <p class="title2">
+              支持跨平台、多数据库；无缝对接国产化配套环境
+            </p>
+            <p class="paragraph">
+              系统支持Windows、Linux等操作系统和SQL Server、Mysql、Oralce、DB2等数据库软件；与国产操作系统和数据库等国产化软硬件环境可以无缝对接。
             </p>
           </div>
         </div>
       </div>
       <div class="product_detail_4">
-        <h1 class="title">声像档案管理系统</h1>
-        <h1 class="title_shadow">声像档案管理系统</h1>
-        <p class="paragraph">本产品是提供对照片、音频、视频文件的采集上传、整理、归档、检索、编研、统计、光盘制作、利用等功能的专业系统平台，极大提升单位声像类电子档案的收集和管理规范化、利用高效化。</p>
+        <h1 class="title">
+          声像档案管理系统
+        </h1>
+        <h1 class="title_shadow">
+          声像档案管理系统
+        </h1>
+        <p class="paragraph">
+          本产品是提供对照片、音频、视频文件的采集上传、整理、归档、检索、编研、统计、光盘制作、利用等功能的专业系统平台，极大提升单位声像类电子档案的收集和管理规范化、利用高效化。
+        </p>
         <div class="main">
           <div class="card">
-            <img src="/img/product/archive_software/detail4_item1.png">
+            <img src="/img/product/archive_software/detail4_item1.png" />
             <p>声像管理</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail4_item2.png">
+            <img src="/img/product/archive_software/detail4_item2.png" />
             <p>馆/室藏管理</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail4_item3.png">
+            <img src="/img/product/archive_software/detail4_item3.png" />
             <p>资料管理</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail4_item4.png">
+            <img src="/img/product/archive_software/detail4_item4.png" />
             <p>开放管理</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail4_item5.png">
+            <img src="/img/product/archive_software/detail4_item5.png" />
             <p>综合检索</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail4_item6.png">
+            <img src="/img/product/archive_software/detail4_item6.png" />
             <p>专题管理</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail4_item7.png">
+            <img src="/img/product/archive_software/detail4_item7.png" />
             <p>统计管理</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail4_item8.png">
+            <img src="/img/product/archive_software/detail4_item8.png" />
             <p>热点管理</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail4_item9.png">
+            <img src="/img/product/archive_software/detail4_item9.png" />
             <p>光盘管理</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail4_item10.png">
+            <img src="/img/product/archive_software/detail4_item10.png" />
             <p>离线利用</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail4_item11.png">
+            <img src="/img/product/archive_software/detail4_item11.png" />
             <p>后台管理</p>
           </div>
           <div class="card">
-            <img src="/img/product/archive_software/detail4_item12.png">
+            <img src="/img/product/archive_software/detail4_item12.png" />
             <p>安全管理</p>
           </div>
         </div>
       </div>
       <div class="product_detail_5">
-        <p class="title">系统特点</p>
+        <p class="title">
+          系统特点
+        </p>
         <div class="main">
           <div class="item1">
             <div class="card">
-              <p class="title2">采集模式多样化</p>
+              <p class="title2">
+                采集模式多样化
+              </p>
               <div class="paragraph">
                 <p>按组采集</p>
                 <p>按件采集</p>
@@ -188,7 +219,9 @@
               </div>
             </div>
             <div class="card">
-              <p class="title2">浏览方式多样化</p>
+              <p class="title2">
+                浏览方式多样化
+              </p>
               <div class="paragraph">
                 <p>目录条目列表查看</p>
                 <p>缩略图、浏览图、原图查看</p>
@@ -198,20 +231,26 @@
           </div>
           <div class="item2">
             <div class="card">
-              <p class="title2">存用分离</p>
+              <p class="title2">
+                存用分离
+              </p>
               <div class="paragraph">
                 <p>存——照片、音视频文件上传系统，服务器上存储原始格式</p>
                 <p>用——系统后台上传的电子文件统一进行格式转换，照片文件转成.jpg文件，音视频文件转成.flv文件</p>
               </div>
             </div>
             <div class="card">
-              <p class="title2">元数据自动捕获</p>
+              <p class="title2">
+                元数据自动捕获
+              </p>
               <div class="paragraph">
                 <p>自动捕获采集各种数码设备附带的背景元数据（数码照片的经纬度、分辨率、焦距、曝光率、相机品牌型号、容量大小等;音视频的文件格式、帧率、码率、编码方式、时长、容量大小等）</p>
               </div>
             </div>
             <div class="card">
-              <p class="title2">断点续传</p>
+              <p class="title2">
+                断点续传
+              </p>
               <div class="paragraph">
                 <p>对容量较大的音视频文件支持断点续传</p>
               </div>
@@ -220,18 +259,20 @@
         </div>
       </div>
       <div class="product_detail_6">
-        <p class="title">应用领域</p>
+        <p class="title">
+          应用领域
+        </p>
         <div class="main">
           <div class="item">
-            <img src="/img/product/archive_software/area1.png">
+            <img src="/img/product/archive_software/area1.png" />
             <p>政府机关单位</p>
           </div>
           <div class="item">
-            <img src="/img/product/archive_software/area2.png">
+            <img src="/img/product/archive_software/area2.png" />
             <p>事业单位</p>
           </div>
           <div class="item">
-            <img src="/img/product/archive_software/area3.png">
+            <img src="/img/product/archive_software/area3.png" />
             <p>企业单位</p>
           </div>
         </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="defalut_layout">
-    <NavHeader></NavHeader>
-    <div style="height: 64px;width: 100%;"></div>
+    <NavHeader />
+    <div style="height: 64px;width: 100%;" />
     <div class="nav_container">
       <!-- 侧边菜单 -->
       <div class="nav_menu">
@@ -9,11 +9,11 @@
       </div>
       <!-- 轮播图 -->
       <div class="carousel_container">
-        <Carousel :carouse-list="carouseList"></Carousel>
+        <Carousel :carouse-list="carouseList" />
       </div>
     </div>
     <slot />
-    <Bottom></Bottom>
+    <Bottom />
   </div>
 </template>
 
@@ -22,8 +22,8 @@ const carouseList = ref([
   {
     url: '/img/home/bg_2.png',
     title: '创造无限可能',
-    desc:'公共安全“私有云智能化应用建设解决方案”提供商',
-    buttons:[]
+    desc: '公共安全“私有云智能化应用建设解决方案”提供商',
+    buttons: []
   },
   {
     url: '/img/home/jwb.png',
@@ -294,8 +294,6 @@ const carouseList = ref([
     bottom: 0!important;;
   }
 }
-
-
 
 .bottom_body {
   width: 100%;

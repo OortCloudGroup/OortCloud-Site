@@ -2,10 +2,14 @@
   <div class="header">
     <div class="header_primary">
       <Image class="header_primary_logo" :src="logo" />
-      <h1 class="header_primary_title">{{ name }}</h1>
+      <h1 class="header_primary_title">
+        {{ name }}
+      </h1>
     </div>
     <div class="header_info">
-      <h6 class="header_info_text">{{ desc }}</h6>
+      <h6 class="header_info_text">
+        {{ desc }}
+      </h6>
     </div>
   </div>
 </template>

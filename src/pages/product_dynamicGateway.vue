@@ -10,37 +10,39 @@
       :is-swiper="false"
     >
       <template #bannerInfo>
-        <p class="right_tip">*以上图片仅供参考，请以实物为准</p>
+        <p class="right_tip">
+          *以上图片仅供参考，请以实物为准
+        </p>
       </template>
     </ProductHeader>
 
     <div>
-      <div class="product_intro_2" id="users">
+      <div id="users" class="product_intro_2">
         <div class="title">
           产品特性
         </div>
         <div class="content">
-          <img src="/img/product/dynamic_gateway/banner.png" alt="">
+          <img src="/img/product/dynamic_gateway/banner.png" alt="" />
         </div>
       </div>
     </div>
     <div>
-      <div class="product_intro_3" id="service">
+      <div id="service" class="product_intro_3">
         <div class="title">
           规格参数
         </div>
         <div class="content">
-          <img src="/img/product/dynamic_gateway/table.png" alt="">
+          <img src="/img/product/dynamic_gateway/table.png" alt="" />
         </div>
       </div>
     </div>
     <div>
-      <div class="product_intro_4" id="size">
+      <div id="size" class="product_intro_4">
         <div class="title">
           装配尺寸
         </div>
         <div class="content">
-          <img src="/img/product/dynamic_gateway/size.png" alt="">
+          <img src="/img/product/dynamic_gateway/size.png" alt="" />
         </div>
       </div>
     </div>
@@ -52,7 +54,7 @@
 
 <script setup>
 definePageMeta({
-  layout: "product"
+  layout: 'product'
 })
 
 const headerContent = ref({

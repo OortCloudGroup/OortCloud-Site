@@ -1,12 +1,18 @@
 <template>
   <div class="grid">
-    <h2 class="grid_title">热门方案</h2>
+    <h2 class="grid_title">
+      热门方案
+    </h2>
 
     <n-grid x-gap="32" y-gap="32" :cols="2">
       <n-grid-item v-for="(item, index) in data" :key="item.title">
         <div class="grid_item" :style="[(index === 1 || index === 2) && blueBackground, (index === 3 || index === 4) && greenBackground]">
-          <h3 class="grid_item_title">{{ item.title }}</h3>
-          <p class="grid_item_content">{{ item.content }}</p>
+          <h3 class="grid_item_title">
+            {{ item.title }}
+          </h3>
+          <p class="grid_item_content">
+            {{ item.content }}
+          </p>
           <Image v-if="item.cover" :src="item.cover" class="grid_item_cover" />
         </div>
       </n-grid-item>
@@ -15,7 +21,7 @@
 </template>
 
 <script setup>
-import { NGrid, NGridItem } from 'naive-ui';
+import { NGrid, NGridItem } from 'naive-ui'
 
 defineProps({
   data: {

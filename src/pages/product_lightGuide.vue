@@ -11,10 +11,12 @@
     />
 
     <div class="product_intro_2">
-      <img src="/img/product/light_guide/banner2.png" alt="">
+      <img src="/img/product/light_guide/banner2.png" alt="" />
     </div>
     <div class="product_intro_3">
-      <p class="title">「产品特点」</p>
+      <p class="title">
+        「产品特点」
+      </p>
       <div class="function">
         <div class="item card-a">
           <p>光单向传输无反馈信号</p>
@@ -35,7 +37,9 @@
       </div>
     </div>
     <div class="product_intro_4">
-      <p class="title">「产品功能」</p>
+      <p class="title">
+        「产品功能」
+      </p>
       <div class="intro">
         <div class="item">
           <p>自动审计</p>
@@ -65,27 +69,43 @@
     </div>
     <div class="product_intro_5">
       <div class="left">
-        <div class="title">产品价值</div>
-        <div class="paragraph"><img src="/img/product/light_guide/1.png"><span>光单向传输，无反馈信号，保证数据的单向性传输</span></div>
-        <div class="paragraph"><img src="/img/product/light_guide/2.png"><span>确保满足单位内外网数据同步需求，同时保证了数据的安全性、完整性</span>
+        <div class="title">
+          产品价值
         </div>
-        <div class="paragraph"><img src="/img/product/light_guide/3.png"><span>有效防止数据传输时病毒木马跨网自动传播，保证内网数据安全</span>
+        <div class="paragraph">
+          <img src="/img/product/light_guide/1.png" /><span>光单向传输，无反馈信号，保证数据的单向性传输</span>
         </div>
-        <div class="paragraph"><img src="/img/product/light_guide/3.png"><span>方便、快捷，提高工作效率</span></div>
+        <div class="paragraph">
+          <img src="/img/product/light_guide/2.png" /><span>确保满足单位内外网数据同步需求，同时保证了数据的安全性、完整性</span>
+        </div>
+        <div class="paragraph">
+          <img src="/img/product/light_guide/3.png" /><span>有效防止数据传输时病毒木马跨网自动传播，保证内网数据安全</span>
+        </div>
+        <div class="paragraph">
+          <img src="/img/product/light_guide/3.png" /><span>方便、快捷，提高工作效率</span>
+        </div>
       </div>
       <div class="right">
-        <img src="/img/product/light_guide/intro_01.png" alt="">
+        <img src="/img/product/light_guide/intro_01.png" alt="" />
       </div>
     </div>
     <div class="product_intro_5">
       <div class="left">
-        <div class="title">应用场景</div>
-        <div class="paragraph"><img src="/img/product/light_guide/1.png"><span>外部工作秘密数据需光单向导入到单位内部计算机</span></div>
-        <div class="paragraph"><img src="/img/product/light_guide/2.png"><span>主流移动存储设备中文件光单向导入到单位内部计算机</span></div>
-        <div class="paragraph"><img src="/img/product/light_guide/3.png"><span>大容量文件需光单向导入到单位内部计算机</span></div>
+        <div class="title">
+          应用场景
+        </div>
+        <div class="paragraph">
+          <img src="/img/product/light_guide/1.png" /><span>外部工作秘密数据需光单向导入到单位内部计算机</span>
+        </div>
+        <div class="paragraph">
+          <img src="/img/product/light_guide/2.png" /><span>主流移动存储设备中文件光单向导入到单位内部计算机</span>
+        </div>
+        <div class="paragraph">
+          <img src="/img/product/light_guide/3.png" /><span>大容量文件需光单向导入到单位内部计算机</span>
+        </div>
       </div>
       <div class="right">
-        <img src="/img/product/light_guide/intro_02.png" alt="">
+        <img src="/img/product/light_guide/intro_02.png" alt="" />
       </div>
     </div>
 
@@ -96,7 +116,7 @@
 
 <script setup>
 definePageMeta({
-  layout: "product"
+  layout: 'product'
 })
 
 const headerContent = ref({

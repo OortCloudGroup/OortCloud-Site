@@ -11,60 +11,93 @@
     />
 
     <div class="page_main">
-       <!-- 分类 -->
+      <!-- 分类 -->
       <div class="automation_classify">
         <div class="automation_classify_item">
-          <p class="classify_title">局域网部署</p>
-          <div class="classify_text">系统只需局域网内部署即可，无需链接外网。数据与硬件均采用本地化部署，安全性较高。</div>
+          <p class="classify_title">
+            局域网部署
+          </p>
+          <div class="classify_text">
+            系统只需局域网内部署即可，无需链接外网。数据与硬件均采用本地化部署，安全性较高。
+          </div>
         </div>
         <div class="automation_classify_item">
-          <p class="classify_title">稳定可靠框架</p>
-          <div class="classify_text">系统以高效且成熟可靠的技术框架设计研发，久经考验，运行稳定；无自带数据，确保原系统数据安全。</div>
+          <p class="classify_title">
+            稳定可靠框架
+          </p>
+          <div class="classify_text">
+            系统以高效且成熟可靠的技术框架设计研发，久经考验，运行稳定；无自带数据，确保原系统数据安全。
+          </div>
         </div>
         <div class="automation_classify_item">
-          <p class="classify_title">现有流程的辅助</p>
-          <div class="classify_text">系统是针对公积金现有业务流程办理的辅助系统，无需对业务做任何调整，无需提供接口。操作简单便捷。</div>
+          <p class="classify_title">
+            现有流程的辅助
+          </p>
+          <div class="classify_text">
+            系统是针对公积金现有业务流程办理的辅助系统，无需对业务做任何调整，无需提供接口。操作简单便捷。
+          </div>
         </div>
       </div>
 
       <!-- 多条件触发 -->
       <div class="condition_trigger">
-        <h3 class="trigger_titel">多条件触发</h3>
-        <p class="trigger_content">涉及贷款、归集、户管等相关审批流程业务</p>
-        <img class="trigger_img" src="/img/product/auto_process/condition_trigger.png" alt="">
+        <h3 class="trigger_titel">
+          多条件触发
+        </h3>
+        <p class="trigger_content">
+          涉及贷款、归集、户管等相关审批流程业务
+        </p>
+        <img class="trigger_img" src="/img/product/auto_process/condition_trigger.png" alt="" />
       </div>
-
 
       <!-- 项目优势 -->
       <div class="project_advantage">
-        <h3 class="advantage_titel">项目优势</h3>
-        <img class="project_advantage_img" src="/img/product/auto_process/project_advantage.png" alt="">
+        <h3 class="advantage_titel">
+          项目优势
+        </h3>
+        <img class="project_advantage_img" src="/img/product/auto_process/project_advantage.png" alt="" />
       </div>
 
       <!-- description -->
       <div class="description">
-        <img class="description_img" src="/img/product/auto_process/ic_start.png" alt="">
+        <img class="description_img" src="/img/product/auto_process/ic_start.png" alt="" />
         <div class="description_item_top">
-          <p class="description_text_fc description_item_opertion">自动化业务流程操作</p>
-          <p class="description_text_fc description_item_import">自动导入</p>
+          <p class="description_text_fc description_item_opertion">
+            自动化业务流程操作
+          </p>
+          <p class="description_text_fc description_item_import">
+            自动导入
+          </p>
         </div>
         <div class="description_item_center">
-          <p class="description_text_fc description_item_pproval">自动化审批</p>
-          <p class="description_text_fc description_item_judge">多条件判断</p>
+          <p class="description_text_fc description_item_pproval">
+            自动化审批
+          </p>
+          <p class="description_text_fc description_item_judge">
+            多条件判断
+          </p>
         </div>
         <div class="description_item_top">
-          <p class="description_text_fc description_item_compare">自动化数据对比</p>
-          <p class="description_text_fc description_item_guard">无人看守</p>
+          <p class="description_text_fc description_item_compare">
+            自动化数据对比
+          </p>
+          <p class="description_text_fc description_item_guard">
+            无人看守
+          </p>
         </div>
         <div class="description_item_center">
-          <p class="description_text_fc description_item_input">自动数据填写</p>
-          <p class="description_text_fc description_item_discern">信息识别</p>
+          <p class="description_text_fc description_item_input">
+            自动数据填写
+          </p>
+          <p class="description_text_fc description_item_discern">
+            信息识别
+          </p>
         </div>
         <div class="description_end">
-          <img class="description_img" src="/img/product/auto_process/ic_end.png" alt="">
+          <img class="description_img" src="/img/product/auto_process/ic_end.png" alt="" />
         </div>
       </div>
-     </div>
+    </div>
 
     <!-- 服务支持 -->
     <ProductSupport v-if="support" :name="support.name" :link="support.link" />
@@ -73,7 +106,7 @@
 
 <script setup>
 definePageMeta({
-  layout: "product"
+  layout: 'product'
 })
 
 const headerContent = ref({

@@ -15,17 +15,17 @@
           <span class="b_m_t_treea">核心优势</span>
           <div class="b_m_t_treeb">
             <div class="b_m_t_treec">
-              <img src="/img/linghuo.png" style="width: 70px;height: 70px">
+              <img src="/img/linghuo.png" style="width: 70px;height: 70px" />
               <span class="b_m_t_treed">互联网接处警</span>
               <span class="b_m_t_treef">通过移动端APP打造高效、快捷的基层警务网络。</span>
             </div>
             <div class="b_m_t_treec">
-              <img src="/img/kekao.png" style="width: 70px;height: 70px">
+              <img src="/img/kekao.png" style="width: 70px;height: 70px" />
               <span class="b_m_t_treed">办案区管理</span>
               <span class="b_m_t_treef">通过虹膜设备、人身监测、将入区登记，人身检查、信息采集、侯问管理、讯 / 询问管理、出区登记等整个流程形成闭环，实现办案审讯流程和执法管理流程标准化、规范化。</span>
             </div>
             <div class="b_m_t_treec">
-              <img src="/img/jekou.png" style="width: 70px;height: 70px">
+              <img src="/img/jekou.png" style="width: 70px;height: 70px" />
               <span class="b_m_t_treed">社区管理</span>
               <span class="b_m_t_treef">全方位社区数据实时采集，对人员、车辆、楼栋进行远程巡视，与社区安保队伍建立视频对话形式的便捷沟通路径，着力解决基层警力不足、难以应对众多社区管理的难题。</span>
             </div>
@@ -44,14 +44,12 @@
               <div class="b_m_t_fourc">
                 <span class="b_m_t_fourd">智慧社区</span>
                 <span class="b_m_t_fourf">智慧社区综合应用系统基于大数据、人工智能等相关技术，通过对所辖社区内“人、车、物、房、场所”等前端要素数据的汇聚、治理、挖掘、分析，实现对公共安全和社会治安风险隐患的泛在感知、多维研判，有效支撑各个警种业务系统及智慧城市的应用，打造新型扁平化公安治理社会新生态。</span>
-
               </div>
             </div>
             <div class="b_m_t_fourb_item div2_ie78">
               <div class="b_m_t_fourc">
                 <span class="b_m_t_fourd">刑事案件智能侦破</span>
                 <span class="b_m_t_fourf">聚焦公安刑事案件分析、研判，线索挖掘业务，利用多时期多警种多系统的案件数据、多维度多行业多级别的人员数据、高精时空轨迹数据，以自然语言处理为核心技术，打通已破案件的知识库与未破案件侦破之间的线索桥梁，形成真正的刑侦线索挖掘闭环，真正为提升破案率而服务。</span>
-
               </div>
               <div class="b_m_t_fourc">
                 <span class="b_m_t_fourd">可视化建模平台</span>
@@ -64,7 +62,7 @@
       <div id="c3">
         <div class="b_m_t_five">
           <span class="b_m_t_fivea">方案架构</span>
-          <img src="/img/jiagou2.png">
+          <img src="/img/jiagou2.png" />
         </div>
       </div>
     </div>
@@ -87,7 +85,6 @@ definePageMeta({
   height: auto;
   filter: progid:DXImageTransform.Microsoft.alphaImageLoader(src='/img/programdetail.png',sizingMethod='scale');
 }
-
 
 .b_m_t_one_body{
   width: 90%;

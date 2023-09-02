@@ -1,18 +1,22 @@
 <template>
   <div class="panel">
-    <div class="panel_header" v-if="data.title">
-      <img class="panel_header_logo" :src="data.logo">
-      <h3 class="panel_header_title">{{ data.title }}</h3>
+    <div v-if="data.title" class="panel_header">
+      <img class="panel_header_logo" :src="data.logo" />
+      <h3 class="panel_header_title">
+        {{ data.title }}
+      </h3>
     </div>
 
     <n-grid x-gap="28" y-gap="12" :cols="4">
       <n-grid-item v-for="item in data.apps" :key="item.name">
-        <NuxtLink :to="item.link" v-if="item.link" class="panel_item">
+        <NuxtLink v-if="item.link" :to="item.link" class="panel_item">
           <div class="panel_item_logo">
             <Image :src="item.logo" />
           </div>
           <div class="panel_item_info">
-            <h5 class="panel_item_title">{{ item.name }}</h5>
+            <h5 class="panel_item_title">
+              {{ item.name }}
+            </h5>
             <n-ellipsis :line-clamp="2">
               {{ item.excerpt }}
             </n-ellipsis>
@@ -23,7 +27,9 @@
             <Image :src="item.logo" />
           </div>
           <div class="panel_item_info">
-            <h5 class="panel_item_title">{{ item.name }}</h5>
+            <h5 class="panel_item_title">
+              {{ item.name }}
+            </h5>
             <n-ellipsis :line-clamp="2">
               {{ item.excerpt }}
             </n-ellipsis>
@@ -35,7 +41,7 @@
 </template>
 
 <script setup>
-import { NGrid, NGridItem, NEllipsis } from 'naive-ui';
+import { NGrid, NGridItem, NEllipsis } from 'naive-ui'
 
 defineProps({
   data: {
@@ -101,6 +107,5 @@ defineProps({
   font-size: 12px;
   color: #666666;
 }
-
 
 </style>

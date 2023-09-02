@@ -2,7 +2,7 @@
   <a :href="'http://oortcloudsmart.com/oort-news/oortnews/' + id">
     <div class="div_item_box">
       <div class="news">
-        <img :src="baseUrl + coverImage">
+        <img :src="baseUrl + coverImage" />
       </div>
       <div>
         <span class="div_item_span">{{ title }}</span>
@@ -30,7 +30,6 @@ const coverImage = computed(() => props.coverImg?.split('32610')[1])
 .div_item>a{
     display: block;
 }
-
 
 .div_item_box {
     width: 350px;

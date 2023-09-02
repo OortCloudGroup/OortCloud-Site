@@ -7,19 +7,19 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
     <div class="demo_body">
       <div class="demo_body_left">
         <span class="demo_body_left_title">交通微劝导系统</span>
-        <span class="demo_body_left_subtitle">提升交通安全意识，落实交通宣传劝导<br/>为市民群众创造一个车与车和谐、人与车和谐的道路交通环境，确保辖区交通拥有一个安全、通畅、文明、有序的道路交通环境</span>
+        <span class="demo_body_left_subtitle">提升交通安全意识，落实交通宣传劝导<br />为市民群众创造一个车与车和谐、人与车和谐的道路交通环境，确保辖区交通拥有一个安全、通畅、文明、有序的道路交通环境</span>
         <div class="demo_body_left_items">
           <n-popover trigger="hover" arrow-point-to-center placement="right">
             <template #trigger>
               <div class="demo_download">
-                <img src="/img/demo/download/wxmini.png"/>
+                <img src="/img/demo/download/wxmini.png" />
                 <span>微信小程序</span>
               </div>
             </template>
             <template #default>
               <div class="demo_download demo_download_cov">
                 <div class="demo_download_code">
-                  <img src="/img/demo/wqd/gh_a8e8538832c4_258.jpg"/>
+                  <img src="/img/demo/wqd/gh_a8e8538832c4_258.jpg" />
                   <span>扫码体验</span>
                 </div>
               </div>
@@ -27,7 +27,7 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
           </n-popover>
           <a href="http://oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/weiquandao_manage/index.html" target="_blank">
             <div class="demo_download">
-              <img src="/img/demo/fz/pcm.png"/>
+              <img src="/img/demo/fz/pcm.png" />
               <span>PC管理后台</span>
             </div>
           </a>
@@ -35,19 +35,19 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
         <div class="demo_body_pdf">
           <a href="http://oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/cloud_disk/index.html?accessToken=g02dce3c79a42653f0314ae2e1bdbebd0" target="_blank">
             <div class="demo_body_pdf_item">
-              <img src="/img/demo/pdf_download.png"/>
+              <img src="/img/demo/pdf_download.png" />
               <span>资料下载</span>
-              <n-icon  :component="IosArrowForward" />
+              <n-icon :component="IosArrowForward" />
             </div>
           </a>
         </div>
       </div>
       <div class="demo_body_right">
-        <img src="/img/demo/wqd/wqd_right.png"/>
+        <img src="/img/demo/wqd/wqd_right.png" />
       </div>
     </div>
     <div class="demo_bottom">
-      <img src="/img/demo/wqd/wqd_content.png"/>
+      <img src="/img/demo/wqd/wqd_content.png" />
     </div>
   </div>
 </template>
@@ -55,10 +55,10 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
 <script setup lang="ts">
 
 definePageMeta({
-  layout: "demo",
-  title: "交通微劝导系统",
-  subTitle: "演示环境",
-  logo: "/img/demo/menu/wqd.png"
+  layout: 'demo',
+  title: '交通微劝导系统',
+  subTitle: '演示环境',
+  logo: '/img/demo/menu/wqd.png'
 })
 
 useSeoMeta({
@@ -66,10 +66,10 @@ useSeoMeta({
   ogTitle: '交通微劝导系统-演示环境',
   description: '提升交通安全意识，落实交通宣传劝导为市民群众创造一个车与车和谐、人与车和谐的道路交通环境，确保辖区交通拥有一个安全、通畅、文明、有序的道路交通环境',
   ogDescription: '提升交通安全意识，落实交通宣传劝导为市民群众创造一个车与车和谐、人与车和谐的道路交通环境，确保辖区交通拥有一个安全、通畅、文明、有序的道路交通环境',
-  ogImage: '/img/demo/menu/wqd.png',
+  ogImage: '/img/demo/menu/wqd.png'
 })
 
-import {  IosArrowForward } from '@vicons/ionicons4'
+import { IosArrowForward } from '@vicons/ionicons4'
 import { NPopover, NIcon } from 'naive-ui'
 
 </script>

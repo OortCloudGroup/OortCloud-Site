@@ -6,7 +6,7 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
   <div class="page_container">
     <div class="download_title">
       <div @click="$router.go(-1)">
-        <img src="/img/demo/download/back.png"/>
+        <img src="/img/demo/download/back.png" />
         <span>返回</span>
       </div>
     </div>
@@ -17,27 +17,27 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
     </div>
     <div class="download_body">
       <div class="download_body_item">
-        <img src="/img/demo/download/yhql.png"/>
+        <img src="/img/demo/download/yhql.png" />
         <span>银河麒麟</span>
       </div>
       <div class="download_body_item">
-        <img src="/img/demo/download/zbql.png"/>
+        <img src="/img/demo/download/zbql.png" />
         <span>中标麒麟</span>
       </div>
       <div class="download_body_item">
-        <img src="/img/demo/download/hwqy.png"/>
+        <img src="/img/demo/download/hwqy.png" />
         <span>华为擎云</span>
       </div>
       <div class="download_body_item">
-        <img src="/img/demo/download/txuos.png"/>
+        <img src="/img/demo/download/txuos.png" />
         <span>统信UOS</span>
       </div>
       <div class="download_body_item">
-        <img src="/img/demo/download/deepin.png"/>
+        <img src="/img/demo/download/deepin.png" />
         <span>深度deepin</span>
       </div>
       <div class="download_body_item">
-        <img src="/img/demo/download/zkfd.png"/>
+        <img src="/img/demo/download/zkfd.png" />
         <span>中科方德</span>
       </div>
     </div>
@@ -47,10 +47,10 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
 <script>
 
 definePageMeta({
-  layout: "demo"
+  layout: 'demo'
 })
 export default {
-  name: "demoDownLoad3"
+  name: 'DemoDownLoad3'
 }
 </script>
 

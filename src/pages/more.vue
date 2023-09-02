@@ -1,57 +1,65 @@
 <template>
   <div class="container">
     <div class="panel_wrapper">
-      <h2 class="panel_title">基础软件</h2>
+      <h2 class="panel_title">
+        基础软件
+      </h2>
       <!-- 双系统安全移动办公 -->
-      <AppPanel :data="doubleSysApp"/>
+      <AppPanel :data="doubleSysApp" />
       <!-- 指挥调度与IOC大数据可视化 -->
-      <AppPanel :data="viewableApp"/>
+      <AppPanel :data="viewableApp" />
       <!-- 多租户aPaaS云 -->
-      <AppPanel :data="aPaaSApp"/>
+      <AppPanel :data="aPaaSApp" />
 
-      <h2 class="panel_title">应用产品</h2>
-      <AppPanel :data="application"/>
-      <h2 class="panel_title">云SaaS软件</h2>
-      <AppPanel :data="saasApp"/>
-      <h2 class="panel_title">安全产品</h2>
-      <AppPanel :data="securityApp"/>
-      
+      <h2 class="panel_title">
+        应用产品
+      </h2>
+      <AppPanel :data="application" />
+      <h2 class="panel_title">
+        云SaaS软件
+      </h2>
+      <AppPanel :data="saasApp" />
+      <h2 class="panel_title">
+        安全产品
+      </h2>
+      <AppPanel :data="securityApp" />
+
       <!-- 计算机保密防范 -->
-      <AppPanel :data="privacyApp"/>
+      <AppPanel :data="privacyApp" />
       <!-- 公安 -->
-      <AppPanel :data="policeApp"/>
+      <AppPanel :data="policeApp" />
       <!-- 智慧派出所 -->
-      <AppPanel :data="policeStationApp"/>
+      <AppPanel :data="policeStationApp" />
       <!-- 检察 -->
-      <AppPanel :data="procuratorialApp"/>
+      <AppPanel :data="procuratorialApp" />
       <!-- 司法监狱 -->
-      <AppPanel :data="prisonApp"/>
+      <AppPanel :data="prisonApp" />
       <!-- 法院 -->
-      <AppPanel :data="courtApp"/>
+      <AppPanel :data="courtApp" />
       <!-- 消防 -->
-      <AppPanel :data="fireProtApp"/>
+      <AppPanel :data="fireProtApp" />
       <!-- 档案 -->
-      <AppPanel :data="filesApp"/>
+      <AppPanel :data="filesApp" />
       <!-- 政府 -->
-      <AppPanel :data="govermentApp"/>
+      <AppPanel :data="govermentApp" />
       <!-- 智慧边海防 -->
-      <AppPanel :data="borderDefendApp"/>
+      <AppPanel :data="borderDefendApp" />
       <!-- 城管 -->
-      <AppPanel :data="cityAdminApp"/>
+      <AppPanel :data="cityAdminApp" />
       <!-- 交警 -->
-      <AppPanel :data="trafficPoliceApp"/>
+      <AppPanel :data="trafficPoliceApp" />
       <!-- 企业 -->
-      <AppPanel :data="enterpriseApp"/>
+      <AppPanel :data="enterpriseApp" />
       <!-- 应急 -->
-      <AppPanel :data="emergencyApp"/>
+      <AppPanel :data="emergencyApp" />
       <!-- 疫情防控 -->
-      <AppPanel :data="plaguePrevApp"/>
+      <AppPanel :data="plaguePrevApp" />
       <!-- 物联网 -->
-      <AppPanel :data="iotApp"/>
+      <AppPanel :data="iotApp" />
       <!-- 应用软件定制与运维服务外包 -->
-      <AppPanel :data="customizeApp"/>
+      <AppPanel :data="customizeApp" />
       <!-- 海外[一带一路] English -->
-      <AppPanel :data="overseasApp"/>
+      <AppPanel :data="overseasApp" />
     </div>
   </div>
 </template>
@@ -98,7 +106,7 @@ const doubleSysApp = ref({
       name: '定制安全Pad终端',
       logo: '/img/home/xl_7.png',
       excerpt: 'Pad终端安全加固组件与刷机服务包'
-    },
+    }
   ]
 })
 // 指挥调度与IOC大数据可视化
@@ -120,7 +128,7 @@ const viewableApp = ref({
       name: '大数据IOC可视化平台',
       logo: '/img/home/xl_10.png',
       excerpt: '大数据处理与IOC可视化系统'
-    },
+    }
   ]
 })
 // 多租户aPaaS云
@@ -301,7 +309,7 @@ const application = ref({
       name: 'XCreator敏捷发布平台',
       logo: '/img/app/XCreator.png',
       excerpt: '全媒体矩阵信息发布平台'
-    },
+    }
   ]
 })
 // 云Saas软件
@@ -335,7 +343,7 @@ const saasApp = ref({
       name: '辅警平台',
       logo: '/img/home/yycp_22.png',
       excerpt: '智慧新警务辅警管理平台'
-    },
+    }
   ]
 })
 // 安全产品
@@ -362,7 +370,7 @@ const securityApp = ref({
       name: '定制安全Pad终端',
       logo: '/img/home/xl_7.png',
       excerpt: 'Pad终端安全加固组件与刷机服务包'
-    },
+    }
   ]
 })
 // 计算机保密防范
@@ -441,7 +449,7 @@ const policeApp = ref({
       name: '辅警移动警务',
       logo: '/img/app/fjydjw.png',
       excerpt: '智慧新警务辅警管理平台'
-    },
+    }
   ]
 })
 // 智慧派出所
@@ -473,7 +481,7 @@ const policeStationApp = ref({
       name: '领导驾驶舱',
       logo: '/img/app/ldjsc.png',
       excerpt: '领导指挥一屏纵览'
-    },
+    }
   ]
 })
 // 检察
@@ -501,7 +509,7 @@ const procuratorialApp = ref({
       name: '远程送达',
       logo: '/img/app/ycsd.png',
       excerpt: '司法文书远程送达系统'
-    },
+    }
   ]
 })
 // 司法监狱
@@ -523,7 +531,7 @@ const prisonApp = ref({
       name: '惠警应用',
       logo: '/img/app/hjyy.png',
       excerpt: '新时代建警治警爱警暖警信息化助手'
-    },
+    }
   ]
 })
 // 法院
@@ -620,7 +628,7 @@ const govermentApp = ref({
       name: '公务出行',
       logo: '/img/home/spell_car.png',
       excerpt: '为机关单位提供公车出行服务'
-    },
+    }
   ]
 })
 // 智慧边海防
@@ -647,7 +655,7 @@ const borderDefendApp = ref({
       name: '指挥控制',
       logo: '/img/app/zhkz.png',
       excerpt: '基于GIS的泛在感知指挥联动'
-    },
+    }
   ]
 })
 // 城管
@@ -699,7 +707,7 @@ const enterpriseApp = ref({
       name: '统一门户与统一认证',
       logo: '/img/app/tymh.png',
       excerpt: '信息系统内部门户和统一身份管理系统'
-    },
+    }
   ]
 })
 // 应急
@@ -784,7 +792,7 @@ const iotApp = ref({
       name: '硬件定制',
       logo: '/img/app/yjdz.png',
       excerpt: 'MTK、RTD安卓广告机,RK安卓主机，QCA,IPQ，高通等方案定制开发'
-    },
+    }
   ]
 })
 // 应用软件定制与运维服务外包

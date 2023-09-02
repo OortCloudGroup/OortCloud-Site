@@ -5,8 +5,12 @@
         <Image :src="logo" />
         <h3>{{ name }}</h3>
       </div>
-      <h3 v-else class="item_content_title">{{ name }}</h3>
-      <p class="item_content_desc">{{ content.desc }}</p>
+      <h3 v-else class="item_content_title">
+        {{ name }}
+      </h3>
+      <p class="item_content_desc">
+        {{ content.desc }}
+      </p>
       <div class="item_content_btn">
         <n-button
           v-for="button in content.buttons"
@@ -27,7 +31,7 @@
 </template>
 
 <script setup>
-import { NButton } from 'naive-ui';
+import { NButton } from 'naive-ui'
 
 const router = useRouter()
 

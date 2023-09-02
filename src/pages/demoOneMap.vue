@@ -11,34 +11,33 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
         <div class="demo_body_left_items">
           <a href="http://oort.oortcloudsmart.com:18080/onemap/main.jsp" target="_blank">
             <div class="demo_download">
-              <img src="/img/demo/onemap/onemap_jwb.png"/>
+              <img src="/img/demo/onemap/onemap_jwb.png" />
               <span>警务宝演示环境</span>
             </div>
           </a>
           <a href="http://fs.oort.oortcloudsmart.com:30302/one-map/main.jsp" target="_blank">
             <div class="demo_download">
-              <img src="/img/demo/onemap/onemap_hw.png"/>
+              <img src="/img/demo/onemap/onemap_hw.png" />
               <span>华为A8展厅演示环境</span>
             </div>
           </a>
         </div>
         <div class="demo_body_pdf">
           <div class="demo_body_pdf_item" @click="showModal=true">
-            <img src="/img/demo/sp.png"/>
+            <img src="/img/demo/sp.png" />
             <span>观看视频</span>
-            <n-icon  :component="IosArrowForward" />
+            <n-icon :component="IosArrowForward" />
           </div>
           <a href="http://oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/cloud_disk/index.html?accessToken=g02dce3c79a42653f0314ae2e1bdbebd0" target="_blank">
             <div class="demo_body_pdf_item">
-              <img src="/img/demo/pdf_download.png"/>
+              <img src="/img/demo/pdf_download.png" />
               <span>资料下载</span>
-              <n-icon  :component="IosArrowForward" />
+              <n-icon :component="IosArrowForward" />
             </div>
           </a>
         </div>
       </div>
-      <div class="demo_body_right">
-      </div>
+      <div class="demo_body_right" />
     </div>
     <div class="demo_bottom">
       <div class="demo_bottom_tt">
@@ -65,9 +64,8 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
         </div>
       </div>
     </div>
-    <n-modal v-model:show="showModal" title="观看视频" preset="dialog" :showIcon="false" style="width: 924px">
-      <iframe height=486 width=864 allowfullscreen :src="videoUrl" frameborder="0">
-      </iframe>
+    <n-modal v-model:show="showModal" title="观看视频" preset="dialog" :show-icon="false" style="width: 924px">
+      <iframe height="486" width="864" allowfullscreen :src="videoUrl" frameborder="0" />
     </n-modal>
   </div>
 </template>
@@ -75,10 +73,10 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
 <script setup lang="ts">
 
 definePageMeta({
-  layout: "demo",
-  title: "指挥调度一张图",
-  subTitle: "演示环境",
-  logo: "/img/demo/onemap/onemap_logo.png"
+  layout: 'demo',
+  title: '指挥调度一张图',
+  subTitle: '演示环境',
+  logo: '/img/demo/onemap/onemap_logo.png'
 })
 
 useSeoMeta({
@@ -86,15 +84,14 @@ useSeoMeta({
   ogTitle: '指挥调度一张图-演示环境',
   description: '指挥调度，警情、警力、现场、调度、过程可视。融合指挥融合各大通信系统、请休假、签到、勤务等系统，将系统的各种功能都在公安网内地图上应用，实现“一张图”展示，一键通话，一键视频，一键组队，是真正的“看得见、呼得通”的扁平化指挥调度',
   ogDescription: '指挥调度，警情、警力、现场、调度、过程可视。融合指挥融合各大通信系统、请休假、签到、勤务等系统，将系统的各种功能都在公安网内地图上应用，实现“一张图”展示，一键通话，一键视频，一键组队，是真正的“看得见、呼得通”的扁平化指挥调度',
-  ogImage: '/img/demo/onemap/onemap_logo.png',
+  ogImage: '/img/demo/onemap/onemap_logo.png'
 })
 
-import {  IosArrowForward } from '@vicons/ionicons4'
-import { NIcon,NModal } from 'naive-ui'
+import { IosArrowForward } from '@vicons/ionicons4'
+import { NIcon, NModal } from 'naive-ui'
 
 const showModal = ref(false)
 const videoUrl = ref('https://player.youku.com/embed/XNTExNzc3Mzg2NA==')
-
 
 </script>
 

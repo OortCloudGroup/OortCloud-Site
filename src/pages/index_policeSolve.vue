@@ -13,21 +13,21 @@
     </header>
     <section class="section">
       <h1>一体化解决方案</h1>
-      <img style="width: 55%; object-fit: contain;" src="/img/police_solve/solve.png" alt="">
+      <img style="width: 55%; object-fit: contain;" src="/img/police_solve/solve.png" alt="" />
     </section>
     <section class="section bg">
       <h1>智慧新警务系统介绍</h1>
-      <img style="width: 54%; object-fit: contain;" src="/img/police_solve/intro.png" alt="">
+      <img style="width: 54%; object-fit: contain;" src="/img/police_solve/intro.png" alt="" />
     </section>
     <section class="section">
       <h1>先进的技术理念-微服务架构</h1>
-      <img style="width: 41%; object-fit: contain;" src="/img/police_solve/theory.png" alt="">
+      <img style="width: 41%; object-fit: contain;" src="/img/police_solve/theory.png" alt="" />
     </section>
     <section class="section_last">
       <div>
-        <img style="width: 28%; object-fit: contain;" src="/img/police_solve/step1.png" alt="">
-        <img style="width: 5.2%; object-fit: contain;" src="/img/police_solve/arrow_right.png" alt="">
-        <img style="width: 28%; object-fit: contain;" src="/img/police_solve/step2.png" alt="">
+        <img style="width: 28%; object-fit: contain;" src="/img/police_solve/step1.png" alt="" />
+        <img style="width: 5.2%; object-fit: contain;" src="/img/police_solve/arrow_right.png" alt="" />
+        <img style="width: 28%; object-fit: contain;" src="/img/police_solve/step2.png" alt="" />
       </div>
       <h1>打通警务各部门的沟通渠道，实现数据共享</h1>
     </section>
@@ -75,7 +75,6 @@ definePageMeta({
   font-size: 40px;
   color: #FFFFFF;
   letter-spacing: 0;
-
 
 }
 .b_m_t_onec{

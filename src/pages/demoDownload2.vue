@@ -6,7 +6,7 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
   <div class="page_container">
     <div class="download_title">
       <div @click="$router.go(-1)">
-        <img src="/img/demo/download/back.png"/>
+        <img src="/img/demo/download/back.png" />
         <span>返回</span>
       </div>
     </div>
@@ -17,29 +17,29 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
     </div>
     <div class="download_body">
       <div class="download_body_item">
-        <img src="/img/demo/download/android.png"/>
+        <img src="/img/demo/download/android.png" />
         <span>Android 移动端</span>
-        <img class="download_body_item_qrcode" src="/img/demo/download/qrcode.png"/>
+        <img class="download_body_item_qrcode" src="/img/demo/download/qrcode.png" />
         <div class="download_body_item_code">
-          <img src="/img/logo_googn.jpg"/>
+          <img src="/img/logo_googn.jpg" />
           <span>扫码下载</span>
         </div>
       </div>
       <div class="download_body_item">
-        <img src="/img/demo/download/ipad.png"/>
+        <img src="/img/demo/download/ipad.png" />
         <span>Pad 平板端</span>
-        <img class="download_body_item_qrcode" src="/img/demo/download/qrcode.png"/>
+        <img class="download_body_item_qrcode" src="/img/demo/download/qrcode.png" />
         <div class="download_body_item_code">
-          <img src="/img/logo_googn.jpg"/>
+          <img src="/img/logo_googn.jpg" />
           <span>扫码下载</span>
         </div>
       </div>
       <div class="download_body_item">
-        <img src="/img/demo/download/dp.png"/>
+        <img src="/img/demo/download/dp.png" />
         <span>智慧屏端</span>
-        <img class="download_body_item_qrcode" src="/img/demo/download/qrcode.png"/>
+        <img class="download_body_item_qrcode" src="/img/demo/download/qrcode.png" />
         <div class="download_body_item_code">
-          <img src="/img/logo_googn.jpg"/>
+          <img src="/img/logo_googn.jpg" />
           <span>扫码下载</span>
         </div>
       </div>
@@ -50,10 +50,10 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
 <script>
 
 definePageMeta({
-  layout: "demo"
+  layout: 'demo'
 })
 export default {
-  name: "demoDownLoad2"
+  name: 'DemoDownLoad2'
 }
 </script>
 

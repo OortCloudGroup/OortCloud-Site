@@ -12,14 +12,14 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
           <n-popover trigger="hover" arrow-point-to-center placement="right">
             <template #trigger>
               <div class="demo_download">
-                <img src="/img/demo/download/android.png"/>
+                <img src="/img/demo/download/android.png" />
                 <span>Android 移动端</span>
               </div>
             </template>
             <template #default>
               <div class="demo_download demo_download_cov">
                 <div class="demo_download_code">
-                  <img src="/img/logo_googn.jpg"/>
+                  <img src="/img/logo_googn.jpg" />
                   <span>扫码下载</span>
                 </div>
               </div>
@@ -28,14 +28,14 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
           <n-popover trigger="hover" arrow-point-to-center placement="right">
             <template #trigger>
               <div class="demo_download">
-                <img src="/img/demo/download/iphone.png"/>
+                <img src="/img/demo/download/iphone.png" />
                 <span>IOS 移动端</span>
               </div>
             </template>
             <template #default>
               <div class="demo_download demo_download_cov">
                 <div class="demo_download_code">
-                  <img src="/img/logo_googn.jpg"/>
+                  <img src="/img/logo_googn.jpg" />
                   <span>扫码下载</span>
                 </div>
               </div>
@@ -44,14 +44,14 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
           <n-popover trigger="hover" arrow-point-to-center placement="right">
             <template #trigger>
               <div class="demo_download">
-                <img src="/img/demo/download/wxmini.png"/>
+                <img src="/img/demo/download/wxmini.png" />
                 <span>微信小程序</span>
               </div>
             </template>
             <template #default>
               <div class="demo_download demo_download_cov">
                 <div class="demo_download_code">
-                  <img src="/img/logo_googn.jpg"/>
+                  <img src="/img/logo_googn.jpg" />
                   <span>扫码体验</span>
                 </div>
               </div>
@@ -59,82 +59,83 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
           </n-popover>
           <a href="http://oort.oortcloudsmart.com:31310/oort/oortcloud-policefront/console_manage/index.html#/" target="_blank">
             <div class="demo_download">
-              <img src="/img/demo/xoa/xoa_zm.png"/>
+              <img src="/img/demo/xoa/xoa_zm.png" />
               <span>桌面端</span>
             </div>
           </a>
           <a href="" target="_blank">
             <div class="demo_download">
-              <img src="/img/demo/xoa/xoa_ql.png"/>
+              <img src="/img/demo/xoa/xoa_ql.png" />
               <span>银河麒麟</span>
             </div>
           </a>
           <a href="" target="_blank">
             <div class="demo_download">
-              <img src="/img/demo/xoa/xoa_uos.png"/>
+              <img src="/img/demo/xoa/xoa_uos.png" />
               <span>统信UOS</span>
             </div>
           </a>
         </div>
         <div class="demo_body_pdf">
           <div class="demo_body_pdf_item" @click="showModal=true">
-            <img src="/img/demo/sp.png"/>
+            <img src="/img/demo/sp.png" />
             <span>观看视频</span>
-            <n-icon  :component="IosArrowForward" />
+            <n-icon :component="IosArrowForward" />
           </div>
           <a href="http://oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/cloud_disk/index.html?accessToken=g02dce3c79a42653f0314ae2e1bdbebd0" target="_blank">
             <div class="demo_body_pdf_item">
-              <img src="/img/demo/pdf_download.png"/>
+              <img src="/img/demo/pdf_download.png" />
               <span>资料下载</span>
-              <n-icon  :component="IosArrowForward" />
+              <n-icon :component="IosArrowForward" />
             </div>
           </a>
         </div>
       </div>
       <div class="demo_body_right">
-        <img src="/img/demo/xoa/xoa_right.png"/>
+        <img src="/img/demo/xoa/xoa_right.png" />
       </div>
     </div>
     <div class="demo_bottom">
-      <div class="demo_bottom_title">基础功能</div>
+      <div class="demo_bottom_title">
+        基础功能
+      </div>
       <div class="demo_bottom_group">
         <div>
-          <img src="/img/demo/xoa/xoa_d1.png"/>
+          <img src="/img/demo/xoa/xoa_d1.png" />
           <span>统一通讯</span>
         </div>
         <div>
-          <img src="/img/demo/xoa/xoa_d2.png"/>
+          <img src="/img/demo/xoa/xoa_d2.png" />
           <span>电子邮箱</span>
         </div>
         <div>
-          <img src="/img/demo/xoa/xoa_d3.png"/>
+          <img src="/img/demo/xoa/xoa_d3.png" />
           <span>公告通知</span>
         </div>
         <div>
-          <img src="/img/demo/xoa/xoa_d4.png"/>
+          <img src="/img/demo/xoa/xoa_d4.png" />
           <span>考勤打卡</span>
         </div>
         <div>
-          <img src="/img/demo/xoa/xoa_d5.png"/>
+          <img src="/img/demo/xoa/xoa_d5.png" />
           <span>行政办公</span>
         </div>
         <div>
-          <img src="/img/demo/xoa/xoa_d6.png"/>
+          <img src="/img/demo/xoa/xoa_d6.png" />
           <span>任务协同</span>
         </div>
         <div>
-          <img src="/img/demo/xoa/xoa_d7.png"/>
+          <img src="/img/demo/xoa/xoa_d7.png" />
           <span>数据安全</span>
         </div>
         <div>
-          <img src="/img/demo/xoa/xoa_d8.png"/>
+          <img src="/img/demo/xoa/xoa_d8.png" />
           <span>零成本运维</span>
         </div>
       </div>
     </div>
-    <n-modal v-model:show="showModal" title="观看视频" preset="dialog" :showIcon="false" style="width: 924px">
-      <iframe height=486 width=864 allowfullscreen :src="videoUrl" frameborder="0">
-      </iframe>
+    <n-modal v-model:show="showModal" title="观看视频" preset="dialog" :show-icon="false" style="width: 924px">
+      <iframe height="486" width="864" allowfullscreen :src="videoUrl" frameborder="0" />
     </n-modal>
   </div>
 </template>
@@ -142,10 +143,10 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
 <script setup lang="ts">
 
 definePageMeta({
-  layout: "demo",
-  title: "XOA数字化办公",
-  subTitle: "演示环境",
-  logo: "/img/demo/xoa/xoa_logo.png"
+  layout: 'demo',
+  title: 'XOA数字化办公',
+  subTitle: '演示环境',
+  logo: '/img/demo/xoa/xoa_logo.png'
 })
 
 useSeoMeta({
@@ -153,15 +154,14 @@ useSeoMeta({
   ogTitle: 'XOA数字化办公-演示环境',
   description: '新一代OA数字化办公生产力工具',
   ogDescription: '新一代OA数字化办公生产力工具',
-  ogImage: '/img/demo/xoa/xoa_logo.png',
+  ogImage: '/img/demo/xoa/xoa_logo.png'
 })
 
-import {  IosArrowForward } from '@vicons/ionicons4'
+import { IosArrowForward } from '@vicons/ionicons4'
 import { NPopover, NIcon, NModal } from 'naive-ui'
 
 const showModal = ref(false)
 const videoUrl = ref('https://v.qq.com/txp/iframe/player.html?vid=h3155cunx94')
-
 
 </script>
 

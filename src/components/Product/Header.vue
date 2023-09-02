@@ -1,8 +1,12 @@
 <template>
   <div class="info">
     <div class="info_left">
-      <p class="icon_name"><Image :src="logo" /><span>{{ name }}</span></p>
-      <p class="title">{{ title }}</p>
+      <p class="icon_name">
+        <Image :src="logo" /><span>{{ name }}</span>
+      </p>
+      <p class="title">
+        {{ title }}
+      </p>
 
       <div class="other">
         <slot name="intro" />
@@ -14,19 +18,19 @@
 
       <div class="review_button">
         <p v-for="(item, index) in buttons" :key="index">
-          <a v-if="item.link" :href="item.link" target="_blank">{{ item.name  }}</a>
+          <a v-if="item.link" :href="item.link" target="_blank">{{ item.name }}</a>
           <n-popover v-else-if="item.img" trigger="hover" :show-arrow="false">
             <template #trigger>
               <a>{{ item.name }}</a>
             </template>
             <Image :src="item.img" style="width: 10rem; height: 10rem;" />
           </n-popover>
-          <a v-else>{{ item.name  }}<Image :src="item.icon" /></a>
+          <a v-else>{{ item.name }}<Image :src="item.icon" /></a>
         </p>
       </div>
     </div>
     <div v-if="isSwiper" class="info_right">
-      <div  class="card-outer">
+      <div class="card-outer">
         <div class="carousel">
           <n-carousel autoplay draggable>
             <Image
@@ -47,7 +51,7 @@
 </template>
 
 <script setup>
-import { NCarousel, NPopover } from 'naive-ui';
+import { NCarousel, NPopover } from 'naive-ui'
 
 defineProps({
   logo: {

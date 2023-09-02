@@ -5,77 +5,89 @@
         <n-tab-pane name="chap1">
           <template #tab>
             <div class="tab">
-              <img v-if="activeTab === 'chap1'" src="/img/about/tab_1_active.png">
-              <img v-else src="/img/about/tab_1.png">
+              <img v-if="activeTab === 'chap1'" src="/img/about/tab_1_active.png" />
+              <img v-else src="/img/about/tab_1.png" />
               <span>企业简介</span>
             </div>
           </template>
           <div class="tab1_content">
             <div class="tab1_content_left">
-              <img src="/img/about/tab1_pic1.png" >
+              <img src="/img/about/tab1_pic1.png" />
             </div>
             <div class="tab1_content_right">
               <div class="tab1_content_right_1">
                 <span class="span1">奥尔特云</span>
-                <img src="/img/about/tab1_pic2.png" style="width: 60%;height: 80%;position: relative;top: -2.5rem;"/>
+                <img src="/img/about/tab1_pic2.png" style="width: 60%;height: 80%;position: relative;top: -2.5rem;" />
               </div>
               <div class="tab1_content_right_2">
                 <span class="span2">公共安全“私有云智能化应用建设解决方案”提供商</span>
               </div>
-              <div class="tab1_content_right_3"></div>
+              <div class="tab1_content_right_3" />
               <div class="tab1_content_right_4">
                 <div>
                   奥尔特云是领先的行业数字化转型、公共安全“私有云智能化应用建设解决方案”提供商，为各行业智能化应用建设提供产品研发、生产、安装和技术服务，引领信息化智能化应用建设模式革新。核心团队由公安行业智能化应用建设资深人士组成，拥有丰富的公安行业研发、咨询、产品、交付、渠道、市场运营经验。
                 </div>
               </div>
-              <div class="tab1_content_right_5">私有云优势</div>
+              <div class="tab1_content_right_5">
+                私有云优势
+              </div>
               <div class="tab1_content_right_6">
                 <span class="span3" style="font-size: 16px; font-weight: 600;">什么是私有云</span>
                 <span class="span4">私有云，是指企业自己使用的云，它所有的服务不是供别人使用，而是供自己内部人员或分支机构使用。私有云的部署比较适合于有众多分支机构的大型企业或政府部门。随着这些大型企业数据中心的集中化，私有云将会成为他们部署IT系统的主流模式。</span>
               </div>
-              <div class="tab1_content_right_7">一、能对数据、安全性提供有效控制</div>
-              <div class="tab1_content_right_7">二、提供更高的服务质量</div>
+              <div class="tab1_content_right_7">
+                一、能对数据、安全性提供有效控制
+              </div>
+              <div class="tab1_content_right_7">
+                二、提供更高的服务质量
+              </div>
               <div class="tab1_content_right_7">
                 三、充分利用现有硬件资源和软件资源
               </div>
-              <div class="tab1_content_right_7">四、不影响现有IT管理的流程</div>
-              <div class="tab1_content_right_7">五、部署方式灵活</div>
+              <div class="tab1_content_right_7">
+                四、不影响现有IT管理的流程
+              </div>
+              <div class="tab1_content_right_7">
+                五、部署方式灵活
+              </div>
             </div>
           </div>
         </n-tab-pane>
         <n-tab-pane name="chap2">
           <template #tab>
             <div class="tab">
-              <img v-if="activeTab === 'chap2'" src="/img/about/tab_2_active.png">
-              <img v-else src="/img/about/tab_2.png">
+              <img v-if="activeTab === 'chap2'" src="/img/about/tab_2_active.png" />
+              <img v-else src="/img/about/tab_2.png" />
               <span>核心竞争力</span>
             </div>
           </template>
           <n-grid x-gap="50" y-gap="50" :cols="2" style="margin-top: 36px">
-            <n-grid-item></n-grid-item>
+            <n-grid-item />
             <n-grid-item>
               <div class="tab1_content_right_1">
                 <span class="span1">奥尔特云</span>
-                <img src="/img/about/tab1_pic2.png" style="width: 60%;height: 80%;position: relative;top: -2.5rem;"/>
+                <img src="/img/about/tab1_pic2.png" style="width: 60%;height: 80%;position: relative;top: -2.5rem;" />
               </div>
               <div class="tab1_content_right_2">
                 <span class="span2">公共安全“私有云智能化应用建设解决方案”提供商</span>
               </div>
-              <div class="tab1_content_right_3"></div>
+              <div class="tab1_content_right_3" />
             </n-grid-item>
             <n-grid-item>
               <div class="box">
                 <div class="box_title">
-                  <img src="/img/about/icon_desktop.png">
+                  <img src="/img/about/icon_desktop.png" />
                   <span>团队在软件研发方法论上的积累</span>
                 </div>
-                <div class="box_content">沉淀基础服务，助力拆烟囱建设。引入微服务化开发工程实践方法论。推进服务化开发建设。践行“开放、分层、解耦、共享”顶层设计，推行微服务化开发新模式，以一个平台跨多网统筹软件开发、支撑全警共建共享，提速信息化手段迭代升级。公安科信部门首次有了做实做强的代码落地的抓手，用新的软件研发管理方法论，切合公安科技信息化的痛点。</div>
+                <div class="box_content">
+                  沉淀基础服务，助力拆烟囱建设。引入微服务化开发工程实践方法论。推进服务化开发建设。践行“开放、分层、解耦、共享”顶层设计，推行微服务化开发新模式，以一个平台跨多网统筹软件开发、支撑全警共建共享，提速信息化手段迭代升级。公安科信部门首次有了做实做强的代码落地的抓手，用新的软件研发管理方法论，切合公安科技信息化的痛点。
+                </div>
               </div>
             </n-grid-item>
             <n-grid-item>
               <div class="box">
                 <div class="box_title">
-                  <img src="/img/about/icon_menu.png">
+                  <img src="/img/about/icon_menu.png" />
                   <span>产品理念</span>
                 </div>
                 <div class="box_content">
@@ -88,7 +100,7 @@
             <n-grid-item>
               <div class="box">
                 <div class="box_title">
-                  <img src="/img/about/icon_point.png">
+                  <img src="/img/about/icon_point.png" />
                   <span>核心优势</span>
                 </div>
                 <div class="box_content">
@@ -104,10 +116,12 @@
             <n-grid-item>
               <div class="box">
                 <div class="box_title">
-                  <img src="/img/about/icon_atom.png">
+                  <img src="/img/about/icon_atom.png" />
                   <span>微服务开发</span>
                 </div>
-                <div class="box_content">我司引入微服务化开发工程实践方法论，引领“分层、解耦”开发思路潮流，“分层、解耦”建设已经成为各地建设刚需甚至准入门槛。成为公安信息化管理抓手，理清了公安科技信息化与各警种业务的合作与分工。</div>
+                <div class="box_content">
+                  我司引入微服务化开发工程实践方法论，引领“分层、解耦”开发思路潮流，“分层、解耦”建设已经成为各地建设刚需甚至准入门槛。成为公安信息化管理抓手，理清了公安科技信息化与各警种业务的合作与分工。
+                </div>
               </div>
             </n-grid-item>
           </n-grid>
@@ -115,28 +129,28 @@
         <n-tab-pane name="chap3">
           <template #tab>
             <div class="tab">
-              <img v-if="activeTab === 'chap3'" src="/img/about/tab_3_active.png">
-              <img v-else src="/img/about/tab_3.png">
+              <img v-if="activeTab === 'chap3'" src="/img/about/tab_3_active.png" />
+              <img v-else src="/img/about/tab_3.png" />
               <span>企业资质与荣誉</span>
             </div>
           </template>
           <n-grid x-gap="40" y-gap="40" :cols="2" style="margin-top: 36px">
             <n-grid-item>
-              <img style="width: 100%" src="/img/about/tab3_pic1.png">
+              <img style="width: 100%" src="/img/about/tab3_pic1.png" />
             </n-grid-item>
             <n-grid-item>
-              <img style="width: 100%" src="/img/about/tab3_pic2.png">
+              <img style="width: 100%" src="/img/about/tab3_pic2.png" />
             </n-grid-item>
             <n-grid-item>
-              <img style="width: 100%" src="/img/about/tab3_pic3.png">
+              <img style="width: 100%" src="/img/about/tab3_pic3.png" />
             </n-grid-item>
             <n-grid-item>
-              <img style="width: 100%" src="/img/about/tab3_pic4.png">
+              <img style="width: 100%" src="/img/about/tab3_pic4.png" />
             </n-grid-item>
           </n-grid>
           <div class="tab3_content">
             <h3>资质图片</h3>
-            <img src="/img/about/tab3_pic5.png" alt="资质图片">
+            <img src="/img/about/tab3_pic5.png" alt="资质图片" />
           </div>
         </n-tab-pane>
       </n-tabs>
@@ -144,7 +158,9 @@
 
     <div class="center">
       <div class="center_div wow fadeInUp">
-      <div class="center_div1">应用行业</div>
+        <div class="center_div1">
+          应用行业
+        </div>
         <div class="center_div2">
           <div class="center_div3">
             <div class="card">
@@ -196,10 +212,12 @@
     </div>
 
     <div>
-      <div id="hezuo"></div>
+      <div id="hezuo" />
       <div class="hezuo">
         <div class="connect" style="flex: 1">
-          <div class="connect_div1">商务合作</div>
+          <div class="connect_div1">
+            商务合作
+          </div>
           <div class="connect_div2">
             <div class="connect_div3 wow fadeInUp">
               <img src="/img/about/erweima.png" />
@@ -207,7 +225,9 @@
             </div>
             <div class="connect_div5 wow fadeInUp">
               <div style="margin-left: 3rem">
-                <div class="div_ie9_2" style="
+                <div
+                  class="div_ie9_2"
+                  style="
                         margin-top: 20px;
                         margin-top: 20px;
                         display: flex;
@@ -215,7 +235,8 @@
                         justify-content: center;
                         align-items: center;
                         line-height: 2rem;
-                      ">
+                      "
+                >
                   <span class="connect_div6">联系邮箱</span>
                   <span class="connect_div7">zhangxuelian@oortcloudsmart.com</span>
                 </div>
@@ -232,7 +253,7 @@
           <div class="contactUs_body_1">
             <!--页面嵌套腾讯地图-->
             <div class="oort_map_area">
-              <div id="map_container" style="width: 100%; height: 100%"></div>
+              <div id="map_container" style="width: 100%; height: 100%" />
             </div>
             <!--<img src="./imgs/map.png">-->
           </div>
@@ -255,7 +276,7 @@
 </template>
 
 <script setup>
-import { NTabs, NTabPane, NGrid, NGridItem } from 'naive-ui';
+import { NTabs, NTabPane, NGrid, NGridItem } from 'naive-ui'
 
 const activeTab = ref('chap1')
 
@@ -269,10 +290,10 @@ onMounted(() => {
 
 const init = () => {
   let myLatlng = new TMap.LatLng(22.602465, 114.14787) // 设置公司地点为地图中心点
-    //定义函数
+  // 定义函数
   let myOptions = {
     zoom: 20, // 地图的缩放级别
-    center: myLatlng, //前面已定义好
+    center: myLatlng, // 前面已定义好
     viewMode: '2D',
     // mapTypeId: TMap.MapTypeId.ROADMAP,
     draggableCursor: 'default', // 地图的默认鼠标指针样式
@@ -281,7 +302,7 @@ const init = () => {
     draggable: true, // 禁止拖动地图
     mapStyleId: 'style1' // 该key绑定的style1对应于经典地图样式，若未绑定将弹出无权限提示窗
   }
-  //获取dom元素添加地图信息
+  // 获取dom元素添加地图信息
   let map = new TMap.Map(
     document.getElementById('map_container'),
     myOptions
@@ -289,10 +310,10 @@ const init = () => {
   // 给中心点一个指示图标
   new TMap.MultiMarker({
     map: map,
-    geometries: [{ //点标注数据数组
-      "position": new TMap.LatLng(22.602465, 114.14787),
-      "properties": {
-          "title": "marker"
+    geometries: [{ // 点标注数据数组
+      'position': new TMap.LatLng(22.602465, 114.14787),
+      'properties': {
+        'title': 'marker'
       }
     }]
   })
@@ -687,8 +708,6 @@ span:hover{
 
 }
 
-
-
 @media only screen and (max-width: 500px){
   .center_div3{
       flex-direction: column!important;
@@ -701,7 +720,6 @@ span:hover{
       margin: auto!important;
   }
 }
-
 
 @media only screen and (min-width: 501px) and (max-width: 768px){
   .card_img{
@@ -740,9 +758,6 @@ span:hover{
       width: 90%!important;
   }
 }
-
-
-
 
 @media only screen and (min-width: 769px) and (max-width: 900px){
 /*.center_div3{*/

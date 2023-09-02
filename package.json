@@ -6,13 +6,21 @@
     "build-fix-poper-not-found-bug": "nuxi build && mkdir .output/server/node_modules/@popperjs && mv .output/server/node_modules/@sxzz/popperjs-es .output/server/node_modules/@popperjs/core",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "prepare": "husky install",
+    "lint:eslint": "eslint --cache --max-warnings 10 \"src/**/*.{vue,js}\" --fix",
+    "lint": "yarn lint:eslint"
   },
   "devDependencies": {
     "@types/node": "^20.5.0",
     "nuxt": "^3.7.0"
   },
   "dependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.0",
+    "husky": "^8.0.3",
     "@css-render/vue3-ssr": "^0.15.12",
     "@vicons/ionicons4": "^0.12.0",
     "element-plus": "^2.3.1",

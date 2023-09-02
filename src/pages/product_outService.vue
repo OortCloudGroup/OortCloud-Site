@@ -5,7 +5,9 @@
         <!-- 档案整理 -->
         <div class="epiboly_file">
           <div class="epiboly_file_header">
-            <h3 class="epiboly_file_title">档案整理</h3>
+            <h3 class="epiboly_file_title">
+              档案整理
+            </h3>
           </div>
 
           <div class="epiboly_file_content">
@@ -18,41 +20,61 @@
 
         <!-- 特点及优势 -->
         <div class="epiboly_advantage">
-          <h3 class="epiboly_advantage_title">特点及优势</h3>
+          <h3 class="epiboly_advantage_title">
+            特点及优势
+          </h3>
           <div class="epiboly_advantage_content">
             <div class="advantage_content_item">
-              <p class="advantage_content_item_title">专业的团队</p>
-              <div class="advantage_content_item_text">公司拥有一批从事档案工作十多年，具有丰富项目经验和专业业务能力的实施团队。</div>
+              <p class="advantage_content_item_title">
+                专业的团队
+              </p>
+              <div class="advantage_content_item_text">
+                公司拥有一批从事档案工作十多年，具有丰富项目经验和专业业务能力的实施团队。
+              </div>
             </div>
             <div class="advantage_content_item">
-              <p class="advantage_content_item_title">规范的流程体系</p>
-              <div class="advantage_content_item_text">公司通过多年的项目实施，制定了规范标准的项目管理流程、加工流程等体系，并严格执行。</div>
+              <p class="advantage_content_item_title">
+                规范的流程体系
+              </p>
+              <div class="advantage_content_item_text">
+                公司通过多年的项目实施，制定了规范标准的项目管理流程、加工流程等体系，并严格执行。
+              </div>
             </div>
             <div class="advantage_content_item">
-              <p class="advantage_content_item_title">优质的服务</p>
-              <div class="advantage_content_item_text">公司为用户提供安全、专业、高校的优质服务，让用户满意。</div>
+              <p class="advantage_content_item_title">
+                优质的服务
+              </p>
+              <div class="advantage_content_item_text">
+                公司为用户提供安全、专业、高校的优质服务，让用户满意。
+              </div>
             </div>
           </div>
         </div>
 
         <!-- 流程梳理 -->
         <div class="epiboly_process">
-          <h3 class="epiboly_process_title">流程整理</h3>
+          <h3 class="epiboly_process_title">
+            流程整理
+          </h3>
           <div class="epiboly_process_content">
-            <img class="epiboly_process_img" src="/img/product/out_service/process.png" alt="">
+            <img class="epiboly_process_img" src="/img/product/out_service/process.png" alt="" />
           </div>
         </div>
 
         <!-- description -->
         <div class="description">
-          <img src="/img/product/out_service/advantage.png" class="description_img" alt="">
+          <img src="/img/product/out_service/advantage.png" class="description_img" alt="" />
         </div>
 
         <!-- 数字化加工 -->
         <div class="epiboly_number">
           <div class="epiboly_number_header">
-            <h3 class="epiboly_number_title">数字化加工</h3>
-            <h3 class="epiboly_number_mirage">数字化加工</h3>
+            <h3 class="epiboly_number_title">
+              数字化加工
+            </h3>
+            <h3 class="epiboly_number_mirage">
+              数字化加工
+            </h3>
           </div>
           <div class="epiboly_number_content">
             <div class="epiboly_number_content_text">
@@ -66,7 +88,8 @@
 
               <p style="margin-top: 20px;">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我司严格遵循《档案服务外包工作规范》DA/T68-2020、《档案著录规则》DA/T18-1999、《纸质档案数字化规范》DA/T31-2017、《纸质归档文件装订规范》DA/T
-                69-2018等国家及各行业的相关标准和规范。</p>
+                69-2018等国家及各行业的相关标准和规范。
+              </p>
             </div>
             <img class="epiboly_number_content_img" src="/img/product/out_service/number.png" />
           </div>
@@ -74,49 +97,72 @@
 
         <!-- 优势 -->
         <div class="epiboly_strengths">
-          <h3 class="strengths_title">优势</h3>
+          <h3 class="strengths_title">
+            优势
+          </h3>
           <div class="strengths_content_top">
             <div class="strengths_content_item">
-              <p class="advantage_content_item_title">专业的团队</p>
-              <div class="advantage_content_item_text">公司拥有一批从事档案工作十多年，具有丰富项目经验和专业业务能力的实施团队。</div>
+              <p class="advantage_content_item_title">
+                专业的团队
+              </p>
+              <div class="advantage_content_item_text">
+                公司拥有一批从事档案工作十多年，具有丰富项目经验和专业业务能力的实施团队。
+              </div>
             </div>
             <div class="strengths_content_item" style="margin-left: 20px;">
-              <p class="advantage_content_item_title">优质的服务</p>
-              <div class="advantage_content_item_text">公司为用户提供安全、专业、高校的优质服务，让用户满意。</div>
+              <p class="advantage_content_item_title">
+                优质的服务
+              </p>
+              <div class="advantage_content_item_text">
+                公司为用户提供安全、专业、高校的优质服务，让用户满意。
+              </div>
             </div>
           </div>
           <div class="strengths_content_bot">
             <div class="strengths_content_item">
-              <p class="advantage_content_item_title">专业的团队</p>
-              <div class="advantage_content_item_text">公司拥有一批从事档案工作十多年，具有丰富项目经验和专业业务能力的实施团队。</div>
+              <p class="advantage_content_item_title">
+                专业的团队
+              </p>
+              <div class="advantage_content_item_text">
+                公司拥有一批从事档案工作十多年，具有丰富项目经验和专业业务能力的实施团队。
+              </div>
             </div>
             <div class="strengths_content_item">
-              <p class="advantage_content_item_title">规范的流程体系</p>
-              <div class="advantage_content_item_text">公司通过多年的项目实施，制定了规范标准的项目管理流程、加工流程等体系，并严格执行。</div>
+              <p class="advantage_content_item_title">
+                规范的流程体系
+              </p>
+              <div class="advantage_content_item_text">
+                公司通过多年的项目实施，制定了规范标准的项目管理流程、加工流程等体系，并严格执行。
+              </div>
             </div>
             <div class="strengths_content_item">
-              <p class="advantage_content_item_title">优质的服务</p>
-              <div class="advantage_content_item_text">公司为用户提供安全、专业、高校的优质服务，让用户满意。</div>
+              <p class="advantage_content_item_title">
+                优质的服务
+              </p>
+              <div class="advantage_content_item_text">
+                公司为用户提供安全、专业、高校的优质服务，让用户满意。
+              </div>
             </div>
           </div>
         </div>
-
-
       </div>
       <!-- 加工流程 -->
       <div class="epiboly_flow">
         <img src="/img/product/out_service/flow.png" class="epiboly_flow_img" />
-        <img src="/img/product/out_service/flow_top.png" class="flow_top_img" alt="">
-        <img src="/img/product/out_service/flow_bot.png" class="flow_bot_img" alt="">
+        <img src="/img/product/out_service/flow_top.png" class="flow_top_img" alt="" />
+        <img src="/img/product/out_service/flow_bot.png" class="flow_bot_img" alt="" />
       </div>
-
 
       <div class="epiboly_body">
         <!-- 档案信息化咨询(css用数字化加工) -->
         <div class="epiboly_number">
           <div class="epiboly_number_header">
-            <h3 class="epiboly_number_title">档案信息化咨询</h3>
-            <h3 class="epiboly_number_mirage">档案信息化咨询</h3>
+            <h3 class="epiboly_number_title">
+              档案信息化咨询
+            </h3>
+            <h3 class="epiboly_number_mirage">
+              档案信息化咨询
+            </h3>
           </div>
           <div class="epiboly_number_content">
             <div class="epiboly_number_content_text">
@@ -130,7 +176,8 @@
 
               <p style="margin-top: 20px;">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我司严格遵循《档案服务外包工作规范》DA/T68-2020、《档案著录规则》DA/T18-1999、《纸质档案数字化规范》DA/T31-2017、《纸质归档文件装订规范》DA/T
-                69-2018等国家及各行业的相关标准和规范。</p>
+                69-2018等国家及各行业的相关标准和规范。
+              </p>
             </div>
             <img class="epiboly_number_content_img" src="/img/product/out_service/file_drawer.png" />
           </div>
@@ -138,42 +185,72 @@
 
         <!-- 服务内容 -->
         <div class="epiboly_server">
-          <h3 class="epiboly_server_title">服务内容</h3>
+          <h3 class="epiboly_server_title">
+            服务内容
+          </h3>
           <ul class="epiboly_server_ul">
             <li class="epiboly_server_li">
-              <img class="epiboly_server_li_icon" src="/img/product/out_service/file_work.png" alt="">
-              <p class="epiboly_server_li_title">档案工作体系设计服务</p>
-              <p class="epiboly_server_li_text">提供档案工作战略规划编制、档案工作机制策划、档案管理制度和业务规范编制、档案工作流程设计等服务。</p>
+              <img class="epiboly_server_li_icon" src="/img/product/out_service/file_work.png" alt="" />
+              <p class="epiboly_server_li_title">
+                档案工作体系设计服务
+              </p>
+              <p class="epiboly_server_li_text">
+                提供档案工作战略规划编制、档案工作机制策划、档案管理制度和业务规范编制、档案工作流程设计等服务。
+              </p>
             </li>
             <li class="epiboly_server_li">
-              <img class="epiboly_server_li_icon" src="/img/product/out_service/server_file_mange.png" alt="">
-              <p class="epiboly_server_li_title">档案管理方案设计服务</p>
-              <p class="epiboly_server_li_text">提供文件资料的收集、整理、鉴定、保管、查询、统计等管理方案咨询服务。</p>
+              <img class="epiboly_server_li_icon" src="/img/product/out_service/server_file_mange.png" alt="" />
+              <p class="epiboly_server_li_title">
+                档案管理方案设计服务
+              </p>
+              <p class="epiboly_server_li_text">
+                提供文件资料的收集、整理、鉴定、保管、查询、统计等管理方案咨询服务。
+              </p>
             </li>
             <li class="epiboly_server_li">
-              <img class="epiboly_server_li_icon" src="/img/product/out_service/filen_umber.png" alt="">
-              <p class="epiboly_server_li_title">档案信息开发利用方案设计服务</p>
-              <p class="epiboly_server_li_text">提供档案编研成果、开展档案展陈及其他档案利用形式的设计方案等服务。</p>
+              <img class="epiboly_server_li_icon" src="/img/product/out_service/filen_umber.png" alt="" />
+              <p class="epiboly_server_li_title">
+                档案信息开发利用方案设计服务
+              </p>
+              <p class="epiboly_server_li_text">
+                提供档案编研成果、开展档案展陈及其他档案利用形式的设计方案等服务。
+              </p>
             </li>
             <li class="epiboly_server_li">
-              <img class="epiboly_server_li_icon" src="/img/product/out_service/server_computed.png" alt="">
-              <p class="epiboly_server_li_title">档案信息化方案设计服务</p>
-              <p class="epiboly_server_li_text">提供档案信息化建设规划设计、档案信息化实施方案设计、电子档案管理系统需求分析等服务。</p>
+              <img class="epiboly_server_li_icon" src="/img/product/out_service/server_computed.png" alt="" />
+              <p class="epiboly_server_li_title">
+                档案信息化方案设计服务
+              </p>
+              <p class="epiboly_server_li_text">
+                提供档案信息化建设规划设计、档案信息化实施方案设计、电子档案管理系统需求分析等服务。
+              </p>
             </li>
             <li class="epiboly_server_li">
-              <img class="epiboly_server_li_icon" src="/img/product/out_service/server_program.png" alt="">
-              <p class="epiboly_server_li_title">档案服务外包项目方案设计服务</p>
-              <p class="epiboly_server_li_text">提供档案服务外包项目在服务内容、质量、预算、风险防范等方面设计方案或制作招标文书。</p>
+              <img class="epiboly_server_li_icon" src="/img/product/out_service/server_program.png" alt="" />
+              <p class="epiboly_server_li_title">
+                档案服务外包项目方案设计服务
+              </p>
+              <p class="epiboly_server_li_text">
+                提供档案服务外包项目在服务内容、质量、预算、风险防范等方面设计方案或制作招标文书。
+              </p>
             </li>
             <li class="epiboly_server_li">
-              <img class="epiboly_server_li_icon" src="/img/product/out_service/serve_earpiece.png" alt="">
-              <p class="epiboly_server_li_title">档案工作用房建设咨询服务</p>
-              <p class="epiboly_server_li_text">开展档案库房、技术用房、利用用房等建设选址、加固改造、功能布局和设施设备配置可行性研究或提供方案等服务。</p>
+              <img class="epiboly_server_li_icon" src="/img/product/out_service/serve_earpiece.png" alt="" />
+              <p class="epiboly_server_li_title">
+                档案工作用房建设咨询服务
+              </p>
+              <p class="epiboly_server_li_text">
+                开展档案库房、技术用房、利用用房等建设选址、加固改造、功能布局和设施设备配置可行性研究或提供方案等服务。
+              </p>
             </li>
             <li class="epiboly_server_li">
-              <img class="epiboly_server_li_icon" src="/img/product/out_service/other.png" alt="">
-              <p class="epiboly_server_li_title">其他服务</p>
-              <p class="epiboly_server_li_text">根据用户需要提供的其他档案管理咨询服务。</p>
+              <img class="epiboly_server_li_icon" src="/img/product/out_service/other.png" alt="" />
+              <p class="epiboly_server_li_title">
+                其他服务
+              </p>
+              <p class="epiboly_server_li_text">
+                根据用户需要提供的其他档案管理咨询服务。
+              </p>
             </li>
           </ul>
         </div>
@@ -361,7 +438,7 @@ definePageMeta({
     justify-content: space-between;
     align-items: center;
     margin-bottom: 120px;
-    
+
 }
 
 .epiboly_number_content_text{
@@ -404,7 +481,7 @@ definePageMeta({
     height: 220px;
     background-image: url('/img/product/out_service/advantageitem.png');
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
     box-sizing: border-box;
 }
 /* <!-- 优势结束 --> */

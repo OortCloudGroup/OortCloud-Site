@@ -39,16 +39,22 @@
             <span>设备管家--MDM移动终端安全管理平台</span>
           </div>
         </div>
-        <a href="http://map.oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/console_manage/index.html#/"
-          class="cd_bottom_list_item" target="_blank">
+        <a
+          href="http://map.oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/console_manage/index.html#/"
+          class="cd_bottom_list_item"
+          target="_blank"
+        >
           <img src="/img/home/xl_6.png" />
           <div class="cd_bottom_list_item_right">
             <span>定制手机型安全终端</span>
             <span>手机终端安全加固组件与刷机服务包</span>
           </div>
         </a>
-        <a href="http://map.oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/console_manage/index.html#/"
-          class="cd_bottom_list_item" target="_blank">
+        <a
+          href="http://map.oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/console_manage/index.html#/"
+          class="cd_bottom_list_item"
+          target="_blank"
+        >
           <img src="/img/home/xl_7.png" />
           <div class="cd_bottom_list_item_right">
             <span>定制安全Pad终端</span>
@@ -57,8 +63,10 @@
         </a>
         <NuxtLink to="/more" class="cd_bottom_list_item">
           <img src="/img/home/gd_1.png" />
-          <div class="cd_bottom_list_item_right"
-            style="display: flex; flex-direction: row; align-items: center; margin-left:1.125rem">
+          <div
+            class="cd_bottom_list_item_right"
+            style="display: flex; flex-direction: row; align-items: center; margin-left:1.125rem"
+          >
             <span style="color: #2e4bf1">更多</span>
             <img src="/img/home/gd_2.png" style="width: 1rem; height:1rem" />
           </div>
@@ -77,13 +85,21 @@
           :swipes="headerContent.swipes"
         >
           <template #intro>
-            <p class="radius_info"><span>30分钟</span>&nbsp;把小程序搬进 App</p><br />
-            <p class="radius_info"><span>30分钟</span>&nbsp;在 App 里运行小程序</p><br />
-            <p class="radius_info"><span>30分钟</span>&nbsp;开启 App 敏捷开发新模式</p>
+            <p class="radius_info">
+              <span>30分钟</span>&nbsp;把小程序搬进 App
+            </p><br />
+            <p class="radius_info">
+              <span>30分钟</span>&nbsp;在 App 里运行小程序
+            </p><br />
+            <p class="radius_info">
+              <span>30分钟</span>&nbsp;开启 App 敏捷开发新模式
+            </p>
           </template>
           <template #desc>
-            <p class="desc">* <span style="color: #2038EC;">小程序
-            </span>是指包括H5应用、原生混合应用、MUI、uni-app小程序、VUE、PC-Web、PC原生等技术开发的轻应用，满足个性化需求快速迭代业务场景</p>
+            <p class="desc">
+              * <span style="color: #2038EC;">小程序
+              </span>是指包括H5应用、原生混合应用、MUI、uni-app小程序、VUE、PC-Web、PC原生等技术开发的轻应用，满足个性化需求快速迭代业务场景
+            </p>
           </template>
         </ProductHeader>
 
@@ -95,7 +111,7 @@
               <p>天然具备跨平台连接，敏捷、安全开发的特性，学习门槛低，包含H5应用、原生混合应用、MUI、uni-app小程序、VUE、PC-Web、PC原生等技术开发的轻应用，满足个性化需求快速迭代业务场景。</p>
             </div>
             <div class="right">
-              <img src="/img/product/portal/item1.png">
+              <img src="/img/product/portal/item1.png" />
             </div>
           </div>
           <div class="item_2">
@@ -104,7 +120,7 @@
               <p>遵循H5、VUE、MUI、uni-app、原生混合应用等主流小程序开发标准与规范，无需额外学习成本，对原有遗留的应用系统上移动端提供最优解决方案。</p>
             </div>
             <div class="right_1">
-              <img src="/img/product/portal/item2.png">
+              <img src="/img/product/portal/item2.png" />
             </div>
           </div>
           <div class="item_2">
@@ -113,23 +129,28 @@
               <p>遵循H5、VUE、MUI、uni-企业可根据自己的业务灵活配置 API 和第三方 SDK 插件，同时提供开放的 API 接口，支持二次开发。</p>
             </div>
             <div class="right_2">
-              <img src="/img/product/portal/item3.png">
+              <img src="/img/product/portal/item3.png" />
             </div>
           </div>
           <div class="item_2">
             <div class="left">
               <p>提供完善开发测试 环境与支持文档</p>
-              <p>布」工具，深度提升需求迭代速度，并提供H5应用、原生混合应用、MUI、uni-app小程序、VUE、PC-Web、PC原生等开发模板与Demo、组件、UI/UE规范等完备的开发者指引文档，保障开发流程。
+              <p>
+                布」工具，深度提升需求迭代速度，并提供H5应用、原生混合应用、MUI、uni-app小程序、VUE、PC-Web、PC原生等开发模板与Demo、组件、UI/UE规范等完备的开发者指引文档，保障开发流程。
               </p>
             </div>
             <div class="right_3">
-              <img src="/img/product/portal/item4.png">
+              <img src="/img/product/portal/item4.png" />
             </div>
           </div>
         </div>
         <div class="product_detail2">
-          <p class="title_1">强大的容器技术研发能力 提供安全稳定的产品</p>
-          <p class="title_2">基于「云原生」底层架构实现，足够且必要的架构设计，支撑产品高可用</p>
+          <p class="title_1">
+            强大的容器技术研发能力 提供安全稳定的产品
+          </p>
+          <p class="title_2">
+            基于「云原生」底层架构实现，足够且必要的架构设计，支撑产品高可用
+          </p>
           <div class="card_container">
             <div class="container_1">
               <div class="card_1">
@@ -156,30 +177,40 @@
               </div>
             </div>
           </div>
-          <p class="title_3">支持多种使用与部署方案，开箱即用</p>
-          <p class="title_4">提供多种部署与安装方式，安装升级方法简易，放心运转真实业务数据。
-            支持对接内网统一用户、统一认证、统一授权体系</p>
+          <p class="title_3">
+            支持多种使用与部署方案，开箱即用
+          </p>
+          <p class="title_4">
+            提供多种部署与安装方式，安装升级方法简易，放心运转真实业务数据。
+            支持对接内网统一用户、统一认证、统一授权体系
+          </p>
         </div>
         <div class="product_detail3">
           <p>开发小程序，也可以是件「愉悦」的事儿</p>
-          <p style="font-size: 24px;
+          <p
+            style="font-size: 24px;
                     color: #717781;
                     letter-spacing: 2.32px;
                     text-align: center;
                     font-weight: 600;
-                    width: 925px;">通过小程序「开发」「调试」「发布」工具，调试APP即刻开始体验小程序的代码开发与移动体验</p>
+                    width: 925px;"
+          >
+            通过小程序「开发」「调试」「发布」工具，调试APP即刻开始体验小程序的代码开发与移动体验
+          </p>
           <div class="card_container">
             <div>
-              <img src="/img/product/portal/detail3_1.png">
+              <img src="/img/product/portal/detail3_1.png" />
               <p>提供SDK及集成指南</p>
             </div>
             <div>
-              <img src="/img/product/portal/detail3_2.png">
+              <img src="/img/product/portal/detail3_2.png" />
               <p>提供测试开发调试环境</p>
             </div>
           </div>
-          <p class="product_detail3_p1" style="width: 970px">*<span style="color: #2038EC">小程序</span>
-            是指包括H5应用、原生混合应用、MUI、uni-app小程序、VUE、PC-Web、PC原生等技术开发的轻应用，满足个性化需求快速迭代业务场景</p>
+          <p class="product_detail3_p1" style="width: 970px">
+            *<span style="color: #2038EC">小程序</span>
+            是指包括H5应用、原生混合应用、MUI、uni-app小程序、VUE、PC-Web、PC原生等技术开发的轻应用，满足个性化需求快速迭代业务场景
+          </p>
           <div class="product_detail3_div1">
             <p>把想法快速变成现实，我们「都」准备好了</p>
             <p>不论规模与性质如何，企业都能通过小程序快速连接用户与业务</p>
@@ -200,8 +231,10 @@
             <n-grid-item>
               <div class="card">
                 <p>前端服务化应用运行环境</p>
-                <p>一个能运行小程序的安全沙箱。通过单独运行门户App或嵌入式 SDK 的形态让移动端软件、PC
-                  端软件或物联网设备软件在内的宿主环境集成；轻应用运行安全沙箱支持包括H5应用、原生混合应用、MUI、uni-app小程序、VUE、PC-Web、PC原生等技术开发的轻应用。</p>
+                <p>
+                  一个能运行小程序的安全沙箱。通过单独运行门户App或嵌入式 SDK 的形态让移动端软件、PC
+                  端软件或物联网设备软件在内的宿主环境集成；轻应用运行安全沙箱支持包括H5应用、原生混合应用、MUI、uni-app小程序、VUE、PC-Web、PC原生等技术开发的轻应用。
+                </p>
               </div>
             </n-grid-item>
             <n-grid-item>
@@ -215,20 +248,26 @@
                 <p>前端服务化能力集合</p>
                 <p>
                   一系列的原生服务化能力支持包（个性化需求快速迭代底座，包括需要在轻应用中调用核心层中的原生能力如身份证识别、车牌识别、OCR、位置信息等原生能力的集合）。以及统一消息推送服务，移动数据分析，应用安全加固等，向开发者提供更加全面的移动研发中台，也便于对已有
-                  App 进行重构。</p>
+                  App 进行重构。
+                </p>
               </div>
             </n-grid-item>
           </n-grid>
-
         </div>
       </div>
 
       <div id="用户案例">
         <div class="user">
-          <p class="title">用户案例</p>
+          <p class="title">
+            用户案例
+          </p>
           <div class="item">
-            <p class="second_title">XXX GA局移动警务门户与应用开发支撑平台</p>
-            <p class="third_title">移动警务门户和应用市场，应用开发支撑平台</p>
+            <p class="second_title">
+              XXX GA局移动警务门户与应用开发支撑平台
+            </p>
+            <p class="third_title">
+              移动警务门户和应用市场，应用开发支撑平台
+            </p>
             <div>
               <p>一、建设移动警务门户应用，集中展示业务相关内容，应能包括新闻、通知公告、政策法规、工作排班、内部管理、党建工作等相关内容。</p>
               <p>
@@ -254,8 +293,12 @@
             </div>
           </div>
           <div class="item">
-            <p class="second_title">移动警务门户与应用开发支撑平台</p>
-            <p class="third_title">功能包括：</p>
+            <p class="second_title">
+              移动警务门户与应用开发支撑平台
+            </p>
+            <p class="third_title">
+              功能包括：
+            </p>
             <div>
               <p>一、移动中台</p>
               <p>
@@ -321,8 +364,8 @@
 import { NGrid, NGridItem } from 'naive-ui'
 
 definePageMeta({
-  layout: "product",
-});
+  layout: 'product'
+})
 
 const headerContent = ref({
   logo: '/img/product/portal/ic_portal.png',

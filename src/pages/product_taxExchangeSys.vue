@@ -11,10 +11,12 @@
     />
 
     <div class="product_intro_2">
-      <img src="/img/product/tax_exchange_sys/banner2.png" alt="">
+      <img src="/img/product/tax_exchange_sys/banner2.png" alt="" />
     </div>
     <div class="product_intro_3">
-      <p class="app">功能描述</p>
+      <p class="app">
+        功能描述
+      </p>
       <table class="table_1">
         <tr class="col">
           <td>文件清理</td>
@@ -55,7 +57,9 @@
       </table>
     </div>
     <div class="product_intro_4">
-      <p class="title">「产品功能」</p>
+      <p class="title">
+        「产品功能」
+      </p>
       <div class="intro">
         <div class="item">
           <p>简单易用</p>
@@ -67,8 +71,10 @@
         </div>
         <div class="item">
           <p>不运行、不存储</p>
-          <p>摆渡机设有安全机制，确保不运行除了系统预置之外的任何程序，禁止打开或运行任何格式的文件（如
-            office/txt/exe等），只能基于文件的上传操作；且摆渡机在交换过程中除了保留交换的日志记录外，不保留任何交换文件的内容。</p>
+          <p>
+            摆渡机设有安全机制，确保不运行除了系统预置之外的任何程序，禁止打开或运行任何格式的文件（如
+            office/txt/exe等），只能基于文件的上传操作；且摆渡机在交换过程中除了保留交换的日志记录外，不保留任何交换文件的内容。
+          </p>
         </div>
         <div class="item">
           <p>不中毒</p>
@@ -85,25 +91,33 @@
       </div>
     </div>
     <div class="product_intro_5">
-      <p class="title">「产品价值」</p>
+      <p class="title">
+        「产品价值」
+      </p>
       <div class="main1">
-        <p class="paragraph">通过实施此套税务数据安全交换系统，可以搭建税务系统内网与外部（通过移动存储介质 ) 数据安全交换的桥梁
-          ，很好地解决税务内网与外网间数据安全交换的问题，防止病毒木马进入内网，提高办税效率和服务质量，提升满意度。</p>
-        <img src="/img/product/tax_exchange_sys/intro_01.png">
+        <p class="paragraph">
+          通过实施此套税务数据安全交换系统，可以搭建税务系统内网与外部（通过移动存储介质 ) 数据安全交换的桥梁
+          ，很好地解决税务内网与外网间数据安全交换的问题，防止病毒木马进入内网，提高办税效率和服务质量，提升满意度。
+        </p>
+        <img src="/img/product/tax_exchange_sys/intro_01.png" />
       </div>
       <div class="main2">
         <div class="left">
-          <div class="paragraph"><img src="/img/product/tax_exchange_sys/1.png"><span>自动对上传的文件进行病毒木马 查杀及敏感内容检测，
-              不仅降低了内网病毒减染，还防止了敏感文件外泄。</span></div>
-          <div class="paragraph"><img src="/img/product/tax_exchange_sys/2.png"><span>税务人员通过业务编号或账号密码即可轻松获取相应文
+          <div class="paragraph">
+            <img src="/img/product/tax_exchange_sys/1.png" /><span>自动对上传的文件进行病毒木马 查杀及敏感内容检测，
+              不仅降低了内网病毒减染，还防止了敏感文件外泄。</span>
+          </div>
+          <div class="paragraph">
+            <img src="/img/product/tax_exchange_sys/2.png" /><span>税务人员通过业务编号或账号密码即可轻松获取相应文
               件，减轻税务人员的工作量，提高了工作效率。</span>
           </div>
-          <div class="paragraph"><img src="/img/product/tax_exchange_sys/3.png"><span>系统提供详细的日志信息、精细的统计数据、全局的区
+          <div class="paragraph">
+            <img src="/img/product/tax_exchange_sys/3.png" /><span>系统提供详细的日志信息、精细的统计数据、全局的区
               域管理、 实时的监控告警等管理手段，也让管理变得更
               加便捷、规范。</span>
           </div>
         </div>
-        <img src="/img/product/tax_exchange_sys/intro_02.png">
+        <img src="/img/product/tax_exchange_sys/intro_02.png" />
       </div>
     </div>
 
@@ -114,7 +128,7 @@
 
 <script setup>
 definePageMeta({
-  layout: "product"
+  layout: 'product'
 })
 
 const headerContent = ref({

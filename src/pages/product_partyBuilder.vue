@@ -14,32 +14,47 @@
         <div class="product_intro_2">
           <div class="item1">
             <div style="width: 560px; margin-right: 140px">
-              <p class="title">学习标准化、规范化</p>
-              <p class="paragraph">组织部门可以发布学习资料，通过学习任务及考核任务发布工具，实时检验所属干警的学习和掌握情况，查漏缺补，快速调整学习指导方案，达到更好的学习效果。</p>
+              <p class="title">
+                学习标准化、规范化
+              </p>
+              <p class="paragraph">
+                组织部门可以发布学习资料，通过学习任务及考核任务发布工具，实时检验所属干警的学习和掌握情况，查漏缺补，快速调整学习指导方案，达到更好的学习效果。
+              </p>
             </div>
-            <img src="/img/product/party_builder/item1.png">
+            <img src="/img/product/party_builder/item1.png" />
           </div>
           <div class="item2">
             <div style="width: 560px; margin-right: 140px">
-              <p class="title">学习时间人性化安排充分利用广大人员的碎片化时间</p>
-              <p class="paragraph">组织部门可以发布学习资料，通过学习任务及考核任务发布工具，实时检验所属干警的学习和掌握情况，查漏缺补，快速调整学习指导方案，达到更好的学习效果。</p>
+              <p class="title">
+                学习时间人性化安排充分利用广大人员的碎片化时间
+              </p>
+              <p class="paragraph">
+                组织部门可以发布学习资料，通过学习任务及考核任务发布工具，实时检验所属干警的学习和掌握情况，查漏缺补，快速调整学习指导方案，达到更好的学习效果。
+              </p>
             </div>
-            <img src="/img/product/party_builder/item2.png">
+            <img src="/img/product/party_builder/item2.png" />
           </div>
           <div class="item3">
             <div style="width: 560px; margin-right: 140px">
-              <p class="title">无障碍沟通</p>
-              <p class="paragraph">广大人员可以在学习过程中，通过领导信箱和组织领导进行沟通学习和工作中遇到的问题及想法，同时也便于及时掌握底层人员的心态想法，更加有利于整体学习整顿工作的开展。</p>
+              <p class="title">
+                无障碍沟通
+              </p>
+              <p class="paragraph">
+                广大人员可以在学习过程中，通过领导信箱和组织领导进行沟通学习和工作中遇到的问题及想法，同时也便于及时掌握底层人员的心态想法，更加有利于整体学习整顿工作的开展。
+              </p>
             </div>
-            <img src="/img/product/party_builder/item3.png">
+            <img src="/img/product/party_builder/item3.png" />
           </div>
           <div class="item4">
             <div style="width: 560px; margin-right: 140px">
-              <p class="title">每日一练、每日一测</p>
-              <p class="paragraph">类似学习强国App的考试模块，提供单选题、多选题、填空题等答题形式。内置题库、题库出题方式、试卷形成方式等功能。以及排行榜、每日一测、每日一考、每周一考、党史学习等考试模块。
+              <p class="title">
+                每日一练、每日一测
+              </p>
+              <p class="paragraph">
+                类似学习强国App的考试模块，提供单选题、多选题、填空题等答题形式。内置题库、题库出题方式、试卷形成方式等功能。以及排行榜、每日一测、每日一考、每周一考、党史学习等考试模块。
               </p>
             </div>
-            <img src="/img/product/party_builder/item4.png">
+            <img src="/img/product/party_builder/item4.png" />
           </div>
         </div>
         <div class="product_intro_3">
@@ -69,8 +84,12 @@
           </div>
         </div>
         <div class="product_intro_4">
-          <p class="title">「软件功能」</p>
-          <p class="app">App端</p>
+          <p class="title">
+            「软件功能」
+          </p>
+          <p class="app">
+            App端
+          </p>
           <table class="table_1">
             <tr class="col">
               <td>学习园地</td>
@@ -121,7 +140,9 @@
               <td>可以将自己喜欢的文章，学习内容，工作动态等进行收藏，快速查找</td>
             </tr>
           </table>
-          <p class="pc">管理后台端</p>
+          <p class="pc">
+            管理后台端
+          </p>
           <table class="table_2">
             <tr class="col">
               <td>人员管理</td>
@@ -141,8 +162,10 @@
           </table>
         </div>
       </div>
-      <div class="user" id="用户案例">
-        <p class="title">用户案例</p>
+      <div id="用户案例" class="user">
+        <p class="title">
+          用户案例
+        </p>
         <div class="item">
           <p class="second_title">
             XXX市 GA局在线党建云课堂
@@ -183,8 +206,10 @@
             <br />
             <p>三、建设内容</p>
             <p>教育整顿App应用平台是一个移动端视频学习平台，参照互联网思维倾力打造的警务内网在线实用技能学习平台，主要为学习者提供海量、优质的课程点播学习，知识考核等功能。教育整顿App应用平台的宗旨是，为每一位想真真正正学到些实用知识、技能的学习者，提供贴心的一站式学习服务。</p>
-            <p>为将各单位专业技术培训视频及理论思想学习，重要会议记录视频按类别、时间、热度等收集展示，结合点赞、评论功能增强互动性。同时设有统计查看学习记录及排名展示所有用户学习“成绩”的功能，增强学习效果。便利：碎片化学习，提升工作人员业务能力。
-              详细建设内容如下：</p>
+            <p>
+              为将各单位专业技术培训视频及理论思想学习，重要会议记录视频按类别、时间、热度等收集展示，结合点赞、评论功能增强互动性。同时设有统计查看学习记录及排名展示所有用户学习“成绩”的功能，增强学习效果。便利：碎片化学习，提升工作人员业务能力。
+              详细建设内容如下：
+            </p>
             <p>1、通用功能</p>
             <p>最底部为四栏目从作到右依次为：学习，每日一测、排行榜、我的。交互效果参考学习强国。进入app时默认展示“学习”栏目。</p>
             <p>2、学习栏目 </p>
@@ -204,7 +229,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- 服务支持 -->
       <ProductSupport :name="support.name" :link="support.link" />
     </ProductAnchorWrapper>
@@ -213,7 +238,7 @@
 
 <script setup>
 definePageMeta({
-  layout: "product"
+  layout: 'product'
 })
 
 const headerContent = ref({

@@ -11,11 +11,13 @@
     />
 
     <div class="product_intro_2">
-      <img src="/img/product/mobile_inspection/intro1.png">
+      <img src="/img/product/mobile_inspection/intro1.png" />
     </div>
     <div class="product_intro_3">
-      <p class="title">智慧检务平台总体架构图</p>
-      <img src="/img/product/mobile_inspection/intro2.png">
+      <p class="title">
+        智慧检务平台总体架构图
+      </p>
+      <img src="/img/product/mobile_inspection/intro2.png" />
     </div>
 
     <!-- 服务支持 -->
@@ -25,7 +27,7 @@
 
 <script setup>
 definePageMeta({
-  layout: "product"
+  layout: 'product'
 })
 
 const headerContent = ref({

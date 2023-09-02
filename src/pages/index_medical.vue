@@ -4,16 +4,15 @@
       <div class="b_m_t_one_body">
         <span class="b_m_t_oneb">智慧基础医疗</span>
         <div class="b_m_t_onec">
-                <span class="b_m_t_oned">
-                    通过安全、可靠的云平台为医院、互联网医疗企业的业务提供稳定支撑，通过安全屋、人工智能等服务对数据进行分析、
-                    对医疗影像等进行辅助诊断。
-                </span>
+          <span class="b_m_t_oned">
+            通过安全、可靠的云平台为医院、互联网医疗企业的业务提供稳定支撑，通过安全屋、人工智能等服务对数据进行分析、
+            对医疗影像等进行辅助诊断。
+          </span>
         </div>
         <!--        <div class="b_m_t_onee" >-->
         <!--            <span class="b_m_t_onef">咨询客服</span>-->
         <!--        </div>-->
       </div>
-
     </div>
 
     <!--<div id="tab_head" class="tab_head">-->
@@ -29,25 +28,25 @@
           <span class="b_m_t_treea">核心优势</span>
           <div class="b_m_t_treeb">
             <div class="b_m_t_treec">
-              <img src="/img/linghuo.png" style="width: 70px;height: 70px">
+              <img src="/img/linghuo.png" style="width: 70px;height: 70px" />
               <span class="b_m_t_treed">强大的技术优势</span>
               <span class="b_m_t_treef">
-                        依托奥尔特云的基础设施能力、人才优势与图像识别、大数据、人工智能等技术积累，助力医疗大健康产业智慧化升级。
-                    </span>
+                依托奥尔特云的基础设施能力、人才优势与图像识别、大数据、人工智能等技术积累，助力医疗大健康产业智慧化升级。
+              </span>
             </div>
             <div class="b_m_t_treec">
-              <img src="/img/kekao.png" style="width: 70px;height: 70px">
+              <img src="/img/kekao.png" style="width: 70px;height: 70px" />
               <span class="b_m_t_treed">丰富的产品及解决方案</span>
               <span class="b_m_t_treef">
-                        整合奥尔特云、奥陌陌、视频和支付等产品及合作伙伴的产品服务，提供全行业、全流程的医疗大健康解决方案。
-                    </span>
+                整合奥尔特云、奥陌陌、视频和支付等产品及合作伙伴的产品服务，提供全行业、全流程的医疗大健康解决方案。
+              </span>
             </div>
             <div class="b_m_t_treec">
-              <img src="/img/jekou.png" style="width: 70px;height: 70px">
+              <img src="/img/jekou.png" style="width: 70px;height: 70px" />
               <span class="b_m_t_treed">强大的连接能力</span>
               <span class="b_m_t_treef">
-                        基于互联网技术与服务，建立机构与机构之间、机构与用户之间的强连接，助力全方位、全生命周期的大健康产业发展。
-                    </span>
+                基于互联网技术与服务，建立机构与机构之间、机构与用户之间的强连接，助力全方位、全生命周期的大健康产业发展。
+              </span>
             </div>
           </div>
         </div>
@@ -65,7 +64,6 @@
                   <li>· 区域协同医疗卫生信息数据整合分析及监督管理应用</li>
                   <li>· 海量数据分析、AI辅助服务</li>
                 </ul>
-
               </div>
               <div class="b_m_t_fourc">
                 <span class="b_m_t_fourd">面向管理者的大数据分析服务</span>
@@ -85,7 +83,6 @@
                   <li>· 健康管理</li>
                   <li>· 健康资讯</li>
                 </ul>
-
               </div>
               <div class="b_m_t_fourc">
                 <span class="b_m_t_fourd">面向中小型医疗机构的云应用服务</span>
@@ -103,7 +100,7 @@
       <div id="c3">
         <div class="b_m_t_five">
           <span class="b_m_t_fivea">方案架构</span>
-          <img src="/img/jigou.png" style="height: 100% ; width: 100%">
+          <img src="/img/jigou.png" style="height: 100% ; width: 100%" />
         </div>
       </div>
     </div>

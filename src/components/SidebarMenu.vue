@@ -6,44 +6,58 @@
       </div>
       <n-popover trigger="hover" placement="right">
         <template #trigger>
-          <div class="nav_item"><span class="nav_item_text">基础软件</span><n-icon  :component="IosArrowForward" /></div>
+          <div class="nav_item">
+            <span class="nav_item_text">基础软件</span><n-icon :component="IosArrowForward" />
+          </div>
         </template>
         <template #default>
           <!-- 双系统安全移动办公 -->
-          <h3 class="h3_title">双系统安全移动办公</h3>
-          <AppPanel :data="doubleSysApp"/>
+          <h3 class="h3_title">
+            双系统安全移动办公
+          </h3>
+          <AppPanel :data="doubleSysApp" />
           <!-- 指挥调度与IOC大数据可视化 -->
-          <h3 class="h3_title">指挥调度与IOC大数据可视化</h3>
-          <AppPanel :data="viewableApp"/>
+          <h3 class="h3_title">
+            指挥调度与IOC大数据可视化
+          </h3>
+          <AppPanel :data="viewableApp" />
           <!-- 多租户aPaaS云 -->
-          <h3 class="h3_title">应用与服务支撑平台</h3>
-          <AppPanel :data="aPaaSApp"/>
+          <h3 class="h3_title">
+            应用与服务支撑平台
+          </h3>
+          <AppPanel :data="aPaaSApp" />
         </template>
       </n-popover>
       <n-popover trigger="hover" placement="right">
         <template #trigger>
-          <div class="nav_item"><span class="nav_item_text">应用产品</span><n-icon  :component="IosArrowForward" /></div>
+          <div class="nav_item">
+            <span class="nav_item_text">应用产品</span><n-icon :component="IosArrowForward" />
+          </div>
         </template>
         <template #default>
-          <AppPanel :data="application"/>
+          <AppPanel :data="application" />
         </template>
       </n-popover>
       <n-popover trigger="hover" placement="right">
         <template #trigger>
-          <div class="nav_item"><span class="nav_item_text">云SaaS软件</span><n-icon  :component="IosArrowForward" /></div>
+          <div class="nav_item">
+            <span class="nav_item_text">云SaaS软件</span><n-icon :component="IosArrowForward" />
+          </div>
         </template>
         <template #default>
           <h3>云SaaS软件</h3>
-          <AppPanel :data="saasApp"/>
+          <AppPanel :data="saasApp" />
         </template>
       </n-popover>
       <n-popover trigger="hover" placement="right">
         <template #trigger>
-          <div class="nav_item" ><span class="nav_item_text">安全产品</span><n-icon  :component="IosArrowForward" /></div>
+          <div class="nav_item">
+            <span class="nav_item_text">安全产品</span><n-icon :component="IosArrowForward" />
+          </div>
         </template>
         <template #default>
           <h3>安全产品</h3>
-          <AppPanel :data="securityApp"/>
+          <AppPanel :data="securityApp" />
         </template>
       </n-popover>
     </div>
@@ -51,8 +65,8 @@
 </template>
 
 <script setup lang="ts">
-import {  IosArrowForward } from '@vicons/ionicons4'
-import { NPopover, NIcon } from 'naive-ui';
+import { IosArrowForward } from '@vicons/ionicons4'
+import { NPopover, NIcon } from 'naive-ui'
 
 // 双系统安全移动办公
 const doubleSysApp = ref({
@@ -95,7 +109,7 @@ const doubleSysApp = ref({
       name: '定制安全Pad终端',
       logo: '/img/home/xl_7.png',
       excerpt: 'Pad终端安全加固组件与刷机服务包'
-    },
+    }
   ]
 })
 // 指挥调度与IOC大数据可视化
@@ -117,7 +131,7 @@ const viewableApp = ref({
       name: '大数据IOC可视化平台',
       logo: '/img/home/xl_10.png',
       excerpt: '大数据处理与IOC可视化系统'
-    },
+    }
   ]
 })
 // 多租户aPaaS云
@@ -298,7 +312,7 @@ const application = ref({
       name: 'XCreator敏捷发布平台',
       logo: '/img/app/XCreator.png',
       excerpt: '全媒体矩阵信息发布平台'
-    },
+    }
   ]
 })
 // 云Saas软件
@@ -332,7 +346,7 @@ const saasApp = ref({
       name: '辅警平台',
       logo: '/img/home/yycp_22.png',
       excerpt: '智慧新警务辅警管理平台'
-    },
+    }
   ]
 })
 // 安全产品
@@ -359,7 +373,7 @@ const securityApp = ref({
       name: '定制安全Pad终端',
       logo: '/img/home/xl_7.png',
       excerpt: 'Pad终端安全加固组件与刷机服务包'
-    },
+    }
   ]
 })
 

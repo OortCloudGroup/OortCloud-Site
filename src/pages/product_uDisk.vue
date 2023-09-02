@@ -11,10 +11,12 @@
     />
 
     <div class="product_intro_2">
-      <img src="/img/product/u_disk/banner2.png" alt="">
+      <img src="/img/product/u_disk/banner2.png" alt="" />
     </div>
     <div class="product_intro_3">
-      <p class="title">「功能描述」</p>
+      <p class="title">
+        「功能描述」
+      </p>
       <div class="function">
         <div class="item">
           <p>密码保护</p>
@@ -35,7 +37,9 @@
       </div>
     </div>
     <div class="product_intro_4">
-      <p class="title">「产品介绍」</p>
+      <p class="title">
+        「产品介绍」
+      </p>
       <div class="intro">
         <div class="item">
           <p>双重加密</p>
@@ -57,26 +61,42 @@
     </div>
     <div class="product_intro_5">
       <div class="left">
-        <div class="title">产品价值</div>
-        <div class="paragraph"><img src="/img/product/u_disk/1.png"><span>采用硬件加密芯片和高强度软件加密算法对数据进行双重加密存储，具备防止暴
-            力破解、数据恢复等功能</span></div>
-        <div class="paragraph"><img src="/img/product/u_disk/2.png"><span>防止病毒、木马感染安全U盘和自动传播</span></div>
-        <div class="paragraph"><img src="/img/product/u_disk/3.png"><span>安全U盘的数据交换行为进行全方位的审计</span></div>
+        <div class="title">
+          产品价值
+        </div>
+        <div class="paragraph">
+          <img src="/img/product/u_disk/1.png" /><span>采用硬件加密芯片和高强度软件加密算法对数据进行双重加密存储，具备防止暴
+            力破解、数据恢复等功能</span>
+        </div>
+        <div class="paragraph">
+          <img src="/img/product/u_disk/2.png" /><span>防止病毒、木马感染安全U盘和自动传播</span>
+        </div>
+        <div class="paragraph">
+          <img src="/img/product/u_disk/3.png" /><span>安全U盘的数据交换行为进行全方位的审计</span>
+        </div>
       </div>
       <div class="right_1">
-        <img src="/img/product/u_disk/intro_01.png">
+        <img src="/img/product/u_disk/intro_01.png" />
       </div>
     </div>
     <div class="product_intro_5">
       <div class="left">
-        <div class="title">应用场景</div>
-        <div class="paragraph"><img src="/img/product/u_disk/1.png"><span>同时使用多个网络（例如存在工作内网和互联网、其他隔离网络等）的单位，使用
-            移动存储介质在多个网络之间进行信息交换</span></div>
-        <div class="paragraph"><img src="/img/product/u_disk/2.png"><span>在用户内网计算机上使用或用于外出携带重要工作文档</span></div>
-        <div class="paragraph"><img src="/img/product/u_disk/3.png"><span>用于存储和处理敏感或重要文件</span></div>
+        <div class="title">
+          应用场景
+        </div>
+        <div class="paragraph">
+          <img src="/img/product/u_disk/1.png" /><span>同时使用多个网络（例如存在工作内网和互联网、其他隔离网络等）的单位，使用
+            移动存储介质在多个网络之间进行信息交换</span>
+        </div>
+        <div class="paragraph">
+          <img src="/img/product/u_disk/2.png" /><span>在用户内网计算机上使用或用于外出携带重要工作文档</span>
+        </div>
+        <div class="paragraph">
+          <img src="/img/product/u_disk/3.png" /><span>用于存储和处理敏感或重要文件</span>
+        </div>
       </div>
       <div class="right_2">
-        <img src="/img/product/u_disk/intro_02.png">
+        <img src="/img/product/u_disk/intro_02.png" />
       </div>
     </div>
 
@@ -87,7 +107,7 @@
 
 <script setup>
 definePageMeta({
-  layout: "product"
+  layout: 'product'
 })
 
 const headerContent = ref({

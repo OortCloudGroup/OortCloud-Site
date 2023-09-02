@@ -14,60 +14,82 @@
       <ul class="logic_group">
         <li class="logic_group_item">
           <div class="logic_item_img_box">
-            <img class="logic_item_img" src="/img/product/customize_app/demand.png" alt="">
+            <img class="logic_item_img" src="/img/product/customize_app/demand.png" alt="" />
           </div>
-          <div class="logic_item_title">需求挖掘与分析</div>
-          <div class="logic_item_text">根据客户场景描述，需求对接，对需求进行整理分析</div>
+          <div class="logic_item_title">
+            需求挖掘与分析
+          </div>
+          <div class="logic_item_text">
+            根据客户场景描述，需求对接，对需求进行整理分析
+          </div>
         </li>
         <div class="logic_right">
-          <img class="logic_right_img" src="/img/product/customize_app/right.png" alt="">
+          <img class="logic_right_img" src="/img/product/customize_app/right.png" alt="" />
         </div>
         <li class="logic_group_item">
           <div class="logic_item_img_box">
-            <img class="logic_item_img" src="/img/product/customize_app/produce.png" alt="">
+            <img class="logic_item_img" src="/img/product/customize_app/produce.png" alt="" />
           </div>
-          <div class="logic_item_title">产品立项及UE分析</div>
-          <div class="logic_item_text">提供设计原型及相关的产品逻辑图</div>
+          <div class="logic_item_title">
+            产品立项及UE分析
+          </div>
+          <div class="logic_item_text">
+            提供设计原型及相关的产品逻辑图
+          </div>
         </li>
         <div class="logic_right">
-          <img class="logic_right_img" src="/img/product/customize_app/right.png" alt="">
+          <img class="logic_right_img" src="/img/product/customize_app/right.png" alt="" />
         </div>
         <li class="logic_group_item">
           <div class="logic_item_img_box">
-            <img class="logic_item_img" src="/img/product/customize_app/APP.png" alt="">
+            <img class="logic_item_img" src="/img/product/customize_app/APP.png" alt="" />
           </div>
-          <div class="logic_item_title">APP制作与研发</div>
-          <div class="logic_item_text">进入快速开发阶段，实现产品与设计，期间与您保持沟通</div>
+          <div class="logic_item_title">
+            APP制作与研发
+          </div>
+          <div class="logic_item_text">
+            进入快速开发阶段，实现产品与设计，期间与您保持沟通
+          </div>
         </li>
         <div class="logic_right">
-          <img class="logic_right_img" src="/img/product/customize_app/right.png" alt="">
+          <img class="logic_right_img" src="/img/product/customize_app/right.png" alt="" />
         </div>
         <li class="logic_group_item">
           <div class="logic_item_img_box">
-            <img class="logic_item_img" src="/img/product/customize_app/search.png" alt="">
+            <img class="logic_item_img" src="/img/product/customize_app/search.png" alt="" />
           </div>
-          <div class="logic_item_title">APP测试与改进</div>
-          <div class="logic_item_text">会提供里程碑产品和测试版给测试，直到验收完成</div>
+          <div class="logic_item_title">
+            APP测试与改进
+          </div>
+          <div class="logic_item_text">
+            会提供里程碑产品和测试版给测试，直到验收完成
+          </div>
         </li>
       </ul>
       <ul class="logic_remark">
         <li class="logic_remark_item">
           <div class="logic_remark_img_box">
-            <img class="logic_remark_img" src="/img/product/customize_app/server.png" alt="">
+            <img class="logic_remark_img" src="/img/product/customize_app/server.png" alt="" />
           </div>
-          <div class="logic_remark_text">服务能力广泛，业务能力辐射全行业</div>
+          <div class="logic_remark_text">
+            服务能力广泛，业务能力辐射全行业
+          </div>
         </li>
         <li class="logic_remark_item">
           <div class="logic_remark_img_box">
-            <img class="logic_remark_img" src="/img/product/customize_app/standard.png" alt="">
+            <img class="logic_remark_img" src="/img/product/customize_app/standard.png" alt="" />
           </div>
-          <div class="logic_remark_text">标准化，标准化验收体系，专业监理全程跟踪</div>
+          <div class="logic_remark_text">
+            标准化，标准化验收体系，专业监理全程跟踪
+          </div>
         </li>
         <li class="logic_remark_item">
           <div class="logic_remark_img_box">
-            <img class="logic_remark_img" src="/img/product/customize_app/fast.png" alt="">
+            <img class="logic_remark_img" src="/img/product/customize_app/fast.png" alt="" />
           </div>
-          <div class="logic_remark_text">快，iOS、Android同时开发，同一套代码，升级成本低</div>
+          <div class="logic_remark_text">
+            快，iOS、Android同时开发，同一套代码，升级成本低
+          </div>
         </li>
       </ul>
     </div>
@@ -76,143 +98,223 @@
       <div class="app_content">
         <div class="app_detail_header">
           <!-- 缺两图 -->
-          <h3 class="app_detail_title">应用案例</h3>
+          <h3 class="app_detail_title">
+            应用案例
+          </h3>
         </div>
         <div class="app_detail_content">
           <div class="app_detail_content_group">
-            <p class="detail_group_title">移动办公</p>
+            <p class="detail_group_title">
+              移动办公
+            </p>
             <ul class="detail_group_list">
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="">
-                <p class="detail_group_list_text">刷脸记录</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="" />
+                <p class="detail_group_list_text">
+                  刷脸记录
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_nearby.png" alt="">
-                <p class="detail_group_list_text">附近同事</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_nearby.png" alt="" />
+                <p class="detail_group_list_text">
+                  附近同事
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="">
-                <p class="detail_group_list_text">智能审批</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="" />
+                <p class="detail_group_list_text">
+                  智能审批
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_safe_email.png"
-                  alt="">
-                <p class="detail_group_list_text">安全邮箱</p>
+                <img
+                  class="detail_group_list_img"
+                  src="/img/product/customize_app/quick_office/ic_safe_email.png"
+                  alt=""
+                />
+                <p class="detail_group_list_text">
+                  安全邮箱
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_vote.png" alt="">
-                <p class="detail_group_list_text">微投票</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_vote.png" alt="" />
+                <p class="detail_group_list_text">
+                  微投票
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_work_helper.png"
-                  alt="">
-                <p class="detail_group_list_text">工作助手</p>
+                <img
+                  class="detail_group_list_img"
+                  src="/img/product/customize_app/quick_office/ic_work_helper.png"
+                  alt=""
+                />
+                <p class="detail_group_list_text">
+                  工作助手
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="">
-                <p class="detail_group_list_text">打卡签到</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="" />
+                <p class="detail_group_list_text">
+                  打卡签到
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="">
-                <p class="detail_group_list_text">工作汇报</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="" />
+                <p class="detail_group_list_text">
+                  工作汇报
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_list.png" alt="">
-                <p class="detail_group_list_text">微清单</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_list.png" alt="" />
+                <p class="detail_group_list_text">
+                  微清单
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_video.png" alt="">
-                <p class="detail_group_list_text">小视频</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_video.png" alt="" />
+                <p class="detail_group_list_text">
+                  小视频
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_vacation.png" alt="">
-                <p class="detail_group_list_text">请休假</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_vacation.png" alt="" />
+                <p class="detail_group_list_text">
+                  请休假
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_work.png" alt="">
-                <p class="detail_group_list_text">工作圈</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_work.png" alt="" />
+                <p class="detail_group_list_text">
+                  工作圈
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="">
-                <p class="detail_group_list_text">来访预约</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="" />
+                <p class="detail_group_list_text">
+                  来访预约
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="">
-                <p class="detail_group_list_text">消息</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="" />
+                <p class="detail_group_list_text">
+                  消息
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="">
-                <p class="detail_group_list_text">通讯录</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="" />
+                <p class="detail_group_list_text">
+                  通讯录
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="">
-                <p class="detail_group_list_text">群管理</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="" />
+                <p class="detail_group_list_text">
+                  群管理
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="">
-                <p class="detail_group_list_text">问吧</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="" />
+                <p class="detail_group_list_text">
+                  问吧
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_video.png" alt="">
-                <p class="detail_group_list_text">小视频</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_video.png" alt="" />
+                <p class="detail_group_list_text">
+                  小视频
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="">
-                <p class="detail_group_list_text">人脸识别</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="" />
+                <p class="detail_group_list_text">
+                  人脸识别
+                </p>
               </li>
             </ul>
 
-            <p class="detail_group_title">队伍建设</p>
+            <p class="detail_group_title">
+              队伍建设
+            </p>
             <ul class="detail_group_list">
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="">
-                <p class="detail_group_list_text">人员管理</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="" />
+                <p class="detail_group_list_text">
+                  人员管理
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_nearby.png" alt="">
-                <p class="detail_group_list_text">个人档案</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_nearby.png" alt="" />
+                <p class="detail_group_list_text">
+                  个人档案
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="">
-                <p class="detail_group_list_text">动态勤务</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="" />
+                <p class="detail_group_list_text">
+                  动态勤务
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_safe_email.png"
-                  alt="">
-                <p class="detail_group_list_text">工作宣传</p>
+                <img
+                  class="detail_group_list_img"
+                  src="/img/product/customize_app/quick_office/ic_safe_email.png"
+                  alt=""
+                />
+                <p class="detail_group_list_text">
+                  工作宣传
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_vote.png" alt="">
-                <p class="detail_group_list_text">大数据管理</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_vote.png" alt="" />
+                <p class="detail_group_list_text">
+                  大数据管理
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_work_helper.png"
-                  alt="">
-                <p class="detail_group_list_text">智慧社区</p>
+                <img
+                  class="detail_group_list_img"
+                  src="/img/product/customize_app/quick_office/ic_work_helper.png"
+                  alt=""
+                />
+                <p class="detail_group_list_text">
+                  智慧社区
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="">
-                <p class="detail_group_list_text">核录查控</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="" />
+                <p class="detail_group_list_text">
+                  核录查控
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="">
-                <p class="detail_group_list_text">两学一做</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_recording.png" alt="" />
+                <p class="detail_group_list_text">
+                  两学一做
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_list.png" alt="">
-                <p class="detail_group_list_text">教育整顿</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_list.png" alt="" />
+                <p class="detail_group_list_text">
+                  教育整顿
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_video.png" alt="">
-                <p class="detail_group_list_text">位置上报</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_video.png" alt="" />
+                <p class="detail_group_list_text">
+                  位置上报
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_vacation.png" alt="">
-                <p class="detail_group_list_text">公众号</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_vacation.png" alt="" />
+                <p class="detail_group_list_text">
+                  公众号
+                </p>
               </li>
               <li class="detail_group_list_item">
-                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_work.png" alt="">
-                <p class="detail_group_list_text">安全检查</p>
+                <img class="detail_group_list_img" src="/img/product/customize_app/quick_office/ic_work.png" alt="" />
+                <p class="detail_group_list_text">
+                  安全检查
+                </p>
               </li>
             </ul>
           </div>
@@ -227,7 +329,7 @@
 
 <script setup>
 definePageMeta({
-  layout: "product"
+  layout: 'product'
 })
 
 const headerContent = ref({
@@ -346,7 +448,7 @@ const support = ref(null)
 /* 应用案列模块 */
 .app_detail{
     width: 100%;
-    font-family: PingFangSC-Semibold;  
+    font-family: PingFangSC-Semibold;
 }
 .app_content{
     max-width: 1240px;

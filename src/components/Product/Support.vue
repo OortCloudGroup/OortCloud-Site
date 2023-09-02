@@ -1,19 +1,25 @@
 <template>
   <div id="服务支持">
-    <div class="services" id="service">
+    <div id="service" class="services">
       <div class="info1">
-        <p class="title">服务支持</p>
-        <p class="title2">使用指南</p>
+        <p class="title">
+          服务支持
+        </p>
+        <p class="title2">
+          使用指南
+        </p>
         <div class="download">
           <div class="download_title">
-            <img src="/img/pdf.png">
+            <img src="/img/pdf.png" />
             <span>【主打胶片】{{ name }}</span>
           </div>
           <a :href="link" target="_blank">下载</a>
         </div>
       </div>
       <div class="info2">
-        <p class="title">平台支持范围</p>
+        <p class="title">
+          平台支持范围
+        </p>
         <div>
           <p>售后服务时间：7*12小时</p>
           <p>售后服务内容：</p>

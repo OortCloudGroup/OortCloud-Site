@@ -10,12 +10,14 @@
       :is-swiper="false"
     >
       <template #bannerInfo>
-        <p class="right_tip">*以上图片仅供参考，请以实物为准</p>
+        <p class="right_tip">
+          *以上图片仅供参考，请以实物为准
+        </p>
       </template>
     </ProductHeader>
 
     <div>
-      <div class="product_intro_2" id="users">
+      <div id="users" class="product_intro_2">
         <div class="title">
           产品系列
         </div>
@@ -84,16 +86,18 @@
     </div>
     <div>
       <div class="product_intro_3">
-        <div class="title">规格参数</div>
+        <div class="title">
+          规格参数
+        </div>
         <div class="bar_container">
           <div class="bar_wrap">
             <div class="bar" :style="[firstBarVis ? collapseStyle : '']" @click="handleClickBar(1)">
-              <img class="bar_index" :src="`/img/product/router/index_1${firstBarVis ? '_active' : ''}.png`" alt="">
+              <img class="bar_index" :src="`/img/product/router/index_1${firstBarVis ? '_active' : ''}.png`" alt="" />
               <div class="bar_title">
-                <img class="bar_title_img"  :src="`/img/product/router/index_icon_1${firstBarVis ? '_active' : ''}.png`" alt="">
+                <img class="bar_title_img" :src="`/img/product/router/index_icon_1${firstBarVis ? '_active' : ''}.png`" alt="" />
                 <span>多功能路由器</span>
               </div>
-              <img class="bar_link" :src="`/img/product/router/icon_arrow_${firstBarVis ? 'down' : 'right'}.png`" alt="">
+              <img class="bar_link" :src="`/img/product/router/icon_arrow_${firstBarVis ? 'down' : 'right'}.png`" alt="" />
             </div>
           </div>
           <n-collapse-transition :show="firstBarVis">
@@ -103,46 +107,46 @@
         <div class="bar_container">
           <div class="bar_wrap">
             <div class="bar" :style="[secondBarVis ? collapseStyle : '']" @click="handleClickBar(2)">
-              <img class="bar_index" :src="`/img/product/router/index_2${secondBarVis ? '_active' : ''}.png`" alt="">
+              <img class="bar_index" :src="`/img/product/router/index_2${secondBarVis ? '_active' : ''}.png`" alt="" />
               <div class="bar_title">
-                <img class="bar_title_img"  :src="`/img/product/router/index_icon_2${secondBarVis ? '_active' : ''}.png`" alt="">
+                <img class="bar_title_img" :src="`/img/product/router/index_icon_2${secondBarVis ? '_active' : ''}.png`" alt="" />
                 <span>5G工业路由器</span>
               </div>
-              <img class="bar_link" :src="`/img/product/router/icon_arrow_${secondBarVis ? 'down' : 'right'}.png`" alt="">
+              <img class="bar_link" :src="`/img/product/router/icon_arrow_${secondBarVis ? 'down' : 'right'}.png`" alt="" />
             </div>
           </div>
           <n-collapse-transition :show="secondBarVis">
-            <img class="bar_content" src="/img/product/router/second_content.png" alt="">
+            <img class="bar_content" src="/img/product/router/second_content.png" alt="" />
           </n-collapse-transition>
         </div>
         <div class="bar_container">
           <div class="bar_wrap">
             <div class="bar" :style="[thirdBarVis ? collapseStyle : '']" @click="handleClickBar(3)">
-              <img class="bar_index" :src="`/img/product/router/index_3${thirdBarVis ? '_active' : ''}.png`" alt="">
+              <img class="bar_index" :src="`/img/product/router/index_3${thirdBarVis ? '_active' : ''}.png`" alt="" />
               <div class="bar_title">
-                <img class="bar_title_img"  :src="`/img/product/router/index_icon_3${thirdBarVis ? '_active' : ''}.png`" alt="">
+                <img class="bar_title_img" :src="`/img/product/router/index_icon_3${thirdBarVis ? '_active' : ''}.png`" alt="" />
                 <span>无线路由器</span>
               </div>
-              <img class="bar_link" :src="`/img/product/router/icon_arrow_${thirdBarVis ? 'down' : 'right'}.png`" alt="">
+              <img class="bar_link" :src="`/img/product/router/icon_arrow_${thirdBarVis ? 'down' : 'right'}.png`" alt="" />
             </div>
           </div>
           <n-collapse-transition :show="thirdBarVis">
-            <img class="bar_content" src="/img/product/router/third_content.png" alt="">
+            <img class="bar_content" src="/img/product/router/third_content.png" alt="" />
           </n-collapse-transition>
         </div>
         <div class="bar_container">
           <div class="bar_wrap">
             <div class="bar" :style="[forthBarVis ? collapseStyle : '']" @click="handleClickBar(4)">
-              <img class="bar_index" :src="`/img/product/router/index_4${forthBarVis ? '_active' : ''}.png`" alt="">
+              <img class="bar_index" :src="`/img/product/router/index_4${forthBarVis ? '_active' : ''}.png`" alt="" />
               <div class="bar_title">
-                <img class="bar_title_img"  :src="`/img/product/router/index_icon_4${forthBarVis ? '_active' : ''}.png`" alt="">
+                <img class="bar_title_img" :src="`/img/product/router/index_icon_4${forthBarVis ? '_active' : ''}.png`" alt="" />
                 <span>4G工业路由器</span>
               </div>
-              <img class="bar_link" :src="`/img/product/router/icon_arrow_${forthBarVis ? 'down' : 'right'}.png`" alt="">
+              <img class="bar_link" :src="`/img/product/router/icon_arrow_${forthBarVis ? 'down' : 'right'}.png`" alt="" />
             </div>
           </div>
           <n-collapse-transition :show="forthBarVis">
-            <img v-show="forthBarVis" class="bar_content" src="/img/product/router/forth_content.png" alt="">
+            <img v-show="forthBarVis" class="bar_content" src="/img/product/router/forth_content.png" alt="" />
           </n-collapse-transition>
         </div>
       </div>
@@ -154,10 +158,10 @@
 </template>
 
 <script setup>
-import { NCollapseTransition } from 'naive-ui';
+import { NCollapseTransition } from 'naive-ui'
 
 definePageMeta({
-  layout: "product"
+  layout: 'product'
 })
 
 const headerContent = ref({

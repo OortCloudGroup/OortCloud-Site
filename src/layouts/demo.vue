@@ -1,10 +1,10 @@
 <!--演示页面的layout-->
 <template>
   <div class="defalut_layout">
-    <DemoHeader :meta="meta"/>
+    <DemoHeader :meta="meta" />
     <div class="page_body">
-      <slot  />
-      <Bottom></Bottom>
+      <slot />
+      <Bottom />
     </div>
   </div>
 </template>

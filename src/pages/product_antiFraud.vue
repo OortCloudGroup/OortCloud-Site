@@ -12,38 +12,52 @@
         />
 
         <div class="product_intro_2">
-          <img src="/img/product/anti_fraud/banner.png" alt="">
+          <img src="/img/product/anti_fraud/banner.png" alt="" />
         </div>
         <div class="product_intro_3">
           <div class="left">
             <div class="step">
-              <p><img src="/img/product/anti_fraud/step1.png"><span>海报生成</span></p>
-              <p>分享链接，生成推广海报。每位工作人员专
-                属海报，统计到每位工作人员推广量</p>
+              <p><img src="/img/product/anti_fraud/step1.png" /><span>海报生成</span></p>
+              <p>
+                分享链接，生成推广海报。每位工作人员专
+                属海报，统计到每位工作人员推广量
+              </p>
             </div>
             <div class="step">
-              <p><img src="/img/product/anti_fraud/step2.png"><span>民众扫码</span></p>
-              <p>民众扫海报上的二维码，并且引导到反诈APP下载页，后台统计推广的民众的数
-                量。并且会通过微信的唯一ID，对民众扫描数量去重</p>
+              <p><img src="/img/product/anti_fraud/step2.png" /><span>民众扫码</span></p>
+              <p>
+                民众扫海报上的二维码，并且引导到反诈APP下载页，后台统计推广的民众的数
+                量。并且会通过微信的唯一ID，对民众扫描数量去重
+              </p>
             </div>
             <div class="step">
-              <p><img src="/img/product/anti_fraud/step3.png"><span>统计后台</span></p>
-              <p>根据单位统计，个人工作量统计等。后台做统计排名，自动检查判断。群众上传
-                的截图是否准确，群众选择的常驻地是否准确，群众是否已经实名认证</p>
+              <p><img src="/img/product/anti_fraud/step3.png" /><span>统计后台</span></p>
+              <p>
+                根据单位统计，个人工作量统计等。后台做统计排名，自动检查判断。群众上传
+                的截图是否准确，群众选择的常驻地是否准确，群众是否已经实名认证
+              </p>
             </div>
           </div>
-          <div class="right"><img src="/img/product/anti_fraud/Purefront.png"></div>
+          <div class="right">
+            <img src="/img/product/anti_fraud/Purefront.png" />
+          </div>
         </div>
         <div class="product_intro_4">
           <div class="left">
-            <p class="title">推广场景</p>
-            <p class="paragraph">“国家反诈中心APP”推广安装对于减少电诈警情很有明显成效。据统计，安装率1/4，警情降到50%，安装率1/2，警情降到20%。</p>
-            <p class="paragraph">参考全国各地对国家反诈中心APP推广安装很多有益的推广措施。调动成员单位，基层广大的力量参与推广安装。</p>
+            <p class="title">
+              推广场景
+            </p>
+            <p class="paragraph">
+              “国家反诈中心APP”推广安装对于减少电诈警情很有明显成效。据统计，安装率1/4，警情降到50%，安装率1/2，警情降到20%。
+            </p>
+            <p class="paragraph">
+              参考全国各地对国家反诈中心APP推广安装很多有益的推广措施。调动成员单位，基层广大的力量参与推广安装。
+            </p>
           </div>
           <div class="right">
             <div class="right__item">
               <div class="right__item__img">
-                <img src="/img/product/anti_fraud/intro_01.png">
+                <img src="/img/product/anti_fraud/intro_01.png" />
               </div>
               <div class="right__item__content">
                 花园入口
@@ -51,7 +65,7 @@
             </div>
             <div class="right__item">
               <div class="right__item__img">
-                <img src="/img/product/anti_fraud/intro_02.png">
+                <img src="/img/product/anti_fraud/intro_02.png" />
               </div>
               <div class="right__item__content">
                 酒店入口
@@ -62,27 +76,27 @@
         <div class="product_intro_5">
           <div class="grid">
             <div>
-              <img src="/img/product/anti_fraud/item1.png">
+              <img src="/img/product/anti_fraud/item1.png" />
               <p>多级组织架构统计</p>
               <p>可以深入统计到各单位，街道，乡镇，行政村，自然村。</p>
             </div>
             <div>
-              <img src="/img/product/anti_fraud/item2.png">
+              <img src="/img/product/anti_fraud/item2.png" />
               <p>多级管理员设置</p>
               <p>可以设置一二三四级管理员，管理各自辖区统计数。理员通过微信扫码登。</p>
             </div>
             <div>
-              <img src="/img/product/anti_fraud/item3.png">
+              <img src="/img/product/anti_fraud/item3.png" />
               <p>数据安全</p>
               <p>脱敏存储、加密存储，不会存储可识别的用户信息。</p>
             </div>
             <div>
-              <img src="/img/product/anti_fraud/item4.png">
+              <img src="/img/product/anti_fraud/item4.png" />
               <p>高并发</p>
               <p>采用分布式架构，满足大量群众并发扫码使用场景</p>
             </div>
             <div>
-              <img src="/img/product/anti_fraud/item5.png">
+              <img src="/img/product/anti_fraud/item5.png" />
               <p>高可用</p>
               <p>满足使用范围广，使用频率高的目标。</p>
             </div>
@@ -90,64 +104,77 @@
               产品特点
             </div>
             <div>
-              <img src="/img/product/anti_fraud/item6.png">
+              <img src="/img/product/anti_fraud/item6.png" />
               <p>界面清爽</p>
               <p>界面清爽，操作流畅，简便。</p>
             </div>
             <div>
-              <img src="/img/product/anti_fraud/item7.png">
+              <img src="/img/product/anti_fraud/item7.png" />
               <p>自动审核</p>
               <p>自动审核群众上传的截图是否正确。选择的常驻地是否正确，是否已经实名认证。自动检测三者正确形成闭环。</p>
             </div>
             <div>
-              <img src="/img/product/anti_fraud/item8.png">
+              <img src="/img/product/anti_fraud/item8.png" />
               <p>数据导出</p>
               <p>导出GAB比对接口文件。可在大数据平台中比对时带多级部门备注，可以清晰细化到更加具体的比对范围。</p>
             </div>
             <div>
-              <img src="/img/product/anti_fraud/item9.png">
+              <img src="/img/product/anti_fraud/item9.png" />
               <p>产品成熟度高</p>
               <p>快速交付，当天上线，通过配置满足各种微小细节需求。</p>
             </div>
             <div>
-              <img src="/img/product/anti_fraud/item10.png">
+              <img src="/img/product/anti_fraud/item10.png" />
               <p>价格低</p>
               <p>大量应用案例已经平摊了研发成本，用户总体拥有成本低。</p>
             </div>
-
           </div>
         </div>
       </div>
 
-      <div class="user" id="用户案例">
-        <p class="title">用户案例</p>
+      <div id="用户案例" class="user">
+        <p class="title">
+          用户案例
+        </p>
         <div class="item">
-          <p class="third_title">四会市</p>
+          <p class="third_title">
+            四会市
+          </p>
           <p>全肇庆使用，为贯彻落实习近平总书记、李克强总理对打击治理电信网络诈骗犯罪工作作出重要指示批示精神，当前，全国上下正在全力推动“国家反诈中心”App的安装工作，该APP集诈骗举报、诈骗预警、身份验证、风险查询、骗局曝光等功能于一体，群众开启APP预警功能后，能有效预警涉诈来电、短信，是预警拦截、防范宣传的国字号“利器”，是有效预防和压降电信网络诈骗犯罪的重要途径。前期，虽然通过各级党委政府的共同努力，我辖区App安装人数已有XXX万人，安装率为XXX%，但是却低于全省平均水平XXX%，更低于XXX（XXX.XXX%）、XXX(XXX%)、XXX(XXX%)等周边地区。经过分析，其中一个原因是由于该APP后台统计安装数据只有到县区级，而不能统计到镇街，更不能统计到个人。</p>
           <br />
           <p>因此，为进一步推动该项工作，以更快实现全县常住人口安装率达到70%以上目标，我局现借鉴深圳、东莞等地经验做好，聘请软件开发公司开发了“国家反诈中心APP推广码”系统，该系统主要功能是可以为推广app的工作人员生成一个唯一的二维码，群众通过手机扫描该二维码后可以自动跳转到app的下载页面。这样做仅方便了群众的下载安装，又实现准确统计到每个工作人员的推广安装任务数，从而进一步压实每名工作人员的工作职责。</p>
         </div>
         <div class="item">
-          <div class="third_title">河源市</div>
+          <div class="third_title">
+            河源市
+          </div>
           <p>国家反诈中心APP推广安装对于减少电诈警情很有明显成效。</p>
           <p>据统计，安装率1/4，警情降到50%，安装率1/2，警情降到20%。</p>
         </div>
         <div class="item">
-          <div class="third_title">惠州市</div>
+          <div class="third_title">
+            惠州市
+          </div>
           <p>工作人员通过点击微信中二维码生成分享链接，生成推广海报，民众扫描海报上的二维码，并且引导到反诈APP下载页，后台统计推广的民众的数量。并且会通过微信的唯一ID，对民众扫描数量去重。</p>
         </div>
         <div class="item">
-          <div class="third_title">湖北省仙桃市</div>
+          <div class="third_title">
+            湖北省仙桃市
+          </div>
           <p>1、海报生成。工作人员通过点击微信中二维码生成分享链接，生成推广海报。每位工作人员专属海报，统计到每位工作人员推广量。</p>
           <p>2、民众扫码。民众扫海报上的二维码，并且引导到反诈APP下载页，后台统计推广的民众的数量。并且会通过微信的唯一ID，对民众扫描数量去重。</p>
           <p>3、统计后台。根据单位统计，个人工作量统计等。后台做统计排名，自动检查判断。群众上传的截图是否准确，群众选择的常驻地是否准确，群众是否已经实名认证。</p>
         </div>
         <div class="item">
-          <div class="third_title">山西运城芮城县</div>
+          <div class="third_title">
+            山西运城芮城县
+          </div>
           <p>“国家反诈中心APP”推广统计平台是通过制作推广人员个人专属推广二维码，实现推广任务数统计到个人，警民携手，齐心反诈，压实块责任的推广统计平台。</p>
         </div>
         <div class="item">
-          <div class="third_title">山东津利县</div>
+          <div class="third_title">
+            山东津利县
+          </div>
           <p>反诈推广统计平台，是通过三个核心功能，一是生成专属的二维码海报。二是引导群众下载。。三是统计扫码数或上传截图数，最多可以落实到四级统计，比如到街道、到村社区、到自然村。推进反诈App的安装量。</p>
           <br />
           <p>面向推广人员，人人可以生成一个自己的推广专属海报。</p>
@@ -167,7 +194,7 @@
 
 <script setup>
 definePageMeta({
-  layout: "product"
+  layout: 'product'
 })
 
 const headerContent = ref({
@@ -185,7 +212,7 @@ const headerContent = ref({
     '/img/product/anti_fraud/swipe_1.png',
     '/img/product/anti_fraud/swipe_2.png',
     '/img/product/anti_fraud/swipe_3.png',
-    '/img/product/anti_fraud/swipe_4.png',
+    '/img/product/anti_fraud/swipe_4.png'
   ]
 })
 const support = ref({
