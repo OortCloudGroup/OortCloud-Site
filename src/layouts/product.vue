@@ -69,7 +69,7 @@ const carouseList = ref([
 
 <style>
 .user {
-  padding: 100px 0;
+  padding: 168px 0 100px 0;
   height: auto;
   display: flex;
   flex-direction: column;

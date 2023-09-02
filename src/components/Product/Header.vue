@@ -85,7 +85,7 @@ defineProps({
 
 <style lang="scss" scoped>
 .info {
-  padding-top: 120px;
+  padding-top: 148px;
   padding-bottom: 64px;
   display: flex;
   justify-content: center;

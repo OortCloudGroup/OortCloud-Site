@@ -132,12 +132,12 @@ const aPaaSApp = ref({
     },
     {
       name: '移动端服务化能力支撑平台(mPaaS)',
-      logo: '/img/home/xl_11.png',
+      logo: '/img/home/xl_4.png',
       excerpt: '移动应用开发支撑平台'
     },
     {
       name: '“奥尔特云”开发平台',
-      logo: '/img/home/xl_11.png',
+      logo: '/img/home/xl_3.png',
       excerpt: '低无代码快速开发平台'
     }
   ]

@@ -45,6 +45,7 @@ defineProps({
 
 <style scoped>
 .services {
+  padding-top: 68px;
   height: 695px;
   display: flex;
   flex-direction: column;
