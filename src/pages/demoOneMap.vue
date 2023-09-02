@@ -9,13 +9,13 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
         <span class="demo_body_left_title">指挥调度一张图</span>
         <span class="demo_body_left_subtitle">指挥调度，警情、警力、现场、调度、过程可视</span>
         <div class="demo_body_left_items">
-          <a href="http://oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/oort_bhf_onemap/index.html?" target="_blank">
+          <a href="http://oort.oortcloudsmart.com:18080/onemap/main.jsp" target="_blank">
             <div class="demo_download">
               <img src="/img/demo/onemap/onemap_jwb.png"/>
               <span>警务宝演示环境</span>
             </div>
           </a>
-          <a href="http://oort.oortcloudsmart.com:18080/onemap/main.jsp" target="_blank">
+          <a href="http://fs.oort.oortcloudsmart.com:30302/one-map/main.jsp" target="_blank">
             <div class="demo_download">
               <img src="/img/demo/onemap/onemap_hw.png"/>
               <span>华为A8展厅演示环境</span>

@@ -1,6 +1,6 @@
 <template>
   <div class="demo_header">
-    <a href="https://oortcloudsmart.com/"><img :src="logo"/></a>
+    <a href="https://oortcloudsmart.com/" target="_blank"><img :src="logo"/></a>
     <span>{{ title }}</span>
     <span></span>
     <span>{{ meta.subTitle }}</span>
@@ -28,7 +28,13 @@ async function getConfigA() {
   const { data } = await useFetch('http://oort.oortcloudsmart.com:31610/oort/oortcloud-sso/frontConf/v1/config.json',  { method: 'get'})
   let res = toRaw(data.value) as any
   title.value = res.common.login_logo_text
-  logo.value = res.logoWhite
+  // 因为https里面加载http在浏览器有安全限制 这里要处理下路径 。在阿里云nginx已经配置好了 转发到31610的环境的fastdsf上 这里只需要把 前缀 fastdsf + 相对路径加上就好了
+  if (!res.logoWhite.includes('https')) {
+    let tempUrl = res.logoWhite.split('oort/oortwj1')[1]
+    logo.value = '/fastdfs/oort/oortwj1' + tempUrl
+  } else {
+    logo.value = res.logoWhite
+  }
 }
 
 </script>
