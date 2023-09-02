@@ -13,6 +13,7 @@ export default defineNuxtConfig({
   },
   // ssr: false,
   app: {
+    rootId: '_oort',
     buildAssetsDir: '/asset/',
     // baseURL: "/oort/oort-site/",
     // cdnURL: '/oort/oort-site/',
