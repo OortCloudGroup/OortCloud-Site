@@ -14,8 +14,8 @@
 安装依赖
 
 ```bash
-# pnpm
-pnpm install
+# yarn
+yarn install
 ```
 
 ## Development Server
@@ -23,7 +23,7 @@ pnpm install
 Start the development server on http://localhost:3000
 
 ```bash
-pnpm run dev
+yarn run dev
 ```
 
 ## Production
@@ -81,3 +81,6 @@ export default defineNuxtConfig({
   }
 })
 ```
+
+
+### eslint 和 commitlint
