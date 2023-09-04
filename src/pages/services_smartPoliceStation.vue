@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="main">
-      <ServicesHeader  
+      <ServicesHeader
         :logo="header.logo"
         :name="header.name"
         :desc="header.desc"
@@ -11,11 +11,11 @@
         <ServicesSidebar :anchors="anchors" />
 
         <div class="content_main">
-          <ServicesPanel :tabs="tabs1" id="华为IdeaHub警务宝"/>
-          <ServicesPanel :tabs="tabs2" id="基层民警一体化工作平台"/>
-          <ServicesPanel :tabs="tabs3" id="指挥一张图"/>
-          <ServicesPanel :tabs="tabs4" id="枪弹装备室"/>
-          <ServicesPanel :tabs="tabs5" id="领导驾驶舱"/>
+          <ServicesPanel id="华为IdeaHub警务宝" :tabs="tabs1" />
+          <ServicesPanel id="基层民警一体化工作平台" :tabs="tabs2" />
+          <ServicesPanel id="指挥一张图" :tabs="tabs3" />
+          <ServicesPanel id="枪弹装备室" :tabs="tabs4" />
+          <ServicesPanel id="领导驾驶舱" :tabs="tabs5" />
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@ const anchors = ref<Anchor[]>([
   { title: '领导驾驶舱', href: '#领导驾驶舱' }
 ])
 const tabs1 = reactive<Tab[]>([
-  { 
+  {
     name: '华为IdeaHub警务宝',
     logo: '/img/app/jwb.png',
     content: {
@@ -53,13 +53,13 @@ const tabs1 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '/JWBdetail' },
         { name: '立即购买', link: 'https://marketplace.huaweicloud.com/contents/ee446d40-ce7c-447f-84e9-4ca0a1fe2f0f' },
-        { name: '在线体验', link: 'http://map.oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/console_manage/index.html#/' },
+        { name: '在线体验', link: 'http://map.oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/console_manage/index.html#/' }
       ]
-    } 
+    }
   }
 ])
 const tabs2 = reactive<Tab[]>([
-  { 
+  {
     name: '基层民警一体化工作平台',
     logo: '/img/home/yycp_21.png',
     content: {
@@ -68,13 +68,13 @@ const tabs2 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' },
         { name: '立即购买', link: '' },
-        { name: '在线体验', link: '' },
+        { name: '在线体验', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs3 = reactive<Tab[]>([
-  { 
+  {
     name: '指挥一张图',
     logo: '/img/app/zhyzt.png',
     content: {
@@ -83,13 +83,13 @@ const tabs3 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' },
         { name: '立即购买', link: '' },
-        { name: '在线体验', link: '' },
+        { name: '在线体验', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs4 = reactive<Tab[]>([
-  { 
+  {
     name: '枪弹装备室',
     logo: '/img/app/qd.png',
     content: {
@@ -98,11 +98,11 @@ const tabs4 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs5 = reactive<Tab[]>([
-  { 
+  {
     name: '领导驾驶舱',
     logo: '/img/app/ldjsc2.png',
     content: {
@@ -111,9 +111,9 @@ const tabs5 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' },
         { name: '立即购买', link: '' },
-        { name: '在线体验', link: '' },
+        { name: '在线体验', link: '' }
       ]
-    } 
+    }
   }
 ])
 </script>

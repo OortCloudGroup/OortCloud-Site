@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="main">
-      <ServicesHeader  
+      <ServicesHeader
         :logo="header.logo"
         :name="header.name"
         :desc="header.desc"
@@ -11,14 +11,14 @@
         <ServicesSidebar :anchors="anchors" />
 
         <div class="content_main">
-          <ServicesPanel :tabs="tabs1" id="AIoTPaaS物联网服务平台"/>
-          <ServicesPanel :tabs="tabs2" id="硬核物联网"/>
-          <ServicesPanel :tabs="tabs3" id="动环盒子（4G）"/>
-          <ServicesPanel :tabs="tabs4" id="动环交换机（4G）"/>
-          <ServicesPanel :tabs="tabs5" id="5G动环网关"/>
-          <ServicesPanel :tabs="tabs6" id="路由器"/>
-          <ServicesPanel :tabs="tabs7" id="红环main_loop消费型电子"/>
-          <ServicesPanel :tabs="tabs8" id="硬件定制"/>
+          <ServicesPanel id="AIoTPaaS物联网服务平台" :tabs="tabs1" />
+          <ServicesPanel id="硬核物联网" :tabs="tabs2" />
+          <ServicesPanel id="动环盒子（4G）" :tabs="tabs3" />
+          <ServicesPanel id="动环交换机（4G）" :tabs="tabs4" />
+          <ServicesPanel id="5G动环网关" :tabs="tabs5" />
+          <ServicesPanel id="路由器" :tabs="tabs6" />
+          <ServicesPanel id="红环main_loop消费型电子" :tabs="tabs7" />
+          <ServicesPanel id="硬件定制" :tabs="tabs8" />
         </div>
       </div>
     </div>
@@ -50,7 +50,7 @@ const anchors = ref<Anchor[]>([
   { title: '硬件定制', href: '#硬件定制' }
 ])
 const tabs1 = reactive<Tab[]>([
-  { 
+  {
     name: 'AIoTPaaS物联网服务平台',
     logo: '/img/app/AiIOT.png',
     content: {
@@ -59,11 +59,11 @@ const tabs1 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs2 = reactive<Tab[]>([
-  { 
+  {
     name: '硬核物联网',
     logo: '/img/app/zhxz.png',
     content: {
@@ -72,11 +72,11 @@ const tabs2 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs3 = reactive<Tab[]>([
-  { 
+  {
     name: '动环盒子（4G）',
     logo: '/img/app/dhhz.png',
     content: {
@@ -85,11 +85,11 @@ const tabs3 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '/product_dynamicRingBox' }
       ]
-    } 
+    }
   }
 ])
 const tabs4 = reactive<Tab[]>([
-  { 
+  {
     name: '动环交换机（4G）',
     logo: '/img/app/dhjhj.png',
     content: {
@@ -98,11 +98,11 @@ const tabs4 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '/product_dynamicLoopSwitch' }
       ]
-    } 
+    }
   }
 ])
 const tabs5 = reactive<Tab[]>([
-  { 
+  {
     name: '5G动环网关',
     logo: '/img/app/5Gdh.png',
     content: {
@@ -111,11 +111,11 @@ const tabs5 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '/product_dynamicGateway' }
       ]
-    } 
+    }
   }
 ])
 const tabs6 = reactive<Tab[]>([
-  { 
+  {
     name: '路由器',
     logo: '/img/home/router.png',
     content: {
@@ -124,11 +124,11 @@ const tabs6 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '/product_router' }
       ]
-    } 
+    }
   }
 ])
 const tabs7 = reactive<Tab[]>([
-  { 
+  {
     name: '红环main_loop消费型电子',
     logo: '/img/app/zhxz.png',
     content: {
@@ -137,11 +137,11 @@ const tabs7 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs8 = reactive<Tab[]>([
-  { 
+  {
     name: '硬件定制',
     logo: '/img/app/yjdz.png',
     content: {
@@ -150,7 +150,7 @@ const tabs8 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 </script>

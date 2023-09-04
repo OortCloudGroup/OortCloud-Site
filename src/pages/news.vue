@@ -7,21 +7,27 @@
     <div class="div_item">
       <NewsItem
         v-for="(item, index) in newsList"
-       :key="index"
-       :title="item.Title"
-       :time="item.Time"
-       :id="item.ID"
-       :cover-img="item.CoverImg">
-      </NewsItem>
+        :id="item.ID"
+        :key="index"
+        :title="item.Title"
+        :time="item.Time"
+        :cover-img="item.CoverImg"
+      />
     </div>
     <!--分页-->
     <div class="div_ie9_4" style="display: flex;align-items: center;justify-content: center;min-width: 348px;">
       <ul id="pages">
-        <li id="pre_page" style="min-width: 94px" class="number" @click="prePage">上一页</li>
+        <li id="pre_page" style="min-width: 94px" class="number" @click="prePage">
+          上一页
+        </li>
         <ul id="page">
-          <li style='min-width: 94px;'>{{ pageIndex }}/ {{  total }}</li>
+          <li style="min-width: 94px;">
+            {{ pageIndex }}/ {{ total }}
+          </li>
         </ul>
-        <li id="next_page" style="min-width: 94px" class="number" @click="nextPage">下一页</li>
+        <li id="next_page" style="min-width: 94px" class="number" @click="nextPage">
+          下一页
+        </li>
       </ul>
     </div>
   </div>
@@ -36,7 +42,7 @@ interface Resp {
 const newsList = ref<Array<News>>([])
 const pageIndex = ref(1)
 const total = ref(0)
-const url =  'https://www.oortcloudsmart.com/oort/oortcloud-cetcnewsservice/api/v1/cetcnewservice/new_list'
+const url = 'https://www.oortcloudsmart.com/oort/oortcloud-cetcnewsservice/api/v1/cetcnewservice/new_list'
 
 getNewsList()
 
@@ -47,24 +53,24 @@ async function getNewsList() {
     newsType: 1,
     status: 1
   }
-  const { data } = await useFetch(url,  { body: params, method: 'post'})
+  const { data } = await useFetch(url, { body: params, method: 'post' })
   const res:Resp = toRaw(data.value) as Resp
   if (res && res.code === 200) {
     newsList.value = res.data.list
-    total.value =  Math.ceil(res.data.count / 6)
+    total.value = Math.ceil(res.data.count / 6)
   }
 }
 
 function prePage() {
-  if(pageIndex.value > 1) {
-    pageIndex.value --
+  if (pageIndex.value > 1) {
+    pageIndex.value--
     getNewsList()
   }
 }
 
 function nextPage() {
-  if(pageIndex.value < total.value) {
-    pageIndex.value ++
+  if (pageIndex.value < total.value) {
+    pageIndex.value++
     getNewsList()
   }
 }
@@ -91,7 +97,6 @@ function nextPage() {
       color: #fff;
     }
   }
-
 
 .div_item {
     display: flex;
@@ -185,6 +190,5 @@ function nextPage() {
 a:link {
   text-decoration: none;
 }
-
 
 </style>

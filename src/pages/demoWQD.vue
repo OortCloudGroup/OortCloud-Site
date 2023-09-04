@@ -54,6 +54,9 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
 
 <script setup lang="ts">
 
+import { IosArrowForward } from '@vicons/ionicons4'
+import { NPopover, NIcon } from 'naive-ui'
+
 definePageMeta({
   layout: 'demo',
   title: '交通微劝导系统',
@@ -68,9 +71,6 @@ useSeoMeta({
   ogDescription: '提升交通安全意识，落实交通宣传劝导为市民群众创造一个车与车和谐、人与车和谐的道路交通环境，确保辖区交通拥有一个安全、通畅、文明、有序的道路交通环境',
   ogImage: '/img/demo/menu/wqd.png'
 })
-
-import { IosArrowForward } from '@vicons/ionicons4'
-import { NPopover, NIcon } from 'naive-ui'
 
 </script>
 

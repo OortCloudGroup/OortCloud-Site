@@ -1,37 +1,17 @@
 module.exports = {
-  root: true,
   env: {
     browser: true,
-    node: true,
-    es6: true
+    es2021: true
   },
-  globals: {
-    // script setup
-    defineProps: 'readonly',
-    defineEmits: 'readonly',
-    defineExpose: 'readonly',
-    withDefaults: 'readonly',
-    // unplugin-vue-define-options
-    defineOptions: 'readonly'
-  },
-  extends: [
-    'plugin:vue/recommended',
-    'plugin:vue/vue3-essential',
-    'eslint:recommended'
-  ],
-  parser: 'vue-eslint-parser',
+  extends: ['@nuxtjs/eslint-config-typescript', 'plugin:vue/vue3-recommended'],
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 13,
     sourceType: 'module'
   },
+  plugins: [],
   rules: {
-    'no-restricted-syntax': [
-      2,
-      {
-        'selector': 'TSInterfaceDeclaration',
-        'message': 'interface are not allowed, use a union instead.'
-      }
-    ],
+    'no-unref': 0,
+    'vue/no-multiple-template-root': 1,
     // 强制第一个属性的位置(属性换行)
     'vue/first-attribute-linebreak': [2, {
       // 单行时，第一属性前不允许使用换行符
@@ -48,21 +28,21 @@ module.exports = {
         max: 1
       }
     }],
-    'quotes': [2, 'single'],
+    quotes: [2, 'single'],
     'no-multi-spaces': 2,
     'no-trailing-spaces': 2,
-    'semi': [2, 'never'],
+    semi: [2, 'never'],
     'semi-spacing': [2, {
-      'before': false,
-      'after': true
+      before: false,
+      after: true
     }],
     'space-before-blocks': [2, 'always'],
     'space-before-function-paren': [2, 'never'],
     'space-in-parens': [2, 'never'],
     'space-infix-ops': 2,
     'space-unary-ops': [2, {
-      'words': true,
-      'nonwords': false
+      words: true,
+      nonwords: false
     }],
     // Vue
     'vue/no-v-html': 'off',
@@ -83,48 +63,48 @@ module.exports = {
     ],
     'accessor-pairs': 2,
     'arrow-spacing': [2, {
-      'before': true,
-      'after': true
+      before: true,
+      after: true
     }],
     'block-spacing': [2, 'always'],
     'brace-style': [2, '1tbs', {
-      'allowSingleLine': true
+      allowSingleLine: true
     }],
-    'camelcase': [0, {
-      'properties': 'always'
+    camelcase: [0, {
+      properties: 'always'
     }],
     'consistent-this': [2, 'self', 'that'],
     'comma-dangle': [2, 'never'],
     'comma-spacing': [2, {
-      'before': false,
-      'after': true
+      before: false,
+      after: true
     }],
     'comma-style': [2, 'last'],
     'constructor-super': 2,
-    'curly': [2, 'multi-line'],
+    curly: [2, 'multi-line'],
     'dot-location': [2, 'property'],
     'eol-last': 2,
-    'eqeqeq': ['error', 'always', { 'null': 'ignore' }],
+    eqeqeq: ['error', 'always', { null: 'ignore' }],
     'generator-star-spacing': [2, {
-      'before': true,
-      'after': true
+      before: true,
+      after: true
     }],
     'handle-callback-err': [2, '^(err|error)$'],
-    'indent': [2, 2, {
-      'SwitchCase': 1
+    indent: [2, 2, {
+      SwitchCase: 1
     }],
     'jsx-quotes': [2, 'prefer-single'],
     'key-spacing': [2, {
-      'beforeColon': false,
-      'afterColon': true
+      beforeColon: false,
+      afterColon: true
     }],
     'keyword-spacing': [2, {
-      'before': true,
-      'after': true
+      before: true,
+      after: true
     }],
     'new-cap': [2, {
-      'newIsCap': true,
-      'capIsNew': false
+      newIsCap: true,
+      capIsNew: false
     }],
     'new-parens': 2,
     'no-array-constructor': 2,
@@ -157,14 +137,14 @@ module.exports = {
     'no-iterator': 2,
     'no-label-var': 2,
     'no-labels': [2, {
-      'allowLoop': false,
-      'allowSwitch': false
+      allowLoop: false,
+      allowSwitch: false
     }],
     'no-lone-blocks': 2,
     'no-mixed-spaces-and-tabs': 0,
     'no-multi-str': 2,
     'no-multiple-empty-lines': [2, {
-      'max': 1
+      max: 1
     }],
     'no-native-reassign': 2,
     'no-negated-in-lhs': 2,
@@ -193,7 +173,7 @@ module.exports = {
     'no-unexpected-multiline': 2,
     'no-unmodified-loop-condition': 2,
     'no-unneeded-ternary': [2, {
-      'defaultAssignment': false
+      defaultAssignment: false
     }],
     'no-unreachable': 2,
     'no-unsafe-finally': 2,
@@ -204,28 +184,41 @@ module.exports = {
     'no-whitespace-before-property': 2,
     'no-with': 2,
     'one-var': [2, {
-      'initialized': 'never'
+      initialized: 'never'
     }],
     'operator-linebreak': [2, 'after', {
-      'overrides': {
+      overrides: {
         '?': 'before',
         ':': 'before'
       }
     }],
     'padded-blocks': [2, 'never'],
     'spaced-comment': [2, 'always', {
-      'markers': ['global', 'globals', 'eslint', 'eslint-disable', '*package', '!', ',']
+      markers: ['global', 'globals', 'eslint', 'eslint-disable', '*package', '!', ',']
     }],
     'template-curly-spacing': [2, 'never'],
     'use-isnan': 2,
     'valid-typeof': 2,
     'wrap-iife': [2, 'any'],
     'yield-star-spacing': [2, 'both'],
-    'yoda': [2, 'never'],
+    yoda: [2, 'never'],
     'prefer-const': 0,
     'object-curly-spacing': [2, 'always', {
       objectsInObjects: false
     }],
     'array-bracket-spacing': [2, 'never']
-  }
+  },
+  overrides: [
+    {
+      files: [
+        '**/pages/**/*.{js,ts,vue}',
+        '**/layouts/**/*.{js,ts,vue}',
+        '**/app.{js,ts,vue}',
+        '**/error.{js,ts,vue}'
+      ],
+      rules: {
+        'vue/multi-word-component-names': 'off'
+      }
+    }
+  ]
 }

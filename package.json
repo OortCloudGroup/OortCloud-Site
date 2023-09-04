@@ -12,21 +12,34 @@
     "lint": "yarn lint:eslint"
   },
   "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "typescript": "^5.2.2",
     "@types/node": "^20.5.0",
     "nuxt": "^3.7.0"
   },
   "dependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.0",
-    "husky": "^8.0.3",
     "@css-render/vue3-ssr": "^0.15.12",
     "@vicons/ionicons4": "^0.12.0",
     "element-plus": "^2.3.1",
+    "eslint": "^8.48.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "husky": "^8.0.3",
     "naive-ui": "^2.34.3",
     "pinia": "^2.0.33",
     "postcss-px-to-viewport": "^1.1.1",
     "sass": "^1.59.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "eslint --fix"
+    ]
   }
 }

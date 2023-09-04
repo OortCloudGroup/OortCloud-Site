@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="main">
-      <ServicesHeader  
+      <ServicesHeader
         :logo="header.logo"
         :name="header.name"
         :desc="header.desc"
@@ -11,9 +11,9 @@
         <ServicesSidebar :anchors="anchors" />
 
         <div class="content_main">
-          <ServicesPanel :tabs="tabs1" id="疫情指挥调度"/>
-          <ServicesPanel :tabs="tabs2" id="疫情防控访客管理"/>
-          <ServicesPanel :tabs="tabs3" id="疫情卡口小战士"/>
+          <ServicesPanel id="疫情指挥调度" :tabs="tabs1" />
+          <ServicesPanel id="疫情防控访客管理" :tabs="tabs2" />
+          <ServicesPanel id="疫情卡口小战士" :tabs="tabs3" />
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@ const anchors = ref<Anchor[]>([
   { title: '疫情卡口小战士', href: '#疫情卡口小战士' }
 ])
 const tabs1 = reactive<Tab[]>([
-  { 
+  {
     name: '疫情指挥调度',
     logo: '/img/app/yqzhdd.png',
     content: {
@@ -49,11 +49,11 @@ const tabs1 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs2 = reactive<Tab[]>([
-  { 
+  {
     name: '疫情防控访客管理',
     logo: '/img/home/yycp_10.png',
     content: {
@@ -62,11 +62,11 @@ const tabs2 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs3 = reactive<Tab[]>([
-  { 
+  {
     name: '疫情卡口小战士',
     logo: '/img/home/xzs.png',
     content: {
@@ -75,7 +75,7 @@ const tabs3 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 </script>

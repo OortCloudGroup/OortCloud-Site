@@ -86,13 +86,13 @@
         >
           <template #intro>
             <p class="radius_info">
-              <span>30分钟</span>&nbsp;把小程序搬进 App
+              <span>30分钟</span>&nbsp;把小程序搬进App
             </p><br />
             <p class="radius_info">
-              <span>30分钟</span>&nbsp;在 App 里运行小程序
+              <span>30分钟</span>&nbsp;在App里运行小程序
             </p><br />
             <p class="radius_info">
-              <span>30分钟</span>&nbsp;开启 App 敏捷开发新模式
+              <span>30分钟</span>&nbsp;开启App敏捷开发新模式
             </p>
           </template>
           <template #desc>

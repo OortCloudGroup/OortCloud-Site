@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="main">
-      <ServicesHeader  
+      <ServicesHeader
         :logo="header.logo"
         :name="header.name"
         :desc="header.desc"
@@ -11,8 +11,8 @@
         <ServicesSidebar :anchors="anchors" />
 
         <div class="content_main">
-          <ServicesPanel :tabs="tabs1" id="智慧城管平台"/>
-          <ServicesPanel :tabs="tabs2" id="综合行政执法平台"/>
+          <ServicesPanel id="智慧城管平台" :tabs="tabs1" />
+          <ServicesPanel id="综合行政执法平台" :tabs="tabs2" />
         </div>
       </div>
     </div>
@@ -35,10 +35,10 @@ const header = reactive<Head>({
 })
 const anchors = ref<Anchor[]>([
   { title: '智慧城管平台', href: '#智慧城管平台' },
-  { title: '综合行政执法平台', href: '#综合行政执法平台' },
+  { title: '综合行政执法平台', href: '#综合行政执法平台' }
 ])
 const tabs1 = reactive<Tab[]>([
-  { 
+  {
     name: '智慧城管平台',
     logo: '/img/app/zfwx.png',
     content: {
@@ -47,11 +47,11 @@ const tabs1 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs2 = reactive<Tab[]>([
-  { 
+  {
     name: '综合行政执法平台',
     logo: '/img/app/zwfw.png',
     content: {
@@ -60,7 +60,7 @@ const tabs2 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 </script>

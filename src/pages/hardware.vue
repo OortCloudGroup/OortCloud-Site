@@ -11,10 +11,10 @@
         <ServicesSidebar :anchors="anchors" />
 
         <div class="content_main">
-          <ServicesVerticalPanel :tabs="tabs1" id="移动存储"/>
-          <ServicesVerticalPanel :tabs="tabs2" id="网络产品"/>
-          <ServicesVerticalPanel :tabs="tabs3" id="智能终端"/>
-          <ServicesVerticalPanel :tabs="tabs4" id="数据采集"/>
+          <ServicesVerticalPanel id="移动存储" :tabs="tabs1" />
+          <ServicesVerticalPanel id="网络产品" :tabs="tabs2" />
+          <ServicesVerticalPanel id="智能终端" :tabs="tabs3" />
+          <ServicesVerticalPanel id="数据采集" :tabs="tabs4" />
         </div>
       </div>
     </div>
@@ -109,7 +109,7 @@ const tabs2 = reactive<Tab[]>([
         { name: '了解更多', link: '/product_router' }
       ]
     }
-  },
+  }
 ])
 const tabs3 = reactive<Tab[]>([
   {

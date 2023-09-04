@@ -70,6 +70,9 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
 
 <script setup lang="ts">
 
+import { IosArrowForward } from '@vicons/ionicons4'
+import { NPopover, NIcon } from 'naive-ui'
+
 definePageMeta({
   layout: 'demo',
   title: '反诈中心推广统计平台',
@@ -84,9 +87,6 @@ useSeoMeta({
   ogDescription: '反诈App推广神器！推广人员生成推广二维码海报，引导群众下载，实现推广统计到个人，量化推广工作',
   ogImage: '/img/demo/fz/fz_logo.png'
 })
-
-import { IosArrowForward } from '@vicons/ionicons4'
-import { NPopover, NIcon } from 'naive-ui'
 
 </script>
 

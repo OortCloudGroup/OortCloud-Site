@@ -1,19 +1,19 @@
 <template>
   <div class="page_container">
     <div class="carousel_container">
-      <Carousel :carouse-list="carouseList"></Carousel>
+      <Carousel :carouse-list="carouseList" />
     </div>
     <div>
       <!-- 硬件产品 -->
-      <HomeHardwarePanel :data="hardwareCards"/>
+      <HomeHardwarePanel :data="hardwareCards" />
       <!-- 软件产品 -->
-      <HomeSoftwarePanel :data="softwareCards"/>
+      <HomeSoftwarePanel :data="softwareCards" />
       <!-- 专业服务 -->
-      <HomeSolutionPanel :data="tabsContent"/>
+      <HomeSolutionPanel :data="tabsContent" />
       <!-- 合作伙伴 -->
-      <HomePartnerPanel :data="partnerData"/>
+      <HomePartnerPanel :data="partnerData" />
       <!-- 新闻中心 -->
-      <HomeNewsPanel :data="newsList"/>
+      <HomeNewsPanel :data="newsList" />
     </div>
   </div>
 </template>
@@ -24,14 +24,14 @@ interface Resp {
   data: any
 }
 
-const url =  'https://www.oortcloudsmart.com/oort/oortcloud-cetcnewsservice/api/v1/cetcnewservice/new_list'
+const url = 'https://www.oortcloudsmart.com/oort/oortcloud-cetcnewsservice/api/v1/cetcnewservice/new_list'
 
 const carouseList = ref([
   {
     url: '/img/home/bg_2.png',
     title: '创造无限可能',
-    desc:'公共安全“私有云智能化应用建设解决方案”提供商',
-    buttons:[]
+    desc: '公共安全“私有云智能化应用建设解决方案”提供商',
+    buttons: []
   },
   {
     url: '/img/home/jwb.png',
@@ -43,7 +43,8 @@ const carouseList = ref([
       { text: '立即体验', link: 'http://map.oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/console_manage/index.html#/' },
       { text: '观看视频', link: 'https://player.youku.com/embed/XNTExNzc3Mzg2NA==' }]
   },
-  { url: '/img/home/yzt_bg.png',
+  {
+    url: '/img/home/yzt_bg.png',
     title: '指挥调度一张图',
     desc: '打造全警钟、全平台、资源整合、系统集成、信息共享，实现接警、指挥、调度为一体的指挥中心，从而更有效的提高治安预防、控制、制止的反应能力',
     buttons: [
@@ -53,7 +54,8 @@ const carouseList = ref([
       { text: '观看视频', link: 'https://player.youku.com/embed/XNTExNzc3Mzg2NA==' }
     ]
   },
-  { url: '/img/home/sypt.png',
+  {
+    url: '/img/home/sypt.png',
     title: '私有云部署的移动安全办公云平台',
     desc: '对标公有云上的钉钉，企业微信的专门私有化部署的数字化移动协同办公平台，数据自己掌握，安全可控。打造了一个涵盖即时消息、电子邮件、音视频会议、资料分享、流程申请与',
     buttons: [
@@ -90,7 +92,7 @@ const hardwareCards = ref([
       { name: '网关' },
       { name: '4G工业路由器' },
       { name: '5G工业路由器' },
-      { name: '交换机' },
+      { name: '交换机' }
     ]
   },
   {
@@ -109,9 +111,9 @@ const hardwareCards = ref([
     buttons: [
       { name: '动环盒子' },
       { name: '动环交换机' },
-      { name: '动环网关' },
+      { name: '动环网关' }
     ]
-  },
+  }
 ])
 
 const softwareCards = ref([
@@ -128,7 +130,7 @@ const softwareCards = ref([
           { name: '安全管控MDM' },
           { name: '私有云部署的移动安全办公云平台' },
           { name: '定制手机型安全终端' },
-          { name: '定制安全Pad终端' },
+          { name: '定制安全Pad终端' }
         ]
       },
       {
@@ -141,7 +143,7 @@ const softwareCards = ref([
           { name: '跨网智能网关' },
           { name: 'Kuboard' },
           { name: '分布式文件存储系统' },
-          { name: '天琴虚拟化软件' },
+          { name: '天琴虚拟化软件' }
         ]
       },
       {
@@ -247,7 +249,7 @@ const softwareCards = ref([
           { name: '新一代“中间机”' },
           { name: '红盘、蓝盘安全U盘系统' },
           { name: '终端数据跨网安全传输系统' },
-          { name: '税务自助交换安全系统' },
+          { name: '税务自助交换安全系统' }
         ]
       },
       {
@@ -343,7 +345,7 @@ const partnerData = ref<Array<string>>([
   '/img/home/9.png',
   '/img/home/10.png',
   '/img/home/11.png',
-  '/img/home/12.png',
+  '/img/home/12.png'
 ])
 
 const newsList = ref<Array<News>>([])
@@ -357,7 +359,7 @@ async function getNewsList() {
     newsType: 1,
     status: 1
   }
-  const { data } = await useFetch(url,  { body: params, method: 'post'})
+  const { data } = await useFetch(url, { body: params, method: 'post' })
   const res:Resp = toRaw(data.value) as Resp
   if (res && res.code === 200) {
     newsList.value = res.data.list
@@ -378,7 +380,6 @@ async function getNewsList() {
 // })
 
 </script>
-
 
 <style scoped lang="scss">
 .carousel_container {

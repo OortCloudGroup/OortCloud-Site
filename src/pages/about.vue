@@ -308,12 +308,12 @@ const init = () => {
     myOptions
   )
   // 给中心点一个指示图标
-  new TMap.MultiMarker({
-    map: map,
+  widnow.TMap.MultiMarker({
+    map,
     geometries: [{ // 点标注数据数组
-      'position': new TMap.LatLng(22.602465, 114.14787),
-      'properties': {
-        'title': 'marker'
+      position: new TMap.LatLng(22.602465, 114.14787),
+      properties: {
+        title: 'marker'
       }
     }]
   })

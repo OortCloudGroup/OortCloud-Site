@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="main">
-      <ServicesHeader  
+      <ServicesHeader
         :logo="header.logo"
         :name="header.name"
         :desc="header.desc"
@@ -11,11 +11,11 @@
         <ServicesSidebar :anchors="anchors" />
 
         <div class="content_main">
-          <ServicesPanel :tabs="tabs1" id="检务宝"/>
-          <ServicesPanel :tabs="tabs2" id="移动检务"/>
-          <ServicesPanel :tabs="tabs3" id="阳光检务"/>
-          <ServicesPanel :tabs="tabs4" id="移动阅卷"/>
-          <ServicesPanel :tabs="tabs5" id="远程送达"/>
+          <ServicesPanel id="检务宝" :tabs="tabs1" />
+          <ServicesPanel id="移动检务" :tabs="tabs2" />
+          <ServicesPanel id="阳光检务" :tabs="tabs3" />
+          <ServicesPanel id="移动阅卷" :tabs="tabs4" />
+          <ServicesPanel id="远程送达" :tabs="tabs5" />
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@ const anchors = ref<Anchor[]>([
   { title: '远程送达', href: '#远程送达' }
 ])
 const tabs1 = reactive<Tab[]>([
-  { 
+  {
     name: '检务宝',
     logo: '/img/app/jianwubao.png',
     content: {
@@ -53,11 +53,11 @@ const tabs1 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs2 = reactive<Tab[]>([
-  { 
+  {
     name: '移动检务',
     logo: '/img/app/ydjw.png',
     content: {
@@ -66,11 +66,11 @@ const tabs2 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '/product_mobileInspection' }
       ]
-    } 
+    }
   }
 ])
 const tabs3 = reactive<Tab[]>([
-  { 
+  {
     name: '阳光检务',
     logo: '/img/app/ygjw.png',
     content: {
@@ -79,11 +79,11 @@ const tabs3 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs4 = reactive<Tab[]>([
-  { 
+  {
     name: '移动阅卷',
     logo: '/img/app/ydyj.png',
     content: {
@@ -92,11 +92,11 @@ const tabs4 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs5 = reactive<Tab[]>([
-  { 
+  {
     name: '远程送达',
     logo: '/img/app/ycsd.png',
     content: {
@@ -105,7 +105,7 @@ const tabs5 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 </script>

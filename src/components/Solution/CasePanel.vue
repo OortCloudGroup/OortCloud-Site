@@ -1,6 +1,8 @@
 <template>
   <div class="panel">
-    <h2 class="panel_title">客户案例</h2>
+    <h2 class="panel_title">
+      客户案例
+    </h2>
 
     <div class="panel_content">
       <Image v-for="(item, index) in data" :key="index" :src="item" />

@@ -1,15 +1,19 @@
 <template>
   <div class="header">
     <div class="header_wrapper">
-      <div @click="backToHome" class="header_logo">
+      <div class="header_logo" @click="backToHome">
         <img src="/img/logo_white.png" />
       </div>
       <div class="header_menu">
         <div class="header_tabs">
-          <NuxtLink to="/">首页</NuxtLink>
+          <NuxtLink to="/">
+            首页
+          </NuxtLink>
           <n-popover trigger="hover" arrow-point-to-center placement="bottom">
             <template #trigger>
-              <NuxtLink to="/hardware">硬件产品</NuxtLink>
+              <NuxtLink to="/hardware">
+                硬件产品
+              </NuxtLink>
             </template>
             <template #default>
               <NavHeaderDropdown :menu="hardwareMenu" width="60rem" />
@@ -17,106 +21,110 @@
           </n-popover>
           <n-popover trigger="hover" arrow-point-to-center placement="bottom">
             <template #trigger>
-              <NuxtLink  to="/product" @mouseenter="handleMouseenter('software')" @mouseleave="handleMouseleave('software')">软件产品</NuxtLink>
+              <NuxtLink to="/product" @mouseenter="handleMouseenter('software')" @mouseleave="handleMouseleave('software')">
+                软件产品
+              </NuxtLink>
             </template>
             <template #default>
               <NavHeaderDropdown :menu="softwareMenu" width="82rem">
                 <div class="dropdown_col" style="flex: 1.5">
-                  <p class="dropdown_col_title">基础软件</p>
+                  <p class="dropdown_col_title">
+                    基础软件
+                  </p>
                   <div class="dropdown_col_sort">
-                    <img class="dropdown_col_sort_logo" src="/img/home/sxt.png">
+                    <img class="dropdown_col_sort_logo" src="/img/home/sxt.png" />
                     <span class="dropdown_col_sort_label">安全移动办公</span>
                   </div>
                   <NuxtLink to="/product_instantMsg" class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/home/xl_1.png">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_1.png" />
                     <span class="dropdown_col_item_label">即时通讯</span>
                     <!-- <span>NEW</span> -->
                   </NuxtLink>
                   <a href="https://www.myoumuamua.com/" target="_blank">
                     <div class="dropdown_col_item">
-                      <img class="dropdown_col_item_logo" src="/img/home/xl_2.png">
+                      <img class="dropdown_col_item_logo" src="/img/home/xl_2.png" />
                       <span class="dropdown_col_item_label">私有云部署的移动安全办公云平台</span>
                     </div>
                   </a>
                   <NuxtLink to="/product" class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/home/xl_3.png">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_3.png" />
                     <span class="dropdown_col_item_label">门户与应用仓库</span>
                   </NuxtLink>
                   <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/home/xl_5.png">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_5.png" />
                     <span class="dropdown_col_item_label">安全管控MDM</span>
                   </div>
                   <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/home/xl_6.png">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_6.png" />
                     <span class="dropdown_col_item_label">定制手机型安全终端</span>
                   </div>
                   <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/home/xl_7.png">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_7.png" />
                     <span class="dropdown_col_item_label">定制安全Pad终端</span>
                   </div>
                   <div class="dropdown_col_sort">
-                    <img class="dropdown_col_sort_logo" src="/img/home/zhdd.png">
+                    <img class="dropdown_col_sort_logo" src="/img/home/zhdd.png" />
                     <span class="dropdown_col_sort_label">指挥调度与IOC大数据可视化</span>
                   </div>
                   <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/home/xl_9.png">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_9.png" />
                     <span class="dropdown_col_item_label">指挥调度一张图</span>
                   </div>
                   <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/home/xl_10.png">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_10.png" />
                     <span class="dropdown_col_item_label">XSmart大数据IOC可视化平台</span>
                   </div>
                   <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/app/icon_apache.png">
+                    <img class="dropdown_col_item_logo" src="/img/app/icon_apache.png" />
                     <span class="dropdown_col_item_label">Apache Superset</span>
                   </div>
                   <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/app/icon_xdata.png">
+                    <img class="dropdown_col_item_logo" src="/img/app/icon_xdata.png" />
                     <span class="dropdown_col_item_label">XDataStudio大数据底座</span>
                   </div>
                 </div>
                 <div class="dropdown_col" style="flex: 1.5; padding-top: 1.375rem;">
-                  <p class="dropdown_col_title"></p>
+                  <p class="dropdown_col_title" />
                   <div class="dropdown_col_sort">
-                    <img class="dropdown_col_sort_logo" src="/img/home/dzh.png">
+                    <img class="dropdown_col_sort_logo" src="/img/home/dzh.png" />
                     <span class="dropdown_col_sort_label">私有云</span>
                   </div>
                   <a href="http://oort.oortcloudsmart.com:32610/oort/oortcloud-frontservice/apaas_web/" target="_blank">
                     <div class="dropdown_col_item">
-                      <img class="dropdown_col_item_logo" src="/img/home/xl_11.png">
+                      <img class="dropdown_col_item_logo" src="/img/home/xl_11.png" />
                       <span class="dropdown_col_item_label">智慧云aPaaS应用支撑平台（aPaaS）</span>
                     </div>
                   </a>
                   <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/home/xl_12.png">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_12.png" />
                     <span class="dropdown_col_item_label">移动端服务化能力支撑平台（mPaaS）</span>
                   </div>
                   <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/home/xl_4.png">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_4.png" />
                     <span class="dropdown_col_item_label">XMobileStudio移动应用开发支撑平台</span>
                   </div>
                   <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/home/xl_8.png">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_8.png" />
                     <span class="dropdown_col_item_label">PGIS地图引擎能力支撑平台(PGISPaaS)</span>
                   </div>
                   <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/home/xl_13.png">
+                    <img class="dropdown_col_item_logo" src="/img/home/xl_13.png" />
                     <span class="dropdown_col_item_label">XDevStudio“奥尔特云”开发平台</span>
                   </div>
                   <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/app/icon_cloud.png">
+                    <img class="dropdown_col_item_logo" src="/img/app/icon_cloud.png" />
                     <span class="dropdown_col_item_label">XProxy跨网智能网关</span>
                   </div>
                   <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/app/icon_kuboard.png">
+                    <img class="dropdown_col_item_logo" src="/img/app/icon_kuboard.png" />
                     <span class="dropdown_col_item_label">Kuboard</span>
                   </div>
                   <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/app/icon_cloud.png">
+                    <img class="dropdown_col_item_logo" src="/img/app/icon_cloud.png" />
                     <span class="dropdown_col_item_label">XFileStor分布式文件存储系统</span>
                   </div>
                   <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/app/icon_tianqin.png">
+                    <img class="dropdown_col_item_logo" src="/img/app/icon_tianqin.png" />
                     <span class="dropdown_col_item_label">XCompute天琴虚拟化软件</span>
                   </div>
                 </div>
@@ -125,33 +133,39 @@
           </n-popover>
           <n-popover trigger="hover" arrow-point-to-center placement="bottom">
             <template #trigger>
-              <NuxtLink to="/services" @mouseenter="handleMouseenter('solution')" @mouseleave="handleMouseleave('solution')">专业服务</NuxtLink>
+              <NuxtLink to="/services" @mouseenter="handleMouseenter('solution')" @mouseleave="handleMouseleave('solution')">
+                专业服务
+              </NuxtLink>
             </template>
             <template #default>
               <NavHeaderDropdown :menu="solutionMenu" width="50rem" />
             </template>
           </n-popover>
-          <NuxtLink to="/news">新闻动态</NuxtLink>
-          <NuxtLink to="/about">关于我们</NuxtLink>
+          <NuxtLink to="/news">
+            新闻动态
+          </NuxtLink>
+          <NuxtLink to="/about">
+            关于我们
+          </NuxtLink>
         </div>
       </div>
       <div class="header_right">
         <n-popover trigger="hover" arrow-point-to-center placement="bottom">
           <template #trigger>
-          <div class="header_right_demo" @mouseenter="handleMouseenter('demo')" @mouseleave="handleMouseleave('demo')">
-            <img src="/img/demo/menu/demo.png"/>
-            <span>在线演示</span>
-          </div>
+            <div class="header_right_demo" @mouseenter="handleMouseenter('demo')" @mouseleave="handleMouseleave('demo')">
+              <img src="/img/demo/menu/demo.png" />
+              <span>在线演示</span>
+            </div>
           </template>
           <template #default>
             <div class="demo_div">
-              <template v-for="(item, index) in demoMenu">
+              <template v-for="(item, index) in demoMenu" :key="index">
                 <NuxtLink :to="item.link" target="_blank">
-                  <div class="demo_div_item"  :key="index">
-                    <img :src="item.logo"/>
+                  <div :key="index" class="demo_div_item">
+                    <img :src="item.logo" />
                     <div>
-                      <span>{{item.name}}</span>
-                      <span>{{item.desc}}</span>
+                      <span>{{ item.name }}</span>
+                      <span>{{ item.desc }}</span>
                     </div>
                   </div>
                 </NuxtLink>
@@ -172,59 +186,69 @@
       <img src="/img/dashboard.png" />
       <div class="header_dialog">
         <div class="header_dialog_head">
-          <div class="header_dialog_head_left">基础软件</div>
-          <div class="header_dialog_head_right"><NuxtLink to="/more">查看更多</NuxtLink></div>
+          <div class="header_dialog_head_left">
+            基础软件
+          </div>
+          <div class="header_dialog_head_right">
+            <NuxtLink to="/more">
+              查看更多
+            </NuxtLink>
+          </div>
         </div>
         <div class="header_dialog_item">
-          <div class="header_dialog_item_title">双系统安全移动办公</div>
+          <div class="header_dialog_item_title">
+            双系统安全移动办公
+          </div>
           <div class="header_dialog_item_main">
             <div class="header_dialog_item_main_div">
-              <img src="/img/app/chat.png">
+              <img src="/img/app/chat.png" />
               <div>即时通讯</div>
             </div>
             <div class="header_dialog_item_main_div">
-              <img src="/img/app/syy.png">
+              <img src="/img/app/syy.png" />
               <div>私有云部署的移动安全办公云平台</div>
             </div>
             <div class="header_dialog_item_main_div">
-              <img src="/img/home/xl_3.png">
+              <img src="/img/home/xl_3.png" />
               <div>门户与应用仓库</div>
             </div>
             <div class="header_dialog_item_main_div">
-              <img src="/img/app/mobile.png">
+              <img src="/img/app/mobile.png" />
               <div>移动应用开发支撑平台</div>
             </div>
             <div class="header_dialog_item_main_div">
-              <img src="/img/home/xl_5.png">
+              <img src="/img/home/xl_5.png" />
               <div>安全管控MDM</div>
             </div>
             <div class="header_dialog_item_main_div">
-              <img src="/img/home/xl_6.png">
+              <img src="/img/home/xl_6.png" />
               <div>定制手机型安全终端</div>
             </div>
             <div class="header_dialog_item_main_div">
-              <img src="/img/home/xl_7.png">
+              <img src="/img/home/xl_7.png" />
               <div>定制安全Pad终端</div>
             </div>
           </div>
         </div>
         <div class="header_dialog_item">
-          <div class="header_dialog_item_title">指挥调度与IOC大数据可视化</div>
+          <div class="header_dialog_item_title">
+            指挥调度与IOC大数据可视化
+          </div>
           <div class="header_dialog_item_main">
             <div class="header_dialog_item_main_div">
-              <img src="/img/home/xl_9.png">
+              <img src="/img/home/xl_9.png" />
               <div>指挥调度一张图</div>
             </div>
             <div class="header_dialog_item_main_div">
-              <img src="/img/home/xl_10.png">
+              <img src="/img/home/xl_10.png" />
               <div>XSmart大数据IOC可视化平台</div>
             </div>
             <div class="header_dialog_item_main_div">
-              <img src="/img/app/icon_apache.png">
+              <img src="/img/app/icon_apache.png" />
               <div>Apache Superset</div>
             </div>
             <div class="header_dialog_item_main_div">
-              <img src="/img/app/icon_xdata.png">
+              <img src="/img/app/icon_xdata.png" />
               <div>XDataStudio大数据底座</div>
             </div>
           </div>
@@ -257,7 +281,7 @@ const hardwareMenu = ref<Menu[]>([
       { name: '网关', logo: '/img/home/router.png', link: '/product_router' },
       { name: '4G工业路由器', logo: '/img/app/dhhz.png', link: '/product_router' },
       { name: '5G工业路由器', logo: '/img/app/5Gdh.png', link: '/product_router' },
-      { name: '交换机', logo: '/img/app/dhjhj.png', link: '/product_router' },
+      { name: '交换机', logo: '/img/app/dhjhj.png', link: '/product_router' }
     ]
   },
   {
@@ -289,7 +313,7 @@ const softwareMenu = ref<Menu[]>([
       { name: 'XCreator敏捷发布平台', logo: '/img/app/icon_xcreator.png' },
       { name: '警卫宝', logo: '/img/home/yycp_10.png' },
       { name: '视频宝', logo: '/img/home/yycp_12.png' },
-      { name: '天琴智宝', logo: '/img/home/yycp_17.png' },
+      { name: '天琴智宝', logo: '/img/home/yycp_17.png' }
     ]
   },
   {
@@ -300,7 +324,7 @@ const softwareMenu = ref<Menu[]>([
       { name: '反诈中心推广统计平台', logo: '/img/home/aqcp_2.png', link: '/product_antiFraud' },
       { name: '互联网+公安政务服务', logo: '/img/home/aqcp_3.png' },
       { name: '群防群治', logo: '/img/home/aqcp_4.png' },
-      { name: '辅警平台', logo: '/img/home/yycp_22.png' },
+      { name: '辅警平台', logo: '/img/home/yycp_22.png' }
     ]
   },
   {
@@ -311,7 +335,7 @@ const softwareMenu = ref<Menu[]>([
       { name: '枪弹装备室', logo: '/img/home/aqcp_5.png' },
       { name: '定制手机型安全终端', logo: '/img/home/dzh.png' },
       { name: '定制安全Pad终端', logo: '/img/home/xl_7.png' },
-      { name: '计算机保密防范', logo: '/img/app/icon_lock.png' },
+      { name: '计算机保密防范', logo: '/img/app/icon_lock.png' }
     ]
   }
 ])
@@ -324,7 +348,7 @@ const solutionMenu = ref<Menu[]>([
       { name: '智慧派出所', logo: '/img/app/jinghui.png', link: '/services_smartPoliceStation' },
       { name: '交警', logo: '/img/app/jiaojing.png', link: '/services_trafficPolice' },
       { name: '检察', logo: '/img/app/jiancha.png', link: '/services_inspection' },
-      { name: '司法监狱', logo: '/img/app/jinghui.png', link: '/services_prison' },
+      { name: '司法监狱', logo: '/img/app/jinghui.png', link: '/services_prison' }
     ]
   },
   {
@@ -334,7 +358,7 @@ const solutionMenu = ref<Menu[]>([
       { name: '法院', logo: '/img/app/fayuan.png', link: '/services_court' },
       { name: '档案', logo: '/img/app/dangan.png', link: '/services_document' },
       { name: '智慧边海防', logo: '/img/app/zgbhf.png', link: '/services_borderSeaDefense' },
-      { name: '政府', logo: '/img/app/zhengfu.png', link: '/services_goverment' },
+      { name: '政府', logo: '/img/app/zhengfu.png', link: '/services_goverment' }
     ]
   },
   {
@@ -344,7 +368,7 @@ const solutionMenu = ref<Menu[]>([
       { name: '企业', logo: '/img/app/qiye.png', link: '/services_enterprise' },
       { name: '应急', logo: '/img/app/yingji.png', link: '/services_emergency' },
       { name: '消防', logo: '/img/app/xiaofang.png', link: '/services_fireFighting' },
-      { name: '疫情防控', logo: '/img/app/yiqingfangkong.png', link: '/services_epidemic' },
+      { name: '疫情防控', logo: '/img/app/yiqingfangkong.png', link: '/services_epidemic' }
     ]
   },
   {
@@ -354,7 +378,7 @@ const solutionMenu = ref<Menu[]>([
       { name: '城管', logo: '/img/app/chengguan.png', link: '/services_cityManager' },
       { name: '物联网', logo: '/img/app/wlw.png', link: '/services_iot' },
       { name: '应用软件定制与运维服务外包', logo: '/img/app/yyrjdz.png', link: '/services_asc' },
-      { name: '海外[一带一路] English', logo: '/img/app/haiwai.png', link: '/services_oversea' },
+      { name: '海外[一带一路] English', logo: '/img/app/haiwai.png', link: '/services_oversea' }
     ]
   }
 ])
@@ -413,11 +437,9 @@ const demoMenu = ref<MenuItem[]>([
     desc: '全媒体矩阵信息发布平台',
     logo: '/img/demo/menu/xc.png',
     link: '/demoXCreator'
-  },
+  }
 
 ])
-
-let timer:any = null
 
 const handleMouseenter = (nav: string): void => {
   if (nav === 'demo') {
@@ -426,12 +448,12 @@ const handleMouseenter = (nav: string): void => {
 }
 
 const handleMouseleave = (nav: string): void => {
-  timer = setTimeout(() => {
-   panelLeave(nav)
+  setTimeout(() => {
+    panelLeave(nav)
   }, 300)
 }
 
-const panelLeave = (nav: string): void =>{
+const panelLeave = (nav: string): void => {
   if (nav === 'demo') {
     demoVisible.value = true
   }
@@ -723,8 +745,6 @@ const backToHome = () => {
 .header_dialog:hover {
   transform: translateX(0px);
 }
-
-
 
 .demo_div {
   display: flex;

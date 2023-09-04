@@ -16,7 +16,7 @@
           </p>
         </div>
         <div class="panel_wrapper">
-          <div v-for="(mItem, mIndex) in item.content" :key="index" class="panel_item">
+          <div v-for="(mItem, mIndex) in item.content" :key="mIndex" class="panel_item">
             <div class="panel_item_title">
               <span class="panel_item_title_img" />
               <span class="panel_item_title_label">{{ mItem.title }}</span>

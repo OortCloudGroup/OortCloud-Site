@@ -2,8 +2,10 @@
   <div class="dropdown" :style="{'width': width}">
     <slot />
     <div v-for="(item, index) in menu" :key="index" class="dropdown_col">
-      <p class="dropdown_col_title" v-if="item.showTitle">{{ item.title }}</p>
-      <NavHeaderDropdownItem v-for="menu in item.menus" :key="menu.name" :menu="menu"/>
+      <p v-if="item.showTitle" class="dropdown_col_title">
+        {{ item.title }}
+      </p>
+      <NavHeaderDropdownItem v-for="(itdd,ind) in item.menus" :key="ind" :menu="itdd" />
     </div>
   </div>
 </template>

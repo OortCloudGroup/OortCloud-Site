@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="main">
-      <ServicesHeader  
+      <ServicesHeader
         :logo="header.logo"
         :name="header.name"
         :desc="header.desc"
@@ -11,7 +11,7 @@
         <ServicesSidebar :anchors="anchors" />
 
         <div class="content_main">
-          <ServicesPanel :tabs="tabs1" id="移动办公加密通信服务"/>
+          <ServicesPanel id="移动办公加密通信服务" :tabs="tabs1" />
         </div>
       </div>
     </div>
@@ -36,7 +36,7 @@ const anchors = ref<Anchor[]>([
   { title: '移动办公加密通信服务', href: '#移动办公加密通信服务' }
 ])
 const tabs1 = reactive<Tab[]>([
-  { 
+  {
     name: '移动办公加密通信服务',
     logo: '/img/app/ydbgjm.png',
     content: {
@@ -45,7 +45,7 @@ const tabs1 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 </script>

@@ -11,10 +11,10 @@
         <ServicesSidebar :anchors="anchors" />
 
         <div class="content_main">
-          <ServicesPanel :tabs="tabs1" id="指挥调度"/>
-          <ServicesPanel :tabs="tabs2" id="综合预警"/>
-          <ServicesPanel :tabs="tabs3" id="可视化指挥"/>
-          <ServicesPanel :tabs="tabs4" id="指挥控制"/>
+          <ServicesPanel id="指挥调度" :tabs="tabs1" />
+          <ServicesPanel id="综合预警" :tabs="tabs2" />
+          <ServicesPanel id="可视化指挥" :tabs="tabs3" />
+          <ServicesPanel id="指挥控制" :tabs="tabs4" />
         </div>
       </div>
     </div>
@@ -51,7 +51,7 @@ const tabs1 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' },
         { name: '立即购买', link: '' },
-        { name: '在线体验', link: '' },
+        { name: '在线体验', link: '' }
       ]
     }
   }
@@ -78,7 +78,7 @@ const tabs3 = reactive<Tab[]>([
       cover: '/img/services/border_sea_defense/kshzh.png',
       buttons: [
         { name: '了解更多', link: '' },
-        { name: '在线体验', link: '' },
+        { name: '在线体验', link: '' }
       ]
     }
   }
@@ -92,7 +92,7 @@ const tabs4 = reactive<Tab[]>([
       cover: '/img/services/border_sea_defense/zhkz.png',
       buttons: [
         { name: '了解更多', link: '' },
-        { name: '在线体验', link: '' },
+        { name: '在线体验', link: '' }
       ]
     }
   }

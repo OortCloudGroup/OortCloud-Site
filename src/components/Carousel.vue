@@ -5,27 +5,37 @@
     centered-slides
     dot-type="line"
     dot-placement="bottom"
-    draggable>
-    <div  class="carousel-img container" :class="{'first_carouse': index ===0}" v-for="(item, index) in carouseList"
-     :key="index"
-     :style="'background-image:url('+ item.url+')'">
-     <div class="content">
-      <div class="title">{{ item.title }}</div>
-      <div class="desc">{{ item.desc }}</div>
-      <div class="button" v-if="item.buttons && item.buttons.length > 0">
-        <div class="button_item" v-for="(it, ind) in item.buttons" :key="ind">
-          <a v-if="it.link && it.link.includes('http') && it.text !== '观看视频'" :href="it.link" target="_blank">{{ it.text }}</a>
-          <router-link v-else-if="it.link && !it.link.includes('http')" :to="it.link">{{ it.text }}</router-link>
-          <span v-else @click.stop="openModal(it)">{{ it.text }}</span>
+    draggable
+  >
+    <div
+      v-for="(item, index) in carouseList"
+      :key="index"
+      class="carousel-img container"
+      :class="{'first_carouse': index ===0}"
+      :style="'background-image:url('+ item.url+')'"
+    >
+      <div class="content">
+        <div class="title">
+          {{ item.title }}
+        </div>
+        <div class="desc">
+          {{ item.desc }}
+        </div>
+        <div v-if="item.buttons && item.buttons.length > 0" class="button">
+          <div v-for="(it, ind) in item.buttons" :key="ind" class="button_item">
+            <a v-if="it.link && it.link.includes('http') && it.text !== '观看视频'" :href="it.link" target="_blank">{{ it.text }}</a>
+            <router-link v-else-if="it.link && !it.link.includes('http')" :to="it.link">
+              {{ it.text }}
+            </router-link>
+            <span v-else @click.stop="openModal(it)">{{ it.text }}</span>
+          </div>
         </div>
       </div>
-     </div>
     </div>
   </n-carousel>
   <teleport to="body">
-    <n-modal v-model:show="showModal" title="观看视频" preset="dialog" :showIcon="false" style="width: 924px">
-      <iframe height=486 width=864 allowfullscreen :src="videoUrl" frameborder="0">
-      </iframe>
+    <n-modal v-model:show="showModal" title="观看视频" preset="dialog" :show-icon="false" style="width: 924px">
+      <iframe height="486" width="864" allowfullscreen :src="videoUrl" frameborder="0" />
     </n-modal>
   </teleport>
 </template>
@@ -37,8 +47,8 @@ import { Carousel } from '~/types'
 defineProps({
   carouseList: {
     type: Array<Carousel>,
-    required: true,
-  },
+    required: true
+  }
 })
 const showModal = ref(false)
 const videoUrl = ref('')
@@ -144,7 +154,6 @@ const openModal = (data: object) => {
     width: 28px!important;
     height: 28px!important;
 
-
   }
 
   .n-carousel .n-carousel__dots.n-carousel__dots--line .n-carousel__dot {
@@ -169,6 +178,5 @@ const openModal = (data: object) => {
     width: 16px!important;
     height: 16px!important;
   }
-
 
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="main">
-      <ServicesHeader  
+      <ServicesHeader
         :logo="header.logo"
         :name="header.name"
         :desc="header.desc"
@@ -11,8 +11,8 @@
         <ServicesSidebar :anchors="anchors" />
 
         <div class="content_main">
-          <ServicesPanel :tabs="tabs1" id="应急宝"/>
-          <ServicesPanel :tabs="tabs2" id="应急指挥调度"/>
+          <ServicesPanel id="应急宝" :tabs="tabs1" />
+          <ServicesPanel id="应急指挥调度" :tabs="tabs2" />
         </div>
       </div>
     </div>
@@ -38,7 +38,7 @@ const anchors = ref<Anchor[]>([
   { title: '应急指挥调度', href: '#应急指挥调度' }
 ])
 const tabs1 = reactive<Tab[]>([
-  { 
+  {
     name: '应急宝',
     logo: '/img/app/yjb.png',
     content: {
@@ -47,11 +47,11 @@ const tabs1 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs2 = reactive<Tab[]>([
-  { 
+  {
     name: '应急指挥调度',
     logo: '/img/app/yjzhdd2.png',
     content: {
@@ -62,7 +62,7 @@ const tabs2 = reactive<Tab[]>([
         { name: '立即购买', link: '' },
         { name: '在线体验', link: '' }
       ]
-    } 
+    }
   }
 ])
 </script>

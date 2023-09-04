@@ -142,6 +142,9 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
 
 <script setup lang="ts">
 
+import { IosArrowForward } from '@vicons/ionicons4'
+import { NPopover, NIcon, NModal } from 'naive-ui'
+
 definePageMeta({
   layout: 'demo',
   title: 'XOA数字化办公',
@@ -156,9 +159,6 @@ useSeoMeta({
   ogDescription: '新一代OA数字化办公生产力工具',
   ogImage: '/img/demo/xoa/xoa_logo.png'
 })
-
-import { IosArrowForward } from '@vicons/ionicons4'
-import { NPopover, NIcon, NModal } from 'naive-ui'
 
 const showModal = ref(false)
 const videoUrl = ref('https://v.qq.com/txp/iframe/player.html?vid=h3155cunx94')

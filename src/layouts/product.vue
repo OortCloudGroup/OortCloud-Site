@@ -35,7 +35,8 @@ const carouseList = ref([
       { text: '立即体验', link: 'http://map.oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/console_manage/index.html#/' },
       { text: '观看视频', link: 'https://player.youku.com/embed/XNTExNzc3Mzg2NA==' }]
   },
-  { url: '/img/home/yzt_bg.png',
+  {
+    url: '/img/home/yzt_bg.png',
     title: '指挥调度一张图',
     desc: '打造全警钟、全平台、资源整合、系统集成、信息共享，实现接警、指挥、调度为一体的指挥中心，从而更有效的提高治安预防、控制、制止的反应能力',
     buttons: [
@@ -45,7 +46,8 @@ const carouseList = ref([
       { text: '观看视频', link: 'https://player.youku.com/embed/XNTExNzc3Mzg2NA==' }
     ]
   },
-  { url: '/img/home/sypt.png',
+  {
+    url: '/img/home/sypt.png',
     title: '私有云部署的移动安全办公云平台',
     desc: '对标公有云上的钉钉，企业微信的专门私有化部署的数字化移动协同办公平台，数据自己掌握，安全可控。打造了一个涵盖即时消息、电子邮件、音视频会议、资料分享、流程申请与',
     buttons: [

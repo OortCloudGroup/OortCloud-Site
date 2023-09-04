@@ -90,6 +90,9 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
 
 <script setup lang="ts">
 
+import { IosArrowForward } from '@vicons/ionicons4'
+import { NPopover, NIcon, NModal } from 'naive-ui'
+
 definePageMeta({
   layout: 'demo',
   title: '即时通信',
@@ -104,9 +107,6 @@ useSeoMeta({
   ogDescription: '私有化部署的内网“微信”',
   ogImage: '/img/demo/im/im_logo.png'
 })
-
-import { IosArrowForward } from '@vicons/ionicons4'
-import { NPopover, NIcon, NModal } from 'naive-ui'
 
 const showModal = ref(false)
 const videoUrl = ref('https://v.qq.com/txp/iframe/player.html?vid=h3155cunx94')

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="main">
-      <ServicesHeader  
+      <ServicesHeader
         :logo="header.logo"
         :name="header.name"
         :desc="header.desc"
@@ -11,10 +11,10 @@
         <ServicesSidebar :anchors="anchors" />
 
         <div class="content_main">
-          <ServicesPanel :tabs="tabs1" show-tabs id="华为IdeaHub警务宝"/>
-          <ServicesPanel :tabs="tabs2" show-tabs id="移动警务"/>
-          <ServicesPanel :tabs="tabs3" show-tabs id="治安宝"/>
-          <ServicesPanel :tabs="tabs4" show-tabs id="为民服务"/>
+          <ServicesPanel id="华为IdeaHub警务宝" :tabs="tabs1" show-tabs />
+          <ServicesPanel id="移动警务" :tabs="tabs2" show-tabs />
+          <ServicesPanel id="治安宝" :tabs="tabs3" show-tabs />
+          <ServicesPanel id="为民服务" :tabs="tabs4" show-tabs />
         </div>
       </div>
     </div>
@@ -42,7 +42,7 @@ const anchors = ref<Anchor[]>([
   { title: '为民服务', href: '#为民服务' }
 ])
 const tabs1 = reactive<Tab[]>([
-  { 
+  {
     name: '警务宝一体机',
     logo: '/img/app/jwb.png',
     content: {
@@ -51,7 +51,7 @@ const tabs1 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   },
   {
     name: '警务宝应用平台',
@@ -62,7 +62,7 @@ const tabs1 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   },
   {
     name: '基层一站式工作平台',
@@ -73,7 +73,7 @@ const tabs1 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   },
   {
     name: '领导驾驶舱',
@@ -154,7 +154,7 @@ const tabs1 = reactive<Tab[]>([
   }
 ])
 const tabs2 = reactive<Tab[]>([
-  { 
+  {
     name: '新一代移动警务平台',
     logo: '/img/app/xjwpt.png',
     content: {
@@ -163,9 +163,9 @@ const tabs2 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   },
-  { 
+  {
     name: '惠警应用',
     logo: '/img/app/hjyy.png',
     content: {
@@ -174,9 +174,9 @@ const tabs2 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   },
-  { 
+  {
     name: '辅警平台',
     logo: '/img/app/ydbgjm.png',
     content: {
@@ -185,11 +185,11 @@ const tabs2 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs3 = reactive<Tab[]>([
-  { 
+  {
     name: '治安宝',
     logo: '/img/app/zab.png',
     content: {
@@ -198,9 +198,9 @@ const tabs3 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   },
-  { 
+  {
     name: '社区警务',
     logo: '/img/app/sqjw2.png',
     content: {
@@ -209,9 +209,9 @@ const tabs3 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   },
-  { 
+  {
     name: '一村一警',
     logo: '/img/app/cjpt.png',
     content: {
@@ -220,11 +220,11 @@ const tabs3 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs4 = reactive<Tab[]>([
-  { 
+  {
     name: '公安政务服务“一网通办”',
     logo: '/img/app/ywtb.png',
     content: {
@@ -233,7 +233,7 @@ const tabs4 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 </script>

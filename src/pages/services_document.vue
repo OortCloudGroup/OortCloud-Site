@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="main">
-      <ServicesHeader  
+      <ServicesHeader
         :logo="header.logo"
         :name="header.name"
         :desc="header.desc"
@@ -11,10 +11,10 @@
         <ServicesSidebar :anchors="anchors" />
 
         <div class="content_main">
-          <ServicesPanel :tabs="tabs1" id="档案宝"/>
-          <ServicesPanel :tabs="tabs2" id="项目解决方案"/>
-          <ServicesPanel :tabs="tabs3" id="外包服务"/>
-          <ServicesPanel :tabs="tabs4" id="硬件产品"/>
+          <ServicesPanel id="档案宝" :tabs="tabs1" />
+          <ServicesPanel id="项目解决方案" :tabs="tabs2" />
+          <ServicesPanel id="外包服务" :tabs="tabs3" />
+          <ServicesPanel id="硬件产品" :tabs="tabs4" />
         </div>
       </div>
     </div>
@@ -42,7 +42,7 @@ const anchors = ref<Anchor[]>([
   { title: '硬件产品', href: '#硬件产品' }
 ])
 const tabs1 = reactive<Tab[]>([
-  { 
+  {
     name: '档案宝',
     logo: '/img/home/dab.png',
     content: {
@@ -51,11 +51,11 @@ const tabs1 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '/product_archiveSoftware' }
       ]
-    } 
+    }
   }
 ])
 const tabs2 = reactive<Tab[]>([
-  { 
+  {
     name: '项目解决方案',
     logo: '/img/app/xmjjfa.png',
     content: {
@@ -64,11 +64,11 @@ const tabs2 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '/product_projectSolution' }
       ]
-    } 
+    }
   }
 ])
 const tabs3 = reactive<Tab[]>([
-  { 
+  {
     name: '外包服务',
     logo: '/img/app/wbfw.png',
     content: {
@@ -77,11 +77,11 @@ const tabs3 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '/product_outService' }
       ]
-    } 
+    }
   }
 ])
 const tabs4 = reactive<Tab[]>([
-  { 
+  {
     name: '硬件产品',
     logo: '/img/home/yjcp.png',
     content: {
@@ -90,7 +90,7 @@ const tabs4 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '/product_outService' }
       ]
-    } 
+    }
   }
 ])
 </script>

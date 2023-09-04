@@ -176,7 +176,7 @@
   </div>
 
   <!--一体机的优势-->
-  <div div class="all" style=" background: #F9F9F9;">
+  <div class="all" style="background: #F9F9F9;">
     <div class="pro_six_div">
       <span class="pro_span1">一体机的优势</span>
       <div class="pro_six_div2">

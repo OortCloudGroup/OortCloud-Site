@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="main">
-      <ServicesHeader  
+      <ServicesHeader
         :logo="header.logo"
         :name="header.name"
         :desc="header.desc"
@@ -11,10 +11,10 @@
         <ServicesSidebar :anchors="anchors" />
 
         <div class="content_main">
-          <ServicesPanel :tabs="tabs1" id="内网“微信”"/>
-          <ServicesPanel :tabs="tabs2" id="门户与应用市场"/>
-          <ServicesPanel :tabs="tabs3" id="统一门户与统一认证"/>
-          <ServicesPanel :tabs="tabs4" id="企业微信智慧工作台"/>
+          <ServicesPanel id="内网“微信”" :tabs="tabs1" />
+          <ServicesPanel id="门户与应用市场" :tabs="tabs2" />
+          <ServicesPanel id="统一门户与统一认证" :tabs="tabs3" />
+          <ServicesPanel id="企业微信智慧工作台" :tabs="tabs4" />
         </div>
       </div>
     </div>
@@ -42,7 +42,7 @@ const anchors = ref<Anchor[]>([
   { title: '企业微信智慧工作台', href: '#企业微信智慧工作台' }
 ])
 const tabs1 = reactive<Tab[]>([
-  { 
+  {
     name: '内网“微信”',
     logo: '/img/app/nwwx.png',
     content: {
@@ -51,11 +51,11 @@ const tabs1 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs2 = reactive<Tab[]>([
-  { 
+  {
     name: '门户与应用市场',
     logo: '/img/app/mhyysc.png',
     content: {
@@ -64,11 +64,11 @@ const tabs2 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs3 = reactive<Tab[]>([
-  { 
+  {
     name: '统一门户与统一认证',
     logo: '/img/app/tymh.png',
     content: {
@@ -77,11 +77,11 @@ const tabs3 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs4 = reactive<Tab[]>([
-  { 
+  {
     name: '企业微信智慧工作台',
     logo: '/img/app/qygzt.png',
     content: {
@@ -90,7 +90,7 @@ const tabs4 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 </script>

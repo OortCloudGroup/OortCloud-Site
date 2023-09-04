@@ -1,12 +1,12 @@
 <template>
-  <div class="panel" >
+  <div class="panel">
     <div class="panel_tabs">
       <div
-        class="panel_tabs_item"
         v-for="tab in tabs"
         :key="tab.name"
-        @click="handleClickTab(tab)"
+        class="panel_tabs_item"
         :style="[tab.name === activeTab.name ? activeTabStyle : '']"
+        @click="handleClickTab(tab)"
       >
         <Image :src="tab.logo" />
         <p>{{ tab.name }}</p>
@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="panel_content">
-      <ServicesPanelItem :name="activeTab.name" :content="activeTab.content"/>
+      <ServicesPanelItem :name="activeTab.name" :content="activeTab.content" />
     </div>
   </div>
 </template>
@@ -39,7 +39,6 @@ const activeTabStyle = {
 }
 
 const handleClickTab = (tab: Tab) => {
-  console.log(tab)
   activeTab.value = tab
 }
 </script>

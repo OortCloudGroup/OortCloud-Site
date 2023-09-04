@@ -12,9 +12,8 @@
 </template>
 
 <script setup lang="ts">
-import { NAnchor, NAnchorLink } from 'naive-ui';
-import { PropType } from 'vue';
 
+import { NAnchor, NAnchorLink } from 'naive-ui'
 import { Anchor } from '~/types'
 
 defineProps({

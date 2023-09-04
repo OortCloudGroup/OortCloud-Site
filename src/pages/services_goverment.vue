@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="main">
-      <ServicesHeader  
+      <ServicesHeader
         :logo="header.logo"
         :name="header.name"
         :desc="header.desc"
@@ -11,12 +11,12 @@
         <ServicesSidebar :anchors="anchors" />
 
         <div class="content_main">
-          <ServicesPanel :tabs="tabs1" id="一网通办"/>
-          <ServicesPanel :tabs="tabs2" id="一网统管"/>
-          <ServicesPanel :tabs="tabs3" id="一网协同"/>
-          <ServicesPanel :tabs="tabs4" id="公务出行"/>
-          <ServicesPanel :tabs="tabs5" id="政易通"/>
-          <ServicesPanel :tabs="tabs6" id="大数据IOC可视化"/>
+          <ServicesPanel id="一网通办" :tabs="tabs1" />
+          <ServicesPanel id="一网统管" :tabs="tabs2" />
+          <ServicesPanel id="一网协同" :tabs="tabs3" />
+          <ServicesPanel id="公务出行" :tabs="tabs4" />
+          <ServicesPanel id="政易通" :tabs="tabs5" />
+          <ServicesPanel id="大数据IOC可视化" :tabs="tabs6" />
         </div>
       </div>
     </div>
@@ -43,10 +43,10 @@ const anchors = ref<Anchor[]>([
   { title: '一网协同', href: '#一网协同' },
   { title: '公务出行', href: '#公务出行' },
   { title: '政易通', href: '#政易通' },
-  { title: '大数据IOC可视化', href: '#大数据IOC可视化' },
+  { title: '大数据IOC可视化', href: '#大数据IOC可视化' }
 ])
 const tabs1 = reactive<Tab[]>([
-  { 
+  {
     name: '一网通办',
     logo: '/img/home/ywtb.png',
     content: {
@@ -55,11 +55,11 @@ const tabs1 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs2 = reactive<Tab[]>([
-  { 
+  {
     name: '一网统管',
     logo: '/img/home/ywtg.png',
     content: {
@@ -68,11 +68,11 @@ const tabs2 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs3 = reactive<Tab[]>([
-  { 
+  {
     name: '一网协同',
     logo: '/img/home/ywxt.png',
     content: {
@@ -81,11 +81,11 @@ const tabs3 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs4 = reactive<Tab[]>([
-  { 
+  {
     name: '公务出行',
     logo: '/img/home/spell_car.png',
     content: {
@@ -94,11 +94,11 @@ const tabs4 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs5 = reactive<Tab[]>([
-  { 
+  {
     name: '政易通',
     logo: '/img/app/qywx.png',
     content: {
@@ -107,11 +107,11 @@ const tabs5 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs6 = reactive<Tab[]>([
-  { 
+  {
     name: '大数据IOC可视化',
     logo: '/img/app/dsjioc.png',
     content: {
@@ -120,7 +120,7 @@ const tabs6 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 </script>
