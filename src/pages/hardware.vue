@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="main">
-      <ServicesHeader  
+      <ServicesHeader
         :logo="header.logo"
         :name="header.name"
         :desc="header.desc"
@@ -42,7 +42,7 @@ const anchors = ref<Anchor[]>([
   { title: '数据采集', href: '#数据采集' }
 ])
 const tabs1 = reactive<Tab[]>([
-  { 
+  {
     name: '移动U盘',
     logo: '/img/app/icon_u.png',
     content: {
@@ -51,9 +51,9 @@ const tabs1 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   },
-  { 
+  {
     name: '移动硬盘',
     logo: '/img/app/icon_mobileu.png',
     content: {
@@ -62,11 +62,11 @@ const tabs1 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs2 = reactive<Tab[]>([
-  { 
+  {
     name: '网关',
     logo: '/img/home/router.png',
     content: {
@@ -75,9 +75,9 @@ const tabs2 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '/product_router' }
       ]
-    } 
+    }
   },
-  { 
+  {
     name: '4G工业路由器',
     logo: '/img/app/dhhz.png',
     content: {
@@ -86,9 +86,9 @@ const tabs2 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '/product_router' }
       ]
-    } 
+    }
   },
-  { 
+  {
     name: '5G工业路由器',
     logo: '/img/app/5Gdh.png',
     content: {
@@ -97,9 +97,9 @@ const tabs2 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '/product_router' }
       ]
-    } 
+    }
   },
-  { 
+  {
     name: '交换机',
     logo: '/img/app/dhjhj.png',
     content: {
@@ -108,11 +108,11 @@ const tabs2 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '/product_router' }
       ]
-    } 
+    }
   },
 ])
 const tabs3 = reactive<Tab[]>([
-  { 
+  {
     name: '国产化笔记本',
     logo: '/img/app/icon_pc.png',
     content: {
@@ -121,20 +121,20 @@ const tabs3 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   },
-  { 
+  {
     name: '国产平板电脑',
     logo: '/img/app/icon_pad.png',
     content: {
-      desc: '奥尔特云|云终端 阅卷Pad',
+      desc: '奥尔特云|云终端  阅卷Pad',
       cover: '/img/hardware/cn_pad.png',
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   },
-  { 
+  {
     name: '消费电子',
     logo: '/img/app/icon_cpu.png',
     content: {
@@ -143,9 +143,9 @@ const tabs3 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   },
-  { 
+  {
     name: 'IOT元件库',
     logo: '/img/app/icon_iot.png',
     content: {
@@ -154,11 +154,11 @@ const tabs3 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '' }
       ]
-    } 
+    }
   }
 ])
 const tabs4 = reactive<Tab[]>([
-  { 
+  {
     name: '动环盒子',
     logo: '/img/app/icon_box.png',
     content: {
@@ -167,9 +167,9 @@ const tabs4 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '/product_dynamicRingBox' }
       ]
-    } 
+    }
   },
-  { 
+  {
     name: '动环交换机',
     logo: '/img/app/icon_change.png',
     content: {
@@ -178,9 +178,9 @@ const tabs4 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '/product_dynamicLoopSwitch' }
       ]
-    } 
+    }
   },
-  { 
+  {
     name: '动环网关',
     logo: '/img/app/icon_wlan.png',
     content: {
@@ -189,7 +189,7 @@ const tabs4 = reactive<Tab[]>([
       buttons: [
         { name: '了解更多', link: '/product_dynamicGateway' }
       ]
-    } 
+    }
   }
 ])
 </script>
