@@ -156,6 +156,13 @@
                   </div>
                 </NuxtLink>
               </template>
+              <NuxtLink to="demoIndex" target="_blank">
+                <div class="demo_div_item demo_div_item_more">
+                  <img src="/img/demo/menu/more_f.png" />
+                  <span>更多演示</span>
+                  <img src="/img/demo/menu/more_a.png" />
+                </div>
+              </NuxtLink>
             </div>
           </template>
         </n-popover>
@@ -723,8 +730,8 @@ const backToHome = () => {
   display: flex;
   flex-wrap: wrap;
   width: 750px;
-  padding: 16px;
-  gap: 10px;
+  padding: 0px;
+  gap: 0px;
   background: #fff;
   border-radius: 4px;
   a {
@@ -742,9 +749,11 @@ const backToHome = () => {
     flex-direction: row;
     width: 360px;
     margin: 4px;
+    padding:8px 0;
     img {
       width: 48px;
       height: 48px;
+      margin-left: 8px;
     }
     div {
       margin:0 8px;
@@ -766,6 +775,23 @@ const backToHome = () => {
         font-weight: 400;
       }
     }
+  }
+}
+
+.demo_div_item_more {
+  display: flex;
+  align-items: center;
+  padding:8px 0;
+  img {
+    margin: 0 8px;
+    width: 26px;
+    height: 26px;
+  }
+  span {
+    font-size: 24px;
+    color: #2E4BF1;
+    letter-spacing: 0;
+    font-weight: 400;
   }
 }
 </style>
