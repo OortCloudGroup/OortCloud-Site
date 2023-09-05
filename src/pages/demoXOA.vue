@@ -9,54 +9,60 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
         <span class="demo_body_left_title">XOA数字化办公</span>
         <span class="demo_body_left_subtitle">新一代OA数字化办公生产力工具</span>
         <div class="demo_body_left_items">
-          <n-popover trigger="hover" arrow-point-to-center placement="right">
-            <template #trigger>
-              <div class="demo_download">
-                <img src="/img/demo/download/android.png" />
-                <span>Android 移动端</span>
-              </div>
-            </template>
-            <template #default>
-              <div class="demo_download demo_download_cov">
-                <div class="demo_download_code">
-                  <img src="/img/logo_googn.jpg" />
-                  <span>扫码下载</span>
+          <client-only>
+            <n-popover trigger="hover" arrow-point-to-center placement="right">
+              <template #trigger>
+                <div class="demo_download">
+                  <img src="/img/demo/download/android.png" />
+                  <span>Android 移动端</span>
                 </div>
-              </div>
-            </template>
-          </n-popover>
-          <n-popover trigger="hover" arrow-point-to-center placement="right">
-            <template #trigger>
-              <div class="demo_download">
-                <img src="/img/demo/download/iphone.png" />
-                <span>IOS 移动端</span>
-              </div>
-            </template>
-            <template #default>
-              <div class="demo_download demo_download_cov">
-                <div class="demo_download_code">
-                  <img src="/img/logo_googn.jpg" />
-                  <span>扫码下载</span>
+              </template>
+              <template #default>
+                <div class="demo_download demo_download_cov">
+                  <div class="demo_download_code">
+                    <img src="/img/logo_googn.jpg" />
+                    <span>扫码下载</span>
+                  </div>
                 </div>
-              </div>
-            </template>
-          </n-popover>
-          <n-popover trigger="hover" arrow-point-to-center placement="right">
-            <template #trigger>
-              <div class="demo_download">
-                <img src="/img/demo/download/wxmini.png" />
-                <span>微信小程序</span>
-              </div>
-            </template>
-            <template #default>
-              <div class="demo_download demo_download_cov">
-                <div class="demo_download_code">
-                  <img src="/img/logo_googn.jpg" />
-                  <span>扫码体验</span>
+              </template>
+            </n-popover>
+          </client-only>
+          <client-only>
+            <n-popover trigger="hover" arrow-point-to-center placement="right">
+              <template #trigger>
+                <div class="demo_download">
+                  <img src="/img/demo/download/iphone.png" />
+                  <span>IOS 移动端</span>
                 </div>
-              </div>
-            </template>
-          </n-popover>
+              </template>
+              <template #default>
+                <div class="demo_download demo_download_cov">
+                  <div class="demo_download_code">
+                    <img src="/img/logo_googn.jpg" />
+                    <span>扫码下载</span>
+                  </div>
+                </div>
+              </template>
+            </n-popover>
+          </client-only>
+          <client-only>
+            <n-popover trigger="hover" arrow-point-to-center placement="right">
+              <template #trigger>
+                <div class="demo_download">
+                  <img src="/img/demo/download/wxmini.png" />
+                  <span>微信小程序</span>
+                </div>
+              </template>
+              <template #default>
+                <div class="demo_download demo_download_cov">
+                  <div class="demo_download_code">
+                    <img src="/img/logo_googn.jpg" />
+                    <span>扫码体验</span>
+                  </div>
+                </div>
+              </template>
+            </n-popover>
+          </client-only>
           <a href="http://oort.oortcloudsmart.com:31310/oort/oortcloud-policefront/console_manage/index.html#/" target="_blank">
             <div class="demo_download">
               <img src="/img/demo/xoa/xoa_zm.png" />
@@ -276,7 +282,7 @@ const videoUrl = ref('https://v.qq.com/txp/iframe/player.html?vid=h3155cunx94')
   img {
     width: 105px;
     height: 105px;
-    margin: 10px 0px;
+    margin: 20px 0px 0px 0px;
   }
   span {
     font-size: 10px;

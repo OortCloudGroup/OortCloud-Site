@@ -3,10 +3,10 @@
 export default defineNuxtConfig({
   srcDir: 'src',
   imports: {
-    autoImport: true  // 默认自动引入
+    autoImport: true // 默认自动引入
   },
-  css:[
-    'element-plus/dist/index.css',
+  css: [
+    'element-plus/dist/index.css'
   ],
   devServer: {
     port: 8080
@@ -39,11 +39,11 @@ export default defineNuxtConfig({
     transpile:
       process.env.NODE_ENV === 'production'
         ? [
-            'naive-ui',
-            'vueuc',
-            '@css-render/vue3-ssr',
-            '@juggle/resize-observer'
-          ]
+          'naive-ui',
+          'vueuc',
+          '@css-render/vue3-ssr',
+          '@juggle/resize-observer'
+        ]
         : ['@juggle/resize-observer']
   },
   vite: {
@@ -77,7 +77,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     compressPublicAssets: {
-      gzip: true,
+      gzip: true
     },
     sourceMap: false
   }

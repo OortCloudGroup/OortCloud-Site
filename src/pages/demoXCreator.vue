@@ -9,54 +9,60 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
         <span class="demo_body_left_title">XCreator敏捷发布平台</span>
         <span class="demo_body_left_subtitle">全媒体矩阵信息发布平台</span>
         <div class="demo_body_left_items">
-          <n-popover trigger="hover" arrow-point-to-center placement="right">
-            <template #trigger>
-              <div class="demo_download">
-                <img src="/img/demo/download/android.png" />
-                <span>Android 移动端</span>
-              </div>
-            </template>
-            <template #default>
-              <div class="demo_download demo_download_cov">
-                <div class="demo_download_code">
-                  <img src="/img/logo_googn.jpg" />
-                  <span>扫码下载</span>
+          <client-only>
+            <n-popover trigger="hover" arrow-point-to-center placement="right">
+              <template #trigger>
+                <div class="demo_download">
+                  <img src="/img/demo/download/android.png" />
+                  <span>Android 移动端</span>
                 </div>
-              </div>
-            </template>
-          </n-popover>
-          <n-popover trigger="hover" arrow-point-to-center placement="right">
-            <template #trigger>
-              <div class="demo_download">
-                <img src="/img/demo/download/iphone.png" />
-                <span>IOS 移动端</span>
-              </div>
-            </template>
-            <template #default>
-              <div class="demo_download demo_download_cov">
-                <div class="demo_download_code">
-                  <img src="/img/logo_googn.jpg" />
-                  <span>扫码下载</span>
+              </template>
+              <template #default>
+                <div class="demo_download demo_download_cov">
+                  <div class="demo_download_code">
+                    <img src="/img/logo_googn.jpg" />
+                    <span>扫码下载</span>
+                  </div>
                 </div>
-              </div>
-            </template>
-          </n-popover>
-          <n-popover trigger="hover" arrow-point-to-center placement="right">
-            <template #trigger>
-              <div class="demo_download">
-                <img src="/img/demo/download/wxmini.png" />
-                <span>微信小程序</span>
-              </div>
-            </template>
-            <template #default>
-              <div class="demo_download demo_download_cov">
-                <div class="demo_download_code">
-                  <img src="/img/logo_googn.jpg" />
-                  <span>扫码体验</span>
+              </template>
+            </n-popover>
+          </client-only>
+          <client-only>
+            <n-popover trigger="hover" arrow-point-to-center placement="right">
+              <template #trigger>
+                <div class="demo_download">
+                  <img src="/img/demo/download/iphone.png" />
+                  <span>IOS 移动端</span>
                 </div>
-              </div>
-            </template>
-          </n-popover>
+              </template>
+              <template #default>
+                <div class="demo_download demo_download_cov">
+                  <div class="demo_download_code">
+                    <img src="/img/logo_googn.jpg" />
+                    <span>扫码下载</span>
+                  </div>
+                </div>
+              </template>
+            </n-popover>
+          </client-only>
+          <client-only>
+            <n-popover trigger="hover" arrow-point-to-center placement="right">
+              <template #trigger>
+                <div class="demo_download">
+                  <img src="/img/demo/download/wxmini.png" />
+                  <span>微信小程序</span>
+                </div>
+              </template>
+              <template #default>
+                <div class="demo_download demo_download_cov">
+                  <div class="demo_download_code">
+                    <img src="/img/logo_googn.jpg" />
+                    <span>扫码体验</span>
+                  </div>
+                </div>
+              </template>
+            </n-popover>
+          </client-only>
           <a href="" target="_blank">
             <div class="demo_download">
               <img src="/img/demo/fz/pcm.png" />
@@ -264,7 +270,7 @@ useSeoMeta({
   img {
     width: 105px;
     height: 105px;
-    margin: 10px 0px;
+    margin: 20px 0px 0px 0px;
   }
   span {
     font-size: 10px;

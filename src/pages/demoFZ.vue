@@ -9,38 +9,42 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
         <span class="demo_body_left_title">反诈中心推广统计平台</span>
         <span class="demo_body_left_subtitle">反诈App推广神器！<br />推广人员生成推广二维码海报，引导群众下载，实现推广统计到个人，量化推广工作</span>
         <div class="demo_body_left_items">
-          <n-popover trigger="hover" arrow-point-to-center placement="right">
-            <template #trigger>
-              <div class="demo_download">
-                <img src="/img/demo/download/wxmini.png" />
-                <span>微信公众号</span>
-              </div>
-            </template>
-            <template #default>
-              <div class="demo_download demo_download_cov">
-                <div class="demo_download_code">
-                  <img src="/img/demo/fz/fz_h5.png" />
-                  <span>扫码体验</span>
+          <client-only>
+            <n-popover trigger="hover" arrow-point-to-center placement="right">
+              <template #trigger>
+                <div class="demo_download">
+                  <img src="/img/demo/download/wxmini.png" />
+                  <span>微信公众号</span>
                 </div>
-              </div>
-            </template>
-          </n-popover>
-          <n-popover trigger="hover" arrow-point-to-center placement="right">
-            <template #trigger>
-              <div class="demo_download">
-                <img src="/img/demo/download/wxmini.png" />
-                <span>微信小程序</span>
-              </div>
-            </template>
-            <template #default>
-              <div class="demo_download demo_download_cov">
-                <div class="demo_download_code">
-                  <img src="/img/demo/fz/fz_h5.png" />
-                  <span>扫码体验</span>
+              </template>
+              <template #default>
+                <div class="demo_download demo_download_cov">
+                  <div class="demo_download_code">
+                    <img src="/img/demo/fz/fz_h5.png" />
+                    <span>扫码体验</span>
+                  </div>
                 </div>
-              </div>
-            </template>
-          </n-popover>
+              </template>
+            </n-popover>
+          </client-only>
+          <client-only>
+            <n-popover trigger="hover" arrow-point-to-center placement="right">
+              <template #trigger>
+                <div class="demo_download">
+                  <img src="/img/demo/download/wxmini.png" />
+                  <span>微信小程序</span>
+                </div>
+              </template>
+              <template #default>
+                <div class="demo_download demo_download_cov">
+                  <div class="demo_download_code">
+                    <img src="/img/demo/fz/fz_h5.png" />
+                    <span>扫码体验</span>
+                  </div>
+                </div>
+              </template>
+            </n-popover>
+          </client-only>
           <a href="https://fztest.myoumuamua.com/fzmanage/#/" target="_blank">
             <div class="demo_download">
               <img src="/img/demo/fz/pcm.png" />
@@ -70,8 +74,8 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
 
 <script setup lang="ts">
 
-import { IosArrowForward } from '@vicons/ionicons4'
 import { NPopover, NIcon } from 'naive-ui'
+import { IosArrowForward } from '@vicons/ionicons4'
 
 definePageMeta({
   layout: 'demo',
@@ -152,7 +156,6 @@ useSeoMeta({
   }
 
   .demo_download  {
-    position: relative;
     width: 200px;
     height: 200px;
     display: flex;
@@ -165,7 +168,7 @@ useSeoMeta({
     img {
       width: 105px;
       height: 105px;
-      margin: 10px 0px;
+      margin: 20px 0px 0px 0px;
     }
     span {
       font-size: 25px;

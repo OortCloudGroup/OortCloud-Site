@@ -9,22 +9,24 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
         <span class="demo_body_left_title">交通微劝导系统</span>
         <span class="demo_body_left_subtitle">提升交通安全意识，落实交通宣传劝导<br />为市民群众创造一个车与车和谐、人与车和谐的道路交通环境，确保辖区交通拥有一个安全、通畅、文明、有序的道路交通环境</span>
         <div class="demo_body_left_items">
-          <n-popover trigger="hover" arrow-point-to-center placement="right">
-            <template #trigger>
-              <div class="demo_download">
-                <img src="/img/demo/download/wxmini.png" />
-                <span>微信小程序</span>
-              </div>
-            </template>
-            <template #default>
-              <div class="demo_download demo_download_cov">
-                <div class="demo_download_code">
-                  <img src="/img/demo/wqd/gh_a8e8538832c4_258.jpg" />
-                  <span>扫码体验</span>
+          <client-only>
+            <n-popover trigger="hover" arrow-point-to-center placement="right">
+              <template #trigger>
+                <div class="demo_download">
+                  <img src="/img/demo/download/wxmini.png" />
+                  <span>微信小程序</span>
                 </div>
-              </div>
-            </template>
-          </n-popover>
+              </template>
+              <template #default>
+                <div class="demo_download demo_download_cov">
+                  <div class="demo_download_code">
+                    <img src="/img/demo/wqd/gh_a8e8538832c4_258.jpg" />
+                    <span>扫码体验</span>
+                  </div>
+                </div>
+              </template>
+            </n-popover>
+          </client-only>
           <a href="http://oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/weiquandao_manage/index.html" target="_blank">
             <div class="demo_download">
               <img src="/img/demo/fz/pcm.png" />
@@ -148,7 +150,7 @@ useSeoMeta({
   img {
     width: 105px;
     height: 105px;
-    margin: 10px 0px;
+    margin: 20px 0px 0px 0px;
   }
   span {
     font-size: 10px;
