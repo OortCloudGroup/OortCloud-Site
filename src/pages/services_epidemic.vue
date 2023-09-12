@@ -21,6 +21,7 @@
 </template>
 
 <script setup lang="ts">
+
 import { Anchor, Tab } from '~/types'
 
 interface Head {
@@ -31,8 +32,8 @@ interface Head {
 
 const header = reactive<Head>({
   logo: '/img/app/zgbhf.png',
-  name: '智慧边海防',
-  desc: '智慧检务移动平台是基于国产化华为云、华为智慧屏、华为智能协作能力无缝结合的检务一体化平台，同时支持了面向基层的SaaS应用软件，以及为第三方应用开发提供个性化需求快速迭代底座'
+  name: '疫情防护系统',
+  desc: '基层社会治理可视化指挥调度一张图系统和智慧社区综合信息平台'
 })
 const anchors = ref<Anchor[]>([
   { title: '疫情指挥调度', href: '#疫情指挥调度' },
