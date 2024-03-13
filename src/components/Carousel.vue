@@ -66,6 +66,7 @@ const openModal = (data: object) => {
 .carousel-img {
   width: 100%;
   height: 100%;
+  min-height: 500px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100% 0;

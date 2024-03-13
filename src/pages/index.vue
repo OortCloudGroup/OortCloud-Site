@@ -384,6 +384,8 @@ async function getNewsList() {
 <style scoped lang="scss">
 .carousel_container {
   height: 500px;
+  max-height: 500px;
+  overflow: hidden;
   width: 100%;
 }
 </style>
