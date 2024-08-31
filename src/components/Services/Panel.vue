@@ -27,7 +27,11 @@
 <script setup lang="ts">
 import { NTabs, NTabPane } from 'naive-ui'
 
-import { Tab } from '~/types'
+interface Tab {
+  name: string,
+  logo: string,
+  content: Object
+}
 
 const props = defineProps({
   tabs: {

@@ -10,12 +10,21 @@
 </template>
 
 <script setup lang="ts">
-import { PropType } from 'vue'
-import { MenuItem } from '~/types'
+interface MenuItem{
+  name: string,
+  logo: string,
+  link?: any,
+  desc?: string
+}
 
+interface Menu {
+  title: string,
+  showTitle: boolean,
+  menus: MenuItem[]
+}
 defineProps({
   menu: {
-    type: Object as PropType<MenuItem>,
+    type: Object,
     required: true
   }
 })

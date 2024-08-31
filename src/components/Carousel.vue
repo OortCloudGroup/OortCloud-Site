@@ -42,7 +42,14 @@
 
 <script setup lang="ts">
 import { NCarousel, NModal } from 'naive-ui'
-import { Carousel } from '~/types'
+import { ref } from 'vue'
+
+interface Carousel {
+  url: any,
+  title: string,
+  desc: string,
+  buttons: any[]
+}
 
 defineProps({
   carouseList: {

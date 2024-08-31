@@ -308,15 +308,15 @@ const init = () => {
     myOptions
   )
   // 给中心点一个指示图标
-  widnow.TMap.MultiMarker({
-    map,
-    geometries: [{ // 点标注数据数组
-      position: new TMap.LatLng(22.602465, 114.14787),
-      properties: {
-        title: 'marker'
-      }
-    }]
-  })
+  // window.TMap.MultiMarker({
+  //   map,
+  //   geometries: [{ // 点标注数据数组
+  //     position: new TMap.LatLng(22.602465, 114.14787),
+  //     properties: {
+  //       title: 'marker'
+  //     }
+  //   }]
+  // })
 }
 </script>
 
@@ -781,11 +781,16 @@ span:hover{
   }
 
 }
+
+:deep(.n-tabs-capsule) {
+  background-color: #1e7dff!important;
+}
+
 :deep(.n-tabs-rail) {
   padding: 12px 8px;
   height: 92px;
   box-sizing: border-box;
-  background: #FFFFFF;
+  background: #fff;
   box-shadow: 0px 0px 8px 0px rgb(28 93 170 / 8%);
 }
 :deep(.n-tabs-tab-wrapper) {

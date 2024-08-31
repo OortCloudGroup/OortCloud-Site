@@ -14,7 +14,11 @@
 <script setup lang="ts">
 
 import { NAnchor, NAnchorLink } from 'naive-ui'
-import { Anchor } from '~/types'
+
+interface Anchor {
+  title: string,
+  href: string
+}
 
 defineProps({
   anchors: {

@@ -20,7 +20,12 @@
 </template>
 
 <script setup lang="ts">
-import { Tab } from '~/types'
+
+interface Tab {
+  name: string,
+  logo: string,
+  content: Object
+}
 
 const props = defineProps({
   tabs: {

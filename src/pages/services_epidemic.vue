@@ -22,7 +22,16 @@
 
 <script setup lang="ts">
 
-import { Anchor, Tab } from '~/types'
+interface Anchor {
+  title: string,
+  href: string
+}
+
+interface Tab {
+  name: string,
+  logo: string,
+  content: Object
+}
 
 interface Head {
   logo: any,

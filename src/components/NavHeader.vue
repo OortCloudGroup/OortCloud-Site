@@ -261,7 +261,18 @@
 <script setup lang="ts">
 import { NPopover } from 'naive-ui'
 
-import { Menu, MenuItem } from '~/types'
+interface MenuItem{
+  name: string,
+  logo: string,
+  link?: any,
+  desc?: string
+}
+
+interface Menu {
+  title: string,
+  showTitle: boolean,
+  menus: MenuItem[]
+}
 
 const router = useRouter()
 const demoVisible = ref(false)

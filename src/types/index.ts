@@ -2,13 +2,7 @@ export interface Carousel {
   url: any,
   title: string,
   desc: string,
-  buttons: []
-}
-
-export interface Menu {
-  title: string,
-  showTitle: boolean,
-  menus: MenuItem[]
+  buttons: any[]
 }
 
 export interface MenuItem{
@@ -18,11 +12,16 @@ export interface MenuItem{
   desc?: string
 }
 
+export interface Menu {
+  title: string,
+  showTitle: boolean,
+  menus: MenuItem[]
+}
+
 export interface Anchor {
   title: string,
   href: string
 }
-
 
 export interface Tab {
   name: string,

@@ -1,9 +1,8 @@
-
-
 ## 官网
 
 ## 技术选型
-## nuxt 3.0 + vue3 + typescript + naive UI + element plus 
+
+## nuxt 3.0 + vue3 + typescript + naive UI + element plus
 
 [nuxt 3.0](https://nuxt.com/)
 
@@ -42,8 +41,7 @@ npm run preview
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
-
-## 自动导入  nuxt 默认自动引入
+## 自动导入 nuxt 默认自动引入
 
 ### components 组件目录自动引入
 
@@ -51,14 +49,13 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 ```ts
 export const useFoo = () => {
-  return useState('foo', () => 'bar')
-}
+  return useState("foo", () => "bar");
+};
 
 // It will be available as useFoo() (camelCase of file name without extension)
 export default function () {
-  return useState('foo', () => 'bar')
+  return useState("foo", () => "bar");
 }
-
 ```
 
 ```js
@@ -72,15 +69,18 @@ const foo = useFoo()
 </script>
 ```
 
-### 可在nuxt.config.ts 中关闭自动引入
+### 可在 nuxt.config.ts 中关闭自动引入
 
 ```js
 export default defineNuxtConfig({
   imports: {
-    autoImport: false
-  }
-})
+    autoImport: false,
+  },
+});
 ```
 
-
 ### eslint 和 commitlint
+
+### 注意
+
+ssr false 方可执行 generate 命令 生成静态 html

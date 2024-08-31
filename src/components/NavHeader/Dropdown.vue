@@ -11,7 +11,18 @@
 </template>
 
 <script setup lang="ts">
-import { Menu } from '~/types'
+interface MenuItem{
+  name: string,
+  logo: string,
+  link?: any,
+  desc?: string
+}
+
+interface Menu {
+  title: string,
+  showTitle: boolean,
+  menus: MenuItem[]
+}
 
 defineProps({
   menu: {
