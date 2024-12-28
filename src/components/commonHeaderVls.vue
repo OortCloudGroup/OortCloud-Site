@@ -64,10 +64,10 @@ const isActPath = computed(() => {
 const emit = defineEmits(['handle'])
 const navList = ref([
   { title: '应用程序', path: '/' },
-  { title: '行业', path: '/software/k8sMana' },
-  { title: '社区', path: '/software/superAPP' },
-  { title: '定价', path: '/tabs/price' },
-  { title: '联系方式', path: '/software/contactUs' }
+  { title: '行业', path: '/siteNew/k8sMana' },
+  { title: '社区', path: '/siteNew/superAPP' },
+  { title: '定价', path: '/siteNew/price' },
+  { title: '联系方式', path: '/siteNew/contactUs' }
 ])
 
 // const toggleLang = (val) => {

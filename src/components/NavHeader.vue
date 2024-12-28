@@ -6,7 +6,7 @@
       </div>
       <div class="header_menu">
         <div class="header_tabs">
-          <NuxtLink to="/">
+          <NuxtLink to="/oldSite">
             首页
           </NuxtLink>
           <n-popover trigger="hover" arrow-point-to-center placement="bottom">
@@ -260,6 +260,7 @@
 
 <script setup lang="ts">
 import { NPopover } from 'naive-ui'
+import { useRouter } from 'vue-router'
 
 interface MenuItem{
   name: string,

@@ -2,108 +2,131 @@
   <div class="home_page vls">
     <div class="platTop w1380">
       <div class="VLStream">
-        新一代 <span class="vlsUs">生产力平台</span>
+        K8S容器管理和CMDB软件
       </div>
-      <div class="plat_d">
-        简单、高效、又 <span style="color: #2278FF;">实惠</span>!
+      <div class="plat_cent">
+        基于OpenSergo统一微服务治理警务服务总线软件
       </div>
       <div class="flexRowAC useBox">
         <div class="seeMore">
-          立即使用-完全免费
+          立即试用
         </div>
         <div class="seeMore u1">
           安排演示
         </div>
       </div>
-      <div class="w1380 webBottomImg">
-        <img class="wBImg" src="@/assets/VLimg2.0/CloudR0.png" alt="" />
-      </div>
     </div>
-    <div class="productBox w1380">
-      <div class="proT">
-        应用程序
-      </div>
-      <div class="flexRowAC appBox">
-        <div v-for="(item, i) in appList" :key="i" class="appItem flexRowAC">
-          <img class="appItemImg" :src="item.img" alt="" />
-          {{ item['t'] }}
+    <div class="w1380 CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_t">
+          虚拟化与云原生底座
+        </div>
+        <div class="cl_d">
+          支持容器和虚拟机集成管理，具备高可用性、弹性伸缩和资源优化能力，构建稳定可靠的云原生运行环境。
         </div>
       </div>
-      <div class="flexRowAC useBox">
-        <div class="seeMore flexRowAC">
-          查看所有应用程序
-          <img class="lineImg" src="@/assets/software/price_icon.png" alt="" />
+      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c1.png" alt="" />
+    </div>
+    <div class="w1380 CloudBox ipcBox flexRowAC">
+      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c2.png" alt="" />
+      <div class="CloudL">
+        <div class="cl_t">
+          服务总线
+        </div>
+        <div class="cl_d">
+          基于OpenSergo统一微服务治理警务服务总线软件
         </div>
       </div>
     </div>
-    <div class="productBox w1380" style="padding-bottom: 0px;">
-      <div class="proT" style="padding-bottom: 40px;">
-        想象一下，<span class="vlsUs">海量商业应用程序</span> 尽在您的指尖
+    <div class="w1380 ipcView CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_t">
+          业务中台
+        </div>
+        <div class="cl_d">
+          通过模块化的中台服务，提供高效的数据、技术和组织支撑，促进业务快速开发与灵活部署。
+        </div>
+      </div>
+      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c3.png" alt="" />
+    </div>
+    <div class="w1380 ipcView CloudBox flexRowAC">
+      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c4.png" alt="" />
+      <div class="CloudL" style="text-align: right">
+        <div class="cl_t">
+          门户与应用仓库能力
+        </div>
+        <div class="cl_d">
+          快速打造数字化超级APP
+        </div>
       </div>
     </div>
-    <div class="proTitleBox w1380 plan">
-      <div class="plan_t">
-        有什么需要改进吗?我们有相应的应用程序来满足您的需求。
-        <br />
-        免去复杂流程，不收取额外费用，只需一键安装，即可立即使用。
+    <div class="w1380 CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_t">
+          跨网支撑能力
+        </div>
+        <div class="cl_d">
+          保障跨网络数据安全传输，支持内容审查、权限管理与全流程审计，提升数据交换合规性。
+        </div>
       </div>
-      <div class="plan_t">
-        每个应用程序都是一个简化流程的利器，为更多人赋予力量!
-        <br />
-        尽情想象，当每个人都能拥有方便工作的合适工具，并实现完美整合时，将会带来何等影响!
+      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c5.png" alt="" />
+    </div>
+    <div class="w1380 CloudBox flexRowAC">
+      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c6.png" alt="" />
+      <div class="CloudL" style="text-align: right">
+        <div class="cl_t">
+          应用运营体系
+        </div>
+        <div class="cl_d">
+          支持全生命周期应用管理，包括开发、发布、运营和评估，推动个性化需求的快速迭代和持续优化。
+        </div>
       </div>
     </div>
     <div class="productBox w1380">
-      <div class="proT" style="padding-bottom: 0px;">
-        提升您的 <span style="color: #2278FF;">工作品质</span>
+      <div class="proT">
+        现在开始体验
       </div>
-      <div class="w1380 webBottomImg">
-        <img class="wBImg" src="@/assets/VLimg2.0/CloudR0.png" alt="" />
+      <div class="productImg product1">
+        <img class="pro1_1" src="@/assets/software/down1.png" alt="" />
+        <div class="pro1_1_s flexRowAC">
+          私有化部署
+          <span class="pro1_1_s_b">1v1 定制方案量身打造</span>
+        </div>
+        <div class="pro1_2 flexRowAC">
+          <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+          1v1 专家服务，定制化解决方案
+        </div>
+        <div class="pro1_2 flexRowAC">
+          <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+          本地化灵活部署，私有化数据存储
+        </div>
+        <div class="pro1_2 flexRowAC">
+          <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+          高可用架构与完备容灾方案
+        </div>
+        <div class="pro3 flexRowAC">
+          <div class="pro3_btn flexRowAC">
+            申请试用
+          </div>
+          <div class="pro3_btn p3b flexRowAC">
+            详细功能
+          </div>
+        </div>
       </div>
     </div>
     <div class="productBox w1380">
       <div class="proT">
-        促进生产力的程序
+        产品文档
       </div>
-      <div class="w1380 webBottomImg">
-        <img class="wBImg" src="@/assets/software/home.png" alt="" />
-      </div>
-      <div class="proT_d">
-        <span class="vlsUs">体验真正极速 </span>，告别繁琐数据录入，智能 AI助手，用户界面更快90 亳秒内搞定全部操作--比眨眼还快。
-      </div>
-    </div>
-    <div class="productBox w1380">
-      <div class="proT">
-        集技术之大成的平台
-      </div>
-      <div class="w1380 webBottomImg">
-        <img class="wBImg" src="@/assets/software/home1.png" alt="" />
-      </div>
-    </div>
-    <div class="productBox w1380">
-      <div class="proT">
-        企业<span style="color: #2278FF;">软件</span> 应该如此!
-      </div>
-      <!--      <div class="w1380 webBottomImg">-->
-      <!--        <img class="wBImg" src="@/assets/software/home1.png" alt="" />-->
-      <!--      </div>-->
-    </div>
-    <div class="productBox use_t w1380">
-      <div class="proT" style="padding-bottom: 20px;">
-        全球 <span style="color: #2278FF;">1.200万</span> 用户
-      </div>
-      <div class="use_t_t">
-        与 OortCloud 携手增长业务
-      </div>
-      <img class="use_t_img" src="@/assets/software/home2.png" alt="" />
-    </div>
-    <div class="productBox w1380">
-      <div class="proT">
-        <span style="color: #2278FF;">释放</span> 您的无限增潜能
-      </div>
-      <div class="flexRowAC useBox">
-        <div class="seeMore">
-          现在开始-免费
+      <div class="productImg product2Out flexRowAC">
+        <div class="product2Out_it flexRowAC">
+          <div class="pro2o_l flexRowAC">
+            <img class="pro2o_l_l" src="@/assets/software/down3.png" alt="" />
+            【主打胶片】门户与应用仓库使用汇报V2.0.pdf
+          </div>
+          <div class="pro2o_2">
+            下载
+          </div>
         </div>
       </div>
     </div>
@@ -111,53 +134,6 @@
 </template>
 
 <script setup>
-import homeApp_a1 from '@/assets/site/homeApp_a1.png'
-import homeApp_a2 from '@/assets/site/homeApp_a2.png'
-import homeApp_a3 from '@/assets/site/homeApp_a3.png'
-import homeApp_a4 from '@/assets/site/homeApp_a4.png'
-import homeApp_a5 from '@/assets/site/homeApp_a5.png'
-import homeApp_a6 from '@/assets/site/homeApp_a6.png'
-import homeApp_a7 from '@/assets/site/homeApp_a7.png'
-import homeApp_a8 from '@/assets/site/homeApp_a8.png'
-import homeApp_a9 from '@/assets/site/homeApp_a9.png'
-import homeApp_b1 from '@/assets/site/homeApp_b1.png'
-import homeApp_c1 from '@/assets/site/homeApp_c1.png'
-import homeApp_c2 from '@/assets/site/homeApp_c2.png'
-import homeApp_c3 from '@/assets/site/homeApp_c3.png'
-import homeApp_c4 from '@/assets/site/homeApp_c4.png'
-import homeApp_c5 from '@/assets/site/homeApp_c5.png'
-import homeApp_d1 from '@/assets/site/homeApp_d1.png'
-import homeApp_d2 from '@/assets/site/homeApp_d2.png'
-import homeApp_d3 from '@/assets/site/homeApp_d3.png'
-import homeApp_d4 from '@/assets/site/homeApp_d4.png'
-import homeApp_d5 from '@/assets/site/homeApp_d5.png'
-
-let appList = ref([])
-appList.value = [
-  { t: '通知公告', img: homeApp_a1 },
-  { t: '备忘录', img: homeApp_a2 },
-  { t: '视频会议', img: homeApp_a3 },
-  { t: '人脸识别', img: homeApp_a4 },
-  { t: '云课堂', img: homeApp_a5 },
-  //
-  { t: '安全邮箱', img: homeApp_a6 },
-  { t: '智能审批', img: homeApp_a7 },
-  { t: '随手拍', img: homeApp_a8 },
-  { t: '会议助手', img: homeApp_a9 },
-  { t: '微投票', img: homeApp_b1 },
-  //
-  { t: '微清单', img: homeApp_c1 },
-  { t: '微问卷', img: homeApp_c2 },
-  { t: '差旅标准', img: homeApp_c3 },
-  { t: '工作汇报', img: homeApp_c4 },
-  { t: '即时通讯', img: homeApp_c5 },
-  //
-  { t: '新闻播报', img: homeApp_d1 },
-  { t: '每日菜谱', img: homeApp_d2 },
-  { t: '服务缴费', img: homeApp_d3 },
-  { t: '打卡签到', img: homeApp_d4 },
-  { t: '云相册', img: homeApp_d5 }
-]
 </script>
 
 <style scoped lang="scss">
@@ -190,7 +166,7 @@ appList.value = [
 
 .platTop {
   text-align: center;
-  padding: 110px 0 20px;
+  padding: 110px 0;
 
   .plat {
     display: inline-block;
@@ -217,15 +193,6 @@ appList.value = [
     }
   }
 
-  .plat_d {
-    color: #333333;
-    font-weight: bold;
-    font-size: 48px;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 40px;
-  }
-
   .plat_a {
     color: #333333;
     font-weight: bold;
@@ -237,38 +204,38 @@ appList.value = [
     color: #717781;
     font-size: 18px;
   }
-}
 
-.useBox {
-  justify-content: center;
-  gap: 20px;
+  .useBox {
+    justify-content: center;
+    gap: 20px;
 
-  .seeMore {
-    padding: 24px 50px;
-    color: #fff;
-    border: 1px solid #2278FF;
-    border-radius: 8px;
-    background: #2278FF;
-    //box-shadow: 0px 4px 10px 0px #FF5E1033;
-    font-weight: bold;
-    font-size: 18px;
-  }
+    .seeMore {
+      padding: 24px 50px;
+      color: #fff;
+      border: 1px solid #2278FF;
+      border-radius: 8px;
+      background: #2278FF;
+      //box-shadow: 0px 4px 10px 0px #FF5E1033;
+      font-weight: bold;
+      font-size: 18px;
+    }
 
-  .u1 {
-    color: #333;
-    background-color: #F4F4F4;
-    border: 1px solid #F4F4F4;
-  }
+    .u1 {
+      color: #333;
+      background-color: #F4F4F4;
+      border: 1px solid #F4F4F4;
+    }
 
-  .seeMore.u2 {
-    display: flex;
-    gap: 10px;
-    border: 1px solid #333;
-    background-color: #333;
+    .seeMore.u2 {
+      display: flex;
+      gap: 10px;
+      border: 1px solid #333;
+      background-color: #333;
 
-    .u2_img {
-      width: 28px;
-      height: 26px;
+      .u2_img {
+        width: 28px;
+        height: 26px;
+      }
     }
   }
 }
@@ -299,7 +266,7 @@ appList.value = [
 }
 
 .webBottomImg {
-  padding: 0;
+  padding: 70px 0 110px;
   height: initial;
 
   .wBImg {
@@ -591,80 +558,8 @@ appList.value = [
   }
 }
 
-.k8sMana_c1 {
+.k8sMana_c1{
   width: 692px;
   height: auto;
-}
-
-.vlsUs {
-  opacity: 1;
-  border-radius: 0px;
-  background: linear-gradient(270deg, #2278FF0A 0%, #2278FF51 100%);
-  border-left: 6px solid #2278FF;
-  padding-left: 10px;
-  color: #333;
-}
-
-.use_t {
-  .use_t_t {
-    color: #3D3D3D;
-    font-weight: normal;
-    font-size: 24px;
-    text-align: center;
-  }
-
-  .use_t_img {
-    width: 100%;
-  }
-}
-
-.proTitleBox.plan {
-  padding-bottom: 60px;
-
-  .plan_t {
-    padding-bottom: 48px;
-    color: #333333;
-    font-weight: normal;
-    font-size: 24px;
-    text-align: center;
-  }
-}
-
-.proT_d {
-  margin: 0 auto;
-  width: 600px;
-  color: #333333;
-  font-weight: normal;
-  font-size: 20px;
-  text-align: center;
-
-  > .vlsUs {
-    border-left: 4px solid #2278FF;
-    padding-left: 6px;
-  }
-}
-
-.appBox {
-  padding-bottom: 60px;
-  flex-wrap: wrap;
-  gap:  60px 0;
-  .appItem {
-    flex-shrink: 0;
-    width: 20%;
-    flex-direction: column;
-    justify-content: center;
-
-    .appItemImg {
-      width: 100px;
-      height: 100px;
-      margin-bottom: 12px;
-    }
-  }
-}
-
-.lineImg {
-  width: 24px;
-  height: 24px;
-  margin-left: 8px;
 }
 </style>
