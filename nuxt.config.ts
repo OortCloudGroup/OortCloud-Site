@@ -1,6 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { resolve } from 'path'
+
 export default defineNuxtConfig({
   srcDir: 'src',
+  alias: {
+    '~': resolve(__dirname, './src'),
+    '@': resolve(__dirname, './src')
+  },
   imports: {
     autoImport: true // 默认自动引入
   },

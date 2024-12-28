@@ -21,4 +21,12 @@
 
 <style>
 @import './assets/common.css'
+
+</style>
+<style>
+.flexRowAC {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 </style>
