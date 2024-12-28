@@ -103,7 +103,7 @@
             <div class="b_ser_title">
               关于我们
             </div>
-            <div class="b_ser_text" @click="viewPath('/pc/product',0)">
+            <div class="b_ser_text" @click="viewPath('/oldSite',0)">
               我们的公司
             </div>
             <div class="b_ser_text" @click="viewPath('/pc/product',1)">
