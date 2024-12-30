@@ -1,6 +1,6 @@
 <template>
   <div class="industryPage">
-    <div class="w1380 indT">
+    <div v-if="itemTemp==='行业'" class="w1380 indT">
       <div class="flexRowAC bb idtBox">
         <img class="idtImg" src="@/assets/homeImg/industry_i1.png" alt="" />行业
       </div>
@@ -47,19 +47,23 @@
         <div class="flexRowAC idtBox">
           <img class="idtImg" src="@/assets/homeImg/industry_ic2.png" alt="" />OortCloud 定制
         </div>
-        <div class="flexRowAC idtBox">
+        <a class="flexRowAC idtBox" href="https://sh.oortcloudsmart.com/" target="_blank">>
           <img class="idtImg" src="@/assets/homeImg/industry_ic3.png" alt="" />OORT.SH 平台
-        </div>
-        <div class="flexRowAC idtBox">
+        </a>
+        <a class="flexRowAC idtBox" href="https://da.oortcloudsmart.com/" target="_blank">>
           <img class="idtImg" src="@/assets/homeImg/industry_ic4.png" alt="" />OORT.DA 数据平台
-        </div>
+        </a>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-
+const props = defineProps(['item'])
+let itemTemp = ref('')
+watch(() => props.item, (newVal:any) => {
+  itemTemp.value = newVal
+}, { immediate: true })
 </script>
 
 <style lang="scss" scoped>

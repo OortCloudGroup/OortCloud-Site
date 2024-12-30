@@ -15,7 +15,7 @@
       class="headDia"
     >
       <common-header-vls v-if="flag" class="defalut_hea" @handle="handle" />
-      <industry v-if="hVisiT==='行业'" />
+      <industry :item="hVisiT" />
     </el-dialog>
   </div>
 </template>
