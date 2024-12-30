@@ -54,15 +54,15 @@
             <div class="b_ser_title">
               服务
             </div>
-            <div class="b_ser_text hover" @click="viewPath('/sh/oortSH',0)">
+            <a class="b_ser_text hover" href="https://sh.oortcloudsmart.com/" target="_blank">
               OORT.SH 托管平台
-            </div>
-            <div class="b_ser_text hover" @click="viewPath('/vlsIndex',1)">
+            </a>
+            <a class="b_ser_text hover" href="https://vls.oortcloudsmart.com/" target="_blank">
               VLSterm 视觉平台
-            </div>
-            <div class="b_ser_text hover" @click="viewPath('/software/dataEmpoPlat',1)">
+            </a>
+            <a class="b_ser_text hover" href=" https://da.oortcloudsmart.com/" target="_blank">
               数据赋能平台
-            </div>
+            </a>
             <div class="b_ser_text">
               支持与升级
             </div>
@@ -103,9 +103,9 @@
             <div class="b_ser_title">
               关于我们
             </div>
-            <div class="b_ser_text">
+            <a class="b_ser_text hover" href="https://www.oortcloudsmart.com/" target="_blank">
               我们的公司
-            </div>
+            </a>
             <div class="b_ser_text">
               品牌资产
             </div>
@@ -273,6 +273,7 @@ const viewPath = (path) => {
   }
 
   .b_ser_text {
+    display: block;
     cursor: pointer;
     color: rgba(255,255,255,.5);
     font-size: 18px;
