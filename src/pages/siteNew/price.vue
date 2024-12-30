@@ -5,6 +5,99 @@
         超值低价 <span class="vlsUs">不是做梦</span>!
       </div>
     </div>
+    <div class="platTop priceTBox w1380 flexRowAC">
+      <div class="price_tabs flexRowAC">
+        <div class="pt_btn " :class="{act:isAct===0}" @click="isAct=0">
+          年缴
+        </div>
+        <div class="pt_btn" :class="{act:isAct===1}" @click="isAct=1">
+          月缴
+        </div>
+      </div>
+      <div class="price_cont flexRowAC">
+        <div class="p_c_it" :class="{p2:isActp===0}" @click="isActp=0">
+          <div class="pcIt_t">
+            <span class="p_c_it_s">单个</span>&nbsp;应用程序免费
+          </div>
+          <div class="pcIt_m">
+            ￥0 <span>/月</span>
+          </div>
+          <div class="pcIt_l flexRowAC">
+            <span class="line" /><img class="lineImg" src="@/assets/software/price_icon.png" alt="" /><span class="line" />
+          </div>
+          <div class="pcIt_t1_out">
+            <div class="pcIt_t1 flexRowAC">
+              <span class="pcIt_t1_dot" />仅限 一个应用程序，不限制用户数
+            </div>
+            <div class="pcIt_t1 flexRowAC">
+              <span class="pcIt_t1_dot" />OortCloud 在线
+            </div>
+          </div>
+          <div class="pcIt_tbtn">
+            立即使用
+          </div>
+        </div>
+        <div class="p_c_it" :class="{p2:isActp===1}" @click="isActp=1">
+          <div class="pcIt_t">
+            标准
+          </div>
+          <div class="pcIt_m">
+            ￥13.5 <span>/每用户/月</span>
+          </div>
+          <div class="pcIt_l flexRowAC">
+            <span class="line" /><img class="lineImg" src="@/assets/software/price_icon.png" alt="" /><span class="line" />
+          </div>
+          <div class="pcIt_t1_out">
+            <div class="pcIt_t1 flexRowAC">
+              <span class="pcIt_t1_dot" />所有应用程序
+            </div>
+            <div class="pcIt_t1 flexRowAC">
+              <span class="pcIt_t1_dot" />OortCloud 在线
+            </div>
+          </div>
+          <div class="pcIt_tbtn btn1">
+            立即购买
+          </div>
+          <div class="pcIt_tbtn btn2">
+            免费试用
+          </div>
+        </div>
+        <div class="p_c_it" :class="{p2:isActp===2}" @click="isActp=2">
+          <div class="pcIt_t">
+            单个&nbsp;应用程序免费
+          </div>
+          <div class="pcIt_m">
+            ￥20.6 <span>/每用户/月</span>
+          </div>
+          <div class="pcIt_l flexRowAC">
+            <span class="line" /><img class="lineImg" src="@/assets/software/price_icon.png" alt="" /><span class="line" />
+          </div>
+          <div class="pcIt_t1_out">
+            <div class="pcIt_t1 flexRowAC">
+              <span class="pcIt_t1_dot" />所有应用程序
+            </div>
+            <div class="pcIt_t1 flexRowAC">
+              <span class="pcIt_t1_dot" />OortCloud 云端版 / 0ortCloud.sh / 离线版
+            </div>
+            <div class="pcIt_t1 flexRowAC">
+              <span class="pcIt_t1_dot" />OortCloud 定制
+            </div>
+            <div class="pcIt_t1 flexRowAC">
+              <span class="pcIt_t1_dot" />多公司
+            </div>
+            <div class="pcIt_t1 flexRowAC">
+              <span class="pcIt_t1_dot" />外部API
+            </div>
+          </div>
+          <div class="pcIt_tbtn">
+            立即购买
+          </div>
+          <div class="pcIt_tbtn btn3">
+            免费试用
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="platTop w1380">
       <div class="VLStream us1">
         <span class="vlsUs us1s">标准 和 定制 服务计划，</span>均为单一费用涵盖所有 OortCloud 应用程序
@@ -147,6 +240,8 @@ import product5_6 from '@/assets/VLimg2.0/product5_6.png'
 import product5_7 from '@/assets/VLimg2.0/product5_7.png'
 
 let p5Arr = ref([])
+let isAct = ref(0)
+let isActp = ref(1)
 p5Arr.value = [
   { t: 'Windows', d: '版本号：V3.1.06', flag: false, img: product5_1 },
   { t: 'Android', d: '版本号：V3.1.06', flag: true, img: product5_2 },
@@ -745,6 +840,157 @@ p5Arr.value = [
     font-weight: normal;
     font-size: 20px;
     text-align: center;
+  }
+}
+
+.priceTBox {
+  padding-top: 0;
+  flex-direction: column;
+
+  .price_tabs {
+    width: 300px;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    background-color: #F5F9FF;
+
+    .pt_btn {
+      cursor: pointer;
+      width: 132px;
+      height: 52px;
+      line-height: 52px;
+      border-radius: 6px;
+
+      &.act {
+        color: #fff;
+        background-color: #2278FF;
+      }
+    }
+  }
+
+  .price_cont {
+    width: 100%;
+    justify-content: center;
+    padding-top: 20px;
+    gap: 20px;
+
+    .p_c_it {
+      cursor: pointer;
+      color: #333333;
+      width: 384px;
+      flex-shrink: 0;
+      padding: 40px 20px;
+      height: 680px;
+      border-radius: 24px;
+      background: #FFFFFF;
+      border: 1px solid #E4E4E7;
+
+      .pcIt_t1 {
+        padding-bottom: 24px;
+        gap: 14px;
+        font-weight: normal;
+        font-size: 16px;
+        text-align: left;
+
+        .pcIt_t1_dot {
+          width: 12px;
+          height: 12px;
+          background-color: #2278FF;
+          border-radius: 50%;
+        }
+      }
+
+      .pcIt_t {
+        text-align: left;
+      }
+
+      .pcIt_l {
+        padding: 44px 0;
+        gap: 8px;
+
+        .line {
+          flex: 1;
+          height: 1px;
+          background-color: #2278FF;
+        }
+
+        .lineImg {
+          width: 20px;
+          height: 20px;
+          background-color: #2278FF;
+          border-radius: 50%;
+        }
+      }
+
+      .pcIt_t1_out {
+        height: 220px;
+
+      }
+
+      .pcIt_m {
+        padding-top: 40px;
+        font-weight: bold;
+        font-size: 38px;
+        text-align: left;
+
+        > span {
+          font-size: 14px;
+          font-weight: normal;
+
+        }
+      }
+
+      .pcIt_tbtn {
+        margin-top: 16px;
+        border-radius: 24px;
+        height: 72px;
+        line-height: 72px;
+        color: #fff;
+        background-color: #2278FF;
+        border: 1px solid #fff;
+      }
+
+      .pcIt_tbtn.btn3 {
+        color: #2278FF;
+        height: 70px;
+        line-height: 70px;
+        background-color: #fff;
+        border: 1px solid #2278FF;
+      }
+
+      .pcIt_tbtn.btn1 {
+        color: #2278FF;
+        font-weight: bold;
+        height: 70px;
+        line-height: 70px;
+        background-color: #fff;
+        border: 1px solid #2278FF;
+      }
+
+      .pcIt_tbtn.btn2 {
+        height: 70px;
+        line-height: 70px;
+        border: 1px solid #fff;
+      }
+    }
+    .p_c_it_s{
+      color: #2278FF;
+    }
+  }
+
+  .p_c_it.p2 {
+    color: #fff;
+    border-radius: 24px;
+    background: #2278FF;
+
+    .pcIt_l > .line {
+      background-color: #fff;
+    }
+
+    .p_c_it_s {
+      color: #333;
+    }
   }
 }
 </style>
