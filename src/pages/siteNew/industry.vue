@@ -39,6 +39,9 @@
         <div>综合行政</div>
       </div>
     </div>
+    <div v-else>
+      {{ itemTemp }}
+    </div>
     <div class="idtBottomOut flexRowAC">
       <div class="w1380 idtBottom flexRowAC">
         <div class="flexRowAC idtBox">
@@ -47,10 +50,10 @@
         <div class="flexRowAC idtBox">
           <img class="idtImg" src="@/assets/homeImg/industry_ic2.png" alt="" />OortCloud 定制
         </div>
-        <a class="flexRowAC idtBox" href="https://sh.oortcloudsmart.com/" target="_blank">>
+        <a class="flexRowAC idtBox" href="https://sh.oortcloudsmart.com/" target="_blank">
           <img class="idtImg" src="@/assets/homeImg/industry_ic3.png" alt="" />OORT.SH 平台
         </a>
-        <a class="flexRowAC idtBox" href="https://da.oortcloudsmart.com/" target="_blank">>
+        <a class="flexRowAC idtBox" href="https://da.oortcloudsmart.com/" target="_blank">
           <img class="idtImg" src="@/assets/homeImg/industry_ic4.png" alt="" />OORT.DA 数据平台
         </a>
       </div>
@@ -62,6 +65,7 @@
 const props = defineProps(['item'])
 let itemTemp = ref('')
 watch(() => props.item, (newVal:any) => {
+  console.log(newVal)
   itemTemp.value = newVal
 }, { immediate: true })
 </script>
