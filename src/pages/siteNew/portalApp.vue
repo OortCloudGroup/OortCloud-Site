@@ -6,6 +6,7 @@
       </div>
       <div class="plat_cent">
         拥有领先于市场的小程序容器技术，可为您提供敏捷、安全的最佳实践，
+        <br />
         是数字化时代下企业移动开发的不二之选。
       </div>
       <div class="flexRowAC useBox">
@@ -639,7 +640,7 @@
 
   .k8sMana_c1 {
     width: 22px;
-    height: 16px;
+    height: 22px;
   }
 }
 

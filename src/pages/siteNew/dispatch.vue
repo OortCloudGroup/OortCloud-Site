@@ -128,6 +128,17 @@
         </div>
       </div>
     </div>
+    <div class="w1380 CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_t">
+          多端同步
+        </div>
+        <div class="cl_d">
+          支持移动端、PC端、执法记录仪端及车载终端同步，提供实时高效的多端联动与指挥管理能力，适用于多场景任务调度。
+        </div>
+      </div>
+      <img class="dispatch_c5" src="@/assets/software/dispatch_c7.png" alt="" />
+    </div>
     <div class="productBox w1380">
       <div class="proT">
         现在开始体验

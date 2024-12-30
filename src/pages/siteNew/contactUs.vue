@@ -108,7 +108,7 @@ let value = ref('')
 .platTopOut {
   justify-content: space-between;
   align-items: flex-start;
-  padding-bottom: 160px;
+  padding-bottom: 60px;
 
   .platTopOutImg {
     flex-shrink: 0;
