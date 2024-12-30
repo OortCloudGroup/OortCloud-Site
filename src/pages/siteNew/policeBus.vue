@@ -1,85 +1,143 @@
 <template>
   <div class="home_page vls">
-    <div class="platTopOut flexRowAC w1380">
-      <div class="platTop">
+    <div class="platTopOut">
+      <div class="platTop w1380">
         <div class="VLStream">
-          现在就 <span class="vlsUs">联系我们</span>!
+          警务服务总线
         </div>
         <div class="plat_cent">
-          有问题吗?我们有答案!无论您是需要技术支持，还是想了解更多应用功能的最佳实践，我们都能为您提供帮助。
+          基于OpenSergo统一微服务治理警务服务总线软件
         </div>
-        <div class="flexRowAC useBox" style="justify-content: flex-start">
-          <img class="contactUs_bg" src="@/assets/software/contactUs_bg.png" alt="" />
-        </div>
-      </div>
-      <div class="useRightBOx">
-        <div class="flexRowAC nameT">
-          <!--          <div class="nameT heightbg flexRowAC">-->
-          <!--            名称-->
-          <!--            <span class="red">*</span>-->
-          <!--            <el-input v-model="value" class="themeInput" placeholder=""/>-->
-          <!--          </div>-->
-          <el-input v-model="value" class="themeInput" placeholder="名称*" />
-          <el-input v-model="value1" class="themeInput" placeholder="手机号*" />
-        </div>
-        <el-input v-model="value2" class="themeInput" placeholder="电子邮箱" />
-        <el-input v-model="value3" class="themeInput" placeholder="公司" />
-        <el-input v-model="value4" class="themeInput" placeholder="主题" />
-        <el-input v-model="value5" class="themeInput" placeholder="公司规模" />
-        <el-input v-model="value6" type="textarea" :rows="5" class="themeInput" placeholder="问题描述*" />
-        <div class="cu_mess heightbg">
-          OortCloud处理您的个人信息时，将按照 <span style="color: #2278FF">隐私政策</span> 回答您的问题并提供产品和服务资料
-        </div>
-        <div class="cu_submit flexRowAC">
-          提交
+        <div class="flexRowAC useBox">
+          <div class="seeMore">
+            立即试用
+          </div>
+          <div class="seeMore u1">
+            安排演示
+          </div>
         </div>
       </div>
     </div>
-    <div class="platTopOut us flexRowAC w1380">
-      <div class="platTop">
-        <div class="VLStream">
-          直接联络
+    <div class="w1380 CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_t">
+          统一门户
         </div>
-        <div class="plat_cent contactUs_iconBox">
-          <div class="contactUs_icon flexRowAC">
-            <img class="contactUs_i1" src="@/assets/software/contactUs_i1.png" alt="" />
-            联系电话
-            <span>189 3808 3835</span>
+        <div class="cl_d">
+          前端提供统一门户和应用市场，实现移动应用全生命周期管理及细粒度权限控制，为用户提供查询、下载、安装和评价的一站式入口。
+        </div>
+      </div>
+      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c4.png" alt="" />
+    </div>
+    <div class="w1380 CloudBox ipcBox flexRowAC">
+      <img class="k8sMana_c1" src="@/assets/software/policeBus_c0.png" alt="" />
+      <div class="CloudL" style="width: 460px;">
+        <div class="cl_t">
+          服务总线
+        </div>
+        <div class="cl_d">
+          智慧云aPaaS应用支撑平台构建服务总线，实现资源管理、服务调度、访问控制及目录化管控，为移动应用高效运营和开放共享提供支持。
+        </div>
+      </div>
+    </div>
+    <div class="w1380 ipcView dev CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_t">
+          开发运营支撑
+        </div>
+        <div class="terminal">
+          <img class="terminalImg" src="@/assets/software/policeBusC1.png" alt="" />
+          <div class="terminalT">
+            终端业务服务能力集成
           </div>
-          <div class="contactUs_icon flexRowAC">
-            <img class="contactUs_i1" src="@/assets/software/contactUs_i2.png" alt="" />
-            联系邮箱
-            <span>zhangxuellan@oortcloudsmart.com</span>
+          <div class="terminalD">
+            提供了手机地图集成、刷脸组件集成、智能感知集成、扫一扫集成等约100多项终端政务业务基础能力。
           </div>
-          <div class="contactUs_icon flexRowAC">
-            <img class="contactUs_i1" src="@/assets/software/contactUs_i3.png" alt="" />
-            公司地址
-            <span>广东省深圳市罗湖区人民北路3131号水产大厦17K</span>
+        </div>
+        <div class="terminal cloud">
+          <img class="terminalImg" src="@/assets/software/policeBusC2.png" alt="" />
+          <div class="terminalT">
+            云端业务服务能力集成
+          </div>
+          <div class="terminalD">
+            提供了点播服务、流媒体服务、视频发布服务、工作流、表单、工单服务、收藏服务、日程服务、发通知服务、点赞服务、分享服务、电子签名服务等共约200多项政务业务服务能力。
           </div>
         </div>
       </div>
-      <img class="contactUs_bg2" src="@/assets/software/contactUs_bg2.png" alt="" />
     </div>
-    <div class="w1380" style="padding-bottom: 110px;">
-      <img class="contactUs_bg3 w1380" src="@/assets/software/contactUs_bg3.png" alt="" />
+    <div class="w1380 ipcView CloudBox flexRowAC">
+      <img class="k8sMana_c1" src="@/assets/software/policeBus_c1.png" alt="" />
+      <div class="CloudL" style="text-align: right">
+        <div class="cl_t">
+          应用市场
+        </div>
+        <div class="cl_d">
+          配置默认基础应用,满足各行业组织日常工作需求：云盘、单聊、群聊、动态圈、短视频、公众号、新闻推送、工作助手、工作汇报、会议助手、云课堂等。
+        </div>
+      </div>
+    </div>
+    <div class="productBox w1380">
+      <div class="proT">
+        产品架构
+      </div>
+      <img class="policeBus_c2" src="@/assets/software/policeBus_c2.png" alt="" />
+    </div>
+    <div class="productBox w1380">
+      <div class="proT">
+        现在开始体验
+      </div>
+      <div class="productImg product1">
+        <img class="pro1_1" src="@/assets/software/down1.png" alt="" />
+        <div class="pro1_1_s flexRowAC">
+          私有化部署
+          <span class="pro1_1_s_b">1v1 定制方案量身打造</span>
+        </div>
+        <div class="pro1_2 flexRowAC">
+          <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+          1v1 专家服务，定制化解决方案
+        </div>
+        <div class="pro1_2 flexRowAC">
+          <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+          本地化灵活部署，私有化数据存储
+        </div>
+        <div class="pro1_2 flexRowAC">
+          <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+          高可用架构与完备容灾方案
+        </div>
+        <div class="pro3 flexRowAC">
+          <div class="pro3_btn flexRowAC">
+            申请试用
+          </div>
+          <div class="pro3_btn p3b flexRowAC">
+            详细功能
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="productBox w1380">
+      <div class="proT">
+        产品文档
+      </div>
+      <div class="productImg product2Out flexRowAC">
+        <div class="product2Out_it flexRowAC">
+          <div class="pro2o_l flexRowAC">
+            <img class="pro2o_l_l" src="@/assets/software/down3.png" alt="" />
+            【主打胶片】门户与应用仓库使用汇报V2.0.pdf
+          </div>
+          <div class="pro2o_2">
+            下载
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
 
-let value1 = ref('')
-let value2 = ref('')
-let value3 = ref('')
-let value4 = ref('')
-let value5 = ref('')
-let value6 = ref('')
-let value = ref('')
 </script>
 
 <style scoped lang="scss">
-
 .home_page {
   position: relative;
 }
@@ -106,20 +164,14 @@ let value = ref('')
 //  font-size: 18px;
 //}
 .platTopOut {
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-bottom: 60px;
-
-  .platTopOutImg {
-    flex-shrink: 0;
-    width: 614px;
-    height: auto;
-    margin-left: 100px;
-  }
+  height: 880px;
+  width: auto;
+  background-image: url('@/assets/software/policeBus_bg.png');
+  background-size: 100% 100%;
 }
 
 .platTop {
-  text-align: left;
+  text-align: center;
   padding: 110px 0;
 
   .plat {
@@ -154,7 +206,6 @@ let value = ref('')
   }
 
   .plat_cent {
-    width: 620px;
     padding: 20px 0 50px;
     color: #717781;
     font-size: 18px;
@@ -251,10 +302,6 @@ let value = ref('')
     font-size: 20px;
   }
 
-  .cl_d.d1 {
-    color: #333;
-  }
-
   .CloudL {
     width: 500px;
   }
@@ -293,25 +340,47 @@ let value = ref('')
   }
 }
 
+.ipcView.dev {
+.CloudL{
+  width: 100%;
+}
+  .terminal {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, #F7FCFE 0%, #FFFFFF 100%);
+    border: 1px solid #001F5019;
+
+    .terminalImg {
+      width: 62px;
+      height: 62px;
+    }
+
+    .terminalT {
+      padding-top: 30px;
+      color: #333333;
+      font-weight: bold;
+      font-size: 28px;
+    }
+
+    .terminalD{
+      padding-top: 30px;
+      color: #717781;
+      font-size: 18px;
+    }
+  }
+
+  .cloud.terminal {
+    border-radius: 24px;
+    background: linear-gradient(180deg, #F9FFF7 0%, #FFFFFF 98%);
+    border: 1px solid #001F5019;
+  }
+}
+
 .productBox {
   text-align: center;
   padding-bottom: 140px;
-
-  .productItem {
-    gap: 20px;
-
-    .productItem1 {
-      flex: 1;
-
-      &:nth-child(1) {
-        background: #2278FF;
-
-        .pro3_btn {
-          color: #2278FF;
-        }
-      }
-    }
-  }
 
   .proT {
     padding-bottom: 60px;
@@ -533,120 +602,22 @@ let value = ref('')
   }
 }
 
-.instantMess_c1 {
-  width: 825px;
-  height: auto;
+.proTitleBox {
+  justify-content: center;
+  color: #3D3D3D;
+  font-weight: bold;
+  font-size: 58px;
+  padding-bottom: 100px;
 }
 
-.k8sMana_c1 {
+.k8sMana_c1{
   width: 692px;
   height: auto;
 }
 
-.contactUs_i1 {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
+.policeBus_c2{
+  width: 1076px;
+  height: 849px;
+  background-size: 100% 100%;
 }
-
-.contactUs_bg {
-  width: 628px;
-  height: auto;
-}
-
-.contactUs_bg2 {
-  width: 600px;
-  height: auto;
-}
-
-.contactUs_bg3{
-  width: 100%;
-  height: auto;
-}
-
-.contactUs_iconBox {
-  .contactUs_icon {
-    padding-bottom: 20px;
-    color: #97A3B6;
-    font-weight: normal;
-    font-size: 20px;
-    text-align: left;
-
-    > span {
-      padding-left: 20px;
-      opacity: 1;
-      color: #333333;
-      font-weight: normal;
-      font-size: 20px;
-      text-align: left;
-    }
-  }
-}
-
-.useRightBOx {
-  margin-top: 110px;
-  padding: 20px;
-  width: 600px;
-  flex-shrink: 0;
-  border-radius: 24px;
-  background: #FFFFFF;
-  box-shadow: 0px 12px 36px 0px #2278FF0F;
-
-  .themeInput {
-    height: 54px;
-    font-size: 20px;
-  }
-
-  .el-textarea.themeInput {
-    height: initial;
-  }
-
-  .nameT {
-    gap: 20px;
-  }
-
-  .themeInput {
-    margin-bottom: 20px;
-  }
-
-  .cu_mess {
-    color: #97A3B6;
-    font-weight: normal;
-    font-size: 14px;
-    text-align: left;
-  }
-
-  .cu_submit {
-    cursor: pointer;
-    margin: 40px auto;
-    justify-content: center;
-    width: 340px;
-    height: 64px;
-    border-radius: 8px;
-    color: #fff;
-    background: #2278FF;
-    box-shadow: 0px 4px 10px 0px #2278FF33;
-  }
-}
-
-.platTopOut.us {
-  padding-bottom: 54px;
-  .platTop {
-    padding: 0;
-
-    .VLStream {
-      font-size: 40px;
-    }
-  }
-}
-
-.vlsUs{
-  opacity: 1;
-  border-radius: 0px;
-  background: linear-gradient(270deg, #2278FF0A 0%, #2278FF51 100%);
-  border-left: 6px solid #2278FF;
-  padding-left: 10px;
-  color: #2278FF;
-}
-
 </style>

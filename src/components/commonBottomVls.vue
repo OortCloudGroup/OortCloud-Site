@@ -12,120 +12,180 @@
             <div class="b_ser_title">
               社区
             </div>
-            <div class="b_ser_text" @click="viewPath('/pc/product',0)">
-              教学视频
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                教学视频
+              </div>
             </div>
-            <div class="b_ser_text" @click="viewPath('/pc/product',1)">
-              文档
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                文档
+              </div>
             </div>
-            <div class="b_ser_text" @click="viewPath('/pc/product',2)">
-              论坛
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                论坛
+              </div>
             </div>
           </div>
           <div class="b_ser_p_l">
             <div class="b_ser_title">
               解决方案
             </div>
-            <div class="b_ser_text" @click="viewPath('/software/mobilePolice',0)">
-              移动警务
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/siteNew/mobilePolice',0)">
+                移动警务
+              </div>
             </div>
-            <div class="b_ser_text" @click="viewPath('/software/privateCloud',1)">
-              私有云
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/siteNew/privateCloud',1)">
+                私有云
+              </div>
             </div>
-            <div class="b_ser_text" @click="viewPath('/software/superAPP',1)">
-              超级APP
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/siteNew/superAPP',1)">
+                超级APP
+              </div>
             </div>
-            <div class="b_ser_text" @click="viewPath('/pc/product',2)">
-              全部解决方案
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                全部解决方案
+              </div>
             </div>
           </div>
           <div class="b_ser_p_l">
             <div class="b_ser_title">
               开源
             </div>
-            <div class="b_ser_text" @click="viewPath('/pc/product',0)">
-              下载
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                下载
+              </div>
             </div>
-            <div class="b_ser_text" @click="viewPath('/pc/product',1)">
-              GitHub
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                GitHub
+              </div>
             </div>
           </div>
           <div class="b_ser_p_l">
             <div class="b_ser_title">
               服务
             </div>
-            <div class="b_ser_text" @click="viewPath('/sh/oortSH',0)">
-              OORT.SH 托管平台
+            <div class="flexRowAC">
+              <a class="b_ser_text hover" href="https://sh.oortcloudsmart.com/" target="_blank">
+                OORT.SH 托管平台
+              </a>
             </div>
-            <div class="b_ser_text" @click="viewPath('/vlsIndex',1)">
-              VLSterm 视觉平台
+            <div class="flexRowAC">
+              <a class="b_ser_text hover" href="https://vls.oortcloudsmart.com/" target="_blank">
+                VLSterm 视觉平台
+              </a>
             </div>
-            <div class="b_ser_text" @click="viewPath('/software/dataEmpoPlat',1)">
-              数据赋能平台
+            <div class="flexRowAC">
+              <a class="b_ser_text hover" href=" https://da.oortcloudsmart.com/" target="_blank">
+                数据赋能平台
+              </a>
             </div>
-            <div class="b_ser_text" @click="viewPath('/pc/product',2)">
-              支持与升级
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                支持与升级
+              </div>
             </div>
-            <div class="b_ser_text" @click="viewPath('/pc/product',3)">
-              自定义开发服务
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                自定义开发服务
+              </div>
             </div>
           </div>
           <div class="b_ser_p_l">
             <div class="b_ser_title">
               成品软件
             </div>
-            <div class="b_ser_text" @click="viewPath('/software/k8sMana',0)">
-              K8S容器管理和CMDB软件
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/siteNew/k8sMana',0)">
+                K8S容器管理和CMDB软件
+              </div>
             </div>
-            <div class="b_ser_text" @click="viewPath('/software/policeBus',1)">
-              警务服务总线
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/siteNew/policeBus',1)">
+                警务服务总线
+              </div>
             </div>
-            <div class="b_ser_text" @click="viewPath('/software/portalApp',2)">
-              门户与应用市场软件
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/siteNew/portalApp',2)">
+                门户与应用市场软件
+              </div>
             </div>
-            <div class="b_ser_text" @click="viewPath('/software/approval',3)">
-              智能审批
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/siteNew/approval',3)">
+                智能审批
+              </div>
             </div>
-            <div class="b_ser_text" @click="viewPath('/software/dispatch',3)">
-              指挥调度
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/siteNew/dispatch',3)">
+                指挥调度
+              </div>
             </div>
-            <div class="b_ser_text" @click="viewPath('/software/cloudClass',3)">
-              云课堂
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/siteNew/cloudClass',3)">
+                云课堂
+              </div>
             </div>
-            <div class="b_ser_text" @click="viewPath('/software/instantMess',3)">
-              即时通讯
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/siteNew/instantMess',3)">
+                即时通讯
+              </div>
             </div>
-            <div class="b_ser_text" @click="viewPath('/pc/product',3)">
-              全部产品
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                全部产品
+              </div>
             </div>
           </div>
           <div class="b_ser_p_l">
             <div class="b_ser_title">
               关于我们
             </div>
-            <div class="b_ser_text" @click="viewPath('/oldSite',0)">
-              我们的公司
+            <div class="flexRowAC">
+              <a class="b_ser_text hover" href="https://www.oortcloudsmart.com/" target="_blank">
+                我们的公司
+              </a>
             </div>
-            <div class="b_ser_text" @click="viewPath('/pc/product',1)">
-              品牌资产
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                品牌资产
+              </div>
             </div>
-            <div class="b_ser_text" @click="viewPath('/software/contactUs',2)">
-              联系我们
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/siteNew/contactUs',2)">
+                联系我们
+              </div>
             </div>
-            <div class="b_ser_text" @click="viewPath('/pc/product',3)">
-              寻找合作伙伴
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                寻找合作伙伴
+              </div>
             </div>
-            <div class="b_ser_text" @click="viewPath('/pc/product',3)">
-              近期活动
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                近期活动
+              </div>
             </div>
-            <div class="b_ser_text" @click="viewPath('/pc/product',3)">
-              客户
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                客户
+              </div>
             </div>
-            <div class="b_ser_text" @click="viewPath('/pc/product',3)">
-              法律 · 隐私
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                法律 · 隐私
+              </div>
             </div>
-            <div class="b_ser_text" @click="viewPath('/pc/product',3)">
-              安全
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                安全
+              </div>
             </div>
           </div>
         </div>
@@ -171,17 +231,12 @@ const router = useRouter()
 // const route = useRoute()
 let value = ref('')
 
-const viewPath = (path, tab) => {
+const viewPath = (path) => {
   if (router.currentRoute.value.path === path) {
     // 当前页置顶
     window?.scrollTo(0, 0)
   }
-  router.push({
-    path,
-    query: {
-      tab
-    }
-  })
+  router.push({ path })
 }
 </script>
 
@@ -278,12 +333,19 @@ const viewPath = (path, tab) => {
   }
 
   .b_ser_text {
-    cursor: pointer;
-    opacity: 0.5;
+    display: block;
+    color: rgba(255, 255, 255, .5);
     font-size: 18px;
-    color: #FFFFFF;
     line-height: 36px;
     font-weight: 400;
+
+    &.hover {
+      cursor: pointer;
+
+      &:hover {
+        color: #2278FF;
+      }
+    }
   }
 
   .b_ser_off {
@@ -341,7 +403,7 @@ const viewPath = (path, tab) => {
   background: #1A1C24;
   gap: 16px;
 
-  .icpBox_img{
+  .icpBox_img {
     width: auto;
     height: 30px;
   }

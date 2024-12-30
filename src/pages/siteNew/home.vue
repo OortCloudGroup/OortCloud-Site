@@ -84,9 +84,87 @@
       <div class="proT">
         企业<span style="color: #2278FF;">软件</span> 应该如此!
       </div>
-      <!--      <div class="w1380 webBottomImg">-->
-      <!--        <img class="wBImg" src="@/assets/software/home1.png" alt="" />-->
-      <!--      </div>-->
+      <div class="softBox flexRowAC">
+        <div class="softIt flexRowAC">
+          <div class="softIt_t">
+            开源
+          </div>
+          <div class="softIt_d d1">
+            系统技术的背后是一个由超过
+            50多名开发者组成的全球社群。我们以开源精神为纽带，共同拥有一个愿景:“创造变革，赋能员工，将公司带入新境界”。
+          </div>
+          <div class="softIt_d">
+            OortCloud 提供两个版本服务:
+          </div>
+          <div class="softIt_d">
+            <span class="softIt_d_dot">社群版: </span>开放源码，100%免费
+          </div>
+          <div class="softIt_d">
+            <span class="softIt_d_dot">企业版: </span>额外应用程序、基础设施及专业服务。
+          </div>
+          <div class="softIt_btn flexRowAC">
+            版本对比
+          </div>
+          <img class="softIt_img" src="@/assets/homeImg/home_bg1.png" alt="" />
+        </div>
+        <div class="softIt it1 flexRowAC">
+          <div class="softIt_t">
+            没有供应商锁定束缚
+          </div>
+          <div class="softIt_d d1">
+            无专有数据格式，只有
+            PostgreSQL，数据完全属于您！没有软件束缚，您可以拥有源代码、GitHub访问权限，自由选择在我们的基础设施上托管，或者自行搭建在本地。
+          </div>
+          <div class="softIt_btn flexRowAC">
+            <img class="softIt_btn_img" src="@/assets/VLimg2.0/GitHub.png" alt="" />
+            在GitHub关注我们
+          </div>
+          <img class="softIt_img" src="@/assets/homeImg/home_bg2.png" alt="" />
+        </div>
+        <div class="softIt it2 flexRowAC">
+          <div class="softIt_t">
+            贴心定制化，释放无限想象力
+          </div>
+          <div class="softIt_d d1">
+            使用 Oort Cloud Studio 自动执行操作、设计自定义屏幕、自定义报告或 web 钩子。
+          </div>
+          <img class="softIt_img" src="@/assets/homeImg/home_bg3.png" alt="" />
+        </div>
+        <div class="softIt it3 flexRowAC">
+          <div class="softIt_t">
+            合理定价
+          </div>
+          <div class="softIt_d d1">
+            没有基于使用量的定价，没有追加销售额外功能，没有长期合约束缚，没有托管限制，更没有意外费用...每个用户只有一次性单一价格，所有服务全包。
+          </div>
+          <div class="softIt_btn flexRowAC">
+            查看定价
+          </div>
+          <img class="softIt_img" src="@/assets/homeImg/home_bg4.png" alt="" />
+        </div>
+        <div class="softIt it4 flexRowAC">
+          <div class="softIt_t">
+            200多款社区应用程序
+          </div>
+          <div class="softIt_d d1">
+            基于其开源开发模式，OortCloud 拥有强大的商业应用程序商店。试想一下，无论何种业务需求，都能轻松获取相应的应用程序。
+          </div>
+          <div class="softIt_btn flexRowAC">
+            浏览社群应用程序
+          </div>
+          <img class="softIt_img" src="@/assets/homeImg/home_bg5.png" alt="" />
+        </div>
+        <div class="softIt it5 flexRowAC">
+          <div class="softIt_t">
+            绝不是说说玩而已
+          </div>
+          <div class="softIt_d d1">
+            "大多数软件可能只达到您期望的70%功能和效果。然而，OortCloud
+            远远超出预期，将彻底改变市场格局，带来翻天浏览社群应用程序覆地的变革。"- 匿名同行。
+          </div>
+          <img class="softIt_img" src="@/assets/homeImg/home_bg6.png" alt="" />
+        </div>
+      </div>
     </div>
     <div class="productBox use_t w1380">
       <div class="proT" style="padding-bottom: 20px;">
@@ -161,7 +239,6 @@ appList.value = [
 </script>
 
 <style scoped lang="scss">
-
 .home_page {
   position: relative;
 }
@@ -647,7 +724,8 @@ appList.value = [
 .appBox {
   padding-bottom: 60px;
   flex-wrap: wrap;
-  gap:  60px 0;
+  gap: 60px 0;
+
   .appItem {
     flex-shrink: 0;
     width: 20%;
@@ -666,5 +744,133 @@ appList.value = [
   width: 24px;
   height: 24px;
   margin-left: 8px;
+}
+
+.softBox {
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: left;
+  gap: 40px;
+
+  .softIt {
+    color: #333333;
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc(50% - 104px);
+    height: calc(700px - 44px);
+    padding: 40px 40px 0;
+    border-radius: 36px;
+    background: #FCFCE8;
+    border: 2.08px solid #FFD15A3D;
+  }
+
+  .softIt_t {
+    padding-bottom: 40px;
+    font-weight: bold;
+    font-size: 32px;
+    text-align: left;
+
+  }
+
+  .softIt_d {
+    padding-bottom: 12px;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: left;
+
+    &.d1 {
+      padding-bottom: 40px;
+    }
+
+    .softIt_d_dot {
+      font-weight: bold;
+      position: relative;
+      padding-left: 14px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        top: 12px;
+        left: 0;
+        background-color: #333;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .softIt_btn {
+    margin-top: 20px;
+    padding: 12px 40px;
+    border-radius: 12px;
+    color: #fff;
+    background-color: #2278FF;
+
+    .softIt_btn_img {
+      width: 28px;
+      height: 28px;
+      margin-right: 8px;
+    }
+  }
+
+  .softIt_img {
+    margin: 0 -40px 0 auto;
+    height: 278px;
+    width: auto;
+    border-radius: 12px;
+  }
+}
+
+.softIt.it1 {
+  background: #EEFCE8;
+  border: 2.17px solid #975BEC28;
+
+  .softIt_img {
+    height: 385px;
+  }
+
+  .softIt_btn{
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+.softIt.it2 {
+  background: #E8F7FC;
+  border: 2.08px solid #1ABCFE28;
+
+  .softIt_img {
+    height: 484px;
+    max-width: 100%;
+  }
+}
+
+.softIt.it3 {
+  background: #FCE9FF;
+  border: 2.08px solid #9803AF28;
+
+  .softIt_img {
+    height: 392px;
+  }
+}
+
+.softIt.it4 {
+  background: #FFF4EF;
+  border: 2.08px solid #FFD3C0;
+
+  .softIt_img {
+    height: 392px;
+  }
+}
+
+.softIt.it5 {
+  background: #2B2B2B;
+  border: 2.08px solid #000000;
+  color: #fff;
+
+  .softIt_img {
+    height: 458px;
+  }
 }
 </style>

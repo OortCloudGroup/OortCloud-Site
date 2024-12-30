@@ -1,149 +1,106 @@
 <template>
   <div class="home_page vls">
-    <div class="platTopOut flexRowAC w1380">
-      <div class="platTop">
-        <img class="VLStream_top" src="@/assets/software/ALLINONE.png" alt="" />
-        <div class="VLStream flexRowAC">
-          超级APP
-          <img class="VLStream_img" src="@/assets/software/WorkUP.png" alt="" />
+    <div class="platTop w1380">
+      <img class="VLStream_top" src="@/assets/software/privateCloud_bg1.png" alt="" />
+      <div class="VLStream">
+        移动警务
+      </div>
+      <div class="plat_cent">
+        通过基础设施云化、软件与硬件解耦、数据与业务解耦、应用与平台解耦
+        <br />
+        构建开放技术架构和业务生态
+      </div>
+      <div class="flexRowAC useBox">
+        <div class="seeMore">
+          立即试用
         </div>
-        <div class="plat_cent">
-          集成即时通讯、邮件、音视频会议、数据共享、流程审批、在线社交、健康管理等功能，
-          贯通企业办公场景，提升效率，让工作更高效美好。
+        <div class="seeMore u1">
+          安排演示
         </div>
-        <div class="flexRowAC useBox" style="justify-content: flex-start">
-          <div class="seeMore">
-            立即试用
+      </div>
+    </div>
+    <div class="proTitleBox mb_h_t w1380 flexRowAC" style="justify-content: space-between">
+      <img class="VLStream_top" src="@/assets/software/mobilePolice_bg1.png" alt="" />
+      <img class="VLStream_top" src="@/assets/software/mobilePolice_bg2.png" alt="" />
+      <img class="VLStream_top" src="@/assets/software/mobilePolice_bg3.png" alt="" />
+    </div>
+    <div class="proTitleBox mb_h_d w1380 flexRowAC" style="justify-content: flex-start">
+      *智治新格局 移动警务|警务宝下沉警务室,视讯多沟通,基展少跑路,移动警务警务宝产品亮相第11届中国国际警用装备博览会
+    </div>
+    <div class="proTitleBox w1380 flexRowAC" style="justify-content: flex-start">
+      主要优势
+    </div>
+    <div class="advantBox w1380">
+      <div class="flexRowAC advantIt">
+        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num1.png" alt="" />
+        核心产品-警务服务总线落地实施案例多、经验丰富。
+      </div>
+      <div class="flexRowAC advantIt">
+        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num2.png" alt="" />
+        紧随GAB部标持续更新,保障标准动作安全合规,有据可依。
+      </div>
+      <div class="flexRowAC advantIt">
+        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num3.png" alt="" />
+        第三方系统如统一认证、统一用户、统一授权等对接方便,运维简单。
+      </div>
+      <div class="flexRowAC advantIt">
+        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num4.png" alt="" />
+        基于云计算架构,系统自带微服务引擎,可持续扩展,系统弹性伸缩,减轻系统运维负担。
+      </div>
+      <div class="flexRowAC advantIt">
+        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num5.png" alt="" />
+        具备警务云平台基础设施,通过警务云平台统一管理用户信息、统一管理功能权限、统一划分用户角色。
+      </div>
+      <div class="flexRowAC advantIt">
+        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num6.png" alt="" />
+        所有请求数据可视化,所有操作必留痕,可追溯,安全日志审计功能完善。可支支持上报使用情况,对接安
+        审平台。
+      </div>
+      <div class="flexRowAC advantIt">
+        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num7.png" alt="" />
+        支持终端适配、门户定制、第三方应用开发技术支撑。支持用户个性化需求快速迭代。与MDM、证书系统、 安全审计等对接经验丰富。
+      </div>
+      <div class="flexRowAC advantIt">
+        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num8.png" alt="" />
+        基于微服务开发,具备警务服务总线、安全合规跨隔离网闸通信、多网部署、多网同步、多终端同步,方便
+        警务工作人员在不同的网络区域使用。
+      </div>
+      <div class="flexRowAC advantIt">
+        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num9.png" alt="" />
+        提供整套移动警务解决方案;分层解耦,共享服务。避免重复开发,沉淀基础多。提供应用支撑、应用市
+        场、服务总线、跨网安全传输、多网部署,品成熟,部署快。
+      </div>
+      <div class="flexRowAC advantIt">
+        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num10.png" alt="" />
+        现有移动警务手机型终端通用能力解耦,通用能力贡献给平台使用,送避免重复建设。颁布第三方应用开发标准,
+        对第三方应用全生命周期管理。可体现使用排名、使用活跃度。落地实实施案例多,专业业务应用厂商对接多,
+        生态成熟。
+      </div>
+    </div>
+    <div class="w1380 ipcView dev CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_t">
+          解决方案
+        </div>
+        <div class="terminal">
+          <img class="terminalImg" src="@/assets/software/mobilePoliceC1.png" alt="" />
+          <div class="terminalT">
+            移动警务应用介绍
           </div>
-          <div class="seeMore u1">
-            安排演示
+          <div class="terminalD">
+            主要包括首页(手机端信息门户和应用市场)、警务微信、通信录、问吧、云课堂、首长点评、动态圈、移动办公审批、督办、新闻推送、社区警务、民生警务、智慧视频、云上警政、治安采集等机关应用与基层民警实战实用。
+          </div>
+        </div>
+        <div class="terminal cloud">
+          <img class="terminalImg" src="@/assets/software/mobilePoliceC2.png" alt="" />
+          <div class="terminalT">
+            新一代移动警务应用支撑平台介绍
+          </div>
+          <div class="terminalD">
+            新一代移动警务应用支撑平台是建立在基础云(laaS/laaS+/iPaaS)之上的，进一步为各业务系统建设统一的移动应用软件开发管理中心平台。遵循统一规划、统一标准、统一管理、统一门户、统一监控、统一运营六个统一。为业务应用与业务微服务的建设提供开发与治理支撑,进行统一管控，避免重复建设,达到集约、节约的目的。主要包括功能：服务总线、统一门户(应用市场)、服务化能力开发框架、基础服务中心、业务服务集成、后端管控平台等能力。
           </div>
         </div>
       </div>
-      <img class="platTopOutImg" src="@/assets/software/workApp.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          全面适配 形态多样
-        </div>
-        <div class="cl_d">
-          不论是私有云、行业云、混合云都能安装部署，<span style="color: red">支持国产化适配、 鲲鹏云部署</span>，一切目标只为满足您的实际业务。
-        </div>
-      </div>
-      <img class="k8sMana_c1" src="@/assets/software/superAPP_c1.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox ipcBox flexRowAC">
-      <img class="k8sMana_c1" src="@/assets/software/superAPP_c2.png" alt="" />
-      <div class="CloudL">
-        <div class="cl_t">
-          云交付 自主可控
-        </div>
-        <div class="cl_d">
-          通信信息自主掌控，采用三端加密和五维防护，确保数据私有，防止破解、泄露、监听与窥视。
-        </div>
-      </div>
-    </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          功能丰富 多端可控
-        </div>
-        <div class="cl_d">
-          支持移动端、双系统、华为Pad、PC端、国产化操作系统、华为IdeaHub等多种办公终端等多端同步。
-        </div>
-      </div>
-      <img class="k8sMana_c1" src="@/assets/software/superAPP_c3.png" alt="" />
-    </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <img class="k8sMana_c1" src="@/assets/software/superAPP_c4.png" alt="" />
-      <div class="CloudL" style="text-align: right">
-        <div class="cl_t">
-          安全设计 隐私保护
-        </div>
-        <div class="cl_d">
-          采用三端加密与五维防护，提供消息保护、禁转、密聊等隐私功能，实现数据全生命周期加密，保障隐私安全。
-        </div>
-      </div>
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          扩展能力强
-          <br />
-          广泛适用
-        </div>
-        <div class="cl_d">
-          安全通讯服务内置应用市场和开发平台，支持开发者通过接口或SDK打造个性化应用，兼容VUE、H5、MUI、uni-app、移动端与PC多端开发。
-        </div>
-      </div>
-      <img class="k8sMana_c1" src="@/assets/software/portalApp_c1.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          即时通讯
-        </div>
-        <div class="cl_d">
-          支持单聊、群聊实现类微信功能和消息推送统一入口，可创建、加入群组，发起交流或群聊。
-        </div>
-      </div>
-      <img class="k8sMana_c1" src="@/assets/software/superAPP_c5.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <img class="k8sMana_c1" src="@/assets/software/instantMess_c3.png" alt="" />
-      <div class="CloudL">
-        <div class="cl_t">
-          畅享 安全通讯
-        </div>
-        <div class="cl_d">
-          支持文字、语音、图片、视频等多种即时通讯方式，更有月后积分功能，消息自动销毁，保障信息安全。
-        </div>
-      </div>
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <img class="k8sMana_c1" src="@/assets/software/superAPP_c51.png" alt="" />
-      <div class="CloudL">
-        <div class="cl_t">
-          多端协同办公
-        </div>
-        <div class="cl_d">
-          可实现多个终端同时登陆，同步协同办公，支持个人设备之间的资料互传。
-        </div>
-      </div>
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          语音视频会议
-        </div>
-        <div class="cl_d">
-          轻松发起多方音视频会议，打破空间限制，随时随地组会交流
-        </div>
-      </div>
-      <img class="k8sMana_c1" src="@/assets/software/superAPP_c6.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <img class="k8sMana_c1" src="@/assets/software/superAPP_c7.png" alt="" />
-      <div class="CloudL">
-        <div class="cl_t">
-          短视频
-        </div>
-        <div class="cl_d">
-          工作方法，工作技巧，小发明，小创造，以“抖音”小视频的形式发布到动态圈。
-        </div>
-      </div>
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          云课堂
-        </div>
-        <div class="cl_d">
-          基于移动互联网的培训管理和学习交互平台。
-        </div>
-      </div>
-      <img class="k8sMana_c1" src="@/assets/software/superAPP_c8.png" alt="" />
     </div>
     <div class="productBox w1380">
       <div class="proT">
@@ -219,7 +176,6 @@ p5Arr.value = [
 </script>
 
 <style scoped lang="scss">
-
 .home_page {
   position: relative;
 }
@@ -245,19 +201,9 @@ p5Arr.value = [
 //  font-weight: bold;
 //  font-size: 18px;
 //}
-.platTopOut{
-  justify-content: space-between;
-  padding-bottom: 110px;
 
-  .platTopOutImg{
-    flex-shrink: 0;
-    width: 400px;
-    height: auto;
-    margin-left: 100px;
-  }
-}
 .platTop {
-  text-align: left;
+  text-align: center;
   padding: 110px 0;
 
   .plat {
@@ -270,7 +216,7 @@ p5Arr.value = [
   }
 
   .VLStream_top {
-    height: 30px;
+    height: 66px;
     width: auto;
   }
 
@@ -282,9 +228,11 @@ p5Arr.value = [
     position: relative;
 
     .VLStream_img {
-      margin-left: 30px;
-      width: auto;
-      height: 76px;
+      width: 222px;
+      height: 222px;
+      position: absolute;
+      right: 336px;
+      top: -50px;
     }
   }
 
@@ -653,8 +601,90 @@ p5Arr.value = [
   }
 }
 
-.k8sMana_c1 {
-  width: 692px;
-  height: auto;
+.ipcView.dev {
+  .CloudL {
+    width: 100%;
+  }
+
+  .terminal {
+    border-radius: 24px;
+    background: linear-gradient(180deg, #FEF9F6 0%, #FFFFFF 100%);
+    border: 1px solid #001F5019;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 30px;
+
+    .terminalImg {
+      width: 62px;
+      height: 62px;
+    }
+
+    .terminalT {
+      padding-top: 30px;
+      color: #333333;
+      font-weight: bold;
+      font-size: 28px;
+    }
+
+    .terminalD {
+      padding-top: 30px;
+      color: #717781;
+      font-size: 18px;
+    }
+  }
+
+  .cloud.terminal {
+    border-radius: 24px;
+    background: linear-gradient(180deg, #F9FFF7 0%, #FFFFFF 98%);
+    border: 1px solid #001F5019;
+  }
+}
+
+.proTitleBox {
+  justify-content: center;
+  color: #3D3D3D;
+  font-weight: bold;
+  font-size: 58px;
+  padding-bottom: 100px;
+}
+
+.mb_h_t {
+  padding-bottom: 20px;
+
+  .VLStream_top {
+    width: 445px;
+    height: auto;
+  }
+}
+
+.mb_h_d {
+  color: #797F88;
+  font-weight: normal;
+  font-size: 18px;
+  padding-bottom: 160px;
+}
+
+.advantBox {
+  padding: 0 40px;
+  margin-bottom: 160px;
+  border-radius: 24px;
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+
+  .advantIt {
+    padding: 40px 0;
+    color: #333333;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: left;
+    border-bottom: 1px solid #EEEEEE;
+  }
+
+  .advantBoxImg {
+    width: 40px;
+    height: 36px;
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
 }
 </style>
