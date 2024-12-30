@@ -67,5 +67,9 @@ watch(() => router.currentRoute.value, (newValue) => {
   .el-dialog__header{
     padding: 0;
   }
+  .defalut_hea{
+    height: 82px;
+    position: relative;
+  }
 }
 </style>
