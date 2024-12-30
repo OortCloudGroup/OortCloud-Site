@@ -8,8 +8,8 @@
         v-for="(item,i) in navList"
         :key="i"
         class="nav_title"
-        :class="{nav_t_line:isActPath===item.path}"
-        @click="navClick(item.path)"
+        :class="{nav_t_line:isActPath===item.path&&isActPath!=='/'}"
+        @click="navClick(item.path,item.title )"
       >
         {{ item.title }}
       </div>
@@ -64,8 +64,8 @@ const isActPath = computed(() => {
 const emit = defineEmits(['handle'])
 const navList = ref([
   { title: '应用程序', path: '/' },
-  { title: '行业', path: '/siteNew/k8sMana' },
-  { title: '社区', path: '/siteNew/superAPP' },
+  { title: '行业', path: '/' },
+  { title: '社区', path: '/' },
   { title: '定价', path: '/siteNew/price' },
   { title: '联系方式', path: '/siteNew/contactUs' }
 ])
@@ -74,8 +74,8 @@ const navList = ref([
 //   lang.value = val === 'en' ? 'en' : 'zh'
 //   langText.value = val === 'en' ? 'English' : '简体中文'
 // }
-const navClick = (path) => {
-  emit('handle', path)
+const navClick = (path, t) => {
+  emit('handle', path, t)
   router.push(path)
 }
 
@@ -197,4 +197,11 @@ onUnmounted(() => {
   }
 }
 
+:deep(.el-dialog){
+  padding: 0;
+
+  .el-dialog__header{
+    padding: 0;
+  }
+}
 </style>
