@@ -1,20 +1,27 @@
 <template>
   <div class="home_page vls">
-    <div class="platTop w1380">
-      <div class="VLStream">
-        K8S容器管理和CMDB软件
-      </div>
-      <div class="plat_cent">
-        基于OpenSergo统一微服务治理警务服务总线软件
-      </div>
-      <div class="flexRowAC useBox">
-        <div class="seeMore">
-          立即试用
+    <div class="platTopOut flexRowAC w1380">
+      <div class="platTop">
+        <div class="VLStream">
+          K8S容器管理
+          <br />
+          和
+          <br />
+          CMDB软件
         </div>
-        <div class="seeMore u1">
-          安排演示
+        <div class="plat_cent">
+          基于OpenSergo统一微服务治理警务服务总线软件
+        </div>
+        <div class="flexRowAC useBox">
+          <div class="seeMore">
+            立即试用
+          </div>
+          <div class="seeMore u1">
+            安排演示
+          </div>
         </div>
       </div>
+      <img class="platTopOutImg" src="@/assets/software/k8sMana_bg1.png" alt="" />
     </div>
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
@@ -163,9 +170,20 @@
 //  font-weight: bold;
 //  font-size: 18px;
 //}
+.platTopOut{
+  justify-content: space-between;
+  padding-bottom: 160px;
+
+  .platTopOutImg{
+    flex-shrink: 0;
+    width: 614px;
+    height: auto;
+    margin-left: 100px;
+  }
+}
 
 .platTop {
-  text-align: center;
+  text-align: left;
   padding: 110px 0;
 
   .plat {
@@ -206,7 +224,7 @@
   }
 
   .useBox {
-    justify-content: center;
+    justify-content: left;
     gap: 20px;
 
     .seeMore {

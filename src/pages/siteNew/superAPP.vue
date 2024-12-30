@@ -28,7 +28,7 @@
           全面适配 形态多样
         </div>
         <div class="cl_d">
-          不论是私有云、行业云、混合云都能安装部署，支持国产化适配、 鲲鹏云部署，一切目标只为满足您的实际业务。
+          不论是私有云、行业云、混合云都能安装部署，<span style="color: red">支持国产化适配、 鲲鹏云部署</span>，一切目标只为满足您的实际业务。
         </div>
       </div>
       <img class="k8sMana_c1" src="@/assets/software/superAPP_c1.png" alt="" />
