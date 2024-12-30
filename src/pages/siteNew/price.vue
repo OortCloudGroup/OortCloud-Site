@@ -2,7 +2,7 @@
   <div class="home_page vls">
     <div class="platTop w1380">
       <div class="VLStream">
-        超值低价 <span class="vlsUs">不是做梦</span>!
+        超值<span style="color: #2278FF;">低价</span> <span class="vlsUs">不是做梦!</span>
       </div>
     </div>
     <div class="platTop priceTBox w1380 flexRowAC">
@@ -100,7 +100,7 @@
     </div>
     <div class="platTop w1380">
       <div class="VLStream us1">
-        <span class="vlsUs us1s">标准 和 定制 服务计划，</span>均为单一费用涵盖所有 OortCloud 应用程序
+        <span class="vlsUs us1s"><span>标准</span> 和 <span>定制</span> 服务计划，</span> 均为单一费用涵盖所有 OortCloud 应用程序
       </div>
     </div>
     <div class="proTitleBox priceIconBox w1380 flexRowAC" style="justify-content: space-between">
@@ -161,7 +161,7 @@
     </div>
     <div class="proTitleBox w1380 plan">
       <div class="plan_t">
-        所有计划享有 <span style="color: #2278FF; ">无限技术支持</span>、托管以及系统维护。
+        所有计划享有 <span style="color: #2278FF;font-weight: bold; ">无限技术支持</span>、托管以及系统维护。
         <br />
         无任何隐藏费用，功能和数据使用无限制：享受真正的透明定价！
       </div>
@@ -178,7 +178,7 @@
     </div>
     <div class="proTitleBox w1380 flexRowAC" style="justify-content: flex-start;padding: 0;">
       <div>
-        有疑问?
+        有疑问<span style="color: #FFB53B">?</span>
         <div class="pri_why">
           如果此页面上没有符合您的问题的答案，请联系我们 <span style="color: #2278FF">客户经理</span>
         </div>
@@ -771,7 +771,7 @@ p5Arr.value = [
   background: linear-gradient(270deg, #2278FF0A 0%, #2278FF51 100%);
   border-left: 6px solid #2278FF;
   padding-left: 10px;
-  color: #2278FF;
+  color: #000;
 }
 
 .pri_why {
@@ -783,12 +783,15 @@ p5Arr.value = [
 
 .VLStream.us1 {
   color: #333333;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 32px;
   text-align: center;
 
   .us1s {
     padding: 20px 12px;
+    >span{
+      font-weight: bold;
+    }
   }
 }
 
