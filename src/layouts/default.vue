@@ -43,31 +43,32 @@ watch(() => router.currentRoute.value, (newValue) => {
 }, { immediate: true })
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
-  .defalut_layout,.page {
-    height: 100%;
-    overflow: auto;
-    width: 100%;
-  }
+.defalut_layout, .page {
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+}
 
-  .page_body {
-    height: calc(100% - 64px);
-    overflow: auto;
-  }
+.page_body {
+  height: calc(100% - 64px);
+  overflow: auto;
+}
 
-  .main_body {
-    background-color: #F7F7F7;
-    min-height: calc(100vh - 140px - 300px);
-  }
+.main_body {
+  background-color: #F7F7F7;
+  min-height: calc(100vh - 140px - 300px);
+}
 
-:deep(.el-dialog){
+:deep(.el-dialog) {
   padding: 0;
 
-  .el-dialog__header{
+  .el-dialog__header {
     padding: 0;
   }
-  .defalut_hea{
+
+  .defalut_hea {
     height: 82px;
     position: relative;
   }
