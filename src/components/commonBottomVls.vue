@@ -73,8 +73,13 @@
               服务
             </div>
             <div class="flexRowAC">
-              <a class="b_ser_text hover" href="https://sh.oortcloudsmart.com/" target="_blank">
-                OORT.SH 托管平台
+              <a class="b_ser_text hover" href="https://oortcloudsmart.com/" target="_blank">
+                OORT 生产力平台
+              </a>
+            </div>
+            <div class="flexRowAC">
+              <a class="b_ser_text hover" href=" https://da.oortcloudsmart.com/" target="_blank">
+                OORT.DA 数据平台
               </a>
             </div>
             <div class="flexRowAC">
@@ -83,8 +88,8 @@
               </a>
             </div>
             <div class="flexRowAC">
-              <a class="b_ser_text hover" href=" https://da.oortcloudsmart.com/" target="_blank">
-                数据赋能平台
+              <a class="b_ser_text hover" href="https://sh.oortcloudsmart.com/" target="_blank">
+                OORT.SH 托管平台
               </a>
             </div>
             <div class="flexRowAC">
@@ -191,10 +196,10 @@
         </div>
         <div class="b_ser_off">
           <div class="bse_t">
-            决策式AI视频赋能平台是数字政府建设的组成部分,是全域视频监控相关系统统筹建设、开放共享、运维管理、应用构建的重要抓手。视频云中台将依视频联网、云计算、大数据、人工智能等先进技术,实现全域视频资源的一体化接入、整合、管理、解析和运维等,并向各委办局提供视频资源的查询、申请、审批、编排、调度、事件推送等在线化服务。
+            OortCloud 致力于为企业管理提供高效智能的开源解决方案，是全球业内高速成长 的软件服务商之一，逾七百五十万用户选择OortCloud 进行数字化升级。通过一系 列全业务链覆盖、高度集成、简单易用的商业应用，助力企业实现信息化改革、降本增效并释放公司增长潜力。
           </div>
           <div class="bse_t bse_d">
-            <!--            Oort Cloud 独特的价值在于是一款非常容易使用又完全集成的应用。-->
+            Oort Cloud 独特的价值在于是一款非常容易使用又完全集成的应用。
           </div>
           <div class="b_ser_off_imgBox flexRowAC">
             <img class="b_ser_off_img" src="@/assets/bottomImg/bo1.png" alt="" />

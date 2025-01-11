@@ -12,6 +12,7 @@
         <div>消防</div>
         <div>律所</div>
         <div>停车</div>
+        <div>酒厂</div>
       </div>
       <div class="flexRowAC bb idtBox">
         <img class="idtImg" src="@/assets/homeImg/industry_i2.png" alt="" />职能
@@ -63,6 +64,9 @@
         <a class="flexRowAC idtBox" href="https://da.oortcloudsmart.com/" target="_blank">
           <img class="idtImg" src="@/assets/homeImg/industry_ic4.png" alt="" />OORT.DA 数据平台
         </a>
+        <a class="flexRowAC idtBox" href="https://da.oortcloudsmart.com/" target="_blank">
+          <img class="idtImg" src="@/assets/homeImg/industry_ic5.png" alt="" />VLStream
+        </a>
       </div>
     </div>
   </div>
@@ -86,10 +90,12 @@ idtArr.value = [
     t: '个人效率工具',
     img: industry_ti1,
     d: [
-      { t: '微商城' },
-      { t: '信息发布' },
-      { t: '问题反馈' },
-      { t: '智能客服' }
+      { t: '云盘' },
+      { t: '云相册' },
+      { t: '云文档' },
+      { t: '云清单' },
+      { t: '云备忘录' },
+      { t: '移动视频' }
     ]
   },
   {
@@ -98,65 +104,79 @@ idtArr.value = [
     d: [
       { t: '云课堂' },
       { t: '知识论坛' },
-      { t: '云盘' },
-      { t: '文档管理' }
+      { t: '知识库' },
+      { t: '文档管理' },
+      { t: '问题反馈' },
+      { t: '博客' }
     ]
   },
   {
     t: '指挥调度',
     img: industry_ti3,
     d: [
-      { t: 'GB28181国际推流一体机' },
-      { t: '风险防范' },
-      { t: '问题反馈' },
-      { t: '智能客服' }
+      { t: '可视化对讲' },
+      { t: 'WorkUP Meet' },
+      { t: '智慧会议室' },
+      { t: '巡查任务' },
+      { t: '人力资源' },
+      { t: '融合通信' }
     ]
   },
   {
     t: '行政智慧后勤',
     img: industry_ti4,
     d: [
-      { t: '考勤管理' },
+      { t: '线上商城' },
       { t: '宿舍管理' },
-      { t: '智能审批' },
-      { t: '智能客服' }
+      { t: '物业维修' },
+      { t: '车辆管理' },
+      { t: '来访预约' },
+      { t: '个人中心' }
     ]
   },
   {
     t: '组织生产力工具',
     img: industry_ti5,
     d: [
-      { t: '微商城' },
-      { t: '信息发布' },
-      { t: '问题反馈' },
-      { t: '智能客服' }
+      { t: '智慧协同' },
+      { t: '智能客服' },
+      { t: '智能审批' },
+      { t: '任务管理' },
+      { t: '项目管理' },
+      { t: '网站设计' }
     ]
   }, {
     t: '业务管理',
     img: industry_ti6,
     d: [
-      { t: '云课堂' },
-      { t: '知识论坛' },
-      { t: '云盘' },
-      { t: '文档管理' }
+      { t: '合同管理' },
+      { t: 'WMS' },
+      { t: 'CRM' },
+      { t: '财务管理' },
+      { t: '电子邮件' },
+      { t: '信息发布' }
     ]
   }, {
     t: '队伍建设',
     img: industry_ti7,
     d: [
-      { t: 'GB28181国际推流一体机' },
-      { t: '风险防范' },
-      { t: '问题反馈' },
-      { t: '智能客服' }
+      { t: '工作圈' },
+      { t: '打卡签到' },
+      { t: '工作汇报' },
+      { t: '问卷调查' },
+      { t: '新闻推送' },
+      { t: '绩效管理' }
     ]
   }, {
     t: 'IOT',
     img: industry_ti8,
     d: [
-      { t: '云课堂' },
-      { t: '知识论坛' },
-      { t: '云盘' },
-      { t: '文档管理' }
+      { t: '无人值守仓库' },
+      { t: '无感考勤' },
+      { t: '无人值守管理柜' },
+      { t: '自助机' },
+      { t: 'AI宣传员' },
+      { t: '人工智能据像机' }
     ]
   }
 ]
