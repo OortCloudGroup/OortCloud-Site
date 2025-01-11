@@ -1,11 +1,17 @@
 <template>
   <div class="home_page vls">
     <div class="platTop w1380">
-      <div class="VLStream">
-        新一代 <span class="vlsUs">生产力平台</span>
+      <div class="VLStream flexRowAC">
+        <div style="text-align: left">
+          个人和企业面向场景智能化的
+          <br />
+          超级效率战略能力
+          <br />
+          奥尔特云新一代 <span class="vlsUs">生产力平台</span>
+        </div>
       </div>
       <div class="plat_d">
-        简单、高效、又 <span style="color: #2278FF;">实惠</span>!
+        简单、高效、又<span style="color: #2278FF;">实惠</span>!
       </div>
       <div class="flexRowAC useBox">
         <div class="seeMore">
@@ -27,6 +33,9 @@
         <div v-for="(item, i) in appList" :key="i" class="appItem flexRowAC">
           <img class="appItemImg" :src="item.img" alt="" />
           {{ item['t'] }}
+          <div class="appItem_s">
+            {{ item['dec'] }}
+          </div>
         </div>
       </div>
       <div class="flexRowAC useBox">
@@ -191,51 +200,64 @@
 <script setup>
 import homeApp_a1 from '@/assets/site/homeApp_a1.png'
 import homeApp_a2 from '@/assets/site/homeApp_a2.png'
-import homeApp_a3 from '@/assets/site/homeApp_a3.png'
-import homeApp_a4 from '@/assets/site/homeApp_a4.png'
+// import homeApp_a3 from '@/assets/site/homeApp_a3.png'
+// import homeApp_a4 from '@/assets/site/homeApp_a4.png'
 import homeApp_a5 from '@/assets/site/homeApp_a5.png'
 import homeApp_a6 from '@/assets/site/homeApp_a6.png'
 import homeApp_a7 from '@/assets/site/homeApp_a7.png'
 import homeApp_a8 from '@/assets/site/homeApp_a8.png'
 import homeApp_a9 from '@/assets/site/homeApp_a9.png'
-import homeApp_b1 from '@/assets/site/homeApp_b1.png'
-import homeApp_c1 from '@/assets/site/homeApp_c1.png'
+// import homeApp_b1 from '@/assets/site/homeApp_b1.png'
+// import homeApp_c1 from '@/assets/site/homeApp_c1.png'
 import homeApp_c2 from '@/assets/site/homeApp_c2.png'
-import homeApp_c3 from '@/assets/site/homeApp_c3.png'
-import homeApp_c4 from '@/assets/site/homeApp_c4.png'
+// import homeApp_c3 from '@/assets/site/homeApp_c3.png'
+// import homeApp_c4 from '@/assets/site/homeApp_c4.png'
 import homeApp_c5 from '@/assets/site/homeApp_c5.png'
-import homeApp_d1 from '@/assets/site/homeApp_d1.png'
-import homeApp_d2 from '@/assets/site/homeApp_d2.png'
-import homeApp_d3 from '@/assets/site/homeApp_d3.png'
-import homeApp_d4 from '@/assets/site/homeApp_d4.png'
-import homeApp_d5 from '@/assets/site/homeApp_d5.png'
+// import homeApp_d1 from '@/assets/site/homeApp_d1.png'
+// import homeApp_d2 from '@/assets/site/homeApp_d2.png'
+// import homeApp_d3 from '@/assets/site/homeApp_d3.png'
+// import homeApp_d4 from '@/assets/site/homeApp_d4.png'
+// import homeApp_d5 from '@/assets/site/homeApp_d5.png'
 
 let appList = ref([])
 appList.value = [
-  { t: '通知公告', img: homeApp_a1 },
-  { t: '备忘录', img: homeApp_a2 },
-  { t: '视频会议', img: homeApp_a3 },
-  { t: '人脸识别', img: homeApp_a4 },
-  { t: '云课堂', img: homeApp_a5 },
+  { t: '通知公告', dec: '智能审批管办一体 助力企业效能提升', img: homeApp_a1 },
+  { t: '备忘录', dec: '智能审批管办一体 助力企业效能提升', img: homeApp_a2 },
+  { t: '云课堂', dec: '基于移动互联网的培训管理和学习交互平台', img: homeApp_a5 },
   //
-  { t: '安全邮箱', img: homeApp_a6 },
-  { t: '智能审批', img: homeApp_a7 },
-  { t: '随手拍', img: homeApp_a8 },
-  { t: '会议助手', img: homeApp_a9 },
-  { t: '微投票', img: homeApp_b1 },
+  { t: '安全邮箱', dec: '智能审批管办一体 助力企业效能提升', img: homeApp_a6 },
+  { t: '智能审批', dec: '智能审批管办一体 助力企业效能提升', img: homeApp_a7 },
+  { t: '随手拍', dec: '智能审批管办一体 助力企业效能提升', img: homeApp_a8 },
   //
-  { t: '微清单', img: homeApp_c1 },
-  { t: '微问卷', img: homeApp_c2 },
-  { t: '差旅标准', img: homeApp_c3 },
-  { t: '工作汇报', img: homeApp_c4 },
-  { t: '即时通讯', img: homeApp_c5 },
-  //
-  { t: '新闻播报', img: homeApp_d1 },
-  { t: '每日菜谱', img: homeApp_d2 },
-  { t: '服务缴费', img: homeApp_d3 },
-  { t: '打卡签到', img: homeApp_d4 },
-  { t: '云相册', img: homeApp_d5 }
+  { t: '会议助手', dec: '智能审批管办一体 助力企业效能提升', img: homeApp_a9 },
+  { t: '微问卷', dec: '智能审批管办一体 助力企业效能提升', img: homeApp_c2 },
+  { t: '即时通讯', dec: '智能审批管办一体 助力企业效能提升', img: homeApp_c5 }
 ]
+// appList.value = [
+//   { t: '通知公告', img: homeApp_a1 },
+//   { t: '备忘录', img: homeApp_a2 },
+//   { t: '视频会议', img: homeApp_a3 },
+//   { t: '人脸识别', img: homeApp_a4 },
+//   { t: '云课堂', img: homeApp_a5 },
+//   //
+//   { t: '安全邮箱', img: homeApp_a6 },
+//   { t: '智能审批', img: homeApp_a7 },
+//   { t: '随手拍', img: homeApp_a8 },
+//   { t: '会议助手', img: homeApp_a9 },
+//   { t: '微投票', img: homeApp_b1 },
+//   //
+//   { t: '微清单', img: homeApp_c1 },
+//   { t: '微问卷', img: homeApp_c2 },
+//   { t: '差旅标准', img: homeApp_c3 },
+//   { t: '工作汇报', img: homeApp_c4 },
+//   { t: '即时通讯', img: homeApp_c5 },
+//   //
+//   { t: '新闻播报', img: homeApp_d1 },
+//   { t: '每日菜谱', img: homeApp_d2 },
+//   { t: '服务缴费', img: homeApp_d3 },
+//   { t: '打卡签到', img: homeApp_d4 },
+//   { t: '云相册', img: homeApp_d5 }
+// ]
 </script>
 
 <style scoped lang="scss">
@@ -279,6 +301,7 @@ appList.value = [
   }
 
   .VLStream {
+    justify-content: center;
     color: #333333;
     font-weight: bold;
     font-size: 78px;
@@ -728,7 +751,8 @@ appList.value = [
 
   .appItem {
     flex-shrink: 0;
-    width: 20%;
+    width: 33%;
+    font-size: 32px;
     flex-direction: column;
     justify-content: center;
 
@@ -736,6 +760,13 @@ appList.value = [
       width: 100px;
       height: 100px;
       margin-bottom: 12px;
+    }
+
+    .appItem_s{
+      padding-top: 10px;
+      font-size: 20px;
+      color: #97A3B6;
+      line-height: 26px;
     }
   }
 }
