@@ -182,7 +182,6 @@ idtArr.value = [
 ]
 
 watch(() => props.item, (newVal: any) => {
-  console.log(newVal)
   itemTemp.value = newVal
 }, { immediate: true })
 </script>

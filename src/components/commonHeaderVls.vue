@@ -8,7 +8,7 @@
         v-for="(item,i) in navList"
         :key="i"
         class="nav_title"
-        :class="{nav_t_line:isActPath===item.path&&isActPath!=='/'}"
+        :class="{nav_t_line:isActPath===item.path&&isActPath!=='/' || item.title===propTemp}"
         @click="navClick(item.path,item.title )"
       >
         {{ item.title }}
@@ -49,6 +49,8 @@ import { useRouter, useRoute } from 'vue-router'
 // const { locale, t } = useI18n()
 // let lang = ref('')
 // let langText = ref('')
+const prop = defineProps(['item'])
+const propTemp = ref(prop.item)
 const router = useRouter()
 const route = useRoute()
 const isActPath = computed(() => {
@@ -107,6 +109,9 @@ onUnmounted(() => {
 //   lang = locale
 //   toggleLang(lang.value)
 // })
+watch(() => prop.item, (newVal) => {
+  propTemp.value = newVal
+})
 
 </script>
 

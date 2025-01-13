@@ -14,7 +14,7 @@
       :show-close="false"
       class="headDia"
     >
-      <common-header-vls v-if="flag" class="defalut_hea" @handle="handle" />
+      <common-header-vls v-if="flag" :item="hVisiT" class="defalut_hea" @handle="handle" />
       <industry :item="hVisiT" />
     </el-dialog>
   </div>
