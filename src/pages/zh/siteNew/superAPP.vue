@@ -1,160 +1,178 @@
 <template>
   <div class="home_page vls">
-    <div class="platTop w1380">
-      <div class="plat">
-        智能审批管办一体 助力企业效能提升
-      </div>
-      <div class="VLStream">
-        智能审批
-      </div>
-      <div class="plat_cent">
-        全面颠覆传统OA，审批更加高效透明，非IT专业人员也可以快速搞定复杂流程
-      </div>
-      <div class="flexRowAC useBox">
-        <div class="seeMore">
-          立即试用
+    <div class="platTopOut flexRowAC w1380">
+      <div class="platTop">
+        <img class="VLStream_top" src="@/assets/software/ALLINONE.png" alt="" />
+        <div class="VLStream flexRowAC">
+          超级APP
+          <img class="VLStream_img" src="@/assets/software/WorkUP.png" alt="" />
         </div>
-        <div class="seeMore u1">
-          安排演示
+        <div class="plat_cent">
+          集成即时通讯、邮件、音视频会议、数据共享、流程审批、在线社交、健康管理等功能，
+          贯通企业办公场景，提升效率，让工作更高效美好。
+        </div>
+        <div class="flexRowAC useBox" style="justify-content: flex-start">
+          <div class="seeMore">
+            立即试用
+          </div>
+          <div class="seeMore u1">
+            安排演示
+          </div>
         </div>
       </div>
-    </div>
-    <div class="proTitleBox w1380 flexRowAC">
-      <img class="approval_bg" src="@/assets/software/approval_bg.png" alt="" />
-    </div>
-    <div class="proTitleBox w1380 flexRowAC" style="justify-content: flex-start">
-      <div>
-        <div class="flexRowAC">
-          拥抱&nbsp;<span style="color: #2278FF;">智能审批</span>&nbsp;流程管理
-        </div>
-        释放企业潜能
-      </div>
+      <img class="platTopOutImg" src="@/assets/software/workApp.png" alt="" />
     </div>
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
-          多端同步
+          全面适配 形态多样
         </div>
         <div class="cl_d">
-          PC 端和移动端均可进行审批操作。无论在办公室还是外出，都能实时同步数据，高效处理审批请求
+          不论是私有云、行业云、混合云都能安装部署，<span style="color: red">支持国产化适配、 鲲鹏云部署</span>，一切目标只为满足您的实际业务。
         </div>
       </div>
-      <img class="approval_c1" src="@/assets/software/approval_c1.png" alt="" />
+      <img class="k8sMana_c1" src="@/assets/software/superAPP_c1.png" alt="" />
     </div>
     <div class="w1380 CloudBox ipcBox flexRowAC">
-      <img class="approval_c2" src="@/assets/software/approval_c2.png" alt="" />
+      <img class="k8sMana_c1" src="@/assets/software/superAPP_c2.png" alt="" />
       <div class="CloudL">
         <div class="cl_t">
-          操作简便
+          云交付 自主可控
         </div>
         <div class="cl_d">
-          平台界面友好、操作简便，保障您的审批流程顺畅无忧
+          通信信息自主掌控，采用三端加密和五维防护，确保数据私有，防止破解、泄露、监听与窥视。
         </div>
       </div>
     </div>
     <div class="w1380 ipcView CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
-          流程大厅
+          功能丰富 多端可控
         </div>
         <div class="cl_d">
-          用户可以在此查看待审批、已处理、我发起的和抄送我的工单，实时了解审批状态和详细信息。
+          支持移动端、双系统、华为Pad、PC端、国产化操作系统、华为IdeaHub等多种办公终端等多端同步。
         </div>
       </div>
-      <img class="approval_c3" src="@/assets/software/approval_c3.png" alt="" />
+      <img class="k8sMana_c1" src="@/assets/software/superAPP_c3.png" alt="" />
     </div>
     <div class="w1380 ipcView CloudBox flexRowAC">
-      <img class="approval_c3" src="@/assets/software/approval_c4.png" alt="" />
+      <img class="k8sMana_c1" src="@/assets/software/superAPP_c4.png" alt="" />
       <div class="CloudL" style="text-align: right">
         <div class="cl_t">
-          流程模型可视化设计
+          安全设计 隐私保护
         </div>
         <div class="cl_d">
-          图形化的流程设计操作，轻松完成审批流程设置
+          采用三端加密与五维防护，提供消息保护、禁转、密聊等隐私功能，实现数据全生命周期加密，保障隐私安全。
         </div>
       </div>
     </div>
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
-          审批进展实时督办
+          扩展能力强
+          <br />
+          广泛适用
         </div>
         <div class="cl_d">
-          通过实时通知，让用户随时了解最新审批状态
+          安全通讯服务内置应用市场和开发平台，支持开发者通过接口或SDK打造个性化应用，兼容VUE、H5、MUI、uni-app、移动端与PC多端开发。
         </div>
       </div>
-      <img class="approval_c5" src="@/assets/software/approval_c5.png" alt="" />
+      <img class="k8sMana_c1" src="@/assets/software/portalApp_c1.png" alt="" />
     </div>
     <div class="w1380 CloudBox flexRowAC">
-      <img class="approval_c6" src="@/assets/software/approval_c6.png" alt="" />
-      <div class="CloudL" style="text-align: right;">
+      <div class="CloudL">
         <div class="cl_t">
-          审批表单
-          <br />
-          签批卡片可视化设计
+          即时通讯
         </div>
         <div class="cl_d">
-          支持高度自定义的发起审批表单，满足多样化需求
+          支持单聊、群聊实现类微信功能和消息推送统一入口，可创建、加入群组，发起交流或群聊。
         </div>
       </div>
+      <img class="k8sMana_c1" src="@/assets/software/superAPP_c5.png" alt="" />
+    </div>
+    <div class="w1380 CloudBox flexRowAC">
+      <img class="k8sMana_c1" src="@/assets/software/instantMess_c3.png" alt="" />
+      <div class="CloudL">
+        <div class="cl_t">
+          畅享 安全通讯
+        </div>
+        <div class="cl_d">
+          支持文字、语音、图片、视频等多种即时通讯方式，更有月后积分功能，消息自动销毁，保障信息安全。
+        </div>
+      </div>
+    </div>
+    <div class="w1380 CloudBox flexRowAC">
+      <img class="k8sMana_c1" src="@/assets/software/superAPP_c51.png" alt="" />
+      <div class="CloudL">
+        <div class="cl_t">
+          多端协同办公
+        </div>
+        <div class="cl_d">
+          可实现多个终端同时登陆，同步协同办公，支持个人设备之间的资料互传。
+        </div>
+      </div>
+    </div>
+    <div class="w1380 CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_t">
+          语音视频会议
+        </div>
+        <div class="cl_d">
+          轻松发起多方音视频会议，打破空间限制，随时随地组会交流
+        </div>
+      </div>
+      <img class="k8sMana_c1" src="@/assets/software/superAPP_c6.png" alt="" />
+    </div>
+    <div class="w1380 CloudBox flexRowAC">
+      <img class="k8sMana_c1" src="@/assets/software/superAPP_c7.png" alt="" />
+      <div class="CloudL">
+        <div class="cl_t">
+          短视频
+        </div>
+        <div class="cl_d">
+          工作方法，工作技巧，小发明，小创造，以“抖音”小视频的形式发布到动态圈。
+        </div>
+      </div>
+    </div>
+    <div class="w1380 CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_t">
+          云课堂
+        </div>
+        <div class="cl_d">
+          基于移动互联网的培训管理和学习交互平台。
+        </div>
+      </div>
+      <img class="k8sMana_c1" src="@/assets/software/superAPP_c8.png" alt="" />
     </div>
     <div class="productBox w1380">
       <div class="proT">
         现在开始体验
       </div>
-      <div class="flexRowAC productItem">
-        <div class="productImg productItem1 product1">
-          <img class="pro1_1" src="@/assets/software/down1_.png" alt="" />
-          <div class="pro1_1_s flexRowAC">
-            SaaS版本
-            <span class="pro1_1_s_b">14天功能全免费试用</span>
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            7天快速迭代，问题敏捷解决
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            快速启用，精简运维
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            更低建设成本
-          </div>
-          <div class="pro3 flexRowAC">
-            <div class="pro3_btn flexRowAC">
-              申请试用
-            </div>
-            <div class="pro3_btn p3b flexRowAC">
-              详细功能
-            </div>
-          </div>
+      <div class="productImg product1">
+        <img class="pro1_1" src="@/assets/software/down1.png" alt="" />
+        <div class="pro1_1_s flexRowAC">
+          私有化部署
+          <span class="pro1_1_s_b">1v1 定制方案量身打造</span>
         </div>
-        <div class="productImg productItem1 product1">
-          <img class="pro1_1" src="@/assets/software/down1.png" alt="" />
-          <div class="pro1_1_s flexRowAC">
-            私有化部署
-            <span class="pro1_1_s_b">1v1 定制方案量身打造</span>
+        <div class="pro1_2 flexRowAC">
+          <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+          1v1 专家服务，定制化解决方案
+        </div>
+        <div class="pro1_2 flexRowAC">
+          <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+          本地化灵活部署，私有化数据存储
+        </div>
+        <div class="pro1_2 flexRowAC">
+          <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+          高可用架构与完备容灾方案
+        </div>
+        <div class="pro3 flexRowAC">
+          <div class="pro3_btn flexRowAC">
+            申请试用
           </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            1v1 专家服务，定制化解决方案
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            本地化灵活部署，私有化数据存储
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            高可用架构与完备容灾方案
-          </div>
-          <div class="pro3 flexRowAC">
-            <div class="pro3_btn flexRowAC">
-              申请试用
-            </div>
-            <div class="pro3_btn p3b flexRowAC">
-              详细功能
-            </div>
+          <div class="pro3_btn p3b flexRowAC">
+            详细功能
           </div>
         </div>
       </div>
@@ -187,7 +205,9 @@ import product5_4 from '@/assets/VLimg2.0/product5_4.png'
 import product5_5 from '@/assets/VLimg2.0/product5_5.png'
 import product5_6 from '@/assets/VLimg2.0/product5_6.png'
 import product5_7 from '@/assets/VLimg2.0/product5_7.png'
-
+definePageMeta({
+  layout: 'site-new'
+})
 let p5Arr = ref([])
 p5Arr.value = [
   { t: 'Windows', d: '版本号：V3.1.06', flag: false, img: product5_1 },
@@ -227,18 +247,33 @@ p5Arr.value = [
 //  font-weight: bold;
 //  font-size: 18px;
 //}
+.platTopOut{
+  justify-content: space-between;
+  padding-bottom: 110px;
 
+  .platTopOutImg{
+    flex-shrink: 0;
+    width: 400px;
+    height: auto;
+    margin-left: 100px;
+  }
+}
 .platTop {
-  text-align: center;
+  text-align: left;
   padding: 110px 0;
 
   .plat {
     display: inline-block;
     padding: 12px 24px;
-    color: #2278FF;
+    color: #FF5E10;
     font-size: 18px;
     border-radius: 18px;
     border: 1px solid #E9E9E9;
+  }
+
+  .VLStream_top {
+    height: 30px;
+    width: auto;
   }
 
   .VLStream {
@@ -249,11 +284,9 @@ p5Arr.value = [
     position: relative;
 
     .VLStream_img {
-      width: 222px;
-      height: 222px;
-      position: absolute;
-      right: 336px;
-      top: -50px;
+      margin-left: 30px;
+      width: auto;
+      height: 76px;
     }
   }
 
@@ -401,22 +434,6 @@ p5Arr.value = [
 .productBox {
   text-align: center;
   padding-bottom: 140px;
-
-  .productItem {
-    gap: 20px;
-
-    .productItem1 {
-      flex: 1;
-
-      &:nth-child(1) {
-        background: #2278FF;
-
-        .pro3_btn {
-          color: #2278FF;
-        }
-      }
-    }
-  }
 
   .proT {
     padding-bottom: 60px;
@@ -638,41 +655,8 @@ p5Arr.value = [
   }
 }
 
-.proTitleBox {
-  justify-content: center;
-  color: #3D3D3D;
-  font-weight: bold;
-  font-size: 58px;
-  padding-bottom: 100px;
-}
-
-.approval_bg {
-  width: 100%;
-  height: auto;
-}
-
-.approval_c1 {
-  width: 734px;
-  height: auto;
-}
-
-.approval_c2 {
-  width: 702px;
-  height: auto;
-}
-
-.approval_c3 {
-  width: 587px;
-  height: auto;
-}
-
-.approval_c5 {
-  width: 634px;
-  height: auto;
-}
-
-.approval_c6 {
-  width: 602px;
+.k8sMana_c1 {
+  width: 692px;
   height: auto;
 }
 </style>

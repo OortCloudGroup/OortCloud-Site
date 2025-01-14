@@ -13,7 +13,7 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
         <a href="http://protal.oort.oortcloudsmart.com:31310/" target="_blank">
           <img src="/img/demo/index/1_pc.png" />
         </a>
-        <NuxtLink to="/demoDownload1">
+        <NuxtLink to="/zh/demoDownload1">
           <img src="/img/demo/index/1_mobile.png" />
         </NuxtLink>
         <a href="http://192.168.88.204:32610/oort/oortcloud-policefront/console_manage/index.html" target="_blank">
@@ -28,7 +28,7 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
         <a href="http://192.168.50.204:32610/oort/oortcloud-policefront/zxb_work_protal/index.html" target="_blank">
           <img src="/img/demo/index/2_pc.png" />
         </a>
-        <NuxtLink to="/demoDownload2">
+        <NuxtLink to="/zh/demoDownload2">
           <img src="/img/demo/index/2_mobile.png" />
         </NuxtLink>
         <a href="http://192.168.50.204:32610/oort/oortcloud-policefront/console_manage/index.html" target="_blank">
@@ -43,7 +43,7 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
         <a href="http://192.168.60.204:32610/oort/oortcloud-policefront/desktop_web/index.html" target="_blank">
           <img src="/img/demo/index/3_pc.png" />
         </a>
-        <NuxtLink to="/demoDownload3">
+        <NuxtLink to="/zh/demoDownload3">
           <img src="/img/demo/index/3_mobile.png" />
         </NuxtLink>
         <a href="http://192.168.60.204:32610/oort/oortcloud-policefront/console_manage/index.html" target="_blank">

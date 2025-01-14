@@ -198,6 +198,7 @@
 </template>
 
 <script setup>
+
 import homeApp_a1 from '@/assets/site/homeApp_a1.png'
 import homeApp_a2 from '@/assets/site/homeApp_a2.png'
 // import homeApp_a3 from '@/assets/site/homeApp_a3.png'
@@ -213,6 +214,10 @@ import homeApp_c2 from '@/assets/site/homeApp_c2.png'
 // import homeApp_c3 from '@/assets/site/homeApp_c3.png'
 // import homeApp_c4 from '@/assets/site/homeApp_c4.png'
 import homeApp_c5 from '@/assets/site/homeApp_c5.png'
+
+definePageMeta({
+  layout: 'site-new'
+})
 // import homeApp_d1 from '@/assets/site/homeApp_d1.png'
 // import homeApp_d2 from '@/assets/site/homeApp_d2.png'
 // import homeApp_d3 from '@/assets/site/homeApp_d3.png'

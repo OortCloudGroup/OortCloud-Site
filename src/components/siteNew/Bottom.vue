@@ -33,17 +33,17 @@
               解决方案
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text hover" @click="viewPath('/siteNew/mobilePolice',0)">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/mobilePolice',0)">
                 移动警务
               </div>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text hover" @click="viewPath('/siteNew/privateCloud',1)">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/privateCloud',1)">
                 私有云
               </div>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text hover" @click="viewPath('/siteNew/superAPP',1)">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/superAPP',1)">
                 超级APP
               </div>
             </div>
@@ -108,37 +108,37 @@
               成品软件
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text hover" @click="viewPath('/siteNew/k8sMana',0)">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/k8sMana',0)">
                 K8S容器管理和CMDB软件
               </div>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text hover" @click="viewPath('/siteNew/policeBus',1)">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/policeBus',1)">
                 警务服务总线
               </div>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text hover" @click="viewPath('/siteNew/portalApp',2)">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/portalApp',2)">
                 门户与应用市场软件
               </div>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text hover" @click="viewPath('/siteNew/approval',3)">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/approval',3)">
                 智能审批
               </div>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text hover" @click="viewPath('/siteNew/dispatch',3)">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/dispatch',3)">
                 指挥调度
               </div>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text hover" @click="viewPath('/siteNew/cloudClass',3)">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/cloudClass',3)">
                 云课堂
               </div>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text hover" @click="viewPath('/siteNew/instantMess',3)">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/instantMess',3)">
                 即时通讯
               </div>
             </div>
@@ -195,6 +195,18 @@
           </div>
         </div>
         <div class="b_ser_off">
+          <div class="bse_t bse_language">
+            <div class="bse_language_select">
+              <img src="@/assets/bottomImg/chinese.png" alt="" />
+              <n-dropdown trigger="hover" :options="[{label: '简体中文'},{label: 'English'}]">
+                <div class="bse_language_select_box">
+                  <span>简体中文</span>
+                  <span class="bse_language_icon" />
+                </div>
+              </n-dropdown>
+            </div>
+            <div class="line" />
+          </div>
           <div class="bse_t">
             OortCloud 致力于为企业管理提供高效智能的开源解决方案，是全球业内高速成长 的软件服务商之一，逾七百五十万用户选择OortCloud 进行数字化升级。通过一系 列全业务链覆盖、高度集成、简单易用的商业应用，助力企业实现信息化改革、降本增效并释放公司增长潜力。
           </div>
@@ -223,7 +235,11 @@
     <div class="icpBox flexRowAC">
       Website made with
       <img class="icpBox_img" src="@/assets/VLimg2.0/ipc.png" alt="" />
-      粤ICP备19160414号
+      <a
+        href="https://beian.miit.gov.cn/"
+        target="_blank"
+        style="opacity: 1; font-size: 14px;color:#fff;"
+      >粤ICP备19160414号</a>
     </div>
   </div>
 </template>
@@ -231,6 +247,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { NDropdown } from 'naive-ui'
 
 const router = useRouter()
 // const route = useRoute()
@@ -238,7 +255,6 @@ let value = ref('')
 
 const viewPath = (path) => {
   if (router.currentRoute.value.path === path) {
-    // 当前页置顶
     window?.scrollTo(0, 0)
   }
   router.push({ path })
@@ -260,7 +276,7 @@ const viewPath = (path) => {
 }
 
 .bottom_content {
-  width: 1500px;
+  width: 1380px;
   margin: 0 auto;
   padding: 50px 0;
 
@@ -359,6 +375,52 @@ const viewPath = (path) => {
     font-size: 14px;
     color: #999999;
     font-weight: 400;
+
+    .bse_language {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bse_language_select {
+      display: flex;
+      flex-direction: row;
+      img {
+        margin-right:12px;
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .bse_language_select_box {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      span {
+        cursor: pointer;
+        font-weight: 400;
+        font-size: 14px;
+        color: #ADB5BD;
+        line-height: 18px;
+        margin-right: 12px;
+      }
+    }
+
+    .bse_language_icon {
+      border-radius: 0px 0px 0px 0px;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid rgb(255, 255, 255);
+    }
+
+    .line {
+      background-color: #6C757E;
+      width: 100%;
+      height: 1px;
+      margin: 25px 0;
+      margin-bottom: 40px;
+    }
 
     .bse_t {
       color: #ADB5BD;

@@ -65,6 +65,7 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 // 双系统安全移动办公
 const doubleSysApp = ref({
   title: '双系统安全移动办公',

@@ -5,13 +5,13 @@
     </div>
     <div class="flexRowAC nav_t">
       <div
-        v-for="(item,i) in navList"
+        v-for="(itd,i) in navList"
         :key="i"
         class="nav_title"
-        :class="{nav_t_line:isActPath===item.path&&isActPath!=='/' || item.title===propTemp}"
-        @click="navClick(item.path,item.title )"
+        :class="{nav_t_line:isActPath===itd.path&&isActPath!=='/' || itd.title===propTemp}"
+        @click="navClick(itd.path,itd.title )"
       >
-        {{ item.title }}
+        {{ itd.title }}
       </div>
     </div>
     <div class="flexRowAC nav_r">
@@ -42,7 +42,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, defineEmits, computed } from 'vue'
+import { ref, onMounted, defineEmits, computed, onUnmounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 // import { useI18n } from 'vue-i18n'
 
@@ -65,11 +65,11 @@ const isActPath = computed(() => {
 })
 const emit = defineEmits(['handle'])
 const navList = ref([
-  { title: '应用程序', path: '/' },
-  { title: '行业', path: '/' },
-  { title: '社区', path: '/' },
-  { title: '定价', path: '/siteNew/price' },
-  { title: '联系方式', path: '/siteNew/contactUs' }
+  { title: '应用程序', path: '/zh/siteNew/' },
+  { title: '行业', path: '/zh/siteNew/' },
+  { title: '社区', path: '/zh/siteNew/' },
+  { title: '定价', path: '/zh/siteNew/price' },
+  { title: '联系方式', path: '/zh/siteNew/contactUs' }
 ])
 
 // const toggleLang = (val) => {
@@ -77,7 +77,7 @@ const navList = ref([
 //   langText.value = val === 'en' ? 'English' : '简体中文'
 // }
 const navClick = (path, t) => {
-  emit('handle', path, t)
+  emit('handle', t)
   router.push(path)
 }
 
@@ -94,6 +94,7 @@ function handleScroll() {
 onMounted(() => {
   window.addEventListener('scroll', handleScroll, true)
 })
+
 onUnmounted(() => {
   // 离开该页面需要移除，不然会报错
   window.removeEventListener('scroll', handleScroll, true)
@@ -174,7 +175,6 @@ watch(() => prop.item, (newVal) => {
   padding: 0 220px;
   box-shadow: 0px 0px 4px 2px #DADADA;
   background-color: #fff;
-
   .nav_t {
     cursor: pointer;
     gap: 28px;

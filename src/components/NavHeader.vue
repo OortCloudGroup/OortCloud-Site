@@ -6,12 +6,12 @@
       </div>
       <div class="header_menu">
         <div class="header_tabs">
-          <NuxtLink to="/oldSite">
+          <NuxtLink to="/zh/">
             首页
           </NuxtLink>
           <n-popover trigger="hover" arrow-point-to-center placement="bottom">
             <template #trigger>
-              <NuxtLink to="/hardware">
+              <NuxtLink to="/zh/hardware">
                 硬件产品
               </NuxtLink>
             </template>
@@ -21,7 +21,7 @@
           </n-popover>
           <n-popover trigger="hover" arrow-point-to-center placement="bottom">
             <template #trigger>
-              <NuxtLink to="/product" @mouseenter="handleMouseenter('software')" @mouseleave="handleMouseleave('software')">
+              <NuxtLink to="/zh/product" @mouseenter="handleMouseenter('software')" @mouseleave="handleMouseleave('software')">
                 软件产品
               </NuxtLink>
             </template>
@@ -35,7 +35,7 @@
                     <img class="dropdown_col_sort_logo" src="/img/home/sxt.png" />
                     <span class="dropdown_col_sort_label">安全移动办公</span>
                   </div>
-                  <NuxtLink to="/product_instantMsg" class="dropdown_col_item">
+                  <NuxtLink to="/zh/product_instantMsg" class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/home/xl_1.png" />
                     <span class="dropdown_col_item_label">即时通讯</span>
                     <!-- <span>NEW</span> -->
@@ -46,7 +46,7 @@
                       <span class="dropdown_col_item_label">私有云部署的移动安全办公云平台</span>
                     </div>
                   </a>
-                  <NuxtLink to="/product" class="dropdown_col_item">
+                  <NuxtLink to="/zh/product" class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/home/xl_3.png" />
                     <span class="dropdown_col_item_label">门户与应用仓库</span>
                   </NuxtLink>
@@ -133,7 +133,7 @@
           </n-popover>
           <n-popover trigger="hover" arrow-point-to-center placement="bottom">
             <template #trigger>
-              <NuxtLink to="/services" @mouseenter="handleMouseenter('solution')" @mouseleave="handleMouseleave('solution')">
+              <NuxtLink to="/zh/services" @mouseenter="handleMouseenter('solution')" @mouseleave="handleMouseleave('solution')">
                 专业服务
               </NuxtLink>
             </template>
@@ -141,10 +141,10 @@
               <NavHeaderDropdown :menu="solutionMenu" width="50rem" />
             </template>
           </n-popover>
-          <NuxtLink to="/news">
+          <NuxtLink to="/zh/news">
             新闻动态
           </NuxtLink>
-          <NuxtLink to="/about">
+          <NuxtLink to="/zh/about">
             关于我们
           </NuxtLink>
         </div>
@@ -160,7 +160,7 @@
           <template #default>
             <div class="demo_div">
               <template v-for="(item, index) in demoMenu" :key="index">
-                <NuxtLink :to="item.link" target="_blank">
+                <NuxtLink :to="'/zh'+item.link" target="_blank">
                   <div :key="index" class="demo_div_item">
                     <img :src="item.logo" />
                     <div>
@@ -170,7 +170,7 @@
                   </div>
                 </NuxtLink>
               </template>
-              <NuxtLink to="demoIndex" target="_blank">
+              <NuxtLink to="/zh/demoIndex" target="_blank">
                 <div class="demo_div_item demo_div_item_more">
                   <img src="/img/demo/menu/more_f.png" />
                   <span>更多演示</span>
@@ -190,7 +190,7 @@
             基础软件
           </div>
           <div class="header_dialog_head_right">
-            <NuxtLink to="/more">
+            <NuxtLink to="/zh/more">
               查看更多
             </NuxtLink>
           </div>

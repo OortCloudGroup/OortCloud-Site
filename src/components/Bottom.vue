@@ -1,139 +1,536 @@
 <template>
-  <div style="height: 6.25rem; width: 100%">
-    <!--    <div style="height: 6.25rem; width: 100%"></div>-->
-    <div class="bottom_body">
-      <div class="bottom_content">
+  <div class="bottom_page">
+    <div class="bottom_content">
+      <div class="bottom_pro flexRowAC">
         <div class="bottom_tips">
+          <div class="bottom_tips_item_first">
+            <img src="/img/home/oort_logo.png" />
+            <span>300多种企业级产品累计服务1.5亿用户</span>
+          </div>
           <div class="bottom_tips_item">
-            <img src="/img/home/footer_icon1.png" />
+            <img src="@/assets/bottomImg/footer_icon1.png" />
             <span>国家AAA信用企业</span>
           </div>
           <div class="bottom_tips_item">
-            <img src="/img/home/footer_icon2.png" />
+            <img src="@/assets/bottomImg/footer_icon2.png" />
             <span>180+软件著作权和专利</span>
           </div>
           <div class="bottom_tips_item">
-            <img src="/img/home/footer_icon3.png" />
+            <img src="@/assets/bottomImg/footer_icon3.png" />
             <span>通过ISO三大国际体系认证</span>
           </div>
         </div>
-        <!-- 产品中心 -->
-        <div class="bottom_href">
-          <div class="bottom_href_item bottom_href_item_first">
-            <img style="width: 156px;height:53px;text-align: left;" src="/img/home/oort_logo.png" />
-            <span class="text2">300多种企业级产品累计服务1.5亿用户</span>
-          </div>
-          <div class="bottom_href_item bottom_href_item_text" style="margin-left: 20px;margin-right: 50px;">
-            <span><NuxtLink
-              to="/more"
-              style="
-                    opacity: 1;
-                    font-size: 14px;
-                    color: #ffffff !important;
-                    font-weight: 600;
-                  "
-            >软件中心</NuxtLink></span>
-            <span><a href="https://marketplace.huaweicloud.com/contents/ee446d40-ce7c-447f-84e9-4ca0a1fe2f0f#productid=OFFI766131914498846720" target="_blank">华为IdeaHub警务宝</a></span>
-            <span><NuxtLink to="/JWBdetail">警务宝一体机</NuxtLink></span>
-            <span><a href="https://onemap.oortcloudsmart.com" target="_blank">指挥调度一张图</a></span>
-            <span><a href="#" target="_blank">私有云部署的移动安全办公云平台</a></span>
-            <span><NuxtLink to="/product">门户与应用仓库</NuxtLink></span>
-            <span><NuxtLink to="/product_office">办公宝</NuxtLink></span>
-            <div style="margin-top: 10px">
-              <NuxtLink
-                style="
-                    font-size: 14px;
-                    color: #fff !important;
-                    font-weight: 600;
-                  "
-                to="/more"
-              >
-                更多 >
-              </NuxtLink>
+      </div>
+      <div class="b_ser flexRowAC">
+        <div class="b_ser_p flexRowAC">
+          <div class="b_ser_p_l">
+            <div class="b_ser_title">
+              社区
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                教学视频
+              </div>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                文档
+              </div>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                论坛
+              </div>
             </div>
           </div>
-          <div class="bottom_href_item bottom_href_item_text">
-            <span><NuxtLink to="/services" style="opacity: 1; font-size: 14px; color: #fff !important">解决方案</NuxtLink></span>
-            <span><NuxtLink to="/services_publicSecurity">公安</NuxtLink></span>
-            <span><NuxtLink to="/services_smartPoliceStation">智慧派出所</NuxtLink></span>
-            <span><NuxtLink to="/services_inspection">检察</NuxtLink></span>
-            <span><NuxtLink to="/services_prison">司法监狱</NuxtLink></span>
-            <span><NuxtLink to="/services_borderSeaDefense">智慧边海防</NuxtLink></span>
-            <span><NuxtLink to="/services_goverment">政府</NuxtLink></span>
-            <div style="margin-top: 10px">
-              <NuxtLink
-                style="
-                    font-size: 14px;
-                    color: #fff !important;
-                    font-weight: 600;
-                  "
-                to="/services"
-              >
-                更多 >
-              </NuxtLink>
+          <div class="b_ser_p_l">
+            <div class="b_ser_title">
+              解决方案
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/mobilePolice',0)">
+                移动警务
+              </div>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/privateCloud',1)">
+                私有云
+              </div>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/superAPP',1)">
+                超级APP
+              </div>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                全部解决方案
+              </div>
             </div>
           </div>
-          <div class="bottom_href_item bottom_href_item_text">
-            <span><a style="opacity: 1; font-size: 14px; color: #fff !important">下载中心</a></span>
-            <span><a href="#" target="_blank">警务宝</a></span>
-            <span><a href="#" target="_blank">办公宝</a></span>
-            <span><a href="#" target="_blank">视频宝</a></span>
-            <span><a href="#" target="_blank">党建宝</a></span>
+          <div class="b_ser_p_l">
+            <div class="b_ser_title">
+              开源
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                下载
+              </div>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                GitHub
+              </div>
+            </div>
           </div>
-          <div class="bottom_href_item bottom_href_item_text">
-            <span><a style="opacity: 1; font-size: 14px; color: #fff !important" target="_blank">关于我们</a></span>
-            <span><NuxtLink to="/about">公司简介</NuxtLink></span>
-            <span><NuxtLink to="/about#hezuo">合作洽谈</NuxtLink></span>
+          <div class="b_ser_p_l">
+            <div class="b_ser_title">
+              服务
+            </div>
+            <div class="flexRowAC">
+              <a class="b_ser_text hover" href="https://oortcloudsmart.com/zh/siteNew/" target="_blank">
+                OORT 生产力平台
+              </a>
+            </div>
+            <div class="flexRowAC">
+              <a class="b_ser_text hover" href=" https://da.oortcloudsmart.com/" target="_blank">
+                OORT.DA 数据平台
+              </a>
+            </div>
+            <div class="flexRowAC">
+              <a class="b_ser_text hover" href="https://vls.oortcloudsmart.com/" target="_blank">
+                VLSterm 视觉平台
+              </a>
+            </div>
+            <div class="flexRowAC">
+              <a class="b_ser_text hover" href="https://sh.oortcloudsmart.com/" target="_blank">
+                OORT.SH 托管平台
+              </a>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                支持与升级
+              </div>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                自定义开发服务
+              </div>
+            </div>
           </div>
-          <div class="bottom_href_item bottom_href_item_first" style="border: none;">
-            <span class="bottom_href_item_first_text1">关注奥尔特云</span>
-            <img src="/img/logo_googn.jpg" />
-            <span class="text2">官方微信公众号</span>
+          <div class="b_ser_p_l">
+            <div class="b_ser_title">
+              成品软件
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/k8sMana',0)">
+                K8S容器管理和CMDB软件
+              </div>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/policeBus',1)">
+                警务服务总线
+              </div>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/portalApp',2)">
+                门户与应用市场软件
+              </div>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/approval',3)">
+                智能审批
+              </div>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/dispatch',3)">
+                指挥调度
+              </div>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/cloudClass',3)">
+                云课堂
+              </div>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/instantMess',3)">
+                即时通讯
+              </div>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                全部产品
+              </div>
+            </div>
+          </div>
+          <div class="b_ser_p_l">
+            <div class="b_ser_title">
+              关于我们
+            </div>
+            <div class="flexRowAC">
+              <a class="b_ser_text hover" href="https://www.oortcloudsmart.com/zh/" target="_blank">
+                我们的公司
+              </a>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                品牌资产
+              </div>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/contactUs',2)">
+                联系我们
+              </div>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                寻找合作伙伴
+              </div>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                近期活动
+              </div>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                客户
+              </div>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                法律 · 隐私
+              </div>
+            </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text">
+                安全
+              </div>
+            </div>
           </div>
         </div>
-        <!-- 底部 -->
-        <div class="bottom_heee">
-          <span><a href="about.html" style="opacity: 1; font-size: 14px">关于我们</a>&nbsp; | &nbsp;</span>
-          <span><a
-            href="http://oortcloudsmart.com/servceAgreement.html"
-            target="_blank"
-            style="opacity: 1; font-size: 14px"
-          >用户协议</a>&nbsp; | &nbsp;</span>
-          <span><a
-            href="http://oortcloudsmart.com/privacypolicy.html"
-            target="_blank"
-            style="opacity: 1; font-size: 14px"
-          >隐私政策</a>
-            &nbsp;| &nbsp;</span>
-          <span><a
-            href="https://beian.miit.gov.cn/"
-            target="_blank"
-            style="opacity: 1; font-size: 14px"
-          >粤ICP备19160414号</a></span>
+        <div class="b_ser_off">
+          <div class="bse_t bse_language">
+            <div class="bse_language_select">
+              <img src="@/assets/bottomImg/chinese.png" alt="" />
+              <n-dropdown trigger="hover" :options="[{label: '简体中文'},{label: 'English'}]">
+                <div class="bse_language_select_box">
+                  <span>简体中文</span>
+                  <span class="bse_language_icon" />
+                </div>
+              </n-dropdown>
+            </div>
+            <div class="line" />
+          </div>
+          <div class="bse_t">
+            奥尔特云(深圳)智慧科技有限公司创立于2019年，专注于移动警务服务总线、Workup超级APP、视频融合赋能平台VLStream，以及应用支撑平台产品研发，公司主要通过移动警务、指挥调度、私有云、大数据、AI场景应用、行业数字化转型，以及非标硬件整机定制等私有部署应用解决方案支撑落地行业场景应用。公司具有成熟的成品平台产品软件和硬件整机定制开发能力，产品在数字政府(一网统管、一网协同、一网通办、一网通享)、智慧城市(智慧园区、智慧场馆、智慧楼宇)以及数字化运营领域得到广泛应用。
+          </div>
+          <div class="flexRowAC contact_app">
+            <div class="b_ser_off_imgBox flexRowAC">
+              <img class="b_ser_off_img" src="@/assets/bottomImg/bo1.png" alt="" />
+              <img class="b_ser_off_img" src="@/assets/bottomImg/bo2.png" alt="" />
+              <img class="b_ser_off_img" src="@/assets/bottomImg/bo3.png" alt="" />
+              <img class="b_ser_off_img" src="@/assets/bottomImg/bo4.png" alt="" />
+              <img class="b_ser_off_img" src="@/assets/bottomImg/bo5.png" alt="" />
+              <img class="b_ser_off_img" src="@/assets/bottomImg/bo6.png" alt="" />
+              <img class="b_ser_off_img" src="@/assets/bottomImg/bo7.png" alt="" />
+              <img class="b_ser_off_img" src="@/assets/bottomImg/bo8.png" alt="" />
+            </div>
+            <div class="wx_gzh">
+              <span>关注奥尔特云</span>
+              <img src="@/assets/bottomImg/logo_googn.jpg" />
+              <span>官方微信公众号</span>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+    <div class="icpBox flexRowAC">
+      Website made with
+      <img class="icpBox_img" src="@/assets/VLimg2.0/ipc.png" alt="" />
+      <a
+        href="https://beian.miit.gov.cn/"
+        target="_blank"
+        style="opacity: 1; font-size: 14px;color:#fff;"
+      >粤ICP备19160414号</a>
     </div>
   </div>
 </template>
 
-<style scoped lang="scss">
-.bottom_body {
-  width: 100%;
-  min-height: 452px;
-  background-color: #24292d;
+<script setup>
+import { useRouter } from 'vue-router'
+import { NDropdown } from 'naive-ui'
+
+const router = useRouter()
+// const route = useRoute()
+// let value = ref('')
+
+const viewPath = (path) => {
+  if (router.currentRoute.value.path === path) {
+    window?.scrollTo(0, 0)
+  }
+  router.push({ path })
+}
+</script>
+
+<style lang="scss" scoped>
+
+:deep .el-input__wrapper {
+  border: 0px;
+  box-shadow: 0 0 0 0px;
+  padding-left: 30px;
+  font-size: 18px;
+}
+
+.bottom_page {
+  min-height: 640px;
+  background: #252734;
 }
 
 .bottom_content {
-  max-width: 1190px;
+  width: 1380px;
   margin: 0 auto;
+  padding: 50px 0;
+
+  .bottom_pro {
+    justify-content: center;
+    padding-bottom: 68px;
+  }
+
+  .bottom_pro_t {
+    color: #fff;
+
+    .bottom_pro_tImg {
+      height: 48px;
+      margin-bottom: 18px;
+    }
+  }
+
+  .bottom_pro_r {
+    gap: 30px;
+
+    .bottom_pro_address {
+      color: white;
+      width: 450px;
+      height: 60px;
+      border-radius: 3px;
+      color: #fff;
+      border-radius: 8px;
+      border: 1px solid #646C76;
+      background-color: transparent;
+
+      :deep(.el-input__wrapper) {
+        background-color: transparent;
+
+        .el-input__inner {
+          color: #fff;
+        }
+      }
+    }
+
+    .bottom_me {
+      width: 210px;
+      text-align: center;
+      height: 60px;
+      line-height: 60px;
+      background: #2278FF;
+      font-size: 18px;
+      color: #FFFFFF;
+      font-weight: 400;
+      border-radius: 8px;
+    }
+  }
+}
+
+.b_ser {
+  align-items: flex-start;
+  justify-content: space-between;
+  color: #fff;
+
+  .b_ser_p {
+    gap: 60px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .b_ser_p_l {
+    width: 210px;
+    white-space: nowrap;
+  }
+
+  .b_ser_title {
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 400;
+    padding-bottom: 10px;
+  }
+
+  .b_ser_text {
+    display: block;
+    color: rgba(255, 255, 255, .5);
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: 400;
+
+    &.hover {
+      cursor: pointer;
+
+      &:hover {
+        color: #2278FF;
+      }
+    }
+  }
+
+  .b_ser_off {
+    width: 520px;
+    min-width: 520px;
+    text-align: center;
+    font-size: 14px;
+    color: #999999;
+    font-weight: 400;
+
+    .bse_language {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bse_language_select {
+      display: flex;
+      flex-direction: row;
+      img {
+        margin-right:12px;
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .bse_language_select_box {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      span {
+        cursor: pointer;
+        font-weight: 400;
+        font-size: 14px;
+        color: #ADB5BD;
+        line-height: 18px;
+        margin-right: 12px;
+      }
+    }
+
+    .bse_language_icon {
+      border-radius: 0px 0px 0px 0px;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid rgb(255, 255, 255);
+    }
+
+    .line {
+      background-color: #6C757E;
+      width: 100%;
+      height: 1px;
+      margin: 25px 0;
+      margin-bottom: 40px;
+    }
+
+    .bse_t {
+      color: #ADB5BD;
+      font-size: 14px;
+      line-height: 22px;
+      text-align: left;
+
+    }
+
+    .bse_d {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
+  .b_ser_off_imgBox {
+    align-items: flex-start;
+    gap: 16px;
+    padding-bottom: 40px;
+    cursor: pointer;
+  }
+
+  .b_ser_off_code {
+    width: 140px;
+    height: 140px;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-bottom: 12px;
+  }
+
+  .b_ser_off_img {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+
+    &.h50 {
+      height: 50px;
+    }
+  }
+}
+
+.icpBox {
+  color: #ADB5BD;
+  font-size: 14px;
+  width: 100%;
+  justify-content: center;
+  height: 60px;
+  background: #1A1C24;
+  gap: 16px;
+
+  .icpBox_img {
+    width: auto;
+    height: 30px;
+  }
+}
+
+.contact_app {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.wx_gzh {
+  display: flex;
+  flex-direction: column;
+  span {
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  img {
+    width: 109px;
+    height: 109px;
+  }
 }
 
 .bottom_tips {
+  width: 100%;
   height: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-bottom: 0.78px solid #666666;
+}
+
+.bottom_tips_item_first {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 120px;
+  }
+  span {
+    margin-top: 22px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #FFFFFF;
+    line-height: 18px;
+  }
 }
 
 .bottom_tips_item {
@@ -154,106 +551,4 @@
   color: #ffffff;
   letter-spacing: 0;
 }
-
-.bottom_href {
-  display: flex;
-  flex-direction: row;
-  margin-top: 19px;
-  min-height: 200px;
-}
-
-.bottom_href_item {
-  display: flex;
-  flex-direction: row;
-  margin-top: 19px;
-  /*min-width: 200px;*/
-  min-width: 14%;
-}
-
-.bottom_href_item_first {
-  border-right: 0.78px solid #666666;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-right: 15px;
-}
-
-.bottom_href_item_first .bottom_href_item_first_text1 {
-  font-size: 14px;
-  color: #ffffff;
-  letter-spacing: 0;
-}
-
-.bottom_href_item_first .text2 {
-  font-size: 14px;
-  color: #999999;
-  letter-spacing: 0;
-}
-
-.bottom_href_item_first img {
-  margin: 16px;
-  width: 109px;
-  height: 109px;
-}
-
-.bottom_href_item_text {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.bottom_href_item_text span {
-  margin: 6px 0px;
-  display: block;
-}
-
-.bottom_href_item_text span a {
-  text-decoration: none;
-  font-size: 12px;
-  color: #ffffff86 !important;
-  letter-spacing: 0;
-}
-
-.bottom_heee {
-  margin-top: 40px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  border-top: 0.78px solid #666666;
-  flex-direction: row;
-  align-items: center;
-}
-.bottom_heee span a {
-  text-decoration: none;
-  font-size: 14px;
-  color: #999999;
-  letter-spacing: 0;
-}
-
-.footer_imgs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-bottom: 80px;
-}
-
-.footer_imgs_item {
-  margin: 8px;
-  width: 300px;
-  position: relative;
-}
-
-.footer_imgs_item img {
-  width: 100%;
-  cursor: pointer;
-}
-
-.footer_imgs_item img:hover {
-  transform: scale(1.01);
-}
-
 </style>

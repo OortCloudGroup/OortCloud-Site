@@ -2,14 +2,14 @@
   <div class="page_container">
     <div class="cd_bottom">
       <div class="cd_bottom_list">
-        <NuxtLink to="/product" class="cd_bottom_list_item">
+        <NuxtLink to="/zh/product" class="cd_bottom_list_item">
           <img src="/img/home/xl_3.png" />
           <div class="cd_bottom_list_item_right">
             <span>门户与应用仓库</span>
             <span>把小程序搬进APP,快速打造超级APP</span>
           </div>
         </NuxtLink>
-        <NuxtLink to="/product_instantMsg" class="cd_bottom_list_item">
+        <NuxtLink to="/zh/product_instantMsg" class="cd_bottom_list_item">
           <img src="/img/home/xl_1.png" />
           <div class="cd_bottom_list_item_right">
             <span>即时通讯</span>
@@ -61,7 +61,7 @@
             <span>Pad终端安全加固组件与刷机服务包</span>
           </div>
         </a>
-        <NuxtLink to="/more" class="cd_bottom_list_item">
+        <NuxtLink to="/zh/more" class="cd_bottom_list_item">
           <img src="/img/home/gd_1.png" />
           <div
             class="cd_bottom_list_item_right"

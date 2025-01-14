@@ -81,6 +81,9 @@ import industry_ti5 from '@/assets/homeImg/industry_ti5.png'
 import industry_ti6 from '@/assets/homeImg/industry_ti6.png'
 import industry_ti7 from '@/assets/homeImg/industry_ti7.png'
 import industry_ti8 from '@/assets/homeImg/industry_ti8.png'
+definePageMeta({
+  layout: 'site-new'
+})
 const props = defineProps(['item'])
 let itemTemp = ref('')
 let idtArr = ref([])
@@ -196,6 +199,18 @@ watch(() => props.item, (newVal: any) => {
   margin: 0 auto;
 }
 
+.idtBox:hover {
+  cursor: pointer;
+  color: #2656a5;
+  text-decoration: underline;
+}
+
+.conBox:hover {
+  cursor: pointer;
+  color: #2656a5;
+  text-decoration: underline;
+}
+
 .conBox {
   padding-top: 16px;
   gap: 40px;
@@ -254,6 +269,12 @@ watch(() => props.item, (newVal: any) => {
 
     .idtBox {
       margin-bottom: 20px;
+    }
+
+    .appT_t:hover {
+      cursor: pointer;
+      color: #2656a5;
+      text-decoration: underline;
     }
 
     .appT_t {

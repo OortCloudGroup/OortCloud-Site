@@ -1,159 +1,135 @@
 <template>
   <div class="home_page vls">
-    <div class="platTopOut flexRowAC w1380">
-      <div class="platTop w1380">
-        <div class="VLStream">
-          云课堂3.0
-          Classroom
+    <div class="platTop w1380">
+      <img class="VLStream_top" src="@/assets/software/privateCloud_bg1.png" alt="" />
+      <div class="VLStream">
+        移动警务
+      </div>
+      <div class="plat_cent">
+        通过基础设施云化、软件与硬件解耦、数据与业务解耦、应用与平台解耦
+        <br />
+        构建开放技术架构和业务生态
+      </div>
+      <div class="flexRowAC useBox">
+        <div class="seeMore">
+          立即试用
         </div>
-        <div class="plat_cent">
-          基于移动互联网的培训管理和学习交互平台
+        <div class="seeMore u1">
+          安排演示
         </div>
-        <div class="flexRowAC useBox" style="justify-content: flex-start">
-          <div class="seeMore">
-            立即试用
+      </div>
+    </div>
+    <div class="proTitleBox mb_h_t w1380 flexRowAC" style="justify-content: space-between">
+      <img class="VLStream_top" src="@/assets/software/mobilePolice_bg1.png" alt="" />
+      <img class="VLStream_top" src="@/assets/software/mobilePolice_bg2.png" alt="" />
+      <img class="VLStream_top" src="@/assets/software/mobilePolice_bg3.png" alt="" />
+    </div>
+    <div class="proTitleBox mb_h_d w1380 flexRowAC" style="justify-content: flex-start">
+      *智治新格局 移动警务|警务宝下沉警务室,视讯多沟通,基展少跑路,移动警务警务宝产品亮相第11届中国国际警用装备博览会
+    </div>
+    <div class="proTitleBox w1380 flexRowAC" style="justify-content: flex-start">
+      主要优势
+    </div>
+    <div class="advantBox w1380">
+      <div class="flexRowAC advantIt">
+        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num1.png" alt="" />
+        核心产品-警务服务总线落地实施案例多、经验丰富。
+      </div>
+      <div class="flexRowAC advantIt">
+        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num2.png" alt="" />
+        紧随GAB部标持续更新,保障标准动作安全合规,有据可依。
+      </div>
+      <div class="flexRowAC advantIt">
+        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num3.png" alt="" />
+        第三方系统如统一认证、统一用户、统一授权等对接方便,运维简单。
+      </div>
+      <div class="flexRowAC advantIt">
+        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num4.png" alt="" />
+        基于云计算架构,系统自带微服务引擎,可持续扩展,系统弹性伸缩,减轻系统运维负担。
+      </div>
+      <div class="flexRowAC advantIt">
+        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num5.png" alt="" />
+        具备警务云平台基础设施,通过警务云平台统一管理用户信息、统一管理功能权限、统一划分用户角色。
+      </div>
+      <div class="flexRowAC advantIt">
+        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num6.png" alt="" />
+        所有请求数据可视化,所有操作必留痕,可追溯,安全日志审计功能完善。可支支持上报使用情况,对接安
+        审平台。
+      </div>
+      <div class="flexRowAC advantIt">
+        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num7.png" alt="" />
+        支持终端适配、门户定制、第三方应用开发技术支撑。支持用户个性化需求快速迭代。与MDM、证书系统、 安全审计等对接经验丰富。
+      </div>
+      <div class="flexRowAC advantIt">
+        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num8.png" alt="" />
+        基于微服务开发,具备警务服务总线、安全合规跨隔离网闸通信、多网部署、多网同步、多终端同步,方便
+        警务工作人员在不同的网络区域使用。
+      </div>
+      <div class="flexRowAC advantIt">
+        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num9.png" alt="" />
+        提供整套移动警务解决方案;分层解耦,共享服务。避免重复开发,沉淀基础多。提供应用支撑、应用市
+        场、服务总线、跨网安全传输、多网部署,品成熟,部署快。
+      </div>
+      <div class="flexRowAC advantIt">
+        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num10.png" alt="" />
+        现有移动警务手机型终端通用能力解耦,通用能力贡献给平台使用,送避免重复建设。颁布第三方应用开发标准,
+        对第三方应用全生命周期管理。可体现使用排名、使用活跃度。落地实实施案例多,专业业务应用厂商对接多,
+        生态成熟。
+      </div>
+    </div>
+    <div class="w1380 ipcView dev CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_t">
+          解决方案
+        </div>
+        <div class="terminal">
+          <img class="terminalImg" src="@/assets/software/mobilePoliceC1.png" alt="" />
+          <div class="terminalT">
+            移动警务应用介绍
           </div>
-          <div class="seeMore u1">
-            安排演示
+          <div class="terminalD">
+            主要包括首页(手机端信息门户和应用市场)、警务微信、通信录、问吧、云课堂、首长点评、动态圈、移动办公审批、督办、新闻推送、社区警务、民生警务、智慧视频、云上警政、治安采集等机关应用与基层民警实战实用。
+          </div>
+        </div>
+        <div class="terminal cloud">
+          <img class="terminalImg" src="@/assets/software/mobilePoliceC2.png" alt="" />
+          <div class="terminalT">
+            新一代移动警务应用支撑平台介绍
+          </div>
+          <div class="terminalD">
+            新一代移动警务应用支撑平台是建立在基础云(laaS/laaS+/iPaaS)之上的，进一步为各业务系统建设统一的移动应用软件开发管理中心平台。遵循统一规划、统一标准、统一管理、统一门户、统一监控、统一运营六个统一。为业务应用与业务微服务的建设提供开发与治理支撑,进行统一管控，避免重复建设,达到集约、节约的目的。主要包括功能：服务总线、统一门户(应用市场)、服务化能力开发框架、基础服务中心、业务服务集成、后端管控平台等能力。
           </div>
         </div>
       </div>
-      <img class="platTopOutImg" src="@/assets/software/cloudClass_bg1.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          直播课堂
-        </div>
-        <div class="cl_d">
-          知识奇幻之旅开启
-        </div>
-      </div>
-      <img class="k8sMana_c1" src="@/assets/software/superAPP_c8.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          在线考试
-        </div>
-        <div class="cl_d">
-          知识大阅兵，学识绽光彩
-        </div>
-      </div>
-      <img class="k8sMana_c1" src="@/assets/software/cloudClass_c1.png" alt="" />
-    </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          视频课程
-        </div>
-        <div class="cl_d">
-          开启知识新视界
-        </div>
-      </div>
-      <img class="k8sMana_c1" src="@/assets/software/cloudClass_c2.png" alt="" />
-    </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          排行榜
-        </div>
-        <div class="cl_d">
-          记录进步足迹
-        </div>
-      </div>
-      <img class="k8sMana_c1" src="@/assets/software/cloudClass_c3.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          心得体会
-        </div>
-        <div class="cl_d">
-          知识感悟的智慧结晶
-        </div>
-        <img class="cloudClass_c4 " src="@/assets/software/cloudClass_c4.png" alt="" />
-      </div>
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          学习计划
-        </div>
-        <div class="cl_d">
-          探寻知识的无尽奥秘
-        </div>
-      </div>
-      <img class="k8sMana_c1" src="@/assets/software/cloudClass_c5.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          问卷调查、微投票
-        </div>
-        <div class="cl_d">
-          你的选择很重要
-        </div>
-      </div>
-      <img class="k8sMana_c1" src="@/assets/software/cloudClass_c6.png" alt="" />
     </div>
     <div class="productBox w1380">
       <div class="proT">
         现在开始体验
       </div>
-      <div class="flexRowAC productItem">
-        <div class="productImg productItem1 product1">
-          <img class="pro1_1" src="@/assets/software/down1_.png" alt="" />
-          <div class="pro1_1_s flexRowAC">
-            SaaS版本
-            <span class="pro1_1_s_b">14天功能全免费试用</span>
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            7天快速迭代，问题敏捷解决
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            快速启用，精简运维
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            更低建设成本
-          </div>
-          <div class="pro3 flexRowAC">
-            <div class="pro3_btn flexRowAC">
-              申请试用
-            </div>
-            <div class="pro3_btn p3b flexRowAC">
-              详细功能
-            </div>
-          </div>
+      <div class="productImg product1">
+        <img class="pro1_1" src="@/assets/software/down1.png" alt="" />
+        <div class="pro1_1_s flexRowAC">
+          私有化部署
+          <span class="pro1_1_s_b">1v1 定制方案量身打造</span>
         </div>
-        <div class="productImg productItem1 product1">
-          <img class="pro1_1" src="@/assets/software/down1.png" alt="" />
-          <div class="pro1_1_s flexRowAC">
-            私有化部署
-            <span class="pro1_1_s_b">1v1 定制方案量身打造</span>
+        <div class="pro1_2 flexRowAC">
+          <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+          1v1 专家服务，定制化解决方案
+        </div>
+        <div class="pro1_2 flexRowAC">
+          <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+          本地化灵活部署，私有化数据存储
+        </div>
+        <div class="pro1_2 flexRowAC">
+          <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+          高可用架构与完备容灾方案
+        </div>
+        <div class="pro3 flexRowAC">
+          <div class="pro3_btn flexRowAC">
+            申请试用
           </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            1v1 专家服务，定制化解决方案
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            本地化灵活部署，私有化数据存储
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            高可用架构与完备容灾方案
-          </div>
-          <div class="pro3 flexRowAC">
-            <div class="pro3_btn flexRowAC">
-              申请试用
-            </div>
-            <div class="pro3_btn p3b flexRowAC">
-              详细功能
-            </div>
+          <div class="pro3_btn p3b flexRowAC">
+            详细功能
           </div>
         </div>
       </div>
@@ -186,7 +162,9 @@ import product5_4 from '@/assets/VLimg2.0/product5_4.png'
 import product5_5 from '@/assets/VLimg2.0/product5_5.png'
 import product5_6 from '@/assets/VLimg2.0/product5_6.png'
 import product5_7 from '@/assets/VLimg2.0/product5_7.png'
-
+definePageMeta({
+  layout: 'site-new'
+})
 let p5Arr = ref([])
 p5Arr.value = [
   { t: 'Windows', d: '版本号：V3.1.06', flag: false, img: product5_1 },
@@ -225,20 +203,9 @@ p5Arr.value = [
 //  font-weight: bold;
 //  font-size: 18px;
 //}
-.platTopOut{
-  justify-content: space-between;
-  padding-bottom: 160px;
-
-  .platTopOutImg{
-    flex-shrink: 0;
-    width: 680px;
-    height: auto;
-    margin-left: 100px;
-  }
-}
 
 .platTop {
-  text-align: left;
+  text-align: center;
   padding: 110px 0;
 
   .plat {
@@ -248,6 +215,11 @@ p5Arr.value = [
     font-size: 18px;
     border-radius: 18px;
     border: 1px solid #E9E9E9;
+  }
+
+  .VLStream_top {
+    height: 66px;
+    width: auto;
   }
 
   .VLStream {
@@ -365,9 +337,8 @@ p5Arr.value = [
 
   .cl_d {
     padding-bottom: 24px;
-    color: #97A3B6;
-    font-weight: bold;
-    font-size: 40px;
+    color: #717781;
+    font-size: 20px;
   }
 
   .CloudL {
@@ -411,22 +382,6 @@ p5Arr.value = [
 .productBox {
   text-align: center;
   padding-bottom: 140px;
-
-  .productItem {
-    gap: 20px;
-
-    .productItem1 {
-      flex: 1;
-
-      &:nth-child(1) {
-        background: #2278FF;
-
-        .pro3_btn {
-          color: #2278FF;
-        }
-      }
-    }
-  }
 
   .proT {
     padding-bottom: 60px;
@@ -647,12 +602,91 @@ p5Arr.value = [
     }
   }
 }
-.cloudClass_c4{
-  width: 1380px;
-  height: auto;
+
+.ipcView.dev {
+  .CloudL {
+    width: 100%;
+  }
+
+  .terminal {
+    border-radius: 24px;
+    background: linear-gradient(180deg, #FEF9F6 0%, #FFFFFF 100%);
+    border: 1px solid #001F5019;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 30px;
+
+    .terminalImg {
+      width: 62px;
+      height: 62px;
+    }
+
+    .terminalT {
+      padding-top: 30px;
+      color: #333333;
+      font-weight: bold;
+      font-size: 28px;
+    }
+
+    .terminalD {
+      padding-top: 30px;
+      color: #717781;
+      font-size: 18px;
+    }
+  }
+
+  .cloud.terminal {
+    border-radius: 24px;
+    background: linear-gradient(180deg, #F9FFF7 0%, #FFFFFF 98%);
+    border: 1px solid #001F5019;
+  }
 }
-.k8sMana_c1{
-  width: 750px;
-  height: auto;
+
+.proTitleBox {
+  justify-content: center;
+  color: #3D3D3D;
+  font-weight: bold;
+  font-size: 58px;
+  padding-bottom: 100px;
+}
+
+.mb_h_t {
+  padding-bottom: 20px;
+
+  .VLStream_top {
+    width: 445px;
+    height: auto;
+  }
+}
+
+.mb_h_d {
+  color: #797F88;
+  font-weight: normal;
+  font-size: 18px;
+  padding-bottom: 160px;
+}
+
+.advantBox {
+  padding: 0 40px;
+  margin-bottom: 160px;
+  border-radius: 24px;
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+
+  .advantIt {
+    padding: 40px 0;
+    color: #333333;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: left;
+    border-bottom: 1px solid #EEEEEE;
+  }
+
+  .advantBoxImg {
+    width: 40px;
+    height: 36px;
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
 }
 </style>

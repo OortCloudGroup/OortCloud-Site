@@ -1,144 +1,143 @@
 <template>
   <div class="home_page vls">
-    <div class="platTop w1380">
-      <div class="VLStream">
-        门户与应用仓库
-      </div>
-      <div class="plat_cent">
-        拥有领先于市场的小程序容器技术，可为您提供敏捷、安全的最佳实践，
-        <br />
-        是数字化时代下企业移动开发的不二之选。
-      </div>
-      <div class="flexRowAC useBox">
-        <div class="seeMore">
-          立即试用
+    <div class="platTopOut">
+      <div class="platTop w1380">
+        <div class="VLStream">
+          指挥调度
         </div>
-        <div class="seeMore u1">
-          安排演示
+        <div class="plat_cent">
+          指挥调度，警情、警力、现场、调度、过程可视
         </div>
-      </div>
-    </div>
-    <div class="por_app flexRowAC">
-      <img class="k8sMana_c1" src="@/assets/software/portalApp_bg1.png" alt="" />
-      30分钟
-      <span>把小程序搬进 App</span>
-    </div>
-    <div class="por_con w1380 flexRowAC">
-      <div class="por_c_it">
-        <div>01</div>
-        <div>
-          私有个性化
-          <br />
-          "应用市场"
-        </div>
-        <div>支持私有应用市场，规范上架，便捷服务分发</div>
-      </div>
-      <div class="por_c_it">
-        <div>02</div>
-        <div>
-          云原生架构<br />
-          &nbsp;
-        </div>
-        <div>基于云原生架构，支持百万级查询和高并发，确保业务平稳运行。</div>
-      </div>
-      <div class="por_c_it">
-        <div>03</div>
-        <div>
-          多终端支持<br />
-          &nbsp;
-        </div>
-        <div>
-          支持多终端，包括移动
-          端、双系统、华为Pad
-          PC、国产操作系统等。
-        </div>
-      </div>
-      <div class="por_c_it">
-        <div>04</div>
-        <div>
-          多种部署方式<br />
-          &nbsp;
-        </div>
-        <div>
-          支持私有云、行业云、混
-          合云部署，兼容国产化和
-          鲲鹏云，满足业务需求。
-        </div>
-      </div>
-      <div class="por_c_it">
-        <div>05</div>
-        <div>
-          真实环境压力测试<br />
-          &nbsp;
-        </div>
-        <div>
-          经过百万级并发压力测
-          试，确保业务稳定运行。
+        <div class="flexRowAC useBox">
+          <div class="seeMore">
+            立即试用
+          </div>
+          <div class="seeMore u1">
+            安排演示
+          </div>
         </div>
       </div>
     </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL" style="width: 600px;">
-        <div class="cl_t">
-          前端容器技术引领者
-          <br />
-          助力企业拥抱云原生时代
+    <div class="proTitleBox scene w1380" style="padding-top: 160px;">
+      <div style="text-align: center;padding-bottom: 76px;">
+        应用场景
+      </div>
+      <div class="sceneBox">
+        <div class="flexRowAC sceneT">
+          <div v-for="(item,i) in list" :key="i" class="scene_tab" :class="{act:isAct===i}" @click="isAct=i">
+            {{ item.t }}
+          </div>
         </div>
-        <div class="cl_d">
-          支持H5、原生混合、MUI、uni-app等技术，跨平台、安全、敏捷，快速满足个性化需求。
+        <div class="sceneBoBoxOut flexRowAC">
+          <div class="sceneBoBox">
+            <div class="sceneB_c">
+              {{ list[isAct].c }}
+            </div>
+            <div class="sceneB_c">
+              {{ list[isAct].d }}
+            </div>
+          </div>
+          <img class="dispatch_c1" :src="list[isAct].i" alt="" />
         </div>
       </div>
-      <img class="k8sMana_c1" src="@/assets/software/portalApp_c1.png" alt="" />
     </div>
-    <div class="w1380 CloudBox ipcBox flexRowAC">
-      <img class="k8sMana_c1" src="@/assets/software/portalApp_c2.png" alt="" />
-      <div class="CloudL" style="width: 600px;">
-        <div class="cl_t">
-          语法遵循主流轻应用规范
-        </div>
-        <div class="cl_d">
-          遵循H5、VUE、MUI、uni-app等标准规范，零学习成本。
-        </div>
+    <div class="proTitleBox w1380">
+      <div style="text-align: center;padding-bottom: 76px;">
+        产品优势
       </div>
-    </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <div class="CloudL" style="width: 600px;">
-        <div class="cl_t">
-          扩展方式
-          <br />
-          可基于业务灵活配置
-        </div>
-        <div class="cl_d">
-          企业可灵活配置API和第三方SDK，支持开放API接口和二次开发。
-        </div>
-      </div>
-      <img class="k8sMana_c1" src="@/assets/software/portalApp_c3.png" alt="" />
-    </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <img class="k8sMana_c1" src="@/assets/software/portalApp_c4.png" alt="" />
-      <div class="CloudL" style="text-align: right;width: 540px;">
-        <div class="cl_t">
-          提供完善开发测试环境
-          <br />
-          与支持文档
-        </div>
-        <div class="cl_d">
-          提供小程序开发工具和完备文档，提升迭代速度，保障开发流程。
+      <div class="flexRowAC proLBox">
+        <div v-for="(item,i) in proL" :key="i" class="proL_tab">
+          <img class="proL_img" :src="item.i" alt="" />
+          <div class="proL_tab">
+            {{ item.t }}
+          </div>
+          <div class="proL_d">
+            {{ item.d }}
+          </div>
         </div>
       </div>
     </div>
     <div class="proTitleBox w1380 flexRowAC">
-      开发小程序，也可以是件「愉悦」的事儿
+      产品服务
     </div>
-    <div class="productBox hapBox w1380 flexRowAC" style="width: 700px;">
-      <div class="hap flexRowAC">
-        <img class="k8sMana_c1" src="@/assets/software/portalApp_bg2.png" alt="" />
-        提供SDK及集成指南
+    <div class="w1380 CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_t">
+          单兵作战终端
+        </div>
+        <div class="cl_d">
+          分体式键盘，解锁多种形态，平板笔记本二合一助你快速进入状态，连接蓝牙键盘，还原笔记本办公体验，随时随地高效输出。
+        </div>
       </div>
-      <div class="hap flexRowAC">
-        <img class="k8sMana_c1" src="@/assets/software/portalApp_bg3.png" alt="" />
-        提供测试开发调试环境
+      <img class="dispatch_c1" src="@/assets/software/dispatch_c1.png" alt="" />
+    </div>
+    <div class="w1380 CloudBox ipcBox flexRowAC">
+      <img class="dispatch_c2" src="@/assets/software/dispatch_c2.png" alt="" />
+      <div class="CloudL" style="width: 520px;">
+        <div class="cl_t">
+          便携式打印机
+        </div>
+        <div class="cl_d">
+          充分满足多种使用需求，性价比更高，耐摔防水耐用性强更省心，摆脱传统式数据线连接随身携带更方便。
+        </div>
       </div>
+    </div>
+    <div class="w1380 ipcView CloudBox flexRowAC">
+      <div class="CloudL" style="width: 580px;">
+        <div class="cl_t">
+          执法记录仪/便携摄像头
+        </div>
+        <div class="cl_d">
+          持久续航3000mA大容量，满足整天录制需求，采用专业级影像传感器，记录画面更细腻，IP66防护等级，高空防摔。
+        </div>
+      </div>
+      <img class="dispatch_c3" src="@/assets/software/dispatch_c3.png" alt="" />
+    </div>
+    <div class="w1380 ipcView CloudBox flexRowAC">
+      <img class="dispatch_c4" src="@/assets/software/dispatch_c4.png" alt="" />
+      <div class="CloudL" style="text-align: right">
+        <div class="cl_t">
+          位置服务系统
+        </div>
+        <div class="cl_d">
+          采用GNSS、Wi-Fi、基站等多种混合定位模式进行定位，赋予您的应用程序快速、精准地获取用户位置信息的能力。
+        </div>
+      </div>
+    </div>
+    <div class="w1380 CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_t">
+          位置服务终端
+        </div>
+        <div class="cl_d">
+          融合4G无线通信技术，高灵敏度GPS+BDS双星定位，支持WIFI室内外定位，AGPS快速辅助定位跟踪同步授时，快速搜星且定位精准。
+        </div>
+      </div>
+      <img class="dispatch_c5" src="@/assets/software/dispatch_c5.png" alt="" />
+    </div>
+    <div class="w1380 CloudBox flexRowAC">
+      <img class="dispatch_c6" src="@/assets/software/dispatch_c6.png" alt="" />
+      <div class="CloudL">
+        <div class="cl_t">
+          融合通信一张图
+          <br />
+          可视化指挥调度
+        </div>
+        <div class="cl_d">
+          通过融合应急指挥调度一张图管控端侧资源,形成云计算、一张图、应用端APP落地方案。
+        </div>
+      </div>
+    </div>
+    <div class="w1380 CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_t">
+          多端同步
+        </div>
+        <div class="cl_d">
+          支持移动端、PC端、执法记录仪端及车载终端同步，提供实时高效的多端联动与指挥管理能力，适用于多场景任务调度。
+        </div>
+      </div>
+      <img class="dispatch_c5" src="@/assets/software/dispatch_c7.png" alt="" />
     </div>
     <div class="productBox w1380">
       <div class="proT">
@@ -192,6 +191,67 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import dispatch_bg1 from '@/assets/software/dispatch_bg1.png'
+import dispatch_bg2 from '@/assets/software/dispatch_bg2.png'
+import dispatch_bg3 from '@/assets/software/dispatch_bg3.png'
+import dispatch_bg4 from '@/assets/software/dispatch_bg4.png'
+import dispatch_pro1 from '@/assets/software/dispatch_pro1.png'
+import dispatch_pro2 from '@/assets/software/dispatch_pro2.png'
+import dispatch_pro3 from '@/assets/software/dispatch_pro3.png'
+definePageMeta({
+  layout: 'site-new'
+})
+let isAct = ref(0)
+let list = ref([])
+list.value = [
+  {
+    t: '公安',
+    i: dispatch_bg1,
+    c: '公安解决方案',
+    d: '打造全警钟、全平台、资源整合、系统集成、信息共享，实现接警、指挥、调度为一体的公安指挥中心，从而更有效的提高治安预防、控制、制止的反应能力。'
+  }, {
+    t: '应急',
+    i: dispatch_bg2,
+    c: '应急综合管理',
+    d: '平台满足国家应急管理标准体系,以"平时战时结合"、可视化应急"\n' +
+      '为设计理念,建立基于应急一张图的可视化指挥调度平台,实现日常协\n' +
+      '同办公管理、预测预警、动态辅助决策、指挥调度、模拟演练培训、应\n' +
+      '急大数据决策分析等功能,为应急救援提供辅助决策支挂 '
+  }, {
+    t: '消防',
+    i: dispatch_bg3,
+    c: '消防指挥中心',
+    d: '建设智能化消防指挥中心,确保消防信息通信快速、准确、畅通,提高\n' +
+      '消防救援行动中快速反应能力,平台提供消防指挥中心警情受理、调度\n' +
+      '指挥、信息传递、指挥决策等功能'
+  }, {
+    t: '群防群治',
+    i: dispatch_bg4,
+    c: '群防群治综合管理',
+    d: '方案重心是维护社会稳定、化解基层矛盾、防控违法犯罪,应对大规模\n' +
+      '公共危机和安保活动。有效完善党委负责、改府负责、社会协调、公众 \n' +
+      '参与、法制保障的社会治理体制,打造共治共建共享的社会治理格局'
+  }
+]
+
+let proL = ref([])
+proL.value = [
+  { t: '多个接口系统', i: dispatch_pro1, d: '同时提供接处警、警综、视综等13个接口子系统' },
+  {
+    t: '地图功能多场景适用',
+    i: dispatch_pro2,
+    d: '警情案件、群防群治等多场景都可以用,\n' +
+      '  指挥要素的基于地图的数据可视化'
+  },
+  {
+    t: '一体化入口',
+    i: dispatch_pro3,
+    d: '数据对接自定义图层,实现应用场景\n' +
+      '的一体化入口、一体化作战指挥调度\n' +
+      '平台'
+  }
+]
 
 </script>
 
@@ -221,12 +281,19 @@
 //  font-weight: bold;
 //  font-size: 18px;
 //}
+.platTopOut {
+  height: 620px;
+  width: auto;
+  background-image: url('@/assets/software/dispatch_bg.png');
+  background-size: 100% 100%;
+}
 
 .platTop {
-  text-align: center;
+  text-align: left;
   padding: 110px 0;
 
   .plat {
+    text-align: left;
     display: inline-block;
     padding: 12px 24px;
     color: #FF5E10;
@@ -264,7 +331,7 @@
   }
 
   .useBox {
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
 
     .seeMore {
@@ -624,80 +691,113 @@
   padding-bottom: 100px;
 }
 
-.k8sMana_c1 {
-  width: 692px;
+.proTitleBox.scene {
+  .sceneBox {
+    .sceneT {
+      cursor: pointer;
+      color: #333333;
+      font-weight: normal;
+      font-size: 30px;
+    }
+
+    .scene_tab {
+      width: 202px;
+      height: 62px;
+      line-height: 62px;
+      text-align: center;
+      border-radius: 100% 100% 0px 0px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: #333;
+    }
+
+    .scene_tab.act {
+      color: #2278FF;
+      background: #FBFBFB;
+      border: 1px solid #D8D8D8;
+      border-bottom-color: #2278FF;
+    }
+  }
+
+  .sceneBoBoxOut {
+    justify-content: space-between;
+    border-radius: 0px 10px 10px 10px;
+    background: #FBFBFB;
+    border: 1px solid #D8D8D8;
+  }
+
+  .sceneBoBox {
+    width: 780px;
+    padding: 60px;
+
+    .sceneB_c {
+      padding-bottom: 20px;
+      color: #333333;
+      font-weight: normal;
+      font-size: 24px;
+    }
+
+    .sceneB_d {
+      color: #717781;
+      font-weight: normal;
+      font-size: 18px;
+    }
+  }
+}
+
+.dispatch_c1 {
+  width: 590px;
   height: auto;
 }
 
-.por_app {
-  padding-bottom: 160px;
-  justify-content: center;
-  gap: 10px;
-  color: #686868;
-  font-weight: normal;
-  font-size: 22px;
-  text-align: center;
-
-  .k8sMana_c1 {
-    width: 22px;
-    height: 22px;
-  }
+.dispatch_c2 {
+  width: 630px;
+  height: auto;
 }
 
-.por_con {
-  align-items: flex-start;
-  padding-bottom: 160px;
-  gap: 40px;
-
-  .por_c_it {
-    border-left: 1px solid #e8e8e8;
-    padding-left: 16px;
-  }
-
-  .por_c_it > div {
-    &:nth-child(1) {
-      color: #6F7277;
-      font-weight: bold;
-      font-size: 22px;
-      text-align: left;
-      padding-bottom: 30px;
-    }
-
-    &:nth-child(2) {
-      color: #333333;
-      font-weight: bold;
-      font-size: 22px;
-      line-height: normal;
-      text-align: left;
-
-      padding-bottom: 120px;
-    }
-
-    &:nth-child(3) {
-      color: #6F7277;
-      font-weight: normal;
-      font-size: 16px;
-      text-align: left;
-
-    }
-  }
+.dispatch_c3 {
+  width: 670px;
+  height: auto;
 }
 
-.hapBox {
-  gap: 160px;
+.dispatch_c4 {
+  width: 430px;
+  height: auto;
+}
 
-  .hap {
-    flex-direction: column;
-    color: #333333;
+.dispatch_c5 {
+  width: 640px;
+  height: auto;
+}
+
+.dispatch_c6 {
+  width: 530px;
+  height: auto;
+}
+
+.proLBox {
+  justify-content: space-between;
+
+  .proL_img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+
+  .proL_tab {
+    width: 290px;
+    color: #10131F;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 24px;
     text-align: left;
+  }
 
-    > .k8sMana_c1 {
-      width: 210px;
-      height: 210px;
-      margin-bottom: 20px;
-    }
+  .proL_d {
+    padding-top: 14px;
+    color: #717781;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: left;
   }
 }
 </style>

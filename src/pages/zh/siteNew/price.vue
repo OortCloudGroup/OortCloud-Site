@@ -238,6 +238,9 @@ import product5_4 from '@/assets/VLimg2.0/product5_4.png'
 import product5_5 from '@/assets/VLimg2.0/product5_5.png'
 import product5_6 from '@/assets/VLimg2.0/product5_6.png'
 import product5_7 from '@/assets/VLimg2.0/product5_7.png'
+definePageMeta({
+  layout: 'site-new'
+})
 
 let p5Arr = ref([])
 let isAct = ref(0)

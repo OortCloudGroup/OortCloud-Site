@@ -1,13 +1,9 @@
 <template>
   <div class="home_page vls">
-    <div class="platTopOut flexRowAC w1380">
-      <div class="platTop">
+    <div class="platTopOut">
+      <div class="platTop w1380">
         <div class="VLStream">
-          K8S容器管理
-          <br />
-          和
-          <br />
-          CMDB软件
+          警务服务总线
         </div>
         <div class="plat_cent">
           基于OpenSergo统一微服务治理警务服务总线软件
@@ -21,73 +17,70 @@
           </div>
         </div>
       </div>
-      <img class="platTopOutImg" src="@/assets/software/k8sMana_bg1.png" alt="" />
     </div>
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
-          虚拟化与云原生底座
+          统一门户
         </div>
         <div class="cl_d">
-          支持容器和虚拟机集成管理，具备高可用性、弹性伸缩和资源优化能力，构建稳定可靠的云原生运行环境。
+          前端提供统一门户和应用市场，实现移动应用全生命周期管理及细粒度权限控制，为用户提供查询、下载、安装和评价的一站式入口。
         </div>
       </div>
-      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c1.png" alt="" />
+      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c4.png" alt="" />
     </div>
     <div class="w1380 CloudBox ipcBox flexRowAC">
-      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c2.png" alt="" />
-      <div class="CloudL">
+      <img class="k8sMana_c1" src="@/assets/software/policeBus_c0.png" alt="" />
+      <div class="CloudL" style="width: 460px;">
         <div class="cl_t">
           服务总线
         </div>
         <div class="cl_d">
-          基于OpenSergo统一微服务治理警务服务总线软件
+          智慧云aPaaS应用支撑平台构建服务总线，实现资源管理、服务调度、访问控制及目录化管控，为移动应用高效运营和开放共享提供支持。
+        </div>
+      </div>
+    </div>
+    <div class="w1380 ipcView dev CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_t">
+          开发运营支撑
+        </div>
+        <div class="terminal">
+          <img class="terminalImg" src="@/assets/software/policeBusC1.png" alt="" />
+          <div class="terminalT">
+            终端业务服务能力集成
+          </div>
+          <div class="terminalD">
+            提供了手机地图集成、刷脸组件集成、智能感知集成、扫一扫集成等约100多项终端政务业务基础能力。
+          </div>
+        </div>
+        <div class="terminal cloud">
+          <img class="terminalImg" src="@/assets/software/policeBusC2.png" alt="" />
+          <div class="terminalT">
+            云端业务服务能力集成
+          </div>
+          <div class="terminalD">
+            提供了点播服务、流媒体服务、视频发布服务、工作流、表单、工单服务、收藏服务、日程服务、发通知服务、点赞服务、分享服务、电子签名服务等共约200多项政务业务服务能力。
+          </div>
         </div>
       </div>
     </div>
     <div class="w1380 ipcView CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          业务中台
-        </div>
-        <div class="cl_d">
-          通过模块化的中台服务，提供高效的数据、技术和组织支撑，促进业务快速开发与灵活部署。
-        </div>
-      </div>
-      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c3.png" alt="" />
-    </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c4.png" alt="" />
+      <img class="k8sMana_c1" src="@/assets/software/policeBus_c1.png" alt="" />
       <div class="CloudL" style="text-align: right">
         <div class="cl_t">
-          门户与应用仓库能力
+          应用市场
         </div>
         <div class="cl_d">
-          快速打造数字化超级APP
+          配置默认基础应用,满足各行业组织日常工作需求：云盘、单聊、群聊、动态圈、短视频、公众号、新闻推送、工作助手、工作汇报、会议助手、云课堂等。
         </div>
       </div>
     </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          跨网支撑能力
-        </div>
-        <div class="cl_d">
-          保障跨网络数据安全传输，支持内容审查、权限管理与全流程审计，提升数据交换合规性。
-        </div>
+    <div class="productBox w1380">
+      <div class="proT">
+        产品架构
       </div>
-      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c5.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c6.png" alt="" />
-      <div class="CloudL" style="text-align: right">
-        <div class="cl_t">
-          应用运营体系
-        </div>
-        <div class="cl_d">
-          支持全生命周期应用管理，包括开发、发布、运营和评估，推动个性化需求的快速迭代和持续优化。
-        </div>
-      </div>
+      <img class="policeBus_c2" src="@/assets/software/policeBus_c2.png" alt="" />
     </div>
     <div class="productBox w1380">
       <div class="proT">
@@ -141,10 +134,12 @@
 </template>
 
 <script setup>
+definePageMeta({
+  layout: 'site-new'
+})
 </script>
 
 <style scoped lang="scss">
-
 .home_page {
   position: relative;
 }
@@ -170,20 +165,15 @@
 //  font-weight: bold;
 //  font-size: 18px;
 //}
-.platTopOut{
-  justify-content: space-between;
-  padding-bottom: 160px;
-
-  .platTopOutImg{
-    flex-shrink: 0;
-    width: 614px;
-    height: auto;
-    margin-left: 100px;
-  }
+.platTopOut {
+  height: 880px;
+  width: auto;
+  background-image: url('@/assets/software/policeBus_bg.png');
+  background-size: 100% 100%;
 }
 
 .platTop {
-  text-align: left;
+  text-align: center;
   padding: 110px 0;
 
   .plat {
@@ -224,7 +214,7 @@
   }
 
   .useBox {
-    justify-content: left;
+    justify-content: center;
     gap: 20px;
 
     .seeMore {
@@ -349,6 +339,44 @@
 .ipcView.CloudBox {
   .CloudR {
     height: 460px;
+  }
+}
+
+.ipcView.dev {
+.CloudL{
+  width: 100%;
+}
+  .terminal {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, #F7FCFE 0%, #FFFFFF 100%);
+    border: 1px solid #001F5019;
+
+    .terminalImg {
+      width: 62px;
+      height: 62px;
+    }
+
+    .terminalT {
+      padding-top: 30px;
+      color: #333333;
+      font-weight: bold;
+      font-size: 28px;
+    }
+
+    .terminalD{
+      padding-top: 30px;
+      color: #717781;
+      font-size: 18px;
+    }
+  }
+
+  .cloud.terminal {
+    border-radius: 24px;
+    background: linear-gradient(180deg, #F9FFF7 0%, #FFFFFF 98%);
+    border: 1px solid #001F5019;
   }
 }
 
@@ -576,8 +604,22 @@
   }
 }
 
+.proTitleBox {
+  justify-content: center;
+  color: #3D3D3D;
+  font-weight: bold;
+  font-size: 58px;
+  padding-bottom: 100px;
+}
+
 .k8sMana_c1{
   width: 692px;
   height: auto;
+}
+
+.policeBus_c2{
+  width: 1076px;
+  height: 849px;
+  background-size: 100% 100%;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="panel">
     <div class="panel_header">
-      <NuxtLink to="/more" class="panel_header_title">
+      <NuxtLink to="/zh/more" class="panel_header_title">
         <span style="color: #000; cursor: pointer;">软件产品</span>
         <span class="panel_header_dot" />
       </NuxtLink>

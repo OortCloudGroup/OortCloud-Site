@@ -9,7 +9,7 @@
 
     <n-grid x-gap="28" y-gap="12" :cols="4">
       <n-grid-item v-for="item in data.apps" :key="item.name">
-        <NuxtLink v-if="item.link" :to="item.link" class="panel_item">
+        <NuxtLink v-if="item.link" :to="'/zh'+item.link" class="panel_item">
           <div class="panel_item_logo">
             <Image :src="item.logo" />
           </div>

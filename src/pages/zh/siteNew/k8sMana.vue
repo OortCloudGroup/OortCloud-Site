@@ -1,12 +1,16 @@
 <template>
   <div class="home_page vls">
-    <div class="platTopOut">
-      <div class="platTop w1380">
+    <div class="platTopOut flexRowAC w1380">
+      <div class="platTop">
         <div class="VLStream">
-          指挥调度
+          K8S容器管理
+          <br />
+          和
+          <br />
+          CMDB软件
         </div>
         <div class="plat_cent">
-          指挥调度，警情、警力、现场、调度、过程可视
+          基于OpenSergo统一微服务治理警务服务总线软件
         </div>
         <div class="flexRowAC useBox">
           <div class="seeMore">
@@ -17,127 +21,73 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="proTitleBox scene w1380" style="padding-top: 160px;">
-      <div style="text-align: center;padding-bottom: 76px;">
-        应用场景
-      </div>
-      <div class="sceneBox">
-        <div class="flexRowAC sceneT">
-          <div v-for="(item,i) in list" :key="i" class="scene_tab" :class="{act:isAct===i}" @click="isAct=i">
-            {{ item.t }}
-          </div>
-        </div>
-        <div class="sceneBoBoxOut flexRowAC">
-          <div class="sceneBoBox">
-            <div class="sceneB_c">
-              {{ list[isAct].c }}
-            </div>
-            <div class="sceneB_c">
-              {{ list[isAct].d }}
-            </div>
-          </div>
-          <img class="dispatch_c1" :src="list[isAct].i" alt="" />
-        </div>
-      </div>
-    </div>
-    <div class="proTitleBox w1380">
-      <div style="text-align: center;padding-bottom: 76px;">
-        产品优势
-      </div>
-      <div class="flexRowAC proLBox">
-        <div v-for="(item,i) in proL" :key="i" class="proL_tab">
-          <img class="proL_img" :src="item.i" alt="" />
-          <div class="proL_tab">
-            {{ item.t }}
-          </div>
-          <div class="proL_d">
-            {{ item.d }}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="proTitleBox w1380 flexRowAC">
-      产品服务
+      <img class="platTopOutImg" src="@/assets/software/k8sMana_bg1.png" alt="" />
     </div>
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
-          单兵作战终端
+          虚拟化与云原生底座
         </div>
         <div class="cl_d">
-          分体式键盘，解锁多种形态，平板笔记本二合一助你快速进入状态，连接蓝牙键盘，还原笔记本办公体验，随时随地高效输出。
+          支持容器和虚拟机集成管理，具备高可用性、弹性伸缩和资源优化能力，构建稳定可靠的云原生运行环境。
         </div>
       </div>
-      <img class="dispatch_c1" src="@/assets/software/dispatch_c1.png" alt="" />
+      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c1.png" alt="" />
     </div>
     <div class="w1380 CloudBox ipcBox flexRowAC">
-      <img class="dispatch_c2" src="@/assets/software/dispatch_c2.png" alt="" />
-      <div class="CloudL" style="width: 520px;">
+      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c2.png" alt="" />
+      <div class="CloudL">
         <div class="cl_t">
-          便携式打印机
+          服务总线
         </div>
         <div class="cl_d">
-          充分满足多种使用需求，性价比更高，耐摔防水耐用性强更省心，摆脱传统式数据线连接随身携带更方便。
+          基于OpenSergo统一微服务治理警务服务总线软件
         </div>
       </div>
     </div>
     <div class="w1380 ipcView CloudBox flexRowAC">
-      <div class="CloudL" style="width: 580px;">
+      <div class="CloudL">
         <div class="cl_t">
-          执法记录仪/便携摄像头
+          业务中台
         </div>
         <div class="cl_d">
-          持久续航3000mA大容量，满足整天录制需求，采用专业级影像传感器，记录画面更细腻，IP66防护等级，高空防摔。
+          通过模块化的中台服务，提供高效的数据、技术和组织支撑，促进业务快速开发与灵活部署。
         </div>
       </div>
-      <img class="dispatch_c3" src="@/assets/software/dispatch_c3.png" alt="" />
+      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c3.png" alt="" />
     </div>
     <div class="w1380 ipcView CloudBox flexRowAC">
-      <img class="dispatch_c4" src="@/assets/software/dispatch_c4.png" alt="" />
+      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c4.png" alt="" />
       <div class="CloudL" style="text-align: right">
         <div class="cl_t">
-          位置服务系统
+          门户与应用仓库能力
         </div>
         <div class="cl_d">
-          采用GNSS、Wi-Fi、基站等多种混合定位模式进行定位，赋予您的应用程序快速、精准地获取用户位置信息的能力。
+          快速打造数字化超级APP
         </div>
       </div>
     </div>
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
-          位置服务终端
+          跨网支撑能力
         </div>
         <div class="cl_d">
-          融合4G无线通信技术，高灵敏度GPS+BDS双星定位，支持WIFI室内外定位，AGPS快速辅助定位跟踪同步授时，快速搜星且定位精准。
+          保障跨网络数据安全传输，支持内容审查、权限管理与全流程审计，提升数据交换合规性。
         </div>
       </div>
-      <img class="dispatch_c5" src="@/assets/software/dispatch_c5.png" alt="" />
+      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c5.png" alt="" />
     </div>
     <div class="w1380 CloudBox flexRowAC">
-      <img class="dispatch_c6" src="@/assets/software/dispatch_c6.png" alt="" />
-      <div class="CloudL">
+      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c6.png" alt="" />
+      <div class="CloudL" style="text-align: right">
         <div class="cl_t">
-          融合通信一张图
-          <br />
-          可视化指挥调度
+          应用运营体系
         </div>
         <div class="cl_d">
-          通过融合应急指挥调度一张图管控端侧资源,形成云计算、一张图、应用端APP落地方案。
+          支持全生命周期应用管理，包括开发、发布、运营和评估，推动个性化需求的快速迭代和持续优化。
         </div>
       </div>
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          多端同步
-        </div>
-        <div class="cl_d">
-          支持移动端、PC端、执法记录仪端及车载终端同步，提供实时高效的多端联动与指挥管理能力，适用于多场景任务调度。
-        </div>
-      </div>
-      <img class="dispatch_c5" src="@/assets/software/dispatch_c7.png" alt="" />
     </div>
     <div class="productBox w1380">
       <div class="proT">
@@ -191,69 +141,13 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import dispatch_bg1 from '@/assets/software/dispatch_bg1.png'
-import dispatch_bg2 from '@/assets/software/dispatch_bg2.png'
-import dispatch_bg3 from '@/assets/software/dispatch_bg3.png'
-import dispatch_bg4 from '@/assets/software/dispatch_bg4.png'
-import dispatch_pro1 from '@/assets/software/dispatch_pro1.png'
-import dispatch_pro2 from '@/assets/software/dispatch_pro2.png'
-import dispatch_pro3 from '@/assets/software/dispatch_pro3.png'
-
-let isAct = ref(0)
-let list = ref([])
-list.value = [
-  {
-    t: '公安',
-    i: dispatch_bg1,
-    c: '公安解决方案',
-    d: '打造全警钟、全平台、资源整合、系统集成、信息共享，实现接警、指挥、调度为一体的公安指挥中心，从而更有效的提高治安预防、控制、制止的反应能力。'
-  }, {
-    t: '应急',
-    i: dispatch_bg2,
-    c: '应急综合管理',
-    d: '平台满足国家应急管理标准体系,以"平时战时结合"、可视化应急"\n' +
-      '为设计理念,建立基于应急一张图的可视化指挥调度平台,实现日常协\n' +
-      '同办公管理、预测预警、动态辅助决策、指挥调度、模拟演练培训、应\n' +
-      '急大数据决策分析等功能,为应急救援提供辅助决策支挂 '
-  }, {
-    t: '消防',
-    i: dispatch_bg3,
-    c: '消防指挥中心',
-    d: '建设智能化消防指挥中心,确保消防信息通信快速、准确、畅通,提高\n' +
-      '消防救援行动中快速反应能力,平台提供消防指挥中心警情受理、调度\n' +
-      '指挥、信息传递、指挥决策等功能'
-  }, {
-    t: '群防群治',
-    i: dispatch_bg4,
-    c: '群防群治综合管理',
-    d: '方案重心是维护社会稳定、化解基层矛盾、防控违法犯罪,应对大规模\n' +
-      '公共危机和安保活动。有效完善党委负责、改府负责、社会协调、公众 \n' +
-      '参与、法制保障的社会治理体制,打造共治共建共享的社会治理格局'
-  }
-]
-
-let proL = ref([])
-proL.value = [
-  { t: '多个接口系统', i: dispatch_pro1, d: '同时提供接处警、警综、视综等13个接口子系统' },
-  {
-    t: '地图功能多场景适用',
-    i: dispatch_pro2,
-    d: '警情案件、群防群治等多场景都可以用,\n' +
-      '  指挥要素的基于地图的数据可视化'
-  },
-  {
-    t: '一体化入口',
-    i: dispatch_pro3,
-    d: '数据对接自定义图层,实现应用场景\n' +
-      '的一体化入口、一体化作战指挥调度\n' +
-      '平台'
-  }
-]
-
+definePageMeta({
+  layout: 'site-new'
+})
 </script>
 
 <style scoped lang="scss">
+
 .home_page {
   position: relative;
 }
@@ -279,11 +173,16 @@ proL.value = [
 //  font-weight: bold;
 //  font-size: 18px;
 //}
-.platTopOut {
-  height: 620px;
-  width: auto;
-  background-image: url('@/assets/software/dispatch_bg.png');
-  background-size: 100% 100%;
+.platTopOut{
+  justify-content: space-between;
+  padding-bottom: 160px;
+
+  .platTopOutImg{
+    flex-shrink: 0;
+    width: 614px;
+    height: auto;
+    margin-left: 100px;
+  }
 }
 
 .platTop {
@@ -291,7 +190,6 @@ proL.value = [
   padding: 110px 0;
 
   .plat {
-    text-align: left;
     display: inline-block;
     padding: 12px 24px;
     color: #FF5E10;
@@ -329,7 +227,7 @@ proL.value = [
   }
 
   .useBox {
-    justify-content: flex-start;
+    justify-content: left;
     gap: 20px;
 
     .seeMore {
@@ -681,121 +579,8 @@ proL.value = [
   }
 }
 
-.proTitleBox {
-  justify-content: center;
-  color: #3D3D3D;
-  font-weight: bold;
-  font-size: 58px;
-  padding-bottom: 100px;
-}
-
-.proTitleBox.scene {
-  .sceneBox {
-    .sceneT {
-      cursor: pointer;
-      color: #333333;
-      font-weight: normal;
-      font-size: 30px;
-    }
-
-    .scene_tab {
-      width: 202px;
-      height: 62px;
-      line-height: 62px;
-      text-align: center;
-      border-radius: 100% 100% 0px 0px;
-      border: 1px solid transparent;
-      background: transparent;
-      color: #333;
-    }
-
-    .scene_tab.act {
-      color: #2278FF;
-      background: #FBFBFB;
-      border: 1px solid #D8D8D8;
-      border-bottom-color: #2278FF;
-    }
-  }
-
-  .sceneBoBoxOut {
-    justify-content: space-between;
-    border-radius: 0px 10px 10px 10px;
-    background: #FBFBFB;
-    border: 1px solid #D8D8D8;
-  }
-
-  .sceneBoBox {
-    width: 780px;
-    padding: 60px;
-
-    .sceneB_c {
-      padding-bottom: 20px;
-      color: #333333;
-      font-weight: normal;
-      font-size: 24px;
-    }
-
-    .sceneB_d {
-      color: #717781;
-      font-weight: normal;
-      font-size: 18px;
-    }
-  }
-}
-
-.dispatch_c1 {
-  width: 590px;
+.k8sMana_c1{
+  width: 692px;
   height: auto;
-}
-
-.dispatch_c2 {
-  width: 630px;
-  height: auto;
-}
-
-.dispatch_c3 {
-  width: 670px;
-  height: auto;
-}
-
-.dispatch_c4 {
-  width: 430px;
-  height: auto;
-}
-
-.dispatch_c5 {
-  width: 640px;
-  height: auto;
-}
-
-.dispatch_c6 {
-  width: 530px;
-  height: auto;
-}
-
-.proLBox {
-  justify-content: space-between;
-
-  .proL_img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 20px;
-  }
-
-  .proL_tab {
-    width: 290px;
-    color: #10131F;
-    font-weight: bold;
-    font-size: 24px;
-    text-align: left;
-  }
-
-  .proL_d {
-    padding-top: 14px;
-    color: #717781;
-    font-weight: normal;
-    font-size: 18px;
-    text-align: left;
-  }
 }
 </style>

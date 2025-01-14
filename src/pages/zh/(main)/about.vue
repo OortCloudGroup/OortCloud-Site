@@ -277,6 +277,7 @@
 
 <script setup>
 import { NTabs, NTabPane, NGrid, NGridItem } from 'naive-ui'
+import { onMounted, ref } from 'vue'
 
 const activeTab = ref('chap1')
 
@@ -303,7 +304,8 @@ const init = () => {
     mapStyleId: 'style1' // 该key绑定的style1对应于经典地图样式，若未绑定将弹出无权限提示窗
   }
   // 获取dom元素添加地图信息
-  let map = new TMap.Map(
+  // eslint-disable-next-line no-new
+  new TMap.Map(
     document.getElementById('map_container'),
     myOptions
   )

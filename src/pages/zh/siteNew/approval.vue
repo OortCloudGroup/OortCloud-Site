@@ -1,81 +1,205 @@
 <template>
   <div class="home_page vls">
-    <div class="platTopOut flexRowAC w1380">
-      <div class="platTop">
-        <div class="VLStream">
-          现在就 <span class="vlsUs">联系我们</span>!
-        </div>
-        <div class="plat_cent">
-          有问题吗?我们有答案!无论您是需要技术支持，还是想了解更多应用功能的最佳实践，我们都能为您提供帮助。
-        </div>
-        <div class="flexRowAC useBox" style="justify-content: flex-start">
-          <img class="contactUs_bg" src="@/assets/software/contactUs_bg.png" alt="" />
-        </div>
+    <div class="platTop w1380">
+      <div class="plat">
+        智能审批管办一体 助力企业效能提升
       </div>
-      <div class="useRightBOx">
-        <div class="flexRowAC nameT">
-          <!--          <div class="nameT heightbg flexRowAC">-->
-          <!--            名称-->
-          <!--            <span class="red">*</span>-->
-          <!--            <el-input v-model="value" class="themeInput" placeholder=""/>-->
-          <!--          </div>-->
-          <el-input v-model="value" class="themeInput" placeholder="名称*" />
-          <el-input v-model="value1" class="themeInput" placeholder="手机号*" />
+      <div class="VLStream">
+        智能审批
+      </div>
+      <div class="plat_cent">
+        全面颠覆传统OA，审批更加高效透明，非IT专业人员也可以快速搞定复杂流程
+      </div>
+      <div class="flexRowAC useBox">
+        <div class="seeMore">
+          立即试用
         </div>
-        <el-input v-model="value2" class="themeInput" placeholder="电子邮箱" />
-        <el-input v-model="value3" class="themeInput" placeholder="公司" />
-        <el-input v-model="value4" class="themeInput" placeholder="主题" />
-        <el-input v-model="value5" class="themeInput" placeholder="公司规模" />
-        <el-input v-model="value6" type="textarea" :rows="5" class="themeInput" placeholder="问题描述*" />
-        <div class="cu_mess heightbg">
-          OortCloud处理您的个人信息时，将按照 <span style="color: #2278FF">隐私政策</span> 回答您的问题并提供产品和服务资料
-        </div>
-        <div class="cu_submit flexRowAC">
-          提交
+        <div class="seeMore u1">
+          安排演示
         </div>
       </div>
     </div>
-    <div class="platTopOut us flexRowAC w1380">
-      <div class="platTop">
-        <div class="VLStream">
-          直接联络
+    <div class="proTitleBox w1380 flexRowAC">
+      <img class="approval_bg" src="@/assets/software/approval_bg.png" alt="" />
+    </div>
+    <div class="proTitleBox w1380 flexRowAC" style="justify-content: flex-start">
+      <div>
+        <div class="flexRowAC">
+          拥抱&nbsp;<span style="color: #2278FF;">智能审批</span>&nbsp;流程管理
         </div>
-        <div class="plat_cent contactUs_iconBox">
-          <div class="contactUs_icon flexRowAC">
-            <img class="contactUs_i1" src="@/assets/software/contactUs_i1.png" alt="" />
-            联系电话
-            <span>189 3808 3835</span>
+        释放企业潜能
+      </div>
+    </div>
+    <div class="w1380 CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_t">
+          多端同步
+        </div>
+        <div class="cl_d">
+          PC 端和移动端均可进行审批操作。无论在办公室还是外出，都能实时同步数据，高效处理审批请求
+        </div>
+      </div>
+      <img class="approval_c1" src="@/assets/software/approval_c1.png" alt="" />
+    </div>
+    <div class="w1380 CloudBox ipcBox flexRowAC">
+      <img class="approval_c2" src="@/assets/software/approval_c2.png" alt="" />
+      <div class="CloudL">
+        <div class="cl_t">
+          操作简便
+        </div>
+        <div class="cl_d">
+          平台界面友好、操作简便，保障您的审批流程顺畅无忧
+        </div>
+      </div>
+    </div>
+    <div class="w1380 ipcView CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_t">
+          流程大厅
+        </div>
+        <div class="cl_d">
+          用户可以在此查看待审批、已处理、我发起的和抄送我的工单，实时了解审批状态和详细信息。
+        </div>
+      </div>
+      <img class="approval_c3" src="@/assets/software/approval_c3.png" alt="" />
+    </div>
+    <div class="w1380 ipcView CloudBox flexRowAC">
+      <img class="approval_c3" src="@/assets/software/approval_c4.png" alt="" />
+      <div class="CloudL" style="text-align: right">
+        <div class="cl_t">
+          流程模型可视化设计
+        </div>
+        <div class="cl_d">
+          图形化的流程设计操作，轻松完成审批流程设置
+        </div>
+      </div>
+    </div>
+    <div class="w1380 CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_t">
+          审批进展实时督办
+        </div>
+        <div class="cl_d">
+          通过实时通知，让用户随时了解最新审批状态
+        </div>
+      </div>
+      <img class="approval_c5" src="@/assets/software/approval_c5.png" alt="" />
+    </div>
+    <div class="w1380 CloudBox flexRowAC">
+      <img class="approval_c6" src="@/assets/software/approval_c6.png" alt="" />
+      <div class="CloudL" style="text-align: right;">
+        <div class="cl_t">
+          审批表单
+          <br />
+          签批卡片可视化设计
+        </div>
+        <div class="cl_d">
+          支持高度自定义的发起审批表单，满足多样化需求
+        </div>
+      </div>
+    </div>
+    <div class="productBox w1380">
+      <div class="proT">
+        现在开始体验
+      </div>
+      <div class="flexRowAC productItem">
+        <div class="productImg productItem1 product1">
+          <img class="pro1_1" src="@/assets/software/down1_.png" alt="" />
+          <div class="pro1_1_s flexRowAC">
+            SaaS版本
+            <span class="pro1_1_s_b">14天功能全免费试用</span>
           </div>
-          <div class="contactUs_icon flexRowAC">
-            <img class="contactUs_i1" src="@/assets/software/contactUs_i2.png" alt="" />
-            联系邮箱
-            <span>zhangxuellan@oortcloudsmart.com</span>
+          <div class="pro1_2 flexRowAC">
+            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+            7天快速迭代，问题敏捷解决
           </div>
-          <div class="contactUs_icon flexRowAC">
-            <img class="contactUs_i1" src="@/assets/software/contactUs_i3.png" alt="" />
-            公司地址
-            <span>广东省深圳市罗湖区人民北路3131号水产大厦17K</span>
+          <div class="pro1_2 flexRowAC">
+            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+            快速启用，精简运维
+          </div>
+          <div class="pro1_2 flexRowAC">
+            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+            更低建设成本
+          </div>
+          <div class="pro3 flexRowAC">
+            <div class="pro3_btn flexRowAC">
+              申请试用
+            </div>
+            <div class="pro3_btn p3b flexRowAC">
+              详细功能
+            </div>
+          </div>
+        </div>
+        <div class="productImg productItem1 product1">
+          <img class="pro1_1" src="@/assets/software/down1.png" alt="" />
+          <div class="pro1_1_s flexRowAC">
+            私有化部署
+            <span class="pro1_1_s_b">1v1 定制方案量身打造</span>
+          </div>
+          <div class="pro1_2 flexRowAC">
+            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+            1v1 专家服务，定制化解决方案
+          </div>
+          <div class="pro1_2 flexRowAC">
+            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+            本地化灵活部署，私有化数据存储
+          </div>
+          <div class="pro1_2 flexRowAC">
+            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+            高可用架构与完备容灾方案
+          </div>
+          <div class="pro3 flexRowAC">
+            <div class="pro3_btn flexRowAC">
+              申请试用
+            </div>
+            <div class="pro3_btn p3b flexRowAC">
+              详细功能
+            </div>
           </div>
         </div>
       </div>
-      <img class="contactUs_bg2" src="@/assets/software/contactUs_bg2.png" alt="" />
     </div>
-    <div class="w1380" style="padding-bottom: 110px;">
-      <img class="contactUs_bg3 w1380" src="@/assets/software/contactUs_bg3.png" alt="" />
+    <div class="productBox w1380">
+      <div class="proT">
+        产品文档
+      </div>
+      <div class="productImg product2Out flexRowAC">
+        <div class="product2Out_it flexRowAC">
+          <div class="pro2o_l flexRowAC">
+            <img class="pro2o_l_l" src="@/assets/software/down3.png" alt="" />
+            【主打胶片】门户与应用仓库使用汇报V2.0.pdf
+          </div>
+          <div class="pro2o_2">
+            下载
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-
-let value1 = ref('')
-let value2 = ref('')
-let value3 = ref('')
-let value4 = ref('')
-let value5 = ref('')
-let value6 = ref('')
-let value = ref('')
+import product5_1 from '@/assets/VLimg2.0/product5_1.png'
+import product5_2 from '@/assets/VLimg2.0/product5_2.png'
+import product5_3 from '@/assets/VLimg2.0/product5_3.png'
+import product5_4 from '@/assets/VLimg2.0/product5_4.png'
+import product5_5 from '@/assets/VLimg2.0/product5_5.png'
+import product5_6 from '@/assets/VLimg2.0/product5_6.png'
+import product5_7 from '@/assets/VLimg2.0/product5_7.png'
+definePageMeta({
+  layout: 'site-new'
+})
+let p5Arr = ref([])
+p5Arr.value = [
+  { t: 'Windows', d: '版本号：V3.1.06', flag: false, img: product5_1 },
+  { t: 'Android', d: '版本号：V3.1.06', flag: true, img: product5_2 },
+  { t: 'iOS', d: '版本号：V3.1.06', flag: true, img: product5_3 },
+  { t: 'Harmony OS', d: '版本号：V3.1.06', flag: true, img: product5_4 },
+  { t: 'Linux', d: '版本号：V3.1.06', flag: false, img: product5_5 },
+  { t: 'Mac OS', d: '版本号：V3.1.06', flag: false, img: product5_6 },
+  { t: '银河麒麟', d: '版本号：V3.1.06', flag: false, img: product5_7 }
+]
 </script>
 
 <style scoped lang="scss">
@@ -105,27 +229,15 @@ let value = ref('')
 //  font-weight: bold;
 //  font-size: 18px;
 //}
-.platTopOut {
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-bottom: 60px;
-
-  .platTopOutImg {
-    flex-shrink: 0;
-    width: 614px;
-    height: auto;
-    margin-left: 100px;
-  }
-}
 
 .platTop {
-  text-align: left;
+  text-align: center;
   padding: 110px 0;
 
   .plat {
     display: inline-block;
     padding: 12px 24px;
-    color: #FF5E10;
+    color: #2278FF;
     font-size: 18px;
     border-radius: 18px;
     border: 1px solid #E9E9E9;
@@ -154,7 +266,6 @@ let value = ref('')
   }
 
   .plat_cent {
-    width: 620px;
     padding: 20px 0 50px;
     color: #717781;
     font-size: 18px;
@@ -249,10 +360,6 @@ let value = ref('')
     padding-bottom: 24px;
     color: #717781;
     font-size: 20px;
-  }
-
-  .cl_d.d1 {
-    color: #333;
   }
 
   .CloudL {
@@ -533,120 +640,41 @@ let value = ref('')
   }
 }
 
-.instantMess_c1 {
-  width: 825px;
-  height: auto;
+.proTitleBox {
+  justify-content: center;
+  color: #3D3D3D;
+  font-weight: bold;
+  font-size: 58px;
+  padding-bottom: 100px;
 }
 
-.k8sMana_c1 {
-  width: 692px;
-  height: auto;
-}
-
-.contactUs_i1 {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-}
-
-.contactUs_bg {
-  width: 628px;
-  height: auto;
-}
-
-.contactUs_bg2 {
-  width: 600px;
-  height: auto;
-}
-
-.contactUs_bg3{
+.approval_bg {
   width: 100%;
   height: auto;
 }
 
-.contactUs_iconBox {
-  .contactUs_icon {
-    padding-bottom: 20px;
-    color: #97A3B6;
-    font-weight: normal;
-    font-size: 20px;
-    text-align: left;
-
-    > span {
-      padding-left: 20px;
-      opacity: 1;
-      color: #333333;
-      font-weight: normal;
-      font-size: 20px;
-      text-align: left;
-    }
-  }
+.approval_c1 {
+  width: 734px;
+  height: auto;
 }
 
-.useRightBOx {
-  margin-top: 110px;
-  padding: 20px;
-  width: 600px;
-  flex-shrink: 0;
-  border-radius: 24px;
-  background: #FFFFFF;
-  box-shadow: 0px 12px 36px 0px #2278FF0F;
-
-  .themeInput {
-    height: 54px;
-    font-size: 20px;
-  }
-
-  .el-textarea.themeInput {
-    height: initial;
-  }
-
-  .nameT {
-    gap: 20px;
-  }
-
-  .themeInput {
-    margin-bottom: 20px;
-  }
-
-  .cu_mess {
-    color: #97A3B6;
-    font-weight: normal;
-    font-size: 14px;
-    text-align: left;
-  }
-
-  .cu_submit {
-    cursor: pointer;
-    margin: 40px auto;
-    justify-content: center;
-    width: 340px;
-    height: 64px;
-    border-radius: 8px;
-    color: #fff;
-    background: #2278FF;
-    box-shadow: 0px 4px 10px 0px #2278FF33;
-  }
+.approval_c2 {
+  width: 702px;
+  height: auto;
 }
 
-.platTopOut.us {
-  padding-bottom: 54px;
-  .platTop {
-    padding: 0;
-
-    .VLStream {
-      font-size: 40px;
-    }
-  }
+.approval_c3 {
+  width: 587px;
+  height: auto;
 }
 
-.vlsUs{
-  opacity: 1;
-  border-radius: 0px;
-  background: linear-gradient(270deg, #2278FF0A 0%, #2278FF51 100%);
-  border-left: 6px solid #2278FF;
-  padding-left: 10px;
-  color: #2278FF;
+.approval_c5 {
+  width: 634px;
+  height: auto;
 }
 
+.approval_c6 {
+  width: 602px;
+  height: auto;
+}
 </style>

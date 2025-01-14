@@ -1,143 +1,117 @@
 <template>
   <div class="home_page vls">
-    <div class="platTopOut flexRowAC w1380">
-      <div class="platTop">
-        <div class="VLStream">
-          即时通讯
+    <div class="platTop w1380">
+      <img class="VLStream_top" src="@/assets/software/privateCloud_bg1.png" alt="" />
+      <div class="VLStream">
+        私有云
+      </div>
+      <div class="plat_cent">
+        通过基础设施云化、软件与硬件解耦、数据与业务解耦、应用与平台解耦,
+        构建开放技术架构和业务生态
+      </div>
+      <div class="flexRowAC useBox">
+        <div class="seeMore">
+          立即试用
         </div>
-        <div class="plat_cent">
-          实现类微信功能和消息推送统一入口，可创建、加入群组，
-          发起交流或群聊，满足内部会商、沟通协同需要，避免使用
-          公众微信平台交流工作信息的泄密风险。
-        </div>
-        <div class="flexRowAC useBox" style="justify-content: flex-start">
-          <div class="seeMore">
-            立即试用
-          </div>
-          <div class="seeMore u1">
-            安排演示
-          </div>
+        <div class="seeMore u1">
+          安排演示
         </div>
       </div>
-      <img class="platTopOutImg" src="@/assets/software/instantMess_c1.png" alt="" />
     </div>
-    <div class="w1380 CloudBox flexRowAC">
+    <div class="proTitleBox w1380 flexRowAC" style="justify-content: flex-start">
+      <div>
+        基础云能力
+        <div class="proTitleBox_c_t">
+          提供强大的计算、存储、网络等基础设施，确保平台稳定可靠运行
+        </div>
+      </div>
+    </div>
+    <div class="proTitleBox w1380 flexRowAC">
+      <img class="privateCloud_c1" src="@/assets/software/privateCloud_c1.png" alt="" />
+    </div>
+    <div class="w1380 CloudBox ipcBox flexRowAC">
+      <img class="privateCloud_c2" src="@/assets/software/privateCloud_c2.png" alt="" />
       <div class="CloudL">
         <div class="cl_t">
-          综合定制首页
+          服务开发
         </div>
         <div class="cl_d">
-          综合功能首页，千人千面。自定义自己的应用首页，帮助用户打造专属的工作台
-        </div>
-        <div class="cl_d d1">
-          同时作为手机端的信息门户和应用仓库功能。
-          <br />
-          功能、应用、模块均可定制
+          支持灵活的服务开发环境，帮助开发者快速构建和部署高质量的应用服务
         </div>
       </div>
-      <img class="k8sMana_c1" src="@/assets/software/instantMess_c2.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          畅享安全通讯
-        </div>
-        <div class="cl_d">
-          支持文字、语音、图片、视频等多种即时通讯方式，更有月后积分功能，消息自动销毁，保障信息安全
-        </div>
-      </div>
-      <img class="k8sMana_c1" src="@/assets/software/instantMess_c3.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          语音视频会议
-        </div>
-        <div class="cl_d">
-          轻松发起多方音视频会议，打破空间限制，随时随地组会交流
-        </div>
-      </div>
-      <img class="k8sMana_c1" src="@/assets/software/instantMess_c4.png" alt="" />
     </div>
     <div class="w1380 ipcView CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
-          开放集成应用
+          应用开发
         </div>
         <div class="cl_d">
-          构筑开放的应用市场，提供丰富的API，企业可按需定制个性化的应用
+          提供开发工具和资源，简化应用开发流程，助力企业快速创新
         </div>
       </div>
-      <img class="k8sMana_c1" src="@/assets/software/policeBus_c1.png" alt="" />
+      <img class="privateCloud_c2" src="@/assets/software/privateCloud_c3.png" alt="" />
+    </div>
+    <div class="w1380 ipcView CloudBox flexRowAC">
+      <img class="privateCloud_c2" src="@/assets/software/privateCloud_c4.png" alt="" />
+      <div class="CloudL" style="text-align: right">
+        <div class="cl_t">
+          应用市场
+        </div>
+        <div class="cl_d">
+          提供丰富的应用资源，企业可根据需求选择和部署适合的云应用
+        </div>
+      </div>
     </div>
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
-          多端协调办公
+          服务目录
         </div>
         <div class="cl_d">
-          可实现多个终端同时登陆，同步协同办公，支持个人设备之间的资料互传
+          集中管理平台内各类服务，用户可以方便地查看、选择和使用
         </div>
       </div>
-      <img class="k8sMana_c1" src="@/assets/software/instantMess_c6.png" alt="" />
+      <img class="privateCloud_c5" src="@/assets/software/privateCloud_c5.png" alt="" />
+    </div>
+    <div class="w1380 CloudBox flexRowAC">
+      <img class="privateCloud_c6" src="@/assets/software/privateCloud_c6.png" alt="" />
+      <div class="CloudL">
+        <div class="cl_t">
+          基础服务
+        </div>
+        <div class="cl_d">
+          提供基础的数据存储、网络、安全等核心服务，支撑云端应用的稳定运行
+        </div>
+      </div>
     </div>
     <div class="productBox w1380">
       <div class="proT">
         现在开始体验
       </div>
-      <div class="flexRowAC productItem">
-        <div class="productImg productItem1 product1">
-          <img class="pro1_1" src="@/assets/software/down1_.png" alt="" />
-          <div class="pro1_1_s flexRowAC">
-            SaaS版本
-            <span class="pro1_1_s_b">14天功能全免费试用</span>
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            7天快速迭代，问题敏捷解决
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            快速启用，精简运维
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            更低建设成本
-          </div>
-          <div class="pro3 flexRowAC">
-            <div class="pro3_btn flexRowAC">
-              申请试用
-            </div>
-            <div class="pro3_btn p3b flexRowAC">
-              详细功能
-            </div>
-          </div>
+      <div class="productImg product1">
+        <img class="pro1_1" src="@/assets/software/down1.png" alt="" />
+        <div class="pro1_1_s flexRowAC">
+          私有化部署
+          <span class="pro1_1_s_b">1v1 定制方案量身打造</span>
         </div>
-        <div class="productImg productItem1 product1">
-          <img class="pro1_1" src="@/assets/software/down1.png" alt="" />
-          <div class="pro1_1_s flexRowAC">
-            私有化部署
-            <span class="pro1_1_s_b">1v1 定制方案量身打造</span>
+        <div class="pro1_2 flexRowAC">
+          <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+          1v1 专家服务，定制化解决方案
+        </div>
+        <div class="pro1_2 flexRowAC">
+          <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+          本地化灵活部署，私有化数据存储
+        </div>
+        <div class="pro1_2 flexRowAC">
+          <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
+          高可用架构与完备容灾方案
+        </div>
+        <div class="pro3 flexRowAC">
+          <div class="pro3_btn flexRowAC">
+            申请试用
           </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            1v1 专家服务，定制化解决方案
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            本地化灵活部署，私有化数据存储
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            高可用架构与完备容灾方案
-          </div>
-          <div class="pro3 flexRowAC">
-            <div class="pro3_btn flexRowAC">
-              申请试用
-            </div>
-            <div class="pro3_btn p3b flexRowAC">
-              详细功能
-            </div>
+          <div class="pro3_btn p3b flexRowAC">
+            详细功能
           </div>
         </div>
       </div>
@@ -170,7 +144,9 @@ import product5_4 from '@/assets/VLimg2.0/product5_4.png'
 import product5_5 from '@/assets/VLimg2.0/product5_5.png'
 import product5_6 from '@/assets/VLimg2.0/product5_6.png'
 import product5_7 from '@/assets/VLimg2.0/product5_7.png'
-
+definePageMeta({
+  layout: 'site-new'
+})
 let p5Arr = ref([])
 p5Arr.value = [
   { t: 'Windows', d: '版本号：V3.1.06', flag: false, img: product5_1 },
@@ -209,20 +185,9 @@ p5Arr.value = [
 //  font-weight: bold;
 //  font-size: 18px;
 //}
-.platTopOut{
-  justify-content: space-between;
-  padding-bottom: 160px;
-
-  .platTopOutImg{
-    flex-shrink: 0;
-    width: 614px;
-    height: auto;
-    margin-left: 100px;
-  }
-}
 
 .platTop {
-  text-align: left;
+  text-align: center;
   padding: 110px 0;
 
   .plat {
@@ -353,10 +318,6 @@ p5Arr.value = [
     font-size: 20px;
   }
 
-  .cl_d.d1{
-    color: #333;
-  }
-
   .CloudL {
     width: 500px;
   }
@@ -398,22 +359,6 @@ p5Arr.value = [
 .productBox {
   text-align: center;
   padding-bottom: 140px;
-
-  .productItem {
-    gap: 20px;
-
-    .productItem1 {
-      flex: 1;
-
-      &:nth-child(1) {
-        background: #2278FF;
-
-        .pro3_btn {
-          color: #2278FF;
-        }
-      }
-    }
-  }
 
   .proT {
     padding-bottom: 60px;
@@ -635,13 +580,44 @@ p5Arr.value = [
   }
 }
 
-.instantMess_c1{
-  width: 825px;
+.proTitleBox {
+  justify-content: center;
+  color: #3D3D3D;
+  font-weight: bold;
+  font-size: 58px;
+  padding-bottom: 100px;
+}
+
+.privateCloud_c1 {
+  width: 80%;
   height: auto;
 }
 
-.k8sMana_c1{
-  width: 692px;
+.privateCloud_c2 {
+  width: 738px;
   height: auto;
+}
+
+.privateCloud_c2 {
+  width: 738px;
+  height: auto;
+}
+
+.privateCloud_c5 {
+  width: 660px;
+  height: auto;
+}
+
+.privateCloud_c6 {
+  width: 643px;
+  height: auto;
+}
+
+.proTitleBox_c_t{
+  color: #717781;
+  font-weight: normal;
+  font-size: 20px;
+  text-align: left;
+  padding-top: 30px;
 }
 </style>

@@ -3,20 +3,26 @@ import { resolve } from 'path'
 
 export default defineNuxtConfig({
   srcDir: 'src',
+
   alias: {
     '~': resolve(__dirname, './src'),
     '@': resolve(__dirname, './src')
   },
+
   imports: {
     autoImport: true // 默认自动引入
   },
+
   css: [
     'element-plus/dist/index.css'
   ],
+
   devServer: {
     port: 8080
   },
+
   ssr: false,
+
   app: {
     rootId: '_oort',
     buildAssetsDir: '/asset/',
@@ -40,6 +46,7 @@ export default defineNuxtConfig({
       ]
     }
   },
+
   build: {
     transpile:
       process.env.NODE_ENV === 'production'
@@ -51,6 +58,7 @@ export default defineNuxtConfig({
         ]
         : ['@juggle/resize-observer']
   },
+
   vite: {
     optimizeDeps: {
       include:
@@ -59,6 +67,7 @@ export default defineNuxtConfig({
           : []
     }
   },
+
   postcss: {
     plugins: {
       'postcss-px-to-viewport': {
@@ -85,5 +94,6 @@ export default defineNuxtConfig({
       gzip: true
     },
     sourceMap: false
-  }
+  },
+  compatibilityDate: '2025-01-14'
 })

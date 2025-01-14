@@ -1,149 +1,144 @@
 <template>
   <div class="home_page vls">
-    <div class="platTopOut flexRowAC w1380">
-      <div class="platTop">
-        <img class="VLStream_top" src="@/assets/software/ALLINONE.png" alt="" />
-        <div class="VLStream flexRowAC">
-          超级APP
-          <img class="VLStream_img" src="@/assets/software/WorkUP.png" alt="" />
-        </div>
-        <div class="plat_cent">
-          集成即时通讯、邮件、音视频会议、数据共享、流程审批、在线社交、健康管理等功能，
-          贯通企业办公场景，提升效率，让工作更高效美好。
-        </div>
-        <div class="flexRowAC useBox" style="justify-content: flex-start">
-          <div class="seeMore">
-            立即试用
-          </div>
-          <div class="seeMore u1">
-            安排演示
-          </div>
-        </div>
+    <div class="platTop w1380">
+      <div class="VLStream">
+        门户与应用仓库
       </div>
-      <img class="platTopOutImg" src="@/assets/software/workApp.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          全面适配 形态多样
-        </div>
-        <div class="cl_d">
-          不论是私有云、行业云、混合云都能安装部署，<span style="color: red">支持国产化适配、 鲲鹏云部署</span>，一切目标只为满足您的实际业务。
-        </div>
+      <div class="plat_cent">
+        拥有领先于市场的小程序容器技术，可为您提供敏捷、安全的最佳实践，
+        <br />
+        是数字化时代下企业移动开发的不二之选。
       </div>
-      <img class="k8sMana_c1" src="@/assets/software/superAPP_c1.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox ipcBox flexRowAC">
-      <img class="k8sMana_c1" src="@/assets/software/superAPP_c2.png" alt="" />
-      <div class="CloudL">
-        <div class="cl_t">
-          云交付 自主可控
+      <div class="flexRowAC useBox">
+        <div class="seeMore">
+          立即试用
         </div>
-        <div class="cl_d">
-          通信信息自主掌控，采用三端加密和五维防护，确保数据私有，防止破解、泄露、监听与窥视。
+        <div class="seeMore u1">
+          安排演示
         </div>
       </div>
     </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          功能丰富 多端可控
-        </div>
-        <div class="cl_d">
-          支持移动端、双系统、华为Pad、PC端、国产化操作系统、华为IdeaHub等多种办公终端等多端同步。
-        </div>
-      </div>
-      <img class="k8sMana_c1" src="@/assets/software/superAPP_c3.png" alt="" />
+    <div class="por_app flexRowAC">
+      <img class="k8sMana_c1" src="@/assets/software/portalApp_bg1.png" alt="" />
+      30分钟
+      <span>把小程序搬进 App</span>
     </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <img class="k8sMana_c1" src="@/assets/software/superAPP_c4.png" alt="" />
-      <div class="CloudL" style="text-align: right">
-        <div class="cl_t">
-          安全设计 隐私保护
-        </div>
-        <div class="cl_d">
-          采用三端加密与五维防护，提供消息保护、禁转、密聊等隐私功能，实现数据全生命周期加密，保障隐私安全。
-        </div>
-      </div>
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          扩展能力强
+    <div class="por_con w1380 flexRowAC">
+      <div class="por_c_it">
+        <div>01</div>
+        <div>
+          私有个性化
           <br />
-          广泛适用
+          "应用市场"
+        </div>
+        <div>支持私有应用市场，规范上架，便捷服务分发</div>
+      </div>
+      <div class="por_c_it">
+        <div>02</div>
+        <div>
+          云原生架构<br />
+          &nbsp;
+        </div>
+        <div>基于云原生架构，支持百万级查询和高并发，确保业务平稳运行。</div>
+      </div>
+      <div class="por_c_it">
+        <div>03</div>
+        <div>
+          多终端支持<br />
+          &nbsp;
+        </div>
+        <div>
+          支持多终端，包括移动
+          端、双系统、华为Pad
+          PC、国产操作系统等。
+        </div>
+      </div>
+      <div class="por_c_it">
+        <div>04</div>
+        <div>
+          多种部署方式<br />
+          &nbsp;
+        </div>
+        <div>
+          支持私有云、行业云、混
+          合云部署，兼容国产化和
+          鲲鹏云，满足业务需求。
+        </div>
+      </div>
+      <div class="por_c_it">
+        <div>05</div>
+        <div>
+          真实环境压力测试<br />
+          &nbsp;
+        </div>
+        <div>
+          经过百万级并发压力测
+          试，确保业务稳定运行。
+        </div>
+      </div>
+    </div>
+    <div class="w1380 CloudBox flexRowAC">
+      <div class="CloudL" style="width: 600px;">
+        <div class="cl_t">
+          前端容器技术引领者
+          <br />
+          助力企业拥抱云原生时代
         </div>
         <div class="cl_d">
-          安全通讯服务内置应用市场和开发平台，支持开发者通过接口或SDK打造个性化应用，兼容VUE、H5、MUI、uni-app、移动端与PC多端开发。
+          支持H5、原生混合、MUI、uni-app等技术，跨平台、安全、敏捷，快速满足个性化需求。
         </div>
       </div>
       <img class="k8sMana_c1" src="@/assets/software/portalApp_c1.png" alt="" />
     </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
+    <div class="w1380 CloudBox ipcBox flexRowAC">
+      <img class="k8sMana_c1" src="@/assets/software/portalApp_c2.png" alt="" />
+      <div class="CloudL" style="width: 600px;">
         <div class="cl_t">
-          即时通讯
+          语法遵循主流轻应用规范
         </div>
         <div class="cl_d">
-          支持单聊、群聊实现类微信功能和消息推送统一入口，可创建、加入群组，发起交流或群聊。
-        </div>
-      </div>
-      <img class="k8sMana_c1" src="@/assets/software/superAPP_c5.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <img class="k8sMana_c1" src="@/assets/software/instantMess_c3.png" alt="" />
-      <div class="CloudL">
-        <div class="cl_t">
-          畅享 安全通讯
-        </div>
-        <div class="cl_d">
-          支持文字、语音、图片、视频等多种即时通讯方式，更有月后积分功能，消息自动销毁，保障信息安全。
+          遵循H5、VUE、MUI、uni-app等标准规范，零学习成本。
         </div>
       </div>
     </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <img class="k8sMana_c1" src="@/assets/software/superAPP_c51.png" alt="" />
-      <div class="CloudL">
+    <div class="w1380 ipcView CloudBox flexRowAC">
+      <div class="CloudL" style="width: 600px;">
         <div class="cl_t">
-          多端协同办公
+          扩展方式
+          <br />
+          可基于业务灵活配置
         </div>
         <div class="cl_d">
-          可实现多个终端同时登陆，同步协同办公，支持个人设备之间的资料互传。
+          企业可灵活配置API和第三方SDK，支持开放API接口和二次开发。
+        </div>
+      </div>
+      <img class="k8sMana_c1" src="@/assets/software/portalApp_c3.png" alt="" />
+    </div>
+    <div class="w1380 ipcView CloudBox flexRowAC">
+      <img class="k8sMana_c1" src="@/assets/software/portalApp_c4.png" alt="" />
+      <div class="CloudL" style="text-align: right;width: 540px;">
+        <div class="cl_t">
+          提供完善开发测试环境
+          <br />
+          与支持文档
+        </div>
+        <div class="cl_d">
+          提供小程序开发工具和完备文档，提升迭代速度，保障开发流程。
         </div>
       </div>
     </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          语音视频会议
-        </div>
-        <div class="cl_d">
-          轻松发起多方音视频会议，打破空间限制，随时随地组会交流
-        </div>
-      </div>
-      <img class="k8sMana_c1" src="@/assets/software/superAPP_c6.png" alt="" />
+    <div class="proTitleBox w1380 flexRowAC">
+      开发小程序，也可以是件「愉悦」的事儿
     </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <img class="k8sMana_c1" src="@/assets/software/superAPP_c7.png" alt="" />
-      <div class="CloudL">
-        <div class="cl_t">
-          短视频
-        </div>
-        <div class="cl_d">
-          工作方法，工作技巧，小发明，小创造，以“抖音”小视频的形式发布到动态圈。
-        </div>
+    <div class="productBox hapBox w1380 flexRowAC" style="width: 700px;">
+      <div class="hap flexRowAC">
+        <img class="k8sMana_c1" src="@/assets/software/portalApp_bg2.png" alt="" />
+        提供SDK及集成指南
       </div>
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          云课堂
-        </div>
-        <div class="cl_d">
-          基于移动互联网的培训管理和学习交互平台。
-        </div>
+      <div class="hap flexRowAC">
+        <img class="k8sMana_c1" src="@/assets/software/portalApp_bg3.png" alt="" />
+        提供测试开发调试环境
       </div>
-      <img class="k8sMana_c1" src="@/assets/software/superAPP_c8.png" alt="" />
     </div>
     <div class="productBox w1380">
       <div class="proT">
@@ -197,29 +192,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import product5_1 from '@/assets/VLimg2.0/product5_1.png'
-import product5_2 from '@/assets/VLimg2.0/product5_2.png'
-import product5_3 from '@/assets/VLimg2.0/product5_3.png'
-import product5_4 from '@/assets/VLimg2.0/product5_4.png'
-import product5_5 from '@/assets/VLimg2.0/product5_5.png'
-import product5_6 from '@/assets/VLimg2.0/product5_6.png'
-import product5_7 from '@/assets/VLimg2.0/product5_7.png'
-
-let p5Arr = ref([])
-p5Arr.value = [
-  { t: 'Windows', d: '版本号：V3.1.06', flag: false, img: product5_1 },
-  { t: 'Android', d: '版本号：V3.1.06', flag: true, img: product5_2 },
-  { t: 'iOS', d: '版本号：V3.1.06', flag: true, img: product5_3 },
-  { t: 'Harmony OS', d: '版本号：V3.1.06', flag: true, img: product5_4 },
-  { t: 'Linux', d: '版本号：V3.1.06', flag: false, img: product5_5 },
-  { t: 'Mac OS', d: '版本号：V3.1.06', flag: false, img: product5_6 },
-  { t: '银河麒麟', d: '版本号：V3.1.06', flag: false, img: product5_7 }
-]
+definePageMeta({
+  layout: 'site-new'
+})
 </script>
 
 <style scoped lang="scss">
-
 .home_page {
   position: relative;
 }
@@ -245,19 +223,9 @@ p5Arr.value = [
 //  font-weight: bold;
 //  font-size: 18px;
 //}
-.platTopOut{
-  justify-content: space-between;
-  padding-bottom: 110px;
 
-  .platTopOutImg{
-    flex-shrink: 0;
-    width: 400px;
-    height: auto;
-    margin-left: 100px;
-  }
-}
 .platTop {
-  text-align: left;
+  text-align: center;
   padding: 110px 0;
 
   .plat {
@@ -269,11 +237,6 @@ p5Arr.value = [
     border: 1px solid #E9E9E9;
   }
 
-  .VLStream_top {
-    height: 30px;
-    width: auto;
-  }
-
   .VLStream {
     color: #333333;
     font-weight: bold;
@@ -282,9 +245,11 @@ p5Arr.value = [
     position: relative;
 
     .VLStream_img {
-      margin-left: 30px;
-      width: auto;
-      height: 76px;
+      width: 222px;
+      height: 222px;
+      position: absolute;
+      right: 336px;
+      top: -50px;
     }
   }
 
@@ -653,8 +618,88 @@ p5Arr.value = [
   }
 }
 
+.proTitleBox {
+  justify-content: center;
+  color: #3D3D3D;
+  font-weight: bold;
+  font-size: 58px;
+  padding-bottom: 100px;
+}
+
 .k8sMana_c1 {
   width: 692px;
   height: auto;
+}
+
+.por_app {
+  padding-bottom: 160px;
+  justify-content: center;
+  gap: 10px;
+  color: #686868;
+  font-weight: normal;
+  font-size: 22px;
+  text-align: center;
+
+  .k8sMana_c1 {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.por_con {
+  align-items: flex-start;
+  padding-bottom: 160px;
+  gap: 40px;
+
+  .por_c_it {
+    border-left: 1px solid #e8e8e8;
+    padding-left: 16px;
+  }
+
+  .por_c_it > div {
+    &:nth-child(1) {
+      color: #6F7277;
+      font-weight: bold;
+      font-size: 22px;
+      text-align: left;
+      padding-bottom: 30px;
+    }
+
+    &:nth-child(2) {
+      color: #333333;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: normal;
+      text-align: left;
+
+      padding-bottom: 120px;
+    }
+
+    &:nth-child(3) {
+      color: #6F7277;
+      font-weight: normal;
+      font-size: 16px;
+      text-align: left;
+
+    }
+  }
+}
+
+.hapBox {
+  gap: 160px;
+
+  .hap {
+    flex-direction: column;
+    color: #333333;
+    font-weight: bold;
+    font-size: 28px;
+    text-align: left;
+
+    > .k8sMana_c1 {
+      width: 210px;
+      height: 210px;
+      margin-bottom: 20px;
+    }
+  }
 }
 </style>

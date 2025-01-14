@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink v-if="menu.link" :to="menu.link" class="dropdown_col_item">
+  <NuxtLink v-if="menu.link" :to="'/zh' + menu.link" class="dropdown_col_item">
     <Image class="dropdown_col_item_logo" :src="menu.logo" />
     <span class="dropdown_col_item_label">{{ menu.name }}</span>
   </NuxtLink>
@@ -10,18 +10,18 @@
 </template>
 
 <script setup lang="ts">
-interface MenuItem{
-  name: string,
-  logo: string,
-  link?: any,
-  desc?: string
-}
+// interface MenuItem{
+//   name: string,
+//   logo: string,
+//   link?: any,
+//   desc?: string
+// }
 
-interface Menu {
-  title: string,
-  showTitle: boolean,
-  menus: MenuItem[]
-}
+// interface Menu {
+//   title: string,
+//   showTitle: boolean,
+//   menus: MenuItem[]
+// }
 defineProps({
   menu: {
     type: Object,
