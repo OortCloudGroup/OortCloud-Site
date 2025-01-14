@@ -73,7 +73,7 @@
               服务
             </div>
             <div class="flexRowAC">
-              <a class="b_ser_text hover" href="https://oortcloudsmart.com/" target="_blank">
+              <a class="b_ser_text hover" href="https://oortcloudsmart.com/zh/siteNew/" target="_blank">
                 OORT 生产力平台
               </a>
             </div>
@@ -153,7 +153,7 @@
               关于我们
             </div>
             <div class="flexRowAC">
-              <a class="b_ser_text hover" href="https://www.oortcloudsmart.com/" target="_blank">
+              <a class="b_ser_text hover" href="https://www.oortcloudsmart.com/zh/" target="_blank">
                 我们的公司
               </a>
             </div>
