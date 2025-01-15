@@ -2,12 +2,12 @@
   <div class="personalPageOut">
     <div class="personalPage flexRowAC">
       <div class="personalL menuBox">
-        <div v-for="(item,i) in arr" :key="i" class="menuItem flexRowAC">
+        <div v-for="(item,i) in arr" :key="i" class="menuItem flexRowAC" :class="{act:i===iact}" @click="iact=i">
           <img class="menuImg" :src="item.img" alt="" />
           {{ item.t }}
         </div>
       </div>
-      <div class="personalrR menuCont">
+      <div v-if="iact===6" class="personalrR menuCont">
         <div class="menuCont_t">
           个人地址本
         </div>
@@ -62,11 +62,40 @@
           </div>
         </div>
       </div>
+      <div v-if="iact===5" class="personalrR menuCont">
+        <div class="menuCont_t">
+          个人信息
+        </div>
+        <div class="perInfoBox">
+          <div class="perInfo_t">
+            增加常用意见
+          </div>
+          <el-input v-model="value" type="textarea" :rows="5" class="themeInput" placeholder="问题描述*" />
+          <div class="cu_submit flexRowAC">
+            保存
+          </div>
+          <div class="perInfo_t">
+            常用意见
+          </div>
+          <div>
+            <div class="perInfo_d">
+              同意，请尽快完成任务
+            </div>
+            <div class="perInfo_d">
+              由于任务临时取消，该任务暂停，望周知
+            </div>
+            <div class="perInfo_d">
+              由于任务临时取消，该任务暂停，望周知由于任务临时取消，该任务暂停，望周知由于任务临时取消，该任务暂停，望周知由于任务临时取消，该任务暂停，望周知由于任务临时取消，该任务暂停，望周知由于任务临时取消，该任务暂停，望周知由于任务临时取消，该任务暂停....
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import per_l1 from '@/assets/personalCenter/per_l1.png'
 import per_l2 from '@/assets/personalCenter/per_l2.png'
 import per_l3 from '@/assets/personalCenter/per_l3.png'
@@ -79,8 +108,10 @@ import per_l8 from '@/assets/personalCenter/per_l8.png'
 let arr = ref([])
 let arr1 = ref([])
 let arr2 = ref([])
+let iact = ref(5)
 let isAct = ref(0)
 let isAct1 = ref(1)
+let value = ref('')
 arr.value = [
   { t: '个人信息', img: per_l1 },
   { t: '安全性', img: per_l2 },
@@ -142,6 +173,11 @@ arr2.value = [
     cursor: pointer;
     padding: 16px;
     gap: 16px;
+
+    &.act {
+      border-radius: 12px;
+      background-color: #f7f7f7;
+    }
   }
 
   .menuImg {
@@ -264,6 +300,34 @@ arr2.value = [
   .personalListAdd {
     width: 88px;
     height: 88px;
+  }
+}
+
+.perInfoBox {
+  .perInfo_t {
+    font-weight: 700;
+    font-size: 16px;
+    color: #333333;
+    padding: 24px 0 12px;
+  }
+
+  .perInfo_d {
+    background: #FAFAFA;
+    border-radius: 12px 12px 12px 12px;
+    padding: 18px 16px;
+    margin-bottom: 20px;
+  }
+
+  .cu_submit {
+    cursor: pointer;
+    margin: 40px 0 0 auto;
+    justify-content: center;
+    width: 170px;
+    height: 64px;
+    border-radius: 8px;
+    color: #fff;
+    background: #2278FF;
+    box-shadow: 0px 4px 10px 0px #2278FF33;
   }
 }
 </style>
