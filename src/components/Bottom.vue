@@ -78,9 +78,9 @@
               </div>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text">
+              <a class="b_ser_text hover" href="https://github.com/OortCloudGroup" target="_blank">
                 GitHub
-              </div>
+              </a>
             </div>
           </div>
           <div class="b_ser_p_l">
@@ -93,17 +93,17 @@
               </a>
             </div>
             <div class="flexRowAC">
-              <a class="b_ser_text hover" href=" https://da.oortcloudsmart.com/" target="_blank">
+              <a class="b_ser_text hover" href=" https://da.oortcloudsmart.com/zh/" target="_blank">
                 OORT.DA 数据平台
               </a>
             </div>
             <div class="flexRowAC">
-              <a class="b_ser_text hover" href="https://vls.oortcloudsmart.com/" target="_blank">
+              <a class="b_ser_text hover" href="https://vls.oortcloudsmart.com/zh/" target="_blank">
                 VLSterm 视觉平台
               </a>
             </div>
             <div class="flexRowAC">
-              <a class="b_ser_text hover" href="https://sh.oortcloudsmart.com/" target="_blank">
+              <a class="b_ser_text hover" href="https://sh.oortcloudsmart.com/zh/" target="_blank">
                 OORT.SH 托管平台
               </a>
             </div>
