@@ -80,6 +80,63 @@
           </el-form>
         </div>
       </div>
+      <div v-if="iact===1" class="personalrR menuCont">
+        <div class="menuCont_t">
+          登陆方式
+        </div>
+        <div class="detailsInfo invoice safe flexRowAC">
+          <div v-for="(item,i) in arr" :key="i" class="detailsAva flexRowAC">
+            <div class="detailsImg1" />
+            <div class="safeI">
+              <div>抬头管理{{ item['n'] }}</div>
+              <div class="detailsI_d">
+                集中管理发票抬头，确保信息准确
+              </div>
+            </div>
+            <el-switch v-model="value" />
+          </div>
+        </div>
+        <div class="menuCont_t">
+          登录设备
+        </div>
+        <el-table header-cell-class-name="header_cell" :data="tableData">
+          <el-table-column prop="label" label="设备名称" />
+          <el-table-column prop="value" label="系统" />
+          <el-table-column prop="value" label="验证通过时间" />
+        </el-table>
+        <div class="paginationBox flexRowAC">
+          <el-pagination
+            background
+            :page-sizes="[10, 20, 50, 100]"
+            :page-size="pagesize"
+            layout="total, prev, pager, next, sizes"
+            :total="count"
+            class="justifyAlign"
+            @size-change="handleSizeChange"
+            @current-change="handleCurrentChange"
+          />
+        </div>
+        <div class="menuCont_t">
+          登录记录
+        </div>
+        <el-table header-cell-class-name="header_cell" :data="tableData">
+          <el-table-column prop="label" label="设备名称" />
+          <el-table-column prop="value" label="系统" />
+          <el-table-column prop="value" label="验证通过时间" />
+        </el-table>
+        <div class="paginationBox flexRowAC">
+          <el-pagination
+            background
+            :page-sizes="[10, 20, 50, 100]"
+            :page-size="pagesize"
+            layout="total, prev, pager, next, sizes"
+            :total="count"
+            class="justifyAlign"
+            @size-change="handleSizeChange"
+            @current-change="handleCurrentChange"
+          />
+        </div>
+      </div>
       <div v-if="iact===4" class="personalrR menuCont">
         <div class="menuCont_t">
           我的发票
@@ -282,10 +339,11 @@ let count = ref<number>(0)
 let page = ref<Number>(1)
 let pagesize = ref<Number>(10)
 let isActInv = ref([])
-let iact = ref(4)
+let iact = ref(0)
 let isAct = ref(0)
 let isAct1 = ref(1)
 let value = ref('')
+const tableData = ref<any>([])
 const activeName = ref('ac1')
 arr.value = [
   { t: '个人信息', img: per_l1 },
@@ -569,6 +627,19 @@ let handleCurrentChange = (val: number) => {
       color: #111827;
       line-height: 28px;
     }
+  }
+}
+
+.invoice.detailsInfo.safe {
+  gap: 20px;
+  flex-wrap: wrap;
+
+  .detailsAva {
+    width: 380px;
+  }
+
+  .safeI {
+    margin-right: 70px;
   }
 }
 
