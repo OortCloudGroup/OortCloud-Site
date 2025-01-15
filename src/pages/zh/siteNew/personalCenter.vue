@@ -331,7 +331,9 @@ import per_l5 from '@/assets/personalCenter/per_l5.png'
 import per_l6 from '@/assets/personalCenter/per_l6.png'
 import per_l7 from '@/assets/personalCenter/per_l7.png'
 import per_l8 from '@/assets/personalCenter/per_l8.png'
-
+definePageMeta({
+  layout: 'site-new'
+})
 let arr = ref([])
 let arr1 = ref([])
 let arr2 = ref([])
