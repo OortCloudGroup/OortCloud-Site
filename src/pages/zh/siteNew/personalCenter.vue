@@ -3,7 +3,7 @@
     <div class="personalPage flexRowAC">
       <div class="personalL menuBox">
         <div v-for="(item,i) in arr" :key="i" class="menuItem flexRowAC">
-          <div class="menuImg" />
+          <img class="menuImg" :src="item.img" alt="" />
           {{ item.t }}
         </div>
       </div>
@@ -15,15 +15,15 @@
           <div class="addressOpe">
             <div class="flexRowAC addressOpe_c">
               <div class="addressOpe_c_t flexRowAC">
-                <div class="icon" />
+                <img class="icon" src="@/assets/personalCenter/per_o1.png" alt="" />
                 编辑
               </div>
               <div class="addressOpe_c_t flexRowAC">
-                <div class="icon" />
+                <img class="icon" src="@/assets/personalCenter/per_o2.png" alt="" />
                 新增
               </div>
               <div class="addressOpe_c_t flexRowAC" style="color: red">
-                <div class="icon" />
+                <img class="icon" src="@/assets/personalCenter/per_o3.png" alt="" />
                 删除
               </div>
             </div>
@@ -47,7 +47,7 @@
               :class="{act:i===isAct1}"
               @click="isAct1=i"
             >
-              <div class="del" />
+              <img class="del" src="@/assets/personalCenter/per_r1.png" alt="" />
               <div class="avatar" />
               <div class="d1">
                 {{ item['i'] }}李辉梦 18270931339
@@ -57,7 +57,7 @@
               </div>
             </div>
             <div class="personalList p1 flexRowAC" style="justify-content: center">
-              <div class="personalListAdd" />
+              <img class="personalListAdd" src="@/assets/personalCenter/per_r2.png" alt="" />
             </div>
           </div>
         </div>
@@ -67,20 +67,29 @@
 </template>
 
 <script setup lang="ts">
+import per_l1 from '@/assets/personalCenter/per_l1.png'
+import per_l2 from '@/assets/personalCenter/per_l2.png'
+import per_l3 from '@/assets/personalCenter/per_l3.png'
+import per_l4 from '@/assets/personalCenter/per_l4.png'
+import per_l5 from '@/assets/personalCenter/per_l5.png'
+import per_l6 from '@/assets/personalCenter/per_l6.png'
+import per_l7 from '@/assets/personalCenter/per_l7.png'
+import per_l8 from '@/assets/personalCenter/per_l8.png'
+
 let arr = ref([])
 let arr1 = ref([])
 let arr2 = ref([])
 let isAct = ref(0)
 let isAct1 = ref(1)
 arr.value = [
-  { t: '个人信息', img: '' },
-  { t: '安全性', img: '' },
-  { t: '密码安全', img: '' },
-  { t: '我的订单', img: '' },
-  { t: '发票', img: '' },
-  { t: '常用意见', img: '' },
-  { t: '个人地址本', img: '' },
-  { t: '标签', img: '' }
+  { t: '个人信息', img: per_l1 },
+  { t: '安全性', img: per_l2 },
+  { t: '密码安全', img: per_l3 },
+  { t: '我的订单', img: per_l4 },
+  { t: '发票', img: per_l5 },
+  { t: '常用意见', img: per_l6 },
+  { t: '个人地址本', img: per_l7 },
+  { t: '标签', img: per_l8 }
 ]
 arr1.value = [
   { t: '警务部门', img: '' },
@@ -115,10 +124,12 @@ arr2.value = [
   .personalL {
     width: 320px;
     flex-shrink: 0;
+    border-radius: 20px;
     background-color: #fff;
   }
 
   .personalrR {
+    border-radius: 20px;
     background-color: #fff;
     flex: 1;
   }
@@ -136,7 +147,6 @@ arr2.value = [
   .menuImg {
     width: 48px;
     height: 48px;
-    background-color: #f7f7f7;
   }
 }
 
@@ -175,7 +185,6 @@ arr2.value = [
       gap: 4px;
 
       .icon {
-        background-color: #F7F7F7;
         width: 20px;
         height: 20px;
       }
@@ -239,7 +248,6 @@ arr2.value = [
 
   .del {
     display: none;
-    background-color: #ccc;
     width: 24px;
     height: 24px;
     position: absolute;
@@ -256,7 +264,6 @@ arr2.value = [
   .personalListAdd {
     width: 88px;
     height: 88px;
-    background-color: #fff;
   }
 }
 </style>
