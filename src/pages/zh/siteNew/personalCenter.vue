@@ -80,9 +80,106 @@
           </el-form>
         </div>
       </div>
-      <div v-if="iact===6" class="personalrR menuCont">
+      <div v-if="iact===4" class="personalrR menuCont">
         <div class="menuCont_t">
+          我的发票
+        </div>
+        <div class="detailsInfo invoice">
+          <div class="detailsAva flexRowAC">
+            <div class="detailsImg1" />
+            <div>
+              <div>抬头管理</div>
+              <div class="detailsI_d">
+                集中管理发票抬头，确保信息准确
+              </div>
+            </div>
+          </div>
+          <div class="invoiceCBox">
+            <el-tabs v-model="activeName" class="tenanat-tabs">
+              <el-tab-pane label="全部" name="ac1" />
+              <el-tab-pane label="已开具发票" name="ac2" />
+              <el-tab-pane label="申请中发票" name="ac3" />
+            </el-tabs>
+            <div class="invoiceCont">
+              <div class="flexRowAC invA b1">
+                <div class="inv1">
+                  订单详情
+                </div>
+                <div class="inv2">
+                  发票类型
+                </div>
+                <div class="inv3">
+                  状态
+                </div>
+                <div class="inv4">
+                  操作
+                </div>
+              </div>
+              <div v-for="(item,i) in isActInv" :key="i" class="invAL">
+                <div class="flexRowAC invA b1">
+                  <div class="inv1">
+                    2025-01-06 10:08:22{{ item['n'] }}
+                    <span>订单号：168491616813</span>
+                  </div>
+                </div>
+                <div class="flexRowAC invA" style="height: 180px;">
+                  <div class="inv1">
+                    <div class="det flexRowAC">
+                      <div class="flexRowAC">
+                        <img class="inv1Img" src="@/assets/software/contactUs_i1.png" alt="" />云文档
+                      </div>
+                      <div>12人·1年</div>
+                    </div>
+                    <div class="det flexRowAC">
+                      <div class="flexRowAC">
+                        <img class="inv1Img" src="@/assets/software/contactUs_i1.png" alt="" />云盘
+                      </div>
+                      <div>1人·1月</div>
+                    </div>
+                    <div class="det flexRowAC">
+                      <div class="flexRowAC">
+                        <img class="inv1Img" src="@/assets/software/contactUs_i1.png" alt="" />云相册
+                      </div>
+                      <div>1人·1月</div>
+                    </div>
+                  </div>
+                  <div class="inv2 d1">
+                    普票
+                  </div>
+                  <div class="inv3 d1">
+                    <div class="btn">
+                      已开票
+                    </div>
+                  </div>
+                  <div class="inv4 d1">
+                    <div class="btn btn1">
+                      发票详情
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="paginationBox flexRowAC">
+                <el-pagination
+                  background
+                  :page-sizes="[10, 20, 50, 100]"
+                  :page-size="pagesize"
+                  layout="total, prev, pager, next, sizes"
+                  :total="count"
+                  class="justifyAlign"
+                  @size-change="handleSizeChange"
+                  @current-change="handleCurrentChange"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div v-if="iact===6||iact===7" class="personalrR menuCont">
+        <div v-if="iact===6" class="menuCont_t">
           个人地址本
+        </div>
+        <div v-else class="menuCont_t">
+          标签
         </div>
         <div class="addressBox flexRowAC">
           <div class="addressOpe">
@@ -181,10 +278,15 @@ import per_l8 from '@/assets/personalCenter/per_l8.png'
 let arr = ref([])
 let arr1 = ref([])
 let arr2 = ref([])
-let iact = ref(0)
+let count = ref<number>(0)
+let page = ref<Number>(1)
+let pagesize = ref<Number>(10)
+let isActInv = ref([])
+let iact = ref(4)
 let isAct = ref(0)
 let isAct1 = ref(1)
 let value = ref('')
+const activeName = ref('ac1')
 arr.value = [
   { t: '个人信息', img: per_l1 },
   { t: '安全性', img: per_l2 },
@@ -212,6 +314,11 @@ arr2.value = [
   { t: '警务部门', img: '' },
   { t: '警务部门', img: '' }
 ]
+isActInv.value = [
+  { t: '警务部门', img: '' },
+  { t: '警务部门', img: '' },
+  { t: '警务部门', img: '' }
+]
 
 const form = reactive({
   name: '',
@@ -227,6 +334,12 @@ const form = reactive({
   name10: '',
   name11: ''
 })
+let handleSizeChange = (val: number) => {
+  pagesize.value = val
+}
+let handleCurrentChange = (val: number) => {
+  page.value = val
+}
 
 </script>
 <style lang="scss" scoped>
@@ -350,7 +463,7 @@ const form = reactive({
     background-color: #ccc;
   }
 
-  .d1 {
+  > .d1 {
     font-weight: 400;
     font-size: 14px;
     color: #333333;
@@ -447,7 +560,7 @@ const form = reactive({
       width: 48%;
     }
 
-    .detailsInfoFrom_t{
+    .detailsInfoFrom_t {
       width: 100%;
       padding-bottom: 20px;
       height: 28px;
@@ -457,5 +570,138 @@ const form = reactive({
       line-height: 28px;
     }
   }
+}
+
+.invoice.detailsInfo {
+  .detailsAva {
+    width: 290px;
+    background: #F9FAFB;
+    border-radius: 16px 16px 16px 16px;
+    padding: 20px 22px;
+  }
+
+  .detailsImg1 {
+    width: 34px;
+    height: 39px;
+    background: #84A9FF;
+    margin-right: 24px;
+  }
+}
+
+.invoiceCont {
+  .invA {
+    text-align: center;
+    border-radius: 0px 0px 0px 0px;
+
+    &.b1 {
+      height: 46px;
+      background: #F3F5FC;
+    }
+  }
+
+  .invAL {
+    margin-top: 24px;
+    border: 1px solid #D8D8D8;
+  }
+
+  .inv1 {
+    width: 50%;
+    text-align: left;
+    padding-left: 20px;
+    >span{
+      padding-left: 50px;
+    }
+  }
+
+  .inv2 {
+    width: 15%;
+
+  }
+
+  .inv3 {
+    width: 15%;
+  }
+
+  .inv4 {
+    width: 20%;
+  }
+
+  .inv1 > .det {
+    width: calc(100% - 40px);
+    justify-content: space-between;
+    text-align: left;
+    padding: 10px 20px 10px 0;
+    border-bottom: 1px solid #D8D8D8;
+
+    .inv1Img {
+      width: 38px;
+      height: 38px;
+      margin-right: 12px;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .invA > .d1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    border-left: 1px solid #D8D8D8;
+
+    .btn {
+      padding: 4px 10px;
+      font-weight: 400;
+      font-size: 14px;
+      color: #1DCE5C;
+      background: rgba(29, 206, 92, 0.12);
+      border-radius: 4px 4px 4px 4px;
+    }
+
+    //.b1{
+    //  color: #FD6A6A ;
+    //  background: rgba(253,106,106,0.12);
+    //}
+
+    .btn1 {
+      background: #fff;
+      border-radius: 8px 8px 8px 8px;
+      border: 1px solid #2278FF;
+      color: #2278FF;
+    }
+  }
+}
+
+:deep(.tenanat-tabs) {
+  padding: 0 20px;
+
+  .el-tabs__item {
+    color: #999999;
+  }
+
+  .el-tabs__item.is-active {
+    color: var(--el-color-primary);
+  }
+}
+
+// tabs
+:deep(.el-tabs__header) {
+  padding-top: 10px;
+
+  .el-tabs__nav-wrap::after {
+    display: none;
+  }
+
+  .el-tabs__item.is-top {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.paginationBox {
+  justify-content: center;
+  height: 100px;
 }
 </style>
