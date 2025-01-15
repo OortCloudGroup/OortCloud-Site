@@ -28,8 +28,12 @@ let hVisi = ref(false)
 let hVisiT = ref('')
 
 const handle = (t) => {
-  hVisiT.value = t
-  hVisi.value = true
+  if (t === '应用程序' || t === '行业' || t === '社区') {
+    hVisiT.value = t
+    hVisi.value = true
+  } else {
+    hVisi.value = false
+  }
 }
 
 </script>

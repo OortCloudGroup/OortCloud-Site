@@ -8,14 +8,16 @@
         v-for="(itd,i) in navList"
         :key="i"
         class="nav_title"
-        :class="{nav_t_line:isActPath===itd.path&&isActPath!=='/' || itd.title===propTemp}"
+        :class="{nav_t_line:isActPath===itd.path&&!isActPath.includes('siteNew') || itd.title===propTemp}"
         @click="navClick(itd.path,itd.title )"
       >
         {{ itd.title }}
       </div>
     </div>
     <div class="flexRowAC nav_r">
-      &nbsp;
+      &nbsp;<router-link to="/zh/siteNew/personalCenter">
+        个人中心
+      </router-link>
     <!--      <el-dropdown v-if="langText" :hide-on-click="false" @command="toggleLang">-->
     <!--        <div class="flexRowAC langBox">-->
     <!--          <img class="demo_img" src="@/assets/VLimg/lang.png" alt="" />-->

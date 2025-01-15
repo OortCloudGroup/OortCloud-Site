@@ -191,6 +191,8 @@ watch(() => props.item, (newVal: any) => {
 
 <style lang="scss" scoped>
 .industryPage {
+  max-height: 75vh;
+  overflow: auto;
   background-color: #fff;
 }
 
