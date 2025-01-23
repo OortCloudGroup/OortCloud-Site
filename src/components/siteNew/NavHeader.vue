@@ -15,9 +15,15 @@
       </div>
     </div>
     <div class="flexRowAC nav_r">
-      &nbsp;<router-link to="/zh/siteNew/personalCenter">
-        个人中心
-      </router-link>
+      <div class="login_but">
+        <span>登录/注册</span>
+      </div>
+      <el-popover placement="bottom" trigger="click" popper-class="popover_panel">
+        <template #reference>
+          <img class="right_info_nine" src="@/assets/navheader/nightpointpng.png" />
+        </template>
+        <commonRightPoPover @more-opr="moreOpr" />
+      </el-popover>
     <!--      <el-dropdown v-if="langText" :hide-on-click="false" @command="toggleLang">-->
     <!--        <div class="flexRowAC langBox">-->
     <!--          <img class="demo_img" src="@/assets/VLimg/lang.png" alt="" />-->
@@ -46,6 +52,7 @@
 <script setup>
 import { ref, onMounted, defineEmits, computed, onUnmounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
+import commonRightPoPover from './components/commonRightPoPover.vue'
 // import { useI18n } from 'vue-i18n'
 
 // const { locale, t } = useI18n()
@@ -118,7 +125,56 @@ watch(() => prop.item, (newVal) => {
 
 </script>
 
+<style>
+
+  .popover_panel {
+    width: 400px!important;
+    background-color: #EDF3F9!important;
+    border-radius: 10px!important;
+  }
+
+  .popover_panel .el-popper__arrow:before {
+    background-color: #EDF3F9!important;
+  }
+
+</style>
+
 <style lang="scss" scoped>
+
+  .login_but:hover {
+    background-color: #1066ef;
+  }
+  .login_but {
+    cursor: pointer;
+    width: 132px;
+    height: 44px;
+    margin: 0 10px;
+    border-radius: 2px;
+    background-color: #2278FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      font-weight: 400;
+      font-size: 18px;
+      color: #FFFFFF;
+      line-height: 24px;
+      letter-spacing: 1px;
+    }
+  }
+
+.right_info_nine {
+  width: 46px;
+  height: 46px;
+  margin: 0 12px;
+  cursor: pointer;
+  border-radius: 0;
+  transition: border-radius 0.5s ease; /* 添加过渡效果 */
+}
+
+.right_info_nine:hover {
+  border-radius: 50%;
+}
 
 :deep(.el-tooltip__trigger:focus-visible) {
   outline: unset;
@@ -188,7 +244,7 @@ watch(() => prop.item, (newVal) => {
 
   .nav_r {
     justify-content: end;
-    width: 120px;
+    min-width: 120px;
   }
 
   .navLogo {
