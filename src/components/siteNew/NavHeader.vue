@@ -15,9 +15,11 @@
       </div>
     </div>
     <div class="flexRowAC nav_r">
-      <div class="login_but">
-        <span>登录/注册</span>
-      </div>
+      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
+        <div class="login_but">
+          <span>登录/注册</span>
+        </div>
+      </NuxtLink>
       <el-popover placement="bottom" trigger="click" popper-class="popover_panel">
         <template #reference>
           <img class="right_info_nine" src="@/assets/navheader/nightpointpng.png" />

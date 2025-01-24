@@ -1,113 +1,147 @@
 <template>
   <div class="pover_right">
     <div class="pover_apps">
-      <div class="pover_apps_item" @click="gotoApp('person')">
-        <img src="@/assets/navheader/person.png" alt="" />
-        <div class="pover_apps_item_name">
-          个人中心
+      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html?toPage=person" target="_blank">
+        <div class="pover_apps_item" @click="gotoApp('person')">
+          <img src="@/assets/navheader/person.png" alt="" />
+          <div class="pover_apps_item_name">
+            个人中心
+          </div>
         </div>
-      </div>
-      <div class="pover_apps_item">
-        <img src="@/assets/navheader/scl.png" alt="" />
-        <div class="pover_apps_item_name">
-          生产力平台
+      </NuxtLink>
+      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
+        <div class="pover_apps_item">
+          <img src="@/assets/navheader/scl.png" alt="" />
+          <div class="pover_apps_item_name">
+            生产力平台
+          </div>
         </div>
-      </div>
-      <div class="pover_apps_item">
-        <img src="@/assets/navheader/default.png" alt="" />
-        <div class="pover_apps_item_name">
-          OORT.DA
+      </NuxtLink>
+      <NuxtLink to="https://da.oortcloudsmart.com/zh/" target="_blank">
+        <div class="pover_apps_item">
+          <img src="@/assets/navheader/oortda.png" alt="" />
+          <div class="pover_apps_item_name">
+            OORT.DA
+          </div>
         </div>
-      </div>
-      <div class="pover_apps_item">
-        <img src="@/assets/navheader/default.png" alt="" />
-        <div class="pover_apps_item_name">
-          VLStream
+      </NuxtLink>
+      <NuxtLink to="https://vls.oortcloudsmart.com/zh/" target="_blank">
+        <div class="pover_apps_item">
+          <img src="@/assets/navheader/vls.png" alt="" />
+          <div class="pover_apps_item_name">
+            VLStream
+          </div>
         </div>
-      </div>
-      <div class="pover_apps_item">
-        <img src="@/assets/navheader/default.png" alt="" />
-        <div class="pover_apps_item_name">
-          OORT.SH
+      </NuxtLink>
+      <NuxtLink to=" https://sh.oortcloudsmart.com/zh/" target="_blank">
+        <div class="pover_apps_item">
+          <img src="@/assets/navheader/oortsh.png" alt="" />
+          <div class="pover_apps_item_name">
+            OORT.SH
+          </div>
         </div>
-      </div>
+      </NuxtLink>
       <div class="pover_apps_item">
-        <img src="@/assets/navheader/default.png" alt="" />
+        <img src="@/assets/navheader/oortone.png" alt="" />
         <div class="pover_apps_item_name">
           OortCloudOne
         </div>
       </div>
-      <div class="pover_apps_item">
-        <img src="@/assets/navheader/yp.png" alt="" />
-        <div class="pover_apps_item_name">
-          云盘
+      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
+        <div class="pover_apps_item">
+          <img src="@/assets/navheader/yp.png" alt="" />
+          <div class="pover_apps_item_name">
+            云盘
+          </div>
         </div>
-      </div>
-      <div class="pover_apps_item">
-        <img src="@/assets/navheader/yxc.png" alt="" />
-        <div class="pover_apps_item_name">
-          云相册
+      </NuxtLink>
+      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
+        <div class="pover_apps_item">
+          <img src="@/assets/navheader/yxc.png" alt="" />
+          <div class="pover_apps_item_name">
+            云相册
+          </div>
         </div>
-      </div>
-      <div class="pover_apps_item">
-        <img src="@/assets/navheader/ywd.png" alt="" />
-        <div class="pover_apps_item_name">
-          云文档
+      </NuxtLink>
+      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
+        <div class="pover_apps_item">
+          <img src="@/assets/navheader/ywd.png" alt="" />
+          <div class="pover_apps_item_name">
+            云文档
+          </div>
         </div>
-      </div>
-      <div class="pover_apps_item">
-        <img src="@/assets/navheader/wqd.png" alt="" />
-        <div class="pover_apps_item_name">
-          云清单
+      </NuxtLink>
+      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
+        <div class="pover_apps_item">
+          <img src="@/assets/navheader/wqd.png" alt="" />
+          <div class="pover_apps_item_name">
+            云清单
+          </div>
         </div>
-      </div>
-      <div class="pover_apps_item">
-        <img src="@/assets/navheader/ybwl.png" alt="" />
-        <div class="pover_apps_item_name">
-          云备忘录
+      </NuxtLink>
+      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
+        <div class="pover_apps_item">
+          <img src="@/assets/navheader/ybwl.png" alt="" />
+          <div class="pover_apps_item_name">
+            云备忘录
+          </div>
         </div>
-      </div>
-      <div class="pover_apps_item">
-        <img src="@/assets/navheader/dzyj.png" alt="" />
-        <div class="pover_apps_item_name">
-          电子邮件
+      </NuxtLink>
+      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
+        <div class="pover_apps_item">
+          <img src="@/assets/navheader/dzyj.png" alt="" />
+          <div class="pover_apps_item_name">
+            电子邮件
+          </div>
         </div>
-      </div>
-      <div class="pover_apps_item">
-        <img src="@/assets/navheader/txl.png" alt="" />
-        <div class="pover_apps_item_name">
-          通讯录
+      </NuxtLink>
+      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
+        <div class="pover_apps_item">
+          <img src="@/assets/navheader/txl.png" alt="" />
+          <div class="pover_apps_item_name">
+            通讯录
+          </div>
         </div>
-      </div>
-      <div class="pover_apps_item">
-        <img src="@/assets/navheader/default.png" alt="" />
-        <div class="pover_apps_item_name">
-          新闻推送
+      </NuxtLink>
+      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
+        <div class="pover_apps_item">
+          <img src="@/assets/navheader/news.png" alt="" />
+          <div class="pover_apps_item_name">
+            新闻推送
+          </div>
         </div>
-      </div>
-      <div class="pover_apps_item">
-        <img src="@/assets/navheader/ykt.png" alt="" />
-        <div class="pover_apps_item_name">
-          云课堂
+      </NuxtLink>
+      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
+        <div class="pover_apps_item">
+          <img src="@/assets/navheader/ykt.png" alt="" />
+          <div class="pover_apps_item_name">
+            云课堂
+          </div>
         </div>
-      </div>
-      <div class="pover_apps_item">
-        <img src="@/assets/navheader/jstx.png" alt="" />
-        <div class="pover_apps_item_name">
-          即时通讯
+      </NuxtLink>
+      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
+        <div class="pover_apps_item">
+          <img src="@/assets/navheader/jstx.png" alt="" />
+          <div class="pover_apps_item_name">
+            即时通讯
+          </div>
         </div>
-      </div>
-      <div class="pover_apps_item">
-        <img src="@/assets/navheader/zhsp.png" alt="" />
-        <div class="pover_apps_item_name">
-          智慧审批
+      </NuxtLink>
+      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
+        <div class="pover_apps_item">
+          <img src="@/assets/navheader/zhsp.png" alt="" />
+          <div class="pover_apps_item_name">
+            智慧审批
+          </div>
         </div>
-      </div>
+      </NuxtLink>
     </div>
     <div class="more_apps">
-      <div class="more_apps_tips">
-        <span>更多OORT应用</span>
-      </div>
+      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
+        <div class="more_apps_tips">
+          <span>更多OORT应用</span>
+        </div>
+      </NuxtLink>
     </div>
     <!-- <div class="pover_more">
       <div class="pover_more_item" @click="moreOpr('resetPassword')">
@@ -187,7 +221,6 @@ const gotoApp = (action) => {
   img {
     width: 48px;
     height: 48px;
-    border-radius: 100%;
   }
   div {
     margin-top: 10px;
