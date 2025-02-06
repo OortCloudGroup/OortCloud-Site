@@ -437,8 +437,8 @@ const viewPath = (path) => {
 
     .bse_t {
       color: #ADB5BD;
-      font-size: 14px;
-      line-height: 22px;
+      font-size: 18px;
+      line-height: 28px;
       text-align: left;
 
     }
@@ -452,7 +452,7 @@ const viewPath = (path) => {
   .b_ser_off_imgBox {
     align-items: flex-start;
     gap: 16px;
-    padding-bottom: 40px;
+    //padding-bottom: 40px;
     cursor: pointer;
   }
 

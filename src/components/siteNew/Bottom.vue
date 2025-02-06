@@ -424,8 +424,8 @@ const viewPath = (path) => {
 
     .bse_t {
       color: #ADB5BD;
-      font-size: 14px;
-      line-height: 22px;
+      font-size: 18px;
+      line-height: 28px;
       text-align: left;
 
     }
