@@ -2,7 +2,7 @@
   <div class="personalPageOut">
     <div class="personalPage flexRowAC">
       <div class="personalL menuBox">
-        <div v-for="(item,i) in arr" :key="i" class="menuItem flexRowAC" :class="{act:i===iact}" @click="iact=i">
+        <div v-for="(item,i) in arr" :key="i" class="menuItem flexRowAC" :class="{act:i===iact}" @click="menuClick(i)">
           <img class="menuImg" :src="item.img" alt="" />
           {{ item.t }}
         </div>
@@ -49,7 +49,7 @@ import PersonalCenterLogin from '@/pages/zh/siteNew/personalCenter/personalCente
 definePageMeta({
   layout: 'site-new'
 })
-let iact = ref(2)
+let iact = ref(0)
 let arr = ref([])
 arr.value = [
   { t: '个人信息', img: per_l1 },
@@ -61,6 +61,14 @@ arr.value = [
   { t: '个人地址本', img: per_l7 },
   { t: '标签', img: per_l8 }
 ]
+
+const menuClick = (index) => {
+  if (index === 3) {
+    navigateTo('/zh/siteNew/personalCenterOrder')
+  } else {
+    iact.value = index
+  }
+}
 </script>
 <style lang="scss" scoped>
 .personalPageOut {

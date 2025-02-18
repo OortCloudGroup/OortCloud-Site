@@ -189,6 +189,7 @@ let handleCurrentChange = (val: number) => {
 
 .invoiceCont {
   .invA {
+    height: 100%;
     text-align: center;
     border-radius: 0px 0px 0px 0px;
 
@@ -248,7 +249,7 @@ let handleCurrentChange = (val: number) => {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 180px;
+    height: 100%;
     border-left: 1px solid #D8D8D8;
 
     .btn {
