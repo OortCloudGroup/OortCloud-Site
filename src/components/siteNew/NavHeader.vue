@@ -8,10 +8,11 @@
         v-for="(itd,i) in navList"
         :key="i"
         class="nav_title"
-        :class="{nav_t_line:isActPath===itd.path&&!isActPath.includes('siteNew') || itd.title===propTemp}"
+        :class="{nav_t_line:isActPath===itd.path&&(itd.title.includes(propTemp)|| i>2)}"
         @click="navClick(itd.path,itd.title )"
       >
-        {{ itd.title }}
+        <span v-if="propSel?.classify===itd.title">{{ propSel.subC }}</span>
+        <span v-else>{{ itd.title }}</span>
       </div>
     </div>
     <div class="flexRowAC nav_r">
@@ -52,7 +53,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, defineEmits, computed, onUnmounted } from 'vue'
+import { ref, onMounted, defineEmits, computed, onUnmounted, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import commonRightPoPover from './components/commonRightPoPover.vue'
 // import { useI18n } from 'vue-i18n'
@@ -60,8 +61,9 @@ import commonRightPoPover from './components/commonRightPoPover.vue'
 // const { locale, t } = useI18n()
 // let lang = ref('')
 // let langText = ref('')
-const prop = defineProps(['item'])
+const prop = defineProps(['item', 'sel'])
 const propTemp = ref(prop.item)
+const propSel = ref(prop.sel)
 const router = useRouter()
 const route = useRoute()
 const isActPath = computed(() => {
@@ -123,7 +125,14 @@ onUnmounted(() => {
 // })
 watch(() => prop.item, (newVal) => {
   propTemp.value = newVal
-})
+}, { immediate: true })
+
+watch(() => prop.sel, (newVal) => {
+  propSel.value = newVal
+  if (!newVal && route?.meta?.mate) {
+    propSel.value = route?.meta?.mate
+  }
+}, { immediate: true })
 
 </script>
 
