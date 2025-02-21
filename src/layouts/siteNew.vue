@@ -1,6 +1,6 @@
 <template>
   <div class="defalut_layout">
-    <NavHeader class="defalut_hea" @handle="handle" />
+    <NavHeader class="defalut_hea" :sel="sel" @handle="handle" />
     <div class="page_body">
       <slot />
       <Bottom />
@@ -12,20 +12,23 @@
       :show-close="false"
       class="headDia"
     >
-      <NavHeader v-if="hVisiT" :item="hVisiT" class="defalut_hea" @handle="handle" />
-      <industry :item="hVisiT" />
+      <NavHeader v-if="hVisiT" :sel="sel" :item="hVisiT" class="defalut_hea" @handle="handle" />
+      <industry :item="hVisiT" :sel="sel" @handle="handleI" />
     </el-dialog>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import Industry from '@/pages/zh/siteNew/industry.vue'
 import NavHeader from '@/components/siteNew/NavHeader.vue'
 import Bottom from '@/components/siteNew/Bottom.vue'
 
+const router = useRouter()
 let hVisi = ref(false)
 let hVisiT = ref('')
+let sel = ref('')
 
 const handle = (t) => {
   if (t === '应用程序' || t === '行业' || t === '社区') {
@@ -34,6 +37,13 @@ const handle = (t) => {
   } else {
     hVisi.value = false
   }
+}
+
+// 选择
+const handleI = (val) => {
+  hVisi.value = false
+  sel.value = val
+  router.push(val?.path)
 }
 
 </script>

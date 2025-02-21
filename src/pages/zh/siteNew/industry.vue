@@ -5,14 +5,9 @@
         <img class="idtImg" src="@/assets/homeImg/industry_i1.png" alt="" />行业
       </div>
       <div class="flexRowAC conBox">
-        <div>安保</div>
-        <div>物业</div>
-        <div>园区</div>
-        <div>街道</div>
-        <div>消防</div>
-        <div>律所</div>
-        <div>停车</div>
-        <div>酒厂</div>
+        <div v-for="(item,i) in idtArr1" :key="i" @click="indClick(item)">
+          {{ item }}
+        </div>
       </div>
       <div class="flexRowAC bb idtBox">
         <img class="idtImg" src="@/assets/homeImg/industry_i2.png" alt="" />职能
@@ -73,6 +68,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref, watch } from 'vue'
+
 import industry_ti1 from '@/assets/homeImg/industry_ti1.png'
 import industry_ti2 from '@/assets/homeImg/industry_ti2.png'
 import industry_ti3 from '@/assets/homeImg/industry_ti3.png'
@@ -85,9 +82,13 @@ definePageMeta({
   layout: 'site-new'
 })
 const props = defineProps(['item'])
+const emits = defineEmits(['handle'])
 let itemTemp = ref('')
 let idtArr = ref([])
-
+let idtArr1 = ref([])
+idtArr1.value = [
+  '物业', '园区', '街道', '消防', '律所', '停车', '酒厂'
+]
 idtArr.value = [
   {
     t: '个人效率工具',
@@ -183,6 +184,16 @@ idtArr.value = [
     ]
   }
 ]
+
+// 行业
+const indClick = (val) => {
+  let obj = {
+    classify: '行业',
+    path: '/zh/siteNew/industy/street',
+    subC: val
+  }
+  emits('handle', obj)
+}
 
 watch(() => props.item, (newVal: any) => {
   itemTemp.value = newVal
