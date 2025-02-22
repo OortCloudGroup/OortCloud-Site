@@ -163,7 +163,7 @@
               </div>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text hover" @click="viewPath('/siteNew/contactUs',2)">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/contactUs',2)">
                 联系我们
               </div>
             </div>
