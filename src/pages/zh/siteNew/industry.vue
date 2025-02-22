@@ -1,11 +1,11 @@
 <template>
   <div class="industryPage">
-    <div v-if="itemTemp==='行业'" class="w1380 indT">
-      <div class="flexRowAC bb idtBox">
+    <div v-if="itemTemp==='行业' || itemTemp==='街道'" class="w1380 indT">
+      <div class="flexRowAC bb idtBox" @click="indClick('行业','/zh/siteNew','行业')">
         <img class="idtImg" src="@/assets/homeImg/industry_i1.png" alt="" />行业
       </div>
       <div class="flexRowAC conBox">
-        <div v-for="(item,i) in idtArr1" :key="i" @click="indClick(item)">
+        <div v-for="(item,i) in idtArr1" :key="i" @click="indClick('行业','/zh/siteNew/industy/street',item)">
           {{ item }}
         </div>
       </div>
@@ -186,10 +186,10 @@ idtArr.value = [
 ]
 
 // 行业
-const indClick = (val) => {
+const indClick = (cla, path, val) => {
   let obj = {
-    classify: '行业',
-    path: '/zh/siteNew/industy/street',
+    classify: cla,
+    path,
     subC: val
   }
   emits('handle', obj)

@@ -8,11 +8,10 @@
         v-for="(itd,i) in navList"
         :key="i"
         class="nav_title"
-        :class="{nav_t_line:isActPath===itd.path&&(itd.title.includes(propTemp)|| i>2)}"
+        :class="{nav_t_line:isActPath===itd.path&&(itd.title.includes(propTemp)|| i>2 || i<3&&itd.path!=='/zh/siteNew')}"
         @click="navClick(itd.path,itd.title )"
       >
-        <span v-if="propSel?.classify===itd.title">{{ propSel.subC }}</span>
-        <span v-else>{{ itd.title }}</span>
+        <span>{{ itd.title }}</span>
       </div>
     </div>
     <div class="flexRowAC nav_r">
@@ -63,7 +62,6 @@ import commonRightPoPover from './components/commonRightPoPover.vue'
 // let langText = ref('')
 const prop = defineProps(['item', 'sel'])
 const propTemp = ref(prop.item)
-const propSel = ref(prop.sel)
 const router = useRouter()
 const route = useRoute()
 const isActPath = computed(() => {
@@ -77,13 +75,14 @@ const isActPath = computed(() => {
   return routePath
 })
 const emit = defineEmits(['handle'])
-const navList = ref([
+let menu = [
   { title: '应用程序', path: '/zh/siteNew/' },
   { title: '行业', path: '/zh/siteNew/' },
   { title: '社区', path: '/zh/siteNew/' },
   { title: '定价', path: '/zh/siteNew/price' },
   { title: '联系方式', path: '/zh/siteNew/contactUs' }
-])
+]
+const navList = ref(menu)
 
 // const toggleLang = (val) => {
 //   lang.value = val === 'en' ? 'en' : 'zh'
@@ -127,10 +126,20 @@ watch(() => prop.item, (newVal) => {
   propTemp.value = newVal
 }, { immediate: true })
 
-watch(() => prop.sel, (newVal) => {
-  propSel.value = newVal
-  if (!newVal && route?.meta?.mate) {
-    propSel.value = route?.meta?.mate
+let menuStreet = [
+  { title: '街道', path: '/zh/siteNew/industy/street' },
+  { title: '概述', path: '/zh/siteNew/industy/overview' },
+  { title: '功能', path: '/zh/siteNew/' },
+  { title: '下载', path: '/zh/siteNew/price' },
+  { title: '硬件', path: '/zh/siteNew/contactUs' }
+]
+watch(isActPath, (newVal) => {
+  // 街道
+  if (newVal === '/zh/siteNew/industy/street' || route?.meta?.mate) {
+    navList.value = menuStreet
+  }
+  if (newVal === '/zh/siteNew') {
+    navList.value = menu
   }
 }, { immediate: true })
 

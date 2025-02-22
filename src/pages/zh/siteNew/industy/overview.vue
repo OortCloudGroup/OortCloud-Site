@@ -116,7 +116,11 @@ import jstx from '@/assets/navheader/dzyj.png'
 import wqd from '@/assets/navheader/wqd.png'
 
 definePageMeta({
-  layout: 'site-new'
+  layout: 'site-new',
+  mate: {
+    classify: '行业',
+    subC: '概述'
+  }
 })
 let p5Arr = ref([])
 let apps = ref([])
