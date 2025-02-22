@@ -238,7 +238,7 @@
       <a
         href="https://beian.miit.gov.cn/"
         target="_blank"
-        style="opacity: 1; font-size: 14px;color:#fff;"
+        class="icpBox_t"
       >粤ICP备19160414号</a>
     </div>
   </div>
@@ -473,6 +473,12 @@ const viewPath = (path) => {
   .icpBox_img {
     width: auto;
     height: 30px;
+  }
+
+  .icpBox_t {
+    opacity: 1;
+    font-size: 14px;
+    color: #fff;
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="nav flexRowAC" :class="{navFixed:isFixed}">
-    <div style="width: 300px;text-align: center;">
+    <div class="navImg">
       <img class="navLogo" src="@/assets/bottomImg/logo1.png" alt="" />
     </div>
     <div class="flexRowAC nav_t">
@@ -233,7 +233,7 @@ watch(isActPath, (newVal) => {
   position: relative;
   width: 36px;
   margin: auto;
-  top: 0px;
+  top: 10px;
   border-bottom: 4px solid transparent;
 }
 
@@ -256,15 +256,18 @@ watch(isActPath, (newVal) => {
   .nav_t {
     cursor: pointer;
     gap: 28px;
-    width: 600px;
     font-size: 18px;
     color: #5C5C5C;
     font-weight: 700;
   }
 
+  .navImg {
+    width: 200px;
+  }
+
   .nav_r {
     justify-content: end;
-    min-width: 120px;
+    width: 200px;
   }
 
   .navLogo {

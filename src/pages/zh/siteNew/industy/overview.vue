@@ -11,9 +11,9 @@
           工作任务闭环、精细化管理、指挥调度一键视频“看得见、呼得通”
         </div>
         <div class="flexRowAC useBox">
-          <div class="seeMore">
+          <nuxt-link to="/zh/siteNew/industy/buy" class="seeMore flexRowAC">
             立即试用
-          </div>
+          </nuxt-link>
           <div class="seeMore u1">
             安排演示
           </div>
@@ -77,9 +77,9 @@
       <div class="VLStream v2">
         <span class="v2_sub">释放</span> 您的无限增潜能
       </div>
-      <div class="pcIt_tbtn">
+      <nuxt-link to="/zh/siteNew/industy/buy" class="pcIt_tbtn flexRowAC">
         立即使用
-      </div>
+      </nuxt-link>
     </div>
     <div class="productBox w1380">
       <div class="proT">
@@ -665,6 +665,7 @@ apps.value = [
 }
 
 .pcIt_tbtn {
+  justify-content: center;
   width: 168px;
   margin: 0 auto;
   margin-top: 16px;
