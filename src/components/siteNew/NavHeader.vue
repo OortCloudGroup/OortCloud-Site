@@ -8,7 +8,7 @@
         v-for="(itd,i) in navList"
         :key="i"
         class="nav_title"
-        :class="{nav_t_line:isActPath===itd.path&&(itd.title.includes(propTemp)|| i>2 || itd.classify)}"
+        :class="{nav_t_line:isActPath===itd.path&&(itd.title.includes(propTemp) || i>2 || itd.classify)}"
         @click="navClick(itd.path,itd.title )"
       >
         <span>{{ itd.title }}</span>
@@ -76,9 +76,9 @@ const isActPath = computed(() => {
 })
 const emit = defineEmits(['handle'])
 let menu = [
-  { title: '应用程序', path: '/zh/siteNew/' },
-  { title: '行业', path: '/zh/siteNew/' },
-  { title: '社区', path: '/zh/siteNew/' },
+  { title: '应用程序', path: '/zh/siteNew' },
+  { title: '行业', path: '/zh/siteNew' },
+  { title: '社区', path: '/zh/siteNew' },
   { title: '定价', path: '/zh/siteNew/price' },
   { title: '联系方式', path: '/zh/siteNew/contactUs' }
 ]

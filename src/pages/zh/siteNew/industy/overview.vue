@@ -41,7 +41,7 @@
           “看得见、呼得通”
         </div>
       </div>
-      <img class="approval_c1" src="@/assets/street/street_1.png" alt="" />
+      <img class="approval_c1" src="@/assets/street/overview3.png" alt="" />
     </div>
     <div class="platTop w1380">
       <div class="VLStream">
