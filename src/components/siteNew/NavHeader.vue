@@ -8,7 +8,7 @@
         v-for="(itd,i) in navList"
         :key="i"
         class="nav_title"
-        :class="{nav_t_line:isActPath===itd.path&&(itd.title.includes(propTemp)|| i>2 || i<3&&itd.path!=='/zh/siteNew')}"
+        :class="{nav_t_line:isActPath===itd.path&&(itd.title.includes(propTemp)|| i>2 || itd.classify)}"
         @click="navClick(itd.path,itd.title )"
       >
         <span>{{ itd.title }}</span>
@@ -127,11 +127,11 @@ watch(() => prop.item, (newVal) => {
 }, { immediate: true })
 
 let menuStreet = [
-  { title: '街道', path: '/zh/siteNew/industy/street' },
-  { title: '概述', path: '/zh/siteNew/industy/overview' },
-  { title: '功能', path: '/zh/siteNew/' },
-  { title: '下载', path: '/zh/siteNew/price' },
-  { title: '硬件', path: '/zh/siteNew/contactUs' }
+  { title: '街道', classify: 'streeet', path: '/zh/siteNew/industy/street' },
+  { title: '概述', classify: 'streeet', path: '/zh/siteNew/industy/overview' },
+  { title: '功能', classify: 'streeet', path: '/zh/siteNew/industy/download' },
+  { title: '下载', classify: 'streeet', path: '/zh/siteNew/industy/download' },
+  { title: '硬件', classify: 'streeet', path: '/zh/siteNew/industy/street' }
 ]
 watch(isActPath, (newVal) => {
   // 街道
@@ -233,7 +233,7 @@ watch(isActPath, (newVal) => {
   position: relative;
   width: 36px;
   margin: auto;
-  top: 28px;
+  top: 0px;
   border-bottom: 4px solid transparent;
 }
 
