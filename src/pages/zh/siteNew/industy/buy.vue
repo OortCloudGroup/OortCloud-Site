@@ -4,7 +4,7 @@
       <div class="VLStream">
         选择应用
       </div>
-      <el-input v-model="value" class="bottom_pro_address" placeholder="订阅邮箱，请输入您的邮箱" />
+      <el-input v-model="value" :prefix-icon="Search" class="bottom_pro_address" placeholder="输入关键字搜索应用" />
     </div>
     <div class="flexRowAC buyAppsOut">
       <div v-for="(item,i) in appsList" :key="i" class="buyAppsList">
@@ -59,6 +59,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import { Search } from '@element-plus/icons-vue'
 import price_c1 from '@/assets/software/price_c1.png'
 
 definePageMeta({

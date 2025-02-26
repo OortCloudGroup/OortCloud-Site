@@ -14,9 +14,9 @@
         简单、高效、又<span style="color: #2278FF;">实惠</span>!
       </div>
       <div class="flexRowAC useBox">
-        <div class="seeMore">
+        <nuxt-link class="seeMore" to="/zh/siteNew/industy/buy">
           立即使用-完全免费
-        </div>
+        </nuxt-link>
         <div class="seeMore u1">
           安排演示
         </div>
@@ -189,9 +189,9 @@
         <span style="color: #2278FF;">释放</span> 您的无限增潜能
       </div>
       <div class="flexRowAC useBox">
-        <div class="seeMore">
+        <nuxt-link class="seeMore" to="/zh/siteNew/industy/buy">
           现在开始-免费
-        </div>
+        </nuxt-link>
       </div>
     </div>
   </div>
