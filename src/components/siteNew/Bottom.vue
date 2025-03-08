@@ -207,7 +207,7 @@
             </div>
             <div class="line" />
           </div>
-          <div class="bse_t">
+          <div class="bse_t" style="text-indent: 2em;">
             OortCloud 致力于为企业管理提供高效智能的开源解决方案，是全球业内高速成长 的软件服务商之一，逾七百五十万用户选择OortCloud 进行数字化升级。通过一系 列全业务链覆盖、高度集成、简单易用的商业应用，助力企业实现信息化改革、降本增效并释放公司增长潜力。
           </div>
           <div class="bse_t bse_d">
