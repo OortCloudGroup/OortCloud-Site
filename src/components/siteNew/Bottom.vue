@@ -63,9 +63,9 @@
               </div>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text">
+              <a class="b_ser_text hover" href="https://github.com/OortCloudGroup" target="_blank">
                 GitHub
-              </div>
+              </a>
             </div>
           </div>
           <div class="b_ser_p_l">
