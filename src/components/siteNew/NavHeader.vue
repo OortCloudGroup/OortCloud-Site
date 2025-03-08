@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="flexRowAC nav_r">
-      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
+      <NuxtLink to="http://oort.oortcloudsmart.com:23410" target="_blank">
         <div class="login_but">
           <span>登录/注册</span>
         </div>
