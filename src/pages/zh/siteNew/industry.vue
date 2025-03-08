@@ -40,7 +40,7 @@
         <div class="flexRowAC bb idtBox">
           <img class="idtImg" :src="item.img" alt="" />{{ item.t }}
         </div>
-        <div v-for="(dd,tt) in item.d" :key="tt" class="appT_t">
+        <div v-for="(dd,tt) in item.d" :key="tt" class="appT_t" @click="softClick(dd)">
           {{ dd.t }}
         </div>
       </div>
@@ -87,7 +87,7 @@ let itemTemp = ref('')
 let idtArr = ref([])
 let idtArr1 = ref([])
 idtArr1.value = [
-  '物业', '园区', '街道', '消防', '律所', '停车', '酒厂'
+  '安保', '物业', '园区', '街道', '消防', '律所', '停车', '酒厂'
 ]
 idtArr.value = [
   {
@@ -180,7 +180,7 @@ idtArr.value = [
       { t: '无人值守管理柜' },
       { t: '自助机' },
       { t: 'AI宣传员' },
-      { t: '人工智能据像机' }
+      { t: 'AI摄像机' }
     ]
   }
 ]
@@ -193,6 +193,13 @@ const indClick = (cla, path, val) => {
     subC: val
   }
   emits('handle', obj)
+}
+
+// 行业
+const softClick = (t) => {
+  if (t === '问卷调查') {
+    navigateTo('/zh/siteNew/software/problemFeedback')
+  }
 }
 
 watch(() => props.item, (newVal: any) => {
