@@ -63,6 +63,9 @@
           </div>
         </div>
       </div>
+      <div class="VLStream v1_all">
+        查看所有 应用
+      </div>
     </div>
     <div class="productBox use_t w1380">
       <div class="proT" style="padding-bottom: 20px;">
@@ -208,6 +211,15 @@ apps.value = [
       font-weight: 400;
       font-size: 32px;
       color: #717781;
+      padding-bottom: 40px;
+    }
+
+    &.v1_all{
+      cursor: pointer;
+      padding-top: 30px;
+      font-weight: 700;
+      font-size: 20px;
+      color: #2278FF;
     }
 
     &.v2 {
@@ -323,6 +335,7 @@ apps.value = [
   }
 
   .cl_d {
+    white-space: nowrap;
     padding-bottom: 60px;
     color: #717781;
     font-size: 20px;
@@ -740,7 +753,7 @@ apps.value = [
   }
 
   .appT2 {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 16px;
     color: #97A3B6;
   }

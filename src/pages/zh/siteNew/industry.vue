@@ -218,7 +218,7 @@ watch(() => props.item, (newVal: any) => {
   text-decoration: underline;
 }
 
-.conBox:hover {
+.conBox>div:hover {
   cursor: pointer;
   color: #2656a5;
   text-decoration: underline;

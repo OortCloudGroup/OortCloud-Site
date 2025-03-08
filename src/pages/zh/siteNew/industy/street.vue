@@ -15,7 +15,7 @@
     </div>
     <div class="w1380 CloudBox ipcBox flexRowAC">
       <img class="approval_c1" src="@/assets/street/street_2.png" alt="" />
-      <div class="CloudL">
+      <div class="CloudL R">
         <div class="cl_t">
           执法记录仪<br />便携摄像头
         </div>
@@ -37,7 +37,7 @@
     </div>
     <div class="w1380 ipcView CloudBox flexRowAC">
       <img class="approval_c3" src="@/assets/street/street_4.png" alt="" />
-      <div class="CloudL" style="text-align: right">
+      <div class="CloudL R">
         <div class="cl_t">
           微信机器人
         </div>
@@ -118,6 +118,9 @@ definePageMeta({
   .CloudL {
     width: 500px;
   }
+  .CloudL.R{
+    text-align: left;
+  }
 
   .CloudR {
     width: 700px;
@@ -142,7 +145,6 @@ definePageMeta({
 
   .CloudL {
     width: 450px;
-    text-align: right;
     padding-top: 60px;
   }
 }
