@@ -196,9 +196,27 @@ const indClick = (cla, path, val) => {
 }
 
 // 行业
-const softClick = (t) => {
-  if (t === '问卷调查') {
-    navigateTo('/zh/siteNew/software/problemFeedback')
+const softClick = (val) => {
+  if (val.t === '问题反馈') {
+    let obj = {
+      classify: '行业',
+      path: '/zh/siteNew/software/problemFeedback'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '云备忘录') {
+    let obj = {
+      classify: '行业',
+      path: '/zh/siteNew/software/cloudMemo'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '云相册') {
+    let obj = {
+      classify: '行业',
+      path: '/zh/siteNew/software/cloudAlbum'
+    }
+    emits('handle', obj)
   }
 }
 
