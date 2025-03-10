@@ -1,12 +1,12 @@
 <template>
   <div class="home_page vls">
-    <div class="w1380 CloudBox flexRowAC">
+    <div class="w1380 w1200 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
-          问题反馈
+          云备忘录
         </div>
         <div class="cl_d">
-          提供快捷的用户问题或建议上报平台，支持视频、语音、 图片、文字等多种问题上报形式
+          支持速记、待办事项，协助您进行事务分类和管理
         </div>
         <div class="flexRowAC useBox">
           <div class="seeMore">
@@ -20,11 +20,54 @@
           </div>
         </div>
       </div>
-      <img class="approval_c1" src="@/assets/street/street_1.png" alt="" />
     </div>
     <div class="w1380">
       <div class="w1380 webBottomImg">
         <img class="wBImg" src="@/assets/VLimg2.0/CloudR0.png" alt="" />
+      </div>
+    </div>
+    <div class="w1380 CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_t">
+          管理任务清单
+        </div>
+        <div class="cl_d">
+          内置清单功能，帮你更直观便捷地管理任务及待办事项，摆脱工作、生活、学习中的繁杂事务，保持专注与高效。
+        </div>
+      </div>
+      <img class="cloudMemo_img1" src="@/assets/problemFeedback/cloudMemo_img1.png" alt="" />
+    </div>
+    <div class="w1380 CloudBox ipcBox flexRowAC">
+      <img class="cloudMemo_img1" src="@/assets/problemFeedback/cloudMemo_img2.png" alt="" />
+      <div class="CloudL R">
+        <div class="cl_t">
+          文档扫描识别
+        </div>
+        <div class="cl_d">
+          快捷清晰扫描所有纸张，无需动手即可将名片、文件、书刊等一切纸张扫描保存，更可智能对纸张文字进行OCR识别。
+        </div>
+      </div>
+    </div>
+    <div class="w1380 CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_t">
+          智能搜索笔记
+        </div>
+        <div class="cl_d">
+          无论是笔记、图片甚至是附件内的文字，智能搜索功能可以迅速帮你搜索到保存在备忘录中的任何记忆。
+        </div>
+      </div>
+      <img class="cloudMemo_img1" src="@/assets/problemFeedback/cloudMemo_img3.png" alt="" />
+    </div>
+    <div class="w1380 CloudBox flexRowAC">
+      <img class="cloudMemo_img1" src="@/assets/problemFeedback/cloudMemo_img4.png" alt="" />
+      <div class="CloudL R">
+        <div class="cl_t">
+          多端同步
+        </div>
+        <div class="cl_d">
+          多端数据实时更新同步，随时随地查看、处理笔记。
+        </div>
       </div>
     </div>
     <div class="productBox w1380">
@@ -33,55 +76,32 @@
       </div>
       <div class="card_container flexRowAC">
         <div class="card_1">
-          <img class="card_1_img" src="@/assets/problemFeedback/problemFeedback_i3.png" alt="" />
-          <p>新增故障报障，问题分类</p>
+          <img class="card_1_img" src="@/assets/problemFeedback/cloudMemo_i1.png" alt="" />
+          <div class="card_1_t">
+            全局速记
+          </div>
+          <p>打开速记开关，手机界面侧边滑出，快速记录笔记或待办，也可查看历史备忘录信息</p>
         </div>
         <div class="card_1">
-          <img class="card_1_img" src="@/assets/problemFeedback/problemFeedback_i3.png" alt="" />
-          <p>视频、语音、图片各形式问题 <br />上传反馈</p>
+          <img class="card_1_img" src="@/assets/problemFeedback/cloudMemo_i2.png" alt="" />
+          <div class="card_1_t">
+            多种录入方式
+          </div>
+          <p>支持语音转文本、手写涂鸦、拍照、图片以及文本录入，多种方式，随心选择</p>
         </div>
         <div class="card_1">
-          <img class="card_1_img" src="@/assets/problemFeedback/problemFeedback_i3.png" alt="" />
-          <p>反馈的问题处理过程记录</p>
+          <img class="card_1_img" src="@/assets/problemFeedback/cloudMemo_i3.png" alt="" />
+          <div class="card_1_t">
+            待办管理
+          </div>
+          <p>支持设置待办提醒、待办重要性，轻松管理，高效办公</p>
         </div>
         <div class="card_1">
-          <img class="card_1_img" src="@/assets/problemFeedback/problemFeedback_i3.png" alt="" />
-          <p>未完成、已完成问题列表展示</p>
-        </div>
-      </div>
-    </div>
-    <div class="productBox w1380">
-      <div class="proT">
-        应用场景
-      </div>
-      <div class="card_container flexRowAC">
-        <div class="card_2">
-          <div class="card_num">
-            01
+          <img class="card_1_img" src="@/assets/problemFeedback/cloudMemo_i4.png" alt="" />
+          <div class="card_1_t">
+            富文本编辑
           </div>
-          <div class="line" />
-          <p>电脑系统运行中遇到网速慢、网络连接问题等需要上报解决</p>
-        </div>
-        <div class="card_2">
-          <div class="card_num">
-            02
-          </div>
-          <div class="line" />
-          <p>网页、APP等运行过程中遇到的各类问题需要上报解决</p>
-        </div>
-        <div class="card_2">
-          <div class="card_num">
-            03
-          </div>
-          <div class="line" />
-          <p>移动终端使用过程中遇到的各类问题需要上报解决</p>
-        </div>
-        <div class="card_2">
-          <div class="card_num">
-            04
-          </div>
-          <div class="line" />
-          <p>各类设备使用过程中遇到的各类问题需要上报解决</p>
+          <p>支持布局编辑，选择多种字号并支持添加图片，轻松记录工作、生活内容</p>
         </div>
       </div>
     </div>
@@ -185,20 +205,11 @@ definePageMeta({
 .w1380 {
   width: 1380px;
   margin: 0 auto;
-}
 
-// 查看更多
-//.seeMore {
-//  display: inline-block;
-//  padding: 24px 50px;
-//  color: #fff;
-//  border: 1px solid #2278FF;
-//  border-radius: 8px;
-//  background: #2278FF;
-//  box-shadow: 0px 4px 10px 0px #FF5E1033;
-//  font-weight: bold;
-//  font-size: 18px;
-//}
+  &.w1200 {
+    width: 1200px;
+  }
+}
 
 .useBox {
   justify-content: center;
@@ -266,7 +277,7 @@ definePageMeta({
   align-items: flex-start;
 
   .cl_t {
-    letter-spacing: 0;
+    white-space: nowrap;
     padding-top: 30px;
     padding-bottom: 20px;
     color: #3D3D3D;
@@ -275,10 +286,14 @@ definePageMeta({
   }
 
   .cl_d {
-    width: 500px;
+    width: 460px;
     padding-bottom: 24px;
     color: #717781;
     font-size: 20px;
+  }
+
+  .CloudL {
+    padding-top: 60px;
   }
 }
 
@@ -532,6 +547,13 @@ definePageMeta({
       height: 88px;
       margin-bottom: 20px;
     }
+
+    .card_1_t{
+      font-weight: 700;
+      font-size: 24px;
+      color: #3D3D3D;
+      padding-bottom: 10px;
+    }
   }
 
   .card_2 {
@@ -579,4 +601,30 @@ definePageMeta({
     }
   }
 }
+
+.approval_c1 {
+  width: 734px;
+  height: auto;
+}
+
+.approval_c2 {
+  width: 702px;
+  height: auto;
+}
+
+.cloudMemo_img1 {
+  width: 690px;
+  height: auto;
+}
+
+.approval_c3 {
+  width: 587px;
+  height: auto;
+}
+
+.approval_c5 {
+  width: 634px;
+  height: auto;
+}
+
 </style>
