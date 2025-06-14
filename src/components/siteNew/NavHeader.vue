@@ -1,5 +1,5 @@
 <template>
-  <div class="nav flexRowAC" :class="{navFixed:isFixed}">
+  <div class="nav flexRowAC" :class="{navFixed:isSticky}">
     <div class="navImg">
       <img class="navLogo" src="@/assets/bottomImg/logo1.png" alt="" />
     </div>
@@ -52,7 +52,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, defineEmits, computed, onUnmounted, watch } from 'vue'
+import { ref, defineEmits, computed, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import commonRightPoPover from './components/commonRightPoPover.vue'
 // import { useI18n } from 'vue-i18n'
@@ -60,7 +60,7 @@ import commonRightPoPover from './components/commonRightPoPover.vue'
 // const { locale, t } = useI18n()
 // let lang = ref('')
 // let langText = ref('')
-const prop = defineProps(['item', 'sel'])
+const prop = defineProps(['item', 'sel', 'isSticky'])
 const propTemp = ref(prop.item)
 const router = useRouter()
 const route = useRoute()
@@ -92,25 +92,6 @@ const navClick = (path, t) => {
   emit('handle', t)
   router.push(path)
 }
-
-const isFixed = ref(false)
-function handleScroll() {
-  const winHeight = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-  if (winHeight < 100) {
-    isFixed.value = false
-  } else {
-    isFixed.value = true
-  }
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll, true)
-})
-
-onUnmounted(() => {
-  // 离开该页面需要移除，不然会报错
-  window.removeEventListener('scroll', handleScroll, true)
-})
 
 // watch(() => locale.value, () => {
 //   navList.value.forEach(item => {

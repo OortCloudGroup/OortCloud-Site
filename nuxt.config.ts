@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     autoImport: true // 默认自动引入
   },
 
-  modules: ['@element-plus/nuxt'],
+  modules: ['@element-plus/nuxt', '@vueuse/nuxt'],
 
   css: [
     'element-plus/dist/index.css'

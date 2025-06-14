@@ -1,6 +1,7 @@
 <template>
   <div class="defalut_layout">
-    <NavHeader class="defalut_hea" @handle="handle" />
+    <div ref="anchor" />
+    <NavHeader class="defalut_hea" :is-sticky="isSticky" @handle="handle" />
     <div class="page_body">
       <slot />
       <Bottom />
@@ -19,8 +20,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
+import { useScroll, useElementBounding } from '@vueuse/core'
 import Industry from '@/pages/zh/siteNew/industry.vue'
 import NavHeader from '@/components/siteNew/NavHeader.vue'
 import Bottom from '@/components/siteNew/Bottom.vue'
@@ -43,6 +45,15 @@ const handleI = (val) => {
   hVisi.value = false
   router.push(val?.path)
 }
+
+const anchor = ref(null)
+const { y } = useScroll(window)
+
+const { top: anchorTop } = useElementBounding(anchor)
+
+const isSticky = computed(() => {
+  return y.value > anchorTop.value
+})
 
 </script>
 
