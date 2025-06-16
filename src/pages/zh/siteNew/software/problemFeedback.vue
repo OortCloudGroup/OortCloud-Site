@@ -33,19 +33,19 @@
       </div>
       <div class="card_container flexRowAC">
         <div class="card_1">
-          <img class="card_1_img" src="@/assets/problemFeedback/problemFeedback_i3.png" alt="" />
+          <img class="card_1_img" src="@/assets/software/problemFeedback/wtfk_icon_xzgzbz.png" alt="" />
           <p>新增故障报障，问题分类</p>
         </div>
         <div class="card_1">
-          <img class="card_1_img" src="@/assets/problemFeedback/problemFeedback_i3.png" alt="" />
+          <img class="card_1_img" src="@/assets/software/problemFeedback/wtfk_icon_spyy.png" alt="" />
           <p>视频、语音、图片各形式问题 <br />上传反馈</p>
         </div>
         <div class="card_1">
-          <img class="card_1_img" src="@/assets/problemFeedback/problemFeedback_i3.png" alt="" />
+          <img class="card_1_img" src="@/assets/software/problemFeedback/wtfk_icon_fkwt.png" alt="" />
           <p>反馈的问题处理过程记录</p>
         </div>
         <div class="card_1">
-          <img class="card_1_img" src="@/assets/problemFeedback/problemFeedback_i3.png" alt="" />
+          <img class="card_1_img" src="@/assets/software/problemFeedback/wtfk_icon_wwc.png" alt="" />
           <p>未完成、已完成问题列表展示</p>
         </div>
       </div>
@@ -54,33 +54,17 @@
       <div class="proT">
         应用场景
       </div>
-      <div class="card_container flexRowAC">
-        <div class="card_2">
-          <div class="card_num">
-            01
-          </div>
-          <div class="line" />
+      <div class="card_container flexRowAC cj_h">
+        <div class="card_2 cj_al_s cj_bg_1">
           <p>电脑系统运行中遇到网速慢、网络连接问题等需要上报解决</p>
         </div>
-        <div class="card_2">
-          <div class="card_num">
-            02
-          </div>
-          <div class="line" />
+        <div class="card_2 cj_al_e cj_bg_2">
           <p>网页、APP等运行过程中遇到的各类问题需要上报解决</p>
         </div>
-        <div class="card_2">
-          <div class="card_num">
-            03
-          </div>
-          <div class="line" />
+        <div class="card_2 cj_al_s cj_bg_3">
           <p>移动终端使用过程中遇到的各类问题需要上报解决</p>
         </div>
-        <div class="card_2">
-          <div class="card_num">
-            04
-          </div>
-          <div class="line" />
+        <div class="card_2 cj_al_e cj_bg_4">
           <p>各类设备使用过程中遇到的各类问题需要上报解决</p>
         </div>
       </div>
@@ -536,17 +520,19 @@ definePageMeta({
 
   .card_2 {
     flex: 1;
-    padding: 24px;
-    height: 200px;
-    background: linear-gradient( 129deg, #ECF3FF 0%, #FFFFFF 100%);
-    font-weight: 400;
-    font-size: 20px;
-    color: #3D3D3D;
-    line-height: 30px;
-    text-align: left;
+    height: 252px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 94px 0 0 33px;
+    box-sizing: border-box;
 
     > p {
-      width: 200px;
+      width: 210px;
+      height: 90px;
+      font-size: 20px;
+      color: #3D3D3D;
+      line-height: 30px;
+      text-align: left;
     }
 
     .card_num{
@@ -577,6 +563,28 @@ definePageMeta({
         color: #2278FF;
       }
     }
+  }
+}
+
+.cj_h{
+  height: 310px;
+  .cj_al_s{
+    align-self: flex-start;
+  }
+  .cj_al_e{
+    align-self: flex-end;
+  }
+  .cj_bg_1{
+    background-image: url("@/assets/software/problemFeedback/wtfk_yycj1.png");
+  }
+  .cj_bg_2{
+    background-image: url("@/assets/software/problemFeedback/wtfk_yycj2.png");
+  }
+  .cj_bg_3{
+    background-image: url("@/assets/software/problemFeedback/wtfk_yycj3.png");
+  }
+  .cj_bg_4{
+    background-image: url("@/assets/software/problemFeedback/wtfk_yycj4.png");
   }
 }
 </style>

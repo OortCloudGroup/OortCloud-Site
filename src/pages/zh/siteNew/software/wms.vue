@@ -1,12 +1,15 @@
 <template>
   <div class="home_page vls">
-    <div class="w1380 w1200 CloudBox flexRowAC">
+    <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
-          云备忘录
+          WMS
+          <div>
+            <span class="cl_t_b">AI</span> 无人值守仓库
+          </div>
         </div>
-        <div class="cl_d">
-          支持速记、待办事项，协助您进行事务分类和管理
+        <div class="cl_t_d">
+          任务管理支持任务发起、角色指定和进度跟踪，清晰展示紧急度、 逾期情况和待办时间，并提供提醒和进度查询功能。
         </div>
         <div class="flexRowAC useBox flexJSSta">
           <div class="seeMore">
@@ -20,6 +23,7 @@
           </div>
         </div>
       </div>
+      <img class="cloudAlbum_bg" src="@/assets/software/wms/wms_bg.png" alt="" />
     </div>
     <div class="w1380">
       <div class="w1380 webBottomImg">
@@ -29,79 +33,79 @@
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
-          管理任务清单
+          库存管理
         </div>
         <div class="cl_d">
-          内置清单功能，帮你更直观便捷地管理任务及待办事项，摆脱工作、生活、学习中的繁杂事务，保持专注与高效。
+          <div>
+            <div class="cl_d_t">
+              <span class="cl_d_t_title">多人、多级仓库</span>
+            </div>
+            <p class="cl_d_c">
+              支持多人、多级仓库管理；以及多个组织的物资在一个仓储中心的集中管理
+            </p>
+          </div>
+        </div>
+        <div class="cl_d">
+          <div>
+            <div class="cl_d_t">
+              <span class="cl_d_t_title">完整业务流程</span>
+            </div>
+            <p class="cl_d_c">
+              通过AI智能摄像机支持对收、发、调、盘、调整等完整库存业务的及时准确处理
+            </p>
+          </div>
         </div>
       </div>
-      <img class="cloudMemo_img1" src="@/assets/problemFeedback/cloudMemo_img1.png" alt="" />
+      <div class="cloudMemo_img1" />
     </div>
     <div class="w1380 CloudBox ipcBox flexRowAC">
-      <img class="cloudMemo_img1" src="@/assets/problemFeedback/cloudMemo_img2.png" alt="" />
-      <div class="CloudL R">
+      <div class="cloudMemo_img1" />
+      <div class="CloudR">
         <div class="cl_t">
-          文档扫描识别
+          采购管理
         </div>
         <div class="cl_d">
-          快捷清晰扫描所有纸张，无需动手即可将名片、文件、书刊等一切纸张扫描保存，更可智能对纸张文字进行OCR识别。
-        </div>
-      </div>
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          智能搜索笔记
-        </div>
-        <div class="cl_d">
-          无论是笔记、图片甚至是附件内的文字，智能搜索功能可以迅速帮你搜索到保存在备忘录中的任何记忆。
-        </div>
-      </div>
-      <img class="cloudMemo_img1" src="@/assets/problemFeedback/cloudMemo_img3.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <img class="cloudMemo_img1" src="@/assets/problemFeedback/cloudMemo_img4.png" alt="" />
-      <div class="CloudL R">
-        <div class="cl_t">
-          多端同步
+          <div>
+            <div class="cl_d_t">
+              <span class="cl_d_t_title">采购全流程</span>
+            </div>
+            <p class="cl_d_c">
+              支持从采购申请、订货、到货入库、发票管理，以及采购结算的完整流程与过程跟踪
+            </p>
+          </div>
         </div>
         <div class="cl_d">
-          多端数据实时更新同步，随时随地查看、处理笔记。
+          <div>
+            <div class="cl_d_t">
+              <span class="cl_d_t_title">供应商协同</span>
+            </div>
+            <p class="cl_d_c">
+              实现企业采购执行全流程与供应商线上协同，信息互通，高效快捷
+            </p>
+          </div>
         </div>
       </div>
     </div>
     <div class="productBox w1380">
       <div class="proT">
-        核心功能
+        仓库无人值守应用示例
       </div>
-      <div class="card_container flexRowAC">
-        <div class="card_1">
-          <img class="card_1_img" src="@/assets/problemFeedback/cloudMemo_i1.png" alt="" />
-          <div class="card_1_t">
-            全局速记
-          </div>
-          <p>打开速记开关，手机界面侧边滑出，快速记录笔记或待办，也可查看历史备忘录信息</p>
+      <div class="flexRowAC">
+        <img class="w1380" src="@/assets/software/wms/wms_ckwrzs_bg.png" />
+      </div>
+    </div>
+    <div class="productBox w1380">
+      <div class="proT">
+        硬件产品
+      </div>
+      <div class="flexRowAC imgGap">
+        <div class="flexImgL">
+          <img src="@/assets/software/wms/vls_yjcp_jmup.png" />
+          <span class="flexImgDes">AI智能识别摄像机</span>
         </div>
-        <div class="card_1">
-          <img class="card_1_img" src="@/assets/problemFeedback/cloudMemo_i2.png" alt="" />
-          <div class="card_1_t">
-            多种录入方式
-          </div>
-          <p>支持语音转文本、手写涂鸦、拍照、图片以及文本录入，多种方式，随心选择</p>
-        </div>
-        <div class="card_1">
-          <img class="card_1_img" src="@/assets/problemFeedback/cloudMemo_i3.png" alt="" />
-          <div class="card_1_t">
-            待办管理
-          </div>
-          <p>支持设置待办提醒、待办重要性，轻松管理，高效办公</p>
-        </div>
-        <div class="card_1">
-          <img class="card_1_img" src="@/assets/problemFeedback/cloudMemo_i4.png" alt="" />
-          <div class="card_1_t">
-            富文本编辑
-          </div>
-          <p>支持布局编辑，选择多种字号并支持添加图片，轻松记录工作、生活内容</p>
+        <div class="flexImgR">
+          <img src="@/assets/software/wms/vls_yjcp_jmydyp.png" />
+          <span class="flexImgDes">仓库管理操作终端</span>
         </div>
       </div>
     </div>
@@ -283,6 +287,19 @@ definePageMeta({
     color: #3D3D3D;
     font-weight: bold;
     font-size: 78px;
+    .cl_t_b{
+      color: #2278FF;
+    }
+  }
+
+  .cl_t_d{
+    width: 580px;
+    height: 60px;
+    font-size: 20px;
+    color: #717781;
+    line-height: 30px;
+    text-align: left;
+    margin-bottom: 24px;
   }
 
   .cl_d {
@@ -294,6 +311,40 @@ definePageMeta({
 
   .CloudL {
     padding-top: 60px;
+  }
+
+  .CloudR{
+    margin-left: auto;
+  }
+
+  .CloudL,.CloudR{
+    .cl_d_t{
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      .cl_d_t_img{
+        width: 48px;
+        height: 48px;
+        margin-right: 16px;
+      }
+      .cl_d_t_title{
+        white-space: nowrap;
+        height: 36px;
+        font-weight: 700;
+        font-size: 32px;
+        color: #3D3D3D;
+        line-height: 36px;
+        text-align: left;
+      }
+    }
+    .cl_d_c{
+      width: 460px;
+      height: 72px;
+      font-size: 24px;
+      color: #717781;
+      line-height: 36px;
+      text-align: left;
+    }
   }
 }
 
@@ -532,6 +583,10 @@ definePageMeta({
   justify-content: space-between;
   gap: 20px;
 
+  &.car{
+    padding-bottom: 60px;
+  }
+
   .card_1 {
     flex: 1;
     padding: 40px 20px;
@@ -540,7 +595,12 @@ definePageMeta({
     border-radius: 24px 24px 24px 24px;
 
     >p{
-      height: 60px;
+      width: 240px;
+      margin: 0 auto;
+      height: 90px;
+      font-weight: 700;
+      font-size: 18px;
+      color: #3D3D3D;
     }
     .card_1_img {
       width: 88px;
@@ -558,17 +618,47 @@ definePageMeta({
 
   .card_2 {
     flex: 1;
-    padding: 24px;
-    height: 200px;
-    background: linear-gradient( 129deg, #ECF3FF 0%, #FFFFFF 100%);
-    font-weight: 400;
-    font-size: 20px;
-    color: #3D3D3D;
-    line-height: 30px;
-    text-align: left;
+    padding: 40px;
+    background: #E5F0FE;
+    border-radius: 24px 24px 24px 24px;
+    justify-content: space-between;
 
     > p {
       width: 200px;
+    }
+
+    .card_2_l {
+      text-align: left;
+      font-weight: 400;
+      font-size: 16px;
+      color: #717781;
+
+      .card_2_t1 {
+        font-weight: 700;
+        font-size: 32px;
+        color: #333333;
+      }
+
+    }
+
+    .card_2_r {
+      gap: 40px;
+
+      .card_file {
+        font-weight: 700;
+        font-size: 16px;
+        color: #333333;
+      }
+    }
+
+    .card_file {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .card_2_t_img {
+      width: 48px;
+      height: 48px;
     }
 
     .card_num{
@@ -607,14 +697,23 @@ definePageMeta({
   height: auto;
 }
 
+.cloudAlbum_bg {
+  width: 560px;
+  height: auto;
+  align-self: end;
+}
+
 .approval_c2 {
   width: 702px;
   height: auto;
 }
 
 .cloudMemo_img1 {
-  width: 690px;
-  height: auto;
+  width: 620px;
+  height: 480px;
+  background: #F4F8FF;
+  border-radius: 24px 24px 24px 24px;
+  align-self: center;
 }
 
 .approval_c3 {
@@ -625,6 +724,37 @@ definePageMeta({
 .approval_c5 {
   width: 634px;
   height: auto;
+}
+
+.imgGap{
+  gap: 20px;
+  .flexImgL{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+      width: 100%;
+    }
+  }
+
+  .flexImgR{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+      width: 100%;
+    }
+  }
+  .flexImgDes{
+    height: 36px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #3D3D3D;
+    line-height: 36px;
+    margin-top: 24px;
+  }
 }
 .flexJSSta{
   justify-self: flex-start;

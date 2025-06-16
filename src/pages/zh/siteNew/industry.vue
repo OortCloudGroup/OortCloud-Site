@@ -239,6 +239,55 @@ const softClick = (val) => {
     }
     emits('handle', obj)
   }
+  if (val.t === 'WMS') {
+    let obj = {
+      classify: '行业',
+      path: '/zh/siteNew/software/wms'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '任务管理') {
+    let obj = {
+      classify: '行业',
+      path: '/zh/siteNew/software/taskManagement'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '合同管理') {
+    let obj = {
+      classify: '行业',
+      path: '/zh/siteNew/software/contractManagement'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '文档管理') {
+    let obj = {
+      classify: '行业',
+      path: '/zh/siteNew/software/documentManagement'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '智能客服') {
+    let obj = {
+      classify: '行业',
+      path: '/zh/siteNew/software/intelligentCustomerService'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '知识论坛') {
+    let obj = {
+      classify: '行业',
+      path: '/zh/siteNew/software/knowledgeForum'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '问卷调查') {
+    let obj = {
+      classify: '行业',
+      path: '/zh/siteNew/software/questionnaireSurvey'
+    }
+    emits('handle', obj)
+  }
 }
 
 watch(() => props.item, (newVal: any) => {

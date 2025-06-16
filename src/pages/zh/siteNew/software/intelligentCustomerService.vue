@@ -1,24 +1,27 @@
 <template>
   <div class="home_page vls">
-    <div class="w1380 w1200 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          云备忘录
-        </div>
-        <div class="cl_d">
-          支持速记、待办事项，协助您进行事务分类和管理
-        </div>
-        <div class="flexRowAC useBox flexJSSta">
-          <div class="seeMore">
-            立即试用
+    <div class="blueBg">
+      <div class="w1380 CloudBox flexRowAC">
+        <div class="CloudL">
+          <div class="cl_t">
+            智能客服
           </div>
-          <div class="seeMore red">
-            立即购买
+          <div class="cl_d">
+            智能客服利用AI技术提供快速、精准的客户服务， 支持24/7在线，提升用户体验并节省人力成本
           </div>
-          <div class="seeMore u1">
-            安排演示
+          <div class="flexRowAC useBox">
+            <div class="seeMore">
+              立即试用
+            </div>
+            <div class="seeMore red">
+              立即购买
+            </div>
+            <div class="seeMore u1">
+              安排演示
+            </div>
           </div>
         </div>
+        <img class="cloudAlbum_bg" src="@/assets/software/intelligentCustomerService/znkf_bg.png" alt="" />
       </div>
     </div>
     <div class="w1380">
@@ -28,83 +31,49 @@
     </div>
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
-        <div class="cl_t">
-          管理任务清单
+        <div class="cl_l_w">
+          多种消息类型
         </div>
-        <div class="cl_d">
-          内置清单功能，帮你更直观便捷地管理任务及待办事项，摆脱工作、生活、学习中的繁杂事务，保持专注与高效。
+        <div class="cl_l_w_d">
+          支持文本、图片、语音、视频等丰富的消息类型
         </div>
       </div>
-      <img class="cloudMemo_img1" src="@/assets/problemFeedback/cloudMemo_img1.png" alt="" />
+      <img class="cloudMemo_img1" src="@/assets/software/intelligentCustomerService/znkf_dzxxlx_bg.png" alt="" />
     </div>
     <div class="w1380 CloudBox ipcBox flexRowAC">
-      <img class="cloudMemo_img1" src="@/assets/problemFeedback/cloudMemo_img2.png" alt="" />
+      <img class="cloudMemo_img1" src="@/assets/software/intelligentCustomerService/znkf_ddxz_bg.png" alt="" />
       <div class="CloudL R">
-        <div class="cl_t">
-          文档扫描识别
+        <div class="cl_r_w">
+          多端协作
         </div>
-        <div class="cl_d">
-          快捷清晰扫描所有纸张，无需动手即可将名片、文件、书刊等一切纸张扫描保存，更可智能对纸张文字进行OCR识别。
-        </div>
-      </div>
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          智能搜索笔记
-        </div>
-        <div class="cl_d">
-          无论是笔记、图片甚至是附件内的文字，智能搜索功能可以迅速帮你搜索到保存在备忘录中的任何记忆。
-        </div>
-      </div>
-      <img class="cloudMemo_img1" src="@/assets/problemFeedback/cloudMemo_img3.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <img class="cloudMemo_img1" src="@/assets/problemFeedback/cloudMemo_img4.png" alt="" />
-      <div class="CloudL R">
-        <div class="cl_t">
-          多端同步
-        </div>
-        <div class="cl_d">
-          多端数据实时更新同步，随时随地查看、处理笔记。
+        <div class="cl_l_w_d">
+          支持移动端和PC端多端协同，确保随时随地高效 响应和流畅沟通
         </div>
       </div>
     </div>
-    <div class="productBox w1380">
-      <div class="proT">
-        核心功能
+    <div class="w1380 CloudBox flexColAC">
+      <div class="a_t">
+        可集成 AI 大模型获客机器人、客服机器人<br />7x24 小时高效获线，高质量服务
       </div>
-      <div class="card_container flexRowAC">
-        <div class="card_1">
-          <img class="card_1_img" src="@/assets/problemFeedback/cloudMemo_i1.png" alt="" />
-          <div class="card_1_t">
-            全局速记
-          </div>
-          <p>打开速记开关，手机界面侧边滑出，快速记录笔记或待办，也可查看历史备忘录信息</p>
+      <div class="a_d">
+        依托 DeepSeek大模型，在线智能客服系统可集成大模型获客机器人与 大模型客服机器人，7x24 小时快速热情响应，精准意图识别
+      </div>
+      <div class="a_l">
+        <div class="a_l_i">
+          <img class="a_l_i_img" src="@/assets/software/intelligentCustomerService/znkf_icon_lhdy.png" />
+          <span class="a_l_i_text">灵活应答</span>
         </div>
-        <div class="card_1">
-          <img class="card_1_img" src="@/assets/problemFeedback/cloudMemo_i2.png" alt="" />
-          <div class="card_1_t">
-            多种录入方式
-          </div>
-          <p>支持语音转文本、手写涂鸦、拍照、图片以及文本录入，多种方式，随心选择</p>
+        <div class="a_l_i">
+          <img class="a_l_i_img" src="@/assets/software/intelligentCustomerService/znkf_icon_gxhx.png" />
+          <span class="a_l_i_text">高效获线</span>
         </div>
-        <div class="card_1">
-          <img class="card_1_img" src="@/assets/problemFeedback/cloudMemo_i3.png" alt="" />
-          <div class="card_1_t">
-            待办管理
-          </div>
-          <p>支持设置待办提醒、待办重要性，轻松管理，高效办公</p>
-        </div>
-        <div class="card_1">
-          <img class="card_1_img" src="@/assets/problemFeedback/cloudMemo_i4.png" alt="" />
-          <div class="card_1_t">
-            富文本编辑
-          </div>
-          <p>支持布局编辑，选择多种字号并支持添加图片，轻松记录工作、生活内容</p>
+        <div class="a_l_i">
+          <img class="a_l_i_img" src="@/assets/software/intelligentCustomerService/znkf_icon_gzlfw.png" />
+          <span class="a_l_i_text">高质量服务</span>
         </div>
       </div>
     </div>
+    <!--现在开始体验-->
     <div class="productBox w1380">
       <div class="proT">
         现在开始体验
@@ -283,6 +252,36 @@ definePageMeta({
     color: #3D3D3D;
     font-weight: bold;
     font-size: 78px;
+  }
+
+  .cl_l_w{
+    width: 464px;
+    font-weight: 700;
+    font-size: 58px;
+    color: #333333;
+    line-height: 88px;
+    text-align: left;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .cl_l_w_d{
+    width: 511px;
+    font-size: 24px;
+    color: #717781;
+    line-height: 36px;
+    text-align: left;
+  }
+
+  .cl_r_w{
+    width: 348px;
+    height: auto;
+    font-weight: 700;
+    font-size: 58px;
+    color: #333333;
+    line-height: 88px;
+    text-align: left;
+    margin-bottom: 28px;
   }
 
   .cl_d {
@@ -532,16 +531,26 @@ definePageMeta({
   justify-content: space-between;
   gap: 20px;
 
+  &.car{
+    padding-bottom: 60px;
+  }
+
   .card_1 {
     flex: 1;
     padding: 40px 20px;
     background: #FFFFFF;
-    box-shadow: 0px 18px 48px 0px rgba(0,73,182,0.08);
+    box-shadow: 0px 18px 48px 0px rgba(0, 73, 182, 0.08);
     border-radius: 24px 24px 24px 24px;
 
-    >p{
-      height: 60px;
+    > p {
+      width: 240px;
+      margin: 0 auto;
+      height: 90px;
+      font-weight: 700;
+      font-size: 18px;
+      color: #3D3D3D;
     }
+
     .card_1_img {
       width: 88px;
       height: 88px;
@@ -549,43 +558,70 @@ definePageMeta({
     }
 
     .card_1_t{
+      height: 26px;
       font-weight: 700;
       font-size: 24px;
       color: #3D3D3D;
-      padding-bottom: 10px;
+      line-height: 26px;
+      margin-bottom: 20px;
+    }
+
+    .card_1_des{
+      height: 80px;
+      font-weight: 400;
+      font-size: 18px;
+      color: #3D3D3D;
+      line-height: 26px;
     }
   }
 
   .card_2 {
     flex: 1;
-    padding: 24px;
-    height: 200px;
-    background: linear-gradient( 129deg, #ECF3FF 0%, #FFFFFF 100%);
-    font-weight: 400;
-    font-size: 20px;
-    color: #3D3D3D;
-    line-height: 30px;
-    text-align: left;
+    padding: 40px;
+    background: #E5F0FE;
+    border-radius: 24px 24px 24px 24px;
+    justify-content: space-between;
 
     > p {
       width: 200px;
     }
 
-    .card_num{
+    .card_2_l {
+      text-align: left;
       font-weight: 400;
-      font-size: 28px;
-      color: #2278FF;
+      font-size: 16px;
+      color: #717781;
+
+      .card_2_t1 {
+        font-weight: 700;
+        font-size: 32px;
+        color: #333333;
+      }
+
     }
 
-    > .line {
-      margin: 18px 0 24px;
-      width: 30px;
-      height: 4px;
-      background: linear-gradient(270deg, rgba(34, 200, 255, 0.16) 0%, #2278FF 100%);
-      border-radius: 1px 1px 1px 1px;
+    .card_2_r {
+      gap: 40px;
+
+      .card_file {
+        font-weight: 700;
+        font-size: 16px;
+        color: #333333;
+      }
+    }
+
+    .card_2_t_img {
+      width: 48px;
+      height: 48px;
+    }
+
+    .card_file {
+      flex-direction: column;
+      gap: 12px;
     }
   }
 }
+
 .productItem {
   gap: 20px;
 
@@ -602,9 +638,10 @@ definePageMeta({
   }
 }
 
-.approval_c1 {
-  width: 734px;
+.cloudAlbum_bg {
+  width: 680px;
   height: auto;
+  align-self: end;
 }
 
 .approval_c2 {
@@ -613,8 +650,11 @@ definePageMeta({
 }
 
 .cloudMemo_img1 {
-  width: 690px;
-  height: auto;
+  width: 620px;
+  height: 480px;
+  background: #F4F8FF;
+  border-radius: 24px 24px 24px 24px;
+  align-self: center;
 }
 
 .approval_c3 {
@@ -626,7 +666,51 @@ definePageMeta({
   width: 634px;
   height: auto;
 }
-.flexJSSta{
-  justify-self: flex-start;
+
+.blueBg{
+  background: linear-gradient( 181deg, #F0F3FF 0%, rgba(240,243,255,0) 100%);
+}
+
+.flexColAC{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.a_t{
+  width: 900px;
+  font-weight: 700;
+  font-size: 48px;
+  color: #333333;
+  line-height: 72px;
+  text-align: center;
+}
+.a_d{
+  width: 747px;
+  font-size: 24px;
+  color: #717781;
+  line-height: 36px;
+  text-align: center;
+  margin: 40px 0;
+}
+.a_l{
+  display: flex;
+  gap: 80px;
+  .a_l_i{
+    display: flex;
+    align-items: center;
+    .a_l_i_img{
+      width: 40px;
+      height: 40px;
+      margin-right: 12px;
+    }
+    .a_l_i_text{
+      font-weight: 700;
+      font-size: 24px;
+      color: #3D3D3D;
+      line-height: 36px;
+      text-align: center;
+    }
+  }
 }
 </style>

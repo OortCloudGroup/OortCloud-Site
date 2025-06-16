@@ -1,24 +1,27 @@
 <template>
   <div class="home_page vls">
-    <div class="w1380 w1200 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          云备忘录
-        </div>
-        <div class="cl_d">
-          支持速记、待办事项，协助您进行事务分类和管理
-        </div>
-        <div class="flexRowAC useBox flexJSSta">
-          <div class="seeMore">
-            立即试用
+    <div class="blueBg">
+      <div class="w1380 CloudBox flexRowAC">
+        <div class="CloudL">
+          <div class="cl_t">
+            问卷调查
           </div>
-          <div class="seeMore red">
-            立即购买
+          <div class="cl_t_d">
+            问卷调查·考试测评·投票评选·收集表单
           </div>
-          <div class="seeMore u1">
-            安排演示
+          <div class="flexRowAC useBox flexJSSta">
+            <div class="seeMore">
+              立即试用
+            </div>
+            <div class="seeMore red">
+              立即购买
+            </div>
+            <div class="seeMore u1">
+              安排演示
+            </div>
           </div>
         </div>
+        <img class="cloudAlbum_bg" src="@/assets/software/questionnaireSurvey/wjdc_bg.png" alt="" />
       </div>
     </div>
     <div class="w1380">
@@ -26,82 +29,48 @@
         <img class="wBImg" src="@/assets/VLimg2.0/CloudR0.png" alt="" />
       </div>
     </div>
+
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
-        <div class="cl_t">
-          管理任务清单
+        <div class="cl_l_w">
+          在线问卷调查
         </div>
-        <div class="cl_d">
-          内置清单功能，帮你更直观便捷地管理任务及待办事项，摆脱工作、生活、学习中的繁杂事务，保持专注与高效。
+        <div class="cl_l_w_d">
+          支持Word极速导入，海量问卷模板可引用 提供丰富的调研题型，并可自定义品牌形象
         </div>
       </div>
-      <img class="cloudMemo_img1" src="@/assets/problemFeedback/cloudMemo_img1.png" alt="" />
+      <img class="cloudMemo_img1" src="@/assets/software/questionnaireSurvey/wjdc_zxwjdc_bg.png" alt="" />
     </div>
     <div class="w1380 CloudBox ipcBox flexRowAC">
-      <img class="cloudMemo_img1" src="@/assets/problemFeedback/cloudMemo_img2.png" alt="" />
+      <img class="cloudMemo_img1" src="@/assets/software/questionnaireSurvey/wjdc_xskscp_bg.png" alt="" />
       <div class="CloudL R">
-        <div class="cl_t">
-          文档扫描识别
+        <div class="cl_r_w">
+          线上考试测评
         </div>
-        <div class="cl_d">
-          快捷清晰扫描所有纸张，无需动手即可将名片、文件、书刊等一切纸张扫描保存，更可智能对纸张文字进行OCR识别。
+        <div class="cl_l_w_d">
+          支持文本、Excel极速导入，海量考试题库可引用，为考试定制的专属题型，轻松查看排行榜、成绩单或错题解析
         </div>
       </div>
     </div>
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
-        <div class="cl_t">
-          智能搜索笔记
+        <div class="cl_l_w">
+          信息收集表单
         </div>
-        <div class="cl_d">
-          无论是笔记、图片甚至是附件内的文字，智能搜索功能可以迅速帮你搜索到保存在备忘录中的任何记忆。
+        <div class="cl_l_w_d">
+          完美支持信息、图片与文件收集可实时查看收集进度
         </div>
       </div>
-      <img class="cloudMemo_img1" src="@/assets/problemFeedback/cloudMemo_img3.png" alt="" />
+      <img class="cloudAlbum_bg" src="@/assets/software/questionnaireSurvey/wjdc_xxsjbd_bg.png" alt="" />
     </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <img class="cloudMemo_img1" src="@/assets/problemFeedback/cloudMemo_img4.png" alt="" />
+    <div class="w1380 CloudBox ipcBox flexRowAC">
+      <img class="cloudMemo_img1" src="@/assets/software/questionnaireSurvey/wjdc_tppx_bg.png" alt="" />
       <div class="CloudL R">
-        <div class="cl_t">
-          多端同步
+        <div class="cl_r_w">
+          投票评选
         </div>
-        <div class="cl_d">
-          多端数据实时更新同步，随时随地查看、处理笔记。
-        </div>
-      </div>
-    </div>
-    <div class="productBox w1380">
-      <div class="proT">
-        核心功能
-      </div>
-      <div class="card_container flexRowAC">
-        <div class="card_1">
-          <img class="card_1_img" src="@/assets/problemFeedback/cloudMemo_i1.png" alt="" />
-          <div class="card_1_t">
-            全局速记
-          </div>
-          <p>打开速记开关，手机界面侧边滑出，快速记录笔记或待办，也可查看历史备忘录信息</p>
-        </div>
-        <div class="card_1">
-          <img class="card_1_img" src="@/assets/problemFeedback/cloudMemo_i2.png" alt="" />
-          <div class="card_1_t">
-            多种录入方式
-          </div>
-          <p>支持语音转文本、手写涂鸦、拍照、图片以及文本录入，多种方式，随心选择</p>
-        </div>
-        <div class="card_1">
-          <img class="card_1_img" src="@/assets/problemFeedback/cloudMemo_i3.png" alt="" />
-          <div class="card_1_t">
-            待办管理
-          </div>
-          <p>支持设置待办提醒、待办重要性，轻松管理，高效办公</p>
-        </div>
-        <div class="card_1">
-          <img class="card_1_img" src="@/assets/problemFeedback/cloudMemo_i4.png" alt="" />
-          <div class="card_1_t">
-            富文本编辑
-          </div>
-          <p>支持布局编辑，选择多种字号并支持添加图片，轻松记录工作、生活内容</p>
+        <div class="cl_l_w_d">
+          强大技术保障千万级投票丝滑稳定，支持实时排名与拉票传播
         </div>
       </div>
     </div>
@@ -277,12 +246,53 @@ definePageMeta({
   align-items: flex-start;
 
   .cl_t {
-    white-space: nowrap;
     padding-top: 30px;
     padding-bottom: 20px;
     color: #3D3D3D;
     font-weight: bold;
     font-size: 78px;
+    .cl_t_b{
+      color: #2278FF;
+    }
+  }
+
+  .cl_l_w{
+    width: 464px;
+    font-weight: 700;
+    font-size: 58px;
+    color: #333333;
+    line-height: 88px;
+    text-align: left;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .cl_l_w_d{
+    width: 460px;
+    font-size: 24px;
+    color: #717781;
+    line-height: 36px;
+    text-align: left;
+  }
+
+  .cl_r_w{
+    width: 348px;
+    font-weight: 700;
+    font-size: 58px;
+    color: #333333;
+    line-height: 88px;
+    text-align: left;
+    margin-bottom: 28px;
+  }
+
+  .cl_t_d{
+    width: 580px;
+    height: 60px;
+    font-size: 20px;
+    color: #717781;
+    line-height: 30px;
+    text-align: left;
+    margin-bottom: 24px;
   }
 
   .cl_d {
@@ -294,6 +304,40 @@ definePageMeta({
 
   .CloudL {
     padding-top: 60px;
+  }
+
+  .CloudR{
+    margin-left: auto;
+  }
+
+  .CloudL,.CloudR{
+    .cl_d_t{
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      .cl_d_t_img{
+        width: 48px;
+        height: 48px;
+        margin-right: 16px;
+      }
+      .cl_d_t_title{
+        white-space: nowrap;
+        height: 36px;
+        font-weight: 700;
+        font-size: 32px;
+        color: #3D3D3D;
+        line-height: 36px;
+        text-align: left;
+      }
+    }
+    .cl_d_c{
+      width: 460px;
+      height: 72px;
+      font-size: 24px;
+      color: #717781;
+      line-height: 36px;
+      text-align: left;
+    }
   }
 }
 
@@ -532,6 +576,10 @@ definePageMeta({
   justify-content: space-between;
   gap: 20px;
 
+  &.car{
+    padding-bottom: 60px;
+  }
+
   .card_1 {
     flex: 1;
     padding: 40px 20px;
@@ -540,7 +588,12 @@ definePageMeta({
     border-radius: 24px 24px 24px 24px;
 
     >p{
-      height: 60px;
+      width: 240px;
+      margin: 0 auto;
+      height: 90px;
+      font-weight: 700;
+      font-size: 18px;
+      color: #3D3D3D;
     }
     .card_1_img {
       width: 88px;
@@ -558,17 +611,47 @@ definePageMeta({
 
   .card_2 {
     flex: 1;
-    padding: 24px;
-    height: 200px;
-    background: linear-gradient( 129deg, #ECF3FF 0%, #FFFFFF 100%);
-    font-weight: 400;
-    font-size: 20px;
-    color: #3D3D3D;
-    line-height: 30px;
-    text-align: left;
+    padding: 40px;
+    background: #E5F0FE;
+    border-radius: 24px 24px 24px 24px;
+    justify-content: space-between;
 
     > p {
       width: 200px;
+    }
+
+    .card_2_l {
+      text-align: left;
+      font-weight: 400;
+      font-size: 16px;
+      color: #717781;
+
+      .card_2_t1 {
+        font-weight: 700;
+        font-size: 32px;
+        color: #333333;
+      }
+
+    }
+
+    .card_2_r {
+      gap: 40px;
+
+      .card_file {
+        font-weight: 700;
+        font-size: 16px;
+        color: #333333;
+      }
+    }
+
+    .card_file {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .card_2_t_img {
+      width: 48px;
+      height: 48px;
     }
 
     .card_num{
@@ -607,14 +690,23 @@ definePageMeta({
   height: auto;
 }
 
+.cloudAlbum_bg {
+  width: 560px;
+  height: auto;
+  align-self: end;
+}
+
 .approval_c2 {
   width: 702px;
   height: auto;
 }
 
 .cloudMemo_img1 {
-  width: 690px;
-  height: auto;
+  width: 620px;
+  height: 480px;
+  background: #F4F8FF;
+  border-radius: 24px 24px 24px 24px;
+  align-self: center;
 }
 
 .approval_c3 {
@@ -625,6 +717,41 @@ definePageMeta({
 .approval_c5 {
   width: 634px;
   height: auto;
+}
+
+.blueBg{
+  background: linear-gradient( 181deg, #F0F3FF 0%, rgba(240,243,255,0) 100%);
+}
+
+.imgGap{
+  gap: 20px;
+  .flexImgL{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+      width: 100%;
+    }
+  }
+
+  .flexImgR{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+      width: 100%;
+    }
+  }
+  .flexImgDes{
+    height: 36px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #3D3D3D;
+    line-height: 36px;
+    margin-top: 24px;
+  }
 }
 .flexJSSta{
   justify-self: flex-start;
