@@ -218,6 +218,27 @@ const softClick = (val) => {
     }
     emits('handle', obj)
   }
+  if (val.t === '云盘') {
+    let obj = {
+      classify: '行业',
+      path: '/zh/siteNew/software/cloudDisk'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '云文档') {
+    let obj = {
+      classify: '行业',
+      path: '/zh/siteNew/software/cloudDocument'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '云清单') {
+    let obj = {
+      classify: '行业',
+      path: '/zh/siteNew/software/cloudList'
+    }
+    emits('handle', obj)
+  }
 }
 
 watch(() => props.item, (newVal: any) => {
