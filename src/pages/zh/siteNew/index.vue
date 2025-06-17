@@ -7,7 +7,7 @@
           <br />
           超级效率战略能力
           <br />
-          奥尔特云新一代 <span class="vlsUs">生产力平台</span>
+          奥尔特云新一代 <span class="vlsUs vlsUs1">生产力平台</span>
         </div>
       </div>
       <div class="plat_d">
@@ -47,7 +47,7 @@
     </div>
     <div class="productBox w1380" style="padding-bottom: 0px;">
       <div class="proT" style="padding-bottom: 40px;">
-        想象一下，<span class="vlsUs">海量商业应用程序</span> 尽在您的指尖
+        想象一下，<span class="vlsUs vlsUs2">海量商业应用程序</span> 尽在您的指尖
       </div>
     </div>
     <div class="proTitleBox w1380 plan">
@@ -78,7 +78,7 @@
         <img class="wBImg" src="@/assets/software/home.png" alt="" />
       </div>
       <div class="proT_d">
-        <span class="vlsUs">体验真正极速 </span>，告别繁琐数据录入，智能 AI助手，用户界面更快90 亳秒内搞定全部操作--比眨眼还快。
+        <span class="vlsUs vlsUs3">体验真正极速 </span>，告别繁琐数据录入，智能 AI助手，用户界面更快90 亳秒内搞定全部操作--比眨眼还快。
       </div>
     </div>
     <div class="productBox w1380">
@@ -192,6 +192,7 @@
         <nuxt-link class="seeMore" to="/zh/siteNew/industy/buy">
           现在开始-免费
         </nuxt-link>
+        <img class="useImg" src="@/assets/software/icon_sfqn.png" />
       </div>
     </div>
   </div>
@@ -345,6 +346,7 @@ appList.value = [
 }
 
 .useBox {
+  position: relative;
   justify-content: center;
   gap: 20px;
 
@@ -357,6 +359,13 @@ appList.value = [
     //box-shadow: 0px 4px 10px 0px #FF5E1033;
     font-weight: bold;
     font-size: 18px;
+  }
+
+  .useImg{
+    position: absolute;
+    width: 106px;
+    height: 87px;
+    left: 850px;
   }
 
   .u1 {
@@ -703,13 +712,21 @@ appList.value = [
 
 .vlsUs {
   opacity: 1;
-  border-radius: 0px;
-  background: linear-gradient(270deg, #2278FF0A 0%, #2278FF51 100%);
-  border-left: 6px solid #2278FF;
   padding-left: 10px;
   color: #333;
 }
 
+.vlsUs1{
+background-image: url("@/assets/software/icon_tou_2.png");
+}
+
+.vlsUs2{
+  background-image: url("@/assets/software/icon_zs_1.png");
+}
+
+.vlsUs3{
+  background-image: url("@/assets/software/icon_csl_green.png");
+}
 .use_t {
   .use_t_t {
     color: #3D3D3D;
@@ -744,7 +761,6 @@ appList.value = [
   text-align: center;
 
   > .vlsUs {
-    border-left: 4px solid #2278FF;
     padding-left: 6px;
   }
 }

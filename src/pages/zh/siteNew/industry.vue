@@ -199,91 +199,91 @@ const indClick = (cla, path, val) => {
 const softClick = (val) => {
   if (val.t === '问题反馈') {
     let obj = {
-      classify: '行业',
+      classify: '问题反馈',
       path: '/zh/siteNew/software/problemFeedback'
     }
     emits('handle', obj)
   }
   if (val.t === '云备忘录') {
     let obj = {
-      classify: '行业',
+      classify: '云备忘录',
       path: '/zh/siteNew/software/cloudMemo'
     }
     emits('handle', obj)
   }
   if (val.t === '云相册') {
     let obj = {
-      classify: '行业',
+      classify: '云相册',
       path: '/zh/siteNew/software/cloudAlbum'
     }
     emits('handle', obj)
   }
   if (val.t === '云盘') {
     let obj = {
-      classify: '行业',
+      classify: '云盘',
       path: '/zh/siteNew/software/cloudDisk'
     }
     emits('handle', obj)
   }
   if (val.t === '云文档') {
     let obj = {
-      classify: '行业',
+      classify: '云文档',
       path: '/zh/siteNew/software/cloudDocument'
     }
     emits('handle', obj)
   }
   if (val.t === '云清单') {
     let obj = {
-      classify: '行业',
+      classify: '云清单',
       path: '/zh/siteNew/software/cloudList'
     }
     emits('handle', obj)
   }
   if (val.t === 'WMS') {
     let obj = {
-      classify: '行业',
+      classify: 'WMS',
       path: '/zh/siteNew/software/wms'
     }
     emits('handle', obj)
   }
   if (val.t === '任务管理') {
     let obj = {
-      classify: '行业',
+      classify: '任务管理',
       path: '/zh/siteNew/software/taskManagement'
     }
     emits('handle', obj)
   }
   if (val.t === '合同管理') {
     let obj = {
-      classify: '行业',
+      classify: '合同管理',
       path: '/zh/siteNew/software/contractManagement'
     }
     emits('handle', obj)
   }
   if (val.t === '文档管理') {
     let obj = {
-      classify: '行业',
+      classify: '文档管理',
       path: '/zh/siteNew/software/documentManagement'
     }
     emits('handle', obj)
   }
   if (val.t === '智能客服') {
     let obj = {
-      classify: '行业',
+      classify: '智能客服',
       path: '/zh/siteNew/software/intelligentCustomerService'
     }
     emits('handle', obj)
   }
   if (val.t === '知识论坛') {
     let obj = {
-      classify: '行业',
+      classify: '知识论坛',
       path: '/zh/siteNew/software/knowledgeForum'
     }
     emits('handle', obj)
   }
   if (val.t === '问卷调查') {
     let obj = {
-      classify: '行业',
+      classify: '问卷调查',
       path: '/zh/siteNew/software/questionnaireSurvey'
     }
     emits('handle', obj)
