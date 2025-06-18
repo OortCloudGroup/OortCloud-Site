@@ -94,7 +94,6 @@ const navList = ref(menu)
 //   langText.value = val === 'en' ? 'English' : '简体中文'
 // }
 const navClick = (path, t) => {
-  console.log(123)
   emit('handle', t)
   router.push(path)
 }
@@ -234,6 +233,7 @@ const updateMenuState = (path) => {
 
 watch(isActPath, (newVal) => {
   mainTitle.value = ''
+  navList.value = menu //设置默认为主菜单
   // 街道
   if (newVal === '/zh/siteNew/industy/street' || route?.meta?.mate) {
     navList.value = menuStreet
