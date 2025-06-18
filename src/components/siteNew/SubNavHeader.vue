@@ -4,7 +4,7 @@
       <img class="navLogo" src="@/assets/bottomImg/logo1.png" alt="" />
     </div>
     <div class="flexRowAC nav_t">
-      <div class="nav_t_l" @click="showList(diaFlag)">
+      <div class="nav_t_l" @click="showList">
         <span>{{ menuTitle }}</span>
         <img
           class="nav_t_l_img"
@@ -61,6 +61,10 @@ const props = defineProps({
   mainMenu: {
     type: Array,
     required: true
+  },
+  activeIdx: {
+    type: Number,
+    default: 0
   }
 })
 
@@ -71,9 +75,10 @@ watch(() => props.isOpen, (newVal) => {
 
 const menuTitle = ref(props.menu.title)
 const navList = ref([...props.menu.subMenuItems])
-const activeIndex = ref(0)
+const activeIndex = ref(props?.activeIdx)
 // 监听props.menu变化
 watch(() => props.menu, (newMenu) => {
+  menuTitle.value = newMenu.title
   navList.value = [...newMenu.subMenuItems]
   activeIndex.value = 0
 }, { deep: true })
@@ -86,6 +91,8 @@ watch(() => route.path, (newPath) => {
   if (matchedMenu) {
     menuTitle.value = matchedMenu?.title
     navList.value = matchedMenu?.subMenuItems
+    let numIndex = matchedMenu?.subMenuItems.findIndex(item => item.path === newPath)
+    activeIndex.value = numIndex
   }
   if (newPath === '/zh/siteNew') {
     emit('backMainPage')
@@ -100,7 +107,7 @@ const navClick = (item, index) => {
 const isOpenSub = ref(props.isOpen)
 const showList = () => {
   isOpenSub.value = !isOpenSub.value
-  emit('showList', isOpenSub.value)
+  emit('showList', isOpenSub.value, activeIndex.value)
 }
 
 </script>

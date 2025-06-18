@@ -2,7 +2,7 @@
   <div class="defalut_layout">
     <div ref="anchor" />
     <NavHeader v-if="!subMenuFlag" class="defalut_hea" :is-sticky="isSticky" @handle="handle" />
-    <SubNavHeader v-if="subMenuFlag && !diaSubMenuFlag" :main-menu="MAIN_MENU" :is-sticky="isSticky" class="defalut_hea" :menu="menuItems" :is-open="false" @show-list="showList" @back-main-page="backMainPage" />
+    <SubNavHeader v-if="subMenuFlag && !diaSubMenuFlag" :main-menu="MAIN_MENU" :is-sticky="isSticky" class="defalut_hea" :menu="menuItems" :is-open="false" :active-idx="activeIdx" @show-list="showList" @back-main-page="backMainPage" />
     <div class="page_body">
       <slot />
       <Bottom />
@@ -15,14 +15,14 @@
       class="headDia"
     >
       <NavHeader v-if="hVisiT && !diaSubMenuFlag" :item="hVisiT" class="defalut_hea" @handle="handle" />
-      <SubNavHeader v-else :menu="menuItems" :main-menu="MAIN_MENU" class="defalut_hea" :is-open="true" @show-list="showList" @back-main-page="backMainPage" />
+      <SubNavHeader v-else :menu="menuItems" :main-menu="MAIN_MENU" class="defalut_hea" :is-open="true" :active-idx="activeIdx" @show-list="showList" @back-main-page="backMainPage" />
       <industry :item="hVisiT" @handle="handleI" />
     </el-dialog>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useScroll, useElementBounding } from '@vueuse/core'
 import Industry from '@/pages/zh/siteNew/industry.vue'
@@ -44,10 +44,12 @@ const handle = (t) => {
   }
 }
 
-const showList = (isOpen) => {
+const activeIdx = ref(0)
+const showList = (isOpenSub, activeIndex) => {
   hVisiT.value = '应用程序'
-  hVisi.value = isOpen
-  diaSubMenuFlag.value = isOpen
+  hVisi.value = isOpenSub
+  diaSubMenuFlag.value = isOpenSub
+  activeIdx.value = activeIndex
 }
 
 const subMenuFlag = ref(false)
@@ -55,28 +57,32 @@ const menuItems = ref([])
 const diaSubMenuFlag = ref(false)
 // 选择
 const handleI = (val) => {
-  const matchedMenu = MAIN_MENU.value.find(menu =>
-    menu.title === val.classify ||
-      menu.subMenuItems.some(item => item.path === val.path)
-  )
-  if(matchedMenu) {
+  updateMenuState(val?.path)
+  router.push(val?.path)
+}
+
+onMounted(() => {
+  updateMenuState(route.path)
+})
+
+const updateMenuState = (path) => {
+  const matchedMenu = MAIN_MENU.value.find(menu => menu.subMenuItems.some(item => item.path === path))
+  if (matchedMenu) {
     menuItems.value = matchedMenu
     subMenuFlag.value = true
-  }else{
+    let numIndex = matchedMenu?.subMenuItems.findIndex(item => item.path === path)
+    activeIdx.value = numIndex
+  } else {
     subMenuFlag.value = false
   }
   diaSubMenuFlag.value = false
   hVisi.value = false
-  router.push(val?.path)
 }
-
-watch(() => route.path, (newPath) => {
-  console.log(newPath)
-}, { immediate: true })
 
 const backMainPage = () => {
   subMenuFlag.value = false
 }
+
 const MAIN_MENU = ref(
   [
     {
