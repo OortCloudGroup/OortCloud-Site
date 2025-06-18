@@ -4,11 +4,16 @@
       <img class="navLogo" src="@/assets/bottomImg/logo1.png" alt="" />
     </div>
     <div class="flexRowAC nav_t">
+      <div v-if="!!mainTitle" class="mainNavTitle" @click="mainNavClick(mainTitle)">
+        <span>{{ mainTitle }}</span>
+        <img class="arrow_img" src="@/assets/navheader/arrow.png" />
+        <span class="colLine"/>
+      </div>
       <div
         v-for="(itd,i) in navList"
         :key="i"
         class="nav_title"
-        :class="{nav_t_line:isActPath===itd.path&&(itd.title.includes(propTemp) || i>2 || itd.classify)}"
+        :class="{nav_t_line:(isActPath===itd.path&&(itd.title.includes(propTemp) || i>2 || itd.classify)) || isActPath===itd.path&& !!mainTitle}"
         @click="navClick(itd.path,itd.title )"
       >
         <span>{{ itd.title }}</span>
@@ -26,27 +31,27 @@
         </template>
         <commonRightPoPover @more-opr="moreOpr" />
       </el-popover>
-    <!--      <el-dropdown v-if="langText" :hide-on-click="false" @command="toggleLang">-->
-    <!--        <div class="flexRowAC langBox">-->
-    <!--          <img class="demo_img" src="@/assets/VLimg/lang.png" alt="" />-->
-    <!--          <div class="langBoxT">-->
-    <!--            {{ langText }}-->
-    <!--          </div>-->
-    <!--          <el-icon color="#333">-->
-    <!--            <CaretBottom />-->
-    <!--          </el-icon>-->
-    <!--        </div>-->
-    <!--        <template #dropdown>-->
-    <!--          <el-dropdown-menu>-->
-    <!--            <el-dropdown-item command="zh" :disabled="lang==='zh'">-->
-    <!--              简体中文-->
-    <!--            </el-dropdown-item>-->
-    <!--            <el-dropdown-item command="en" :disabled="lang==='en'">-->
-    <!--              English-->
-    <!--            </el-dropdown-item>-->
-    <!--          </el-dropdown-menu>-->
-    <!--        </template>-->
-    <!--      </el-dropdown>-->
+      <!--      <el-dropdown v-if="langText" :hide-on-click="false" @command="toggleLang">-->
+      <!--        <div class="flexRowAC langBox">-->
+      <!--          <img class="demo_img" src="@/assets/VLimg/lang.png" alt="" />-->
+      <!--          <div class="langBoxT">-->
+      <!--            {{ langText }}-->
+      <!--          </div>-->
+      <!--          <el-icon color="#333">-->
+      <!--            <CaretBottom />-->
+      <!--          </el-icon>-->
+      <!--        </div>-->
+      <!--        <template #dropdown>-->
+      <!--          <el-dropdown-menu>-->
+      <!--            <el-dropdown-item command="zh" :disabled="lang==='zh'">-->
+      <!--              简体中文-->
+      <!--            </el-dropdown-item>-->
+      <!--            <el-dropdown-item command="en" :disabled="lang==='en'">-->
+      <!--              English-->
+      <!--            </el-dropdown-item>-->
+      <!--          </el-dropdown-menu>-->
+      <!--        </template>-->
+      <!--      </el-dropdown>-->
     </div>
   </div>
 </template>
@@ -89,8 +94,13 @@ const navList = ref(menu)
 //   langText.value = val === 'en' ? 'English' : '简体中文'
 // }
 const navClick = (path, t) => {
+  console.log(123)
   emit('handle', t)
   router.push(path)
+}
+
+const mainNavClick = (t) => {
+  emit('handle', t)
 }
 
 // watch(() => locale.value, () => {
@@ -115,7 +125,115 @@ let menuStreet = [
   { title: '下载', classify: 'streeet', path: '/zh/siteNew/industy/download' },
   { title: '硬件', classify: 'streeet', path: '/zh/siteNew/contactUs' }
 ]
+
+const MAIN_MENU = [
+  {
+    mainTitle: '问题反馈',
+    subMenuItems: [
+      { id: 'summary', title: '概括', path: '/zh/siteNew/software/problemFeedback' },
+      { id: 'function', title: '功能', path: '' }
+    ]
+  },
+  {
+    mainTitle: '云备忘录',
+    subMenuItems: [
+      { id: 'summary', title: '概括', path: '/zh/siteNew/software/cloudMemo' },
+      { id: 'function', title: '功能', path: '' }
+    ]
+  },
+  {
+    mainTitle: '云相册',
+    subMenuItems: [
+      { id: 'summary', title: '概括', path: '/zh/siteNew/software/cloudAlbum' },
+      { id: 'function', title: '功能', path: '' }
+    ]
+  },
+  {
+    mainTitle: '云盘',
+    subMenuItems: [
+      { id: 'summary', title: '概括', path: '/zh/siteNew/software/cloudDisk' },
+      { id: 'function', title: '功能', path: '' }
+    ]
+  },
+  {
+    mainTitle: '云文档',
+    subMenuItems: [
+      { id: 'summary', title: '概括', path: '/zh/siteNew/software/cloudDocument' },
+      { id: 'function', title: '功能', path: '' }
+    ]
+  },
+  {
+    mainTitle: '云清单',
+    subMenuItems: [
+      { id: 'summary', title: '概括', path: '/zh/siteNew/software/cloudList' },
+      { id: 'function', title: '功能', path: '' }
+    ]
+  },
+  {
+    mainTitle: 'WMS',
+    subMenuItems: [
+      { id: 'summary', title: '概括', path: '/zh/siteNew/software/wms' },
+      { id: 'function', title: '功能', path: '' }
+    ]
+  },
+  {
+    mainTitle: '任务管理',
+    subMenuItems: [
+      { id: 'summary', title: '概括', path: '/zh/siteNew/software/taskManagement' },
+      { id: 'function', title: '功能', path: '' }
+    ]
+  },
+  {
+    mainTitle: '合同管理',
+    subMenuItems: [
+      { id: 'summary', title: '概括', path: '/zh/siteNew/software/contractManagement' },
+      { id: 'function', title: '功能', path: '' }
+    ]
+  },
+  {
+    mainTitle: '文档管理',
+    subMenuItems: [
+      { id: 'summary', title: '概括', path: '/zh/siteNew/software/documentManagement' },
+      { id: 'function', title: '功能', path: '' }
+    ]
+  },
+  {
+    mainTitle: '智能客服',
+    subMenuItems: [
+      { id: 'summary', title: '概括', path: '/zh/siteNew/software/intelligentCustomerService' },
+      { id: 'function', title: '功能', path: '' }
+    ]
+  },
+  {
+    mainTitle: '知识论坛',
+    subMenuItems: [
+      { id: 'summary', title: '概括', path: '/zh/siteNew/software/knowledgeForum' },
+      { id: 'function', title: '功能', path: '' }
+    ]
+  },
+  {
+    mainTitle: '问卷调查',
+    subMenuItems: [
+      { id: 'summary', title: '概括', path: '/zh/siteNew/software/questionnaireSurvey' },
+      { id: 'function', title: '功能', path: '' }
+    ]
+  }
+]
+
+const mainTitle = ref('')
+
+const updateMenuState = (path) => {
+  const foundMenu = MAIN_MENU.find(menu =>
+    menu.subMenuItems.some(item => item.path === path)
+  )
+  if (foundMenu) {
+    navList.value = foundMenu.subMenuItems
+    mainTitle.value = foundMenu.mainTitle
+  }
+}
+
 watch(isActPath, (newVal) => {
+  mainTitle.value = ''
   // 街道
   if (newVal === '/zh/siteNew/industy/street' || route?.meta?.mate) {
     navList.value = menuStreet
@@ -123,47 +241,56 @@ watch(isActPath, (newVal) => {
   if (newVal === '/zh/siteNew') {
     navList.value = menu
   }
+  if (newVal === '/zh/siteNew/software/problemFeedback' || '/zh/siteNew/software/cloudMemo' ||
+      '/zh/siteNew/software/cloudAlbum' || '/zh/siteNew/software/cloudDisk' ||
+      '/zh/siteNew/software/cloudDocument' || '/zh/siteNew/software/cloudList' ||
+      '/zh/siteNew/software/wms' || '/zh/siteNew/software/taskManagement' ||
+      '/zh/siteNew/software/contractManagement' || '/zh/siteNew/software/documentManagement' ||
+      '/zh/siteNew/software/intelligentCustomerService' || '/zh/siteNew/software/knowledgeForum' ||
+      '/zh/siteNew/software/questionnaireSurvey') {
+    updateMenuState(newVal)
+  }
 }, { immediate: true })
 
 </script>
 
 <style>
 
-  .popover_panel {
-    width: 400px!important;
-    background-color: #EDF3F9!important;
-    border-radius: 10px!important;
-  }
+.popover_panel {
+  width: 400px!important;
+  background-color: #EDF3F9!important;
+  border-radius: 10px!important;
+}
 
-  .popover_panel .el-popper__arrow:before {
-    background-color: #EDF3F9!important;
-  }
+.popover_panel .el-popper__arrow:before {
+  background-color: #EDF3F9!important;
+}
 
 </style>
 
 <style lang="scss" scoped>
 
-  .login_but:hover {
-    background-color: #1066ef;
+.login_but:hover {
+  background-color: #1066ef;
+}
+.login_but {
+  cursor: pointer;
+  width: 132px;
+  height: 44px;
+  margin: 0 10px;
+  border-radius: 2px;
+  background-color: #2278FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 24px;
+    letter-spacing: 1px;
   }
-  .login_but {
-    cursor: pointer;
-    width: 132px;
-    height: 44px;
-    margin: 0 10px;
-    border-radius: 2px;
-    background-color: #2278FF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    span {
-      font-weight: 400;
-      font-size: 18px;
-      color: #FFFFFF;
-      line-height: 24px;
-      letter-spacing: 1px;
-    }
-  }
+}
 
 .right_info_nine {
   width: 46px;
@@ -272,4 +399,19 @@ watch(isActPath, (newVal) => {
     padding: 0;
   }
 }
+
+.mainNavTitle{
+  display: flex;
+  align-items: center;
+  .arrow_img{
+    width: 18px;
+  }
+  .colLine{
+    width: 1.5px;
+    height: 20px;
+    background: #CCC;
+    margin-left: 17px;
+  }
+}
+
 </style>
