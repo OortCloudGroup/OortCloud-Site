@@ -94,7 +94,7 @@ watch(() => route.path, (newPath) => {
     let numIndex = matchedMenu?.subMenuItems.findIndex(item => item.path === newPath)
     activeIndex.value = numIndex
   }
-  if (newPath === '/zh/siteNew') {
+  if (newPath === '/zh/siteNew' || newPath === '/zh/siteNew/') {
     emit('backMainPage')
   }
 }, { immediate: false })
