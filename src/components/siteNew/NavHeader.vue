@@ -130,7 +130,7 @@ const MAIN_MENU = [
     mainTitle: '街道',
     subMenuItems: [
       { title: '概述', classify: 'streeet', path: '/zh/siteNew/industy/overview' },
-      { title: '功能', classify: 'streeet', path: '/zh/siteNew/price' },
+      { title: '功能', classify: 'streeet', path: '' },
       { title: '下载', classify: 'streeet', path: '/zh/siteNew/industy/download' },
       { title: '硬件', classify: 'streeet', path: '/zh/siteNew/industy/street' }
     ]

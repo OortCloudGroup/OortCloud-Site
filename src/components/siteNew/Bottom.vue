@@ -158,7 +158,7 @@
               </div>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/allProducts',3)">
                 全部产品
               </div>
             </div>
@@ -269,6 +269,7 @@ const router = useRouter()
 let value = ref('')
 
 const viewPath = (path) => {
+  console.log(path)
   if (router.currentRoute.value.path === path) {
     window?.scrollTo(0, 0)
   }
