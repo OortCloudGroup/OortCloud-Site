@@ -20,7 +20,7 @@
           </div>
         </div>
       </div>
-      <img class="approval_c1" src="@/assets/street/street_1.png" alt="" />
+      <img class="cloudAlbum_bg" src="@/assets/software/problemFeedback/wtfk_bg.png" alt="" />
     </div>
     <div class="w1380">
       <div class="w1380 webBottomImg">
@@ -490,8 +490,8 @@ definePageMeta({
   }
 }
 
-.approval_c1 {
-  width: 734px;
+.cloudAlbum_bg {
+  width: 480px;
   height: auto;
 }
 
