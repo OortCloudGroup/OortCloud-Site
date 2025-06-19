@@ -138,91 +138,91 @@ const MAIN_MENU = [
   {
     mainTitle: '问题反馈',
     subMenuItems: [
-      { id: 'summary', title: '概括', path: '/zh/siteNew/software/problemFeedback' },
+      { id: 'summary', title: '概览', path: '/zh/siteNew/software/problemFeedback' },
       { id: 'function', title: '功能', path: '' }
     ]
   },
   {
     mainTitle: '云备忘录',
     subMenuItems: [
-      { id: 'summary', title: '概括', path: '/zh/siteNew/software/cloudMemo' },
+      { id: 'summary', title: '概览', path: '/zh/siteNew/software/cloudMemo' },
       { id: 'function', title: '功能', path: '' }
     ]
   },
   {
     mainTitle: '云相册',
     subMenuItems: [
-      { id: 'summary', title: '概括', path: '/zh/siteNew/software/cloudAlbum' },
+      { id: 'summary', title: '概览', path: '/zh/siteNew/software/cloudAlbum' },
       { id: 'function', title: '功能', path: '' }
     ]
   },
   {
     mainTitle: '云盘',
     subMenuItems: [
-      { id: 'summary', title: '概括', path: '/zh/siteNew/software/cloudDisk' },
+      { id: 'summary', title: '概览', path: '/zh/siteNew/software/cloudDisk' },
       { id: 'function', title: '功能', path: '' }
     ]
   },
   {
     mainTitle: '云文档',
     subMenuItems: [
-      { id: 'summary', title: '概括', path: '/zh/siteNew/software/cloudDocument' },
+      { id: 'summary', title: '概览', path: '/zh/siteNew/software/cloudDocument' },
       { id: 'function', title: '功能', path: '' }
     ]
   },
   {
     mainTitle: '云清单',
     subMenuItems: [
-      { id: 'summary', title: '概括', path: '/zh/siteNew/software/cloudList' },
+      { id: 'summary', title: '概览', path: '/zh/siteNew/software/cloudList' },
       { id: 'function', title: '功能', path: '' }
     ]
   },
   {
     mainTitle: 'WMS',
     subMenuItems: [
-      { id: 'summary', title: '概括', path: '/zh/siteNew/software/wms' },
+      { id: 'summary', title: '概览', path: '/zh/siteNew/software/wms' },
       { id: 'function', title: '功能', path: '' }
     ]
   },
   {
     mainTitle: '任务管理',
     subMenuItems: [
-      { id: 'summary', title: '概括', path: '/zh/siteNew/software/taskManagement' },
+      { id: 'summary', title: '概览', path: '/zh/siteNew/software/taskManagement' },
       { id: 'function', title: '功能', path: '' }
     ]
   },
   {
     mainTitle: '合同管理',
     subMenuItems: [
-      { id: 'summary', title: '概括', path: '/zh/siteNew/software/contractManagement' },
+      { id: 'summary', title: '概览', path: '/zh/siteNew/software/contractManagement' },
       { id: 'function', title: '功能', path: '' }
     ]
   },
   {
     mainTitle: '文档管理',
     subMenuItems: [
-      { id: 'summary', title: '概括', path: '/zh/siteNew/software/documentManagement' },
+      { id: 'summary', title: '概览', path: '/zh/siteNew/software/documentManagement' },
       { id: 'function', title: '功能', path: '' }
     ]
   },
   {
     mainTitle: '智能客服',
     subMenuItems: [
-      { id: 'summary', title: '概括', path: '/zh/siteNew/software/intelligentCustomerService' },
+      { id: 'summary', title: '概览', path: '/zh/siteNew/software/intelligentCustomerService' },
       { id: 'function', title: '功能', path: '' }
     ]
   },
   {
     mainTitle: '知识论坛',
     subMenuItems: [
-      { id: 'summary', title: '概括', path: '/zh/siteNew/software/knowledgeForum' },
+      { id: 'summary', title: '概览', path: '/zh/siteNew/software/knowledgeForum' },
       { id: 'function', title: '功能', path: '' }
     ]
   },
   {
     mainTitle: '问卷调查',
     subMenuItems: [
-      { id: 'summary', title: '概括', path: '/zh/siteNew/software/questionnaireSurvey' },
+      { id: 'summary', title: '概览', path: '/zh/siteNew/software/questionnaireSurvey' },
       { id: 'function', title: '功能', path: '' }
     ]
   }
