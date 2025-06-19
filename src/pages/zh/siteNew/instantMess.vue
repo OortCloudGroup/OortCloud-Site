@@ -14,6 +14,9 @@
           <div class="seeMore">
             立即试用
           </div>
+          <div class="seeMore u3">
+            立即购买
+          </div>
           <div class="seeMore u1">
             安排演示
           </div>
@@ -21,65 +24,194 @@
       </div>
       <img class="platTopOutImg" src="@/assets/software/instantMess_c1.png" alt="" />
     </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          综合定制首页
-        </div>
-        <div class="cl_d">
-          综合功能首页，千人千面。自定义自己的应用首页，帮助用户打造专属的工作台
-        </div>
-        <div class="cl_d d1">
-          同时作为手机端的信息门户和应用仓库功能。
-          <br />
-          功能、应用、模块均可定制
-        </div>
+
+    <div class="tabSwitch">
+      <div class="tabItem" @click="scrollToSection('section0')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section0'}">概述</span>
+        <span class="line" :class="{activeLine:activeSection==='section0'}" />
       </div>
-      <img class="k8sMana_c1" src="@/assets/software/instantMess_c2.png" alt="" />
+      <div class="tabItem" @click="scrollToSection('section1')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section1'}">SDK</span>
+        <span class="line" :class="{activeLine:activeSection==='section1'}" />
+      </div>
+      <div class="tabItem" @click="scrollToSection('section2')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section2'}">下载</span>
+        <span class="line" :class="{activeLine:activeSection==='section2'}" />
+      </div>
+      <div class="tabItem" @click="scrollToSection('section3')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section3'}">最佳实践</span>
+        <span class="line" :class="{activeLine:activeSection==='section3'}" />
+      </div>
     </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          畅享安全通讯
+    <!--    概述-->
+    <div id="section0" ref="section0">
+      <div class="flexRowAC w1380 colMenu">
+        <div class="left-menu">
+          <div
+            v-for="(item, index) in menuItems"
+            :key="index"
+            class="menu-item"
+            :class="{ active: activeIndex === index }"
+            @click="selectMenu(index)"
+          >
+            <div class="menu-content-wrapper">
+              <div class="line" />
+              <div class="text-content">
+                <div class="menu-text">
+                  {{ item.title }}
+                </div>
+                <div v-show="activeIndex === index" class="content-detail">
+                  <p>{{ currentItem.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="cl_d">
-          支持文字、语音、图片、视频等多种即时通讯方式，更有月后积分功能，消息自动销毁，保障信息安全
+        <div class="right-content">
+          <div class="content-image">
+            <img :src="currentItem.image" :alt="currentItem.title" />
+          </div>
         </div>
       </div>
-      <img class="k8sMana_c1" src="@/assets/software/instantMess_c3.png" alt="" />
     </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
+    <!--    SDK-->
+    <div id="section1" ref="section1">
+      <div class="productBox CloudBox w1380">
         <div class="cl_t">
-          语音视频会议
+          SDK
         </div>
-        <div class="cl_d">
-          轻松发起多方音视频会议，打破空间限制，随时随地组会交流
-        </div>
+        <img class="cl_t_img" src="@/assets/software/instantMess/sdk.png" />
       </div>
-      <img class="k8sMana_c1" src="@/assets/software/instantMess_c4.png" alt="" />
     </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <div class="CloudL">
+    <!--    下载-->
+    <div id="section2" ref="section2">
+      <div class="productBox CloudBox w1380">
         <div class="cl_t">
-          开放集成应用
+          下载
         </div>
-        <div class="cl_d">
-          构筑开放的应用市场，提供丰富的API，企业可按需定制个性化的应用
+        <div class="cl_list">
+          <div class="w1380 flexRowAC cl_list_jc">
+            <div class="cl_item">
+              <img class="cl_item_img" src="@/assets/software/instantMess/icon_dow_yhql.png" />
+              <span class="cl_item_title">IM</span>
+              <span class="cl_item_v">版本号：V3.1.06</span>
+              <div class="cl_item_bt">
+                <span class="cl_bt cl_item_bt1">SDK下载</span>
+                <span class="cl_bt cl_item_bt2">Demo下载</span>
+              </div>
+              <div class="cl_item_b">
+                <span class="cl_item_d">Demo下载</span>
+                <span class="cl_item_line" />
+                <span class="cl_item_d">更新日志</span>
+              </div>
+            </div>
+            <div class="cl_item">
+              <img class="cl_item_img" src="@/assets/software/instantMess/icon_dow_yhql2.png" />
+              <span class="cl_item_title">应用市场</span>
+              <span class="cl_item_v">版本号：V3.1.06</span>
+              <div class="cl_item_bt">
+                <span class="cl_bt cl_item_bt1">SDK下载</span>
+                <span class="cl_bt cl_item_bt2">Demo下载</span>
+              </div>
+              <div class="cl_item_b">
+                <span class="cl_item_d">Demo下载</span>
+                <span class="cl_item_line" />
+                <span class="cl_item_d">更新日志</span>
+              </div>
+            </div>
+            <div class="cl_item">
+              <img class="cl_item_img" src="@/assets/software/instantMess/icon_dow_yhql.png" />
+              <span class="cl_item_title">IM+应用市场</span>
+              <span class="cl_item_v">版本号：V3.1.06</span>
+              <div class="cl_item_bt">
+                <span class="cl_bt cl_item_bt1">SDK下载</span>
+                <span class="cl_bt cl_item_bt2">Demo下载</span>
+              </div>
+              <div class="cl_item_b">
+                <span class="cl_item_d">Demo下载</span>
+                <span class="cl_item_line" />
+                <span class="cl_item_d">更新日志</span>
+              </div>
+            </div>
+          </div>
+          <div class="w1380 flexRowAC cl_list_jc">
+            <div class="cl_item">
+              <img class="cl_item_img" src="@/assets/software/instantMess/icon_dow_yhql.png" />
+              <span class="cl_item_title">音视频</span>
+              <span class="cl_item_v">版本号：V3.1.06</span>
+              <div class="cl_item_bt">
+                <span class="cl_bt cl_item_bt1">SDK下载</span>
+                <span class="cl_bt cl_item_bt2">Demo下载</span>
+              </div>
+              <div class="cl_item_b">
+                <span class="cl_item_d">Demo下载</span>
+                <span class="cl_item_line" />
+                <span class="cl_item_d">更新日志</span>
+              </div>
+            </div>
+            <div class="cl_item">
+              <img class="cl_item_img" src="@/assets/software/instantMess/icon_dow_yhql2.png" />
+              <span class="cl_item_title">IM+应用市场+音视频</span>
+              <span class="cl_item_v">版本号：V3.1.06</span>
+              <div class="cl_item_bt">
+                <span class="cl_bt cl_item_bt1">SDK下载</span>
+                <span class="cl_bt cl_item_bt2">Demo下载</span>
+              </div>
+              <div class="cl_item_b">
+                <span class="cl_item_d">Demo下载</span>
+                <span class="cl_item_line" />
+                <span class="cl_item_d">更新日志</span>
+              </div>
+            </div>
+            <div class="cl_item">
+              <img class="cl_item_img" src="@/assets/software/instantMess/icon_dow_yhql.png" />
+              <span class="cl_item_title">首页+IM+应用市场+音视频</span>
+              <span class="cl_item_v">版本号：V3.1.06</span>
+              <div class="cl_item_bt">
+                <span class="cl_bt cl_item_bt1">SDK下载</span>
+                <span class="cl_bt cl_item_bt2">Demo下载</span>
+              </div>
+              <div class="cl_item_b">
+                <span class="cl_item_d">Demo下载</span>
+                <span class="cl_item_line" />
+                <span class="cl_item_d">更新日志</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <img class="k8sMana_c1" src="@/assets/software/policeBus_c1.png" alt="" />
     </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
+    <!--    最佳实践-->
+    <div id="section3" ref="section3">
+      <div class="productBox CloudBox w1380">
         <div class="cl_t">
-          多端协调办公
+          最佳实践
         </div>
-        <div class="cl_d">
-          可实现多个终端同时登陆，同步协同办公，支持个人设备之间的资料互传
+        <div class="sj_list">
+          <div class="w1380 flexRowAC sj_jc">
+            <div class="sj_item">
+              <img class="sj_item_img" src="@/assets/software/instantMess/zhzfywxt.png" />
+              <span class="sj_item_t">智慧政府一网协同</span>
+              <span class="sj_item_d">即时通讯、私有云部署的移动安全办公云平台、门户与应用仓库、移动应用开发支撑平台、安全管控MDM等</span>
+            </div>
+            <div class="sj_item">
+              <img class="sj_item_img" src="@/assets/software/instantMess/zhzfywtg.png" />
+              <span class="sj_item_t">智慧政府一网统管</span>
+              <span class="sj_item_d">PGIS地图引擎能力支撑平台(PGISPaaS)、指挥调度一张图、大数据IOC可视化平台等</span>
+            </div>
+            <div class="sj_item">
+              <img class="sj_item_img" src="@/assets/software/instantMess/dxgqyq.png" />
+              <span class="sj_item_t">大型国企央企</span>
+              <span class="sj_item_d">国企央企、内部超级App，个性化需求迭代、智能客服、定制手机型安全终端、移动新型OA效率管理等</span>
+            </div>
+            <div class="sj_item">
+              <img class="sj_item_img" src="@/assets/software/instantMess/ggaq.png" />
+              <span class="sj_item_t">公共安全</span>
+              <span class="sj_item_d">移动警务、移动检务、移动应急管理、移动司法监所、移动端服务化能力支撑平台等</span>
+            </div>
+          </div>
         </div>
       </div>
-      <img class="k8sMana_c1" src="@/assets/software/instantMess_c6.png" alt="" />
     </div>
     <div class="productBox w1380">
       <div class="proT">
@@ -162,7 +294,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import product5_1 from '@/assets/VLimg2.0/product5_1.png'
 import product5_2 from '@/assets/VLimg2.0/product5_2.png'
 import product5_3 from '@/assets/VLimg2.0/product5_3.png'
@@ -170,6 +302,11 @@ import product5_4 from '@/assets/VLimg2.0/product5_4.png'
 import product5_5 from '@/assets/VLimg2.0/product5_5.png'
 import product5_6 from '@/assets/VLimg2.0/product5_6.png'
 import product5_7 from '@/assets/VLimg2.0/product5_7.png'
+import bg1 from '@/assets/software/instantMess/jstx_zhdzsy_bg.png'
+import bg2 from '@/assets/software/instantMess/workup_aqtx_bg.png'
+import bg3 from '@/assets/software/instantMess/workup_yysphy_bg2.png'
+import bg4 from '@/assets/software/instantMess/workup_yysphy_bg.png'
+
 definePageMeta({
   layout: 'site-new'
 })
@@ -183,6 +320,87 @@ p5Arr.value = [
   { t: 'Mac OS', d: '版本号：V3.1.06', flag: false, img: product5_6 },
   { t: '银河麒麟', d: '版本号：V3.1.06', flag: false, img: product5_7 }
 ]
+
+const menuItems = ref([
+  {
+    title: '多端聊天',
+    description: '支持单聊、群聊实现类微信功能和消息推送统一入口，可创建、加入群组，发起交流或群聊。',
+    image: bg1
+  },
+  {
+    title: '畅想安全通讯',
+    description: '支持文字、语音、图片、视频等多种即时通讯方式，更有月后积分功能，消息自动销毁，保障信息安全。',
+    image: bg2
+  },
+  {
+    title: '语音视频会议',
+    description: '轻松发起多方音视频会议，打破空间限制，随时随地组会交流',
+    image: bg3
+  },
+  {
+    title: '便捷通讯录',
+    description: '提供联系人查找、通讯、等功能，适用于多部门、跨区域的机关和企事业单位，提升沟通与工作效率。',
+    image: bg4
+  }
+])
+
+const activeIndex = ref(0)
+
+const currentItem = computed(() => {
+  return menuItems.value[activeIndex.value]
+})
+
+function selectMenu(index) {
+  activeIndex.value = index
+}
+
+const activeSection = ref('section0')
+const section0 = ref(null)
+const section1 = ref(null)
+const section2 = ref(null)
+
+const scrollToSection = (sectionId) => {
+  const element = document.getElementById(sectionId)
+  if (element) {
+    const offset = 120
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+    window.scrollTo({
+      top: elementPosition - offset,
+      behavior: 'smooth'
+    })
+  }
+}
+
+const handleScroll = () => {
+  const sections = [
+    { id: 'section0', ref: section0 },
+    { id: 'section1', ref: section1 },
+    { id: 'section2', ref: section2 }
+  ]
+
+  const scrollPosition = window.scrollY + 200
+
+  for (const section of sections) {
+    const element = section.ref.value
+    if (element) {
+      const offsetTop = element.offsetTop
+      const offsetHeight = element.offsetHeight
+
+      if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+        activeSection.value = section.id
+        break
+      }
+    }
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <style scoped lang="scss">
@@ -285,6 +503,15 @@ p5Arr.value = [
       border: 1px solid #F4F4F4;
     }
 
+    .u3{
+      border-radius: 8px;
+      border: 1px solid #ED2121;
+      color: #ED2121;
+      font-weight: bold;
+      font-size: 18px;
+      background: #fff;
+    }
+
     .seeMore.u2 {
       display: flex;
       gap: 10px;
@@ -342,11 +569,15 @@ p5Arr.value = [
 
   .cl_t {
     letter-spacing: 0;
-    padding-top: 30px;
-    padding-bottom: 40px;
-    color: #3D3D3D;
+    padding-bottom: 80px;
+    color: #333333;
     font-weight: bold;
-    font-size: 54px;
+    font-size: 58px;
+    line-height: 82px;
+  }
+
+  .cl_t_img{
+    width: 100%;
   }
 
   .cl_d {
@@ -645,5 +876,268 @@ p5Arr.value = [
 .k8sMana_c1{
   width: 692px;
   height: auto;
+}
+
+.tabSwitch{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+  border-bottom: 0.5px solid #DFDFDF;
+  margin-bottom: 160px;
+  .tabItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .tabTitle{
+      color: #666666;
+      font-size: 32px;
+      letter-spacing: 2.67px;
+      text-align: left;
+      margin-bottom: 18px;
+    }
+    .line{
+      width: 64px;
+      height: 4px;
+      background: transparent;
+    }
+
+    .activeTitle{
+      color: #333333;
+      //font-weight: bold;
+    }
+    .activeLine{
+      background: #4480FF;
+    }
+  }
+}
+
+.colMenu{
+  justify-content: space-between;
+  margin-bottom: 160px;
+}
+
+.left-menu {
+  width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-right: 16px;
+
+  .menu-item {
+    position: relative;
+    cursor: pointer;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.active {
+      .menu-text {
+        color: #333333;
+        font-size: 54px;
+        line-height: 82px;
+      }
+    }
+
+    .menu-content-wrapper {
+      display: flex;
+      gap: 16px;
+      position: relative;
+    }
+
+    .line {
+      position: absolute;
+      left: -24px;
+      top: 0;
+      width: 6px;
+      height: 48px;
+      background-color: #E8EAED;
+      transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 33px;
+    }
+
+    &.active .line {
+      height: 100%;
+      background-color: #2E63FF;
+    }
+
+    .text-content {
+      flex: 1;
+    }
+
+    .menu-text {
+      transition: all 0.3s ease;
+      color: #666666;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 48px;
+    }
+
+    .content-detail {
+      p {
+        color: #717781;
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.right-content {
+  width: 700px;
+  height: 450px;
+  border-radius: 24px;
+  background: #F9FAFB;
+  border: 1px solid #E2E3E5;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+
+  .content-image {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 6px;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+    img {
+      transform: scale(1.02);
+    }
+  }
+}
+
+.cl_list{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  .cl_list_jc{
+    justify-content: space-between;
+  }
+  .cl_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 383px;
+    height: 474px;
+    border-radius: 24px;
+    background: #FFFFFF;
+    box-shadow: 0 0 48px 0 #07005714;
+    padding: 50px 0 40px 0;
+    box-sizing: border-box;
+    .cl_item_img{
+      width: 100px;
+      height: 100px;
+    }
+    .cl_item_title{
+      color: #3D3D3D;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 36px;
+      margin: 38px 0 4px 0;
+    }
+    .cl_item_v{
+      color: #717781;
+      font-size: 14px;
+      line-height: 22px;
+      margin-bottom: 60px;
+    }
+    .cl_item_bt{
+      display: flex;
+      gap: 12px;
+      margin-bottom: 36px;
+      .cl_bt{
+        width: 158px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .cl_item_bt1{
+        background: #2278FF;
+        box-shadow: 0 4px 10px 0 #2278FF33;
+        color: #FFFFFF;
+      }
+
+      .cl_item_bt2{
+        background: #FFFFFF;
+        border: 1px solid #2278FF;
+        color: #2278FF;
+      }
+    }
+    .cl_item_b{
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      .cl_item_d{
+        color: #2278FF;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .cl_item_line{
+        width: 1px;
+        height: 18px;
+        background: #CCCCCC;
+      }
+    }
+
+  }
+}
+
+.sj_list{
+  display: flex;
+  .sj_jc{
+    justify-content: space-between;
+  }
+  .sj_item{
+    width: 282px;
+    height: 396px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 24px;
+    background: #FFFFFF;
+    box-shadow: 0 18px 48px 0 #0049B614;
+    padding: 0 13px;
+    //box-sizing: border-box;
+    .sj_item_img{
+      width: 72.28px;
+      height: 74px;
+      margin: 47px 0 37px 0;
+    }
+    .sj_item_t{
+      color: #3D3D3D;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 48px;
+      margin-bottom: 30px;
+    }
+    .sj_item_d{
+      color: #3D3D3D;
+      font-size: 18px;
+      line-height: 26px;
+      text-align: center;
+    }
+  }
 }
 </style>

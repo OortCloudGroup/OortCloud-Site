@@ -3,12 +3,10 @@
     <div class="w1380 CloudBox c1 flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
-          街道网格治理
-          <br />
-          闭环
+          街道应用集合
         </div>
         <div class="cl_d">
-          工作任务闭环、精细化管理、指挥调度一键视频“看得见、呼得通”
+          街道网格治理闭环。工作任务闭环、精细化管理、指挥调度一键视频“看得见、呼得通”
         </div>
         <div class="flexRowAC useBox">
           <nuxt-link to="/zh/siteNew/industy/buy" class="seeMore flexRowAC">
@@ -80,9 +78,12 @@
       <div class="VLStream v2">
         <span class="v2_sub">释放</span> 您的无限增潜能
       </div>
-      <nuxt-link to="/zh/siteNew/industy/buy" class="pcIt_tbtn flexRowAC">
-        立即使用
-      </nuxt-link>
+      <div class="flexRowAC useBox">
+        <nuxt-link to="/zh/siteNew/industy/buy" class="pcIt_tbtn flexRowAC">
+          立即使用
+        </nuxt-link>
+        <img class="useImg" src="@/assets/software/icon_sfqn.png" />
+      </div>
     </div>
     <div class="productBox w1380">
       <div class="proT">
@@ -248,6 +249,7 @@ apps.value = [
   }
 
   .useBox {
+    position: relative;
     justify-content: center;
     gap: 20px;
 
@@ -260,6 +262,13 @@ apps.value = [
       //box-shadow: 0px 4px 10px 0px #FF5E1033;
       font-weight: bold;
       font-size: 18px;
+    }
+
+    .useImg{
+      position: absolute;
+      width: 106px;
+      height: 87px;
+      left: 850px;
     }
 
     .u1 {
@@ -326,12 +335,12 @@ apps.value = [
     padding-top: 100px;
   }
   .cl_t {
-    letter-spacing: 0;
     padding-top: 30px;
     padding-bottom: 40px;
-    color: #3D3D3D;
+    color: #333333;
     font-weight: bold;
     font-size: 54px;
+    line-height: 82px;
   }
 
   .cl_d {

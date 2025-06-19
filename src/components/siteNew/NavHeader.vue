@@ -116,16 +116,25 @@ watch(() => prop.item, (newVal) => {
   propTemp.value = newVal
 }, { immediate: true })
 
-let menuStreet = [
-  { title: '首页', classify: 'streeet', path: '/zh/siteNew' },
-  { title: '街道', classify: 'streeet', path: '/zh/siteNew/industy/street' },
-  { title: '概述', classify: 'streeet', path: '/zh/siteNew/industy/overview' },
-  { title: '功能', classify: 'streeet', path: '/zh/siteNew/price' },
-  { title: '下载', classify: 'streeet', path: '/zh/siteNew/industy/download' },
-  { title: '硬件', classify: 'streeet', path: '/zh/siteNew/contactUs' }
-]
+// let menuStreet = [
+//   { title: '首页', classify: 'streeet', path: '/zh/siteNew' },
+//   { title: '街道', classify: 'streeet', path: '/zh/siteNew/industy/street' },
+//   { title: '概述', classify: 'streeet', path: '/zh/siteNew/industy/overview' },
+//   { title: '功能', classify: 'streeet', path: '/zh/siteNew/price' },
+//   { title: '下载', classify: 'streeet', path: '/zh/siteNew/industy/download' },
+//   { title: '硬件', classify: 'streeet', path: '/zh/siteNew/contactUs' }
+// ]
 
 const MAIN_MENU = [
+  {
+    mainTitle: '街道',
+    subMenuItems: [
+      { title: '概述', classify: 'streeet', path: '/zh/siteNew/industy/overview' },
+      { title: '功能', classify: 'streeet', path: '/zh/siteNew/price' },
+      { title: '下载', classify: 'streeet', path: '/zh/siteNew/industy/download' },
+      { title: '硬件', classify: 'streeet', path: '/zh/siteNew/industy/street' }
+    ]
+  },
   {
     mainTitle: '问题反馈',
     subMenuItems: [
@@ -234,10 +243,10 @@ const updateMenuState = (path) => {
 watch(isActPath, (newVal) => {
   mainTitle.value = ''
   navList.value = menu //设置默认为主菜单
-  // 街道
-  if (newVal === '/zh/siteNew/industy/street' || route?.meta?.mate) {
-    navList.value = menuStreet
-  }
+  // // 街道
+  // if (newVal === '/zh/siteNew/industy/street' || route?.meta?.mate) {
+  //   navList.value = menuStreet
+  // }
   if (newVal === '/zh/siteNew') {
     navList.value = menu
   }

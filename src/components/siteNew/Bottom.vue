@@ -2,8 +2,23 @@
   <div class="bottom_page">
     <div class="bottom_content">
       <div class="bottom_pro flexRowAC">
-        <div class="bottom_pro_t">
-          <img class="bottom_pro_tImg" src="@/assets/VLimg2.0/ipc.png" alt="" />
+        <div class="bottom_pro_b">
+          <div class="bottom_pro_t1">
+            <img class="bottom_pro_t1_img" src="@/assets/software/bottom/logo.png" alt="" />
+            <span class="bottom_pro_t1_d">300多种企业级产品累计服务1.5亿用户</span>
+          </div>
+          <div class="bottom_pro_t2">
+            <img class="bottom_pro_t2_img" src="@/assets/software/bottom/gjxyqy.png" />
+            <span class="bottom_pro_t2_d">国家AAA信用企业</span>
+          </div>
+          <div class="bottom_pro_t2">
+            <img class="bottom_pro_t2_img" src="@/assets/software/bottom/rjzzqhzl.png" />
+            <span class="bottom_pro_t2_d">180+软件著作权和专利</span>
+          </div>
+          <div class="bottom_pro_t2">
+            <img class="bottom_pro_t2_img" src="@/assets/software/bottom/sdgltxrz.png" />
+            <span class="bottom_pro_t2_d">通过了ISO20000、27001等三大管理体系认证</span>
+          </div>
         </div>
       </div>
       <div class="b_ser flexRowAC">
@@ -285,12 +300,36 @@ const viewPath = (path) => {
     padding-bottom: 68px;
   }
 
-  .bottom_pro_t {
+  .bottom_pro_b {
+    display: flex;
+    width: 100%;
     color: #fff;
-
-    .bottom_pro_tImg {
-      height: 48px;
-      margin-bottom: 18px;
+    justify-content: space-between;
+    .bottom_pro_t1{
+      display: flex;
+      flex-direction: column;
+      .bottom_pro_t1_img{
+        width: 190px;
+        height: 50px;
+      }
+      .bottom_pro_t1_d{
+        color: #FFFFFF;
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 20px;
+      }
+    }
+    .bottom_pro_t2{
+      display: flex;
+      align-items: center;
+      .bottom_pro_t2_img{
+        width: 60px;
+        height: 60px;
+      }
+      .bottom_pro_t2_d{
+        color: #FFFFFF;
+        font-size: 14px;
+      }
     }
   }
 
@@ -298,10 +337,8 @@ const viewPath = (path) => {
     gap: 30px;
 
     .bottom_pro_address {
-      color: white;
       width: 450px;
       height: 60px;
-      border-radius: 3px;
       color: #fff;
       border-radius: 8px;
       border: 1px solid #646C76;

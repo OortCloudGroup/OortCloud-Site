@@ -3,8 +3,9 @@
     <div class="platTopOut flexRowAC w1380">
       <div class="platTop w1380">
         <div class="VLStream">
-          云课堂3.0
-          Classroom
+          云课堂<br />
+          Classroom<br />
+          3.0
         </div>
         <div class="plat_cent">
           基于移动互联网的培训管理和学习交互平台
@@ -12,6 +13,9 @@
         <div class="flexRowAC useBox" style="justify-content: flex-start">
           <div class="seeMore">
             立即试用
+          </div>
+          <div class="seeMore u3">
+            立即购买
           </div>
           <div class="seeMore u1">
             安排演示
@@ -86,16 +90,16 @@
       </div>
       <img class="k8sMana_c1" src="@/assets/software/cloudClass_c5.png" alt="" />
     </div>
-    <div class="w1380 CloudBox flexRowAC">
+    <div class="w1380 CloudBox">
       <div class="CloudL">
-        <div class="cl_t">
+        <div class="cl_t wt_t">
           问卷调查、微投票
         </div>
-        <div class="cl_d">
+        <div class="cl_d wt_d">
           你的选择很重要
         </div>
       </div>
-      <img class="k8sMana_c1" src="@/assets/software/cloudClass_c6.png" alt="" />
+      <img class="w1380" src="@/assets/software/cloudClass_c6.png" alt="" />
     </div>
     <div class="productBox w1380">
       <div class="proT">
@@ -301,6 +305,15 @@ p5Arr.value = [
       border: 1px solid #F4F4F4;
     }
 
+    .u3{
+      border-radius: 8px;
+      border: 1px solid #ED2121;
+      color: #ED2121;
+      font-weight: bold;
+      font-size: 18px;
+      background: #fff;
+    }
+
     .seeMore.u2 {
       display: flex;
       gap: 10px;
@@ -357,12 +370,12 @@ p5Arr.value = [
   align-items: flex-start;
 
   .cl_t {
-    letter-spacing: 0;
     padding-top: 30px;
     padding-bottom: 40px;
-    color: #3D3D3D;
+    color: #333333;
     font-weight: bold;
     font-size: 54px;
+    line-height: 82px;
   }
 
   .cl_d {
@@ -370,6 +383,14 @@ p5Arr.value = [
     color: #97A3B6;
     font-weight: bold;
     font-size: 40px;
+  }
+
+  .wt_t{
+    padding-bottom: 16px;
+  }
+
+  .wt_d{
+    padding-bottom: 72px;
   }
 
   .CloudL {

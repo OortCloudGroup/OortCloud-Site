@@ -12,6 +12,9 @@
           <div class="seeMore">
             立即试用
           </div>
+          <div class="seeMore u3">
+            立即购买
+          </div>
           <div class="seeMore u1">
             安排演示
           </div>
@@ -29,9 +32,9 @@
       </div>
       <img class="k8sMana_c1" src="@/assets/software/k8sMana_c4.png" alt="" />
     </div>
-    <div class="w1380 CloudBox ipcBox flexRowAC">
+    <div class="w1380 CloudBox flexRowAC">
       <img class="k8sMana_c1" src="@/assets/software/policeBus_c0.png" alt="" />
-      <div class="CloudL" style="width: 460px;">
+      <div class="CloudL">
         <div class="cl_t">
           服务总线
         </div>
@@ -67,7 +70,7 @@
     </div>
     <div class="w1380 ipcView CloudBox flexRowAC">
       <img class="k8sMana_c1" src="@/assets/software/policeBus_c1.png" alt="" />
-      <div class="CloudL" style="text-align: right">
+      <div class="CloudL">
         <div class="cl_t">
           应用市场
         </div>
@@ -234,6 +237,15 @@ definePageMeta({
       border: 1px solid #F4F4F4;
     }
 
+    .u3{
+      border-radius: 8px;
+      border: 1px solid #ED2121;
+      color: #ED2121;
+      font-weight: bold;
+      font-size: 18px;
+      background: #fff;
+    }
+
     .seeMore.u2 {
       display: flex;
       gap: 10px;
@@ -290,18 +302,19 @@ definePageMeta({
   align-items: flex-start;
 
   .cl_t {
-    letter-spacing: 0;
     padding-top: 30px;
     padding-bottom: 40px;
-    color: #3D3D3D;
+    color: #333333;
     font-weight: bold;
     font-size: 54px;
+    line-height: 82px;
   }
 
   .cl_d {
     padding-bottom: 24px;
     color: #717781;
     font-size: 20px;
+    text-align: left;
   }
 
   .CloudL {
@@ -386,9 +399,10 @@ definePageMeta({
 
   .proT {
     padding-bottom: 60px;
-    color: #3D3D3D;
+    color: #333333;
     font-weight: bold;
-    font-size: 58px;
+    font-size: 54px;
+    line-height: 82px;
   }
 
   .prod {

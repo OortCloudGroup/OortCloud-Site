@@ -18,8 +18,8 @@
         </div>
       </div>
     </div>
-    <div class="proTitleBox scene w1380" style="padding-top: 160px;">
-      <div style="text-align: center;padding-bottom: 76px;">
+    <div class="proTitleBox scene w1380">
+      <div class="subTitle">
         应用场景
       </div>
       <div class="sceneBox">
@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="proTitleBox w1380">
-      <div style="text-align: center;padding-bottom: 76px;">
+      <div class="subTitle">
         产品优势
       </div>
       <div class="flexRowAC proLBox">
@@ -57,23 +57,22 @@
         </div>
       </div>
     </div>
-    <div class="proTitleBox w1380 flexRowAC">
+    <div class="proTitleBox w1380 flexRowAC subTitle">
       产品服务
     </div>
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
-          单兵作战终端
+          指挥中心操作台
         </div>
         <div class="cl_d">
           分体式键盘，解锁多种形态，平板笔记本二合一助你快速进入状态，连接蓝牙键盘，还原笔记本办公体验，随时随地高效输出。
         </div>
       </div>
-      <img class="dispatch_c1" src="@/assets/software/dispatch_c1.png" alt="" />
+      <img class="dispatch_c1" src="@/assets/software/command_center_console.png" alt="" />
     </div>
-    <div class="w1380 CloudBox ipcBox flexRowAC">
-      <img class="dispatch_c2" src="@/assets/software/dispatch_c2.png" alt="" />
-      <div class="CloudL" style="width: 520px;">
+    <div class="w1380 CloudBox flexRowAC">
+      <div class="CloudL">
         <div class="cl_t">
           便携式打印机
         </div>
@@ -81,10 +80,11 @@
           充分满足多种使用需求，性价比更高，耐摔防水耐用性强更省心，摆脱传统式数据线连接随身携带更方便。
         </div>
       </div>
+      <img class="dispatch_c2" src="@/assets/software/dispatch_c2.png" alt="" />
     </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <div class="CloudL" style="width: 580px;">
-        <div class="cl_t">
+    <div class="w1380 CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_t" style="white-space: nowrap;">
           执法记录仪/便携摄像头
         </div>
         <div class="cl_d">
@@ -93,9 +93,8 @@
       </div>
       <img class="dispatch_c3" src="@/assets/software/dispatch_c3.png" alt="" />
     </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <img class="dispatch_c4" src="@/assets/software/dispatch_c4.png" alt="" />
-      <div class="CloudL" style="text-align: right">
+    <div class="w1380 CloudBox flexRowAC">
+      <div class="CloudL">
         <div class="cl_t">
           位置服务系统
         </div>
@@ -103,6 +102,7 @@
           采用GNSS、Wi-Fi、基站等多种混合定位模式进行定位，赋予您的应用程序快速、精准地获取用户位置信息的能力。
         </div>
       </div>
+      <img class="dispatch_c4" src="@/assets/software/dispatch_c4.png" alt="" />
     </div>
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
@@ -116,7 +116,6 @@
       <img class="dispatch_c5" src="@/assets/software/dispatch_c5.png" alt="" />
     </div>
     <div class="w1380 CloudBox flexRowAC">
-      <img class="dispatch_c6" src="@/assets/software/dispatch_c6.png" alt="" />
       <div class="CloudL">
         <div class="cl_t">
           融合通信一张图
@@ -127,17 +126,19 @@
           通过融合应急指挥调度一张图管控端侧资源,形成云计算、一张图、应用端APP落地方案。
         </div>
       </div>
+      <img class="dispatch_c6" src="@/assets/software/dispatch_c6.png" alt="" />
     </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
+
+    <div class="w1380 CloudBox">
+      <div>
         <div class="cl_t">
-          多端同步
+          单兵作战终端 多端协同
         </div>
-        <div class="cl_d">
-          支持移动端、PC端、执法记录仪端及车载终端同步，提供实时高效的多端联动与指挥管理能力，适用于多场景任务调度。
+        <div class="cl_d cl_t_d">
+          支持移动端、PC端、执法记录仪端及车载终端协同，提供实时高效的多端联动与指挥管理能力，适用于多场景任务调度。
         </div>
       </div>
-      <img class="dispatch_c5" src="@/assets/software/dispatch_c7.png" alt="" />
+      <img class="cl_t_img" src="@/assets/software/zhdd_cpys_ddxt.png" alt="" />
     </div>
     <div class="productBox w1380">
       <div class="proT">
@@ -407,12 +408,12 @@ proL.value = [
   align-items: flex-start;
 
   .cl_t {
-    letter-spacing: 0;
     padding-top: 30px;
     padding-bottom: 40px;
-    color: #3D3D3D;
+    color: #333333;
     font-weight: bold;
     font-size: 54px;
+    line-height: 82px;
   }
 
   .cl_d {
@@ -421,8 +422,12 @@ proL.value = [
     font-size: 20px;
   }
 
+  .cl_t_d{
+    width: 850px;
+  }
+
   .CloudL {
-    width: 500px;
+    width: 520px;
   }
 
   .CloudR {
@@ -688,7 +693,6 @@ proL.value = [
   color: #3D3D3D;
   font-weight: bold;
   font-size: 58px;
-  padding-bottom: 100px;
 }
 
 .proTitleBox.scene {
@@ -770,6 +774,10 @@ proL.value = [
   height: auto;
 }
 
+.cl_t_img{
+  width: 100%;
+  height: 500px;
+}
 .dispatch_c6 {
   width: 530px;
   height: auto;
@@ -800,4 +808,15 @@ proL.value = [
     text-align: left;
   }
 }
+
+.subTitle{
+  color: #3D3D3D;
+  font-weight: bold;
+  font-size: 58px;
+  line-height: 88px;
+  text-align: center;
+  padding-bottom: 60px;
+  padding-top: 160px;
+}
+
 </style>

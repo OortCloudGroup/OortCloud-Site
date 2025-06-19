@@ -1,85 +1,90 @@
 <template>
   <div class="home_page vls">
-    <div class="platTop w1380">
-      <div class="VLStream">
-        门户与应用仓库
-      </div>
-      <div class="plat_cent">
-        拥有领先于市场的小程序容器技术，可为您提供敏捷、安全的最佳实践，
-        <br />
-        是数字化时代下企业移动开发的不二之选。
-      </div>
-      <div class="flexRowAC useBox">
-        <div class="seeMore">
-          立即试用
+    <div class="w1380 tiBg">
+      <div class="platTop w1380">
+        <div class="VLStream">
+          门户与应用仓库
         </div>
-        <div class="seeMore u1">
-          安排演示
-        </div>
-      </div>
-    </div>
-    <div class="por_app flexRowAC">
-      <img class="k8sMana_c1" src="@/assets/software/portalApp_bg1.png" alt="" />
-      30分钟
-      <span>把小程序搬进 App</span>
-    </div>
-    <div class="por_con w1380 flexRowAC">
-      <div class="por_c_it">
-        <div>01</div>
-        <div>
-          私有个性化
+        <div class="plat_cent">
+          拥有领先于市场的小程序容器技术，可为您提供敏捷、安全的最佳实践，
           <br />
-          "应用市场"
+          是数字化时代下企业移动开发的不二之选。
         </div>
-        <div>支持私有应用市场，规范上架，便捷服务分发</div>
-      </div>
-      <div class="por_c_it">
-        <div>02</div>
-        <div>
-          云原生架构<br />
-          &nbsp;
-        </div>
-        <div>基于云原生架构，支持百万级查询和高并发，确保业务平稳运行。</div>
-      </div>
-      <div class="por_c_it">
-        <div>03</div>
-        <div>
-          多终端支持<br />
-          &nbsp;
-        </div>
-        <div>
-          支持多终端，包括移动
-          端、双系统、华为Pad
-          PC、国产操作系统等。
+        <div class="flexRowAC useBox">
+          <div class="seeMore">
+            立即试用
+          </div>
+          <div class="seeMore u3">
+            立即购买
+          </div>
+          <div class="seeMore u1">
+            安排演示
+          </div>
         </div>
       </div>
-      <div class="por_c_it">
-        <div>04</div>
-        <div>
-          多种部署方式<br />
-          &nbsp;
-        </div>
-        <div>
-          支持私有云、行业云、混
-          合云部署，兼容国产化和
-          鲲鹏云，满足业务需求。
-        </div>
+      <div class="por_app flexRowAC">
+        <img class="k8sMana_c1" src="@/assets/software/portalApp_bg1.png" alt="" />
+        30分钟
+        <span>把小程序搬进 App</span>
       </div>
-      <div class="por_c_it">
-        <div>05</div>
-        <div>
-          真实环境压力测试<br />
-          &nbsp;
+      <div class="por_con w1380 flexRowAC">
+        <div class="por_c_it">
+          <div>01</div>
+          <div>
+            私有个性化
+            <br />
+            "应用市场"
+          </div>
+          <div>支持私有应用市场，规范上架，便捷服务分发</div>
         </div>
-        <div>
-          经过百万级并发压力测
-          试，确保业务稳定运行。
+        <div class="por_c_it">
+          <div>02</div>
+          <div>
+            云原生架构<br />
+            &nbsp;
+          </div>
+          <div>基于云原生架构，支持百万级查询和高并发，确保业务平稳运行。</div>
+        </div>
+        <div class="por_c_it">
+          <div>03</div>
+          <div>
+            多终端支持<br />
+            &nbsp;
+          </div>
+          <div>
+            支持多终端，包括移动
+            端、双系统、华为Pad
+            PC、国产操作系统等。
+          </div>
+        </div>
+        <div class="por_c_it">
+          <div>04</div>
+          <div>
+            多种部署方式<br />
+            &nbsp;
+          </div>
+          <div>
+            支持私有云、行业云、混
+            合云部署，兼容国产化和
+            鲲鹏云，满足业务需求。
+          </div>
+        </div>
+        <div class="por_c_it">
+          <div>05</div>
+          <div>
+            真实环境压力测试<br />
+            &nbsp;
+          </div>
+          <div>
+            经过百万级并发压力测
+            试，确保业务稳定运行。
+          </div>
         </div>
       </div>
     </div>
     <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL" style="width: 600px;">
-        <div class="cl_t">
+      <div class="CloudL">
+        <div class="cl_t" style="white-space: nowrap">
           前端容器技术引领者
           <br />
           助力企业拥抱云原生时代
@@ -92,7 +97,7 @@
     </div>
     <div class="w1380 CloudBox ipcBox flexRowAC">
       <img class="k8sMana_c1" src="@/assets/software/portalApp_c2.png" alt="" />
-      <div class="CloudL" style="width: 600px;">
+      <div class="CloudL" style="text-align: left">
         <div class="cl_t">
           语法遵循主流轻应用规范
         </div>
@@ -102,11 +107,9 @@
       </div>
     </div>
     <div class="w1380 ipcView CloudBox flexRowAC">
-      <div class="CloudL" style="width: 600px;">
+      <div class="CloudL">
         <div class="cl_t">
-          扩展方式
-          <br />
-          可基于业务灵活配置
+          扩展方式可基于业务灵活配置
         </div>
         <div class="cl_d">
           企业可灵活配置API和第三方SDK，支持开放API接口和二次开发。
@@ -116,11 +119,9 @@
     </div>
     <div class="w1380 ipcView CloudBox flexRowAC">
       <img class="k8sMana_c1" src="@/assets/software/portalApp_c4.png" alt="" />
-      <div class="CloudL" style="text-align: right;width: 540px;">
+      <div class="CloudL">
         <div class="cl_t">
-          提供完善开发测试环境
-          <br />
-          与支持文档
+          提供完善开发测试环境与支持文档
         </div>
         <div class="cl_d">
           提供小程序开发工具和完备文档，提升迭代速度，保障开发流程。
@@ -130,7 +131,7 @@
     <div class="proTitleBox w1380 flexRowAC">
       开发小程序，也可以是件「愉悦」的事儿
     </div>
-    <div class="productBox hapBox w1380 flexRowAC" style="width: 700px;">
+    <div class="productBox hapBox w1380 flexRowAC w700">
       <div class="hap flexRowAC">
         <img class="k8sMana_c1" src="@/assets/software/portalApp_bg2.png" alt="" />
         提供SDK及集成指南
@@ -286,6 +287,15 @@ definePageMeta({
       border: 1px solid #F4F4F4;
     }
 
+    .u3{
+      border-radius: 8px;
+      border: 1px solid #ED2121;
+      color: #ED2121;
+      font-weight: bold;
+      font-size: 18px;
+      background: #fff;
+    }
+
     .seeMore.u2 {
       display: flex;
       gap: 10px;
@@ -345,9 +355,10 @@ definePageMeta({
     letter-spacing: 0;
     padding-top: 30px;
     padding-bottom: 40px;
-    color: #3D3D3D;
+    color: #333333;
     font-weight: bold;
     font-size: 54px;
+    line-height: 82px;
   }
 
   .cl_d {
@@ -357,7 +368,7 @@ definePageMeta({
   }
 
   .CloudL {
-    width: 500px;
+    width: 450px;
   }
 
   .CloudR {
@@ -400,9 +411,10 @@ definePageMeta({
 
   .proT {
     padding-bottom: 60px;
-    color: #3D3D3D;
+    color: #333333;
     font-weight: bold;
-    font-size: 58px;
+    font-size: 54px;
+    line-height: 82px;
   }
 
   .prod {
@@ -620,9 +632,10 @@ definePageMeta({
 
 .proTitleBox {
   justify-content: center;
-  color: #3D3D3D;
+  color: #333333;
   font-weight: bold;
-  font-size: 58px;
+  font-size: 54px;
+  line-height: 82px;
   padding-bottom: 100px;
 }
 
@@ -648,7 +661,6 @@ definePageMeta({
 
 .por_con {
   align-items: flex-start;
-  padding-bottom: 160px;
   gap: 40px;
 
   .por_c_it {
@@ -701,5 +713,16 @@ definePageMeta({
       margin-bottom: 20px;
     }
   }
+}
+
+.tiBg{
+  border-radius: 24px;
+  background: #F9FAFB;
+  padding: 0 200px 76px 200px;
+  margin-bottom:160px;
+}
+
+.w700{
+  width: 700px;
 }
 </style>

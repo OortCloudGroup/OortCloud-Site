@@ -240,12 +240,12 @@ let value = ref('')
   align-items: flex-start;
 
   .cl_t {
-    letter-spacing: 0;
     padding-top: 30px;
     padding-bottom: 40px;
-    color: #3D3D3D;
+    color: #333333;
     font-weight: bold;
     font-size: 54px;
+    line-height: 82px;
   }
 
   .cl_d {

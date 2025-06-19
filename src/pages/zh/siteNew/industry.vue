@@ -5,7 +5,7 @@
         <img class="idtImg" src="@/assets/homeImg/industry_i1.png" alt="" />行业
       </div>
       <div class="flexRowAC conBox">
-        <div v-for="(item,i) in idtArr1" :key="i" @click="indClick('行业','/zh/siteNew/industy/street',item)">
+        <div v-for="(item,i) in idtArr1" :key="i" @click="indClick('行业','/zh/siteNew/industy/overview',item)">
           {{ item }}
         </div>
       </div>

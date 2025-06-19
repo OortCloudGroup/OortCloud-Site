@@ -16,6 +16,9 @@
           <div class="seeMore">
             立即试用
           </div>
+          <div class="seeMore u3">
+            立即购买
+          </div>
           <div class="seeMore u1">
             安排演示
           </div>
@@ -23,70 +26,248 @@
       </div>
       <img class="platTopOutImg" src="@/assets/software/k8sMana_bg1.png" alt="" />
     </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          虚拟化与云原生底座
-        </div>
-        <div class="cl_d">
-          支持容器和虚拟机集成管理，具备高可用性、弹性伸缩和资源优化能力，构建稳定可靠的云原生运行环境。
-        </div>
+    <div class="tabSwitch">
+      <div class="tabItem" @click="scrollToSection('section0')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section0'}">微服务平台</span>
+        <span class="line" :class="{activeLine:activeSection==='section0'}" />
       </div>
-      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c1.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox ipcBox flexRowAC">
-      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c2.png" alt="" />
-      <div class="CloudL">
-        <div class="cl_t">
-          服务总线
-        </div>
-        <div class="cl_d">
-          基于OpenSergo统一微服务治理警务服务总线软件
-        </div>
+      <div class="tabItem" @click="scrollToSection('section1')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section1'}">微服务管理支撑</span>
+        <span class="line" :class="{activeLine:activeSection==='section1'}" />
+      </div>
+      <div class="tabItem" @click="scrollToSection('section2')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section2'}">API网关</span>
+        <span class="line" :class="{activeLine:activeSection==='section2'}" />
       </div>
     </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          业务中台
+    <!--微服务平台 -->
+    <div id="section0" ref="section0">
+      <div class="w1380 CloudBox flexRowAC">
+        <div class="CloudL">
+          <div class="cl_t">
+            容器管理
+          </div>
+          <div class="cl_d">
+            提供高性能容器应用管理服务，支持Kubernetes原生工具，简化环境搭建，涵盖集群、容器主机、调度、网络、存储及负载均衡管理。
+          </div>
         </div>
-        <div class="cl_d">
-          通过模块化的中台服务，提供高效的数据、技术和组织支撑，促进业务快速开发与灵活部署。
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_rqgl_bg.png" alt="" />
+      </div>
+      <div class="w1380 ipcView CloudBox flexRowAC">
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_ywjkgl_bg.png" alt="" />
+        <div class="CloudL">
+          <div class="cl_t">
+            镜像管理
+          </div>
+          <div class="cl_d">
+            提供安全可靠的镜像全生命周期管理，支持高效仓库与镜像管理，助力用户快速部署容器化服务。
+          </div>
         </div>
       </div>
-      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c3.png" alt="" />
-    </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c4.png" alt="" />
-      <div class="CloudL" style="text-align: right">
-        <div class="cl_t">
-          门户与应用仓库能力
+      <div class="w1380 ipcView CloudBox flexRowAC">
+        <div class="CloudL">
+          <div class="cl_t">
+            微服务运行监控
+          </div>
+          <div class="cl_d">
+            涵盖服务监控、日志管理、告警等功能，助力快速定位与排除故障，保障业务稳定运行。
+          </div>
         </div>
-        <div class="cl_d">
-          快速打造数字化超级APP
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_wfwyx_bg.png" alt="" />
+      </div>
+      <div class="w1380 ipcView CloudBox flexRowAC">
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_fwzl_bg.png" alt="" />
+        <div class="CloudL">
+          <div class="cl_t">
+            服务治理
+          </div>
+          <div class="cl_d">
+            服务治理通过指标分析与动态策略，优化服务运行，保障高可用性与性能稳定。
+          </div>
+        </div>
+      </div>
+      <div class="w1380 CloudBox flexRowAC">
+        <div class="CloudL">
+          <div class="cl_t">
+            配置管理
+          </div>
+          <div class="cl_d">
+            支持集中化管理与实时推送，简化多环境配置操作，提升效率与服务能力。
+          </div>
+        </div>
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_pzgl_bg.png" alt="" />
+      </div>
+      <div class="w1380 CloudBox flexRowAC">
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_wfwzcgl_bg.png" alt="" />
+        <div class="CloudL">
+          <div class="cl_t">
+            微服务注册管理
+          </div>
+          <div class="cl_d">
+            微服务注册提供新XX平台微服务的注册、更新、启用/停用/注销、查询等服务。
+          </div>
         </div>
       </div>
     </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          跨网支撑能力
+    <!--微服务管理支撑-->
+    <div id="section1" ref="section1">
+      <div class="w1380 CloudBox flexRowAC">
+        <div class="CloudL">
+          <div class="cl_t">
+            微服务目录管理
+          </div>
+          <div class="cl_d">
+            展示已注册微服务列表，含名称、类型、管理单位、状态等信息，支持启用、更新、停用等操作，并按名称或类型查询。
+          </div>
         </div>
-        <div class="cl_d">
-          保障跨网络数据安全传输，支持内容审查、权限管理与全流程审计，提升数据交换合规性。
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_wfwmlgl_bg.png" alt="" />
+      </div>
+      <div class="w1380 CloudBox ipcBox flexRowAC">
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_zqgl_bg.png" alt="" />
+        <div class="CloudL">
+          <div class="cl_t">
+            微服务全生命<br />
+            周期管理
+          </div>
+          <div class="cl_d">
+            包括：微服务创建、微服务启停、微服务更新、微服务伸缩、微服务升级和回滚、微服务健康检查。
+          </div>
         </div>
       </div>
-      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c5.png" alt="" />
+      <div class="w1380 ipcView CloudBox flexRowAC">
+        <div class="CloudL">
+          <div class="cl_t">
+            微服务治理支撑
+          </div>
+          <div class="cl_d">
+            微服务治理通过指标分析与策略优化，保障高可用性，防止雪崩效应，涵盖流控、灰度发布、熔断降级、限流等功能。
+          </div>
+        </div>
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_wfwzlzc_bg.png" alt="" />
+      </div>
+      <div class="w1380 ipcView CloudBox flexRowAC">
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_jxgl_bg.png" alt="" />
+        <div class="CloudL">
+          <div class="cl_t">
+            微服务业务监控管理
+          </div>
+          <div class="cl_d">
+            实时采集与分析CPU/内存、容器、服务、实例、调用链等数据，监控应用健康状态，快速定位与排除故障，保障微服务稳定运行。
+          </div>
+        </div>
+      </div>
+      <div class="w1380 CloudBox flexRowAC">
+        <div class="CloudL">
+          <div class="cl_t">
+            访问鉴权
+          </div>
+          <div class="cl_d">
+            微服务网关提供统一安全控制，支持应用鉴权、用户认证（OAuth2、JWT）、请求校验，拦截无效请求，降低后端资源消耗。
+          </div>
+        </div>
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_fwjq_bg.png" alt="" />
+      </div>
     </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <img class="k8sMana_c1" src="@/assets/software/k8sMana_c6.png" alt="" />
-      <div class="CloudL" style="text-align: right">
-        <div class="cl_t">
-          应用运营体系
+    <!--API网关-->
+    <div id="section2" ref="section2">
+      <div class="w1380 CloudBox flexRowAC">
+        <div class="CloudL">
+          <div class="cl_t">
+            服务路由
+          </div>
+          <div class="cl_d">
+            微服务网关通过权限校验与路由匹配处理服务请求，完成后将响应结果传递至服务发起方，实现高效安全的请求转发与响应。
+          </div>
         </div>
-        <div class="cl_d">
-          支持全生命周期应用管理，包括开发、发布、运营和评估，推动个性化需求的快速迭代和持续优化。
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_fwly_bg.png" alt="" />
+      </div>
+      <div class="w1380 CloudBox ipcBox flexRowAC">
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_apits_bg.png" alt="" />
+        <div class="CloudL">
+          <div class="cl_t">
+            API调试
+          </div>
+          <div class="cl_d">
+            包括：微服务创建、微服务启停、微服务更新、微服务伸缩、微服务升级和回滚、微服务健康检查。
+          </div>
         </div>
+      </div>
+      <div class="w1380 ipcView CloudBox flexRowAC">
+        <div class="CloudL">
+          <div class="cl_t">
+            协议转换
+          </div>
+          <div class="cl_d">
+            后端服务支持Dubbo、SOAP协议，并通过协议转换将服务统一以REST协议对外提供，提升兼容性与扩展性。
+          </div>
+        </div>
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_xyzh_bg.png" alt="" />
+      </div>
+      <div class="w1380 ipcView CloudBox flexRowAC">
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_sjzh_bg.png" alt="" />
+        <div class="CloudL">
+          <div class="cl_t">
+            数据转换
+          </div>
+          <div class="cl_d">
+            通过配置映射规则，实现前、后端数据转换。支持前端请求的数据转换。支持返回结果的数据转换。
+          </div>
+        </div>
+      </div>
+      <div class="w1380 CloudBox flexRowAC">
+        <div class="CloudL">
+          <div class="cl_t">
+            负载均衡
+          </div>
+          <div class="cl_d">
+            在高负载情况下，支持通过横向扩展和集群提升处理能力。网关内负载均衡通过注册中心发现可用服务实例，支持轮询、随机、最小并发等负载均衡方式。
+          </div>
+        </div>
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_fzjh_bg.png" alt="" />
+      </div>
+      <div class="w1380 ipcView CloudBox flexRowAC">
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_fwkz_bg.png" alt="" />
+        <div class="CloudL">
+          <div class="cl_t">
+            访问控制
+          </div>
+          <div class="cl_d">
+            通过访问控制策略管理API调用者，支持新增、编辑、删除策略。使用IP黑白名单控制访问，白名单限制非授权IP访问，黑名单拒绝指定IP访问API服务。
+          </div>
+        </div>
+      </div>
+      <div class="w1380 ipcView CloudBox flexRowAC">
+        <div class="CloudL">
+          <div class="cl_t">
+            熔断隔离
+          </div>
+          <div class="cl_d">
+            网关通过熔断和隔离机制，响应慢或超时时熔断服务并释放资源，监控异常防止影响系统稳定性。
+          </div>
+        </div>
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_rdgl_bg.png" alt="" />
+      </div>
+      <div class="w1380 CloudBox flexRowAC">
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_fwdb_bg.png" alt="" />
+        <div class="CloudL">
+          <div class="cl_t">
+            服务挡板
+          </div>
+          <div class="cl_d">
+            服务挡板用于开发调试阶段，模拟后端服务返回预期结果，帮助调用方在API联调环境未搭建时进行开发。
+          </div>
+        </div>
+      </div>
+      <div class="w1380 ipcView CloudBox flexRowAC">
+        <div class="CloudL">
+          <div class="cl_t">
+            动态拦截
+          </div>
+          <div class="cl_d">
+            提供动态拦截器，方便开发、运维人员对提供的服务进行自定义请求拦截配置、响应包装等。
+          </div>
+        </div>
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_dtlj_bg.png" alt="" />
       </div>
     </div>
     <div class="productBox w1380">
@@ -141,8 +322,57 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
 definePageMeta({
   layout: 'site-new'
+})
+
+const activeSection = ref('section0')
+const section0 = ref(null)
+const section1 = ref(null)
+const section2 = ref(null)
+
+const scrollToSection = (sectionId) => {
+  const element = document.getElementById(sectionId)
+  if (element) {
+    const offset = 120
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+    window.scrollTo({
+      top: elementPosition - offset,
+      behavior: 'smooth'
+    })
+  }
+}
+
+const handleScroll = () => {
+  const sections = [
+    { id: 'section0', ref: section0 },
+    { id: 'section1', ref: section1 },
+    { id: 'section2', ref: section2 }
+  ]
+
+  const scrollPosition = window.scrollY + 200
+
+  for (const section of sections) {
+    const element = section.ref.value
+    if (element) {
+      const offsetTop = element.offsetTop
+      const offsetHeight = element.offsetHeight
+
+      if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+        activeSection.value = section.id
+        break
+      }
+    }
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
 })
 </script>
 
@@ -247,6 +477,15 @@ definePageMeta({
       border: 1px solid #F4F4F4;
     }
 
+    .u3{
+      border-radius: 8px;
+      border: 1px solid #ED2121;
+      color: #ED2121;
+      font-weight: bold;
+      font-size: 18px;
+      background: #fff;
+    }
+
     .seeMore.u2 {
       display: flex;
       gap: 10px;
@@ -303,12 +542,12 @@ definePageMeta({
   align-items: flex-start;
 
   .cl_t {
-    letter-spacing: 0;
     padding-top: 30px;
     padding-bottom: 40px;
-    color: #3D3D3D;
     font-weight: bold;
     font-size: 54px;
+    color: #333333;
+    line-height: 82px;
   }
 
   .cl_d {
@@ -582,5 +821,44 @@ definePageMeta({
 .k8sMana_c1{
   width: 692px;
   height: auto;
+}
+
+.tabSwitch{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+  border-bottom: 0.5px solid #DFDFDF;
+  margin-bottom: 160px;
+  .tabItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .tabTitle{
+      color: #666666;
+      font-size: 32px;
+      letter-spacing: 2.67px;
+      text-align: left;
+      margin-bottom: 18px;
+    }
+    .line{
+      width: 64px;
+      height: 4px;
+      background: transparent;
+    }
+
+    .activeTitle{
+      color: #333333;
+      //font-weight: bold;
+    }
+    .activeLine{
+     background: #4480FF;
+    }
+  }
+}
+
+#section0, #section1, #section2 {
+  padding-top: 20px;
+  margin-top: -20px;
 }
 </style>

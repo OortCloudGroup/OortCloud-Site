@@ -80,9 +80,10 @@ p5Arr.value = [
 
   .proT {
     padding-bottom: 40px;
-    color: #3D3D3D;
+    color: #333333;
     font-weight: bold;
     font-size: 58px;
+    line-height: 82px;
   }
 
   .prod {
