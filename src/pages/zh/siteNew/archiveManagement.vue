@@ -3,10 +3,10 @@
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
-          任务管理
+          档案管理
         </div>
         <div class="cl_t_d">
-          任务管理支持任务发起、角色指定和进度跟踪，清晰展示紧急度、 逾期情况和待办时间，并提供提醒和进度查询功能。
+          电子档案安全管理平台
         </div>
         <div class="flexRowAC useBox flexJSSta">
           <div class="seeMore">
@@ -20,48 +20,102 @@
           </div>
         </div>
       </div>
-      <img class="cloudAlbum_bg" src="@/assets/software/taskManagement/rwgl_bg.png" alt="" />
-    </div>
-    <div class="w1380">
-      <div class="w1380 webBottomImg">
-        <img class="wBImg" src="@/assets/VLimg2.0/CloudR0.png" alt="" />
-      </div>
+      <img class="cloudAlbum_bg" src="@/assets/software/archiveManagement/dagl_tab_bg.png" alt="" />
     </div>
 
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
+        <div class="tagBt" style="background: #F2DAD0">
+          多全宗 多类型
+        </div>
         <div class="cl_l_w">
-          随时随地创建任务 重要工作不遗漏
+          类型自定义
         </div>
         <div class="cl_l_w_d">
-          支持快速指派任务给其他同事、多人负责同一任务、任务到期自动提醒
+          类型无限级自定义
         </div>
       </div>
-      <img class="cloudMemo_img1" src="@/assets/software/taskManagement/rwgl_sssd_bg.png" alt="" />
+      <img class="cloudMemo_img1" src="@/assets/software/archiveManagement/dagl_lxzdy_bg.png" alt="" />
     </div>
     <div class="w1380 CloudBox ipcBox flexRowAC">
-      <img class="cloudMemo_img1" src="@/assets/software/taskManagement/rwgl_ychzrw_bg.png" alt="" />
-      <div class="CloudL R">
+      <img class="cloudMemo_img1" src="@/assets/software/archiveManagement/dagl_txhzlbd_bg.png" alt="" />
+      <div class="CloudR">
+        <div class="tagBt" style="background: #B5E9E3">
+          控件丰富 操作便捷
+        </div>
         <div class="cl_r_w">
-          一处汇总任务清晰管理工作
+          图形化著录表单<br />
+          自定义
         </div>
         <div class="cl_l_w_d">
-          在任务中心查看所有任务
+          著录界面、检索界面、浏览界面、补充著录界面
         </div>
       </div>
     </div>
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
+        <div class="tagBt" style="background: #D9E7FD">
+          自由绘制 格式灵活
+        </div>
         <div class="cl_l_w">
-          充分同步上下文
-          围绕任务随时讨论
+          报表输出格式<br />
+          自定义
         </div>
         <div class="cl_l_w_d">
-          任务支持下发子任务、添加附件、与同事讨论任务
+          随意发会创造灵感
         </div>
       </div>
-      <div class="cloudMemo_img1" />
+      <img class="cloudMemo_img1" src="@/assets/software/archiveManagement/dagl_bbscgs_bg.png" alt="" />
     </div>
+    <div class="w1380 CloudBox ipcBox flexRowAC">
+      <img class="cloudMemo_img1" src="@/assets/software/archiveManagement/dagl_dzwjywjgl_bg.png" alt="" />
+      <div class="CloudR">
+        <div class="tagBt" style="background: #F8EFB2">
+          自由绘制 格式灵活
+        </div>
+        <div class="cl_r_w">
+          电子文件原文件<br />
+          管理
+        </div>
+        <div class="cl_l_w_d">
+          便捷利用海量电子文件
+        </div>
+      </div>
+    </div>
+    <div class="w1380 CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="tagBt" style="background: #F8D9FD">
+          多级审批 多级流程
+        </div>
+        <div class="cl_l_w">
+          业务审批流程<br />
+          自定义
+        </div>
+        <div class="cl_l_w_d">
+          电子借阅、采集移交、销毁、开放、数据共享审批
+        </div>
+      </div>
+      <img class="cloudMemo_img1" src="@/assets/software/archiveManagement/dagl_ywsplczdy_bg.png" alt="" />
+    </div>
+    <div class="w1380 CloudBox flexRowAC bot">
+      <div class="bot_t">
+        <span class="ligColr">信创纯国产化</span> CADM/CADPP自动化软件
+      </div>
+      <div class="bot_st">
+        档案管理平台是
+      </div>
+      <div class="bot_bt">
+        计算机辅助档案数据管理（CADM）
+      </div>
+      <div class="bot_bt">
+        计算机辅助档案业务处理（CADPP）的自动化软件
+      </div>
+      <div class="bot_des">
+        <div>档案宝是实现文件档案管理一体化，文件档案的 <span class="ligColr">采集、整理、利用</span> 等。目录和电子原文两<br />层对象的管理。是档案管理自动化软件</div>
+        <div>档案宝是实现档案的 <span class="ligColr">统计、鉴定、销毁、借阅、催还、参考资料编研</span> 工作。计算机辅助档<br />案业务处理。是档案业务自动化软件</div>
+      </div>
+    </div>
+
     <div class="productBox w1380">
       <div class="proT">
         现在开始体验
@@ -264,8 +318,6 @@ definePageMeta({
   }
 
   .cl_r_w{
-    width: 348px;
-    height: 176px;
     font-weight: 700;
     font-size: 58px;
     color: #333333;
@@ -300,6 +352,15 @@ definePageMeta({
   }
 
   .CloudL,.CloudR{
+    .tagBt{
+      display: inline-flex;
+      color: #333333;
+      font-size: 20px;
+      line-height: 36px;
+      padding: 4px 24px;
+      border-radius: 44px;
+      margin-bottom: 10px;
+    }
     .cl_d_t{
       display: flex;
       align-items: center;
@@ -740,5 +801,49 @@ definePageMeta({
 }
 .flexJSSta{
   justify-self: flex-start;
+}
+
+.bot{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .bot_t{
+    color: #333333;
+    font-weight: bold;
+    font-size: 58px;
+    line-height: 88px;
+  }
+  .bot_st{
+    color: #333333;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 58px;
+    text-align: center;
+    margin: 60px 0 20px 0;
+  }
+  .bot_bt{
+    border-radius: 54px;
+    background: #2278FF;
+    padding: 10px 28px;
+    color: #FFFFFF;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .bot_des{
+    height: 177px;
+    color: #333333;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .ligColr{
+    color: #2278FF;
+  }
 }
 </style>

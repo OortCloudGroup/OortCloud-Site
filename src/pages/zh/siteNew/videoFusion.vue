@@ -3,10 +3,10 @@
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
-          任务管理
+          视频融合
         </div>
         <div class="cl_t_d">
-          任务管理支持任务发起、角色指定和进度跟踪，清晰展示紧急度、 逾期情况和待办时间，并提供提醒和进度查询功能。
+          OpenGBS可视化国标(GB28181)指挥调度平台
         </div>
         <div class="flexRowAC useBox flexJSSta">
           <div class="seeMore">
@@ -20,48 +20,80 @@
           </div>
         </div>
       </div>
-      <img class="cloudAlbum_bg" src="@/assets/software/taskManagement/rwgl_bg.png" alt="" />
-    </div>
-    <div class="w1380">
-      <div class="w1380 webBottomImg">
-        <img class="wBImg" src="@/assets/VLimg2.0/CloudR0.png" alt="" />
-      </div>
+      <img class="cloudAlbum_bg" src="@/assets/software/videoFusion/sprh_tab_bg.png" alt="" />
     </div>
 
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_l_w">
-          随时随地创建任务 重要工作不遗漏
+          可提供设备<br />
+          状态管理
         </div>
         <div class="cl_l_w_d">
-          支持快速指派任务给其他同事、多人负责同一任务、任务到期自动提醒
+          设备在线、离线、高空、高清、高点、等状态
         </div>
       </div>
-      <img class="cloudMemo_img1" src="@/assets/software/taskManagement/rwgl_sssd_bg.png" alt="" />
+      <img class="cloudMemo_img1" src="@/assets/software/videoFusion/sprh_kgsbgl_bg.png" alt="" />
     </div>
     <div class="w1380 CloudBox ipcBox flexRowAC">
-      <img class="cloudMemo_img1" src="@/assets/software/taskManagement/rwgl_ychzrw_bg.png" alt="" />
-      <div class="CloudL R">
+      <img class="cloudMemo_img1" src="@/assets/software/videoFusion/sprh_zc81plmt_bg.png" alt="" />
+      <div class="CloudR">
         <div class="cl_r_w">
-          一处汇总任务清晰管理工作
+          支持81屏流媒体<br />
+          同时在<br />
+          浏览器中在线查看
         </div>
         <div class="cl_l_w_d">
-          在任务中心查看所有任务
+          支持81屏（9×9）流媒体同时在浏览器中在线查看
         </div>
       </div>
     </div>
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_l_w">
-          充分同步上下文
-          围绕任务随时讨论
+          播放器组件支持<br/>
+          在浏览器中被集成
         </div>
         <div class="cl_l_w_d">
-          任务支持下发子任务、添加附件、与同事讨论任务
+          方便快速集成 快速上线
         </div>
       </div>
-      <div class="cloudMemo_img1" />
+      <img class="cloudMemo_img1" src="@/assets/software/videoFusion/sprh_bfqzjzc_bg.png" alt="" />
     </div>
+    <div class="w1380 CloudBox ipcBox flexRowAC">
+      <img class="cloudMemo_img1" src="@/assets/software/videoFusion/sprh_jjdjjr_bg.png" alt="" />
+      <div class="CloudR">
+        <div class="cl_r_w">
+          简洁搭建接入
+        </div>
+        <div class="cl_l_w_d">
+          支持本地、内网、私有云部署；支持Windows，Linux免安装，解压一键启动;支持分布式部署；完整二次开发接口文档；WEB可视管理后台
+        </div>
+      </div>
+    </div>
+    <div class="w1380 CloudBox flexRowAC">
+      <div class="CloudL">
+        <div class="cl_l_w">
+          稳定高性能
+        </div>
+        <div class="cl_l_w_d">
+          RTMP/RTSP/GB/T28181稳定并发接入；可分发WebRTC/RTMP/HLS/HTTP-FLV/WS-FLV/RTSP，输出GB28181；按需使用节省资源
+        </div>
+      </div>
+      <img class="cloudMemo_img1" src="@/assets/software/videoFusion/sprh_wdgxn_bg.png" alt="" />
+    </div>
+    <div class="w1380 CloudBox ipcBox flexRowAC">
+      <img class="cloudMemo_img1" src="@/assets/software/videoFusion/sprh_zcdzsbjr_bg.png" alt="" />
+      <div class="CloudR">
+        <div class="cl_r_w">
+          支持多种设备接入
+        </div>
+        <div class="cl_l_w_d">
+          支持5G摄像机、执法记录仪、行车记录仪、警务指挥车、警务通、巡逻机器人、无人机、AR眼镜、社区卫士等外部设备，支持手机小屏、IdeaHub中屏、指挥中心电子大屏多端查看
+        </div>
+      </div>
+    </div>
+
     <div class="productBox w1380">
       <div class="proT">
         现在开始体验
@@ -264,8 +296,6 @@ definePageMeta({
   }
 
   .cl_r_w{
-    width: 348px;
-    height: 176px;
     font-weight: 700;
     font-size: 58px;
     color: #333333;
