@@ -7,16 +7,16 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
     <div class="demo_title">
       <span>欢迎使用</span>
     </div>
-    <div class="demo_body">
+    <div v-if="demoConfig.length > 0" class="demo_body">
       <div class="demo_body_item">
-        <span>一类网</span>
-        <a href="http://protal.oort.oortcloudsmart.com:31310/" target="_blank">
+        <span>{{ demoConfig[0].description }}</span>
+        <a :href="demoConfig[0].index[0].url" target="_blank">
           <img src="/img/demo/index/1_pc.png" />
         </a>
         <NuxtLink to="/zh/demoDownload1">
           <img src="/img/demo/index/1_mobile.png" />
         </NuxtLink>
-        <a href="http://192.168.88.204:32610/oort/oortcloud-policefront/console_manage/index.html" target="_blank">
+        <a :href="demoConfig[0].index[2].url" target="_blank">
           <img src="/img/demo/index/1_manage.png" style="margin-top: 5rem" />
         </a>
       </div>
@@ -24,29 +24,29 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
         <span>隔离网闸</span>
       </div>
       <div class="demo_body_item">
-        <span>二类网</span>
-        <a href="http://192.168.50.204:32610/oort/oortcloud-policefront/zxb_work_protal/index.html" target="_blank">
+        <span>{{ demoConfig[1].description }}</span>
+        <a :href="demoConfig[1].index[0].url" target="_blank">
           <img src="/img/demo/index/2_pc.png" />
         </a>
         <NuxtLink to="/zh/demoDownload2">
           <img src="/img/demo/index/2_mobile.png" />
         </NuxtLink>
-        <a href="http://192.168.50.204:32610/oort/oortcloud-policefront/console_manage/index.html" target="_blank">
-          <img src="/img/demo/index/3_manage.png" style="margin-top: 5rem" />
+        <a :href="demoConfig[1].index[2].url" target="_blank">
+          <img src="/img/demo/index/2_manage.png" style="margin-top: 5rem" />
         </a>
       </div>
       <div class="demo_body_gap">
         <span>隔离网闸</span>
       </div>
       <div class="demo_body_item">
-        <span>三类网</span>
-        <a href="http://192.168.60.204:32610/oort/oortcloud-policefront/desktop_web/index.html" target="_blank">
+        <span>{{ demoConfig[2].description }}</span>
+        <a :href="demoConfig[2].index[0].url" target="_blank">
           <img src="/img/demo/index/3_pc.png" />
         </a>
         <NuxtLink to="/zh/demoDownload3">
           <img src="/img/demo/index/3_mobile.png" />
         </NuxtLink>
-        <a href="http://192.168.60.204:32610/oort/oortcloud-policefront/console_manage/index.html" target="_blank">
+        <a :href="demoConfig[2].index[2].url" target="_blank">
           <img src="/img/demo/index/3_manage.png" style="margin-top: 5rem" />
         </a>
       </div>
@@ -56,6 +56,7 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
 
 <script>
 
+import demoIndexConfig from '../../demoIndex_config.json'
 definePageMeta({
   layout: 'demo',
   title: '信息资源服务平台',
@@ -73,7 +74,24 @@ useSeoMeta({
 })
 
 export default {
-  name: 'DemoIndex'
+  name: 'DemoIndex',
+  data() {
+    return {
+      demoConfig: []
+    }
+  },
+  // 一开始就请求一个config.json
+  async mounted() {
+    console.log(demoIndexConfig)
+    this.demoConfig = demoIndexConfig
+    console.log('fetch')
+    const res = await fetch('https://myoumuamua.com/mystatic/demoIndex_config.json')
+    const data = await res.json()
+    console.log(data)
+    if (data) {
+      this.demoConfig = data
+    }
+  }
 }
 
 </script>

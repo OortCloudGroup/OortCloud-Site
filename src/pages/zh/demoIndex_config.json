@@ -1,0 +1,56 @@
+[
+    {
+        "type": "one",
+        "description": "一类网",
+        "index": [
+            {
+                "title": "一网通办门户",
+                "url": "/index.html"
+            },
+            {
+                "title": "一网通办门户",
+                "url": "/products.html"
+            },
+            {
+                "title": "一网通办门户",
+                "url": "/contact.html"
+            }
+        ]
+    },
+    {
+        "type": "two",
+        "description": "二类网",
+        "index": [
+            {
+                "title": "工作门户",
+                "url": "http://oort.oortcloudsmart.com:21310/oort/oortcloud-policefront/console_manage/index.htm"
+            },
+            {
+                "title": "工作门户",
+                "url": "/products.html"
+            },
+            {
+                "title": "工作门户",
+                "url": "http://oort.oortcloudsmart.com:21310/oort/oortcloud-policefront/console_manage/index.htm"
+            }
+        ]
+    },
+    {
+        "type": "three",
+        "description": "三类网",
+        "index": [
+            {
+                "title": "工作门户",
+                "url": "http://192.168.60.207:32610/oort/oortcloud-policefront/console_manage/index.html#/"
+            },
+            {
+                "title": "工作门户",
+                "url": "/products.html"
+            },
+            {
+                "title": "工作门户",
+                "url": "http://192.168.60.207:32610/oort/oortcloud-policefront/console_manage/index.html#/"
+            }
+        ]
+    }
+]
