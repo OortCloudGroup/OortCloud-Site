@@ -22,7 +22,7 @@
     <div class="flexRowAC nav_r">
       <NuxtLink to="http://oort.oortcloudsmart.com:23410" target="_blank">
         <div class="login_but">
-          <span>登录/注册</span>
+          <span>登录</span>
         </div>
       </NuxtLink>
       <el-popover placement="bottom" trigger="click" popper-class="popover_panel">
