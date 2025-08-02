@@ -24,6 +24,11 @@
 
 </style>
 <style>
+@import './assets/font/font.css'
+
+</style>
+<style>
+
 .flexRowAC {
   display: flex;
   flex-direction: row;

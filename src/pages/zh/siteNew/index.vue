@@ -2,13 +2,14 @@
   <div class="home_page vls">
     <div class="platTop w1380">
       <div class="VLStream flexRowAC">
-        <div style="text-align: left">
-          个人和企业面向场景智能化的
-          <br />
-          超级效率战略能力
-          <br />
-          奥尔特云新一代 <span class="vlsUs vlsUs1">生产力平台</span>
-        </div>
+        超级APP
+        <br />
+        应用大全
+      </div>
+      <div class="second_title">
+        个人和企业面向场景智能化的超级效率战略能力
+        <br />
+        -- 奥尔特云新一代 新质生产力平台
       </div>
       <div class="plat_d">
         简单、高效、又<span style="color: #2278FF;">实惠</span>!
@@ -21,12 +22,9 @@
           安排演示
         </div>
       </div>
-      <div class="w1380 webBottomImg">
-        <img class="wBImg" src="@/assets/VLimg2.0/CloudR0.png" alt="" />
-      </div>
     </div>
-    <div class="productBox w1380">
-      <div class="proT">
+    <div class="productBox w1380" style="padding-bottom: 10px;">
+      <div class="proT" style="margin-top: 60px;">
         应用程序
       </div>
       <div class="flexRowAC appBox">
@@ -43,6 +41,11 @@
           查看所有应用程序
           <img class="lineImg" src="@/assets/software/price_icon.png" alt="" />
         </div>
+      </div>
+    </div>
+    <div class="platTop w1380">
+      <div class="w1380 webBottomImg">
+        <img class="wBImg" src="@/assets/VLimg2.0/CloudR0.png" alt="" />
       </div>
     </div>
     <div class="productBox w1380" style="padding-bottom: 0px;">
@@ -200,44 +203,52 @@
 
 <script setup>
 
-import homeApp_a1 from '@/assets/site/homeApp_a1.png'
-import homeApp_a2 from '@/assets/site/homeApp_a2.png'
+// import homeApp_a1 from '@/assets/site/homeApp_a1.png'
+// import homeApp_a2 from '@/assets/site/homeApp_a2.png'
 // import homeApp_a3 from '@/assets/site/homeApp_a3.png'
 // import homeApp_a4 from '@/assets/site/homeApp_a4.png'
 import homeApp_a5 from '@/assets/site/homeApp_a5.png'
 import homeApp_a6 from '@/assets/site/homeApp_a6.png'
 import homeApp_a7 from '@/assets/site/homeApp_a7.png'
-import homeApp_a8 from '@/assets/site/homeApp_a8.png'
-import homeApp_a9 from '@/assets/site/homeApp_a9.png'
-// import homeApp_b1 from '@/assets/site/homeApp_b1.png'
-// import homeApp_c1 from '@/assets/site/homeApp_c1.png'
-import homeApp_c2 from '@/assets/site/homeApp_c2.png'
-// import homeApp_c3 from '@/assets/site/homeApp_c3.png'
-// import homeApp_c4 from '@/assets/site/homeApp_c4.png'
-import homeApp_c5 from '@/assets/site/homeApp_c5.png'
-
-definePageMeta({
-  layout: 'site-new'
-})
 // import homeApp_d1 from '@/assets/site/homeApp_d1.png'
 // import homeApp_d2 from '@/assets/site/homeApp_d2.png'
 // import homeApp_d3 from '@/assets/site/homeApp_d3.png'
 // import homeApp_d4 from '@/assets/site/homeApp_d4.png'
 // import homeApp_d5 from '@/assets/site/homeApp_d5.png'
 
+import homeApp_yp from '@/assets/site/homeApp_yp.png'
+import homeApp_sprh from '@/assets/site/homeApp_sprh.png'
+import homeApp_sphy from '@/assets/site/homeApp_sphy.png'
+import homeApp_AI from '@/assets/site/homeApp_AI.png'
+import homeApp_zhdd from '@/assets/site/homeApp_zhdd.png'
+import homeApp_jsxt from '@/assets/site/homeApp_jsxt.png'
+// import homeApp_a8 from '@/assets/site/homeApp_a8.png'
+// import homeApp_a9 from '@/assets/site/homeApp_a9.png'
+// import homeApp_b1 from '@/assets/site/homeApp_b1.png'
+// import homeApp_c1 from '@/assets/site/homeApp_c1.png'
+// import homeApp_c2 from '@/assets/site/homeApp_c2.png'
+// import homeApp_c3 from '@/assets/site/homeApp_c3.png'
+// import homeApp_c4 from '@/assets/site/homeApp_c4.png'
+// import homeApp_c5 from '@/assets/site/homeApp_c5.png'
+
+definePageMeta({
+  layout: 'site-new'
+})
+
 let appList = ref([])
 appList.value = [
-  { t: '通知公告', dec: '智能审批管办一体 助力企业效能提升', img: homeApp_a1 },
-  { t: '备忘录', dec: '智能审批管办一体 助力企业效能提升', img: homeApp_a2 },
+
+  { t: 'AI办公', dec: 'AI 赋能办公，效率一键拉满', img: homeApp_AI },
+  { t: '指挥调度', dec: '资源、现场、调度、过程全可视', img: homeApp_zhdd },
+  { t: '即时协同', dec: '打破时空限制，即时协同畅无阻', img: homeApp_jsxt },
+
   { t: '云课堂', dec: '基于移动互联网的培训管理和学习交互平台', img: homeApp_a5 },
-  //
-  { t: '安全邮箱', dec: '智能审批管办一体 助力企业效能提升', img: homeApp_a6 },
   { t: '智能审批', dec: '智能审批管办一体 助力企业效能提升', img: homeApp_a7 },
-  { t: '随手拍', dec: '智能审批管办一体 助力企业效能提升', img: homeApp_a8 },
-  //
-  { t: '会议助手', dec: '智能审批管办一体 助力企业效能提升', img: homeApp_a9 },
-  { t: '微问卷', dec: '智能审批管办一体 助力企业效能提升', img: homeApp_c2 },
-  { t: '即时通讯', dec: '智能审批管办一体 助力企业效能提升', img: homeApp_c5 }
+  { t: '安全邮箱', dec: '智能审批管办一体 助力企业效能提升', img: homeApp_a6 },
+
+  { t: '云盘', dec: '一键上云，文件随身，多端同步更省心', img: homeApp_yp },
+  { t: '视频融合', dec: '智能融合视频流，全景视界一键掌控', img: homeApp_sprh },
+  { t: '视频会议', dec: '一键开启视频会议，沟通协作无阻', img: homeApp_sphy }
 ]
 // appList.value = [
 //   { t: '通知公告', img: homeApp_a1 },
@@ -295,7 +306,7 @@ appList.value = [
 
 .platTop {
   text-align: center;
-  padding: 110px 0 20px;
+  padding: 40px 0 20px;
 
   .plat {
     display: inline-block;
@@ -307,10 +318,12 @@ appList.value = [
   }
 
   .VLStream {
+    font-family: DingTalk-JinBuTi;
     justify-content: center;
     color: #333333;
     font-weight: bold;
-    font-size: 78px;
+    font-size: 240px;
+    line-height: 260px;
     padding: 8px 0;
     position: relative;
 
@@ -321,6 +334,17 @@ appList.value = [
       right: 336px;
       top: -50px;
     }
+  }
+
+  .second_title {
+    font-family: DingTalk-JinBuTi;
+    justify-content: center;
+    color: #1B1B1B;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: 0px;
+    text-align: center;
+
   }
 
   .plat_d {
