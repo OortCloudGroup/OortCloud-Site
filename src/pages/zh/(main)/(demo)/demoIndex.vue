@@ -108,6 +108,7 @@ export default {
     align-items: center;
     height: 125px;
     span {
+      font-family: DingTalk-JinBuTi;
       font-size: 34px;
       color: #2956A5;
       letter-spacing: 0;
@@ -128,6 +129,7 @@ export default {
       border-radius: 8px;
       align-items: center;
       span {
+        font-family: DingTalk-JinBuTi;
         width: 280px;
         height: 36px;
         font-size: 36px;
