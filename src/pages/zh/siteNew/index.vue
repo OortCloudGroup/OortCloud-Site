@@ -244,7 +244,7 @@ appList.value = [
 
   { t: '云课堂', dec: '基于移动互联网的培训管理和学习交互平台', img: homeApp_a5 },
   { t: '智能审批', dec: '智能审批管办一体 助力企业效能提升', img: homeApp_a7 },
-  { t: '安全邮箱', dec: '智能审批管办一体 助力企业效能提升', img: homeApp_a6 },
+  { t: '安全邮箱', dec: '确保信息传输的保密性与安全性', img: homeApp_a6 },
 
   { t: '云盘', dec: '一键上云，文件随身，多端同步更省心', img: homeApp_yp },
   { t: '视频融合', dec: '智能融合视频流，全景视界一键掌控', img: homeApp_sprh },
