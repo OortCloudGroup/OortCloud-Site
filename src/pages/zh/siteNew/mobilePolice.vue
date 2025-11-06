@@ -14,10 +14,16 @@
         <div class="seeMore">
           立即试用
         </div>
+        <div class="seeMore u3">
+          立即购买
+        </div>
         <div class="seeMore u1">
           安排演示
         </div>
       </div>
+    </div>
+    <div class="w1380 webBottomImg">
+      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
     </div>
     <div class="proTitleBox mb_h_t w1380 flexRowAC" style="justify-content: space-between">
       <img class="VLStream_top" src="@/assets/software/mobilePolice_bg1.png" alt="" />
@@ -102,6 +108,34 @@
         </div>
       </div>
     </div>
+    <!-- 成功案例 -->
+    <div class="productBox w1380">
+      <div class="proT">
+        成功案例
+      </div>
+      <div class="productImg p5Out flexRowAC">
+        <div class="item img1">
+          <div class="bottom">
+            <p>城市风光</p>
+          </div>
+        </div>
+        <div class="item img2">
+          <div class="bottom">
+            <p>专业服务</p>
+          </div>
+        </div>
+        <div class="item img3">
+          <div class="bottom">
+            <p>教育机构</p>
+          </div>
+        </div>
+        <div class="item img4">
+          <div class="bottom">
+            <p>精准分析</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="productBox w1380">
       <div class="proT">
         现在开始体验
@@ -134,17 +168,18 @@
         </div>
       </div>
     </div>
+    <!--资料下载-->
     <div class="productBox w1380">
       <div class="proT">
-        产品文档
+        资料下载
       </div>
       <div class="productImg product2Out flexRowAC">
         <div class="product2Out_it flexRowAC">
           <div class="pro2o_l flexRowAC">
             <img class="pro2o_l_l" src="@/assets/software/down3.png" alt="" />
-            【主打胶片】门户与应用仓库使用汇报V2.0.pdf
+            产品手册.pdf
           </div>
-          <div class="pro2o_2">
+          <div class="pro2o_2" @click="downloadPDF">
             下载
           </div>
         </div>
@@ -162,6 +197,14 @@ import product5_4 from '@/assets/VLimg2.0/product5_4.png'
 import product5_5 from '@/assets/VLimg2.0/product5_5.png'
 import product5_6 from '@/assets/VLimg2.0/product5_6.png'
 import product5_7 from '@/assets/VLimg2.0/product5_7.png'
+
+const downloadPDF = () => {
+  const link = document.createElement('a')
+  link.href = '/document/产品文档.pdf'
+  link.download = '产品文档.pdf'
+  link.click()
+}
+
 definePageMeta({
   layout: 'site-new'
 })
@@ -269,6 +312,15 @@ p5Arr.value = [
       color: #333;
       background-color: #F4F4F4;
       border: 1px solid #F4F4F4;
+    }
+
+    .u3{
+      border-radius: 8px;
+      border: 1px solid #ED2121;
+      color: #ED2121;
+      font-weight: bold;
+      font-size: 18px;
+      background: #fff;
     }
 
     .seeMore.u2 {
@@ -398,12 +450,45 @@ p5Arr.value = [
 
   .productImg {
     width: 100%;
-    height: 600px;
-    padding-bottom: 60px;
+    height: 300px;
 
     .proImg {
       width: 100%;
       height: 100%;
+    }
+
+    .img1{
+      background: url('@/assets/VLimg2.0/jyjg1.png');
+    }
+    .img2{
+      background: url('@/assets/VLimg2.0/jyjg2.png');
+    }
+    .img3{
+      background: url('@/assets/VLimg2.0/jyjg3.png');
+    }
+    .img4{
+      background: url('@/assets/VLimg2.0/jyjg4.png');
+    }
+    .item{
+      width: 300px;
+      height: 300px;
+      background-size: cover;
+      position: relative;
+      .bottom{
+        position: absolute;
+        bottom: 0;
+        width: 300px;
+        text-align: left;
+        line-height: 88px;
+        border-radius: 0 0 24px 24px;
+        background: linear-gradient(180deg, rgba(255, 94, 16, 0) 0%, #3C80FF  100%);
+        p{
+          margin-left: 24px;
+          font-size: 28px;
+          font-weight: bold;
+          color: #FFFFFF;
+        }
+      }
     }
   }
 
@@ -498,6 +583,7 @@ p5Arr.value = [
       }
 
       .pro2o_2 {
+        cursor: pointer;
         width: 100px;
         line-height: 54px;
         color: #fff;
