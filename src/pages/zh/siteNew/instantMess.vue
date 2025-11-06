@@ -24,7 +24,9 @@
       </div>
       <img class="platTopOutImg" src="@/assets/software/instantMess_c1.png" alt="" />
     </div>
-
+    <div class="w1380 webBottomImg">
+      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
+    </div>
     <div class="tabSwitch">
       <div class="tabItem" @click="scrollToSection('section0')">
         <span class="tabTitle" :class="{activeTitle:activeSection==='section0'}">概述</span>
@@ -213,6 +215,34 @@
         </div>
       </div>
     </div>
+    <!-- 成功案例 -->
+    <div class="productBox w1380">
+      <div class="proT">
+        成功案例
+      </div>
+      <div class="productImg p5Out flexRowAC">
+        <div class="item img1">
+          <div class="bottom">
+            <p>城市风光</p>
+          </div>
+        </div>
+        <div class="item img2">
+          <div class="bottom">
+            <p>专业服务</p>
+          </div>
+        </div>
+        <div class="item img3">
+          <div class="bottom">
+            <p>教育机构</p>
+          </div>
+        </div>
+        <div class="item img4">
+          <div class="bottom">
+            <p>精准分析</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="productBox w1380">
       <div class="proT">
         现在开始体验
@@ -274,17 +304,18 @@
         </div>
       </div>
     </div>
+    <!--资料下载-->
     <div class="productBox w1380">
       <div class="proT">
-        产品文档
+        资料下载
       </div>
       <div class="productImg product2Out flexRowAC">
         <div class="product2Out_it flexRowAC">
           <div class="pro2o_l flexRowAC">
             <img class="pro2o_l_l" src="@/assets/software/down3.png" alt="" />
-            【主打胶片】门户与应用仓库使用汇报V2.0.pdf
+            产品手册.pdf
           </div>
-          <div class="pro2o_2">
+          <div class="pro2o_2" @click="downloadPDF">
             下载
           </div>
         </div>
@@ -310,6 +341,14 @@ import bg4 from '@/assets/software/instantMess/workup_yysphy_bg.png'
 definePageMeta({
   layout: 'site-new'
 })
+
+const downloadPDF = () => {
+  const link = document.createElement('a')
+  link.href = '/document/产品文档.pdf'
+  link.download = '产品文档.pdf'
+  link.click()
+}
+
 let p5Arr = ref([])
 p5Arr.value = [
   { t: 'Windows', d: '版本号：V3.1.06', flag: false, img: product5_1 },
@@ -663,12 +702,45 @@ onUnmounted(() => {
 
   .productImg {
     width: 100%;
-    height: 600px;
-    padding-bottom: 60px;
+    height: 300px;
 
     .proImg {
       width: 100%;
       height: 100%;
+    }
+
+    .img1{
+      background: url('@/assets/VLimg2.0/jyjg1.png');
+    }
+    .img2{
+      background: url('@/assets/VLimg2.0/jyjg2.png');
+    }
+    .img3{
+      background: url('@/assets/VLimg2.0/jyjg3.png');
+    }
+    .img4{
+      background: url('@/assets/VLimg2.0/jyjg4.png');
+    }
+    .item{
+      width: 300px;
+      height: 300px;
+      background-size: cover;
+      position: relative;
+      .bottom{
+        position: absolute;
+        bottom: 0;
+        width: 300px;
+        text-align: left;
+        line-height: 88px;
+        border-radius: 0 0 24px 24px;
+        background: linear-gradient(180deg, rgba(255, 94, 16, 0) 0%, #3C80FF  100%);
+        p{
+          margin-left: 24px;
+          font-size: 28px;
+          font-weight: bold;
+          color: #FFFFFF;
+        }
+      }
     }
   }
 
@@ -763,6 +835,7 @@ onUnmounted(() => {
       }
 
       .pro2o_2 {
+        cursor: pointer;
         width: 100px;
         line-height: 54px;
         color: #fff;
