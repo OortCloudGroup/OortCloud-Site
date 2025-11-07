@@ -43,10 +43,8 @@
         </div>
       </div>
     </div>
-    <div class="platTop w1380">
-      <div class="w1380 webBottomImg">
-        <img class="wBImg" src="@/assets/VLimg2.0/CloudR0.png" alt="" />
-      </div>
+    <div class="w1380 webBottomImg">
+      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
     </div>
     <div class="productBox w1380" style="padding-bottom: 0px;">
       <div class="proT" style="padding-bottom: 40px;">
@@ -69,8 +67,8 @@
       <div class="proT" style="padding-bottom: 0px;">
         提升您的 <span style="color: #2278FF;">工作品质</span>
       </div>
-      <div class="w1380 webBottomImg">
-        <img class="wBImg" src="@/assets/VLimg2.0/CloudR0.png" alt="" />
+      <div class="w1380 webBottomImg2">
+        <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
       </div>
     </div>
     <div class="productBox w1380">
@@ -437,7 +435,18 @@ appList.value = [
 }
 
 .webBottomImg {
-  padding: 0;
+  padding: 110px 0;
+  height: initial;
+
+  .wBImg {
+    width: 100%;
+    height: initial;
+    border-radius: 24px;
+  }
+}
+
+.webBottomImg2 {
+  padding: 110px 0 0 0;
   height: initial;
 
   .wBImg {

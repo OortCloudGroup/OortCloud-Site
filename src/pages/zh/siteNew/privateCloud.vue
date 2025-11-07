@@ -1,89 +1,384 @@
 <template>
   <div class="home_page vls">
-    <div class="platTop w1380">
-      <img class="VLStream_top" src="@/assets/software/privateCloud_bg1.png" alt="" />
-      <div class="VLStream">
-        私有云
-      </div>
-      <div class="plat_cent">
-        通过基础设施云化、软件与硬件解耦、数据与业务解耦、应用与平台解耦,
-        构建开放技术架构和业务生态
-      </div>
-      <div class="flexRowAC useBox">
-        <div class="seeMore">
-          立即试用
+    <div class="platTop w1380 flexRowAC">
+      <div>
+        <div class="VLStream">
+          私有云
         </div>
-        <div class="seeMore u3">
-          立即购买
+        <div class="plat_cent">
+          通过基础设施云化、软件与硬件解耦、数据与业务解耦、应用与平台解耦,
+          构建开放技术架构和业务生态
         </div>
-        <div class="seeMore u1">
-          安排演示
+        <div class="flexRowAC useBox">
+          <div class="seeMore">
+            立即试用
+          </div>
+          <div class="seeMore u3">
+            立即购买
+          </div>
+          <div class="seeMore u1">
+            安排演示
+          </div>
+        </div>
+      </div>
+      <img class="VLStream_top" src="@/assets/img/privateImg.png" alt="" />
+    </div>
+    <div class="w1380 webBottomImg">
+      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
+    </div>
+    <div class="tabSwitch">
+      <div class="tabItem" @click="scrollToSection('section1')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section1'}">概述</span>
+        <span class="line" :class="{activeLine:activeSection==='section1'}" />
+      </div>
+      <div class="tabItem" @click="scrollToSection('section2')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section2'}">IaaS</span>
+        <span class="line" :class="{activeLine:activeSection==='section2'}" />
+      </div>
+      <div class="tabItem" @click="scrollToSection('section3')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section3'}">PaaS</span>
+        <span class="line" :class="{activeLine:activeSection==='section3'}" />
+      </div>
+      <div class="tabItem" @click="scrollToSection('section4')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section4'}">SaaS</span>
+        <span class="line" :class="{activeLine:activeSection==='section4'}" />
+      </div>
+      <div class="tabItem" @click="scrollToSection('section5')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section5'}">跨网支撑</span>
+        <span class="line" :class="{activeLine:activeSection==='section5'}" />
+      </div>
+      <div class="tabItem" @click="scrollToSection('section6')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section6'}">运营运维</span>
+        <span class="line" :class="{activeLine:activeSection==='section6'}" />
+      </div>
+      <div class="tabItem" @click="scrollToSection('section7')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section7'}">上云实践</span>
+        <span class="line" :class="{activeLine:activeSection==='section7'}" />
+      </div>
+    </div>
+    <!-- 概述 -->
+    <div id="section1" ref="section1">
+      <div class="w1380 privateBox">
+        <div class="title_l title_l_box">
+          私有云优势
+        </div>
+        <div class="item_box">
+          <div class="title_m blue">
+            什么是私有云
+            <span class="title_m yellow">?</span>
+          </div>
+          <div class="content">
+            私有云，是指企业自己使用的云，它所有的服务不是供别人使用，而是供自己内部人员或分支机构使用。私有云的部署比较适合于有众多分支机构的大型企业或政府部门。随着这些大型企业数据中心的集中化，私有云将会成为他们部署IT系统的主流模式
+          </div>
+          <div class="imgBox">
+            <div class="img_item">
+              <img src="@/assets/img/private_img1.png" alt="" />
+              <p>
+                能对数据、安全<br />
+                性提供有效控制
+              </p>
+            </div>
+            <div class="img_item">
+              <img src="@/assets/img/private_img2.png" alt="" />
+              <p>
+                提供更高的服务<br />
+                质量
+              </p>
+            </div>
+            <div class="img_item">
+              <img src="@/assets/img/private_img3.png" alt="" />
+              <p>
+                充分利用现有硬<br />
+                件、软件资源
+              </p>
+            </div>
+            <div class="img_item">
+              <img src="@/assets/img/private_img4.png" alt="" />
+              <p>
+                不影响现有IT管<br />
+                理的流程
+              </p>
+            </div>
+            <div class="img_item">
+              <img src="@/assets/img/private_img5.png" alt="" />
+              <p>
+                部署方式灵活
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item_box">
+          <div class="title_m">
+            性能指标
+          </div>
+          <div class="imgBox2">
+            <img src="@/assets/img/Performance_img1.png" alt="" />
+            <img src="@/assets/img/Performance_img2.png" alt="" />
+            <img src="@/assets/img/Performance_img3.png" alt="" />
+            <img src="@/assets/img/Performance_img4.png" alt="" />
+            <img src="@/assets/img/Performance_img5.png" alt="" />
+            <img src="@/assets/img/Performance_img6.png" alt="" />
+          </div>
         </div>
       </div>
     </div>
-    <div class="proTitleBox w1380 flexRowAC" style="justify-content: flex-start">
-      <div>
-        基础云能力
-        <div class="proTitleBox_c_t">
+    <!-- laaS -->
+    <div id="section2" ref="section2">
+      <div class="w1380 privateBox">
+        <div class="title_l ">
+          基础云能力 IaaS
+        </div>
+        <div class="content contentBox">
           提供强大的计算、存储、网络等基础设施，确保平台稳定可靠运行
+        </div>
+        <div class="detail">
+          查看详情
+        </div>
+      </div>
+      <div class="w1380 privateBox">
+        <div class="proTitleBox w1380 flexRowAC">
+          <img class="privateCloud_c1" src="@/assets/software/privateCloud_c1.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- PaaS -->
+    <div id="section3" ref="section3">
+      <div class="w1380 privateBox">
+        <div class="title_l_plus title_l_box">
+          PaaS
+        </div>
+        <div class="flexRowAC w1380 colMenu">
+          <div class="left-menu">
+            <div
+              v-for="(item, index) in paasItems"
+              :key="index"
+              class="menu-item"
+              :class="{ active: activeIndexPass === index }"
+              @click="selectMenu(index)"
+            >
+              <div class="menu-content-wrapper">
+                <div class="line" />
+                <div class="text-content">
+                  <div class="menu-text">
+                    {{ item.title }}
+                  </div>
+                  <div v-show="activeIndexPass === index" class="content-detail">
+                    <p>{{ currentPaas.description }}</p>
+                    <div class="detail">
+                      查看详情
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-content">
+            <div class="content-image">
+              <img :src="currentPaas.image" :alt="currentPaas.title" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SaaS -->
+    <div id="section4" ref="section4">
+      <div class="w1380 privateBox">
+        <div class="title_l_plus title_l_box">
+          SaaS
+        </div>
+        <div class="flexRow w1380 colMenu">
+          <div class="left-menu">
+            <div
+              v-for="(item, index) in saasItems"
+              :key="index"
+              class="menu-item"
+              :class="{ active: activeIndexSass === index }"
+              @click="selectSassMenu(index)"
+            >
+              <div class="menu-content-wrapper">
+                <div class="line" />
+                <div class="text-content">
+                  <div class="menu-text">
+                    {{ item.title }}
+                  </div>
+                  <div v-show="activeIndexSass === index" class="content-detail">
+                    <p>{{ currentSaas.description }}</p>
+                    <div class="detail">
+                      查看详情
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-content">
+            <div class="content-image">
+              <img :src="currentSaas.image" :alt="currentSaas.title" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 跨网支撑 -->
+    <div id="section5" ref="section5">
+      <div class="w1380 privateBox">
+        <div class="title_l_plus title_l_box">
+          跨网支撑
+        </div>
+        <div class="flexRow w1380 colMenu">
+          <div class="left-menu">
+            <div
+              v-for="(item, index) in crossItems"
+              :key="index"
+              class="menu-item"
+              :class="{ active: activeIndexCross === index }"
+              @click="selectCrossMenu(index)"
+            >
+              <div class="menu-content-wrapper">
+                <div class="line" />
+                <div class="text-content">
+                  <div class="menu-text">
+                    {{ item.title }}
+                  </div>
+                  <div v-show="activeIndexCross === index" class="content-detail">
+                    <p>{{ currentCross.description }}</p>
+                    <div class="detail">
+                      查看详情
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-content">
+            <div>
+              <img :src="currentCross.image" :alt="currentCross.title" class="content-image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 运营运维 -->
+    <div id="section6" ref="section6">
+      <div class="w1380 privateBox">
+        <div class="title_l_plus title_l_box">
+          运营运维
+        </div>
+        <div class="flexRow w1380 colMenu">
+          <div class="left-menu">
+            <div
+              v-for="(item, index) in operationItems"
+              :key="index"
+              class="menu-item"
+              :class="{ active: activeIndexoperation === index }"
+              @click="selectoperationMenu(index)"
+            >
+              <div class="menu-content-wrapper">
+                <div class="line" />
+                <div class="text-content">
+                  <div class="menu-text">
+                    {{ item.title }}
+                  </div>
+                  <div v-show="activeIndexoperation === index" class="content-detail">
+                    <p>{{ currentoperation.description }}</p>
+                    <div class="detail">
+                      查看详情
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-content">
+            <div>
+              <img :src="currentoperation.image" :alt="currentoperation.title" class="content-image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 上云实践 -->
+    <div id="section7" ref="section7">
+      <div class="w1380 privateBox">
+        <div class="title_l_plus title_l_box">
+          上云实践
+        </div>
+        <div class="flexRow w1380 colMenu">
+          <div class="left-menu">
+            <div
+              v-for="(item, index) in practiceItems"
+              :key="index"
+              class="menu-item"
+              :class="{ active: activeIndexpractice === index }"
+              @click="selectpracticeMenu(index)"
+            >
+              <div class="menu-content-wrapper">
+                <div class="line" />
+                <div class="text-content">
+                  <div class="menu-text">
+                    {{ item.title }}
+                  </div>
+                  <div v-show="activeIndexpractice === index" class="content-detail">
+                    <p>{{ currentpractice.description }}</p>
+                    <div class="detail">
+                      查看详情
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-content">
+            <div>
+              <img :src="currentpractice.image" :alt="currentpractice.title" class="content-image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="proTitleBox w1380 flexRow" style="justify-content: flex-start">
+      <div class="oort_logo">
+        <img src="@/assets/img/oortLogo.png" alt="" />
+      </div>
+      <div>
+        OORTCLOUD Visual Studio
+        <div class="proTitleBox_c_t">
+          OORTCLOUD AI 原生 IDE，智能编码，一触即发
+        </div>
+        <div class="proTitleBox_c_t1">
+          查看详情
         </div>
       </div>
     </div>
     <div class="proTitleBox w1380 flexRowAC">
-      <img class="privateCloud_c1" src="@/assets/software/privateCloud_c1.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox ipcBox flexRowAC">
-      <img class="privateCloud_c2" src="@/assets/software/privateCloud_c2.png" alt="" />
-      <div class="CloudL">
-        <div class="cl_t">
-          服务开发
+      <div class="item_first">
+        <div class="titleSize">
+          支持多种方式创建项目
         </div>
-        <div class="cl_d">
-          支持灵活的服务开发环境，帮助开发者快速构建和部署高质量的应用服务
+        <div class="contentSize">
+          支持从模板创建项目以及从 Git 导入项目，满足不同项目开发需求
         </div>
       </div>
-    </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          应用开发
+      <div class="item_second">
+        <div class="titleSize">
+          开箱即用的开发
+          <br />
+          环境
         </div>
-        <div class="cl_d">
-          提供开发工具和资源，简化应用开发流程，助力企业快速创新
-        </div>
-      </div>
-      <img class="privateCloud_c2" src="@/assets/software/privateCloud_c3.png" alt="" />
-    </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <img class="privateCloud_c2" src="@/assets/software/privateCloud_c4.png" alt="" />
-      <div class="CloudL" style="text-align: right">
-        <div class="cl_t">
-          应用市场
-        </div>
-        <div class="cl_d">
-          提供丰富的应用资源，企业可根据需求选择和部署适合的云应用
+        <div class="contentSize">
+          无需配置开发环境，选择模板立即
+          <br />
+          开始开发
         </div>
       </div>
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          服务目录
+      <div class="item_third">
+        <div class="titleSize">
+          快速稳定
         </div>
-        <div class="cl_d">
-          集中管理平台内各类服务，用户可以方便地查看、选择和使用
-        </div>
-      </div>
-      <img class="privateCloud_c5" src="@/assets/software/privateCloud_c5.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <img class="privateCloud_c6" src="@/assets/software/privateCloud_c6.png" alt="" />
-      <div class="CloudL">
-        <div class="cl_t">
-          基础服务
-        </div>
-        <div class="cl_d">
-          提供基础的数据存储、网络、安全等核心服务，支撑云端应用的稳定运行
+        <div class="contentSize">
+          秒级创建多区域、多集群的部署，
+          <br />
+          提供稳定、低延迟的保证
         </div>
       </div>
     </div>
@@ -168,7 +463,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 import product5_1 from '@/assets/VLimg2.0/product5_1.png'
 import product5_2 from '@/assets/VLimg2.0/product5_2.png'
 import product5_3 from '@/assets/VLimg2.0/product5_3.png'
@@ -176,10 +471,237 @@ import product5_4 from '@/assets/VLimg2.0/product5_4.png'
 import product5_5 from '@/assets/VLimg2.0/product5_5.png'
 import product5_6 from '@/assets/VLimg2.0/product5_6.png'
 import product5_7 from '@/assets/VLimg2.0/product5_7.png'
+import paasImg1 from '@/assets/img/paas_img1.png'
+import paasImg2 from '@/assets/img/paas_img2.png'
+import paasImg3 from '@/assets/img/paas_img3.png'
+import paasImg4 from '@/assets/img/paas_img4.png'
+import paasImg5 from '@/assets/img/paas_img5.png'
+import paasImg6 from '@/assets/img/paas_img6.png'
+import saasImg1 from '@/assets/img/saas_img1.png'
+import saasImg2 from '@/assets/img/saas_img2.png'
+import saasImg3 from '@/assets/img/saas_img3.png'
+import crossImg1 from '@/assets/img/cross_img1.png'
+import crossImg2 from '@/assets/img/cross_img2.png'
+import operationImg1 from '@/assets/img/operation_img1.png'
+import operationImg2 from '@/assets/img/operation_img2.png'
+import operationImg3 from '@/assets/img/operation_img3.png'
+import operationImg4 from '@/assets/img/operation_img4.png'
+import operationImg5 from '@/assets/img/operation_img5.png'
+import practiceImg1 from '@/assets/img/practice_img1.png'
+import practiceImg2 from '@/assets/img/practice_img2.png'
+import practiceImg3 from '@/assets/img/practice_img3.png'
+import practiceImg4 from '@/assets/img/practice_img4.png'
 
+const activeSection = ref('section1')
+const section1 = ref(null)
+const section2 = ref(null)
+const section3 = ref(null)
+const section4 = ref(null)
+const section5 = ref(null)
+const section6 = ref(null)
+const section7 = ref(null)
+
+const scrollToSection = (sectionId) => {
+  const element = document.getElementById(sectionId)
+  if (element) {
+    const offset = 120
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+    window.scrollTo({
+      top: elementPosition - offset,
+      behavior: 'smooth'
+    })
+  }
+}
+// paas
+const paasItems = ref([
+  {
+    title: '服务目录',
+    description: '集中管理平台内各类服务，用户可以方便地查看、选择和使用',
+    image: paasImg1
+  },
+  {
+    title: '基础服务',
+    description: '提供基础的数据存储、网络、安全等核心服务，支撑云端应用的稳定运行',
+    image: paasImg2
+  },
+  {
+    title: '服务总线',
+    description: '基于OpenSergo统一微服务治理警务服务总线软件',
+    image: paasImg3
+  },
+  {
+    title: '业务中台',
+    description: '通过模块化的中台服务，提供高效的数据、技术和组织支撑，促进业务快速开发与灵活部署。',
+    image: paasImg4
+  },
+  {
+    title: '开放服务集成',
+    description: '通过模块化的中台服务，提供高效的数据、技术和组织支撑，促进业务快速开发与灵活部署。',
+    image: paasImg5
+  },
+  {
+    title: '虚拟化',
+    description: '容器和虚拟机集成管理具备高可用性、弹性伸缩和资源优化能力，构建稳定可靠的云原生运行环境。',
+    image: paasImg6
+  }
+])
+const activeIndexPass = ref(0)
+const currentPaas = computed(() => {
+  return paasItems.value[activeIndexPass.value]
+})
+function selectMenu(index) {
+  activeIndexPass.value = index
+}
+// sass
+const saasItems = ref([
+  {
+    title: '应用市场',
+    description: '提供丰富的应用资源，企业可根据需求选择和部署适合的云应用 ',
+    image: saasImg1
+  },
+  {
+    title: '应用开放集成',
+    description: '提供开发工具和资源，简化应用开发流程，助力企业快速创新',
+    image: saasImg2
+  },
+  {
+    title: '门户与应用仓库能力',
+    description: '快速打造数字化超级APP',
+    image: saasImg3
+  }
+])
+const activeIndexSass = ref(0)
+const currentSaas = computed(() => {
+  return saasItems.value[activeIndexSass.value]
+})
+function selectSassMenu(index) {
+  activeIndexSass.value = index
+}
+
+// 跨网支撑
+const crossItems = ref([
+  {
+    title: '跨网支撑能力',
+    description: '保障跨网络数据安全传输，支持内容审查、权限管理与全流程审计，提升数据交换合规性。 ',
+    image: crossImg1
+  },
+  {
+    title: '跨网请求痕迹查询',
+    description: '每一个节点都可以显示请求痕迹，快速排除故障。',
+    image: crossImg2
+  }
+])
+const activeIndexCross = ref(0)
+const currentCross = computed(() => {
+  return crossItems.value[activeIndexCross.value]
+})
+function selectCrossMenu(index) {
+  activeIndexCross.value = index
+}
+
+// 运营运维
+const operationItems = ref([
+  {
+    title: '应用运营体系',
+    description: '支持全生命周期应用管理，包括开发、发布、运营和评估，推动个性化需求的快速迭代和持续优化。',
+    image: operationImg1
+  },
+  {
+    title: '多租户管理',
+    description: '实现资源共享与数据隔离，提供高效、安全的独立租户服务，降低运维成本。',
+    image: operationImg2
+  },
+  {
+    title: '移动应用数字化运营',
+    description: '提供开发、发布、监测、认证等全流程支持，提升应用管理效率。',
+    image: operationImg3
+  },
+  {
+    title: '应用开发支撑体系',
+    description: '通过设计规范与能力接入标准，统一用户体验，避免重复建设。',
+    image: operationImg4
+  },
+  {
+    title: '应用使用绩效评估体系',
+    description: '实现平台应用的使用绩效管理，使用效能评估等工作，形成新型绩效考核机制。',
+    image: operationImg5
+  }
+])
+const activeIndexoperation = ref(0)
+const currentoperation = computed(() => {
+  return operationItems.value[activeIndexoperation.value]
+})
+function selectoperationMenu(index) {
+  activeIndexoperation.value = index
+}
+
+// 上云实践
+const practiceItems = ref([
+  {
+    title: '新应用微服务设计',
+    description: '支持全生命周期应用管理，包括开发、发布、运营和评估，推动个性化需求的快速迭代和持续优化。',
+    image: practiceImg1
+  },
+  {
+    title: '微服务引擎适配',
+    description: '支持全生命周期应用管理，包括开发、发布、运营和评估，推动个性化需求的快速迭代和持续优化。',
+    image: practiceImg2
+  },
+  {
+    title: '应用容器化改造',
+    description: '应用容器化改造是将应用容器化，实现PaaS无差异调度，存储数据外部化。',
+    image: practiceImg3
+  },
+  {
+    title: '应用可视化快速部署',
+    description: '应用容器化改造是将应用容器化，实现PaaS无差异调度，存储数据外部化。',
+    image: practiceImg4
+  }
+])
+const activeIndexpractice = ref(0)
+const currentpractice = computed(() => {
+  return practiceItems.value[activeIndexpractice.value]
+})
+function selectpracticeMenu(index) {
+  activeIndexpractice.value = index
+}
+const handleScroll = () => {
+  const sections = [
+    { id: 'section1', ref: section1 },
+    { id: 'section2', ref: section2 },
+    { id: 'section3', ref: section3 },
+    { id: 'section4', ref: section4 },
+    { id: 'section5', ref: section5 },
+    { id: 'section6', ref: section6 },
+    { id: 'section7', ref: section7 }
+  ]
+
+  const scrollPosition = window.scrollY + 200
+
+  for (const section of sections) {
+    const element = section.ref.value
+    if (element) {
+      const offsetTop = element.offsetTop
+      const offsetHeight = element.offsetHeight
+
+      if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+        activeSection.value = section.id
+        break
+      }
+    }
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 const downloadPDF = () => {
   const link = document.createElement('a')
-  link.href = '/document/产品文档.pdf'
+  link.href = '/documents/产品文档.pdf'
   link.download = '产品文档.pdf'
   link.click()
 }
@@ -227,7 +749,7 @@ p5Arr.value = [
 //}
 
 .platTop {
-  text-align: center;
+  text-align: left;
   padding: 110px 0;
 
   .plat {
@@ -268,11 +790,11 @@ p5Arr.value = [
   }
 
   .useBox {
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
 
     .seeMore {
-      padding: 24px 50px;
+      padding: 24px 40px;
       color: #fff;
       border: 1px solid #2278FF;
       border-radius: 8px;
@@ -567,58 +1089,6 @@ p5Arr.value = [
     }
   }
 
-  .product3Out.productImg {
-    height: initial;
-    margin-bottom: 60px;
-    padding: 40px;
-    border-radius: 24px;
-    background: linear-gradient(180deg, #FEF9F6 0%, #FFFFFF 100%);
-    border: 1px solid #001F5019;
-
-    .p3Box {
-      justify-content: space-between;
-
-      .p3 {
-        width: 358px;
-        height: 170px;
-      }
-    }
-
-    .p3_title {
-      padding-top: 40px;
-      text-align: left;
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .ps_desc {
-      padding-top: 16px;
-      padding-left: 60px;
-      width: 900px;
-      color: #3D3D3D;
-      font-size: 20px;
-      text-align: left;
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: 40px;
-        top: 26px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: #333;
-      }
-    }
-  }
-
-  .p4Out {
-    width: auto;
-    height: 870px;
-  }
-
   .p5Out {
     flex-wrap: wrap;
     gap: 40px;
@@ -663,44 +1133,284 @@ p5Arr.value = [
   }
 }
 
+.tabSwitch{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+  border-bottom: 0.5px solid #DFDFDF;
+  margin-bottom: 160px;
+  .tabItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .tabTitle{
+      color: #666666;
+      font-size: 32px;
+      letter-spacing: 2.67px;
+      text-align: left;
+      margin-bottom: 18px;
+    }
+    .line{
+      width: 64px;
+      height: 4px;
+      background: transparent;
+    }
+
+    .activeTitle{
+      color: #333333;
+      //font-weight: bold;
+    }
+    .activeLine{
+      background: #4480FF;
+    }
+  }
+}
+
+.privateBox{
+  padding-bottom: 120px;
+
+  .title_l_box{
+    padding-bottom: 40px;
+  }
+  .title_l_plus{
+    font-size: 80px;
+    font-family: OPPOSans;
+    font-weight: normal;
+    color: #3D3D3D;
+    margin-bottom: 60px;
+  }
+  .title_l{
+    font-size: 50px;
+    font-weight: bold;
+    color: #3D3D3D;
+    margin-bottom: 20px;
+  }
+  .title_m{
+    font-size: 42px;
+    font-weight: bold;
+    color: #3D3D3D;
+    margin-bottom: 20px;
+  }
+  .blue{
+    color: #4480FF;
+  }
+  .yellow{
+    color: #FFB82A;
+  }
+  .content {
+    color: #041A40;
+    font-size: 20px;
+    font-weight: normal;
+  }
+  .item_box{
+    margin-bottom: 60px;
+  }
+  .imgBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 60px 0;
+
+    .img_item{
+      text-align: center;
+      width: 256px;
+      height: 215px;
+      border-radius: 24px;
+      padding: 40px 0;
+      background-color: #E2E3E5;
+
+      img{
+        width: 88px;
+        height: 88px;
+        margin-bottom: 10px;
+      }
+      p{
+        font-size: 28px;
+        font-weight: 500;
+        color: #333333;
+      }
+    }
+  }
+  .imgBox2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    img{
+      width: 440px;
+      height: 255px;
+    }
+  }
+  .proTitleBox{
+    img{
+      width: 1380px;
+      height: 640px;
+    }
+  }
+}
+
+.detail{
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: normal;
+  color: #2E63FF;
+}
+
+.colMenu{
+  justify-content: space-between;
+  // margin-bottom: 160px;
+}
+
+.flexRow{
+  display: flex;
+
+}
+
+.left-menu {
+  width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-right: 16px;
+
+  .menu-item {
+    position: relative;
+    cursor: pointer;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.active {
+      .menu-text {
+        color: #333333;
+        font-size: 50px;
+        line-height: 82px;
+      }
+    }
+
+    .menu-content-wrapper {
+      display: flex;
+      gap: 16px;
+      position: relative;
+    }
+
+    .line {
+      position: absolute;
+      left: -24px;
+      top: 0;
+      width: 6px;
+      height: 48px;
+      background-color: #E8EAED;
+      transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 33px;
+    }
+
+    &.active .line {
+      height: 100%;
+      background-color: #2E63FF;
+    }
+
+    .text-content {
+      flex: 1;
+    }
+
+    .menu-text {
+      transition: all 0.3s ease;
+      color: #666666;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 48px;
+    }
+
+    .content-detail {
+      p {
+        color: #717781;
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.content-image{
+  width: 800px;
+  height: 500px;
+}
+
+.oort_logo{
+  img{
+    width: 67px;
+    height: 80px;
+    margin-right: 16px;
+  }
+}
+
+.proTitleBox_c_t {
+  color: #717781;
+  font-weight: normal;
+  font-size: 20px;
+  text-align: left;
+  padding: 30px 0;
+}
+
+.proTitleBox_c_t1 {
+  color: #2278FF;
+  font-weight: normal;
+  font-size: 20px;
+}
+.item_first{
+  width: 703px;
+  height: 568px;
+  margin-right: 20px;
+  border: 1px solid #b2bac8;
+  background: url('@/assets/img/cjxm.png');
+  background-size: cover;
+  border-radius: 24px;
+  text-align: center;
+}
+
+.item_second{
+  width: 338px;
+  height: 568px;
+  margin-right: 20px;
+  border: 1px solid #b2bac8;
+  background: url('@/assets/img/kfhj.png');
+  background-size: cover;
+  border-radius: 24px;
+  text-align: center;
+}
+
+.item_third{
+  width: 338px;
+  height: 568px;
+  border: 1px solid #b2bac8;
+  background: url('@/assets/img/kswd.png');
+  background-size: cover;
+  border-radius: 24px;
+  text-align: center;
+}
+
+.titleSize{
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 60px;
+  margin-top: 40px;
+}
+.contentSize{
+  font-size: 20px;
+  font-weight: normal;
+  color: #717781;
+  line-height: 30px;
+  margin-top: 24px;
+}
 .proTitleBox {
   justify-content: center;
   color: #3D3D3D;
   font-weight: bold;
   font-size: 58px;
   padding-bottom: 100px;
-}
-
-.privateCloud_c1 {
-  width: 80%;
-  height: auto;
-}
-
-.privateCloud_c2 {
-  width: 738px;
-  height: auto;
-}
-
-.privateCloud_c2 {
-  width: 738px;
-  height: auto;
-}
-
-.privateCloud_c5 {
-  width: 660px;
-  height: auto;
-}
-
-.privateCloud_c6 {
-  width: 643px;
-  height: auto;
-}
-
-.proTitleBox_c_t{
-  color: #717781;
-  font-weight: normal;
-  font-size: 20px;
-  text-align: left;
-  padding-top: 30px;
 }
 </style>
