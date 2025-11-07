@@ -401,7 +401,7 @@ const handleScroll = () => {
 
 const downloadPDF = () => {
   const link = document.createElement('a')
-  link.href = '/document/产品文档.pdf'
+  link.href = '/documents/产品文档.pdf'
   link.download = '产品文档.pdf'
   link.click()
 }
