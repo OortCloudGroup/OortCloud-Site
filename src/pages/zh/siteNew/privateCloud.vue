@@ -173,8 +173,8 @@
             </div>
           </div>
           <div class="right-content">
-            <div class="content-image">
-              <img :src="currentPaas.image" :alt="currentPaas.title" />
+            <div>
+              <img class="content-image" :src="currentPaas.image" :alt="currentPaas.title" />
             </div>
           </div>
         </div>
@@ -212,8 +212,8 @@
             </div>
           </div>
           <div class="right-content">
-            <div class="content-image">
-              <img :src="currentSaas.image" :alt="currentSaas.title" />
+            <div>
+              <img class="content-image" :src="currentSaas.image" :alt="currentSaas.title" />
             </div>
           </div>
         </div>
@@ -345,7 +345,7 @@
         <div class="proTitleBox_c_t">
           OORTCLOUD AI 原生 IDE，智能编码，一触即发
         </div>
-        <div class="proTitleBox_c_t1">
+        <div class="proTitleBox_c_t1" @click="viewPath('/zh/siteNew/oortVS')">
           查看详情
         </div>
       </div>
@@ -387,7 +387,7 @@
       <div class="proT">
         成功案例
       </div>
-      <div class="productImg p5Out flexRowAC">
+      <div class="productImg p5Out flexRowAC" style="justify-content: space-between;">
         <div class="item img1">
           <div class="bottom">
             <p>城市风光</p>
@@ -464,6 +464,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { useRouter } from 'vue-router'
 import product5_1 from '@/assets/VLimg2.0/product5_1.png'
 import product5_2 from '@/assets/VLimg2.0/product5_2.png'
 import product5_3 from '@/assets/VLimg2.0/product5_3.png'
@@ -719,6 +720,14 @@ p5Arr.value = [
   { t: 'Mac OS', d: '版本号：V3.1.06', flag: false, img: product5_6 },
   { t: '银河麒麟', d: '版本号：V3.1.06', flag: false, img: product5_7 }
 ]
+
+const router = useRouter()
+const viewPath = (path) => {
+  if (router.currentRoute.value.path === path) {
+    window?.scrollTo(0, 0)
+  }
+  router.push({ path })
+}
 </script>
 
 <style scoped lang="scss">
@@ -1357,6 +1366,7 @@ p5Arr.value = [
 }
 
 .proTitleBox_c_t1 {
+  cursor: pointer;
   color: #2278FF;
   font-weight: normal;
   font-size: 20px;
