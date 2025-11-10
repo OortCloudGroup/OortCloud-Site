@@ -179,6 +179,120 @@
           </div>
         </div>
       </div>
+      <div class="w1380 privateBox paasBox">
+        <div class="topList">
+          <div class="top_item ">
+            <img src="@/assets/img/privateCloud_img1.png" alt="" />
+            <span>弹性+分布式优势</span>
+          </div>
+          <div class="top_item ">
+            <img src="@/assets/img/privateCloud_img2.png" alt="" />
+            <span>API 网关技术实现原理</span>
+          </div>
+          <div class="top_item ">
+            <img src="@/assets/img/privateCloud_img3.png" alt="" />
+            <span>微服务Spring Cloud治理</span>
+          </div>
+          <div class="top_item ">
+            <img src="@/assets/img/privateCloud_img4.png" alt="" />
+            <span>DevOps 产品特点</span>
+          </div>
+        </div>
+        <div class="mainContent">
+          <div class="paas">
+            PaaS
+          </div>
+          <div class="paasList">
+            <div class="paas_item">
+              <img src="@/assets/img/privateCloud_img5.png" alt="" />
+              <div class="title">
+                容器云
+              </div>
+              <div class="contents">
+                封装负载的环境构建（一次封装）
+              </div>
+              <div class="contents">
+                屏蔽异构基础设施的复杂性（到处运行）
+              </div>
+              <div class="contents">
+                提高资源使用效率
+              </div>
+              <div class="contents">
+                基础设施到应用的自动化运维
+              </div>
+              <div class="contents">
+                多租户管理，弹性伸缩
+              </div>
+            </div>
+            <div class="paas_item">
+              <img src="@/assets/img/privateCloud_img6.png" alt="" />
+              <div class="title">
+                DevOps
+              </div>
+              <div class="contents">
+                快速响应业务端需求变更
+              </div>
+              <div class="contents">
+                自动化: 持续集成，持续发布等功能提高交付质量及可靠性
+              </div>
+              <div class="contents">
+                标准化: 减少运维出错率
+              </div>
+              <div class="contents">
+                规模化: 支撑大规模高密度发布流程
+              </div>
+            </div>
+            <div class="paas_item">
+              <img src="@/assets/img/privateCloud_img7.png" alt="" />
+              <div class="title">
+                微服务架构
+              </div>
+              <div class="contents">
+                开发人员更聚焦特定业务
+              </div>
+              <div class="contents">
+                不同业务组件的错误隔离
+              </div>
+              <div class="contents">
+                混合技术栈
+              </div>
+              <div class="contents">
+                独立部署，细粒度伸缩
+              </div>
+              <div class="contents">
+                服务目录，能力沉淀
+              </div>
+              <div class="contents">
+                应用市场，能力输出
+              </div>
+            </div>
+            <div class="paas_item">
+              <img src="@/assets/img/privateCloud_img8.png" alt="" />
+              <div class="title">
+                云原生
+              </div>
+              <div class="contents">
+                开发人员更聚焦特定业务
+              </div>
+              <div class="contents">
+                不同业务组件的错误隔离
+              </div>
+              <div class="contents">
+                混合技术栈
+              </div>
+              <div class="contents">
+                独立部署，细粒度伸缩
+              </div>
+              <div class="contents">
+                服务目录，能力沉淀
+              </div>
+              <div class="contents">
+                应用市场，能力输出
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- SaaS -->
     <div id="section4" ref="section4">
@@ -1422,5 +1536,70 @@ const viewPath = (path) => {
   font-weight: bold;
   font-size: 58px;
   padding-bottom: 100px;
+}
+.paasBox{
+  background-color: #EBF0FA;
+  padding: 40px;
+  border-radius: 24px;
+  margin-bottom: 160px;
+}
+.topList{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+.top_item{
+  padding: 14px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 152px;
+  span{
+    font-size: 24px;
+    font-weight: normal;
+    margin-left: 8px;
+  }
+  img{
+    width: 40px;
+    height: 40px;
+  }
+}
+.mainContent{
+  .paas{
+    text-align: center;
+    line-height: 88px;
+    background-color: #2E63FF;
+    border-radius: 12px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .paasList{
+    display: flex;
+    justify-content: space-between;
+    .paas_item{
+      width: 280px;
+      height: 470px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      img{
+        width: 68px;
+        height: 68px;
+      }
+      .title{
+        font-size: 32px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+      .contents{
+        font-size: 18px;
+        font-weight: normal;
+        margin-top: 20px;
+      }
+    }
+  }
 }
 </style>
