@@ -18,6 +18,7 @@
       </div>
       <img class="VLStream_top" src="@/assets/img/oortVS_img1.png" alt="" />
     </div>
+    <!-- 安全可靠的开发环境 -->
     <div class="w1380">
       <div class="title1">
         安全可靠的开发环境
@@ -25,7 +26,7 @@
       <div class="content">
         无需下载，无需配置，在浏览器中一键初始化开发环境
       </div>
-      <div class="proTitleBox w1380 flexRowAC">
+      <div class="proTitleBox flexRowAC">
         <div class="item_first">
           <div class="titleSize">
             支持多种方式创建项目
@@ -58,6 +59,7 @@
         </div>
       </div>
     </div>
+    <!-- 开发支撑能力 -->
     <div class="w1380">
       <div class="title1">
         开发支撑能力
@@ -79,15 +81,175 @@
         <img src="@/assets/img/oortVS_img4.png" alt="" class="img1" />
         <img src="@/assets/img/oortVS_img5.png" alt="" class="img2" />
       </div>
+      <div class="box2">
+        <div class="title3">
+          开发支撑能力，支持个性化需求快速迭代：构建统一门户、统一用户、统一服务、统一<br />
+          授权、统一数据对标等。避免业务系统重复建设、降低开发成本、缩短项目周期。<br />
+          主要使用成效，解决如下问题：
+        </div>
+        <div class="list_content">
+          1、建设应用生态。<br />
+          2、避免信息孤岛。<br />
+          3、拆除信息烟囱。<br />
+          4、避免重复开发。<br />
+          对各业务应用开发、发布、管理、下载、使用、统计、维护等工作，做到各业务应用的<br />
+          全生命周期的管理。
+        </div>
+      </div>
+      <div class="box3 flexRowBetween">
+        <div class="box3_item">
+          <img src="@/assets/img/oortVS_img6.png" alt="" />
+          <div class="title3 box_spacing" style="font-size: 700;">
+            终端业务服务能力集成
+          </div>
+          <div class="content">
+            一系列的原生服务化能力支持包（个性化需求快速迭代底座，包括需要<br />
+            在轻应用中调用核心层中的原生能力如身份证识别、车牌识别、OCR、<br />
+            位置信息等原生能力的集合）。
+          </div>
+        </div>
+        <div class="box3_item">
+          <img src="@/assets/img/oortVS_img7.png" alt="" />
+          <div class="title3 box_spacing" style="font-size: 700;">
+            云端业务服务能力集成
+          </div>
+          <div class="content">
+            以及统一消息推送服务，移动数据分析，应用安全加固等，向开发者提<br />
+            供更加全面的移动研发中台，也便于对已有 App 进行重构。
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- “奥尔特云”开发平台 -->
+    <div class="w1380">
+      <div class="title1">
+        "奥尔特云"开发平台，保障开发环节信息安全和隐私、<br />
+        网络安全等，避免信息泄露，统一和标准化的环境
+      </div>
+      <div class="img_box">
+        <img src="@/assets/img/oortVS_img8.png" alt="" />
+      </div>
+    </div>
+    <!-- 支持全栈开发 -->
+    <div class="w1380">
+      <div class="title1">
+        支持全栈开发，提供智能补全、智能预测、智能问答等能力，<br />
+        节省开发时间，释放脑海中的创造力
+      </div>
+      <div class="flexRowBetween colMenu">
+        <div class="left-menu">
+          <div
+            v-for="(item, index) in practiceItems"
+            :key="index"
+            class="menu-item"
+            :class="{ active: activeIndexpractice === index }"
+            @click="selectpracticeMenu(index)"
+          >
+            <div class="menu-content-wrapper">
+              <div class="line" />
+              <div class="text-content">
+                <div class="menu-text">
+                  {{ item.title }}
+                </div>
+                <div v-show="activeIndexpractice === index" class="content-detail">
+                  <p>{{ currentpractice.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-content">
+          <div>
+            <img :src="currentpractice.image" :alt="currentpractice.title" class="content-image" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w1380">
+      <div class="title1">
+        支持丰富的编程语言和主流 IDE
+      </div>
+      <div class="box7">
+        <img src="@/assets/img/oortVS_img16.png" alt="" />
+      </div>
+      <div class="flexRowBetween box4">
+        <img src="@/assets/img/oortVS_img17.png" alt="" />
+        <img src="@/assets/img/oortVS_img18.png" alt="" />
+      </div>
+    </div>
+    <div class="w1380">
+      <div class="title1" style="text-align: center;">
+        开始使用 OORTCLOUD Visual Studio
+      </div>
+      <div class="box5">
+        <div class="box6">
+          立即体验
+        </div>
+        <img src="@/assets/img/oortVS_img19.png" alt="" />
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import { ref, computed } from 'vue'
+import oortImg1 from '@/assets/img/oortVS_img9.png'
+import oortImg2 from '@/assets/img/oortVS_img10.png'
+import oortImg3 from '@/assets/img/oortVS_img11.png'
+import oortImg4 from '@/assets/img/oortVS_img12.png'
+// import oortImg5 from '@/assets/img/oortVS_img13.png'
+// import oortImg6 from '@/assets/img/oortVS_img14.png'
+// import oortImg7 from '@/assets/img/oortVS_img15.png'
 
 definePageMeta({
   layout: 'site-new'
 })
+
+// 支持全栈开发
+const practiceItems = ref([
+  {
+    title: '前端开发',
+    description: '支撑 VUE 前端开发，支持基于 OORTCLOUD mPaaS 开发轻应用',
+    image: oortImg1
+  },
+  {
+    title: '后端服务开发',
+    description: '支持 Python、Go、Java等语言开发后端服务，持基于 OORTCLOUD aPaaS 开发后端微服务 ',
+    image: oortImg2
+  },
+  {
+    title: 'AI Agent 开发',
+    description: '支持 AI 智能体开发',
+    image: oortImg3
+  },
+  {
+    title: '网站、小程序开发',
+    description: '支持网站、公众号、小程序开发',
+    image: oortImg4
+  },
+  {
+    title: '低代码开发',
+    description: '支持安卓原生、移动端H5、VUE、uni-app、MUI、PC Web、PC 原生低代码开发',
+    image: oortImg4
+  },
+  {
+    title: '无代码开发',
+    description: '支持图表设计、门户设计、大屏设计、报表设计、表单设计、应用设计无代码开发',
+    image: oortImg4
+  },
+  {
+    title: '数据开发 ',
+    description: '无下载、图形化拖拽开发，覆盖数据处理、分析、可视化等全流程。一键初始化浏览器环境',
+    image: oortImg4
+  }
+])
+const activeIndexpractice = ref(0)
+const currentpractice = computed(() => {
+  return practiceItems.value[activeIndexpractice.value]
+})
+function selectpracticeMenu(index) {
+  activeIndexpractice.value = index
+}
 </script>
 
 <style scoped lang="scss">
@@ -119,6 +281,10 @@ definePageMeta({
 .flexRow{
   display: flex;
 }
+.flexRowBetween{
+  display: flex;
+  justify-content: space-between;
+}
 .title1{
   font-family: OPPOSans;
   font-size: 50px;
@@ -130,6 +296,11 @@ definePageMeta({
   font-size: 32px;
   font-weight: normal;
   color: #717781;
+}
+.title3{
+  font-size: 24px;
+  font-weight: 400;
+  color: #3D3D3D;
 }
 .content{
   font-size: 20px;
@@ -210,5 +381,144 @@ definePageMeta({
 }
 .img2{
   width: 628px;
+}
+.box2{
+  text-align: center;
+  margin: 80px 0;
+}
+.list_content{
+  font-size: 24px;
+  font-size: 700;
+  margin-top: 50px;
+}
+.box3_item{
+  padding: 25px;
+  width: 630px;
+  height: 270px;
+  background-color: #E2E3E5;
+  border-radius: 24px;
+  img{
+    width: 48px;
+    height: 48px;
+  }
+}
+.box_spacing{
+  margin: 16px 0;
+}
+.img_box{
+  text-align: center;
+  margin-top: 80px;
+}
+.left-menu {
+  width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-right: 16px;
+
+  .menu-item {
+    position: relative;
+    cursor: pointer;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.active {
+      .menu-text {
+        color: #333333;
+        font-size: 50px;
+        line-height: 82px;
+      }
+    }
+
+    .menu-content-wrapper {
+      display: flex;
+      gap: 16px;
+      position: relative;
+    }
+
+    .line {
+      position: absolute;
+      left: -24px;
+      top: 0;
+      width: 6px;
+      height: 48px;
+      background-color: #E8EAED;
+      transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 33px;
+    }
+
+    &.active .line {
+      height: 100%;
+      background-color: #2E63FF;
+    }
+
+    .text-content {
+      flex: 1;
+    }
+
+    .menu-text {
+      transition: all 0.3s ease;
+      color: #666666;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 48px;
+    }
+
+    .content-detail {
+      p {
+        color: #717781;
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+.colMenu{
+  margin-top: 80px;
+}
+.content-image{
+  width: 800px;
+  height: 600px;
+}
+.box7{
+  margin-top: 80px;
+  text-align: center;
+  img{
+    width: 1235px;
+    height: 188px;
+  }
+}
+
+.box4{
+  width: 760px;
+  height: 360px;
+  margin: 80px auto;
+  margin-bottom: 0;
+}
+.box5{
+  position: relative;
+  img{
+    width: 106px;
+    height: 64px;
+    position: absolute;
+    left: 850px;
+    top: 0;
+  }
+}
+.box6{
+  cursor: pointer;
+  width: 72px;
+  height: 24px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #2278FF;
+  color: #fff;
+  padding: 20px 60px;
+  margin: 80px auto;
+  margin-bottom: 0;
 }
 </style>
