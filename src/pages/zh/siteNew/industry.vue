@@ -311,13 +311,13 @@ watch(() => props.item, (newVal: any) => {
 .idtBox:hover {
   cursor: pointer;
   color: #2656a5;
-  text-decoration: underline;
+  // text-decoration: underline;
 }
 
 .conBox>div:hover {
   cursor: pointer;
   color: #2656a5;
-  text-decoration: underline;
+  // text-decoration: underline;
 }
 
 .conBox {
@@ -383,7 +383,7 @@ watch(() => props.item, (newVal: any) => {
     .appT_t:hover {
       cursor: pointer;
       color: #2656a5;
-      text-decoration: underline;
+      // text-decoration: underline;
     }
 
     .appT_t {

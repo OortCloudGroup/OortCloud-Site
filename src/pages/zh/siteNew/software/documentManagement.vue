@@ -22,10 +22,8 @@
       </div>
       <img class="cloudAlbum_bg" src="@/assets/problemFeedback/cloudAlbum_bg.png" alt="" />
     </div>
-    <div class="w1380">
-      <div class="w1380 webBottomImg">
-        <img class="wBImg" src="@/assets/VLimg2.0/CloudR0.png" alt="" />
-      </div>
+    <div class="w1380 webBottomImg">
+      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
     </div>
     <!--核心功能-->
     <div class="productBox w1380">
@@ -38,28 +36,36 @@
           <div class="card_1_t">
             文件收集
           </div>
-          <p class="card_1_des">支持向多方人员快速收集目标文件</p>
+          <p class="card_1_des">
+            支持向多方人员快速收集目标文件
+          </p>
         </div>
         <div class="card_1">
           <img class="card_1_img" src="@/assets/software/documentManagement/wdgl_icon_wjck.png" alt="" />
           <div class="card_1_t">
             文件查看
           </div>
-          <p class="card_1_des">支持多端在线预览音视频、图片、文档等多种文件格式</p>
+          <p class="card_1_des">
+            支持多端在线预览音视频、图片、文档等多种文件格式
+          </p>
         </div>
         <div class="card_1">
           <img class="card_1_img" src="@/assets/software/documentManagement/wdgl_icon_wjpx.png" alt="" />
           <div class="card_1_t">
             文件排序
           </div>
-          <p class="card_1_des">提供多种自动排序方式，方便快速浏览查找文件</p>
+          <p class="card_1_des">
+            提供多种自动排序方式，方便快速浏览查找文件
+          </p>
         </div>
         <div class="card_1">
           <img class="card_1_img" src="@/assets/software/documentManagement/wdgl_icon_bjyl.png" alt="" />
           <div class="card_1_t">
             便捷预览
           </div>
-          <p class="card_1_des">支持 视频、图片、文档等多类格式在线快速查阅</p>
+          <p class="card_1_des">
+            支持 视频、图片、文档等多类格式在线快速查阅
+          </p>
         </div>
       </div>
       <div class="card_container flexRowAC">
@@ -68,28 +74,36 @@
           <div class="card_1_t">
             素材管理
           </div>
-          <p class="card_1_des">过标签工具更轻松地将文件进行分类管理，提升整理与搜索的效率</p>
+          <p class="card_1_des">
+            过标签工具更轻松地将文件进行分类管理，提升整理与搜索的效率
+          </p>
         </div>
         <div class="card_1">
           <img class="card_1_img" src="@/assets/software/documentManagement/wdgl_icon_znsx.png" alt="" />
           <div class="card_1_t">
             智能筛选
           </div>
-          <p class="card_1_des">支持针对文件自动分类等智能多维的筛选功能</p>
+          <p class="card_1_des">
+            支持针对文件自动分类等智能多维的筛选功能
+          </p>
         </div>
         <div class="card_1">
           <img class="card_1_img" src="@/assets/software/documentManagement/wdgl_icon_ljfxsz.png" alt="" />
           <div class="card_1_t">
             分享链接设置
           </div>
-          <p class="card_1_des">阅流支持用户设置分享链接的权限，如“下载、分享、浏览时长”等</p>
+          <p class="card_1_des">
+            阅流支持用户设置分享链接的权限，如“下载、分享、浏览时长”等
+          </p>
         </div>
         <div class="card_1">
           <img class="card_1_img" src="@/assets/software/documentManagement/wdgl_icon_ljtygl.png" alt="" />
           <div class="card_1_t">
             链接统一管理
           </div>
-          <p class="card_1_des">阅流的链接模块记录了由用户发出的所有链接，方便后续统一管理并查询访问记录</p>
+          <p class="card_1_des">
+            阅流的链接模块记录了由用户发出的所有链接，方便后续统一管理并查询访问记录
+          </p>
         </div>
       </div>
     </div>
@@ -155,6 +169,7 @@
         </div>
       </div>
     </div>
+    <!--资料下载-->
     <div class="productBox w1380">
       <div class="proT">
         资料下载
@@ -163,9 +178,9 @@
         <div class="product2Out_it flexRowAC">
           <div class="pro2o_l flexRowAC">
             <img class="pro2o_l_l" src="@/assets/software/down3.png" alt="" />
-            【主打胶片】门户与应用仓库使用汇报V2.0.pdf
+            产品文档.pdf
           </div>
-          <div class="pro2o_2">
+          <div class="pro2o_2" @click="downloadPDF">
             下载
           </div>
         </div>
@@ -179,6 +194,13 @@
 definePageMeta({
   layout: 'site-new'
 })
+
+const downloadPDF = () => {
+  const link = document.createElement('a')
+  link.href = '/documents/产品文档.pdf'
+  link.download = '产品文档.pdf'
+  link.click()
+}
 
 </script>
 
@@ -250,7 +272,7 @@ definePageMeta({
 }
 
 .webBottomImg {
-  padding: 0;
+  padding-bottom: 160px;
   height: initial;
 
   .wBImg {
@@ -405,6 +427,7 @@ definePageMeta({
       }
 
       .pro2o_2 {
+        cursor: pointer;
         width: 100px;
         line-height: 54px;
         color: #fff;

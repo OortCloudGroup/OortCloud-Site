@@ -313,7 +313,7 @@
         <div class="product2Out_it flexRowAC">
           <div class="pro2o_l flexRowAC">
             <img class="pro2o_l_l" src="@/assets/software/down3.png" alt="" />
-            产品手册.pdf
+            移动通讯平台V1.0技术白皮书（盖章，扫描）.pdf
           </div>
           <div class="pro2o_2" @click="downloadPDF">
             下载
@@ -344,8 +344,8 @@ definePageMeta({
 
 const downloadPDF = () => {
   const link = document.createElement('a')
-  link.href = '/documents/产品文档.pdf'
-  link.download = '产品文档.pdf'
+  link.href = '/documents/移动通讯平台V1.0技术白皮书（盖章，扫描）.pdf'
+  link.download = '移动通讯平台V1.0技术白皮书（盖章，扫描）.pdf'
   link.click()
 }
 
