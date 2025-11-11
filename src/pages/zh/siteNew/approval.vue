@@ -202,7 +202,7 @@
         <div class="product2Out_it flexRowAC">
           <div class="pro2o_l flexRowAC">
             <img class="pro2o_l_l" src="@/assets/software/down3.png" alt="" />
-            产品手册.pdf
+            智能审批产品彩页（互联网） - 1.pdf
           </div>
           <div class="pro2o_2" @click="downloadPDF">
             下载
@@ -228,8 +228,8 @@ definePageMeta({
 
 const downloadPDF = () => {
   const link = document.createElement('a')
-  link.href = '/documents/产品文档.pdf'
-  link.download = '产品文档.pdf'
+  link.href = '/documents/智能审批产品彩页（互联网） - 1.pdf'
+  link.download = '智能审批产品彩页（互联网） - 1.pdf'
   link.click()
 }
 

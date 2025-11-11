@@ -218,7 +218,7 @@
         <div class="product2Out_it flexRowAC">
           <div class="pro2o_l flexRowAC">
             <img class="pro2o_l_l" src="@/assets/software/down3.png" alt="" />
-            产品手册.pdf
+            OpenGBS可视化国标(GB28181)指挥调度平台V1.0技术白皮书.pdf
           </div>
           <div class="pro2o_2" @click="downloadPDF">
             下载
@@ -241,8 +241,8 @@ import dispatch_pro3 from '@/assets/software/dispatch_pro3.png'
 
 const downloadPDF = () => {
   const link = document.createElement('a')
-  link.href = '/documents/产品文档.pdf'
-  link.download = '产品文档.pdf'
+  link.href = '/documents/OpenGBS可视化国标(GB28181)指挥调度平台V1.0技术白皮书.pdf'
+  link.download = 'OpenGBS可视化国标(GB28181)指挥调度平台V1.0技术白皮书.pdf'
   link.click()
 }
 definePageMeta({

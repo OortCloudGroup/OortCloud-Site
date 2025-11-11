@@ -174,6 +174,7 @@
     <!--API网关-->
     <div id="section2" ref="section2">
       <div class="w1380 CloudBox flexRowAC">
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_fwly_bg.png" alt="" />
         <div class="CloudL">
           <div class="cl_t">
             服务路由
@@ -182,10 +183,8 @@
             微服务网关通过权限校验与路由匹配处理服务请求，完成后将响应结果传递至服务发起方，实现高效安全的请求转发与响应。
           </div>
         </div>
-        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_fwly_bg.png" alt="" />
       </div>
       <div class="w1380 CloudBox ipcBox flexRowAC">
-        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_apits_bg.png" alt="" />
         <div class="CloudL">
           <div class="cl_t">
             API调试
@@ -194,8 +193,10 @@
             包括：微服务创建、微服务启停、微服务更新、微服务伸缩、微服务升级和回滚、微服务健康检查。
           </div>
         </div>
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_apits_bg.png" alt="" />
       </div>
       <div class="w1380 ipcView CloudBox flexRowAC">
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_xyzh_bg.png" alt="" />
         <div class="CloudL">
           <div class="cl_t">
             协议转换
@@ -204,10 +205,8 @@
             后端服务支持Dubbo、SOAP协议，并通过协议转换将服务统一以REST协议对外提供，提升兼容性与扩展性。
           </div>
         </div>
-        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_xyzh_bg.png" alt="" />
       </div>
       <div class="w1380 ipcView CloudBox flexRowAC">
-        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_sjzh_bg.png" alt="" />
         <div class="CloudL">
           <div class="cl_t">
             数据转换
@@ -216,8 +215,10 @@
             通过配置映射规则，实现前、后端数据转换。支持前端请求的数据转换。支持返回结果的数据转换。
           </div>
         </div>
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_sjzh_bg.png" alt="" />
       </div>
       <div class="w1380 CloudBox flexRowAC">
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_fzjh_bg.png" alt="" />
         <div class="CloudL">
           <div class="cl_t">
             负载均衡
@@ -226,10 +227,8 @@
             在高负载情况下，支持通过横向扩展和集群提升处理能力。网关内负载均衡通过注册中心发现可用服务实例，支持轮询、随机、最小并发等负载均衡方式。
           </div>
         </div>
-        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_fzjh_bg.png" alt="" />
       </div>
       <div class="w1380 ipcView CloudBox flexRowAC">
-        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_fwkz_bg.png" alt="" />
         <div class="CloudL">
           <div class="cl_t">
             访问控制
@@ -238,8 +237,10 @@
             通过访问控制策略管理API调用者，支持新增、编辑、删除策略。使用IP黑白名单控制访问，白名单限制非授权IP访问，黑名单拒绝指定IP访问API服务。
           </div>
         </div>
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_fwkz_bg.png" alt="" />
       </div>
       <div class="w1380 ipcView CloudBox flexRowAC">
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_rdgl_bg.png" alt="" />
         <div class="CloudL">
           <div class="cl_t">
             熔断隔离
@@ -248,10 +249,8 @@
             网关通过熔断和隔离机制，响应慢或超时时熔断服务并释放资源，监控异常防止影响系统稳定性。
           </div>
         </div>
-        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_rdgl_bg.png" alt="" />
       </div>
       <div class="w1380 CloudBox flexRowAC">
-        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_fwdb_bg.png" alt="" />
         <div class="CloudL">
           <div class="cl_t">
             服务挡板
@@ -260,8 +259,10 @@
             服务挡板用于开发调试阶段，模拟后端服务返回预期结果，帮助调用方在API联调环境未搭建时进行开发。
           </div>
         </div>
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_fwdb_bg.png" alt="" />
       </div>
       <div class="w1380 ipcView CloudBox flexRowAC">
+        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_dtlj_bg.png" alt="" />
         <div class="CloudL">
           <div class="cl_t">
             动态拦截
@@ -270,7 +271,6 @@
             提供动态拦截器，方便开发、运维人员对提供的服务进行自定义请求拦截配置、响应包装等。
           </div>
         </div>
-        <img class="k8sMana_c1" src="@/assets/software/k8sMana/k8s_dtlj_bg.png" alt="" />
       </div>
     </div>
     <!-- 成功案例 -->
@@ -342,7 +342,7 @@
         <div class="product2Out_it flexRowAC">
           <div class="pro2o_l flexRowAC">
             <img class="pro2o_l_l" src="@/assets/software/down3.png" alt="" />
-            产品手册.pdf
+            微服务集成平台---k8s容器管理和CMDB软件V2.0技术白皮书.pdf
           </div>
           <div class="pro2o_2" @click="downloadPDF">
             下载
@@ -401,8 +401,8 @@ const handleScroll = () => {
 
 const downloadPDF = () => {
   const link = document.createElement('a')
-  link.href = '/documents/产品文档.pdf'
-  link.download = '产品文档.pdf'
+  link.href = '/documents/微服务集成平台---k8s容器管理和CMDB软件V2.0技术白皮书.pdf'
+  link.download = '微服务集成平台---k8s容器管理和CMDB软件V2.0技术白皮书.pdf'
   link.click()
 }
 

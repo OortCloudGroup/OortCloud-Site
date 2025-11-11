@@ -4,52 +4,71 @@
       <div class="VLStream">
         选择应用
       </div>
-      <el-input v-model="value" :prefix-icon="Search" class="bottom_pro_address" placeholder="输入关键字搜索应用" />
+      <el-input
+        v-model="value"
+        :prefix-icon="Search"
+        class="bottom_pro_address"
+        placeholder="输入关键字搜索应用"
+      />
     </div>
     <div class="flexRowAC buyAppsOut">
-      <div v-for="(item,i) in appsList" :key="i" class="buyAppsList">
-        <el-checkbox
-          v-model="checkAll"
-          class="elCheckbox_all"
-          :indeterminate="isIndeterminate"
-          @change="handleCheckAllChange"
-        >
-          <div class="buyAppsOut_t flexRowAC">
-            <img class="buyAppsOut_t_img" src="@/assets/software/price_c1.png" alt="" />
-            {{ item.t }}
-          </div>
-        </el-checkbox>
-        <el-checkbox-group
-          v-model="checkedCities"
-          class="priceIconBox"
-          @change="handleCheckedCitiesChange"
-        >
+      <div style="flex: 1;">
+        <!-- 循环渲染所有应用组 -->
+        <div v-for="(group, groupIndex) in appGroups" :key="groupIndex" class="buyAppsList">
           <el-checkbox
-            v-for="(itd,index) in item.child"
-            :key="index"
-            :label="itd.t"
-            :value="itd"
+            v-model="group.checkAll"
+            class="elCheckbox_all"
+            :indeterminate="group.isIndeterminate"
+            @change="handleGroupCheckAllChange(group, $event)"
           >
-            <div class="flexRowAC priceIconIt">
-              <img class="priceImg" src="@/assets/software/price_c1.png" alt="" />
-              <div class="priceTi">
-                {{ itd.t }}
-              </div>
+            <div class="buyAppsOut_t flexRowAC">
+              <img class="buyAppsOut_t_img" :src="group.img" alt="" />
+              {{ group.t }}
             </div>
           </el-checkbox>
-        </el-checkbox-group>
+          <el-checkbox-group
+            v-model="group.checkedItems"
+            class="priceIconBox"
+            @change="handleGroupItemChange(group)"
+          >
+            <el-checkbox
+              v-for="(item, itemIndex) in group.child"
+              :key="itemIndex"
+              :label="item.t"
+              :value="item"
+            >
+              <div class="flexRowAC priceIconIt">
+                <img class="priceImg" :src="item.img" alt="" />
+                <div class="priceTi">
+                  {{ item.t }}
+                </div>
+              </div>
+            </el-checkbox>
+          </el-checkbox-group>
+        </div>
       </div>
       <div class="buyApps">
+        <!-- 计算所有选中项总数 -->
         <div class="buyApps_t">
-          已选择 {{ checkedCities.length }} Apps
+          已选择 {{ getAllCheckedItems().length }} Apps
         </div>
-        <div v-for="(item,i) in checkedCities" :key="i">
+
+        <!-- 显示所有选中项 -->
+        <div
+          v-for="(item, i) in getAllCheckedItems()"
+          :key="i"
+        >
           <div class="buyAppsOut_t flexRowAC t">
-            <img class="buyAppsOut_t_img" src="@/assets/software/price_c1.png" alt="" />
+            <img class="buyAppsOut_t_img" :src="item.img" alt="" />
             {{ item.t }}
           </div>
         </div>
-        <div :class="{opa: !checkedCities.length}" class="buyBtn flexRowAC" @click="buyClick()">
+
+        <div
+          :class="{opa: !getAllCheckedItems().length}"
+          class="buyBtn flexRowAC"
+          @click="buyClick()"
+        >
           立即购买
         </div>
       </div>
@@ -61,44 +80,107 @@
 import { ref } from 'vue'
 import { Search } from '@element-plus/icons-vue'
 import price_c1 from '@/assets/software/price_c1.png'
-
+import price_c2 from '@/assets/software/price_c2.png'
+import price_c3 from '@/assets/software/price_c3.png'
+import price_c4 from '@/assets/software/price_c4.png'
+import price_c1_1 from '@/assets/software/price_c1_1.png'
+import price_c1_2 from '@/assets/software/price_c1_2.png'
+import price_c1_3 from '@/assets/software/price_c1_3.png'
+import price_c1_4 from '@/assets/software/price_c1_4.png'
+import price_c1_5 from '@/assets/software/price_c1_5.png'
+import price_c1_6 from '@/assets/software/price_c1_6.png'
+import price_c2_1 from '@/assets/software/price_c2_1.png'
 definePageMeta({
   layout: 'site-new'
 })
 
-let value = ref('')
-let appsList = ref([])
-const checkAll = ref(false)
-const isIndeterminate = ref(true)
-const checkedCities = ref([])
-appsList.value = [
+const appGroups = ref([
   {
     t: '个人效率工具',
     img: price_c1,
     child: [
-      { t: '云盘', img: '' },
-      { t: '云相册', img: '' },
-      { t: '云文档', img: '' },
-      { t: '云清单', img: '' },
-      { t: '云备忘录', img: '' },
-      { t: '电子邮件', img: '' }
-    ]
+      { t: '云盘', img: price_c1_1 },
+      { t: '云相册', img: price_c1_2 },
+      { t: '云文档', img: price_c1_3 },
+      { t: '云清单', img: price_c1_4 },
+      { t: '云备忘录', img: price_c1_5 },
+      { t: '电子邮件', img: price_c1_6 },
+      { t: '移动视频', img: price_c1_6 }
+    ],
+    checkAll: false,
+    isIndeterminate: true,
+    checkedItems: []
+  },
+  {
+    t: '培训学习',
+    img: price_c2,
+    child: [
+      { t: '云课堂', img: price_c2_1 },
+      { t: '知识论坛', img: price_c1_2 },
+      { t: '知识库', img: price_c1_3 },
+      { t: '文档管理', img: price_c1_4 },
+      { t: '问题反馈', img: price_c1_5 },
+      { t: '博客', img: price_c1_6 }
+    ],
+    checkAll: false,
+    isIndeterminate: true,
+    checkedItems: []
+  },
+  {
+    t: '指挥调度',
+    img: price_c3,
+    child: [
+      { t: '可视化对讲', img: price_c2_1 },
+      { t: 'WorkUP Meet', img: price_c1_2 },
+      { t: '智慧会议室', img: price_c1_3 },
+      { t: '巡查任务', img: price_c1_4 },
+      { t: '人力资源', img: price_c1_5 },
+      { t: '联合通信', img: price_c1_6 }
+    ],
+    checkAll: false,
+    isIndeterminate: true,
+    checkedItems: []
+  },
+  {
+    t: '行政智慧后勤',
+    img: price_c4,
+    child: [
+      { t: '线上商城', img: price_c2_1 },
+      { t: '宿舍管理', img: price_c1_2 },
+      { t: '物业维修', img: price_c1_3 },
+      { t: '车辆管理', img: price_c1_4 },
+      { t: '来访预约', img: price_c1_5 },
+      { t: '个人中心', img: price_c1_6 }
+    ],
+    checkAll: false,
+    isIndeterminate: true,
+    checkedItems: []
   }
-]
+])
 
-const handleCheckAllChange = (val) => {
-  checkedCities.value = val ? appsList.value[0]?.child : []
-  isIndeterminate.value = false
-}
-const handleCheckedCitiesChange = (value) => {
-  const checkedCount = value.length
-  checkAll.value = checkedCount === appsList.value[0]?.child.length
-  isIndeterminate.value = checkedCount > 0 && checkedCount < appsList.value[0]?.child.length
+const value = ref('')
+
+// 处理组全选事件
+const handleGroupCheckAllChange = (group, val) => {
+  group.checkedItems = val ? [...group.child] : []
+  group.isIndeterminate = false
 }
 
-// 立即购买<NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html"
+// 处理组内项选择变化
+const handleGroupItemChange = (group) => {
+  const checkedCount = group.checkedItems.length
+  group.checkAll = checkedCount === group.child.length
+  group.isIndeterminate = checkedCount > 0 && checkedCount < group.child.length
+}
+
+// 获取所有选中项
+const getAllCheckedItems = () => {
+  return appGroups.value.flatMap(group => group.checkedItems)
+}
+
+// 立即购买
 const buyClick = () => {
-  if (!checkedCities.value.length) return false
+  if (!getAllCheckedItems().length) return false
   window.open('http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html', '_blank')
 }
 </script>
@@ -120,6 +202,7 @@ const buyClick = () => {
 
   .buyAppsList {
     flex: 1;
+    margin-bottom: 100px;
   }
 
   .elCheckbox_all{
@@ -135,8 +218,8 @@ const buyClick = () => {
   gap: 8px;
 
   .buyAppsOut_t_img{
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
   }
 
   &.t {
@@ -217,6 +300,7 @@ const buyClick = () => {
     .priceImg {
       width: 56px;
       height: 56px;
+      margin-right: 10px;
     }
   }
 

@@ -22,10 +22,8 @@
       </div>
       <img class="cloudAlbum_bg" src="@/assets/problemFeedback/cloudAlbum_bg.png" alt="" />
     </div>
-    <div class="w1380">
-      <div class="w1380 webBottomImg">
-        <img class="wBImg" src="@/assets/VLimg2.0/CloudR0.png" alt="" />
-      </div>
+    <div class="w1380 webBottomImg">
+      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
     </div>
     <!--核心功能-->
     <div class="productBox w1380">
@@ -145,6 +143,7 @@
         </div>
       </div>
     </div>
+    <!--资料下载-->
     <div class="productBox w1380">
       <div class="proT">
         资料下载
@@ -153,9 +152,9 @@
         <div class="product2Out_it flexRowAC">
           <div class="pro2o_l flexRowAC">
             <img class="pro2o_l_l" src="@/assets/software/down3.png" alt="" />
-            【主打胶片】门户与应用仓库使用汇报V2.0.pdf
+            产品文档.pdf
           </div>
-          <div class="pro2o_2">
+          <div class="pro2o_2" @click="downloadPDF">
             下载
           </div>
         </div>
@@ -169,6 +168,13 @@
 definePageMeta({
   layout: 'site-new'
 })
+
+const downloadPDF = () => {
+  const link = document.createElement('a')
+  link.href = '/documents/产品文档.pdf'
+  link.download = '产品文档.pdf'
+  link.click()
+}
 
 </script>
 
@@ -240,7 +246,7 @@ definePageMeta({
 }
 
 .webBottomImg {
-  padding: 0;
+  padding-bottom: 160px;
   height: initial;
 
   .wBImg {
@@ -395,6 +401,7 @@ definePageMeta({
       }
 
       .pro2o_2 {
+        cursor: pointer;
         width: 100px;
         line-height: 54px;
         color: #fff;
