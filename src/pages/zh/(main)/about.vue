@@ -12,7 +12,13 @@
           </template>
           <div class="tab1_content">
             <div class="tab1_content_left">
-              <img src="/img/about/tab1_pic1.png" />
+              <div>
+                <img src="/img/about/tab1_img1.png" class="tab1_img1" />
+              </div>
+              <div>
+                <img src="/img/about/tab1_img2.png" alt="" class="tab1_img2" />
+                <img src="/img/about/tab1_img3.png" alt="" class="tab1_img3" />
+              </div>
             </div>
             <div class="tab1_content_right">
               <div class="tab1_content_right_1">
@@ -20,35 +26,15 @@
                 <img src="/img/about/tab1_pic2.png" style="width: 60%;height: 80%;position: relative;top: -2.5rem;" />
               </div>
               <div class="tab1_content_right_2">
-                <span class="span2">公共安全“私有云智能化应用建设解决方案”提供商</span>
+                <span class="span2">场景智能化超级效率战略能力服务商</span>
               </div>
               <div class="tab1_content_right_3" />
-              <div class="tab1_content_right_4">
-                <div>
-                  奥尔特云是领先的行业数字化转型、公共安全“私有云智能化应用建设解决方案”提供商，为各行业智能化应用建设提供产品研发、生产、安装和技术服务，引领信息化智能化应用建设模式革新。核心团队由公安行业智能化应用建设资深人士组成，拥有丰富的公安行业研发、咨询、产品、交付、渠道、市场运营经验。
-                </div>
-              </div>
               <div class="tab1_content_right_5">
-                私有云优势
+                奥尔特云(深圳)智慧科技有限公司创立于2019年，专注于移动警务服务总线、Workup超级APP、视频融合赋能平台VLStream，以及应用支撑平台产品研发，公司主要通过移动警务、指挥调度、私有云、大数据、AI场景应用、行业数字化转型，以及非标硬件整机定制等私有部署应用解决方案支撑落地行业场景应用。公司具有成熟的成品平台产品软件和硬件整机定制开发能力，产品在数字政府(一网统管、一网协同、一网通办、一网通享)、智慧城市(智慧园区、智慧场馆、智慧楼宇)以及数字化运营领域得到广泛应用。
               </div>
-              <div class="tab1_content_right_6">
-                <span class="span3" style="font-size: 16px; font-weight: 600;">什么是私有云</span>
-                <span class="span4">私有云，是指企业自己使用的云，它所有的服务不是供别人使用，而是供自己内部人员或分支机构使用。私有云的部署比较适合于有众多分支机构的大型企业或政府部门。随着这些大型企业数据中心的集中化，私有云将会成为他们部署IT系统的主流模式。</span>
-              </div>
-              <div class="tab1_content_right_7">
-                一、能对数据、安全性提供有效控制
-              </div>
-              <div class="tab1_content_right_7">
-                二、提供更高的服务质量
-              </div>
-              <div class="tab1_content_right_7">
-                三、充分利用现有硬件资源和软件资源
-              </div>
-              <div class="tab1_content_right_7">
-                四、不影响现有IT管理的流程
-              </div>
-              <div class="tab1_content_right_7">
-                五、部署方式灵活
+              <div class="tab1_content_right_8">
+                <img src="/img/about/llq.png" alt="" />
+                <a href="https://www.oortcloudsmart.com/" target="_blank">https://www.oortcloudsmart.com/</a>
               </div>
             </div>
           </div>
@@ -156,7 +142,7 @@
       </n-tabs>
     </div>
 
-    <div class="center">
+    <!-- <div class="center">
       <div class="center_div wow fadeInUp">
         <div class="center_div1">
           应用行业
@@ -245,19 +231,19 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="section" style="display: flex; background-color: #f7f7f7">
+    <!-- <div class="section" style="display: flex; background-color: #f7f7f7">
       <div class="contactUs">
         <div class="contactUs_body">
-          <div class="contactUs_body_1">
-            <!--页面嵌套腾讯地图-->
-            <div class="oort_map_area">
+          <div class="contactUs_body_1"> -->
+    <!--页面嵌套腾讯地图-->
+    <!-- <div class="oort_map_area">
               <div id="map_container" style="width: 100%; height: 100%" />
-            </div>
-            <!--<img src="./imgs/map.png">-->
-          </div>
-          <div class="contactUs_body_2 wow fadeInUp">
+            </div> -->
+    <!--<img src="./imgs/map.png">-->
+    <!-- </div> -->
+    <!-- <div class="contactUs_body_2 wow fadeInUp">
             <span class="address">公司地址</span>
             <span class="span8" style="font-size: 23px; font-weight: bold; color: #666666">奥尔特云（深圳）智慧科技有限公司</span>
             <span class="span9">深圳市龙岗区南新路1983创意小镇岭南湾科创园</span>
@@ -271,60 +257,349 @@
           </div>
         </div>
       </div>
+    </div> -->
+    <div class="product">
+      产品集群
+    </div>
+    <div class="website">
+      <el-tabs v-model="activeName" class="demo-tabs" @tab-click="handleClick">
+        <el-tab-pane name="first">
+          <template v-if="activeName === 'first'" #label>
+            <div class="logo">
+              <img src="/public/img/about/product_img1.png" alt="" />生产力平台
+            </div>
+            奥尔特云新一代生产力平台
+          </template>
+          <template v-else #label>
+            <div class="logo">
+              <img src="/public/img/about/product_img2.png" alt="" />生产力平台
+            </div>
+            奥尔特云新一代生产力平台
+          </template>
+          <div class="box2">
+            <div class="left">
+              <div class="lianjie bgc1">
+                <a href="https://www.oortcloudsmart.com/" target="_blank">
+                  https://www.oortcloudsmart.com/
+                </a>
+              </div>
+              <div class="fontSize1 space1">
+                个人和企业面向场景智能化的<br />
+                超级效率战略能力<br />
+              </div>
+              <div class="fontSize1 space2">
+                奥尔特云新一代 <span class="blue">生产力平台</span>
+              </div>
+              <div class="fontSize3 space1">
+                简单、高效、又<span class="blue">实惠</span>!
+              </div>
+              <div class="detail" @click="goToDetail1">
+                了解详情
+              </div>
+            </div>
+            <div class="right">
+              <img src="/public/img/about/product_img_b1.png" alt="" />
+            </div>
+          </div>
+        </el-tab-pane>
+        <el-tab-pane name="second">
+          <template v-if="activeName === 'second'" #label>
+            <div class="logo">
+              <img src="/public/img/about/product_img3.png" alt="" />VLStream
+            </div>
+            决策式AI视频汇聚调度平台
+          </template>
+          <template v-else #label>
+            <div class="logo">
+              <img src="/public/img/about/product_img3.png" alt="" />VLStream
+            </div>
+            决策式AI视频汇聚调度平台
+          </template>
+          <div class="box2">
+            <div class="left">
+              <div class="lianjie bgc2">
+                <a href="https://vls.oortcloudsmart.com/" target="_blank">
+                  https://vls.oortcloudsmart.com/
+                </a>
+              </div>
+              <div class="fontSize1 space1">
+                VLStream <img src="/public/img/about/kaiyuan.png" alt="" />
+              </div>
+              <div class="fontSize1 space2">
+                决策式AI视频汇聚调度平台
+              </div>
+              <div class="fontSize2 space1">
+                面向视觉IoT场景奥尔特云VLStream视觉赋能平台
+              </div>
+              <div class="detail" @click="goToDetail2">
+                了解详情
+              </div>
+            </div>
+            <div class="right">
+              <img src="/public/img/about/product_img_b2.png" alt="" />
+            </div>
+          </div>
+        </el-tab-pane>
+        <el-tab-pane name="third">
+          <template v-if="activeName === 'third'" #label>
+            <div class="logo">
+              <img src="/public/img/about/product_img6.png" alt="" />OORT.DA
+            </div>
+            面向 AI时代 的新型数据底座
+          </template>
+          <template v-else #label>
+            <div class="logo">
+              <img src="/public/img/about/product_img5.png" alt="" />OORT.DA
+            </div>
+            面向 AI时代 的新型数据底座
+          </template>
+          <div class="box2">
+            <div class="left">
+              <div class="lianjie bgc3">
+                <a href="https://da.oortcloudsmart.com/" target="_blank">
+                  https://da.oortcloudsmart.com/
+                </a>
+              </div>
+              <div class="fontSize1 space1">
+                OORT.DA 数据平台
+              </div>
+              <div class="fontSize1 space2">
+                面向<span class="blue">AI时代</span>的新型数据底座
+              </div>
+              <div class="detail" @click="goToDetail3">
+                了解详情
+              </div>
+            </div>
+            <div class="right">
+              <img src="/public/img/about/product_img_b3.png" alt="" />
+            </div>
+          </div>
+        </el-tab-pane>
+        <el-tab-pane name="fourth">
+          <template v-if="activeName === 'fourth'" #label>
+            <div class="logo">
+              <img src="/public/img/about/product_img8.png" alt="" />OORT.SH
+            </div>
+            面向开发者 —"种下智慧树，结出百香果"
+          </template>
+          <template v-else #label>
+            <div class="logo">
+              <img src="/public/img/about/product_img7.png" alt="" />OORT.SH
+            </div>
+            面向开发者 —"种下智慧树，结出百香果"
+          </template>
+          <div class="box2">
+            <div class="left">
+              <div class="lianjie bgc4">
+                <a href="https://sh.oortcloudsmart.com/" target="_blank">
+                  https://sh.oortcloudsmart.com/
+                </a>
+              </div>
+              <div class="fontSize1 space1">
+                OORT.SH 托管平台
+              </div>
+              <div class="fontSize1 space2">
+                面向开发者 —— <br />
+                “种下智慧树，结出百香果”
+              </div>
+              <div class="detail" @click="goToDetail4">
+                了解详情
+              </div>
+            </div>
+            <div class="right">
+              <img src="/public/img/about/product_img_b4.png" alt="" />
+            </div>
+          </div>
+        </el-tab-pane>
+      </el-tabs>
     </div>
   </div>
 </template>
 
 <script setup>
 import { NTabs, NTabPane, NGrid, NGridItem } from 'naive-ui'
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 
 const activeTab = ref('chap1')
 
 const onClickTab = (val) => {
   activeTab.value = val
 }
+const activeName = ref('first')
 
-onMounted(() => {
-  init()
-})
-
-const init = () => {
-  let myLatlng = new TMap.LatLng(22.602465, 114.14787) // 设置公司地点为地图中心点
-  // 定义函数
-  let myOptions = {
-    zoom: 20, // 地图的缩放级别
-    center: myLatlng, // 前面已定义好
-    viewMode: '2D',
-    // mapTypeId: TMap.MapTypeId.ROADMAP,
-    draggableCursor: 'default', // 地图的默认鼠标指针样式
-    draggingCursor: 'pointer', // 拖动地图时的鼠标指针样式
-    scaleControl: true, // 比例尺
-    draggable: true, // 禁止拖动地图
-    mapStyleId: 'style1' // 该key绑定的style1对应于经典地图样式，若未绑定将弹出无权限提示窗
-  }
-  // 获取dom元素添加地图信息
-  // eslint-disable-next-line no-new
-  new TMap.Map(
-    document.getElementById('map_container'),
-    myOptions
-  )
-  // 给中心点一个指示图标
-  // window.TMap.MultiMarker({
-  //   map,
-  //   geometries: [{ // 点标注数据数组
-  //     position: new TMap.LatLng(22.602465, 114.14787),
-  //     properties: {
-  //       title: 'marker'
-  //     }
-  //   }]
-  // })
+const goToDetail1 = () => {
+  window.open('https://www.oortcloudsmart.com/')
 }
+const goToDetail2 = () => {
+  window.open('https://vls.oortcloudsmart.com/')
+}
+const goToDetail3 = () => {
+  window.open('https://da.oortcloudsmart.com/')
+}
+const goToDetail4 = () => {
+  window.open('https://sh.oortcloudsmart.com/')
+}
+
+// onMounted(() => {
+//   init()
+// })
+
+// const init = () => {
+//   let myLatlng = new TMap.LatLng(22.602465, 114.14787) // 设置公司地点为地图中心点
+//   // 定义函数
+//   let myOptions = {
+//     zoom: 20, // 地图的缩放级别
+//     center: myLatlng, // 前面已定义好
+//     viewMode: '2D',
+//     // mapTypeId: TMap.MapTypeId.ROADMAP,
+//     draggableCursor: 'default', // 地图的默认鼠标指针样式
+//     draggingCursor: 'pointer', // 拖动地图时的鼠标指针样式
+//     scaleControl: true, // 比例尺
+//     draggable: true, // 禁止拖动地图
+//     mapStyleId: 'style1' // 该key绑定的style1对应于经典地图样式，若未绑定将弹出无权限提示窗
+//   }
+//   // 获取dom元素添加地图信息
+//   // eslint-disable-next-line no-new
+//   new TMap.Map(
+//     document.getElementById('map_container'),
+//     myOptions
+//   )
+//   // 给中心点一个指示图标
+//   // window.TMap.MultiMarker({
+//   //   map,
+//   //   geometries: [{ // 点标注数据数组
+//   //     position: new TMap.LatLng(22.602465, 114.14787),
+//   //     properties: {
+//   //       title: 'marker'
+//   //     }
+//   //   }]
+//   // })
+// }
 </script>
 
 <style lang="scss" scoped>
+:deep(.el-tabs__nav-scroll){
+  display: flex;
+  justify-content: center;
+  height: 100px;
+}
+:deep(.el-tabs__item){
+  display: flex;
+  padding-right: 100px;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 16px;
+  font-weight: 400;
+  color: #9DA0A6;
+  .logo{
+    font-size: 28px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  img{
+    width: 40px;
+    height: 45px;
+    margin-right: 16px;
+  }
+}
+:deep(.el-tabs__item:hover){
+  color: #9DA0A6;
+}
+:deep(.el-tabs__item.is-active){
+  color: #2278FF;
+}
+:deep(.el-tabs__header){
+  margin: 0;
+}
+:deep(.el-tabs__content){
+  background-color: #F2F5FA;
+}
+
+.bgc1{
+  background-color: #D9E7FD;
+}
+.bgc2{
+  background-color: #FDF2D9;
+}
+.bgc3{
+  background-color: #B5E9E3;
+}
+.bgc4{
+  background-color: #DAB5E9;
+}
+.blue{
+  color: #2278FF;
+}
+.fontSize1{
+  font-size: 42px;
+  font-weight: 700;
+}
+.fontSize2{
+  font-size: 18px;
+  font-weight: 500;
+  color: #717781;
+}
+.fontSize3{
+  font-size: 28px;
+  font-weight: 700;
+}
+.space1{
+  margin-top: 20px;
+  position: relative;
+  img{
+    position: absolute;
+    top: -55px;
+    left: 160px;
+    height: 172px;
+    width: 172px;
+  }
+}
+.space2{
+  margin-top: 12px;
+}
+.box2{
+  height: 660px;
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  .lianjie{
+    text-align: center;
+    padding: 8px 24px;
+    margin-right: 150px;
+    border-radius: 44px;
+  }
+  a{
+    color: #333333;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .right{
+    width: 600px;
+    height: 484px;
+    margin-left: 50px;
+    img{
+      width: 600px;
+      height: 400px;
+    }
+  }
+}
+.detail{
+  cursor: pointer;
+  width: 72px;
+  line-height: 24px;
+  text-align: center;
+  padding: 20px 48px;
+  background-color: #2278FF;
+  border-radius: 8px;
+  margin-top: 60px;
+  font-size:18px;
+  color:#fff;
+}
 .tabs {
   padding: 60px 0;
+  padding-bottom: 160px;
   margin: 0 auto;
   max-width: 1280px;
   width: 100%;
@@ -371,8 +646,8 @@ const init = () => {
     }
     &_3 {
       background: #ec6625;
-      width: 300px;
-      height: 2px;
+      width: 200px;
+      height: 4px;
       margin: 10px 0px;
       margin-bottom: 60px;
     }
@@ -385,13 +660,12 @@ const init = () => {
       line-height: 1.5rem;
     }
     &_5 {
-      margin-top: 60px;
       margin-bottom: 20px;
       font-size: 20px;
-      color: #000000;
+      color: #3D3D3D;
       letter-spacing: 0;
       text-align: left;
-      font-weight: bold;
+      font-weight: 400;
     }
     &_6 {
       background: #1756a6;
@@ -417,6 +691,27 @@ const init = () => {
       letter-spacing: 0;
       display: flex;
       align-items: center;
+    }
+    &_8 {
+      cursor: pointer;
+      width: 447px;
+      padding: 0 31px;
+      margin-top: 50px;
+      line-height: 56px;
+      border-radius: 8px;
+      background: #046FFF;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img{
+        width: 32px;
+        height: 32px;
+      }
+      a{
+        margin-left: 10px;
+        color: #fff;
+      }
     }
   }
 }
@@ -689,8 +984,29 @@ span:hover{
     color: #333333;
     font-weight: bold;
     margin-left: 20px
- }
- @media only screen and (max-width: 500px){
+}
+
+.tab1_img1{
+  width: 600px;
+  height: 495px;
+}
+.tab1_img2{
+  width: 359px;
+  height: 228px;
+}
+.tab1_img3{
+  width: 231px;
+  height: 228px;
+  margin-left: 10px;
+}
+.product{
+  text-align: center;
+  font-size: 58px;
+  font-weight: 700;
+  margin-bottom: 80px;
+}
+
+@media only screen and (max-width: 500px){
 
   .card_img{
       font-size: 19px!important;
@@ -707,7 +1023,10 @@ span:hover{
       width: 200px!important;
       height: 200px!important;
   }
-
+.tab1_content_left{
+  display: flex;
+  flex-direction: column;
+}
 }
 
 @media only screen and (max-width: 500px){
