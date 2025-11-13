@@ -138,7 +138,7 @@
               </NuxtLink>
             </template>
             <template #default>
-              <NavHeaderDropdown :menu="solutionMenu" width="50rem" />
+              <NavHeaderDropdown :menu="solutionMenu" width="65rem" />
             </template>
           </n-popover>
           <NuxtLink to="/zh/news">
@@ -392,39 +392,60 @@ const solutionMenu = ref<Menu[]>([
       { name: '应用软件定制与运维服务外包', logo: '/img/app/yyrjdz.png', link: '/services_asc' },
       { name: '海外[一带一路] English', logo: '/img/app/haiwai.png', link: '/services_oversea' }
     ]
+  },
+  {
+    title: '',
+    showTitle: false,
+    menus: [
+      { name: '园林', logo: '/img/demo/menu/yl.png', link: '/services_garden' },
+      { name: '武装', logo: '/img/demo/menu/wz.png', link: '/services_armed' },
+      { name: '安保', logo: '/img/demo/menu/ab.png', link: '/services_security' }
+    ]
   }
 ])
 
 const demoMenu = ref<MenuItem[]>([
   {
-    name: '智慧云aPaaS应用支撑平台(aPaaS)',
-    desc: '个性化需求快递迭代、支撑能力底座',
-    logo: '/img/demo/menu/apaas.png',
+    name: '移动警务服务总线',
+    desc: '移动警务服务总线',
+    logo: '/img/demo/menu/bus.png',
     link: '/demoIndex'
   },
+  {
+    name: '园林',
+    desc: '园林',
+    logo: '/img/demo/menu/yl.png',
+    link: '/demoIndex'
+  },
+  {
+    name: '武装',
+    desc: '武装',
+    logo: '/img/demo/menu/wz.png',
+    link: '/demoIndex'
+  },
+  // {
+  //   name: '智慧云aPaaS应用支撑平台(aPaaS)',
+  //   desc: '个性化需求快递迭代、支撑能力底座',
+  //   logo: '/img/demo/menu/apaas.png',
+  //   link: '/demoIndex'
+  // },
   {
     name: 'XOA数字化办公',
     desc: '生产力工具',
     logo: '/img/demo/menu/oa.png',
     link: '/demoXOA'
   },
-  {
-    name: '门户与应用仓库',
-    desc: '把小程序搬进APP,快速打造超级APP',
-    logo: '/img/demo/menu/mh.png',
-    link: '/demoIndex'
-  },
+  // {
+  //   name: '门户与应用仓库',
+  //   desc: '把小程序搬进APP,快速打造超级APP',
+  //   logo: '/img/demo/menu/mh.png',
+  //   link: '/demoIndex'
+  // },
   {
     name: '即时通讯',
     desc: '私有化部署的内网“微信”',
     logo: '/img/demo/menu/im.png',
     link: '/demoIM'
-  },
-  {
-    name: '移动警务服务总线',
-    desc: '移动警务服务总线',
-    logo: '/img/demo/menu/bus.png',
-    link: '/demoIndex'
   },
   {
     name: '交通微劝导系统',
@@ -439,11 +460,17 @@ const demoMenu = ref<MenuItem[]>([
     link: '/demoOneMap'
   },
   {
-    name: '反诈中心推广统计平台',
-    desc: '反诈APP推广神器——反诈推广码',
-    logo: '/img/demo/menu/fz.png',
-    link: '/demoFZ'
+    name: '安保',
+    desc: '安保',
+    logo: '/img/demo/menu/ab.png',
+    link: '/demoIndex'
   },
+  // {
+  //   name: '反诈中心推广统计平台',
+  //   desc: '反诈APP推广神器——反诈推广码',
+  //   logo: '/img/demo/menu/fz.png',
+  //   link: '/demoFZ'
+  // },
   {
     name: 'XCreator敏捷发布平台',
     desc: '全媒体矩阵信息发布平台',

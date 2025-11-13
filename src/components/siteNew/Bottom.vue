@@ -28,12 +28,12 @@
               社区
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text">
+              <div class="b_ser_text hover" @click="viewPath('/zh/community/educationalVideo',0)">
                 教学视频
               </div>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text">
+              <div class="b_ser_text hover" @click="viewPath('/zh/community/document',0)">
                 文档
               </div>
             </div>
