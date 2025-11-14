@@ -183,12 +183,12 @@
               </div>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/partner',2)">
                 寻找合作伙伴
               </div>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/recentActivities',2)">
                 近期活动
               </div>
             </div>
@@ -203,7 +203,7 @@
               </div>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/safe',2)">
                 安全
               </div>
             </div>
