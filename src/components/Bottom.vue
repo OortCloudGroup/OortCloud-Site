@@ -108,12 +108,12 @@
               </a>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/support',2)">
                 支持与升级
               </div>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/customDevelopment',0)">
                 自定义开发服务
               </div>
             </div>
@@ -173,7 +173,7 @@
               </a>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/brandEquity',2)">
                 品牌资产
               </div>
             </div>
@@ -193,12 +193,12 @@
               </div>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/customer',2)">
                 客户
               </div>
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/privacy',2)">
                 法律 · 隐私
               </div>
             </div>

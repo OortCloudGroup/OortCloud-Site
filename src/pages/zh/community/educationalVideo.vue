@@ -155,7 +155,7 @@ definePageMeta({
   margin-top: 20px;
 }
 .box1{
-  background-color: #714b67;
+  background-color: #2278ff;
   padding: 48px 0 48px 262px;
 }
 .searchBox{
