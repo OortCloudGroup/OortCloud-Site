@@ -160,7 +160,10 @@
           <template #default>
             <div class="demo_div">
               <template v-for="(item, index) in demoMenu" :key="index">
-                <NuxtLink :to="'/zh'+item.link" target="_blank">
+                <NuxtLink
+                  :to="item.name === '档案' ? 'https://oortcloudsmart.com/oort-zhda.html' : '/zh' + item.link"
+                  target="_blank"
+                >
                   <div :key="index" class="demo_div_item">
                     <img :src="item.logo" />
                     <div>
@@ -170,7 +173,7 @@
                   </div>
                 </NuxtLink>
               </template>
-              <NuxtLink to="/zh/demoIndex" target="_blank">
+              <NuxtLink to="/zh/demoAll">
                 <div class="demo_div_item demo_div_item_more">
                   <img src="/img/demo/menu/more_f.png" />
                   <span>更多演示</span>
@@ -261,6 +264,7 @@
 <script setup lang="ts">
 import { NPopover } from 'naive-ui'
 import { useRouter } from 'vue-router'
+import { ref } from 'vue'
 
 interface MenuItem{
   name: string,
@@ -442,10 +446,11 @@ const demoMenu = ref<MenuItem[]>([
   //   link: '/demoIndex'
   // },
   {
-    name: '即时通讯',
-    desc: '私有化部署的内网“微信”',
-    logo: '/img/demo/menu/im.png',
-    link: '/demoIM'
+    name: '档案',
+    desc: '智能档案馆管理系统演示平台',
+    // logo: '/img/demo/menu/im.png',
+    logo: '/img/demo/menu/da.png'
+    // link: '/demoIM'
   },
   {
     name: '交通微劝导系统',

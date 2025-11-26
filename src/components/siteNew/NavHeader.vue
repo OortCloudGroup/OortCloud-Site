@@ -1,13 +1,13 @@
 <template>
   <div class="nav flexRowAC" :class="{navFixed:isSticky}">
-    <div class="navImg">
+    <div class="navImg" @click="pushToHeader">
       <img class="navLogo" src="@/assets/bottomImg/logo1.png" alt="" />
     </div>
     <div class="flexRowAC nav_t">
       <div v-if="!!mainTitle" class="mainNavTitle" @click="mainNavClick(mainTitle)">
         <span>{{ mainTitle }}</span>
         <img class="arrow_img" src="@/assets/navheader/arrow.png" />
-        <span class="colLine"/>
+        <span class="colLine" />
       </div>
       <div
         v-for="(itd,i) in navList"
@@ -65,7 +65,21 @@ import commonRightPoPover from './components/commonRightPoPover.vue'
 // const { locale, t } = useI18n()
 // let lang = ref('')
 // let langText = ref('')
-const prop = defineProps(['item', 'sel', 'isSticky'])
+// const prop = defineProps(['item', 'sel', 'isSticky'])
+const prop = defineProps({
+  item: {
+    type: String,
+    default: ''
+  },
+  sel: {
+    type: [String, Number],
+    default: ''
+  },
+  isSticky: {
+    type: Boolean,
+    default: false
+  }
+})
 const propTemp = ref(prop.item)
 const router = useRouter()
 const route = useRoute()
@@ -100,6 +114,10 @@ const navClick = (path, t) => {
 
 const mainNavClick = (t) => {
   emit('handle', t)
+}
+
+const pushToHeader = () => {
+  router.push('/')
 }
 
 // watch(() => locale.value, () => {
@@ -242,7 +260,7 @@ const updateMenuState = (path) => {
 
 watch(isActPath, (newVal) => {
   mainTitle.value = ''
-  navList.value = menu //设置默认为主菜单
+  navList.value = menu // 设置默认为主菜单
   // // 街道
   // if (newVal === '/zh/siteNew/industy/street' || route?.meta?.mate) {
   //   navList.value = menuStreet
@@ -250,13 +268,32 @@ watch(isActPath, (newVal) => {
   if (newVal === '/zh/siteNew') {
     navList.value = menu
   }
-  if (newVal === '/zh/siteNew/software/problemFeedback' || '/zh/siteNew/software/cloudMemo' ||
-      '/zh/siteNew/software/cloudAlbum' || '/zh/siteNew/software/cloudDisk' ||
-      '/zh/siteNew/software/cloudDocument' || '/zh/siteNew/software/cloudList' ||
-      '/zh/siteNew/software/wms' || '/zh/siteNew/software/taskManagement' ||
-      '/zh/siteNew/software/contractManagement' || '/zh/siteNew/software/documentManagement' ||
-      '/zh/siteNew/software/intelligentCustomerService' || '/zh/siteNew/software/knowledgeForum' ||
-      '/zh/siteNew/software/questionnaireSurvey') {
+  // if (newVal === '/zh/siteNew/software/problemFeedback' || '/zh/siteNew/software/cloudMemo' ||
+  //     '/zh/siteNew/software/cloudAlbum' || '/zh/siteNew/software/cloudDisk' ||
+  //     '/zh/siteNew/software/cloudDocument' || '/zh/siteNew/software/cloudList' ||
+  //     '/zh/siteNew/software/wms' || '/zh/siteNew/software/taskManagement' ||
+  //     '/zh/siteNew/software/contractManagement' || '/zh/siteNew/software/documentManagement' ||
+  //     '/zh/siteNew/software/intelligentCustomerService' || '/zh/siteNew/software/knowledgeForum' ||
+  //     '/zh/siteNew/software/questionnaireSurvey') {
+  //   updateMenuState(newVal)
+  // }
+  const softwarePaths = [
+    '/zh/siteNew/software/problemFeedback',
+    '/zh/siteNew/software/cloudMemo',
+    '/zh/siteNew/software/cloudAlbum',
+    '/zh/siteNew/software/cloudDisk',
+    '/zh/siteNew/software/cloudDocument',
+    '/zh/siteNew/software/cloudList',
+    '/zh/siteNew/software/wms',
+    '/zh/siteNew/software/taskManagement',
+    '/zh/siteNew/software/contractManagement',
+    '/zh/siteNew/software/documentManagement',
+    '/zh/siteNew/software/intelligentCustomerService',
+    '/zh/siteNew/software/knowledgeForum',
+    '/zh/siteNew/software/questionnaireSurvey'
+  ]
+
+  if (softwarePaths.includes(newVal)) {
     updateMenuState(newVal)
   }
 }, { immediate: true })
@@ -381,6 +418,7 @@ watch(isActPath, (newVal) => {
 
   .navImg {
     width: 200px;
+    cursor: pointer;
   }
 
   .nav_r {
