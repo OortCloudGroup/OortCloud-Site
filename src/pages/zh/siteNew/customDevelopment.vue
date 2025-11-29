@@ -44,7 +44,7 @@
           享用经验丰富的 OortCloud 开发人员服务
         </div>
         <div class="title3 m30">
-          享用最有经验的 OortCloud 开发者。我们的开发者来自 OortCloud 印度研发部门。您日常使用的 OortCloud 软件，就是他们努力的成果！<br />
+          享用最有经验的 OortCloud 开发者。我们的开发者来自 OortCloud 研发部门。您日常使用的 OortCloud 软件，就是他们努力的成果！<br />
           每个项目都将包括一名 OortCloud 项目经理，帮助您从头到尾完成所有工作。
         </div>
         <div class="title2 m30">

@@ -3,7 +3,7 @@
     <div class="bottom_content">
       <div class="bottom_pro flexRowAC">
         <div class="bottom_pro_b">
-          <div class="bottom_pro_t1">
+          <!-- <div class="bottom_pro_t1">
             <img class="bottom_pro_t1_img" src="@/assets/software/bottom/logo.png" alt="" />
             <span class="bottom_pro_t1_d">300多种企业级产品累计服务1.5亿用户</span>
           </div>
@@ -18,7 +18,8 @@
           <div class="bottom_pro_t2">
             <img class="bottom_pro_t2_img" src="@/assets/software/bottom/sdgltxrz.png" />
             <span class="bottom_pro_t2_d">通过了ISO20000、27001等三大管理体系认证</span>
-          </div>
+          </div> -->
+          <img class="bottomLogo" src="@/assets/bottomImg/bottomLogo.png" alt="" />
         </div>
       </div>
       <div class="b_ser flexRowAC">
@@ -73,7 +74,7 @@
               开源
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/download',1)">
                 下载
               </div>
             </div>
@@ -285,6 +286,10 @@ const viewPath = (path) => {
   padding-left: 30px;
   font-size: 18px;
 }
+.bottomLogo{
+  width: 190px;
+  height: 50px;
+}
 
 .bottom_page {
   min-height: 640px;
@@ -305,7 +310,7 @@ const viewPath = (path) => {
     display: flex;
     width: 100%;
     color: #fff;
-    justify-content: space-between;
+    justify-content: center;
     .bottom_pro_t1{
       display: flex;
       flex-direction: column;

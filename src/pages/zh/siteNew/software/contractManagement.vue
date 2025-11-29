@@ -153,7 +153,7 @@
 <script setup>
 
 definePageMeta({
-  layout: 'site-new'
+  layout: 'application'
 })
 
 </script>

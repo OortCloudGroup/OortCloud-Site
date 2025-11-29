@@ -25,13 +25,13 @@ import { useRouter } from 'vue-router'
 import { useScroll, useElementBounding } from '@vueuse/core'
 import Industry from '@/pages/zh/siteNew/industry.vue'
 import NavHeader from '@/components/siteNew/NavHeader.vue'
-import Bottom from '@/components/Bottom.vue'
+import Bottom from '@/components/siteNew/Bottom.vue'
 
 const router = useRouter()
 let hVisi = ref(false)
 let hVisiT = ref('')
 
-const handle = (t) => {
+const handle = (t:any) => {
   if (t === '应用程序' || t === '行业' || t === '社区' ||
       t === '街道' || t === '问题反馈' || t === '云备忘录' ||
       t === '云相册' || t === '云盘' || t === '云文档' ||
@@ -46,7 +46,7 @@ const handle = (t) => {
 }
 
 // 选择
-const handleI = (val) => {
+const handleI = (val:any) => {
   hVisi.value = false
   router.push(val?.path)
 }

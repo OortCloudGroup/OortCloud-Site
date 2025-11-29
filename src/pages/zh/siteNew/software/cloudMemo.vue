@@ -187,7 +187,7 @@
 <script setup>
 
 definePageMeta({
-  layout: 'site-new'
+  layout: 'application'
 })
 
 const downloadPDF = () => {

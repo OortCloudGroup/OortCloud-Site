@@ -21,13 +21,153 @@
       </div>
       <div class="right">
         <div id="section1">
-          1
+          <div class="logo">
+            <div class="title2">
+              Logos
+            </div>
+            <div class="logoList">
+              <div class="logoItem">
+                <img src="@/assets/img/logo2.png" alt="" />
+                <div class="downloadList">
+                  <div class="button">
+                    <el-icon style="color: #007cfd;" :size="19">
+                      <Download />
+                    </el-icon>
+                    <span class="tupian" style="font-size: 18px; color: #007cfd;">SVG</span>
+                  </div>
+                  <div class="button">
+                    <el-icon style="color: #007cfd;" :size="19">
+                      <Download />
+                    </el-icon>
+                    <span class="tupian" style="font-size: 18px; color: #007cfd;">PNG</span>
+                  </div>
+                </div>
+              </div>
+              <div class="logoItem">
+                <img src="@/assets/img/logo.png" alt="" />
+                <div class="downloadList">
+                  <div class="button">
+                    <el-icon style="color: #007cfd;" :size="19">
+                      <Download />
+                    </el-icon>
+                    <span class="tupian" style="font-size: 18px; color: #007cfd;">SVG</span>
+                  </div>
+                  <div class="button">
+                    <el-icon style="color: #007cfd;" :size="19">
+                      <Download />
+                    </el-icon>
+                    <span class="tupian" style="font-size: 18px; color: #007cfd;">PNG</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div id="section2">
-          1
+          <div class="color">
+            <div class="title2">
+              颜色
+            </div>
+            <div class="title3">
+              Oort Cloud
+            </div>
+            <div class="color-table-container">
+              <table class="color-table">
+                <thead>
+                  <tr>
+                    <th>名字</th>
+                    <th>HEX</th>
+                    <th>CMYK</th>
+                    <th>RGB</th>
+                    <th>Pantone</th>
+                    <th>RAL</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="color in colorList" :key="color.name" :style="{ backgroundColor: color.hex }">
+                    <td>{{ color.name }}</td>
+                    <td>{{ color.hex }}</td>
+                    <td>{{ color.cmyk }}</td>
+                    <td>{{ color.rgb }}</td>
+                    <td>{{ color.pantone }}</td>
+                    <td>{{ color.ral }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="title3">
+              合作伙伴
+            </div>
+            <div class="color-table-container">
+              <table class="color-table">
+                <thead>
+                  <tr>
+                    <th>名字</th>
+                    <th>HEX</th>
+                    <th>CMYK</th>
+                    <th>RGB</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="color in colorList2" :key="color.name" :style="{ backgroundColor: color.hex }">
+                    <td>{{ color.name }}</td>
+                    <td>{{ color.hex }}</td>
+                    <td>{{ color.cmyk }}</td>
+                    <td>{{ color.rgb }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
         <div id="section3">
-          1
+          <div class="title2">
+            清单
+          </div>
+          <div class="list">
+            <div class="checklist">
+              <div class="check-item">
+                <span class="check-mark">✓</span>
+                <span class="check-text">所有颜色均为 CMYK 或 Pantone</span>
+              </div>
+
+              <div class="check-item">
+                <span class="check-mark">✓</span>
+                <span class="check-text">图像分辨率不低于300dpi</span>
+              </div>
+
+              <div class="check-item">
+                <span class="check-mark">✓</span>
+                <span class="check-text">字体轮廓化</span>
+              </div>
+
+              <div class="check-item">
+                <span class="check-mark">✓</span>
+                <span class="check-text">检查您的打印机技术规格</span>
+              </div>
+            </div>
+            <div class="checklist">
+              <div class="check-item">
+                <span class="check-mark">✓</span>
+                <span class="check-text">所有颜色均为 CMYK 或 Pantone</span>
+              </div>
+
+              <div class="check-item">
+                <span class="check-mark">✓</span>
+                <span class="check-text">图像分辨率不低于300dpi</span>
+              </div>
+
+              <div class="check-item">
+                <span class="check-mark">✓</span>
+                <span class="check-text">字体轮廓化</span>
+              </div>
+
+              <div class="check-item">
+                <span class="check-mark">✓</span>
+                <span class="check-text">检查您的打印机技术规格</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -36,6 +176,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { Download } from '@element-plus/icons-vue'
 const activeIndex = ref(-1)
 const navArr = ref([])
 navArr.value = [
@@ -44,6 +185,59 @@ navArr.value = [
   { text: '颜色', targetId: 'section2' },
   { text: '清单', targetId: 'section3' }
 ]
+
+const colorList = ref([
+  {
+    name: 'Primary',
+    hex: '#714B67',
+    cmyk: '57, 84, 39, 24',
+    rgb: '113, 75, 103',
+    pantone: '5125C',
+    ral: '4001'
+  },
+  {
+    name: 'Gray',
+    hex: '#8F8F8F',
+    cmyk: '49, 39, 39, 3',
+    rgb: '143, 143, 143',
+    pantone: '877C',
+    ral: '7042'
+  },
+  {
+    name: 'Secondary',
+    hex: '#017E84',
+    cmyk: '100, 35, 50, 13',
+    rgb: '1, 126, 132',
+    pantone: '322C',
+    ral: '5021'
+  }
+])
+const colorList2 = ref([
+  {
+    name: 'Learning Partner',
+    hex: '#E46E78',
+    cmyk: '6, 71, 41, 0',
+    rgb: '228, 109, 120'
+  },
+  {
+    name: 'Ready Partner',
+    hex: '#21B799',
+    cmyk: '74, 1, 52, 0',
+    rgb: '34, 182, 153'
+  },
+  {
+    name: '银级合作伙伴',
+    hex: '#5B899E',
+    cmyk: '68, 37, 29, 2',
+    rgb: '92, 136, 158'
+  },
+  {
+    name: '金牌合作伙伴',
+    hex: '#E4A900',
+    cmyk: '11, 43, 100, 0',
+    rgb: '227, 170, 36'
+  }
+])
 
 // 监听滚动事件，更新激活状态
 const handleScrollActive = () => {
@@ -128,13 +322,14 @@ definePageMeta({
   color: #fff;
 }
 .title2{
-  font-size: 20px;
+  font-size: 44px;
   font-weight: 400;
-  color: #fff;
+  margin-bottom: 60px;
 }
 .title3{
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 10px;
 }
 .m20{
   margin-top: 20px;
@@ -212,6 +407,93 @@ definePageMeta({
   }
 }
 .right{
+  width: 100%;
   padding-left: 60px;
+}
+.logo{
+  width: 100%;
+}
+.logoList{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  .logoItem{
+    img{
+      width: 400px;
+      height: 186px;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+    }
+    .downloadList{
+      margin-top: 10px;
+      display: flex;
+      .button{
+        margin-right: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        border: 1.1px solid #007cfd;
+        padding: 10px 20px;
+        cursor: pointer;
+        .tupian{
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+.color-table-container {
+  // font-family: Arial, sans-serif;
+  margin-bottom: 60px;
+}
+
+.color-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e0e0e0;
+}
+
+.color-table th,
+.color-table td {
+  padding: 12px 15px;
+  text-align: left;
+  color: #fff;
+}
+.color-table th{
+  color: #000;
+}
+
+.color-table th {
+  font-weight: bold;
+}
+
+.color-table tbody tr {
+  color: #fff; /* 文字白色适配深色背景 */
+}
+.list{
+  display: flex;
+  justify-content: space-between;
+}
+.checklist {
+  width: 500px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 8px 0;
+  margin-bottom: 100px;
+}
+.check-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+}
+.check-mark {
+  color: #0070f3; /* 模拟勾选框颜色 */
+  font-weight: bold;
+}
+.color{
+  margin-bottom: 100px;
 }
 </style>

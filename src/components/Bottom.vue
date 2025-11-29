@@ -73,7 +73,7 @@
               开源
             </div>
             <div class="flexRowAC">
-              <div class="b_ser_text">
+              <div class="b_ser_text hover" @click="viewPath('/zh/siteNew/download',1)">
                 下载
               </div>
             </div>
