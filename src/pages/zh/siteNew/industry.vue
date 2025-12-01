@@ -288,6 +288,20 @@ const softClick = (val) => {
     }
     emits('handle', obj)
   }
+  if (val.t === '云课堂') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/cloudClass'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '智能审批') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/approval'
+    }
+    emits('handle', obj)
+  }
 }
 
 watch(() => props.item, (newVal: any) => {
