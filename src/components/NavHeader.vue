@@ -410,8 +410,8 @@ const solutionMenu = ref<Menu[]>([
 
 const demoMenu = ref<MenuItem[]>([
   {
-    name: '移动警务服务总线',
-    desc: '移动警务服务总线',
+    name: '公安',
+    desc: '公安警务服务总线',
     logo: '/img/demo/menu/bus.png',
     link: '/demoIndex'
   },
@@ -433,12 +433,12 @@ const demoMenu = ref<MenuItem[]>([
   //   logo: '/img/demo/menu/apaas.png',
   //   link: '/demoIndex'
   // },
-  {
-    name: 'XOA数字化办公',
-    desc: '生产力工具',
-    logo: '/img/demo/menu/oa.png',
-    link: '/demoXOA'
-  },
+  // {
+  //   name: 'XOA数字化办公',
+  //   desc: '生产力工具',
+  //   logo: '/img/demo/menu/oa.png',
+  //   link: '/demoXOA'
+  // },
   // {
   //   name: '门户与应用仓库',
   //   desc: '把小程序搬进APP,快速打造超级APP',
@@ -453,13 +453,20 @@ const demoMenu = ref<MenuItem[]>([
     // link: '/demoIM'
   },
   {
-    name: '交通微劝导系统',
+    name: '街道',
+    desc: '街道网格治理闭环',
+    logo: '/img/demo/menu/im.png',
+    // logo: '/img/demo/menu/da.png'
+    link: '/demoIM'
+  },
+  {
+    name: '检察院',
     desc: '提升交通安全意识，落实交通宣传劝导',
     logo: '/img/demo/menu/wqd.png',
     link: '/demoWQD'
   },
   {
-    name: '指挥调度一张图',
+    name: '监狱',
     desc: '总揽指挥调度一张图，用于电子指挥大屏操作',
     logo: '/img/demo/menu/map.png',
     link: '/demoOneMap'
@@ -477,7 +484,7 @@ const demoMenu = ref<MenuItem[]>([
   //   link: '/demoFZ'
   // },
   {
-    name: 'XCreator敏捷发布平台',
+    name: '宣传',
     desc: '全媒体矩阵信息发布平台',
     logo: '/img/demo/menu/xc.png',
     link: '/demoXCreator'
