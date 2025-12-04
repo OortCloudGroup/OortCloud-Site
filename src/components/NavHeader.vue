@@ -360,21 +360,21 @@ const solutionMenu = ref<Menu[]>([
     title: '',
     showTitle: false,
     menus: [
-      { name: '公安', logo: '/img/app/jinghui.png', link: '/services_publicSecurity' },
-      { name: '智慧派出所', logo: '/img/app/jinghui.png', link: '/services_smartPoliceStation' },
-      { name: '交警', logo: '/img/app/jiaojing.png', link: '/services_trafficPolice' },
-      { name: '检察', logo: '/img/app/jiancha.png', link: '/services_inspection' },
-      { name: '司法监狱', logo: '/img/app/jinghui.png', link: '/services_prison' }
+      { name: '公安', logo: '/img/demo/menu/bus.png', link: '/services_publicSecurity' },
+      { name: '智慧派出所', logo: '/img/demo/menu/zhpcs.png', link: '/services_smartPoliceStation' },
+      { name: '交警', logo: '/img/demo/menu/zhpcs.png', link: '/services_trafficPolice' }, // /img/app/jiaojing.png
+      { name: '检察', logo: '/img/demo/menu/wqd.png', link: '/services_inspection' },
+      { name: '司法监狱', logo: '/img/demo/menu/map.png', link: '/services_prison' }
     ]
   },
   {
     title: '',
     showTitle: false,
     menus: [
-      { name: '法院', logo: '/img/app/fayuan.png', link: '/services_court' },
+      { name: '法院', logo: '/img/demo/menu/fy.png', link: '/services_court' }, // /img/app/fayuan.png
       { name: '档案', logo: '/img/app/dangan.png', link: '/services_document' },
-      { name: '智慧边海防', logo: '/img/app/zgbhf.png', link: '/services_borderSeaDefense' },
-      { name: '政府', logo: '/img/app/zhengfu.png', link: '/services_goverment' }
+      { name: '智慧边海防', logo: '/img/demo/menu/zhbhf.png', link: '/services_borderSeaDefense' },
+      { name: '政府', logo: '/img/demo/menu/zf.png', link: '/services_goverment' } // /img/app/zhengfu.png
     ]
   },
   {
@@ -383,7 +383,7 @@ const solutionMenu = ref<Menu[]>([
     menus: [
       { name: '企业', logo: '/img/app/qiye.png', link: '/services_enterprise' },
       { name: '应急', logo: '/img/app/yingji.png', link: '/services_emergency' },
-      { name: '消防', logo: '/img/app/xiaofang.png', link: '/services_fireFighting' },
+      { name: '消防', logo: '/img/demo/menu/xf.png', link: '/services_fireFighting' }, // /img/app/xiaofang.png
       { name: '疫情防控', logo: '/img/app/yiqingfangkong.png', link: '/services_epidemic' }
     ]
   },
@@ -391,7 +391,7 @@ const solutionMenu = ref<Menu[]>([
     title: '',
     showTitle: false,
     menus: [
-      { name: '城管', logo: '/img/app/chengguan.png', link: '/services_cityManager' },
+      { name: '城管', logo: '/img/demo/menu/cg.png', link: '/services_cityManager' }, // /img/app/chengguan.png
       { name: '物联网', logo: '/img/app/wlw.png', link: '/services_iot' },
       { name: '应用软件定制与运维服务外包', logo: '/img/app/yyrjdz.png', link: '/services_asc' },
       { name: '海外[一带一路] English', logo: '/img/app/haiwai.png', link: '/services_oversea' }

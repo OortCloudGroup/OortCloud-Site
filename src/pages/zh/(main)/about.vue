@@ -266,13 +266,13 @@
         <el-tab-pane name="first">
           <template v-if="activeName === 'first'" #label>
             <div class="logo">
-              <img src="/public/img/about/product_img1.png" alt="" />生产力平台
+              <img class="img1" src="/public/img/about/product_img2.png" alt="" />OortCloud
             </div>
             奥尔特云新一代生产力平台
           </template>
           <template v-else #label>
             <div class="logo">
-              <img src="/public/img/about/product_img2.png" alt="" />生产力平台
+              <img class="img1" src="/public/img/about/product_img1.png" alt="" />OortCloud
             </div>
             奥尔特云新一代生产力平台
           </template>
@@ -305,13 +305,13 @@
         <el-tab-pane name="second">
           <template v-if="activeName === 'second'" #label>
             <div class="logo">
-              <img src="/public/img/about/product_img3.png" alt="" />VLStream
+              <img class="img2" src="/public/img/about/product_img4.png" alt="" />VLStream
             </div>
             决策式AI视频汇聚调度平台
           </template>
           <template v-else #label>
             <div class="logo">
-              <img src="/public/img/about/product_img3.png" alt="" />VLStream
+              <img class="img2" src="/public/img/about/product_img3.png" alt="" />VLStream
             </div>
             决策式AI视频汇聚调度平台
           </template>
@@ -343,13 +343,13 @@
         <el-tab-pane name="third">
           <template v-if="activeName === 'third'" #label>
             <div class="logo">
-              <img src="/public/img/about/product_img6.png" alt="" />OORT.DA
+              <img class="img2" src="/public/img/about/product_img6.png" alt="" />OORT.AI
             </div>
             面向 AI时代 的新型数据底座
           </template>
           <template v-else #label>
             <div class="logo">
-              <img src="/public/img/about/product_img5.png" alt="" />OORT.DA
+              <img class="img2" src="/public/img/about/product_img5.png" alt="" />OORT.AI
             </div>
             面向 AI时代 的新型数据底座
           </template>
@@ -378,13 +378,13 @@
         <el-tab-pane name="fourth">
           <template v-if="activeName === 'fourth'" #label>
             <div class="logo">
-              <img src="/public/img/about/product_img8.png" alt="" />OORT.SH
+              <img class="img3" src="/public/img/about/product_img8.png" alt="" />OORT.SH
             </div>
             面向开发者 —"种下智慧树，结出百香果"
           </template>
           <template v-else #label>
             <div class="logo">
-              <img src="/public/img/about/product_img7.png" alt="" />OORT.SH
+              <img class="img3" src="/public/img/about/product_img7.png" alt="" />OORT.SH
             </div>
             面向开发者 —"种下智慧树，结出百香果"
           </template>
@@ -497,18 +497,33 @@ const goToDetail4 = () => {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    .img1{
+      width: 40px;
+      height: 48px;
+      margin-right: 16px;
+    }
+    .img2{
+      width: 48px;
+      height: 48px;
+      margin-right: 16px;
+    }
+    .img3{
+      width: 45px;
+      height: 48px;
+      margin-right: 16px;
+    }
   }
-  img{
-    width: 40px;
-    height: 45px;
-    margin-right: 16px;
-  }
+
 }
 :deep(.el-tabs__item:hover){
   color: #9DA0A6;
 }
 :deep(.el-tabs__item.is-active){
   color: #2278FF;
+}
+
+:deep(#tab-second.is-active) {
+  color: #FF5E10 !important;
 }
 :deep(.el-tabs__header){
   margin: 0;
@@ -1104,7 +1119,10 @@ span:hover{
 }
 
 :deep(.n-tabs-capsule) {
-  background-color: #1e7dff!important;
+  background-color: transparent !important;
+  /* 若有边框/阴影，也可一并清除（可选） */
+  border: none !important;
+  box-shadow: none !important;
 }
 
 :deep(.n-tabs-rail) {
