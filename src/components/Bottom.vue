@@ -99,7 +99,7 @@
             </div>
             <div class="flexRowAC">
               <a class="b_ser_text hover" href="https://vls.oortcloudsmart.com/zh/" target="_blank">
-                VLSterm 视觉平台
+                VLStream 视觉平台
               </a>
             </div>
             <div class="flexRowAC">

@@ -360,11 +360,11 @@ const solutionMenu = ref<Menu[]>([
     title: '',
     showTitle: false,
     menus: [
-      { name: '公安', logo: '/img/demo/menu/bus.png', link: '/services_publicSecurity' },
+      { name: '公安', logo: '/img/demo/menu/ga.png', link: '/services_publicSecurity' },
       { name: '智慧派出所', logo: '/img/demo/menu/zhpcs.png', link: '/services_smartPoliceStation' },
-      { name: '交警', logo: '/img/demo/menu/zhpcs.png', link: '/services_trafficPolice' }, // /img/app/jiaojing.png
-      { name: '检察', logo: '/img/demo/menu/wqd.png', link: '/services_inspection' },
-      { name: '司法监狱', logo: '/img/demo/menu/map.png', link: '/services_prison' }
+      { name: '交警', logo: '/img/demo/menu/jj.png', link: '/services_trafficPolice' }, // /img/app/jiaojing.png
+      { name: '检察院', logo: '/img/demo/menu/jcy.png', link: '/services_inspection' },
+      { name: '司法监狱', logo: '/img/demo/menu/jy.png', link: '/services_prison' }
     ]
   },
   {
@@ -381,10 +381,10 @@ const solutionMenu = ref<Menu[]>([
     title: '',
     showTitle: false,
     menus: [
-      { name: '企业', logo: '/img/app/qiye.png', link: '/services_enterprise' },
-      { name: '应急', logo: '/img/app/yingji.png', link: '/services_emergency' },
+      { name: '企业', logo: '/img/demo/menu/qy.png', link: '/services_enterprise' },
+      { name: '应急', logo: '/img/demo/menu/yj.png', link: '/services_emergency' },
       { name: '消防', logo: '/img/demo/menu/xf.png', link: '/services_fireFighting' }, // /img/app/xiaofang.png
-      { name: '疫情防控', logo: '/img/app/yiqingfangkong.png', link: '/services_epidemic' }
+      { name: '疫情防控', logo: '/img/demo/menu/yqfk.png', link: '/services_epidemic' }
     ]
   },
   {
@@ -392,9 +392,9 @@ const solutionMenu = ref<Menu[]>([
     showTitle: false,
     menus: [
       { name: '城管', logo: '/img/demo/menu/cg.png', link: '/services_cityManager' }, // /img/app/chengguan.png
-      { name: '物联网', logo: '/img/app/wlw.png', link: '/services_iot' },
-      { name: '应用软件定制与运维服务外包', logo: '/img/app/yyrjdz.png', link: '/services_asc' },
-      { name: '海外[一带一路] English', logo: '/img/app/haiwai.png', link: '/services_oversea' }
+      { name: '物联网', logo: '/img/demo/menu/wlw.png', link: '/services_iot' },
+      { name: '应用软件定制与运维服务外包', logo: '/img/demo/menu/yyrjdz.png', link: '/services_asc' },
+      { name: '海外[一带一路] English', logo: '/img/demo/menu/hw.png', link: '/services_oversea' }
     ]
   },
   {
@@ -412,7 +412,7 @@ const demoMenu = ref<MenuItem[]>([
   {
     name: '公安',
     desc: '公安警务服务总线',
-    logo: '/img/demo/menu/bus.png',
+    logo: '/img/demo/menu/ga.png',
     link: '/demoIndex'
   },
   {
@@ -462,13 +462,13 @@ const demoMenu = ref<MenuItem[]>([
   {
     name: '检察院',
     desc: '提升交通安全意识，落实交通宣传劝导',
-    logo: '/img/demo/menu/wqd.png',
+    logo: '/img/demo/menu/jcy.png',
     link: '/demoWQD'
   },
   {
     name: '监狱',
     desc: '总揽指挥调度一张图，用于电子指挥大屏操作',
-    logo: '/img/demo/menu/map.png',
+    logo: '/img/demo/menu/jy.png',
     link: '/demoOneMap'
   },
   {

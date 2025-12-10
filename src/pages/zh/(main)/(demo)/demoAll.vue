@@ -15,7 +15,7 @@ const doubleSysApp = ref({
   apps: [
     {
       name: '公安',
-      logo: '/img/demo/menu/bus.png',
+      logo: '/img/demo/menu/ga.png',
       excerpt: '移动警务服务总线',
       link: '/demoIndex'
     },
@@ -45,13 +45,13 @@ const doubleSysApp = ref({
     },
     {
       name: '检察院',
-      logo: '/img/demo/menu/wqd.png',
+      logo: '/img/demo/menu/jcy.png',
       excerpt: '提升交通安全意识，落实交通宣传劝导',
       link: '/demoWQD'
     },
     {
       name: '监狱',
-      logo: '/img/demo/menu/map.png',
+      logo: '/img/demo/menu/jy.png',
       excerpt: '总揽指挥调度一张图，用于电子指挥大屏操作',
       link: '/demoOneMap'
     },
