@@ -160,18 +160,38 @@
           <template #default>
             <div class="demo_div">
               <template v-for="(item, index) in demoMenu" :key="index">
-                <NuxtLink
-                  :to="item.name === '档案' ? 'https://oortcloudsmart.com/oort-zhda.html' : '/zh' + item.link"
-                  target="_blank"
-                >
-                  <div :key="index" class="demo_div_item">
-                    <img :src="item.logo" />
-                    <div>
-                      <span>{{ item.name }}</span>
-                      <span>{{ item.desc }}</span>
+                <!-- 档案项单独处理：原生a标签打开静态HTML -->
+                <template v-if="item.name === '档案'">
+                  <a
+                    :href="item.link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="demo-link"
+                  >
+                    <div class="demo_div_item">
+                      <img :src="item.logo" />
+                      <div>
+                        <span>{{ item.name }}</span>
+                        <span>{{ item.desc }}</span>
+                      </div>
                     </div>
-                  </div>
-                </NuxtLink>
+                  </a>
+                </template>
+                <!-- 其他项保留NuxtLink路由跳转 -->
+                <template v-else>
+                  <NuxtLink
+                    :to="'/zh' + item.link"
+                    target="_blank"
+                  >
+                    <div class="demo_div_item">
+                      <img :src="item.logo" />
+                      <div>
+                        <span>{{ item.name }}</span>
+                        <span>{{ item.desc }}</span>
+                      </div>
+                    </div>
+                  </NuxtLink>
+                </template>
               </template>
               <NuxtLink to="/zh/demoAll">
                 <div class="demo_div_item demo_div_item_more">
@@ -449,8 +469,8 @@ const demoMenu = ref<MenuItem[]>([
     name: '档案',
     desc: '智能档案馆管理系统演示平台',
     // logo: '/img/demo/menu/im.png',
-    logo: '/img/demo/menu/da.png'
-    // link: '/demoIM'
+    logo: '/img/demo/menu/da.png',
+    link: '/智慧档案馆管理系统演示系统.html'
   },
   {
     name: '街道',
