@@ -383,7 +383,7 @@ const solutionMenu = ref<Menu[]>([
       { name: '公安', logo: '/img/demo/menu/ga.png', link: '/services_publicSecurity' },
       { name: '智慧派出所', logo: '/img/demo/menu/zhpcs.png', link: '/services_smartPoliceStation' },
       { name: '交警', logo: '/img/demo/menu/jj.png', link: '/services_trafficPolice' }, // /img/app/jiaojing.png
-      { name: '检察院', logo: '/img/demo/menu/jcy.png', link: '/services_inspection' },
+      { name: '智慧检务', logo: '/img/demo/menu/jcy.png', link: '/services_inspection' },
       { name: '司法监狱', logo: '/img/demo/menu/jy.png', link: '/services_prison' }
     ]
   },
@@ -392,7 +392,7 @@ const solutionMenu = ref<Menu[]>([
     showTitle: false,
     menus: [
       { name: '法院', logo: '/img/demo/menu/fy.png', link: '/services_court' }, // /img/app/fayuan.png
-      { name: '档案', logo: '/img/app/dangan.png', link: '/services_document' },
+      { name: '智慧档案', logo: '/img/app/dangan.png', link: '/services_document' },
       { name: '智慧边海防', logo: '/img/demo/menu/zhbhf.png', link: '/services_borderSeaDefense' },
       { name: '政府', logo: '/img/demo/menu/zf.png', link: '/services_goverment' } // /img/app/zhengfu.png
     ]
@@ -421,9 +421,9 @@ const solutionMenu = ref<Menu[]>([
     title: '',
     showTitle: false,
     menus: [
-      { name: '园林', logo: '/img/demo/menu/yl.png', link: '/services_garden' },
-      { name: '武装', logo: '/img/demo/menu/wz.png', link: '/services_armed' },
-      { name: '安保', logo: '/img/demo/menu/ab.png', link: '/services_security' }
+      { name: '智慧园林', logo: '/img/demo/menu/yl.png', link: '/services_garden' },
+      { name: '智慧武装', logo: '/img/demo/menu/wz.png', link: '/services_armed' },
+      { name: '智慧安保', logo: '/img/demo/menu/ab.png', link: '/services_security' }
     ]
   }
 ])
@@ -436,14 +436,14 @@ const demoMenu = ref<MenuItem[]>([
     link: '/demoIndex'
   },
   {
-    name: '园林',
-    desc: '园林',
+    name: '智慧园林',
+    desc: '物联网与GIS一张网技术驱动的园林全流程精细化管控平台',
     logo: '/img/demo/menu/yl.png',
     link: '/demoIndex'
   },
   {
-    name: '武装',
-    desc: '武装',
+    name: '智慧武装',
+    desc: '军地一张网、数据一条链、资源一个库、态势一幅图',
     logo: '/img/demo/menu/wz.png',
     link: '/demoIndex'
   },
@@ -466,34 +466,34 @@ const demoMenu = ref<MenuItem[]>([
   //   link: '/demoIndex'
   // },
   {
-    name: '档案',
-    desc: '智能档案馆管理系统演示平台',
+    name: '智慧档案',
+    desc: '符合国档规范标准的全门类档案收管存用综合管理系统',
     // logo: '/img/demo/menu/im.png',
     logo: '/img/demo/menu/da.png',
     link: '/智慧档案馆管理系统演示系统.html'
   },
   {
-    name: '街道',
-    desc: '街道网格治理闭环',
+    name: '智慧街道',
+    desc: '网格任务闭环与多端协同指挥调度平台',
     logo: '/img/demo/menu/im.png',
     // logo: '/img/demo/menu/da.png'
     link: '/demoIM'
   },
   {
-    name: '检察院',
-    desc: '提升交通安全意识，落实交通宣传劝导',
+    name: '智慧检务',
+    desc: '基于新一代信息技术的检察业务与管理全流程融合赋能平台',
     logo: '/img/demo/menu/jcy.png',
     link: '/demoWQD'
   },
   {
-    name: '监狱',
-    desc: '总揽指挥调度一张图，用于电子指挥大屏操作',
-    logo: '/img/demo/menu/jy.png',
+    name: '指挥调度',
+    desc: '总揽指挥调度一张图、用于大屏、调度、过程可视',
+    logo: '/img/app/zhyzt.png',
     link: '/demoOneMap'
   },
   {
-    name: '安保',
-    desc: '安保',
+    name: '智慧安保',
+    desc: '安全风险智能预警及可视化指挥防护平台',
     logo: '/img/demo/menu/ab.png',
     link: '/demoIndex'
   },
