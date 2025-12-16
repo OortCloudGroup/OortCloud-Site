@@ -10,9 +10,11 @@
           覆盖政企 / 硬件 / 软件三大场景，以 Workup 超级 APP、智能调度、私有云等六大产品矩阵，
           打造更懂你的数字化高效工具
         </div>
-        <div class="button">
-          探索我们的产品
-        </div>
+        <NuxtLink to="http://oort.oortcloudsmart.com:23410" target="_blank">
+          <div class="button">
+            探索我们的产品
+          </div>
+        </NuxtLink>
       </div>
     </div>
     <div class="w1380 CloudBox">

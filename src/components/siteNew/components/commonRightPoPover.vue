@@ -137,11 +137,9 @@
       </NuxtLink>
     </div>
     <div class="more_apps">
-      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
-        <div class="more_apps_tips">
-          <span>更多OORT应用</span>
-        </div>
-      </NuxtLink>
+      <div class="more_apps_tips" @click="handleMoreApps">
+        <span>更多OORT应用</span>
+      </div>
     </div>
     <!-- <div class="pover_more">
       <div class="pover_more_item" @click="moreOpr('resetPassword')">
@@ -174,6 +172,17 @@
 // }
 
 // const router = useRouter()
+
+const isLoggedIn = () => {
+  const token = localStorage.getItem('token') || localStorage.getItem('access_token')
+  return !!token // 有token则认为已登录
+}
+
+const handleMoreApps = () => {
+  if (!isLoggedIn()) {
+    window.open('/zh/siteNew/software/unLogin', '_blank')
+  }
+}
 const gotoApp = (action) => {
   switch (action) {
     case 'person':
