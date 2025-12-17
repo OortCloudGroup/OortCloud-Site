@@ -1,5 +1,6 @@
 <template>
   <div class="home_page vls">
+    <!-- <NavHeader class="defalut_hea" :is-sticky="isSticky" @handle="handle" /> -->
     <div class="w1380 w1200 CloudBox flexRowAC main">
       <img src="@/public/img/about/unLogin_img8.png" alt="" class="main_img" />
       <div class="right">
@@ -90,9 +91,9 @@
 </template>
 
 <script setup>
-
+// import NavHeader from '@/components/siteNew/NavHeader.vue'
 definePageMeta({
-  layout: 'application'
+  layout: 'demo1'
 })
 
 </script>

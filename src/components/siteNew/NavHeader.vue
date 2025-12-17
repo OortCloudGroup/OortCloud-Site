@@ -3,7 +3,7 @@
     <div class="navImg" @click="pushToHeader">
       <img class="navLogo" src="@/assets/bottomImg/logo1.png" alt="" />
     </div>
-    <div class="flexRowAC nav_t">
+    <div v-if="isLogin" class="flexRowAC nav_t">
       <div v-if="!!mainTitle" class="mainNavTitle" @click="mainNavClick(mainTitle)">
         <span>{{ mainTitle }}</span>
         <img class="arrow_img" src="@/assets/navheader/arrow.png" />
@@ -25,7 +25,7 @@
           <span>登录</span>
         </div>
       </NuxtLink>
-      <el-popover placement="bottom" trigger="click" popper-class="popover_panel">
+      <el-popover v-if="isLogin" placement="bottom" trigger="click" popper-class="popover_panel">
         <template #reference>
           <img class="right_info_nine" src="@/assets/navheader/nightpointpng.png" />
         </template>
@@ -78,6 +78,10 @@ const prop = defineProps({
   isSticky: {
     type: Boolean,
     default: false
+  },
+  isLogin: {
+    type: Boolean,
+    default: true
   }
 })
 const propTemp = ref(prop.item)
