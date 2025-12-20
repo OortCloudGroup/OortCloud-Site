@@ -89,12 +89,12 @@
             </div>
             <div class="flexRowAC">
               <a class="b_ser_text hover" href="https://oortcloudsmart.com/zh/siteNew/" target="_blank">
-                OORT 生产力平台
+                OortCloud
               </a>
             </div>
             <div class="flexRowAC">
               <a class="b_ser_text hover" href=" https://da.oortcloudsmart.com/zh/" target="_blank">
-                OORT.DA 数据平台
+                OORT.AI 数智平台
               </a>
             </div>
             <div class="flexRowAC">

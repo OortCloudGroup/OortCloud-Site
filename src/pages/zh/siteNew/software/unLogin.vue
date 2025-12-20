@@ -58,10 +58,10 @@
       <img class="cloudMemo_img1" src="@/public/img/about/unLogin_img4.png" alt="" />
       <div class="CloudL R">
         <div class="cl_t">
-          数据采集分析
+          智慧档案
         </div>
         <div class="cl_d">
-          大数据能对海量数据进行采集、分析与挖掘，提取有价值信息，为企业决策提供数据支持，助力业务优化与创新。
+          一站式智能档案管理工具。支持多源采集、自动分类、秒级检索，搭配加密存储与权限管控，轻松解决档案杂乱、查找难、风险高的问题。
         </div>
       </div>
     </div>

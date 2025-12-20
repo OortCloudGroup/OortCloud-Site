@@ -21,7 +21,7 @@
         <div class="pover_apps_item">
           <img src="@/assets/navheader/oortda.png" alt="" />
           <div class="pover_apps_item_name">
-            OORT.DA
+            OORT.AI
           </div>
         </div>
       </NuxtLink>

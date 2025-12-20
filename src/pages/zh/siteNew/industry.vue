@@ -57,7 +57,7 @@
           <img class="idtImg" src="@/assets/homeImg/industry_ic3.png" alt="" />OORT.SH 平台
         </a>
         <a class="flexRowAC idtBox" href="https://da.oortcloudsmart.com/" target="_blank">
-          <img class="idtImg" src="@/assets/homeImg/industry_ic4.png" alt="" />OORT.DA 数据平台
+          <img class="idtImg" src="@/assets/homeImg/industry_ic4.png" alt="" />OORT.AI 数智平台
         </a>
         <a class="flexRowAC idtBox" href="https://da.oortcloudsmart.com/" target="_blank">
           <img class="idtImg" src="@/assets/homeImg/industry_ic5.png" alt="" />VLStream
