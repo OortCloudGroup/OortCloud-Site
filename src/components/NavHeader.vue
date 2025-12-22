@@ -160,38 +160,18 @@
           <template #default>
             <div class="demo_div">
               <template v-for="(item, index) in demoMenu" :key="index">
-                <!-- 档案项单独处理：原生a标签打开静态HTML -->
-                <template v-if="item.name === '档案'">
-                  <a
-                    :href="item.link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="demo-link"
-                  >
-                    <div class="demo_div_item">
-                      <img :src="item.logo" />
-                      <div>
-                        <span>{{ item.name }}</span>
-                        <span>{{ item.desc }}</span>
-                      </div>
+                <NuxtLink
+                  :to="'/zh' + item.link"
+                  target="_blank"
+                >
+                  <div class="demo_div_item">
+                    <img :src="item.logo" />
+                    <div>
+                      <span>{{ item.name }}</span>
+                      <span>{{ item.desc }}</span>
                     </div>
-                  </a>
-                </template>
-                <!-- 其他项保留NuxtLink路由跳转 -->
-                <template v-else>
-                  <NuxtLink
-                    :to="'/zh' + item.link"
-                    target="_blank"
-                  >
-                    <div class="demo_div_item">
-                      <img :src="item.logo" />
-                      <div>
-                        <span>{{ item.name }}</span>
-                        <span>{{ item.desc }}</span>
-                      </div>
-                    </div>
-                  </NuxtLink>
-                </template>
+                  </div>
+                </NuxtLink>
               </template>
               <NuxtLink to="/zh/demoAll">
                 <div class="demo_div_item demo_div_item_more">
@@ -470,7 +450,8 @@ const demoMenu = ref<MenuItem[]>([
     desc: '符合国档规范标准的全门类档案收管存用综合管理系统',
     // logo: '/img/demo/menu/im.png',
     logo: '/img/demo/menu/da.png',
-    link: '/智慧档案馆管理系统演示系统.html'
+    // link: '/智慧档案馆管理系统演示系统.html'
+    link: '/demoDA'
   },
   {
     name: '智慧街道',

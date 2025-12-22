@@ -4,7 +4,7 @@
       <h2 class="panel_title">
         所有演示
       </h2>
-      <AppPanel :data="doubleSysApp" />
+      <AppPanelNew :data="doubleSysApp" />
     </div>
   </div>
 </template>
@@ -41,7 +41,7 @@ const doubleSysApp = ref({
       name: '智慧档案',
       logo: '/img/demo/menu/da.png',
       excerpt: '符合国档规范标准的全门类档案收管存用综合管理系统',
-      link: '/'
+      link: '/demoDA'
     },
     {
       name: '智慧检务',
