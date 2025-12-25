@@ -356,8 +356,8 @@
           <div class="box2">
             <div class="left">
               <div class="lianjie bgc3">
-                <a href="https://da.oortcloudsmart.com/" target="_blank">
-                  https://da.oortcloudsmart.com/
+                <a href="https://ai.oortcloudsmart.com/" target="_blank">
+                  https://ai.oortcloudsmart.com/
                 </a>
               </div>
               <div class="fontSize1 space1">
