@@ -345,13 +345,13 @@
             <div class="logo">
               <img class="img2" src="/public/img/about/product_img6.png" alt="" />OORT.AI
             </div>
-            面向 AI时代 的新型数据底座
+            万物智能、自主服务 — 场景化实战智能体平台
           </template>
           <template v-else #label>
             <div class="logo">
               <img class="img2" src="/public/img/about/product_img5.png" alt="" />OORT.AI
             </div>
-            面向 AI时代 的新型数据底座
+            万物智能、自主服务 — 场景化实战智能体平台
           </template>
           <div class="box2">
             <div class="left">

@@ -24,22 +24,22 @@
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
-          超级APP应用大全
-        </div>
-        <div class="cl_d">
-          Workup 超级 APP整合多元办公功能，支持任务管理、即时通讯、文件协作等，界面简洁易用，提升团队工作效率，适配多终端使用。
-        </div>
-      </div>
-      <img class="cloudMemo_img1" src="@/public/img/about/unLogin_img1.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox ipcBox flexRowAC">
-      <img class="cloudMemo_img1" src="@/public/img/about/unLogin_img2.png" alt="" />
-      <div class="CloudL R">
-        <div class="cl_t">
           指挥调度
         </div>
         <div class="cl_d">
           指挥调度具备实时监控、资源调配、应急指挥等核心能力，可快速响应各类突发情况，保障业务有序开展，适用于多场景管理需求。
+        </div>
+      </div>
+      <img class="cloudMemo_img1" src="@/public/img/about/unLogin_img2.png" alt="" />
+    </div>
+    <div class="w1380 CloudBox ipcBox flexRowAC">
+      <img class="cloudMemo_img1" src="@/public/img/about/unLogin_img1.png" alt="" />
+      <div class="CloudL R">
+        <div class="cl_t">
+          超级APP应用大全
+        </div>
+        <div class="cl_d">
+          Workup 超级 APP整合多元办公功能，支持任务管理、即时通讯、文件协作等，界面简洁易用，提升团队工作效率，适配多终端使用。
         </div>
       </div>
     </div>

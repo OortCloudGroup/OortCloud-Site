@@ -187,7 +187,7 @@
     <div class="advantBox w1380">
       <div class="flexRowAC advantIt">
         <img class="advantBoxImg" src="@/assets/software/mobilePolice_num1.png" alt="" />
-        我真的可以用统一的价格访间上百的应用程序和模块吗?
+        我真的可以用统一的价格访问上百的应用程序和模块吗？
       </div>
       <div class="flexRowAC advantIt">
         <img class="advantBoxImg" src="@/assets/software/mobilePolice_num2.png" alt="" />
@@ -195,11 +195,11 @@
       </div>
       <div class="flexRowAC advantIt">
         <img class="advantBoxImg" src="@/assets/software/mobilePolice_num3.png" alt="" />
-        什么是自丰托管/0ortCoud.sh?
+        什么是自主托管/OortCould.sh?
       </div>
       <div class="flexRowAC advantIt">
         <img class="advantBoxImg" src="@/assets/software/mobilePolice_num4.png" alt="" />
-        单一应用程序免费计划是香支持多公司或使用定制应用程序
+        单一应用程序免费计划是否支持多公司或使用定制应用程序?
       </div>
       <div class="flexRowAC advantIt">
         <img class="advantBoxImg" src="@/assets/software/mobilePolice_num5.png" alt="" />
@@ -219,7 +219,7 @@
       </div>
       <div class="flexRowAC advantIt">
         <img class="advantBoxImg" src="@/assets/software/mobilePolice_num9.png" alt="" />
-        我是否可以从托管计划(0ortCloud Online)切换到OortCloud 企业版或反向切换?
+        我是否可以从托管计划(OortCloud Online)切换到OortCloud 企业版或反向切换?
       </div>
       <div class="flexRowAC advantIt">
         <img class="advantBoxImg" src="@/assets/software/mobilePolice_num10.png" alt="" />

@@ -49,7 +49,8 @@
       </div>
       <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
         <div class="pover_apps_item">
-          <img src="@/assets/navheader/yp.png" alt="" />
+          <!-- <img src="@/assets/navheader/yp.png" alt="" /> -->
+          <img src="@/assets/site/homeApp_yp.png" alt="" />
           <div class="pover_apps_item_name">
             云盘
           </div>
@@ -113,7 +114,8 @@
       </NuxtLink>
       <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
         <div class="pover_apps_item">
-          <img src="@/assets/navheader/ykt.png" alt="" />
+          <!-- <img src="@/assets/navheader/ykt.png" alt="" /> -->
+          <img src="@/assets/site/homeApp_a5.png" alt="" />
           <div class="pover_apps_item_name">
             云课堂
           </div>
@@ -129,9 +131,17 @@
       </NuxtLink>
       <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
         <div class="pover_apps_item">
-          <img src="@/assets/navheader/zhsp.png" alt="" />
+          <img src="@/assets/site/homeApp_a7.png" alt="" />
           <div class="pover_apps_item_name">
             智慧审批
+          </div>
+        </div>
+      </NuxtLink>
+      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
+        <div class="pover_apps_item">
+          <img src="@/assets/site/homeApp_sphy.png" alt="" />
+          <div class="pover_apps_item_name">
+            视频会议
           </div>
         </div>
       </NuxtLink>
