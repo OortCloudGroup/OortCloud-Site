@@ -343,13 +343,13 @@
         <el-tab-pane name="third">
           <template v-if="activeName === 'third'" #label>
             <div class="logo">
-              <img class="img2" src="/public/img/about/product_img6.png" alt="" />OORT.AI
+              <img class="img2" src="/public/img/about/product_img10.png" alt="" />OORT.AI
             </div>
             万物智能、自主服务 — 场景化实战智能体平台
           </template>
           <template v-else #label>
             <div class="logo">
-              <img class="img2" src="/public/img/about/product_img5.png" alt="" />OORT.AI
+              <img class="img2" src="/public/img/about/product_img9.png" alt="" />OORT.AI
             </div>
             万物智能、自主服务 — 场景化实战智能体平台
           </template>

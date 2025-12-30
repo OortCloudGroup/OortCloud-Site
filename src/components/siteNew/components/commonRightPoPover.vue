@@ -17,9 +17,9 @@
           </div>
         </div>
       </NuxtLink>
-      <NuxtLink to="https://da.oortcloudsmart.com/zh/" target="_blank">
+      <NuxtLink to="https://ai.oortcloudsmart.com/zh/" target="_blank">
         <div class="pover_apps_item">
-          <img src="@/assets/navheader/oortda.png" alt="" />
+          <img src="@/assets/navheader/oortai.png" alt="" />
           <div class="pover_apps_item_name">
             OORT.AI
           </div>
