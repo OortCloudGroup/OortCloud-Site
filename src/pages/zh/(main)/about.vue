@@ -364,7 +364,9 @@
                 OORT.AI 数智平台
               </div>
               <div class="fontSize1 space2">
-                面向<span class="blue">AI时代</span>的新型数据底座
+                <!-- 面向<span class="blue">AI时代</span>的新型数据底座 -->
+                万物智能、自主服务 — <br />
+                场景化实战智能体平台
               </div>
               <div class="detail" @click="goToDetail3">
                 了解详情
