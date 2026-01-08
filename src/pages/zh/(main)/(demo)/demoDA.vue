@@ -57,33 +57,33 @@ const internetLinks = [
   {
     name: '数字档案馆平台',
     url: 'https://archive-int.myoumuamua.com:6433/bus/apaas-web/desktopHome/index.html?#/zhhome'
-  },
-  {
-    name: '控制台',
-    url: 'https://archive-int.myoumuamua.com:6433/bus/apaas-web/console_manage/index.html'
   }
+  // {
+  //   name: '控制台',
+  //   url: 'https://archive-int.myoumuamua.com:6433/bus/apaas-web/console_manage/index.html'
+  // }
 ]
 
 const govLinks = [
   {
     name: '数字档案馆平台',
     url: 'https://archive-gov.myoumuamua.com:6433/bus/apaas-web/desktopHome/index.html'
-  },
-  {
-    name: '控制台',
-    url: 'https://archive-gov.myoumuamua.com:6433/bus/apaas-web/console_manage/index.html'
   }
+  // {
+  //   name: '控制台',
+  //   url: 'https://archive-gov.myoumuamua.com:6433/bus/apaas-web/console_manage/index.html'
+  // }
 ]
 
 const lanLinks = [
   {
     name: '数字档案馆平台',
     url: 'https://archive-lan.myoumuamua.com:6433/bus/apaas-web/desktopHome/index.html'
-  },
-  {
-    name: '控制台',
-    url: 'https://archive-lan.myoumuamua.com:6433/bus/apaas-web/console_manage/index.html'
   }
+  // {
+  //   name: '控制台',
+  //   url: 'https://archive-lan.myoumuamua.com:6433/bus/apaas-web/console_manage/index.html'
+  // }
 ]
 </script>
 

@@ -23,7 +23,7 @@ const doubleSysApp = ref({
       name: '智慧园林',
       logo: '/img/demo/menu/yl.png',
       excerpt: '物联网与GIS一张网技术驱动的园林全流程精细化管控平台',
-      link: '/demoIndex'
+      link: '/demoYL'
     },
     {
       name: '智慧武装',
@@ -41,13 +41,13 @@ const doubleSysApp = ref({
       name: '智慧档案',
       logo: '/img/demo/menu/da.png',
       excerpt: '符合国档规范标准的全门类档案收管存用综合管理系统',
-      link: '/demoDA'
+      link: '/demoDA2'
     },
     {
       name: '智慧检务',
       logo: '/img/demo/menu/jcy.png',
       excerpt: '基于新一代信息技术的检察业务与管理全流程融合赋能平台',
-      link: '/demoWQD'
+      link: '/demoJW'
     },
     {
       name: '指挥调度',
@@ -59,7 +59,7 @@ const doubleSysApp = ref({
       name: '智慧安保',
       logo: '/img/demo/menu/ab.png',
       excerpt: '安全风险智能预警及可视化指挥防护平台',
-      link: '/demoIndex'
+      link: '/demoAB'
     },
     {
       name: '宣传',
@@ -69,9 +69,9 @@ const doubleSysApp = ref({
     },
     {
       name: '智慧街道',
-      logo: '/img/home/xl_1.png',
+      logo: '/img/demo/menu/jd.png',
       excerpt: '网格任务闭环与多端协同指挥调度平台',
-      link: '/demoIM'
+      link: '/demoJD'
     },
     {
       name: '智慧监狱',

@@ -372,7 +372,7 @@ const solutionMenu = ref<Menu[]>([
     showTitle: false,
     menus: [
       { name: '法院', logo: '/img/demo/menu/fy.png', link: '/services_court' }, // /img/app/fayuan.png
-      { name: '智慧档案', logo: '/img/app/dangan.png', link: '/services_document' },
+      { name: '智慧档案', logo: '/img/demo/menu/da.png', link: '/services_document' },
       { name: '智慧边海防', logo: '/img/demo/menu/zhbhf.png', link: '/services_borderSeaDefense' },
       { name: '政府', logo: '/img/demo/menu/zf.png', link: '/services_goverment' } // /img/app/zhengfu.png
     ]
@@ -419,7 +419,7 @@ const demoMenu = ref<MenuItem[]>([
     name: '智慧园林',
     desc: '物联网与GIS一张网技术驱动的园林全流程精细化管控平台',
     logo: '/img/demo/menu/yl.png',
-    link: '/demoIndex'
+    link: '/demoYL'
   },
   {
     name: '智慧武装',
@@ -451,20 +451,20 @@ const demoMenu = ref<MenuItem[]>([
     // logo: '/img/demo/menu/im.png',
     logo: '/img/demo/menu/da.png',
     // link: '/智慧档案馆管理系统演示系统.html'
-    link: '/demoDA'
+    link: '/demoDA2'
   },
   {
     name: '智慧街道',
     desc: '网格任务闭环与多端协同指挥调度平台',
-    logo: '/img/demo/menu/im.png',
+    logo: '/img/demo/menu/jd.png',
     // logo: '/img/demo/menu/da.png'
-    link: '/demoIM'
+    link: '/demoJD'
   },
   {
     name: '智慧检务',
     desc: '基于新一代信息技术的检察业务与管理全流程融合赋能平台',
     logo: '/img/demo/menu/jcy.png',
-    link: '/demoWQD'
+    link: '/demoJW'
   },
   {
     name: '指挥调度',
@@ -476,7 +476,7 @@ const demoMenu = ref<MenuItem[]>([
     name: '智慧安保',
     desc: '安全风险智能预警及可视化指挥防护平台',
     logo: '/img/demo/menu/ab.png',
-    link: '/demoIndex'
+    link: '/demoAB'
   },
   // {
   //   name: '反诈中心推广统计平台',
