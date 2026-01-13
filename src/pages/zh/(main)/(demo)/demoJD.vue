@@ -146,7 +146,7 @@ definePageMeta({
 })
 
 const goDetail = () => {
-  window.open('http://oort.oortcloudsmart.com:21410/bus/apaas-web/desktopHome/index.html', '_blank')
+  window.open('http://oort.oortcloudsmart.com:23410/bus/apaas-web/nyStreeManage/index.html', '_blank')
 }
 </script>
 

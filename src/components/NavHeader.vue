@@ -413,7 +413,7 @@ const demoMenu = ref<MenuItem[]>([
     name: '公安',
     desc: '公安警务服务总线',
     logo: '/img/demo/menu/ga.png',
-    link: '/demoIndex'
+    link: '/demoGA'
   },
   {
     name: '智慧园林',
@@ -425,7 +425,8 @@ const demoMenu = ref<MenuItem[]>([
     name: '智慧武装',
     desc: '军地一张网、数据一条链、资源一个库、态势一幅图',
     logo: '/img/demo/menu/wz.png',
-    link: '/demoIndex'
+    // link: '/demoIndex'
+    link: '/demoWZ'
   },
   // {
   //   name: '智慧云aPaaS应用支撑平台(aPaaS)',

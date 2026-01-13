@@ -17,7 +17,7 @@ const doubleSysApp = ref({
       name: '公安',
       logo: '/img/demo/menu/ga.png',
       excerpt: '移动警务服务总线',
-      link: '/demoIndex'
+      link: '/demoGA'
     },
     {
       name: '智慧园林',
@@ -29,7 +29,8 @@ const doubleSysApp = ref({
       name: '智慧武装',
       logo: '/img/demo/menu/wz.png',
       excerpt: '军地一张网、数据一条链、资源一个库、态势一幅图',
-      link: '/demoIndex'
+      // link: '/demoIndex'
+      link: '/demoWZ'
     },
     // {
     //   name: 'XOA数字化办公',
