@@ -42,6 +42,11 @@
                 论坛
               </div>
             </div>
+            <div class="flexRowAC">
+              <div class="b_ser_text hover" @click="viewPath('/zh/community/productLog',0)">
+                产品日志
+              </div>
+            </div>
           </div>
           <div class="b_ser_p_l">
             <div class="b_ser_title">

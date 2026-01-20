@@ -1,0 +1,147 @@
+{
+  "updates": [
+    {
+      "date": "2026年1月16日",
+      "codeVersion": "v1.26.0116",
+      "releaseVersion": "v2.26.1",
+      "services": [
+        {
+          "serviceName": "Web服务（PCWEB应用）",
+          "title": "新特性",
+          "content": [
+            "fix: 选择人员，修复图片显示 (zhijing)",
+            "fix: 选择人员，修复图片显示2 (zhijing)",
+            "fix: 选择人员，修改跳转 (zhijing)",
+            "feat: 云盘，新增图片 (zhijing)",
+            "feat: 位置服务: 应用，区域授权 批量取消授权 (chenqinglin)",
+            "feat: 位置服务: 应用，区域授权 批量授权 (chenqinglin)",
+            "feat: 位置服务: 应用，授权区域和取消授权 接口 (chenqinglin)",
+            "feat: 位置服务: 应用，设备授权-区域设备页面 (chenqinglin)",
+            "feat: 位置服务: 获取所有元数据统计接口 (chenqinglin)",
+            "feat: 统一用户，成员管理添加字段管理 (zhijing)",
+            "feat: 选择人员弹出框，添加设置我的地址本跳转 (zhijing)",
+            "fix: 判断行业是否存在 (zhijing)",
+            "fix: 选择人员弹出框，修复图片显示 (zhijing)"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026年1月15日",
+      "codeVersion": "v1.26.0115",
+      "releaseVersion": "v2.26.1",
+      "services": [
+        {
+          "serviceName": "Web服务（PCWEB应用）",
+          "title": "新特性",
+          "content": [
+            "feat: 位置服务: 下载区域模板 传参 (chenqinglin)",
+            "feat: 位置服务: 下载区域模板 导入区域 (chenqinglin)",
+            "feat: 位置服务: 区域分组标签关联设备 数量与列表 显示接口 (chenqinglin)",
+            "feat: 位置服务: 支持配置要素标识 (chenqinglin)",
+            "feat: 位置服务: 文案修复，接口参数调整 (chenqinglin)",
+            "feat: 位置服务: 标签区域分组接口 (chenqinglin)",
+            "feat: 位置服务: 设备选中 所有设备 对接ALL接口 列表字段固定 (chenqinglin)",
+            "feat: 工作动态，新增工作动态配置 (zhijing)",
+            "feat: 工作动态，首长为空或未选择添加提示文本 (zhijing)",
+            "fix: 工作动态，修复头像显示问题 (zhijing)",
+            "fix: 工作动态，修复添加图标显示 (zhijing)",
+            "fix: 工作动态，修改删除首长操作 (zhijing)",
+            "fix: 统一用户，修复头像显示问题 (zhijing)",
+            "fix: 统一用户，修复头像显示问题2 (zhijing)",
+            "fix: 通讯录，修复头像显示 (zhijing)"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026年1月14日",
+      "codeVersion": "v1.26.0114",
+      "releaseVersion": "v2.26.1",
+      "services": [
+        {
+          "serviceName": "Bug跟踪器",
+          "title": "修复和改进",
+          "content": [
+            "fix: 修复makefile因为自动合并问题(不再提交go.work文件 (吴镇江)",
+            "fix: makefile提交git逻辑修复 (吴镇江)",
+            "chore: add svc_name.txt and fix Makefile (何金科)",
+            "upd: 生成的md日志文件到各个服务目录中 (吴镇江)",
+            "upd: task.json增加生成所有以apaas前缀服务的日志的任务 识别目录的svc_name.txt为服务中文名称 (吴镇江)",
+            "upd: 增加生成md更新日志的脚本 (吴镇江)"
+          ]
+        },
+        {
+          "serviceName": "Web服务（PCWEB应用）",
+          "title": "新特性",
+          "content": [
+            "feat: 个人中心，登录设备字段修改，添加退出登录按钮 (zhijing)",
+            "feat: 年份月份日期插件，边框改为6px圆角 (chenqinglin)",
+            "feat: 指挥调度: 今日巡查 人员模式和任务模式 (chenqinglin)",
+            "feat: 指挥调度: 今日巡查人员样式调整 (chenqinglin)",
+            "feat: 指挥调度: 团队页面 (chenqinglin)",
+            "feat: 指挥调度: 群聊首页，以及点击展开和更多基础应用 (chenqinglin)",
+            "feat: 统一用户，当前本机登录账号，删除图标显示为灰色不能点击并弹出文字提示 (zhijing)",
+            "feat: 统一用户，用户更多添加\"登录限制时间解除\"按钮 (zhijing)",
+            "feat: 统一用户，移除会话设置需要提示 (zhijing)",
+            "fix: 门户，修改工作圈中动态圈管理跳转路径 (zhijing)",
+            "fix: 门户，文本设置为修改为设置 (zhijing)",
+            "style: 门户，调整工作圈弹出框圆角大小 (zhijing)"
+          ]
+        },
+        {
+          "serviceName": "公共库",
+          "title": "优化和改进",
+          "content": [
+            "upd: conf 增加生成svc_name.txt的方法 (吴镇江)",
+            "upd: snowflake 增加返回字符串类型的ID (吴镇江)"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026年1月13日",
+      "codeVersion": "v1.26.0113",
+      "releaseVersion": "v2.26.1",
+      "services": [
+        {
+          "serviceName": "统一用户",
+          "title": "优化和改进",
+          "content": [
+            "feat: 添加获取用户主部门的功能，并优化部门层级查询逻辑 (何金科)"
+          ]
+        },
+        {
+          "serviceName": "H5应用",
+          "title": "优化和改进",
+          "content": [
+            "upd: 更新js sdk 添加获取应用状态的方法 (lanjian)"
+          ]
+        },
+        {
+          "serviceName": "Web服务（PCWEB应用）",
+          "title": "新特性",
+          "content": [
+            "fix(editRegiService): 修正服务ID传递及白名单黑名单初始化逻辑 (lanjian)",
+            "fix(serviceManage): 优化白名单和速率限制功能的显示逻辑 (lanjian)",
+            "feat: 指挥调度: 地图设置面板-对讲组页面 (chenqinglin)",
+            "feat: 指挥调度: 地图设置面板-拍传页面 (chenqinglin)",
+            "feat: 指挥调度: 地图设置面板-轨迹页面 (chenqinglin)",
+            "feat: 指挥调度: 地图设置面板还原gis要素接口数据 (chenqinglin)",
+            "feat: 统一用户，修改会话设置无操作超时时长范围为1到2160小时，最长连续登录时长范围为24到2160小时 (zhijing)",
+            "feat: 统一用户，修改会话设置样式 (zhijing)",
+            "feat: 统一用户，修改图标提示文本 (zhijing)",
+            "feat: 统一用户，修改最长连续登录时长改为登录有效时长 (zhijing)",
+            "feat: 统一用户，对接重置会话接口 (zhijing)",
+            "feat: 统一用户，新增会话设置中用户页面 (zhijing)",
+            "feat: 统一用户，新增会话设置中组织页面 (zhijing)",
+            "feat: 统一用户，新增会话设置中默认页面 (zhijing)",
+            "feat: 门户，默认选择第一个用户 (zhijing)",
+            "fix: 统一用户，会话设置修复图片显示 (zhijing)",
+            "fix: 统一用户，多端同登设置图片显示 (zhijing)"
+          ]
+        }
+      ]
+    }
+  ]
+}
