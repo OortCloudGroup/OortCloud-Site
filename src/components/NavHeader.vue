@@ -489,7 +489,7 @@ const demoMenu = ref<MenuItem[]>([
     name: '智慧宣传',
     desc: '全媒体矩阵信息发布平台',
     logo: '/img/demo/menu/xc.png',
-    link: '/demoXCreator'
+    link: '/demoXC'
   }
 
 ])

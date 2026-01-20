@@ -3,81 +3,67 @@
     <div class="title box1">
       下载
     </div>
+    <!-- 新增：通用版/行业版切换 -->
+    <div class="tab-switch">
+      <div class="tab-item" :class="{active: activeTab === 'general'}" @click="activeTab = 'general'">
+        通用版
+      </div>
+      <div class="tab-item" :class="{active: activeTab === 'industry'}" @click="activeTab = 'industry'">
+        行业版
+      </div>
+    </div>
     <div class="w1380">
       <div class="container">
-        <div class="left">
-          <div class="color-table-container">
+        <div v-if="activeTab === 'general'" class="left">
+          <div v-for="(item,index) in generalList" :key="index" class="color-table-container">
             <table class="color-table">
               <thead>
                 <tr>
-                  <th>云课堂</th>
-                  <th>社区版</th>
-                  <th>企业版</th>
+                  <th>{{ item.name }}</th>
+                  <th>{{ item.Download }}</th>
+                  <th>{{ item.Changelog }}</th>
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="color in colorList" :key="color.name">
+                <tr v-for="color in item.list" :key="color.name">
                   <td>{{ color.name }}</td>
                   <td>
-                    <div class="download_qin">
-                      下载
+                    <div class="download">
+                      <img v-if="color.img1" :src="color.img1" alt="" @click="goGitHub(item.name)" />
+                      <img v-if="color.img2" :src="color.img2" alt="" />
                     </div>
                   </td>
                   <td>
-                    <div class="download_lan">
-                      下载
+                    <div class="download_lan" @click="goProduceLog(color.name)">
+                      Changelog
                     </div>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <div class="color-table-container">
+        </div>
+        <div v-if="activeTab === 'industry'" class="left">
+          <div v-for="(value,index) in industryList" :key="index" class="color-table-container">
             <table class="color-table">
               <thead>
                 <tr>
-                  <th>智能审批</th>
-                  <th>社区版</th>
-                  <th>企业版</th>
+                  <th>{{ value.name }}</th>
+                  <th>{{ value.Download }}</th>
+                  <th>{{ value.Changelog }}</th>
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="color in colorList" :key="color.name">
+                <tr v-for="color in value.list" :key="color.name">
                   <td>{{ color.name }}</td>
                   <td>
-                    <div class="download_qin">
-                      下载
+                    <div class="download">
+                      <img :src="color.img1" alt="" />
                     </div>
                   </td>
                   <td>
-                    <div class="download_lan">
-                      下载
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="color-table-container">
-            <table class="color-table">
-              <thead>
-                <tr>
-                  <th>指挥调度</th>
-                  <th>社区版</th>
-                  <th>企业版</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="color in colorList" :key="color.name">
-                  <td>{{ color.name }}</td>
-                  <td>
-                    <div class="download_qin">
-                      下载
-                    </div>
-                  </td>
-                  <td>
-                    <div class="download_lan">
-                      下载
+                    <div class="download_lan" @click="goProduceLog(color.name)">
+                      Changelog
                     </div>
                   </td>
                 </tr>
@@ -131,21 +117,167 @@
 </template>
 
 <script setup>
+// import { download } from 'naive-ui/es/_utils'
 import { ref } from 'vue'
-const colorList = ref([
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const generalList = ref([
   {
-    name: 'Windows'
+    name: 'OortCloud APP',
+    Download: 'Download',
+    Changelog: 'Changelog',
+    list: [{
+      name: 'Android',
+      img1: '/img/demo/download/downloadAndroid.png'
+    },
+    {
+      name: 'iOS',
+      img1: '/img/demo/download/ios.png'
+    },
+    {
+      name: 'HarmonyOS',
+      img1: '/img/demo/download/HarmonyOS.png'
+    }]
   },
   {
-    name: 'Android'
+    name: 'OortCloud Desktop',
+    Download: 'Download',
+    Changelog: 'Changelog',
+    list: [{
+      name: 'Windows',
+      img1: '/img/demo/download/GitHub.png',
+      img2: '/img/demo/download/Gitee.png'
+    },
+    {
+      name: 'Mac',
+      img1: '/img/demo/download/GitHub.png',
+      img2: '/img/demo/download/Gitee.png'
+    },
+    {
+      name: 'Linux',
+      img1: '/img/demo/download/GitHub.png',
+      img2: '/img/demo/download/Gitee.png'
+    }]
   },
   {
-    name: 'iOS'
+    name: 'OortCloud AI Studio',
+    Download: 'Download',
+    Changelog: 'Changelog',
+    list: [{
+      name: 'Windows',
+      img1: '/img/demo/download/GitHub.png',
+      img2: '/img/demo/download/Gitee.png'
+    },
+    {
+      name: 'Mac',
+      img1: '/img/demo/download/GitHub.png',
+      img2: '/img/demo/download/Gitee.png'
+    },
+    {
+      name: 'Linux',
+      img1: '/img/demo/download/GitHub.png',
+      img2: '/img/demo/download/Gitee.png'
+    },
+    {
+      name: '原始程序码',
+      img1: '/img/demo/download/GitHub.png',
+      img2: '/img/demo/download/Gitee.png'
+    }]
   },
   {
-    name: '原始程序码'
+    name: 'OORT.SH',
+    Download: 'Download',
+    Changelog: 'Changelog',
+    list: [{
+      name: 'Web',
+      img1: '/img/demo/download/Google.png'
+    }]
   }
 ])
+
+const industryList = ref([
+  {
+    name: '智慧检务',
+    Download: 'Download',
+    Changelog: 'Changelog',
+    list: [{
+      name: 'Android',
+      img1: '/img/demo/download/downloadAndroid.png'
+    },
+    {
+      name: 'iOS',
+      img1: '/img/demo/download/ios.png'
+    },
+    {
+      name: 'HarmonyOS',
+      img1: '/img/demo/download/HarmonyOS.png'
+    }]
+  },
+  {
+    name: '智慧园林',
+    Download: 'Download',
+    Changelog: 'Changelog',
+    list: [{
+      name: 'Android',
+      img1: '/img/demo/download/downloadAndroid.png'
+    },
+    {
+      name: 'iOS',
+      img1: '/img/demo/download/ios.png'
+    },
+    {
+      name: 'HarmonyOS',
+      img1: '/img/demo/download/HarmonyOS.png'
+    }]
+  },
+  {
+    name: '智慧武装',
+    Download: 'Download',
+    Changelog: 'Changelog',
+    list: [{
+      name: 'Android',
+      img1: '/img/demo/download/downloadAndroid.png'
+    },
+    {
+      name: 'iOS',
+      img1: '/img/demo/download/ios.png'
+    },
+    {
+      name: 'HarmonyOS',
+      img1: '/img/demo/download/HarmonyOS.png'
+    }]
+  },
+  {
+    name: '智慧街道',
+    Download: 'Download',
+    Changelog: 'Changelog',
+    list: [{
+      name: 'Android',
+      img1: '/img/demo/download/downloadAndroid.png'
+    },
+    {
+      name: 'iOS',
+      img1: '/img/demo/download/ios.png'
+    },
+    {
+      name: 'HarmonyOS',
+      img1: '/img/demo/download/HarmonyOS.png'
+    }]
+  }
+])
+const activeTab = ref('general')
+
+const goProduceLog = (name) => {
+  router.push(`/zh/community/productLog?type=${name}`)
+}
+
+const goGitHub = (value) => {
+  if (value === 'OortCloud AI Studio') {
+    window.open('https://github.com/OortCloudGroup/OortStudio/releases')
+  }
+}
 definePageMeta({
   layout: 'site-new'
 })
@@ -240,9 +372,18 @@ definePageMeta({
   font-weight: bold;
 }
 
+.download{
+  img{
+    width: 52px;
+    height: 52px;
+    margin-right: 27px;
+    cursor: pointer;
+  }
+}
+
 .download_qin, .download_lan{
   cursor: pointer;
-  width: 120px;
+  width: 160px;
   line-height: 50px;
   text-align: center;
   border: 1px solid #017E84;
@@ -253,6 +394,62 @@ definePageMeta({
 .download_lan{
   border: 1px solid #007cfd;
   color: #007cfd;
+}
+
+/* 新增：通用版/行业版切换样式 */
+.tab-switch {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  margin: 80px 0;
+  padding: 0 270px;
+  border-bottom: 1px solid #dcdddf;
+}
+
+.tab-item {
+  font-size: 32px;
+  font-weight: 700;
+  padding-bottom: 20px;
+  cursor: pointer;
+  color: #333333;
+  margin-right: 100px;
+  transition: all 0.3s;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-item.active {
+  color: #2278ff;
+  border-bottom-color: #2278ff;
+  font-weight: 700;
+}
+
+.color-table th:nth-child(1) {
+  width: 320px;
+  // 固定宽度后，防止内容换行/溢出
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.color-table th:nth-child(2) {
+  width: 235px;
+}
+
+.color-table th:nth-child(3) {
+  width: 235px;
+}
+
+// 同步设置td的宽度，保证列对齐
+.color-table td:nth-child(1) {
+  width: 320px;
+}
+
+.color-table td:nth-child(2) {
+  width: 235px;
+}
+
+.color-table td:nth-child(3) {
+  width: 235px;
 }
 
 </style>

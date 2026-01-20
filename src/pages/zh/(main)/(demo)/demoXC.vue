@@ -6,7 +6,7 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
   <div class="page_container">
     <div class="demo_body">
       <div class="demo_body_left">
-        <span class="demo_body_left_title">XCreator敏捷发布平台</span>
+        <span class="demo_body_left_title">智慧宣传</span>
         <span class="demo_body_left_subtitle">全媒体矩阵信息发布平台</span>
         <div class="demo_body_left_items">
           <client-only>
@@ -46,31 +46,13 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
             </n-popover>
           </client-only>
           <client-only>
-            <n-popover trigger="hover" arrow-point-to-center placement="right">
-              <template #trigger>
-                <div class="demo_download">
-                  <img src="/img/demo/download/wxmini.png" />
-                  <span>微信小程序</span>
-                </div>
-              </template>
-              <template #default>
-                <div class="demo_download demo_download_cov">
-                  <div class="demo_download_code">
-                    <img src="/img/logo_googn.jpg" />
-                    <span>扫码体验</span>
-                  </div>
-                </div>
-              </template>
-            </n-popover>
-          </client-only>
-          <a href="" target="_blank">
-            <div class="demo_download">
-              <img src="/img/demo/fz/pcm.png" />
+            <div class="demo_download" @click="goDetail">
+              <img src="/img/demo/download/glht.png" />
               <span>PC管理后台</span>
             </div>
-          </a>
+          </client-only>
         </div>
-        <div class="demo_body_pdf">
+        <!-- <div class="demo_body_pdf">
           <a href="http://oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/cloud_disk/index.html?accessToken=g02dce3c79a42653f0314ae2e1bdbebd0" target="_blank">
             <div class="demo_body_pdf_item">
               <img src="/img/demo/pdf_download.png" />
@@ -78,6 +60,11 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
               <n-icon :component="IosArrowForward" />
             </div>
           </a>
+        </div> -->
+        <div class="demo_body_pdf_item">
+          <img src="/img/demo/pdf_download.png" />
+          <span>资料下载</span>
+          <n-icon :component="IosArrowForward" />
         </div>
       </div>
       <div class="demo_body_right">
@@ -122,10 +109,14 @@ import { NPopover, NIcon } from 'naive-ui'
 
 definePageMeta({
   layout: 'demo',
-  title: 'XCreator敏捷发布平台',
+  title: '智慧宣传',
   subTitle: '演示环境',
   logo: '/img/demo/xc/xc_logo.png'
 })
+
+const goDetail = () => {
+  window.open('http://oort.oortcloudsmart.com:21410/bus/apaas-web/desktopHome/index.html', '_blank')
+}
 
 useSeoMeta({
   title: 'XCreator敏捷发布平台',
