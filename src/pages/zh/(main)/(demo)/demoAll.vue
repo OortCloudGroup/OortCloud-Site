@@ -14,7 +14,7 @@ import { ref } from 'vue'
 const doubleSysApp = ref({
   apps: [
     {
-      name: '公安',
+      name: '智慧公安',
       logo: '/img/demo/menu/ga.png',
       excerpt: '移动警务服务总线',
       link: '/demoGA'
@@ -63,7 +63,7 @@ const doubleSysApp = ref({
       link: '/demoAB'
     },
     {
-      name: '宣传',
+      name: '智慧宣传',
       logo: '/img/demo/menu/xc.png',
       excerpt: '全媒体矩阵信息发布平台',
       link: '/demoXCreator'
