@@ -199,7 +199,24 @@ const generalList = ref([
 
 const industryList = ref([
   {
-    name: '智慧检务',
+    name: '指挥调度',
+    Download: 'Download',
+    Changelog: 'Changelog',
+    list: [{
+      name: 'Android',
+      img1: '/img/demo/download/downloadAndroid.png'
+    },
+    {
+      name: 'iOS',
+      img1: '/img/demo/download/ios.png'
+    },
+    {
+      name: 'HarmonyOS',
+      img1: '/img/demo/download/HarmonyOS.png'
+    }]
+  },
+  {
+    name: 'AI智眼',
     Download: 'Download',
     Changelog: 'Changelog',
     list: [{
@@ -233,24 +250,7 @@ const industryList = ref([
     }]
   },
   {
-    name: '智慧武装',
-    Download: 'Download',
-    Changelog: 'Changelog',
-    list: [{
-      name: 'Android',
-      img1: '/img/demo/download/downloadAndroid.png'
-    },
-    {
-      name: 'iOS',
-      img1: '/img/demo/download/ios.png'
-    },
-    {
-      name: 'HarmonyOS',
-      img1: '/img/demo/download/HarmonyOS.png'
-    }]
-  },
-  {
-    name: '智慧街道',
+    name: '智慧安保',
     Download: 'Download',
     Changelog: 'Changelog',
     list: [{

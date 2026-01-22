@@ -45,32 +45,32 @@
       </div>
     </div>
     <div class="tab-switch">
-      <div class="tab-item" :class="{active: activeTab === 'item1'}" @click="activeTab = 'item1'">
+      <div class="tab-item" :class="{active: activeTab === 'item1'}" @click="goToTab('item1')">
         移动警务
       </div>
-      <div class="tab-item" :class="{active: activeTab === 'item2'}" @click="activeTab = 'item2'">
+      <div class="tab-item" :class="{active: activeTab === 'item2'}" @click="goToTab('item2')">
         情指行平台
       </div>
-      <div class="tab-item" :class="{active: activeTab === 'item3'}" @click="activeTab = 'item3'">
+      <div class="tab-item" :class="{active: activeTab === 'item3'}" @click="goToTab('item3')">
         警用无人机管理平台
       </div>
-      <div class="tab-item" :class="{active: activeTab === 'item4'}" @click="activeTab = 'item4'">
+      <div class="tab-item" :class="{active: activeTab === 'item4'}" @click="goToTab('item4')">
         治安防控体系
       </div>
-      <div class="tab-item" :class="{active: activeTab === 'item5'}" @click="activeTab = 'item5'">
+      <div class="tab-item" :class="{active: activeTab === 'item5'}" @click="goToTab('item5')">
         警务协同
       </div>
-      <div class="tab-item" :class="{active: activeTab === 'item6'}" @click="activeTab = 'item6'">
+      <div class="tab-item" :class="{active: activeTab === 'item6'}" @click="goToTab('item6')">
         融合通信
       </div>
-      <div class="tab-item" :class="{active: activeTab === 'item7'}" @click="activeTab = 'item7'">
+      <div class="tab-item" :class="{active: activeTab === 'item7'}" @click="goToTab('item7')">
         场景化实战智能体
       </div>
-      <div class="tab-item" :class="{active: activeTab === 'item8'}" @click="activeTab = 'item8'">
+      <div class="tab-item" :class="{active: activeTab === 'item8'}" @click="goToTab('item8')">
         视频门禁视频巡查
       </div>
     </div>
-    <div v-if="activeTab === 'item1'" class="item">
+    <div v-if="activeTab === 'item1'" id="tab-item1" class="item">
       <div class="left">
         <div class="left_top">
           <div class="point" />
@@ -83,7 +83,7 @@
         <img src="/img/demo/download/ga_img1.png" alt="" />
       </div>
     </div>
-    <div v-if="activeTab === 'item2'" class="item">
+    <div v-if="activeTab === 'item2'" id="tab-item2" class="item">
       <div class="left">
         <div class="left_top">
           <div class="point" />
@@ -96,7 +96,7 @@
         <img src="/img/demo/download/ga_img2.png" alt="" />
       </div>
     </div>
-    <div v-if="activeTab === 'item3'" class="item">
+    <div v-if="activeTab === 'item3'" id="tab-item3" class="item">
       <div class="left">
         <div class="left_top">
           <div class="point" />
@@ -111,7 +111,7 @@
         <img src="/img/demo/download/ga_img3.png" alt="" />
       </div>
     </div>
-    <div v-if="activeTab === 'item4'" class="item">
+    <div v-if="activeTab === 'item4'" id="tab-item4" class="item">
       <div class="left">
         <div class="left_top">
           <div class="point" />
@@ -124,7 +124,7 @@
         <img src="/img/demo/download/ga_img4.png" alt="" />
       </div>
     </div>
-    <div v-if="activeTab === 'item5'" class="item">
+    <div v-if="activeTab === 'item5'" id="tab-item5" class="item">
       <div class="left">
         <div class="left_top">
           <div class="point" />
@@ -138,7 +138,7 @@
         <img src="/img/demo/download/ga_img5.png" alt="" />
       </div>
     </div>
-    <div v-if="activeTab === 'item6'" class="item">
+    <div v-if="activeTab === 'item6'" id="tab-item6" class="item">
       <div class="left">
         <div class="left_top">
           <div class="point" />
@@ -151,7 +151,7 @@
         <img src="/img/demo/download/ga_img6.png" alt="" />
       </div>
     </div>
-    <div v-if="activeTab === 'item7'" class="item">
+    <div v-if="activeTab === 'item7'" id="tab-item7" class="item">
       <div class="left">
         <div class="left_top">
           <div class="point" />
@@ -164,7 +164,7 @@
         <img src="/img/demo/download/ga_img7.png" alt="" />
       </div>
     </div>
-    <div v-if="activeTab === 'item8'" class="item">
+    <div v-if="activeTab === 'item8'" id="tab-item8" class="item">
       <div class="left">
         <div class="left_top">
           <div class="point" />
@@ -181,7 +181,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, nextTick } from 'vue'
 import { IosArrowForward } from '@vicons/ionicons4'
 import { NIcon } from 'naive-ui'
 import { useRouter } from 'vue-router'
@@ -202,6 +202,18 @@ const goDetail = () => {
 
 const activeTab = ref('item1')
 
+const goToTab = (tabKey: string) => {
+  activeTab.value = tabKey
+
+  // 2. 等待DOM渲染完成（v-if对应的节点被创建）
+  nextTick(() => {
+    const target = document.getElementById(`tab-${tabKey}`)
+
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+  })
+}
 </script>
 
 <style lang="scss" scoped>
@@ -438,20 +450,26 @@ const activeTab = ref('item1')
   box-sizing: border-box;
   width: 100%;
   display: flex;
-  margin: 20px 0 80px 0;
-  padding: 0 120px;
+  // margin: 0 0 50px 0;
+  padding: 20px 120px 0 120px; // 调整 padding，包含上下内边距
   border-bottom: 1px solid #dcdddf;
+  // 核心 sticky 定位
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #fff; // 防止透明导致下方内容穿透
 }
 
 .tab-item {
   font-size: 24px;
   font-weight: 400;
-  padding-bottom: 20px;
   cursor: pointer;
   color: #666666;
   margin-right: 63px;
   transition: all 0.3s;
   border-bottom: 3px solid transparent;
+  padding-bottom: 20px;
+  // 移除原有 padding-bottom，避免和父元素 padding 冲突
 }
 
 .tab-item.active {
@@ -462,8 +480,9 @@ const activeTab = ref('item1')
 .item{
   width: 80%;
   margin: 0 auto;
-  height: 560px;
   display: flex;
+  height: 600px;
+  padding-top: 50px;
   justify-content: space-between;
   .left{
     width: 680px;

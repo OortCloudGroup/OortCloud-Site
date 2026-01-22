@@ -1,4 +1,3 @@
-
 <template>
   <div class="page_container">
     <div class="demo_box">
@@ -7,13 +6,6 @@
           <span class="demo_body_left_title">智慧武装</span>
           <span class="demo_body_left_subtitle">聚焦传统武装工作信息化痛点，以 AI、AR、物联网为核心驱动，重构基层武装八项核心工作流程，搭建标准化数据体系，实现 “一网、一链、一库、一图”，精准掌握辖区战略实况，提升武装工作正规化水平与国防动员能力。</span>
           <div class="demo_body_pdf">
-            <!-- <a href="http://oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/cloud_disk/index.html?accessToken=g02dce3c79a42653f0314ae2e1bdbebd0" target="_blank">
-            <div class="demo_body_pdf_item">
-              <img src="/img/demo/pdf_download.png" />
-              <span>资料下载</span>
-              <n-icon :component="IosArrowForward" />
-            </div>
-          </a> -->
             <div class="demo_body_pdf_item">
               <img src="/img/demo/pdf_download.png" />
               <span>资料下载</span>
@@ -57,29 +49,30 @@
       </div>
     </div>
     <div class="tab-switch">
-      <div class="tab-item" :class="{active: activeTab === 'item1'}" @click="activeTab = 'item1'">
+      <div class="tab-item" :class="{active: activeTab === 'item1'}" @click="goToTab('item1')">
         智慧武装系统
       </div>
-      <div class="tab-item" :class="{active: activeTab === 'item2'}" @click="activeTab = 'item2'">
+      <div class="tab-item" :class="{active: activeTab === 'item2'}" @click="goToTab('item2')">
         AI自助机
       </div>
-      <div class="tab-item" :class="{active: activeTab === 'item3'}" @click="activeTab = 'item3'">
+      <div class="tab-item" :class="{active: activeTab === 'item3'}" @click="goToTab('item3')">
         AI宣传员
       </div>
-      <div class="tab-item" :class="{active: activeTab === 'item4'}" @click="activeTab = 'item4'">
+      <div class="tab-item" :class="{active: activeTab === 'item4'}" @click="goToTab('item4')">
         AI报靶器
       </div>
-      <div class="tab-item" :class="{active: activeTab === 'item5'}" @click="activeTab = 'item5'">
+      <div class="tab-item" :class="{active: activeTab === 'item5'}" @click="goToTab('item5')">
         AI库管员
       </div>
-      <div class="tab-item" :class="{active: activeTab === 'item6'}" @click="activeTab = 'item6'">
+      <div class="tab-item" :class="{active: activeTab === 'item6'}" @click="goToTab('item6')">
         视频智慧调度
       </div>
-      <div class="tab-item" :class="{active: activeTab === 'item7'}" @click="activeTab = 'item7'">
+      <div class="tab-item" :class="{active: activeTab === 'item7'}" @click="goToTab('item7')">
         安全服务一体机
       </div>
     </div>
-    <div v-if="activeTab === 'item1'" class="item">
+    <!-- 关键修改：给每个item增加唯一的id，方便后续通过id获取DOM -->
+    <div v-if="activeTab === 'item1'" id="tab-item1" class="item">
       <div class="left">
         <div class="left_top">
           <div class="point" />
@@ -92,7 +85,7 @@
         <img src="/img/demo/download/wz_img1.png" alt="" />
       </div>
     </div>
-    <div v-if="activeTab === 'item2'" class="item">
+    <div v-if="activeTab === 'item2'" id="tab-item2" class="item">
       <div class="left">
         <div class="left_top">
           <div class="point" />
@@ -102,7 +95,6 @@
         </div>
       </div>
       <div class="right">
-        <!-- <img src="/img/demo/download/wz_img2.png" alt="" /> -->
         <video
           src="/documents/zzj.mp4"
           controls
@@ -114,7 +106,7 @@
         </video>
       </div>
     </div>
-    <div v-if="activeTab === 'item3'" class="item">
+    <div v-if="activeTab === 'item3'" id="tab-item3" class="item">
       <div class="left">
         <div class="left_top">
           <div class="point" />
@@ -125,7 +117,6 @@
         </div>
       </div>
       <div class="right">
-        <!-- <img src="/img/demo/download/wz_img3.png" alt="" /> -->
         <video
           src="/documents/xcy.mp4"
           controls
@@ -137,7 +128,7 @@
         </video>
       </div>
     </div>
-    <div v-if="activeTab === 'item4'" class="item">
+    <div v-if="activeTab === 'item4'" id="tab-item4" class="item">
       <div class="left">
         <div class="left_top">
           <div class="point" />
@@ -151,7 +142,7 @@
         <img src="/img/demo/download/wz_img4.png" alt="" />
       </div>
     </div>
-    <div v-if="activeTab === 'item5'" class="item">
+    <div v-if="activeTab === 'item5'" id="tab-item5" class="item">
       <div class="left">
         <div class="left_top">
           <div class="point" />
@@ -161,7 +152,6 @@
         </div>
       </div>
       <div class="right">
-        <!-- <img src="/img/demo/download/wz_img5.png" alt="" /> -->
         <video
           src="/documents/kgy.mp4"
           controls
@@ -173,7 +163,7 @@
         </video>
       </div>
     </div>
-    <div v-if="activeTab === 'item6'" class="item">
+    <div v-if="activeTab === 'item6'" id="tab-item6" class="item">
       <div class="left">
         <div class="left_top">
           <div class="point" />
@@ -186,7 +176,7 @@
         <img src="/img/demo/download/wz_img6.png" alt="" />
       </div>
     </div>
-    <div v-if="activeTab === 'item7'" class="item">
+    <div v-if="activeTab === 'item7'" id="tab-item7" class="item">
       <div class="left">
         <div class="left_top">
           <div class="point" />
@@ -203,7 +193,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, nextTick } from 'vue'
 import { IosArrowForward } from '@vicons/ionicons4'
 import { NIcon } from 'naive-ui'
 
@@ -216,15 +206,25 @@ definePageMeta({
 
 const activeTab = ref('item1')
 
+const goToTab = (tabKey: string) => {
+  activeTab.value = tabKey
+
+  // 2. 等待DOM渲染完成（v-if对应的节点被创建）
+  nextTick(() => {
+    const target = document.getElementById(`tab-${tabKey}`)
+
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+  })
+}
 </script>
 
 <style lang="scss" scoped>
-
 .page_container {
   width: 100%;
   margin: 0 auto;
   padding-bottom: 100px;
-  // min-height: 1080px;
 }
 .demo_box{
   background-image: url("/img/demo/im/ga_bg.png");
@@ -262,8 +262,6 @@ const activeTab = ref('item1')
   }
   &_right {
     flex: 1;
-    // display: flex;
-    // justify-content: flex-end;
     position: relative;
     .img1 {
       position: absolute;
@@ -335,8 +333,6 @@ const activeTab = ref('item1')
       display: flex;
       justify-content: center;
       align-items: center;
-      // background-image: url("/img/demo/im/im_div_bg.png");
-      background-size: 100% 100%;
       span {
         font-size: 18px;
         color: #051261;
@@ -451,20 +447,23 @@ const activeTab = ref('item1')
   box-sizing: border-box;
   width: 100%;
   display: flex;
-  margin: 20px 0 80px 0;
-  padding: 0 120px;
+  padding: 20px 120px 0 120px;
   border-bottom: 1px solid #dcdddf;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
 }
 
 .tab-item {
   font-size: 24px;
   font-weight: 400;
-  padding-bottom: 20px;
   cursor: pointer;
   color: #666666;
   margin-right: 110px;
   transition: all 0.3s;
   border-bottom: 3px solid transparent;
+  padding-bottom: 20px;
 }
 
 .tab-item.active {
@@ -475,12 +474,11 @@ const activeTab = ref('item1')
 .item{
   width: 80%;
   margin: 0 auto;
-  height: 460px;
   display: flex;
   justify-content: space-between;
   .left{
     width: 680px;
-    margin-top: 50px;
+    padding-top: 130px;
     .left_top{
       display: flex;
       .point{
@@ -506,9 +504,9 @@ const activeTab = ref('item1')
         margin-right: 10px;
       }
     }
-
   }
   .right{
+    padding-top: 80px;
     img{
       width: 684px;
       height: 460px;
