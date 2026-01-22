@@ -5,51 +5,7 @@
       <div class="demo_body">
         <div class="demo_body_left">
           <span class="demo_body_left_title">智慧武装</span>
-          <span class="demo_body_left_subtitle">构建全域智能武装体系，提升警务实战效能</span>
-          <div class="demo_body_left_items">
-            <client-only>
-              <n-popover trigger="hover" arrow-point-to-center placement="right">
-                <template #trigger>
-                  <div class="demo_download">
-                    <img src="/img/demo/download/android.png" />
-                    <span>Android 移动端</span>
-                  </div>
-                </template>
-                <template #default>
-                  <div class="demo_download demo_download_cov">
-                    <div class="demo_download_code">
-                      <img src="/img/logo_googn.jpg" />
-                      <span>扫码下载</span>
-                    </div>
-                  </div>
-                </template>
-              </n-popover>
-            </client-only>
-            <client-only>
-              <n-popover trigger="hover" arrow-point-to-center placement="right">
-                <template #trigger>
-                  <div class="demo_download">
-                    <img src="/img/demo/download/iphone.png" />
-                    <span>IOS 移动端</span>
-                  </div>
-                </template>
-                <template #default>
-                  <div class="demo_download demo_download_cov">
-                    <div class="demo_download_code">
-                      <img src="/img/logo_googn.jpg" />
-                      <span>扫码体验</span>
-                    </div>
-                  </div>
-                </template>
-              </n-popover>
-            </client-only>
-            <client-only>
-              <div class="demo_download" @click="goDetail">
-                <img src="/img/demo/download/glht.png" />
-                <span>PC管理后台</span>
-              </div>
-            </client-only>
-          </div>
+          <span class="demo_body_left_subtitle">聚焦传统武装工作信息化痛点，以 AI、AR、物联网为核心驱动，重构基层武装八项核心工作流程，搭建标准化数据体系，实现 “一网、一链、一库、一图”，精准掌握辖区战略实况，提升武装工作正规化水平与国防动员能力。</span>
           <div class="demo_body_pdf">
             <!-- <a href="http://oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/cloud_disk/index.html?accessToken=g02dce3c79a42653f0314ae2e1bdbebd0" target="_blank">
             <div class="demo_body_pdf_item">
@@ -65,39 +21,59 @@
             </div>
           </div>
         </div>
-        <div class="demo_body_right">
-          <img src="/img/demo/im/wz_img.png" class="img1" />
-        </div>
       </div>
-      <div class="demo_bottom">
-        <div class="demo_bottom_jbjs">
-          <div class="demo_bottom_title size">
-            基本介绍
+      <div class="middle">
+        <div class="middle_left">
+          <img src="/img/demo/im/wz_img.png" alt="" />
+        </div>
+        <div class="middle_right">
+          <div class="right1">
+            <img src="/img/demo/download/wz_icon1.png" alt="" class="icon" />
+            <div class="fontSize">
+              全面提升基层武装建设现代化水平，让基层力量成为国防巩固的坚实支撑
+            </div>
           </div>
-          <div class="demo_bottom_subtitle line_height">
-            聚焦传统武装工作信息化痛点，以 AI、AR、物联网为核心驱动，重构基层武装八项核心工作流程，搭建标准化数据体系，实现 “一网、一链、一库、一图”，精准掌握辖区战略实况，提升武装工作正规化水平与国防动员能力
+          <div class="right2">
+            <img src="/img/demo/download/wz_icon2.png" alt="" class="icon" />
+            <div class="fontSize">
+              特色党建、网格数据智慧国防动员、靶向精准征兵、民兵管理、双拥共建等重点基础工作，真正做到了武装工作问题导向，目标导向，工作落实量化直观，效果运用实用管用
+            </div>
+          </div>
+          <div class="right3">
+            <div class="right3_1">
+              <img src="/img/demo/download/wz_icon3.png" alt="" class="icon" />
+              <div class="fontSize">
+                军地一张网、数据一条链、资源一个库、态势一幅图
+              </div>
+            </div>
+            <div class="right3_2">
+              <img src="/img/demo/download/wz_icon4.png" alt="" class="icon" />
+              <div class="fontSize">
+                实现对突发事件及时发现、快速反应、及时处置
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="tab-switch">
       <div class="tab-item" :class="{active: activeTab === 'item1'}" @click="activeTab = 'item1'">
-        兵役证打印自助机
+        智慧武装系统
       </div>
       <div class="tab-item" :class="{active: activeTab === 'item2'}" @click="activeTab = 'item2'">
-        AI征兵宣传
+        AI自助机
       </div>
       <div class="tab-item" :class="{active: activeTab === 'item3'}" @click="activeTab = 'item3'">
-        AI报靶器
+        AI宣传员
       </div>
       <div class="tab-item" :class="{active: activeTab === 'item4'}" @click="activeTab = 'item4'">
-        AI库管
+        AI报靶器
       </div>
       <div class="tab-item" :class="{active: activeTab === 'item5'}" @click="activeTab = 'item5'">
-        视频智慧调度
+        AI库管员
       </div>
       <div class="tab-item" :class="{active: activeTab === 'item6'}" @click="activeTab = 'item6'">
-        AI器材库终端
+        视频智慧调度
       </div>
       <div class="tab-item" :class="{active: activeTab === 'item7'}" @click="activeTab = 'item7'">
         安全服务一体机
@@ -108,12 +84,8 @@
         <div class="left_top">
           <div class="point" />
           <div class="demo_bottom_subtitle size24">
-            自助服务机具有高效率、24小时服务、AI语音识别和自动寻边等特点，能够快速满足用户打印需求，提供全天候服务，通过语音输入简化操作，并自动匹配打印边界，确保打印准确、操作简便。
+            面向武装工作管理与指挥的综合性可视化平台，它以 “一屏统揽、全域感知、高效协同” 为核心设计理念，将武装工作的组织架构、业务流程、动态数据与地理信息深度融合，为武装部门提供从日常管理到应急指挥的全场景数字化支撑。
           </div>
-        </div>
-        <div class="left_bottom">
-          <img src="/img/demo/download/wz_jiantou.png" alt="" />
-          查看更多
         </div>
       </div>
       <div class="right">
@@ -125,16 +97,21 @@
         <div class="left_top">
           <div class="point" />
           <div class="demo_bottom_subtitle size24">
-            配合一台虚拟人显示终端,数字员工可以对外,用于办理指引、政策咨询等工作。提供后台，可以完善回复的知识库。
+            自助服务机具有高效率、24小时服务、AI语音识别和自动寻边等特点，能够快速满足用户打印需求，提供全天候服务，通过语音输入简化操作，并自动匹配打印边界，确保打印准确、操作简便。
           </div>
-        </div>
-        <div class="left_bottom">
-          <img src="/img/demo/download/wz_jiantou.png" alt="" />
-          查看更多
         </div>
       </div>
       <div class="right">
-        <img src="/img/demo/download/wz_img2.png" alt="" />
+        <!-- <img src="/img/demo/download/wz_img2.png" alt="" /> -->
+        <video
+          src="/documents/zzj.mp4"
+          controls
+          playsinline
+          autoplay
+          class="videos"
+        >
+          你的浏览器不支持 HTML5 视频播放，请升级浏览器
+        </video>
       </div>
     </div>
     <div v-if="activeTab === 'item3'" class="item">
@@ -142,16 +119,22 @@
         <div class="left_top">
           <div class="point" />
           <div class="demo_bottom_subtitle size24">
-            AI 射击报靶器采用 “光代弹” 技术，模拟 92、95 式后坐力，安全逼真。集成 AI 视觉识别，自动计算环数并分析弹着点密集度，提升训练效率与精准度。
+            虚拟人终端 + 数字员工，打造智能对外服务窗口！<br />
+            轻松承接指引接待、政策咨询等工作，更有专属后台支持知识库实时更新，让服务响应更精准、更高效。
           </div>
-        </div>
-        <div class="left_bottom">
-          <img src="/img/demo/download/wz_jiantou.png" alt="" />
-          查看更多
         </div>
       </div>
       <div class="right">
-        <img src="/img/demo/download/wz_img3.png" alt="" />
+        <!-- <img src="/img/demo/download/wz_img3.png" alt="" /> -->
+        <video
+          src="/documents/xcy.mp4"
+          controls
+          playsinline
+          autoplay
+          class="videos"
+        >
+          你的浏览器不支持 HTML5 视频播放，请升级浏览器
+        </video>
       </div>
     </div>
     <div v-if="activeTab === 'item4'" class="item">
@@ -159,12 +142,9 @@
         <div class="left_top">
           <div class="point" />
           <div class="demo_bottom_subtitle size24">
-            仓库无人值守:物料放置识别区，摄像机多图实时抓拍识别，实时出入库，无需人工值守与传统打标编码等。
+            AI射击报靶器采用光代弹原理，模拟92、95型枪械后坐力，是实弹打靶的有效补充。系统架构稳定，对场地无特殊要求，支持多种射击姿势和报靶方式，满足训练需求。<br />
+            在此基础上，系统集成了AI摄像机智能识别技术，能够对靶面进行精准环数识别。AI摄像机通过捕捉激光打靶的光点位置，自动计算环数，并将结果与弹孔密集度等其他数据相结合，进行综合分析。AI摄像头的引入，进一步提高了打靶环数统计的准确性和效率，帮助射手更加直观地了解训练效果，实现更精细化的射击训练。
           </div>
-        </div>
-        <div class="left_bottom">
-          <img src="/img/demo/download/wz_jiantou.png" alt="" />
-          查看更多
         </div>
       </div>
       <div class="right">
@@ -176,16 +156,21 @@
         <div class="left_top">
           <div class="point" />
           <div class="demo_bottom_subtitle size24">
-            搭配会议终端，极简操作即可实现高清视频通信。
+            配合无人值守物资仓库建设，打造器材出入库操作终端，实现仓库无人值守管理；物料无需传统打标编码，只需放置识别区，摄像机即可对物料实物进行多张抓拍并实时识别，自动完成出入库流程，全程无需人工值守。
           </div>
-        </div>
-        <div class="left_bottom">
-          <img src="/img/demo/download/wz_jiantou.png" alt="" />
-          查看更多
         </div>
       </div>
       <div class="right">
-        <img src="/img/demo/download/wz_img5.png" alt="" />
+        <!-- <img src="/img/demo/download/wz_img5.png" alt="" /> -->
+        <video
+          src="/documents/kgy.mp4"
+          controls
+          playsinline
+          autoplay
+          class="videos"
+        >
+          你的浏览器不支持 HTML5 视频播放，请升级浏览器
+        </video>
       </div>
     </div>
     <div v-if="activeTab === 'item6'" class="item">
@@ -193,12 +178,8 @@
         <div class="left_top">
           <div class="point" />
           <div class="demo_bottom_subtitle size24">
-            配合无人值守物资仓库建设,实现器材出入库操作终端。
+            深度适配全系列会议终端，无需复杂配置，极简操作即可快速启动高清视频通信。无论是会议室固定终端、桌面办公终端，还是移动便携终端，均能实现无缝对接，轻松打破设备壁垒。操作层面简化至核心步骤，一键发起呼叫、一键加入会议，无需专业技术人员值守，普通员工也能快速上手，大幅降低使用门槛。通信质量上，依托先进的智能调度算法，自动优化网络带宽分配，保障1080P全高清视频画面稳定流畅，搭配高清音频采集与降噪技术，还原面对面沟通的真实体验。适用于企业跨地域协作、远程项目研讨、应急指挥调度等多元场景，为高效远程沟通提供坚实保障。
           </div>
-        </div>
-        <div class="left_bottom">
-          <img src="/img/demo/download/wz_jiantou.png" alt="" />
-          查看更多
         </div>
       </div>
       <div class="right">
@@ -210,12 +191,8 @@
         <div class="left_top">
           <div class="point" />
           <div class="demo_bottom_subtitle size24">
-            为系统更安全,采用与外部网络物理隔离的方式进行部署要求该设备除了具备服务器功能外,还必须有一定防火墙功能。
+            采用物理隔离部署模式保障系统安全，集高性能服务器功能与专业防火墙功能于一体。可满足业务数据处理、应用运行需求，同时具备入侵检测、访问控制、异常流量拦截等防护能力，一机实现安全与效率兼顾，适配政企、涉密机构等高安全需求场景。
           </div>
-        </div>
-        <div class="left_bottom">
-          <img src="/img/demo/download/wz_jiantou.png" alt="" />
-          查看更多
         </div>
       </div>
       <div class="right">
@@ -228,7 +205,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { IosArrowForward } from '@vicons/ionicons4'
-import { NPopover, NIcon } from 'naive-ui'
+import { NIcon } from 'naive-ui'
 
 definePageMeta({
   layout: 'demo',
@@ -236,10 +213,6 @@ definePageMeta({
   subTitle: '演示环境',
   logo: '/img/demo/menu/wz.png'
 })
-
-const goDetail = () => {
-  window.open('http://oort.oortcloudsmart.com:21410/bus/apaas-web/desktopHome/index.html', '_blank')
-}
 
 const activeTab = ref('item1')
 
@@ -254,19 +227,17 @@ const activeTab = ref('item1')
   // min-height: 1080px;
 }
 .demo_box{
-  background-image: url("/img/demo/im/wz_bg.png");
+  background-image: url("/img/demo/im/ga_bg.png");
   background-size: 100% 100%;
   padding-bottom: 100px;
 }
 .demo_body {
   margin: 0 auto;
   width: 85%;
-  display: flex;
   flex-direction: row;
   padding-top: 63px;
-  height: 550px;
+  height: 350px;
   &_left {
-    width: 850px;
     display: flex;
     flex-direction: column;
     &_title {
@@ -277,10 +248,11 @@ const activeTab = ref('item1')
     }
     &_subtitle {
       font-size: 28px;
-      color: #1B396C;
+      color: #717781;
+      line-height: 42px;
       letter-spacing: 0;
       font-weight: 400;
-      margin:16px 0;
+      margin:10px 0;
     }
     &_items {
       display: flex;
@@ -472,7 +444,7 @@ const activeTab = ref('item1')
 
 .size24{
   font-size: 24px;
-  line-height: 30px;
+  line-height: 36px;
 }
 
 .tab-switch {
@@ -485,12 +457,12 @@ const activeTab = ref('item1')
 }
 
 .tab-item {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 400;
   padding-bottom: 20px;
   cursor: pointer;
   color: #666666;
-  margin-right: 65px;
+  margin-right: 110px;
   transition: all 0.3s;
   border-bottom: 3px solid transparent;
 }
@@ -517,7 +489,7 @@ const activeTab = ref('item1')
         border-radius: 50%;
         background-color: #4480FF;
         flex-shrink: 0;
-        margin-top: 20px;
+        margin-top: 24px;
         margin-right: 10px;
       }
     }
@@ -541,7 +513,63 @@ const activeTab = ref('item1')
       width: 684px;
       height: 460px;
     }
+    .videos{
+      width: 684px;
+      height: 460px;
+      border-radius: 10px;
+    }
   }
-
+}
+.middle{
+  width: 85%;
+  margin: 0 auto;
+  height: 535px;
+  display: flex;
+  justify-content: space-between;
+  .middle_left{
+    img{
+      width: 900px;
+      height: 535px;
+    }
+  }
+  .middle_right{
+    width: 640px;
+    .right1, .right2{
+      box-sizing: border-box;
+      padding: 20px 12px;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+    .icon{
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+    .fontSize{
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 24px;
+      color: #717781;
+    }
+    .right1{
+      height: 140px;
+    }
+    .right2{
+      margin: 20px 0;
+      height: 190px;
+    }
+    .right3{
+      height: 165px;
+      display: flex;
+      justify-content: space-between;
+      .right3_1, .right3_2{
+        width: 300px;
+        background-color: #fff;
+        box-sizing: border-box;
+        padding: 20px 12px;
+        border-radius: 10px;
+      }
+    }
+  }
 }
 </style>

@@ -1,165 +1,190 @@
 
 <template>
   <div class="page_container">
-    <div class="demo_body">
-      <div class="demo_body_left">
-        <span class="demo_body_left_title">智慧公安</span>
-        <span class="demo_body_left_subtitle">构建全域智能安防体系，提升警务实战效能</span>
-        <div class="demo_body_left_items">
-          <client-only>
-            <n-popover trigger="hover" arrow-point-to-center placement="right">
-              <template #trigger>
-                <div class="demo_download">
-                  <img src="/img/demo/download/android.png" />
-                  <span>Android 移动端</span>
-                </div>
-              </template>
-              <template #default>
-                <div class="demo_download demo_download_cov">
-                  <div class="demo_download_code">
-                    <img src="/img/logo_googn.jpg" />
-                    <span>扫码下载</span>
-                  </div>
-                </div>
-              </template>
-            </n-popover>
-          </client-only>
-          <client-only>
-            <n-popover trigger="hover" arrow-point-to-center placement="right">
-              <template #trigger>
-                <div class="demo_download">
-                  <img src="/img/demo/download/iphone.png" />
-                  <span>IOS 移动端</span>
-                </div>
-              </template>
-              <template #default>
-                <div class="demo_download demo_download_cov">
-                  <div class="demo_download_code">
-                    <img src="/img/logo_googn.jpg" />
-                    <span>扫码体验</span>
-                  </div>
-                </div>
-              </template>
-            </n-popover>
-          </client-only>
-          <client-only>
-            <div class="demo_download" @click="goDetail">
-              <img src="/img/demo/download/glht.png" />
-              <span>PC管理后台</span>
-            </div>
-          </client-only>
-        </div>
-        <div class="demo_body_pdf">
-          <!-- <a href="http://oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/cloud_disk/index.html?accessToken=g02dce3c79a42653f0314ae2e1bdbebd0" target="_blank">
+    <div class="demo_box">
+      <div class="demo_body">
+        <div class="demo_body_left">
+          <span class="demo_body_left_title">智慧公安</span>
+          <span class="demo_body_left_subtitle">智慧无限，警务常新</span>
+          <div class="demo_body_left_items">
+            <client-only>
+              <div class="demo_download" @click="goDetail">
+                <img src="/img/demo/download/glht.png" />
+                <span>三网演示环境</span>
+              </div>
+            </client-only>
+          </div>
+          <div class="demo_body_pdf">
+            <!-- <a href="http://oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/cloud_disk/index.html?accessToken=g02dce3c79a42653f0314ae2e1bdbebd0" target="_blank">
             <div class="demo_body_pdf_item">
               <img src="/img/demo/pdf_download.png" />
               <span>资料下载</span>
               <n-icon :component="IosArrowForward" />
             </div>
           </a> -->
-          <div class="demo_body_pdf_item">
-            <img src="/img/demo/pdf_download.png" />
-            <span>资料下载</span>
-            <n-icon :component="IosArrowForward" />
+            <div class="demo_body_pdf_item">
+              <img src="/img/demo/pdf_download.png" />
+              <span>资料下载</span>
+              <n-icon :component="IosArrowForward" />
+            </div>
           </div>
         </div>
+        <div class="demo_body_right">
+          <img src="/img/demo/im/ga_img.png" class="img1" />
+        </div>
       </div>
-      <div class="demo_body_right">
-        <img src="/img/demo/im/img_ga1.png" class="img1" />
-        <img src="/img/demo/im/img_ga2.png" class="img2" />
+      <div class="demo_bottom">
+        <div class="demo_bottom_jbjs">
+          <div class="demo_bottom_title size">
+            基本介绍
+          </div>
+          <div class="demo_bottom_subtitle line_height">
+            智慧公安围绕全域智能安防与实战效能提升，通过情指行平台五级联动、无人机高空赋能、立体化治安防控、移动警务线上闭环、融合通信与 AI 支撑、视频门禁重点巡查等系统协同，全面推动公安工作智能化发展。
+          </div>
+        </div>
       </div>
     </div>
-    <div class="demo_bottom">
-      <div class="demo_bottom_jbjs">
-        <div class="demo_bottom_title size">
-          基本介绍
-        </div>
-        <div class="demo_bottom_subtitle line_height">
-          智慧公安围绕全域智能安防与实战效能提升，通过情指行平台五级联动、无人机高空赋能、立体化治安防控、移动警务线上闭环、融合通信与 AI 支撑、视频门禁重点巡查等系统协同，全面推动公安工作智能化发展。
+    <div class="tab-switch">
+      <div class="tab-item" :class="{active: activeTab === 'item1'}" @click="activeTab = 'item1'">
+        移动警务
+      </div>
+      <div class="tab-item" :class="{active: activeTab === 'item2'}" @click="activeTab = 'item2'">
+        情指行平台
+      </div>
+      <div class="tab-item" :class="{active: activeTab === 'item3'}" @click="activeTab = 'item3'">
+        警用无人机管理平台
+      </div>
+      <div class="tab-item" :class="{active: activeTab === 'item4'}" @click="activeTab = 'item4'">
+        治安防控体系
+      </div>
+      <div class="tab-item" :class="{active: activeTab === 'item5'}" @click="activeTab = 'item5'">
+        警务协同
+      </div>
+      <div class="tab-item" :class="{active: activeTab === 'item6'}" @click="activeTab = 'item6'">
+        融合通信
+      </div>
+      <div class="tab-item" :class="{active: activeTab === 'item7'}" @click="activeTab = 'item7'">
+        场景化实战智能体
+      </div>
+      <div class="tab-item" :class="{active: activeTab === 'item8'}" @click="activeTab = 'item8'">
+        视频门禁视频巡查
+      </div>
+    </div>
+    <div v-if="activeTab === 'item1'" class="item">
+      <div class="left">
+        <div class="left_top">
+          <div class="point" />
+          <div class="demo_bottom_subtitle size24">
+            以“开放分层解耦服务”为核心，深度依托智慧云平台的弹性算力与专线网络的稳定传输能力，采用微服务架构对警务通信与数据处理体系进行重构升级。通过将复杂业务拆分为独立可扩展的微服务模块，实现功能分层部署与灵活组合，彻底破解传统警务中系统孤岛、数据割裂、接口不兼容的痛点；同时搭建标准化开放接口体系，打通公安内网、政务系统、应急平台等跨域资源，支持各类警务应用、终端设备与数据资源的无缝接入与高效协同。这一架构不仅让系统具备按需扩展、快速迭代的灵活性，更能推动警务数据实时共享、指令精准下达、资源动态调度，实现从单兵作战向联合作战的转型，全面提升警务协同实战中的响应速度、决策精度与处置效能，为复杂警务场景提供稳定、高效、智能的技术支撑。
+          </div>
         </div>
       </div>
-      <div class="demo_bottom_box">
-        <div class="demo_bottom_item">
-          <img src="/img/demo/download/qzxpt.png" alt="" />
-          <div class="demo_bottom_title">
-            情指行平台
-          </div>
-          <div class="demo_bottom_subtitle">
-            深化 “情指勤舆” 改革，构建三级平台五级联动，打造实战警务新模式。
-          </div>
-        </div>
-        <div class="demo_bottom_item">
-          <img src="/img/demo/download/wrjglpt.png" alt="" />
-          <div class="demo_bottom_title">
-            警用无人机管理平台
-          </div>
-          <div class="demo_bottom_subtitle">
-            坚持 “管战用督”，以无人机赋能巡逻安保与应急处突，实现全流程、多场景、跨警种应用。
+      <div class="right">
+        <img src="/img/demo/download/ga_img1.png" alt="" />
+      </div>
+    </div>
+    <div v-if="activeTab === 'item2'" class="item">
+      <div class="left">
+        <div class="left_top">
+          <div class="point" />
+          <div class="demo_bottom_subtitle size24">
+            建设情指行一体化实战平台，深化推进情指勤舆一体化实战化运行机制改革，提升合成作战水平，建设新型警务运行模式，进一步提升警务运行质效和实战能力。《公安信息化建设“十四五”规划（2021-2025年）情指勤舆一体化实战平台建设任务书》建设情指行一体化实战平台，构建部、省、市三级情报指挥平台，打造部、省、市、县、所“纵向贯通、横向关联”的五级联动应用建设，深化推进“情指勤舆”一体化实战化运行机制改革，突出服务实战导向，提升合成作战水平，完善实战运转模式，着力打造形成“风险防控全面精准、决策指挥高效顺畅、警务数据融合共享、警种优势合成作战、网上网下同步应对”的新型警务运行模式，进一步提升警务运行质效和实战能力。
           </div>
         </div>
-        <div class="demo_bottom_item">
-          <img src="/img/demo/download/zafktx.png" alt="" />
-          <div class="demo_bottom_title">
-            治安防控体系
-          </div>
-          <div class="demo_bottom_subtitle">
-            紧扣国省市要求，坚持科技引领，破解 “烟囱” 难题，构建立体化防控体系，争创全国示范。
-          </div>
-        </div>
-        <div class="demo_bottom_item">
-          <img src="/img/demo/download/ydjw.png" alt="" />
-          <div class="demo_bottom_title">
-            移动警务
-          </div>
-          <div class="demo_bottom_subtitle">
-            以 “开放分层解耦服务” 为核，依托智慧云与专线，通过微服务架构破解孤岛，提升警务协同实战力。
+      </div>
+      <div class="right">
+        <img src="/img/demo/download/ga_img2.png" alt="" />
+      </div>
+    </div>
+    <div v-if="activeTab === 'item3'" class="item">
+      <div class="left">
+        <div class="left_top">
+          <div class="point" />
+          <div class="demo_bottom_subtitle size24">
+            <span style="font-weight: 700;">管、战、用、督</span>
+            <br />
+            凭借机动、灵活以及高空视角的优势，警用无人机在日常巡逻勤务、警卫安保、侦查破案过程中扮演着“空中奇兵”的角色，对其设备及任务管控承担着至关重要的作用。高空治安巡逻：巡查指定区域，进行实时视频传输，特别是针对区域监控死角、盲区等。大型活动安保：对大型活动现场进行监管，可以通过搭载设备进行安保任务及人群疏散工作。应急处突防爆：应对突发安全类事件进行辅助处理，比如空中侦察、取证和空地联合抓捕。交通管理：应对交通类案件进行辅助执法取证和重点部位的交通巡视。无人机反制：对民用无人机违规飞行等行为进行空中干预和追捕。相关应用和管理单位：警保、特巡警（警航）、视频侦察等
           </div>
         </div>
-        <div class="demo_bottom_item">
-          <img src="/img/demo/download/jwxt.png" alt="" />
-          <div class="demo_bottom_title">
-            警务协同
-          </div>
-          <div class="demo_bottom_subtitle">
-            以警情、案件为核心，支持多终端组建协同群组，覆盖全场景警务协同。
-          </div>
-        </div>
-        <div class="demo_bottom_item">
-          <img src="/img/demo/download/rhtx.png" alt="" />
-          <div class="demo_bottom_title">
-            融合通信
-          </div>
-          <div class="demo_bottom_subtitle">
-            整合多通信方式，实现跨平台、警种无缝衔接，保障警务场景通信畅通，提升联动能力。
+      </div>
+      <div class="right">
+        <img src="/img/demo/download/ga_img3.png" alt="" />
+      </div>
+    </div>
+    <div v-if="activeTab === 'item4'" class="item">
+      <div class="left">
+        <div class="left_top">
+          <div class="point" />
+          <div class="demo_bottom_subtitle size24">
+            根据《全国公安机关社会治安防控体系建设指南》、《全国公安机关社会治安防控体系行动计划》、《社会治安防控体系实战业务应用系统技术规范》和《社会治安防控体系建设示范城市评测办法（征求意见稿）》等文件的建设要求，结合我市公安局工作实际，坚持科技引领、创新驱动，进一步完善应用支撑体系，提升基础设施对治安防控应用的支撑能力，填补治安防控应用空白，解决治安防控应用烟囱式发展问题，将我市社会治安防控体系建设提档升级，建设立体化信息化的社会治安防控系统，实现预警防范智能化、打击处置精准化、警务工作合成化、管理服务人性化的目标，推动我市公安工作跨越式发展，力争进入全国示范城市序列。
           </div>
         </div>
-        <div class="demo_bottom_item">
-          <img src="/img/demo/download/znt.png" alt="" />
-          <div class="demo_bottom_title">
-            场景化实战智能体
-          </div>
-          <div class="demo_bottom_subtitle">
-            以AI替代人工，提升警务服务效率。
-          </div>
-        </div>
-        <div class="demo_bottom_item">
-          <img src="/img/demo/download/spmj.png" alt="" />
-          <div class="demo_bottom_title">
-            视频门禁视频巡查
-          </div>
-          <div class="demo_bottom_subtitle">
-            聚焦公共安全预警，依托 “N+1+1+1” 框架构建立体防控体系，补强短板，提升实战能力。
+      </div>
+      <div class="right">
+        <img src="/img/demo/download/ga_img4.png" alt="" />
+      </div>
+    </div>
+    <div v-if="activeTab === 'item5'" class="item">
+      <div class="left">
+        <div class="left_top">
+          <div class="point" />
+          <div class="demo_bottom_subtitle size24">
+            警务协同系统是以警情、案件为核心,运用 警务通 或 公安网PC端 快速组建各类协同任务群组,实现 案件协同、警情协同、指挥协同、应急协同 等警务协同工作。<br />
+            警务协同系统把随机化、碎片化的警情、案件任务转化复刻到线上,并优化工作机制绑定成为硬性任务,大幅提升工作质效。
           </div>
         </div>
+      </div>
+      <div class="right">
+        <img src="/img/demo/download/ga_img5.png" alt="" />
+      </div>
+    </div>
+    <div v-if="activeTab === 'item6'" class="item">
+      <div class="left">
+        <div class="left_top">
+          <div class="point" />
+          <div class="demo_bottom_subtitle size24">
+            融合通信平台是面向现代警务打造的一体化技术支撑底座，它通过终端融合实现各类警务设备统一安全接入与通信，通过网络融合打破多类网络壁垒、实现资源互通，通过通信融合将语音、视频、数据等能力封装为基础服务总线，再通过分层解耦的能力共享机制向各业务系统开放通信、定位等能力，最终将通信与装备能力深度融入指挥调度、侦查办案等全业务场景，为现代移动警务提供强力科技支撑，全面提升警务工作的实战效能与智能化水平。
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <img src="/img/demo/download/ga_img6.png" alt="" />
+      </div>
+    </div>
+    <div v-if="activeTab === 'item7'" class="item">
+      <div class="left">
+        <div class="left_top">
+          <div class="point" />
+          <div class="demo_bottom_subtitle size24">
+            可面对面，表情生动的回答用户用户问题，辅助业务办理。利用人工智能代替人工打电话，解决政务重复性问询、宣贯、回访等工作。利用人工智能替代人工接听电话，解决各类咨询问题。利用人工智能回复各类文本信息，可接入公众号、app等。
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <img src="/img/demo/download/ga_img7.png" alt="" />
+      </div>
+    </div>
+    <div v-if="activeTab === 'item8'" class="item">
+      <div class="left">
+        <div class="left_top">
+          <div class="point" />
+          <div class="demo_bottom_subtitle size24">
+            公共安全一直是全社会关注的敏感焦点，每发生一起事件，均会引起大范围的重大影响。公共安全体系经过多年建设已经取得巨大进步，但仍然频频出现安全问题，亟需创新手段进行预防预警。重点部位包括学校、加油站、医院等地点。采用N+1+1+1的总体框架， N个报警监控设施、1个安保平台、1个安保APP/小程序、1项运营服务。如学校门卫值班室应设置一键式紧急报警装置，并与属地接警中心联网。
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <img src="/img/demo/download/ga_img8.png" alt="" />
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-
+import { ref } from 'vue'
 import { IosArrowForward } from '@vicons/ionicons4'
-import { NPopover, NIcon } from 'naive-ui'
+import { NIcon } from 'naive-ui'
+import { useRouter } from 'vue-router'
 
 definePageMeta({
   layout: 'demo',
@@ -168,9 +193,14 @@ definePageMeta({
   logo: '/img/demo/menu/ga.png'
 })
 
+const router = useRouter()
 const goDetail = () => {
-  window.open('http://oort.oortcloudsmart.com:21410/bus/apaas-web/desktopHome/index.html', '_blank')
+  router.push({
+    path: '/zh/demoIndex'
+  })
 }
+
+const activeTab = ref('item1')
 
 </script>
 
@@ -179,12 +209,14 @@ const goDetail = () => {
 .page_container {
   width: 100%;
   margin: 0 auto;
-  padding-bottom: 60px;
+  padding-bottom: 100px;
   // min-height: 1080px;
+}
+.demo_box{
   background-image: url("/img/demo/im/ga_bg.png");
   background-size: 100% 100%;
+  padding-bottom: 100px;
 }
-
 .demo_body {
   margin: 0 auto;
   width: 85%;
@@ -222,8 +254,8 @@ const goDetail = () => {
     position: relative;
     .img1 {
       position: absolute;
-      width: 560px;
-      height: 505px;
+      width: 800px;
+      height: 593px;
       right: 0;
       bottom: 0;
     }
@@ -278,7 +310,7 @@ const goDetail = () => {
     letter-spacing: 0;
     line-height: 22px;
     font-weight: 400;
-    margin: 10px 0;
+    // margin: 10px 0;
   }
   &_group {
     display: flex;
@@ -290,7 +322,7 @@ const goDetail = () => {
       display: flex;
       justify-content: center;
       align-items: center;
-      background-image: url("/img/demo/im/im_div_bg.png");
+      // background-image: url("/img/demo/im/im_div_bg.png");
       background-size: 100% 100%;
       span {
         font-size: 18px;
@@ -395,5 +427,79 @@ const goDetail = () => {
 }
 .size{
   font-size: 28px;
+}
+
+.size24{
+  font-size: 24px;
+  line-height: 46px;
+}
+
+.tab-switch {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  margin: 20px 0 80px 0;
+  padding: 0 120px;
+  border-bottom: 1px solid #dcdddf;
+}
+
+.tab-item {
+  font-size: 24px;
+  font-weight: 400;
+  padding-bottom: 20px;
+  cursor: pointer;
+  color: #666666;
+  margin-right: 63px;
+  transition: all 0.3s;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-item.active {
+  color: #333333;
+  border-bottom-color: #2278ff;
+  font-weight: 700;
+}
+.item{
+  width: 80%;
+  margin: 0 auto;
+  height: 560px;
+  display: flex;
+  justify-content: space-between;
+  .left{
+    width: 680px;
+    .left_top{
+      display: flex;
+      .point{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #4480FF;
+        flex-shrink: 0;
+        margin-top: 17px;
+        margin-right: 10px;
+      }
+    }
+    .left_bottom{
+      margin-top: 50px;
+      cursor: pointer;
+      font-size: 20px;
+      color: #3D3D3D;
+      display: flex;
+      align-items: center;
+      img{
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+      }
+    }
+
+  }
+  .right{
+    img{
+      width: 684px;
+      height: 460px;
+    }
+  }
+
 }
 </style>
