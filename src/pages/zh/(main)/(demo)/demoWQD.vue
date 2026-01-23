@@ -35,7 +35,7 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
           </a>
         </div>
         <div class="demo_body_pdf">
-          <a href="http://oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/cloud_disk/index.html?accessToken=g02dce3c79a42653f0314ae2e1bdbebd0" target="_blank">
+          <a href="http://prod.oort.oortcloudsmart.com:32610/oort/oortcloud-policefront/cloud_disk/index.html?accessToken=g02dce3c79a42653f0314ae2e1bdbebd0" target="_blank">
             <div class="demo_body_pdf_item">
               <img src="/img/demo/pdf_download.png" />
               <span>资料下载</span>
