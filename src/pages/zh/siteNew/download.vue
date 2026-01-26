@@ -30,7 +30,7 @@
                   <td>
                     <div class="download">
                       <img v-if="color.img1" :src="color.img1" alt="" @click="goGitHub(item.name)" />
-                      <img v-if="color.img2" :src="color.img2" alt="" />
+                      <img v-if="color.img2" :src="color.img2" alt="" @click="goDisk" />
                     </div>
                   </td>
                   <td>
@@ -152,19 +152,19 @@ const generalList = ref([
       name: 'Windows',
       type: 'Windows_desktop',
       img1: '/img/demo/download/GitHub.png',
-      img2: '/img/demo/download/Gitee.png'
+      img2: '/img/demo/download/disk.png'
     },
     {
       name: 'Mac',
       type: 'Mac_desktop',
       img1: '/img/demo/download/GitHub.png',
-      img2: '/img/demo/download/Gitee.png'
+      img2: '/img/demo/download/disk.png'
     },
     {
       name: 'Linux',
       type: 'Linux_desktop',
       img1: '/img/demo/download/GitHub.png',
-      img2: '/img/demo/download/Gitee.png'
+      img2: '/img/demo/download/disk.png'
     }]
   },
   {
@@ -175,25 +175,25 @@ const generalList = ref([
       name: 'Windows',
       type: 'Windows_studio',
       img1: '/img/demo/download/GitHub.png',
-      img2: '/img/demo/download/Gitee.png'
+      img2: '/img/demo/download/disk.png'
     },
     {
       name: 'Mac',
       type: 'Mac_studio',
       img1: '/img/demo/download/GitHub.png',
-      img2: '/img/demo/download/Gitee.png'
+      img2: '/img/demo/download/disk.png'
     },
     {
       name: 'Linux',
       type: 'Linux_studio',
       img1: '/img/demo/download/GitHub.png',
-      img2: '/img/demo/download/Gitee.png'
+      img2: '/img/demo/download/disk.png'
     },
     {
       name: '原始程序码',
       type: 'Source_code',
       img1: '/img/demo/download/GitHub.png',
-      img2: '/img/demo/download/Gitee.png'
+      img2: '/img/demo/download/disk.png'
     }]
   },
   {
@@ -296,6 +296,9 @@ const goProduceLog = (type) => {
   router.push(`/zh/community/productLog?type=${type}`)
 }
 
+const goDisk = () => {
+  window.open('http://oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/cloud_disk')
+}
 const goGitHub = (value) => {
   if (value === 'OortCloud AI Studio') {
     window.open('https://github.com/OortCloudGroup/OortStudio/releases')
