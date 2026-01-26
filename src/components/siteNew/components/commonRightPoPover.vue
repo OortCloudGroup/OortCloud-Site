@@ -238,8 +238,8 @@ const gotoApp = (action) => {
   justify-content: center;
   cursor: pointer;
   img {
-    width: 48px;
     height: 48px;
+    width: auto;
   }
   div {
     margin-top: 10px;

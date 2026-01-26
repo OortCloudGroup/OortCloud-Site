@@ -302,6 +302,237 @@ const softClick = (val) => {
     }
     emits('handle', obj)
   }
+  if (val.t === '移动视频') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/mobileVideo'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '知识库') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/knowledgeBase'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '博客') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/blog'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '可视化对讲') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/visualTalk'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === 'WorkUP Meet') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/workUPMeet'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '智慧会议室') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/smartMeeting'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '巡查任务') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/inspectTask'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '人力资源') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/humanResource'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '融合通信') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/fusionCommunication'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '线上商城') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/onlineShoppingMall'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '宿舍管理') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/dormitoryManagement'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '物业维修') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/propertyRepair'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '车辆管理') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/vehicleManagement'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '来访预约') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/visitAppointment'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '个人中心') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/personalCenters'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '智慧协同') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/smartCollaboration'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '项目管理') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/projectManagement'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '网站设计') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/websiteDesign'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === 'CRM') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/crm'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '财务管理') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/financialManagement'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '电子邮件') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/email'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '信息发布') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/informationRelease'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '工作圈') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/workCircle'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '打卡签到') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/clockInSignIn'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '工作汇报') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/workReport'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '新闻推送') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/newsPush'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '绩效管理') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/performanceManagement'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '无人值守仓库') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/warehouseManagement'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '无感考勤') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/noContactAttendance'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '无人值守管理柜') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/noContactManagementCabinet'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === '自助机') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/selfServiceMachine'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === 'AI宣传员') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/aiAdvertising'
+    }
+    emits('handle', obj)
+  }
+  if (val.t === 'AI摄像机') {
+    let obj = {
+      classify: '应用程序',
+      path: '/zh/siteNew/aiCamera'
+    }
+    emits('handle', obj)
+  }
 }
 
 watch(() => props.item, (newVal: any) => {
