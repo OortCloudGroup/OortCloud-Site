@@ -214,7 +214,7 @@ const goToTab = (tabKey: string) => {
     const target = document.getElementById(`tab-${tabKey}`)
 
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   })
 }
@@ -447,6 +447,7 @@ const goToTab = (tabKey: string) => {
   box-sizing: border-box;
   width: 100%;
   display: flex;
+  justify-content: space-around;
   padding: 20px 120px 0 120px;
   border-bottom: 1px solid #dcdddf;
   position: sticky;
@@ -460,7 +461,7 @@ const goToTab = (tabKey: string) => {
   font-weight: 400;
   cursor: pointer;
   color: #666666;
-  margin-right: 110px;
+  // margin-right: 110px;
   transition: all 0.3s;
   border-bottom: 3px solid transparent;
   padding-bottom: 20px;
@@ -506,7 +507,7 @@ const goToTab = (tabKey: string) => {
     }
   }
   .right{
-    padding-top: 80px;
+    padding-top: 110px;
     img{
       width: 684px;
       height: 460px;

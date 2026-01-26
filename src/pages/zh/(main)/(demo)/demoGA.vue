@@ -210,7 +210,7 @@ const goToTab = (tabKey: string) => {
     const target = document.getElementById(`tab-${tabKey}`)
 
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   })
 }
@@ -227,7 +227,7 @@ const goToTab = (tabKey: string) => {
 .demo_box{
   background-image: url("/img/demo/im/ga_bg.png");
   background-size: 100% 100%;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
 }
 .demo_body {
   margin: 0 auto;
@@ -450,6 +450,7 @@ const goToTab = (tabKey: string) => {
   box-sizing: border-box;
   width: 100%;
   display: flex;
+  justify-content: space-around;
   // margin: 0 0 50px 0;
   padding: 20px 120px 0 120px; // 调整 padding，包含上下内边距
   border-bottom: 1px solid #dcdddf;
@@ -465,11 +466,10 @@ const goToTab = (tabKey: string) => {
   font-weight: 400;
   cursor: pointer;
   color: #666666;
-  margin-right: 63px;
+  // margin-right: 63px;
   transition: all 0.3s;
   border-bottom: 3px solid transparent;
   padding-bottom: 20px;
-  // 移除原有 padding-bottom，避免和父元素 padding 冲突
 }
 
 .tab-item.active {
@@ -481,8 +481,8 @@ const goToTab = (tabKey: string) => {
   width: 80%;
   margin: 0 auto;
   display: flex;
-  height: 600px;
-  padding-top: 50px;
+  height: 550px;
+  padding-top: 110px;
   justify-content: space-between;
   .left{
     width: 680px;
