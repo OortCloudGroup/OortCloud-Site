@@ -410,7 +410,7 @@ const solutionMenu = ref<Menu[]>([
 
 const demoMenu = ref<MenuItem[]>([
   {
-    name: '公安',
+    name: '智慧公安',
     desc: '公安警务服务总线',
     logo: '/img/demo/menu/ga.png',
     link: '/demoGA'
@@ -486,10 +486,10 @@ const demoMenu = ref<MenuItem[]>([
   //   link: '/demoFZ'
   // },
   {
-    name: '宣传',
+    name: '智慧宣传',
     desc: '全媒体矩阵信息发布平台',
     logo: '/img/demo/menu/xc.png',
-    link: '/demoXCreator'
+    link: '/demoXC'
   }
 
 ])
