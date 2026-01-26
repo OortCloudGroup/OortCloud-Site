@@ -20,7 +20,7 @@
               <thead>
                 <tr>
                   <th>{{ item.name }}</th>
-                  <th>{{ item.Download }}</th>
+                  <th>{{ item.Link }}</th>
                   <th>{{ item.Changelog }}</th>
                 </tr>
               </thead>
@@ -49,7 +49,7 @@
               <thead>
                 <tr>
                   <th>{{ value.name }}</th>
-                  <th>{{ value.Download }}</th>
+                  <th>{{ value.Link }}</th>
                   <th>{{ value.Changelog }}</th>
                 </tr>
               </thead>
@@ -126,7 +126,7 @@ const router = useRouter()
 const generalList = ref([
   {
     name: 'OortCloud APP',
-    Download: 'Download',
+    Link: 'Link',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -146,7 +146,7 @@ const generalList = ref([
   },
   {
     name: 'OortCloud Desktop',
-    Download: 'Download',
+    Link: 'Link',
     Changelog: 'Changelog',
     list: [{
       name: 'Windows',
@@ -169,7 +169,7 @@ const generalList = ref([
   },
   {
     name: 'OortCloud AI Studio',
-    Download: 'Download',
+    Link: 'Link',
     Changelog: 'Changelog',
     list: [{
       name: 'Windows',
@@ -198,12 +198,43 @@ const generalList = ref([
   },
   {
     name: 'OORT.SH',
-    Download: 'Download',
+    Link: 'Link',
     Changelog: 'Changelog',
     list: [{
       name: 'Web',
       type: 'Web',
       img1: '/img/demo/download/Google.png'
+    }]
+  },
+  {
+    name: 'OORT.AI',
+    Link: 'Link',
+    Changelog: 'Changelog',
+    list: [{
+      name: 'Web',
+      type: 'Web',
+      img1: '/img/demo/download/Google.png'
+    }]
+  },
+  {
+    name: 'VLStream',
+    Link: 'Link',
+    Changelog: 'Changelog',
+    list: [{
+      name: 'Android',
+      type: 'Android',
+      img1: '/img/demo/download/downloadAndroid.png'
+    },
+    {
+      name: 'iOS',
+      type: 'iOS',
+      img1: '/img/demo/download/ios.png'
+    },
+    {
+      name: 'Windows',
+      type: 'Windows',
+      img1: '/img/demo/download/GitHub.png',
+      img2: '/img/demo/download/disk.png'
     }]
   }
 ])
@@ -211,7 +242,7 @@ const generalList = ref([
 const industryList = ref([
   {
     name: '指挥调度',
-    Download: 'Download',
+    Link: 'Link',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -231,7 +262,7 @@ const industryList = ref([
   },
   {
     name: 'AI智眼',
-    Download: 'Download',
+    Link: 'Link',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -251,7 +282,7 @@ const industryList = ref([
   },
   {
     name: '智慧园林',
-    Download: 'Download',
+    Link: 'Link',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -271,7 +302,7 @@ const industryList = ref([
   },
   {
     name: '智慧安保',
-    Download: 'Download',
+    Link: 'Link',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
