@@ -217,7 +217,44 @@ const scrollToItem = (id) => {
 // 初始化：加载本地数据（后续可替换为 API 调用）
 onMounted(async() => {
   // TODO: 后续从接口获取数据
-  const response = await fetch('https://myoumuamua.com/mystatic/changelog.json')
+
+  // 获取链接的type 请求对应的url
+  let changelogJSONUrl = 'https://myoumuamua.com/mystatic/changelog/'
+  let urlParams = new URLSearchParams(window.location.search)
+  let type = urlParams.get('type')
+  switch (type) {
+    case 'Android':
+      changelogJSONUrl += 'changelog_android.json'
+      break
+    case 'iOS':
+      changelogJSONUrl += 'changelog_ios.json'
+      break
+    case 'HarmonyOS':
+      changelogJSONUrl += 'changelog_harmony.json'
+      break
+
+    case 'Windows_desktop':
+    case 'Mac_desktop':
+    case 'Linux_desktop':
+      changelogJSONUrl += 'changelog_desktop.json'
+      break
+
+    case 'Windows_studio':
+    case 'Mac_studio':
+    case 'Linux_studio':
+      changelogJSONUrl += 'changelog_oortstudio.json'
+      break
+    case 'Web':
+      changelogJSONUrl += 'changelog_web.json'
+      break
+    case 'Source_code':
+      changelogJSONUrl += 'changelog.json'
+      break
+    default:
+      changelogJSONUrl += 'changelog.json'
+      break
+  }
+  const response = await fetch(changelogJSONUrl)
   const data = await response.json()
   changelog.value = data
 })

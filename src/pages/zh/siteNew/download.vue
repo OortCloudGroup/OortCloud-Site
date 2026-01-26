@@ -34,7 +34,7 @@
                     </div>
                   </td>
                   <td>
-                    <div class="download_lan" @click="goProduceLog(color.name)">
+                    <div class="download_lan" @click="goProduceLog(color.type)">
                       Changelog
                     </div>
                   </td>
@@ -62,7 +62,7 @@
                     </div>
                   </td>
                   <td>
-                    <div class="download_lan" @click="goProduceLog(color.name)">
+                    <div class="download_lan" @click="goProduceLog(color.type)">
                       Changelog
                     </div>
                   </td>
@@ -130,14 +130,17 @@ const generalList = ref([
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
+      type: 'Android',
       img1: '/img/demo/download/downloadAndroid.png'
     },
     {
       name: 'iOS',
+      type: 'iOS',
       img1: '/img/demo/download/ios.png'
     },
     {
       name: 'HarmonyOS',
+      type: 'HarmonyOS',
       img1: '/img/demo/download/HarmonyOS.png'
     }]
   },
@@ -147,16 +150,19 @@ const generalList = ref([
     Changelog: 'Changelog',
     list: [{
       name: 'Windows',
+      type: 'Windows_desktop',
       img1: '/img/demo/download/GitHub.png',
       img2: '/img/demo/download/Gitee.png'
     },
     {
       name: 'Mac',
+      type: 'Mac_desktop',
       img1: '/img/demo/download/GitHub.png',
       img2: '/img/demo/download/Gitee.png'
     },
     {
       name: 'Linux',
+      type: 'Linux_desktop',
       img1: '/img/demo/download/GitHub.png',
       img2: '/img/demo/download/Gitee.png'
     }]
@@ -167,21 +173,25 @@ const generalList = ref([
     Changelog: 'Changelog',
     list: [{
       name: 'Windows',
+      type: 'Windows_studio',
       img1: '/img/demo/download/GitHub.png',
       img2: '/img/demo/download/Gitee.png'
     },
     {
       name: 'Mac',
+      type: 'Mac_studio',
       img1: '/img/demo/download/GitHub.png',
       img2: '/img/demo/download/Gitee.png'
     },
     {
       name: 'Linux',
+      type: 'Linux_studio',
       img1: '/img/demo/download/GitHub.png',
       img2: '/img/demo/download/Gitee.png'
     },
     {
       name: '原始程序码',
+      type: 'Source_code',
       img1: '/img/demo/download/GitHub.png',
       img2: '/img/demo/download/Gitee.png'
     }]
@@ -192,6 +202,7 @@ const generalList = ref([
     Changelog: 'Changelog',
     list: [{
       name: 'Web',
+      type: 'Web',
       img1: '/img/demo/download/Google.png'
     }]
   }
@@ -204,14 +215,17 @@ const industryList = ref([
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
+      type: 'Android_zhdd',
       img1: '/img/demo/download/downloadAndroid.png'
     },
     {
       name: 'iOS',
+      type: 'iOS_zhdd',
       img1: '/img/demo/download/ios.png'
     },
     {
       name: 'HarmonyOS',
+      type: 'HarmonyOS_zhdd',
       img1: '/img/demo/download/HarmonyOS.png'
     }]
   },
@@ -221,14 +235,17 @@ const industryList = ref([
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
+      type: 'Android_aizy',
       img1: '/img/demo/download/downloadAndroid.png'
     },
     {
       name: 'iOS',
+      type: 'iOS_aizy',
       img1: '/img/demo/download/ios.png'
     },
     {
       name: 'HarmonyOS',
+      type: 'HarmonyOS_aizy',
       img1: '/img/demo/download/HarmonyOS.png'
     }]
   },
@@ -238,14 +255,17 @@ const industryList = ref([
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
+      type: 'Android_zhyl',
       img1: '/img/demo/download/downloadAndroid.png'
     },
     {
       name: 'iOS',
+      type: 'iOS_zhyl',
       img1: '/img/demo/download/ios.png'
     },
     {
       name: 'HarmonyOS',
+      type: 'HarmonyOS_zhyl',
       img1: '/img/demo/download/HarmonyOS.png'
     }]
   },
@@ -255,22 +275,25 @@ const industryList = ref([
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
+      type: 'Android_zhab',
       img1: '/img/demo/download/downloadAndroid.png'
     },
     {
       name: 'iOS',
+      type: 'iOS_zhab',
       img1: '/img/demo/download/ios.png'
     },
     {
       name: 'HarmonyOS',
+      type: 'HarmonyOS_zhab',
       img1: '/img/demo/download/HarmonyOS.png'
     }]
   }
 ])
 const activeTab = ref('general')
 
-const goProduceLog = (name) => {
-  router.push(`/zh/community/productLog?type=${name}`)
+const goProduceLog = (type) => {
+  router.push(`/zh/community/productLog?type=${type}`)
 }
 
 const goGitHub = (value) => {
