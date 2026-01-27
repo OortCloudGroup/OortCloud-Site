@@ -367,7 +367,8 @@ const section2 = ref(null)
 const scrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId)
   if (element) {
-    const offset = 120
+    const viewportHeight = window.innerHeight
+    const offset = viewportHeight * 0.15
     const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
     window.scrollTo({
       top: elementPosition - offset,
@@ -576,7 +577,8 @@ onUnmounted(() => {
 }
 
 .CloudBox {
-  padding-bottom: 100px;
+  padding-top: 30px;
+  padding-bottom: 130px;
   justify-content: space-between;
   align-items: flex-start;
 
@@ -897,22 +899,27 @@ onUnmounted(() => {
 }
 
 .tabSwitch{
+  position: sticky;
+  top: 82px;
+  background-color: #fff;
+  z-index: 9;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 120px;
   border-bottom: 0.5px solid #DFDFDF;
   margin-bottom: 160px;
+  padding-top: 10px;
   .tabItem{
     display: flex;
     flex-direction: column;
     align-items: center;
     .tabTitle{
       color: #666666;
-      font-size: 32px;
+      font-size: 28px;
       letter-spacing: 2.67px;
       text-align: left;
-      margin-bottom: 18px;
+      margin-bottom: 10px;
     }
     .line{
       width: 64px;
@@ -930,8 +937,8 @@ onUnmounted(() => {
   }
 }
 
-#section0, #section1, #section2 {
-  padding-top: 20px;
-  margin-top: -20px;
-}
+// #section0, #section1, #section2 {
+//   padding-top: 100px;
+//   margin-top: -100px;
+// }
 </style>

@@ -29,7 +29,7 @@
       <img class="platTopOutImg" src="@/assets/software/workApp.png" alt="" />
     </div>
     <div class="w1380 webBottomImg">
-      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
+      <video class="wBImg" src="/documents/superAPP.mp4" controls autoplay muted />
     </div>
     <div class="tabSwitch">
       <div class="tabItem" @click="scrollToSection('section1')">
@@ -461,7 +461,7 @@
         <div class="proTitleBox_c_t">
           OORTCLOUD AI 原生 IDE，智能编码，一触即发
         </div>
-        <div class="proTitleBox_c_t1">
+        <div class="proTitleBox_c_t1" @click="viewPath('/zh/siteNew/oortVS')">
           查看详情
         </div>
       </div>
@@ -580,6 +580,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useRouter } from 'vue-router'
 import product5_1 from '@/assets/VLimg2.0/product5_1.png'
 import product5_2 from '@/assets/VLimg2.0/product5_2.png'
 import product5_3 from '@/assets/VLimg2.0/product5_3.png'
@@ -601,16 +602,16 @@ definePageMeta({
 const activeSection = ref('section1')
 const section1 = ref(null)
 const section2 = ref(null)
-// const section3 = ref(null)
-// const section4 = ref(null)
-// const section5 = ref(null)
-// const section6 = ref(null)
-// const section7 = ref(null)
+const section3 = ref(null)
+const section4 = ref(null)
+const section5 = ref(null)
+const section6 = ref(null)
 
 const scrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId)
   if (element) {
-    const offset = 120
+    const viewportHeight = window.innerHeight
+    const offset = viewportHeight * 0.15
     const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
     window.scrollTo({
       top: elementPosition - offset,
@@ -618,7 +619,6 @@ const scrollToSection = (sectionId) => {
     })
   }
 }
-
 // 超级APP底座
 const superItems = ref([
   {
@@ -691,6 +691,58 @@ const downloadPDF = () => {
   link.href = '/documents/超级APP@1x.pdf'
   link.download = '超级APP@1x.pdf'
   link.click()
+}
+
+const router = useRouter()
+const viewPath = (path) => {
+  if (router.currentRoute.value.path === path) {
+    window?.scrollTo(0, 0)
+  }
+  router.push({ path })
+}
+
+let scrollListener = null
+
+onMounted(() => {
+  // 页面加载完成后监听滚动
+  scrollListener = () => {
+    updateActiveSection()
+  }
+  window.addEventListener('scroll', scrollListener)
+  // 初始化时执行一次，确保默认激活项正确
+  updateActiveSection()
+})
+
+onUnmounted(() => {
+  // 组件销毁时移除监听，防止内存泄漏
+  window.removeEventListener('scroll', scrollListener)
+})
+
+// 核心：更新激活的标签项
+const updateActiveSection = () => {
+  const sections = [
+    { id: 'section1', ref: section1 },
+    { id: 'section2', ref: section2 },
+    { id: 'section3', ref: section3 },
+    { id: 'section4', ref: section4 },
+    { id: 'section5', ref: section5 },
+    { id: 'section6', ref: section6 }
+  ]
+
+  const scrollPosition = window.scrollY + 200
+
+  for (const section of sections) {
+    const element = section.ref.value
+    if (element) {
+      const offsetTop = element.offsetTop
+      const offsetHeight = element.offsetHeight
+
+      if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+        activeSection.value = section.id
+        break
+      }
+    }
+  }
 }
 </script>
 
@@ -857,7 +909,8 @@ const downloadPDF = () => {
 }
 
 .CloudBox {
-  padding-bottom: 160px;
+  padding-top: 30px;
+  padding-bottom: 130px;
   justify-content: space-between;
   align-items: flex-start;
 
@@ -1179,22 +1232,28 @@ const downloadPDF = () => {
 }
 
 .tabSwitch{
+  position: sticky;
+  top: 82px;
+  background-color: #fff;
+  z-index: 9;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 120px;
   border-bottom: 0.5px solid #DFDFDF;
-  margin-bottom: 160px;
+  padding-top: 10px;
+  margin-bottom: 130px;
   .tabItem{
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
     .tabTitle{
       color: #666666;
-      font-size: 32px;
+      font-size: 28px;
       letter-spacing: 2.67px;
       text-align: left;
-      margin-bottom: 18px;
+      margin-bottom: 10px;
     }
     .line{
       width: 64px;
@@ -1213,6 +1272,7 @@ const downloadPDF = () => {
 }
 
 .item_list{
+  padding-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1241,9 +1301,10 @@ const downloadPDF = () => {
 }
 
 .privateBox{
-  padding-bottom: 160px;
+  padding-bottom: 130px;
 
   .title_l_box{
+    padding-top: 20px;
     padding-bottom: 40px;
   }
   .title_l_plus{
@@ -1405,6 +1466,7 @@ const downloadPDF = () => {
   display: flex;
 }
 .openPlatform_title{
+  padding-top: 30px;
   margin-bottom: 20px;
   font-size: 58px;
   font-weight: bold;
@@ -1438,7 +1500,7 @@ const downloadPDF = () => {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
-  margin-bottom: 160px;
+  margin-bottom: 130px;
 }
 .tool_item{
   width: 670px;
@@ -1481,6 +1543,7 @@ const downloadPDF = () => {
 }
 
 .proTitleBox_c_t1 {
+  cursor: pointer;
   color: #2278FF;
   font-weight: normal;
   font-size: 20px;

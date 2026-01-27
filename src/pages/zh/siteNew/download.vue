@@ -20,7 +20,7 @@
               <thead>
                 <tr>
                   <th>{{ item.name }}</th>
-                  <th>{{ item.Link }}</th>
+                  <th>{{ item.download }}</th>
                   <th>{{ item.Changelog }}</th>
                 </tr>
               </thead>
@@ -29,8 +29,8 @@
                   <td>{{ color.name }}</td>
                   <td>
                     <div class="download">
-                      <img v-if="color.img1" :src="color.img1" alt="" @click="goGitHub(item.name)" />
-                      <img v-if="color.img2" :src="color.img2" alt="" @click="goDisk" />
+                      <img v-if="color.img1" :src="color.img1" alt="" @click="goGitHub(item)" />
+                      <img v-if="color.img2" :src="color.img2" alt="" @click="goDisk(color.img2)" />
                     </div>
                   </td>
                   <td>
@@ -113,20 +113,60 @@
         </div>
       </div>
     </div>
+    <n-modal
+      v-model:show="logDialogVisible"
+      preset="card"
+      title="版本更新日志"
+      :style="{ width: '70%', height: `${viewHeight * 0.8}px` }"
+    >
+      <iframe
+        :src="logIframeSrc"
+        style="width: 100%; height: 100%; border: none"
+      />
+    </n-modal>
   </div>
 </template>
 
 <script setup>
 // import { download } from 'naive-ui/es/_utils'
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref, onMounted, onUnmounted } from 'vue'
+// import { useRouter } from 'vue-router'
+import { NModal } from 'naive-ui'
 
-const router = useRouter()
+// 新增：弹窗控制变量
+const logDialogVisible = ref(false)
+const logIframeSrc = ref('')
+
+// 新增：定义视口高度变量
+const viewHeight = ref(window.innerHeight)
+
+// 新增：更新视口高度的方法
+const updateViewHeight = () => {
+  viewHeight.value = window.innerHeight
+}
+
+// 新增：组件挂载时监听窗口大小变化
+onMounted(() => {
+  window.addEventListener('resize', updateViewHeight)
+})
+
+// 新增：组件卸载时移除监听，防止内存泄漏
+onUnmounted(() => {
+  window.removeEventListener('resize', updateViewHeight)
+})
+
+// 修改：goProduceLog 函数
+const goProduceLog = (type) => {
+  logIframeSrc.value = `https://www.oortcloudsmart.com/zh/community/productLog?type=${type}`
+  logDialogVisible.value = true
+}
+
+// const router = useRouter()
 
 const generalList = ref([
   {
     name: 'OortCloud APP',
-    Link: 'Link',
+    download: 'download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -146,7 +186,7 @@ const generalList = ref([
   },
   {
     name: 'OortCloud Desktop',
-    Link: 'Link',
+    download: 'download',
     Changelog: 'Changelog',
     list: [{
       name: 'Windows',
@@ -169,7 +209,7 @@ const generalList = ref([
   },
   {
     name: 'OortCloud AI Studio',
-    Link: 'Link',
+    download: 'download',
     Changelog: 'Changelog',
     list: [{
       name: 'Windows',
@@ -198,7 +238,7 @@ const generalList = ref([
   },
   {
     name: 'OORT.SH',
-    Link: 'Link',
+    download: 'link',
     Changelog: 'Changelog',
     list: [{
       name: 'Web',
@@ -208,7 +248,7 @@ const generalList = ref([
   },
   {
     name: 'OORT.AI',
-    Link: 'Link',
+    download: 'link',
     Changelog: 'Changelog',
     list: [{
       name: 'Web',
@@ -218,7 +258,7 @@ const generalList = ref([
   },
   {
     name: 'VLStream',
-    Link: 'Link',
+    download: 'download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -242,7 +282,7 @@ const generalList = ref([
 const industryList = ref([
   {
     name: '指挥调度',
-    Link: 'Link',
+    download: 'download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -262,7 +302,7 @@ const industryList = ref([
   },
   {
     name: 'AI智眼',
-    Link: 'Link',
+    download: 'download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -282,7 +322,7 @@ const industryList = ref([
   },
   {
     name: '智慧园林',
-    Link: 'Link',
+    download: 'download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -302,7 +342,7 @@ const industryList = ref([
   },
   {
     name: '智慧安保',
-    Link: 'Link',
+    download: 'download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -323,16 +363,22 @@ const industryList = ref([
 ])
 const activeTab = ref('general')
 
-const goProduceLog = (type) => {
-  router.push(`/zh/community/productLog?type=${type}`)
-}
+// const goProduceLog = (type) => {
+//   window.open(`https://www.oortcloudsmart.com/zh/community/productLog?type=${type}`)
+// }
 
-const goDisk = () => {
-  window.open('http://oort.oortcloudsmart.com:31610/oort/oortcloud-policefront/cloud_disk')
+const goDisk = (value) => {
+  if (value === '/img/demo/download/disk.png') {
+    window.open('http://prod.oort.oortcloudsmart.com:32610/oort/oortcloud-policefront/cloud_disk/index.html?accessToken=g02dce3c79a42653f0314ae2e1bdbebd0')
+  }
 }
 const goGitHub = (value) => {
-  if (value === 'OortCloud AI Studio') {
+  if (value.name === 'OortCloud AI Studio') {
     window.open('https://github.com/OortCloudGroup/OortStudio/releases')
+  } else if (value.name === 'OORT.SH') {
+    window.open('https://sh.oortcloudsmart.com/zh/')
+  } else if (value.name === 'OORT.AI') {
+    window.open('https://ai.oortcloudsmart.com/zh/')
   }
 }
 definePageMeta({

@@ -197,9 +197,9 @@ import oortImg1 from '@/assets/img/oortVS_img9.png'
 import oortImg2 from '@/assets/img/oortVS_img10.png'
 import oortImg3 from '@/assets/img/oortVS_img11.png'
 import oortImg4 from '@/assets/img/oortVS_img12.png'
-// import oortImg5 from '@/assets/img/oortVS_img13.png'
-// import oortImg6 from '@/assets/img/oortVS_img14.png'
-// import oortImg7 from '@/assets/img/oortVS_img15.png'
+import oortImg5 from '@/assets/img/oortVS_img13.png'
+import oortImg6 from '@/assets/img/oortVS_img14.png'
+import oortImg7 from '@/assets/img/oortVS_img15.png'
 
 definePageMeta({
   layout: 'site-new'
@@ -230,17 +230,17 @@ const practiceItems = ref([
   {
     title: '低代码开发',
     description: '支持安卓原生、移动端H5、VUE、uni-app、MUI、PC Web、PC 原生低代码开发',
-    image: oortImg4
+    image: oortImg5
   },
   {
     title: '无代码开发',
     description: '支持图表设计、门户设计、大屏设计、报表设计、表单设计、应用设计无代码开发',
-    image: oortImg4
+    image: oortImg6
   },
   {
     title: '数据开发 ',
     description: '无下载、图形化拖拽开发，覆盖数据处理、分析、可视化等全流程。一键初始化浏览器环境',
-    image: oortImg4
+    image: oortImg7
   }
 ])
 const activeIndexpractice = ref(0)

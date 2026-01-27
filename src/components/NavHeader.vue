@@ -802,7 +802,7 @@ const backToHome = () => {
 .demo_div {
   display: flex;
   flex-wrap: wrap;
-  width: 750px;
+  width: 710px;
   padding: 0px;
   gap: 0px;
   background: #fff;
@@ -820,7 +820,7 @@ const backToHome = () => {
     cursor: pointer;
     display: flex;
     flex-direction: row;
-    width: 360px;
+    width: 340px;
     margin: 4px;
     padding:8px 0;
     img {

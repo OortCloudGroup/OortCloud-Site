@@ -104,7 +104,7 @@ const input = ref('')
 const list = ref([])
 list.value = [
   {
-    title: '商务展-台湾',
+    title: '商务展-中国台湾',
     classify: '商务展',
     img: Img1,
     location: '台湾'

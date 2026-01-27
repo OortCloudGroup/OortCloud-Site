@@ -619,7 +619,8 @@ const section7 = ref(null)
 const scrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId)
   if (element) {
-    const offset = 120
+    const viewportHeight = window.innerHeight
+    const offset = viewportHeight * 0.15
     const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
     window.scrollTo({
       top: elementPosition - offset,
@@ -1257,6 +1258,11 @@ const viewPath = (path) => {
 }
 
 .tabSwitch{
+  position: sticky;
+  top: 82px;
+  background-color: #fff;
+  z-index: 9;
+  padding-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1264,15 +1270,16 @@ const viewPath = (path) => {
   border-bottom: 0.5px solid #DFDFDF;
   margin-bottom: 160px;
   .tabItem{
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
     .tabTitle{
       color: #666666;
-      font-size: 32px;
+      font-size: 28px;
       letter-spacing: 2.67px;
       text-align: left;
-      margin-bottom: 18px;
+      margin-bottom: 10px;
     }
     .line{
       width: 64px;
