@@ -95,7 +95,7 @@
             </div>
             <div class="flexRowAC">
               <a class="b_ser_text hover" href=" https://ai.oortcloudsmart.com/" target="_blank">
-                OORT.AI 数智平台
+                OORT.AI 智能体平台
               </a>
             </div>
             <div class="flexRowAC">

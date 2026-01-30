@@ -8,10 +8,10 @@
         <div class="flexRow">
           <div>
             <div class="title1">
-              OORTCLOUD Visual Studio
+              OortCloud AI Studio
             </div>
             <div class="title2">
-              OORTCLOUD AI 原生 IDE，智能编码，一触即发
+              万物智能、自主服务 —— 场景化实战智能体平台
             </div>
           </div>
         </div>
@@ -200,6 +200,8 @@ import oortImg4 from '@/assets/img/oortVS_img12.png'
 import oortImg5 from '@/assets/img/oortVS_img13.png'
 import oortImg6 from '@/assets/img/oortVS_img14.png'
 import oortImg7 from '@/assets/img/oortVS_img15.png'
+import oortImg8 from '@/assets/img/oortVS_img20.png'
+import oortImg9 from '@/assets/img/oortVS_img21.png'
 
 definePageMeta({
   layout: 'site-new'
@@ -241,6 +243,16 @@ const practiceItems = ref([
     title: '数据开发 ',
     description: '无下载、图形化拖拽开发，覆盖数据处理、分析、可视化等全流程。一键初始化浏览器环境',
     image: oortImg7
+  },
+  {
+    title: 'GIS 开发 ',
+    description: '依托地理信息系统，实现地图展示、位置定位、轨迹查询等功能，服务多行业空间场景的开发工作',
+    image: oortImg8
+  },
+  {
+    title: '模型标注与训练 ',
+    description: '先对数据进行精准标注，构建高质量数据集，再开展模型训练，优化参数提升 AI 性能',
+    image: oortImg9
   }
 ])
 const activeIndexpractice = ref(0)

@@ -361,7 +361,7 @@
                 </a>
               </div>
               <div class="fontSize1 space1">
-                OORT.AI 数智平台
+                OORT.AI 智能体平台
               </div>
               <div class="fontSize1 space2">
                 <!-- 面向<span class="blue">AI时代</span>的新型数据底座 -->
