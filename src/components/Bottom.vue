@@ -44,7 +44,7 @@
             </div>
             <div class="flexRowAC">
               <div class="b_ser_text hover" @click="viewPath('/zh/community/productLog',0)">
-                产品日志
+                更新日志
               </div>
             </div>
           </div>
