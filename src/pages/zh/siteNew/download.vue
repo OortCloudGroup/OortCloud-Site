@@ -49,7 +49,7 @@
               <thead>
                 <tr>
                   <th>{{ value.name }}</th>
-                  <th>{{ value.Link }}</th>
+                  <th>{{ value.download }}</th>
                   <th>{{ value.Changelog }}</th>
                 </tr>
               </thead>
@@ -113,60 +113,20 @@
         </div>
       </div>
     </div>
-    <n-modal
-      v-model:show="logDialogVisible"
-      preset="card"
-      title="版本更新日志"
-      :style="{ width: '70%', height: `${viewHeight * 0.8}px` }"
-    >
-      <iframe
-        :src="logIframeSrc"
-        style="width: 100%; height: 100%; border: none"
-      />
-    </n-modal>
   </div>
 </template>
 
 <script setup>
 // import { download } from 'naive-ui/es/_utils'
-import { ref, onMounted, onUnmounted } from 'vue'
-// import { useRouter } from 'vue-router'
-import { NModal } from 'naive-ui'
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
-// 新增：弹窗控制变量
-const logDialogVisible = ref(false)
-const logIframeSrc = ref('')
-
-// 新增：定义视口高度变量
-const viewHeight = ref(window.innerHeight)
-
-// 新增：更新视口高度的方法
-const updateViewHeight = () => {
-  viewHeight.value = window.innerHeight
-}
-
-// 新增：组件挂载时监听窗口大小变化
-onMounted(() => {
-  window.addEventListener('resize', updateViewHeight)
-})
-
-// 新增：组件卸载时移除监听，防止内存泄漏
-onUnmounted(() => {
-  window.removeEventListener('resize', updateViewHeight)
-})
-
-// 修改：goProduceLog 函数
-const goProduceLog = (type) => {
-  logIframeSrc.value = `https://www.oortcloudsmart.com/zh/community/productLog?type=${type}`
-  logDialogVisible.value = true
-}
-
-// const router = useRouter()
+const router = useRouter()
 
 const generalList = ref([
   {
     name: 'OortCloud APP',
-    download: 'download',
+    download: 'Download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -186,7 +146,7 @@ const generalList = ref([
   },
   {
     name: 'OortCloud Desktop',
-    download: 'download',
+    download: 'Download',
     Changelog: 'Changelog',
     list: [{
       name: 'Windows',
@@ -209,7 +169,7 @@ const generalList = ref([
   },
   {
     name: 'OortCloud AI Studio',
-    download: 'download',
+    download: 'Download',
     Changelog: 'Changelog',
     list: [{
       name: 'Windows',
@@ -238,7 +198,7 @@ const generalList = ref([
   },
   {
     name: 'OORT.SH',
-    download: 'link',
+    download: 'Link',
     Changelog: 'Changelog',
     list: [{
       name: 'Web',
@@ -248,7 +208,7 @@ const generalList = ref([
   },
   {
     name: 'OORT.AI',
-    download: 'link',
+    download: 'Link',
     Changelog: 'Changelog',
     list: [{
       name: 'Web',
@@ -258,7 +218,7 @@ const generalList = ref([
   },
   {
     name: 'VLStream',
-    download: 'download',
+    download: 'Download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -282,7 +242,7 @@ const generalList = ref([
 const industryList = ref([
   {
     name: '指挥调度',
-    download: 'download',
+    download: 'Download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -302,7 +262,7 @@ const industryList = ref([
   },
   {
     name: 'AI智眼',
-    download: 'download',
+    download: 'Download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -322,7 +282,7 @@ const industryList = ref([
   },
   {
     name: '智慧园林',
-    download: 'download',
+    download: 'Download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -342,7 +302,7 @@ const industryList = ref([
   },
   {
     name: '智慧安保',
-    download: 'download',
+    download: 'Download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -363,9 +323,10 @@ const industryList = ref([
 ])
 const activeTab = ref('general')
 
-// const goProduceLog = (type) => {
-//   window.open(`https://www.oortcloudsmart.com/zh/community/productLog?type=${type}`)
-// }
+const goProduceLog = (type) => {
+  router.push(`/zh/community/productLog?type=${type}`)
+  // window.open(`https://www.oortcloudsmart.com/zh/community/productLog?type=${type}`)
+}
 
 const goDisk = (value) => {
   if (value === '/img/demo/download/disk.png') {

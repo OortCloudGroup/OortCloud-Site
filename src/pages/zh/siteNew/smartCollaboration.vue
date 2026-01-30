@@ -5,7 +5,7 @@
         智慧协同
       </div>
       <div class="plat_cent">
-        打破信息壁垒，筑牢发展根基：智能化知识库实践路径
+        基于移动互联网的高效协作与管理赋能平台
       </div>
       <div class="flexRowAC useBox">
         <div class="seeMore">
@@ -19,44 +19,44 @@
         </div>
       </div>
     </div>
-    <div class="w1380 webBottomImg">
+    <!-- <div class="w1380 webBottomImg">
       <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
-    </div>
+    </div> -->
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
-          智能检索
+          实时协作
         </div>
         <div class="cl_d">
-          支持全文检索、语义检索、多维度筛选，基于AI算法精准匹配知识内容，毫秒级响应检索请求，支持PDF/Word/视频/音频等多格式文件内容检索。
+          打破沟通壁垒，开启高效协同新体验
         </div>
       </div>
-      <img class="approval_c1" src="@/assets/software/approval_c1.png" alt="" />
+      <img class="approval_c1" src="@/assets/software/zhxt_img1.png" alt="" />
     </div>
     <div class="w1380 CloudBox ipcView  flexRowAC">
-      <img class="approval_c2" src="@/assets/software/approval_c2.png" alt="" />
+      <img class="approval_c2" src="@/assets/software/zhxt_img2.png" alt="" />
       <div class="CloudL" style="text-align: left">
         <div class="cl_t">
-          协同创作
+          任务管理
         </div>
         <div class="cl_d">
-          多人实时在线编辑，版本追溯与对比，支持评论批注、权限分级管理，企业内外部人员可按需协作，加速知识沉淀与更新。
+          精准分配追踪，推动目标高效落地
         </div>
       </div>
     </div>
     <div class="w1380 ipcView CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
-          权限与安全
+          文档共享
         </div>
         <div class="cl_d">
-          精细化权限管控，支持按部门/角色/人员分级授权，操作日志全程记录，数据加密存储，支持水印防泄露，满足企业级数据安全要求。
+          云端实时同步，打造团队知识宝库
         </div>
       </div>
-      <img class="approval_c3" src="@/assets/software/approval_c3.png" alt="" />
+      <img class="approval_c3" src="@/assets/software/zhxt_img3.png" alt="" />
     </div>
     <!-- 成功案例 -->
-    <div class="productBox w1380">
+    <!-- <div class="productBox w1380">
       <div class="proT">
         成功案例
       </div>
@@ -82,7 +82,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="productBox w1380">
       <div class="proT">
         现在开始体验
@@ -692,17 +692,20 @@ p5Arr.value = [
 }
 
 .approval_c1 {
-  width: 734px;
+  border-radius: 24px;
+  width: 700px;
   height: auto;
 }
 
 .approval_c2 {
-  width: 702px;
+  border-radius: 24px;
+  width: 700px;
   height: auto;
 }
 
 .approval_c3 {
-  width: 587px;
+  border-radius: 24px;
+  width: 700px;
   height: auto;
 }
 
