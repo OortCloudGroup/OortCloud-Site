@@ -49,16 +49,20 @@
           <div class="contactUs_icon flexRowAC">
             <img class="contactUs_i1" src="@/assets/software/contactUs_i2.png" alt="" />
             联系邮箱
-            <span>zhangxuellan@oortcloudsmart.com</span>
+            <span>zhangxuelian@oortcloudsmart.com</span>
           </div>
           <div class="contactUs_icon flexRowAC">
             <img class="contactUs_i1" src="@/assets/software/contactUs_i3.png" alt="" />
             公司地址
-            <span>广东省深圳市罗湖区人民北路3131号水产大厦17K</span>
+            <span>广东省深圳市罗湖区人民北路3131号水产大厦15楼</span>
           </div>
         </div>
       </div>
       <img class="contactUs_bg2" src="@/assets/software/contactUs_bg2.png" alt="" />
+    </div>
+    <div class="w1380 wechat">
+      <div>扫码加微信</div>
+      <img src="@/assets/software/bossWechat.jpg" alt="" />
     </div>
     <div class="w1380" style="padding-bottom: 110px;">
       <img class="contactUs_bg3 w1380" src="@/assets/software/contactUs_bg3.png" alt="" />
@@ -633,7 +637,7 @@ let value = ref('')
 }
 
 .platTopOut.us {
-  padding-bottom: 54px;
+  // padding-bottom: 54px;
   .platTop {
     padding: 0;
 
@@ -650,6 +654,17 @@ let value = ref('')
   border-left: 6px solid #2278FF;
   padding-left: 10px;
   color: #2278FF;
+}
+.wechat{
+  color: #333333;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 40px;
+  img{
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+  }
 }
 
 </style>

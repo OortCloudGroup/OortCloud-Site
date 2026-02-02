@@ -80,7 +80,13 @@
         <div class="email">
           咨询邮箱
           <div class="email-number">
-            zhangxuelian@oortcloud<br />smart.com
+            zhangxuelian@oort<br />cloudsmart.com
+          </div>
+        </div>
+        <div class="email">
+          扫码加微信
+          <div class="wechat">
+            <img src="@/assets/software/bossWechat.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -172,6 +178,7 @@ width: 120px;
 line-height: 40px;
 border-radius: 8px;
 margin-top: 20px;
+margin-bottom: 15px;
 background-color: #2278ff;
 color: #fff;
 }
@@ -208,8 +215,8 @@ color: #fff;
     justify-content: center;
     .telephone{
       text-align: left;
-      width: 230px;
-      padding:30px;
+      // width: 200px;
+      padding:15px;
       margin-right: 20px;
       background-color: #fff;
       border-radius: 8px;
@@ -221,12 +228,20 @@ color: #fff;
     }
     .email{
       text-align: left;
-      width: 230px;
-      padding:20px;
+      // width: 200px;
+      padding:15px;
+      margin-right: 20px;
       background-color: #fff;
       border-radius: 8px;
+      .wechat{
+        margin-top: 5px;
+        img{
+          width: 100px;
+          height: 100px;
+        }
+      }
       .email-number{
-        width: 230px;
+        // width: 230px;
         margin-top: 5px;
         font-size: 20px;
         color: #2ea1ff;
