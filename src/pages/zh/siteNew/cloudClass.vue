@@ -27,7 +27,31 @@
     <div class="w1380 webBottomImg">
       <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
     </div>
-    <div class="w1380 CloudBox flexRowAC">
+
+    <div class="tabSwitch">
+      <div class="tabItem" @click="scrollToSection('section0')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section0'}">直播课堂</span>
+        <span class="line" :class="{activeLine:activeSection==='section0'}" />
+      </div>
+      <div class="tabItem" @click="scrollToSection('section1')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section1'}">在线考试</span>
+        <span class="line" :class="{activeLine:activeSection==='section1'}" />
+      </div>
+      <div class="tabItem" @click="scrollToSection('section2')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section2'}">在线课堂</span>
+        <span class="line" :class="{activeLine:activeSection==='section2'}" />
+      </div>
+      <div class="tabItem" @click="scrollToSection('section3')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section3'}">学习计划</span>
+        <span class="line" :class="{activeLine:activeSection==='section3'}" />
+      </div>
+      <div class="tabItem" @click="scrollToSection('section4')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section4'}">其他</span>
+        <span class="line" :class="{activeLine:activeSection==='section4'}" />
+      </div>
+    </div>
+
+    <div id="section0" ref="section0" class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
           直播课堂
@@ -38,7 +62,8 @@
       </div>
       <img class="k8sMana_c1" src="@/assets/software/superAPP_c8.png" alt="" />
     </div>
-    <div class="w1380 CloudBox flexRowAC">
+
+    <div id="section1" ref="section1" class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
           在线考试
@@ -49,7 +74,8 @@
       </div>
       <img class="k8sMana_c1" src="@/assets/software/cloudClass_c1.png" alt="" />
     </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
+
+    <div id="section2" ref="section2" class="w1380 ipcView CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
           视频课程
@@ -60,6 +86,7 @@
       </div>
       <img class="k8sMana_c1" src="@/assets/software/cloudClass_c2.png" alt="" />
     </div>
+
     <div class="w1380 ipcView CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
@@ -82,7 +109,8 @@
         <img class="cloudClass_c4 " src="@/assets/software/cloudClass_c4.png" alt="" />
       </div>
     </div>
-    <div class="w1380 CloudBox flexRowAC">
+
+    <div id="section3" ref="section3" class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
           学习计划
@@ -93,7 +121,8 @@
       </div>
       <img class="k8sMana_c1" src="@/assets/software/cloudClass_c5.png" alt="" />
     </div>
-    <div class="w1380 CloudBox">
+
+    <div id="section4" ref="section4" class="w1380 CloudBox">
       <div class="CloudL">
         <div class="cl_t wt_t">
           问卷调查、微投票
@@ -104,6 +133,7 @@
       </div>
       <img class="w1380" src="@/assets/software/cloudClass_c6.png" alt="" />
     </div>
+
     <!-- 成功案例 -->
     <div class="productBox w1380">
       <div class="proT">
@@ -132,6 +162,8 @@
         </div>
       </div>
     </div>
+
+    <!-- 现在开始体验 -->
     <div class="productBox w1380">
       <div class="proT">
         现在开始体验
@@ -140,20 +172,16 @@
         <div class="productImg productItem1 product1">
           <img class="pro1_1" src="@/assets/software/down1_.png" alt="" />
           <div class="pro1_1_s flexRowAC">
-            SaaS版本
-            <span class="pro1_1_s_b">14天功能全免费试用</span>
+            SaaS版本<span class="pro1_1_s_b">14天功能全免费试用</span>
           </div>
           <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            7天快速迭代，问题敏捷解决
+            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />7天快速迭代，问题敏捷解决
           </div>
           <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            快速启用，精简运维
+            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />快速启用，精简运维
           </div>
           <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            更低建设成本
+            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />更低建设成本
           </div>
           <div class="pro3 flexRowAC">
             <div class="pro3_btn flexRowAC">
@@ -167,20 +195,16 @@
         <div class="productImg productItem1 product1">
           <img class="pro1_1" src="@/assets/software/down1.png" alt="" />
           <div class="pro1_1_s flexRowAC">
-            私有化部署
-            <span class="pro1_1_s_b">1v1 定制方案量身打造</span>
+            私有化部署<span class="pro1_1_s_b">1v1 定制方案量身打造</span>
           </div>
           <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            1v1 专家服务，定制化解决方案
+            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />1v1 专家服务，定制化解决方案
           </div>
           <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            本地化灵活部署，私有化数据存储
+            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />本地化灵活部署，私有化数据存储
           </div>
           <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            高可用架构与完备容灾方案
+            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />高可用架构与完备容灾方案
           </div>
           <div class="pro3 flexRowAC">
             <div class="pro3_btn flexRowAC">
@@ -193,6 +217,7 @@
         </div>
       </div>
     </div>
+
     <!--资料下载-->
     <div class="productBox w1380">
       <div class="proT">
@@ -201,8 +226,7 @@
       <div class="productImg product2Out flexRowAC">
         <div class="product2Out_it flexRowAC">
           <div class="pro2o_l flexRowAC">
-            <img class="pro2o_l_l" src="@/assets/software/down3.png" alt="" />
-            云课堂3.0（new）.pdf
+            <img class="pro2o_l_l" src="@/assets/software/down3.png" alt="" />云课堂3.0（new）.pdf
           </div>
           <div class="pro2o_2" @click="downloadPDF">
             下载
@@ -214,7 +238,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import product5_1 from '@/assets/VLimg2.0/product5_1.png'
 import product5_2 from '@/assets/VLimg2.0/product5_2.png'
 import product5_3 from '@/assets/VLimg2.0/product5_3.png'
@@ -222,9 +246,11 @@ import product5_4 from '@/assets/VLimg2.0/product5_4.png'
 import product5_5 from '@/assets/VLimg2.0/product5_5.png'
 import product5_6 from '@/assets/VLimg2.0/product5_6.png'
 import product5_7 from '@/assets/VLimg2.0/product5_7.png'
+
 definePageMeta({
   layout: 'site-new'
 })
+
 const downloadPDF = () => {
   const link = document.createElement('a')
   link.href = '/documents/云课堂3.0(new).pdf'
@@ -242,6 +268,56 @@ p5Arr.value = [
   { t: 'Mac OS', d: '版本号：V3.1.06', flag: false, img: product5_6 },
   { t: '银河麒麟', d: '版本号：V3.1.06', flag: false, img: product5_7 }
 ]
+const activeSection = ref('section0')
+
+const section0 = ref(null) // 直播课堂
+const section1 = ref(null) // 在线考试
+const section2 = ref(null) // 在线课堂
+const section3 = ref(null) // 学习计划
+const section4 = ref(null) // 其他（问卷调查、微投票）
+
+const scrollToSection = (sectionId) => {
+  const element = document.getElementById(sectionId)
+  if (element) {
+    const viewportHeight = window.innerHeight
+    const offset = viewportHeight * 0.15
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+    window.scrollTo({
+      top: elementPosition - offset,
+      behavior: 'smooth'
+    })
+  }
+}
+
+const handleScroll = () => {
+  const sections = [
+    { id: 'section0', ref: section0 },
+    { id: 'section1', ref: section1 },
+    { id: 'section2', ref: section2 },
+    { id: 'section3', ref: section3 },
+    { id: 'section4', ref: section4 }
+  ]
+  const scrollPosition = window.scrollY + 200
+
+  for (const section of sections) {
+    const element = section.ref.value
+    if (element) {
+      const offsetTop = element.offsetTop
+      const offsetHeight = element.offsetHeight
+      if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+        activeSection.value = section.id
+        break
+      }
+    }
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <style scoped lang="scss">
@@ -258,18 +334,6 @@ p5Arr.value = [
   margin: 0 auto;
 }
 
-// 查看更多
-//.seeMore {
-//  display: inline-block;
-//  padding: 24px 50px;
-//  color: #fff;
-//  border: 1px solid #2278FF;
-//  border-radius: 8px;
-//  background: #2278FF;
-//  box-shadow: 0px 4px 10px 0px #FF5E1033;
-//  font-weight: bold;
-//  font-size: 18px;
-//}
 .platTopOut{
   justify-content: space-between;
   padding-bottom: 110px;
@@ -286,35 +350,12 @@ p5Arr.value = [
   text-align: left;
   padding: 110px 0;
 
-  .plat {
-    display: inline-block;
-    padding: 12px 24px;
-    color: #FF5E10;
-    font-size: 18px;
-    border-radius: 18px;
-    border: 1px solid #E9E9E9;
-  }
-
   .VLStream {
     color: #333333;
     font-weight: bold;
     font-size: 78px;
     padding: 8px 0;
     position: relative;
-
-    .VLStream_img {
-      width: 222px;
-      height: 222px;
-      position: absolute;
-      right: 336px;
-      top: -50px;
-    }
-  }
-
-  .plat_a {
-    color: #333333;
-    font-weight: bold;
-    font-size: 58px;
   }
 
   .plat_cent {
@@ -333,7 +374,6 @@ p5Arr.value = [
       border: 1px solid #2278FF;
       border-radius: 8px;
       background: #2278FF;
-      //box-shadow: 0px 4px 10px 0px #FF5E1033;
       font-weight: bold;
       font-size: 18px;
     }
@@ -352,43 +392,6 @@ p5Arr.value = [
       font-size: 18px;
       background: #fff;
     }
-
-    .seeMore.u2 {
-      display: flex;
-      gap: 10px;
-      border: 1px solid #333;
-      background-color: #333;
-
-      .u2_img {
-        width: 28px;
-        height: 26px;
-      }
-    }
-  }
-}
-
-.WebRTC {
-  gap: 24px;
-  padding-bottom: 80px;
-  animation: scroll 35s linear infinite;
-
-  .webItem {
-    width: auto;
-    height: 120px;
-    border-radius: 16px;
-    background: #E8F7FC;
-    color: #5C6C00;
-    gap: 14px;
-    flex-wrap: nowrap;
-  }
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
   }
 }
 
@@ -435,33 +438,6 @@ p5Arr.value = [
   .CloudL {
     width: 500px;
   }
-
-  .CloudR {
-    width: 700px;
-    height: auto;
-
-    .CloudRImg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .CloudR2 {
-    width: 700px;
-    height: 700px;
-  }
-}
-
-.ipcBox.CloudBox {
-  padding-bottom: 120px;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  .CloudL {
-    width: 450px;
-    text-align: right;
-    padding-top: 60px;
-  }
 }
 
 .ipcView.CloudBox {
@@ -495,12 +471,6 @@ p5Arr.value = [
     color: #3D3D3D;
     font-weight: bold;
     font-size: 58px;
-  }
-
-  .prod {
-    padding-bottom: 60px;
-    color: #717781;
-    font-size: 20px;
   }
 
   .productImg {
@@ -539,11 +509,6 @@ p5Arr.value = [
           color: #FFFFFF;
         }
       }
-    }
-
-    .proImg {
-      width: 100%;
-      height: 100%;
     }
   }
 
@@ -647,102 +612,8 @@ p5Arr.value = [
       }
     }
   }
-
-  .product3Out.productImg {
-    height: initial;
-    margin-bottom: 60px;
-    padding: 40px;
-    border-radius: 24px;
-    background: linear-gradient(180deg, #FEF9F6 0%, #FFFFFF 100%);
-    border: 1px solid #001F5019;
-
-    .p3Box {
-      justify-content: space-between;
-
-      .p3 {
-        width: 358px;
-        height: 170px;
-      }
-    }
-
-    .p3_title {
-      padding-top: 40px;
-      text-align: left;
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .ps_desc {
-      padding-top: 16px;
-      padding-left: 60px;
-      width: 900px;
-      color: #3D3D3D;
-      font-size: 20px;
-      text-align: left;
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: 40px;
-        top: 26px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: #333;
-      }
-    }
-  }
-
-  .p4Out {
-    width: auto;
-    height: 870px;
-  }
-
-  .p5Out {
-    flex-wrap: wrap;
-    gap: 40px;
-
-    .p5Item {
-      padding: 50px 0;
-      flex-direction: column;
-      border-radius: 40px;
-      background: #FFFFFF;
-      box-shadow: 0px 0px 48px 0px #07005714;
-      width: 300px;
-      height: 300px;
-      flex-shrink: 0;
-      gap: 10px;
-      position: relative;
-    }
-
-    .p5Iimg {
-      width: 110px;
-      height: 110px;
-    }
-
-    .p5t {
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .p5d {
-      color: #717781;
-      font-size: 14px;
-    }
-
-    .proCode {
-      width: 70px;
-      height: 70px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      border-radius: 0px 0px 0px 0px;
-    }
-  }
 }
+
 .cloudClass_c4{
   width: 1380px;
   height: auto;
@@ -750,5 +621,45 @@ p5Arr.value = [
 .k8sMana_c1{
   width: 750px;
   height: auto;
+}
+
+.tabSwitch{
+  position: sticky;
+  top: 82px;
+  z-index: 9;
+  background-color: #fff;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  border-bottom: 0.5px solid #DFDFDF;
+  margin-bottom: 80px;
+  .tabItem{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .tabTitle{
+      color: #666666;
+      font-size: 28px;
+      letter-spacing: 2.67px;
+      margin-bottom: 10px;
+      transition: color 0.3s ease;
+    }
+    .line{
+      width: 64px;
+      height: 4px;
+      background: transparent;
+      transition: background-color 0.3s ease;
+    }
+    .activeTitle{
+      color: #333333;
+      font-weight: 500;
+    }
+    .activeLine{
+      background: #4480FF;
+    }
+  }
 }
 </style>

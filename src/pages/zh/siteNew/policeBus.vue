@@ -24,7 +24,31 @@
     <div class="w1380 webBottomImg">
       <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
     </div>
-    <div class="w1380 CloudBox flexRowAC">
+
+    <div class="tabSwitch">
+      <div class="tabItem" @click="scrollToSection('section0')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section0'}">统一门户</span>
+        <span class="line" :class="{activeLine:activeSection==='section0'}" />
+      </div>
+      <div class="tabItem" @click="scrollToSection('section1')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section1'}">服务总线</span>
+        <span class="line" :class="{activeLine:activeSection==='section1'}" />
+      </div>
+      <div class="tabItem" @click="scrollToSection('section2')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section2'}">开发运营</span>
+        <span class="line" :class="{activeLine:activeSection==='section2'}" />
+      </div>
+      <div class="tabItem" @click="scrollToSection('section3')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section3'}">应用市场</span>
+        <span class="line" :class="{activeLine:activeSection==='section3'}" />
+      </div>
+      <div class="tabItem" @click="scrollToSection('section4')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='section4'}">产品架构</span>
+        <span class="line" :class="{activeLine:activeSection==='section4'}" />
+      </div>
+    </div>
+
+    <div id="section0" ref="section0" class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
           统一门户
@@ -35,7 +59,8 @@
       </div>
       <img class="k8sMana_c1" src="@/assets/software/k8sMana_c4.png" alt="" />
     </div>
-    <div class="w1380 CloudBox flexRowAC">
+
+    <div id="section1" ref="section1" class="w1380 CloudBox flexRowAC">
       <img class="k8sMana_c1" src="@/assets/software/policeBus_c0.png" alt="" />
       <div class="CloudL">
         <div class="cl_t">
@@ -46,7 +71,8 @@
         </div>
       </div>
     </div>
-    <div class="w1380 ipcView dev CloudBox flexRowAC">
+
+    <div id="section2" ref="section2" class="w1380 ipcView dev CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_t">
           开发运营支撑
@@ -71,7 +97,8 @@
         </div>
       </div>
     </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
+
+    <div id="section3" ref="section3" class="w1380 ipcView CloudBox flexRowAC">
       <img class="k8sMana_c1" src="@/assets/software/policeBus_c1.png" alt="" />
       <div class="CloudL">
         <div class="cl_t">
@@ -82,12 +109,14 @@
         </div>
       </div>
     </div>
-    <div class="productBox w1380">
+
+    <div id="section4" ref="section4" class="productBox w1380">
       <div class="proT">
         产品架构
       </div>
       <img class="policeBus_c2" src="@/assets/software/policeBus_c2.png" alt="" />
     </div>
+
     <!-- 成功案例 -->
     <div class="productBox w1380">
       <div class="proT">
@@ -116,6 +145,8 @@
         </div>
       </div>
     </div>
+
+    <!-- 现在开始体验 -->
     <div class="productBox w1380">
       <div class="proT">
         现在开始体验
@@ -148,6 +179,7 @@
         </div>
       </div>
     </div>
+
     <!--资料下载-->
     <div class="productBox w1380">
       <div class="proT">
@@ -169,6 +201,8 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+
 const downloadPDF = () => {
   const link = document.createElement('a')
   link.href = '/documents/警务服务总线V3.0技术白皮书.pdf'
@@ -177,6 +211,57 @@ const downloadPDF = () => {
 }
 definePageMeta({
   layout: 'site-new'
+})
+
+const activeSection = ref('section0')
+
+const section0 = ref(null) // 统一门户
+const section1 = ref(null) // 服务总线
+const section2 = ref(null) // 开发运营
+const section3 = ref(null) // 应用市场
+const section4 = ref(null) // 产品架构
+
+const scrollToSection = (sectionId) => {
+  const element = document.getElementById(sectionId)
+  if (element) {
+    const viewportHeight = window.innerHeight
+    const offset = viewportHeight * 0.15
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+    window.scrollTo({
+      top: elementPosition - offset,
+      behavior: 'smooth'
+    })
+  }
+}
+
+const handleScroll = () => {
+  const sections = [
+    { id: 'section0', ref: section0 },
+    { id: 'section1', ref: section1 },
+    { id: 'section2', ref: section2 },
+    { id: 'section3', ref: section3 },
+    { id: 'section4', ref: section4 }
+  ]
+  const scrollPosition = window.scrollY + 200
+
+  for (const section of sections) {
+    const element = section.ref.value
+    if (element) {
+      const offsetTop = element.offsetTop
+      const offsetHeight = element.offsetHeight
+      if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+        activeSection.value = section.id
+        break
+      }
+    }
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
 })
 </script>
 
@@ -194,18 +279,6 @@ definePageMeta({
   margin: 0 auto;
 }
 
-// 查看更多
-//.seeMore {
-//  display: inline-block;
-//  padding: 24px 50px;
-//  color: #fff;
-//  border: 1px solid #2278FF;
-//  border-radius: 8px;
-//  background: #2278FF;
-//  box-shadow: 0px 4px 10px 0px #FF5E1033;
-//  font-weight: bold;
-//  font-size: 18px;
-//}
 .platTopOut {
   height: 880px;
   width: auto;
@@ -217,35 +290,12 @@ definePageMeta({
   text-align: center;
   padding: 110px 0;
 
-  .plat {
-    display: inline-block;
-    padding: 12px 24px;
-    color: #FF5E10;
-    font-size: 18px;
-    border-radius: 18px;
-    border: 1px solid #E9E9E9;
-  }
-
   .VLStream {
     color: #333333;
     font-weight: bold;
     font-size: 78px;
     padding: 8px 0;
     position: relative;
-
-    .VLStream_img {
-      width: 222px;
-      height: 222px;
-      position: absolute;
-      right: 336px;
-      top: -50px;
-    }
-  }
-
-  .plat_a {
-    color: #333333;
-    font-weight: bold;
-    font-size: 58px;
   }
 
   .plat_cent {
@@ -264,7 +314,6 @@ definePageMeta({
       border: 1px solid #2278FF;
       border-radius: 8px;
       background: #2278FF;
-      //box-shadow: 0px 4px 10px 0px #FF5E1033;
       font-weight: bold;
       font-size: 18px;
     }
@@ -283,43 +332,6 @@ definePageMeta({
       font-size: 18px;
       background: #fff;
     }
-
-    .seeMore.u2 {
-      display: flex;
-      gap: 10px;
-      border: 1px solid #333;
-      background-color: #333;
-
-      .u2_img {
-        width: 28px;
-        height: 26px;
-      }
-    }
-  }
-}
-
-.WebRTC {
-  gap: 24px;
-  padding-bottom: 80px;
-  animation: scroll 35s linear infinite;
-
-  .webItem {
-    width: auto;
-    height: 120px;
-    border-radius: 16px;
-    background: #E8F7FC;
-    color: #5C6C00;
-    gap: 14px;
-    flex-wrap: nowrap;
-  }
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
   }
 }
 
@@ -358,45 +370,12 @@ definePageMeta({
   .CloudL {
     width: 500px;
   }
-
-  .CloudR {
-    width: 700px;
-    height: auto;
-
-    .CloudRImg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .CloudR2 {
-    width: 700px;
-    height: 700px;
-  }
-}
-
-.ipcBox.CloudBox {
-  padding-bottom: 120px;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  .CloudL {
-    width: 450px;
-    text-align: right;
-    padding-top: 60px;
-  }
-}
-
-.ipcView.CloudBox {
-  .CloudR {
-    height: 460px;
-  }
 }
 
 .ipcView.dev {
-.CloudL{
-  width: 100%;
-}
+  .CloudL{
+    width: 100%;
+  }
   .terminal {
     margin-bottom: 20px;
     width: 100%;
@@ -443,20 +422,9 @@ definePageMeta({
     line-height: 82px;
   }
 
-  .prod {
-    padding-bottom: 60px;
-    color: #717781;
-    font-size: 20px;
-  }
-
   .productImg {
     width: 100%;
     height: 300px;
-
-    .proImg {
-      width: 100%;
-      height: 100%;
-    }
 
     .img1{
       background: url('@/assets/VLimg2.0/jyjg1.png');
@@ -593,109 +561,6 @@ definePageMeta({
       }
     }
   }
-
-  .product3Out.productImg {
-    height: initial;
-    margin-bottom: 60px;
-    padding: 40px;
-    border-radius: 24px;
-    background: linear-gradient(180deg, #FEF9F6 0%, #FFFFFF 100%);
-    border: 1px solid #001F5019;
-
-    .p3Box {
-      justify-content: space-between;
-
-      .p3 {
-        width: 358px;
-        height: 170px;
-      }
-    }
-
-    .p3_title {
-      padding-top: 40px;
-      text-align: left;
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .ps_desc {
-      padding-top: 16px;
-      padding-left: 60px;
-      width: 900px;
-      color: #3D3D3D;
-      font-size: 20px;
-      text-align: left;
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: 40px;
-        top: 26px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: #333;
-      }
-    }
-  }
-
-  .p4Out {
-    width: auto;
-    height: 870px;
-  }
-
-  .p5Out {
-    flex-wrap: wrap;
-    gap: 40px;
-
-    .p5Item {
-      padding: 50px 0;
-      flex-direction: column;
-      border-radius: 40px;
-      background: #FFFFFF;
-      box-shadow: 0px 0px 48px 0px #07005714;
-      width: 300px;
-      height: 300px;
-      flex-shrink: 0;
-      gap: 10px;
-      position: relative;
-    }
-
-    .p5Iimg {
-      width: 110px;
-      height: 110px;
-    }
-
-    .p5t {
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .p5d {
-      color: #717781;
-      font-size: 14px;
-    }
-
-    .proCode {
-      width: 70px;
-      height: 70px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      border-radius: 0px 0px 0px 0px;
-    }
-  }
-}
-
-.proTitleBox {
-  justify-content: center;
-  color: #3D3D3D;
-  font-weight: bold;
-  font-size: 58px;
-  padding-bottom: 100px;
 }
 
 .k8sMana_c1{
@@ -708,4 +573,45 @@ definePageMeta({
   height: 849px;
   background-size: 100% 100%;
 }
+
+.tabSwitch{
+  position: sticky;
+  top: 82px;
+  z-index: 9;
+  background-color: #fff;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  border-bottom: 0.5px solid #DFDFDF;
+  margin-bottom: 80px;
+  .tabItem{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .tabTitle{
+      color: #666666;
+      font-size: 28px;
+      letter-spacing: 2.67px;
+      margin-bottom: 10px;
+      transition: color 0.3s ease;
+    }
+    .line{
+      width: 64px;
+      height: 4px;
+      background: transparent;
+      transition: background-color 0.3s ease;
+    }
+    .activeTitle{
+      color: #333333;
+      font-weight: 500;
+    }
+    .activeLine{
+      background: #4480FF;
+    }
+  }
+}
+
 </style>

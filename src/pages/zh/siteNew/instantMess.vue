@@ -45,7 +45,7 @@
         <span class="line" :class="{activeLine:activeSection==='section3'}" />
       </div>
     </div>
-    <!--    概述-->
+
     <div id="section0" ref="section0">
       <div class="flexRowAC w1380 colMenu">
         <div class="left-menu">
@@ -76,7 +76,7 @@
         </div>
       </div>
     </div>
-    <!--    SDK-->
+
     <div id="section1" ref="section1">
       <div class="productBox CloudBox w1380">
         <div class="cl_t">
@@ -85,7 +85,7 @@
         <img class="cl_t_img" src="@/assets/software/instantMess/sdk.png" />
       </div>
     </div>
-    <!--    下载-->
+
     <div id="section2" ref="section2">
       <div class="productBox CloudBox w1380">
         <div class="cl_t">
@@ -183,7 +183,6 @@
         </div>
       </div>
     </div>
-    <!--    最佳实践-->
     <div id="section3" ref="section3">
       <div class="productBox CloudBox w1380">
         <div class="cl_t">
@@ -215,7 +214,6 @@
         </div>
       </div>
     </div>
-    <!-- 成功案例 -->
     <div class="productBox w1380">
       <div class="proT">
         成功案例
@@ -304,7 +302,6 @@
         </div>
       </div>
     </div>
-    <!--资料下载-->
     <div class="productBox w1380">
       <div class="proT">
         资料下载
@@ -325,7 +322,7 @@
 </template>
 
 <script setup>
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, onUnmounted, ref, computed } from 'vue'
 import product5_1 from '@/assets/VLimg2.0/product5_1.png'
 import product5_2 from '@/assets/VLimg2.0/product5_2.png'
 import product5_3 from '@/assets/VLimg2.0/product5_3.png'
@@ -384,7 +381,6 @@ const menuItems = ref([
 ])
 
 const activeIndex = ref(0)
-
 const currentItem = computed(() => {
   return menuItems.value[activeIndex.value]
 })
@@ -397,11 +393,13 @@ const activeSection = ref('section0')
 const section0 = ref(null)
 const section1 = ref(null)
 const section2 = ref(null)
+const section3 = ref(null)
 
 const scrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId)
   if (element) {
-    const offset = 120
+    const viewportHeight = window.innerHeight
+    const offset = viewportHeight * 0.15
     const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
     window.scrollTo({
       top: elementPosition - offset,
@@ -414,9 +412,9 @@ const handleScroll = () => {
   const sections = [
     { id: 'section0', ref: section0 },
     { id: 'section1', ref: section1 },
-    { id: 'section2', ref: section2 }
+    { id: 'section2', ref: section2 },
+    { id: 'section3', ref: section3 }
   ]
-
   const scrollPosition = window.scrollY + 200
 
   for (const section of sections) {
@@ -424,7 +422,6 @@ const handleScroll = () => {
     if (element) {
       const offsetTop = element.offsetTop
       const offsetHeight = element.offsetHeight
-
       if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
         activeSection.value = section.id
         break
@@ -456,18 +453,6 @@ onUnmounted(() => {
   margin: 0 auto;
 }
 
-// 查看更多
-//.seeMore {
-//  display: inline-block;
-//  padding: 24px 50px;
-//  color: #fff;
-//  border: 1px solid #2278FF;
-//  border-radius: 8px;
-//  background: #2278FF;
-//  box-shadow: 0px 4px 10px 0px #FF5E1033;
-//  font-weight: bold;
-//  font-size: 18px;
-//}
 .platTopOut{
   justify-content: space-between;
   padding-bottom: 160px;
@@ -484,35 +469,12 @@ onUnmounted(() => {
   text-align: left;
   padding: 110px 0;
 
-  .plat {
-    display: inline-block;
-    padding: 12px 24px;
-    color: #FF5E10;
-    font-size: 18px;
-    border-radius: 18px;
-    border: 1px solid #E9E9E9;
-  }
-
   .VLStream {
     color: #333333;
     font-weight: bold;
     font-size: 78px;
     padding: 8px 0;
     position: relative;
-
-    .VLStream_img {
-      width: 222px;
-      height: 222px;
-      position: absolute;
-      right: 336px;
-      top: -50px;
-    }
-  }
-
-  .plat_a {
-    color: #333333;
-    font-weight: bold;
-    font-size: 58px;
   }
 
   .plat_cent {
@@ -531,7 +493,6 @@ onUnmounted(() => {
       border: 1px solid #2278FF;
       border-radius: 8px;
       background: #2278FF;
-      //box-shadow: 0px 4px 10px 0px #FF5E1033;
       font-weight: bold;
       font-size: 18px;
     }
@@ -550,43 +511,6 @@ onUnmounted(() => {
       font-size: 18px;
       background: #fff;
     }
-
-    .seeMore.u2 {
-      display: flex;
-      gap: 10px;
-      border: 1px solid #333;
-      background-color: #333;
-
-      .u2_img {
-        width: 28px;
-        height: 26px;
-      }
-    }
-  }
-}
-
-.WebRTC {
-  gap: 24px;
-  padding-bottom: 80px;
-  animation: scroll 35s linear infinite;
-
-  .webItem {
-    width: auto;
-    height: 120px;
-    border-radius: 16px;
-    background: #E8F7FC;
-    color: #5C6C00;
-    gap: 14px;
-    flex-wrap: nowrap;
-  }
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
   }
 }
 
@@ -618,53 +542,6 @@ onUnmounted(() => {
   .cl_t_img{
     width: 100%;
   }
-
-  .cl_d {
-    padding-bottom: 24px;
-    color: #717781;
-    font-size: 20px;
-  }
-
-  .cl_d.d1{
-    color: #333;
-  }
-
-  .CloudL {
-    width: 500px;
-  }
-
-  .CloudR {
-    width: 700px;
-    height: auto;
-
-    .CloudRImg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .CloudR2 {
-    width: 700px;
-    height: 700px;
-  }
-}
-
-.ipcBox.CloudBox {
-  padding-bottom: 120px;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  .CloudL {
-    width: 450px;
-    text-align: right;
-    padding-top: 60px;
-  }
-}
-
-.ipcView.CloudBox {
-  .CloudR {
-    height: 460px;
-  }
 }
 
 .productBox {
@@ -694,20 +571,9 @@ onUnmounted(() => {
     font-size: 58px;
   }
 
-  .prod {
-    padding-bottom: 60px;
-    color: #717781;
-    font-size: 20px;
-  }
-
   .productImg {
     width: 100%;
     height: 300px;
-
-    .proImg {
-      width: 100%;
-      height: 100%;
-    }
 
     .img1{
       background: url('@/assets/VLimg2.0/jyjg1.png');
@@ -844,101 +710,6 @@ onUnmounted(() => {
       }
     }
   }
-
-  .product3Out.productImg {
-    height: initial;
-    margin-bottom: 60px;
-    padding: 40px;
-    border-radius: 24px;
-    background: linear-gradient(180deg, #FEF9F6 0%, #FFFFFF 100%);
-    border: 1px solid #001F5019;
-
-    .p3Box {
-      justify-content: space-between;
-
-      .p3 {
-        width: 358px;
-        height: 170px;
-      }
-    }
-
-    .p3_title {
-      padding-top: 40px;
-      text-align: left;
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .ps_desc {
-      padding-top: 16px;
-      padding-left: 60px;
-      width: 900px;
-      color: #3D3D3D;
-      font-size: 20px;
-      text-align: left;
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: 40px;
-        top: 26px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: #333;
-      }
-    }
-  }
-
-  .p4Out {
-    width: auto;
-    height: 870px;
-  }
-
-  .p5Out {
-    flex-wrap: wrap;
-    gap: 40px;
-
-    .p5Item {
-      padding: 50px 0;
-      flex-direction: column;
-      border-radius: 40px;
-      background: #FFFFFF;
-      box-shadow: 0px 0px 48px 0px #07005714;
-      width: 300px;
-      height: 300px;
-      flex-shrink: 0;
-      gap: 10px;
-      position: relative;
-    }
-
-    .p5Iimg {
-      width: 110px;
-      height: 110px;
-    }
-
-    .p5t {
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .p5d {
-      color: #717781;
-      font-size: 14px;
-    }
-
-    .proCode {
-      width: 70px;
-      height: 70px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      border-radius: 0px 0px 0px 0px;
-    }
-  }
 }
 
 .instantMess_c1{
@@ -946,12 +717,12 @@ onUnmounted(() => {
   height: auto;
 }
 
-.k8sMana_c1{
-  width: 692px;
-  height: auto;
-}
-
 .tabSwitch{
+  position: sticky;
+  top: 82px;
+  z-index: 9;
+  background-color: #fff;
+  padding-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -959,25 +730,26 @@ onUnmounted(() => {
   border-bottom: 0.5px solid #DFDFDF;
   margin-bottom: 160px;
   .tabItem{
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
     .tabTitle{
       color: #666666;
-      font-size: 32px;
+      font-size: 28px;
       letter-spacing: 2.67px;
       text-align: left;
-      margin-bottom: 18px;
+      margin-bottom: 10px;
+      transition: color 0.3s ease;
     }
     .line{
       width: 64px;
       height: 4px;
       background: transparent;
+      transition: background-color 0.3s ease;
     }
-
     .activeTitle{
       color: #333333;
-      //font-weight: bold;
     }
     .activeLine{
       background: #4480FF;
@@ -1173,7 +945,6 @@ onUnmounted(() => {
         background: #CCCCCC;
       }
     }
-
   }
 }
 
@@ -1192,7 +963,6 @@ onUnmounted(() => {
     background: #FFFFFF;
     box-shadow: 0 18px 48px 0 #0049B614;
     padding: 0 13px;
-    //box-sizing: border-box;
     .sj_item_img{
       width: 72.28px;
       height: 74px;
