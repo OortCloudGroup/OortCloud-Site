@@ -1,12 +1,12 @@
 <template>
   <div class="home_page vls">
     <div class="platTop w1380">
-      <div class="VLStream flexRowAC">
+      <!-- <div class="VLStream flexRowAC">
         超级APP
         <br />
         应用大全
-      </div>
-      <div class="second_title">
+      </div> -->
+      <!-- <div class="second_title">
         个人和企业面向场景智能化的超级效率战略能力
         <br />
         -- 奥尔特云新一代 新质生产力平台
@@ -21,9 +21,35 @@
         <div class="seeMore u1">
           安排演示
         </div>
+      </div> -->
+      <div class="header">
+        <div class="header_left">
+          <div class="header_left_title">
+            Welcome to the<br />
+            OortCloud Super AI Agent
+          </div>
+          <div class="header_left_content">
+            Your everyday Al companion that understands your work, helps you stay focused,<br />
+            and moves you from idea to impact with less friction and more flow.
+          </div>
+          <div class="header_left_buttom">
+            <nuxt-link class="buttom1" to="http://oort.oortcloudsmart.com:23410" target="_blank">
+              Sign in
+            </nuxt-link>
+            <nuxt-link class="buttom2" to="/zh/siteNew/industy/buy">
+              Buy OortCloud Super AI Agent
+            </nuxt-link>
+          </div>
+        </div>
+        <div class="header_right">
+          <img src="@/assets/software/gw_img.png" alt="" />
+        </div>
+      </div>
+      <div class="start">
+        Start a conversation with these prompts in OortCloud Super AI Agent
       </div>
     </div>
-    <div class="productBox w1380" style="padding-bottom: 10px;">
+    <!-- <div class="productBox w1380" style="padding-bottom: 10px;">
       <div class="proT" style="margin-top: 60px;">
         应用程序
       </div>
@@ -42,10 +68,44 @@
           <img class="lineImg" src="@/assets/software/price_icon.png" alt="" />
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- <div class="w1380 webBottomImg">
       <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
     </div> -->
+    <div class="productBox w1380" style="padding-bottom: 10px;">
+      <div class="appSlider">
+        <div class="appSlider_controls">
+          <img
+            class="sliderBtn prev"
+            :disabled="!canScrollLeft"
+            :class="{ disabled: !canScrollLeft }"
+            src="@/assets/software/Arrow_left.png"
+            alt=""
+            @click="scrollLeft"
+          />
+          <img
+            class="sliderBtn next"
+            :disabled="!canScrollRight"
+            :class="{ disabled: !canScrollRight }"
+            src="@/assets/software/Arrow_right.png"
+            alt=""
+            @click="scrollRight"
+          />
+        </div>
+        <!-- 横向滚动的应用列表 -->
+        <div ref="appListRef" class="appScrollBox">
+          <div v-for="(item, i) in appList" :key="i" class="appItem flexRowAC">
+            <img class="appItemImg" :src="item.img" alt="" />
+            <div class="appItem_t">
+              {{ item['t'] }}
+            </div>
+            <div class="appItem_s">
+              {{ item['dec'] }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="productBox w1380" style="padding-bottom: 0px;">
       <div class="proT" style="padding-bottom: 40px;">
         想象一下，<span class="vlsUs vlsUs2">海量商业应用程序</span> 尽在您的指尖
@@ -200,7 +260,7 @@
 </template>
 
 <script setup>
-
+import { ref, onMounted } from 'vue'
 // import homeApp_a1 from '@/assets/site/homeApp_a1.png'
 // import homeApp_a2 from '@/assets/site/homeApp_a2.png'
 // import homeApp_a3 from '@/assets/site/homeApp_a3.png'
@@ -273,6 +333,29 @@ appList.value = [
 //   { t: '打卡签到', img: homeApp_d4 },
 //   { t: '云相册', img: homeApp_d5 }
 // ]
+
+const appListRef = ref(null)
+const canScrollLeft = ref(false)
+const canScrollRight = ref(true)
+
+const checkScrollStatus = () => {
+  if (!appListRef.value) return
+  const { scrollLeft, scrollWidth, clientWidth } = appListRef.value
+  canScrollLeft.value = scrollLeft > 0
+  canScrollRight.value = scrollLeft + 1 < scrollWidth - clientWidth
+}
+
+const scrollLeft = () => {
+  appListRef.value.scrollBy({ left: -350, behavior: 'smooth' })
+}
+const scrollRight = () => {
+  appListRef.value.scrollBy({ left: 350, behavior: 'smooth' })
+}
+
+onMounted(() => {
+  appListRef.value?.addEventListener('scroll', checkScrollStatus)
+  checkScrollStatus()
+})
 </script>
 
 <style scoped lang="scss">
@@ -960,4 +1043,137 @@ background-image: url("@/assets/software/icon_tou_2.png");
     height: 458px;
   }
 }
+.header{
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-bottom: 100px;
+  .header_left{
+    .header_left_title{
+      font-family: DingTalk-JinBuTi;
+      font-size: 48px;
+      font-weight: normal;
+      color: #333333;
+      margin-bottom: 24px;
+    }
+    .header_left_content{
+      font-size: 18px;
+      font-weight: normal;
+      color: #333333;
+      margin-bottom: 40px;
+    }
+    .header_left_buttom{
+      display: flex;
+      .buttom1, .buttom2{
+        font-size: 18px;
+        padding: 20px 40px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .buttom1{
+        background-color: #2278FF;
+        margin-right: 20px;
+        color: #fff;
+      }
+      .buttom2{
+        background-color: #F4F4F4;
+        color: #3D3D3D;
+      }
+    }
+  }
+  .header_right{
+    img{
+      width: 600px;
+      height: auto;
+    }
+  }
+}
+.start{
+  font-family: DingTalk-JinBuTi;
+  text-align: left;
+  font-size: 32px;
+  color: #333333;
+}
+
+.appSlider {
+  position: relative;
+  padding-bottom: 100px;
+
+  .appSlider_controls {
+    position: absolute;
+    bottom: 60px;
+    left: 45px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+
+    .sliderBtn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      color: #97A3B6;
+      background: #fff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      &.disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+        filter: grayscale(100%);
+      }
+    }
+  }
+
+  .appScrollBox {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    padding: 20px 0;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+// 单个应用卡片
+.appItem {
+  flex-shrink: 0;
+  width: 300px;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  .appItemImg {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 16px;
+  }
+
+  .appItem_t {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .appItem_s {
+    font-size: 16px;
+    color: #97a3b6;
+    line-height: 22px;
+  }
+}
+
 </style>

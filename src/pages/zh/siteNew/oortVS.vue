@@ -1,6 +1,6 @@
 <template>
   <div class="home_page vls">
-    <div class="w1380 top">
+    <!-- <div class="w1380 top">
       <div class="flexRow">
         <div>
           <img class="oort_logo" src="@/assets/img/oortLogo.png" alt="" />
@@ -17,6 +17,25 @@
         </div>
       </div>
       <img class="VLStream_top" src="@/assets/img/oortVS_img1.png" alt="" />
+    </div> -->
+    <div class="hearder">
+      <div class="hearder_title">
+        <img src="@/assets/software/oortVS_img4.png" alt="" />
+        <div>OortCloud AI Studio</div>
+      </div>
+      <div class="hearder_title2">
+        OortCloud AI 原生 IDE，智能编码，一触即发
+      </div>
+      <div class="buttoms">
+        <div class="buttom1">
+          立即下载
+        </div>
+        <div class="buttom2">
+          安排演示
+        </div>
+      </div>
+      <img src="@/assets/software/oortVS_img2.png" alt="" />
+      <img class="robort" src="@/assets/software/oortVS_img3.png" alt="" />
     </div>
     <!-- 安全可靠的开发环境 -->
     <div class="w1380">
@@ -179,7 +198,7 @@
     </div>
     <div class="w1380">
       <div class="title1" style="text-align: center;">
-        开始使用 OORTCLOUD Visual Studio
+        开始使用 OortCloud Visual Studio
       </div>
       <div class="box5">
         <div class="box6">
@@ -211,12 +230,12 @@ definePageMeta({
 const practiceItems = ref([
   {
     title: '前端开发',
-    description: '支撑 VUE 前端开发，支持基于 OORTCLOUD mPaaS 开发轻应用',
+    description: '支撑 VUE 前端开发，支持基于 OortCloud mPaaS 开发轻应用',
     image: oortImg1
   },
   {
     title: '后端服务开发',
-    description: '支持 Python、Go、Java等语言开发后端服务，持基于 OORTCLOUD aPaaS 开发后端微服务 ',
+    description: '支持 Python、Go、Java等语言开发后端服务，持基于 OortCloud aPaaS 开发后端微服务 ',
     image: oortImg2
   },
   {
@@ -532,5 +551,64 @@ function selectpracticeMenu(index) {
   padding: 20px 60px;
   margin: 80px auto;
   margin-bottom: 0;
+}
+.hearder{
+  position: relative;
+  padding: 240px 262px;
+  padding-bottom: 0;
+  background: url(@/assets/software/oortVS_img1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 130px;
+  text-align: center;
+  .hearder_title{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding-bottom: 40px;
+    img{
+      width: 66px;
+      height: 80px;
+      margin-right: 20px;
+    }
+  }
+  .hearder_title2{
+    font-size: 32px;
+    font-weight: 500;
+    color: #FFFFFF;
+    padding-bottom: 40px;
+  }
+  .buttoms{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 90px;
+    .buttom1, .buttom2{
+      cursor: pointer;
+      padding: 20px 40px;
+      border-radius: 8px;
+    }
+    .buttom1{
+      background-color: #fff;
+      color: #2278FF;
+      margin-right: 20px;
+    }
+    .buttom2{
+      color: #FFFFFF;
+      border: 1px solid #FFFFFF;
+    }
+  }
+  img{
+    width: 100%;
+    height: auto;
+  }
+  .robort{
+    position: absolute;
+    width: 392px;
+    height: 514px;
+    right: 250px;
+    bottom: 600px;
+  }
 }
 </style>
