@@ -92,7 +92,7 @@ list.value = [
     location: '2024年4月7日'
   },
   {
-    title: 'Alpinter 如何通过 Odoo 提供人道主义帮助',
+    title: 'Alpinter 如何通过 OortCloud 提供人道主义帮助',
     img: Img3,
     location: '2024年1月5日'
   },

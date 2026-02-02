@@ -84,7 +84,7 @@
               </div>
               <div class="sentence">
                 <span style="font-weight: 700;">客户数据库</span>：我们只会在为提供您已订购并享用的服务时，代表您去收集和处理这
-                些资料，并按照您在注册或设置服务及Odoo数据库时的明确指示，去收集和处理这些资料。
+                些资料，并按照您在注册或设置服务及OortCloud数据库时的明确指示，去收集和处理这些资料。
               </div>
               <div class="sentence">
                 我们的技术支持人员和工程师，可能会适度合理地存取数据，原因包括：解决我们服务出现的任何问题；解决您出于技术支持原因
@@ -101,7 +101,7 @@
             <div class="content">
               <div class="sentence">
                 <span style="font-weight: 700;">账户和联系信息</span>： 您有权访问和更新您已提供给我们的个人数据。您可以随时登录
-                您的Odoo.com个人账户进行操作。如果您出于合法目的希望永久删除您的账户或个人信息，请联系我们的 服务台 提出申请。我们
+                您的个人账户进行操作。如果您出于合法目的希望永久删除您的账户或个人信息，请联系我们的 服务台 提出申请。我们
                 将采取合理措施永久删除您的个人信息，除非出于法律原因（通常与管理、账单和报税有关）我们必须保留您的个人信息。
               </div>
               <div class="sentence">
@@ -143,7 +143,7 @@
             </div>
             <div class="content">
               <div class="sentence">
-                如果您对本隐私政策有任何疑问，或对您的个人数据有任何查询，请联系 OortCloud 服务台 ，或电邮至 zhangxuellan@oortcloudsmart.com.
+                如果您对本隐私政策有任何疑问，或对您的个人数据有任何查询，请联系 OortCloud 服务台 ，或电邮至 zhangxuelian@oortcloudsmart.com.
               </div>
             </div>
           </div>

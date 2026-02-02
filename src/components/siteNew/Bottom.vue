@@ -90,7 +90,7 @@
             </div>
             <div class="flexRowAC">
               <a class="b_ser_text hover" href="https://oortcloudsmart.com/zh/siteNew/" target="_blank">
-                OortCloud
+                OortCloud Agent
               </a>
             </div>
             <div class="flexRowAC">

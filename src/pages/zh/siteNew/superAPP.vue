@@ -457,9 +457,9 @@
         <img src="@/assets/img/oortLogo.png" alt="" />
       </div>
       <div>
-        OORTCLOUD Visual Studio
+        OortCloud AI Studio
         <div class="proTitleBox_c_t">
-          OORTCLOUD AI 原生 IDE，智能编码，一触即发
+          OortCloud AI 原生 IDE，智能编码，一触即发
         </div>
         <div class="proTitleBox_c_t1" @click="viewPath('/zh/siteNew/oortVS')">
           查看详情

@@ -13,7 +13,7 @@
         <div class="pover_apps_item">
           <img src="@/assets/navheader/scl.png" alt="" />
           <div class="pover_apps_item_name">
-            生产力平台
+            智能体
           </div>
         </div>
       </NuxtLink>

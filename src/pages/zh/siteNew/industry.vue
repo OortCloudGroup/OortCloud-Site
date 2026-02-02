@@ -589,7 +589,7 @@ watch(() => props.item, (newVal: any) => {
 }
 
 .bb {
-  padding-top: 40px;
+  padding-top: 16px;
   padding-bottom: 16px;
   border-bottom: 1px solid #e8e8e8;
 }
@@ -599,12 +599,12 @@ watch(() => props.item, (newVal: any) => {
 }
 
 .idtBottom {
-  height: 88px;
+  height: 80px;
   gap: 100px;
   justify-content: center;
 
   &Out {
-    margin-top: 100px;
+    margin-top: 40px;
     border-top: 1px solid #e8e8e8;
   }
 

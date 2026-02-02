@@ -10,7 +10,7 @@
       <div class="developerBox m30">
         <div class="left">
           <div class="title1" style="font-size: 32px;">
-            ¥ 180 / 天
+            ¥ 2500 / 天
           </div>
           <div class="title3">
             经验丰富的开发人员
@@ -19,7 +19,7 @@
         <div class="line" />
         <div class="right">
           <div class="title1" style="font-size: 32px;">
-            ¥ 250 / 天
+            ¥ 3000 / 天
           </div>
           <div class="title3">
             项目经理
