@@ -70,12 +70,34 @@
         视频门禁视频巡查
       </div>
     </div>
-    <div v-if="activeTab === 'item1'" id="tab-item1" class="item">
+    <div v-if="activeTab === 'item1'" id="tab-item1" class="item h700" style="align-items: center;">
       <div class="left">
-        <div class="left_top">
-          <div class="point" />
-          <div class="demo_bottom_subtitle size24">
-            移动警务应用涵盖首页（手机端信息门户和应用市场）、警务微信、通信录、问吧、云课堂、首长点评、动态圈、移动办公审批、督办、新闻推送、社区警务、智慧视频、云上警政、治安采集等丰富功能；而新一代移动警务应用支撑平台建立在基础云（IaaS/IaaS+/iPaaS）之上，是为各业务系统建设的统一移动应用软件开发管理中心平台，该平台遵循统一规划、统一标准、统一管理、统一门户、统一监控、统一运营的六个统一原则，能够为业务应用与业务微服务的建设提供开发与治理支撑并统一管控，以此避免重复建设，从而实现集约、节约的建设目标，该平台还具备服务总线、统一门户（应用市场）、服务化能力开发框架、基础服务中心、业务服务集成、后端管控平台等核心功能。
+        <div class="left_top" style="display: block;">
+          <div class="terminal">
+            <img class="terminalImg" src="@/assets/software/mobilePoliceC1.png" alt="" />
+            <div class="terminalT">
+              移动警务应用介绍
+            </div>
+            <div class="terminalD">
+              主要包括首页(手机端信息门户和应用市场)、警务微信、通信录、问吧、云课堂、首长点评、动态圈、移动办公审批、督办、新闻推送、社区警务、民生警务、智慧视频、云上警政、治安采集等机关应用与基层民警实战实用。
+            </div>
+            <div class="seeMore" @click="goMore">
+              查看更多 <img src="/img/demo/download/seeMore.png" alt="" />
+            </div>
+          </div>
+          <div class="terminal cloud">
+            <img class="terminalImg" src="@/assets/software/mobilePoliceC2.png" alt="" />
+            <div class="terminalT">
+              新一代移动警务应用支撑平台介绍
+            </div>
+            <div class="terminalD">
+              新一代移动警务应用支撑平台是建立在基础云(laaS/laaS+/iPaaS)之上的，进一步为各业务系统建设统一的移动应用软件开发管理中心平台。遵循统一规划、统一标准、统一管理、统一门户、统一监控、统一运营六个统一。为业务应用与业务微服务的建设提供开发与治理支撑,进行统一管控，避免重复建设,达到集约、节约的目的。主要包括功能：服务总线、统一门户(应用市场)、服务化能力开发框架、基础服务中心、业务服务集成、后端管控平台等能力。
+            </div>
+            <NuxtLink to="/zh/siteNew/policeBus" target="blank">
+              <div class="seeMore">
+                查看更多 <img src="/img/demo/download/seeMore.png" alt="" />
+              </div>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -199,7 +221,9 @@ const goDetail = () => {
     path: '/zh/demoIndex'
   })
 }
-
+const goMore = () => {
+  window.open('https://myoumuamua.com/platformApp.html', '_blank')
+}
 const activeTab = ref('item1')
 
 const goToTab = (tabKey: string) => {
@@ -520,5 +544,49 @@ const goToTab = (tabKey: string) => {
     }
   }
 
+}
+
+.terminal {
+  border-radius: 24px;
+  background: linear-gradient(180deg, #FEF9F6 0%, #FFFFFF 100%);
+  border: 1px solid #001F5019;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 20px;
+
+  .terminalImg {
+    width: 62px;
+    height: 62px;
+  }
+
+  .terminalT {
+    padding-top: 16px;
+    color: #333333;
+    font-weight: bold;
+    font-size: 28px;
+  }
+
+  .terminalD {
+    padding-top: 16px;
+    color: #717781;
+    font-size: 18px;
+  }
+}
+.seeMore{
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2278FF;
+  img{
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+  }
+}
+.h700{
+  height: 700px;
 }
 </style>
