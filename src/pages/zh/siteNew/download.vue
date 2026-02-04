@@ -113,20 +113,52 @@
         </div>
       </div>
     </div>
+    <n-modal
+      v-model:show="logDialogVisible"
+      preset="card"
+      title="版本更新日志"
+      :style="{ width: '70%', height: `${viewHeight * 0.8}px` }"
+    >
+      <iframe
+        :src="logIframeSrc"
+        style="width: 100%; height: 100%; border: none"
+      />
+    </n-modal>
   </div>
 </template>
 
 <script setup>
 // import { download } from 'naive-ui/es/_utils'
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref, onMounted, onUnmounted } from 'vue'
+// import { useRouter } from 'vue-router'
+import { NModal } from 'naive-ui'
 
-const router = useRouter()
+const logDialogVisible = ref(false)
+const logIframeSrc = ref('')
+
+const viewHeight = ref(window.innerHeight)
+
+const updateViewHeight = () => {
+  viewHeight.value = window.innerHeight
+}
+
+onMounted(() => {
+  window.addEventListener('resize', updateViewHeight)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', updateViewHeight)
+})
+
+const goProduceLog = (type) => {
+  logIframeSrc.value = `https://www.oortcloudsmart.com/zh/community/productLogCopy?type=${type}`
+  logDialogVisible.value = true
+}
 
 const generalList = ref([
   {
     name: 'OortCloud APP',
-    download: 'Download',
+    download: 'download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -146,7 +178,7 @@ const generalList = ref([
   },
   {
     name: 'OortCloud Desktop',
-    download: 'Download',
+    download: 'download',
     Changelog: 'Changelog',
     list: [{
       name: 'Windows',
@@ -169,7 +201,7 @@ const generalList = ref([
   },
   {
     name: 'OortCloud AI Studio',
-    download: 'Download',
+    download: 'download',
     Changelog: 'Changelog',
     list: [{
       name: 'Windows',
@@ -198,7 +230,7 @@ const generalList = ref([
   },
   {
     name: 'OORT.SH',
-    download: 'Link',
+    download: 'link',
     Changelog: 'Changelog',
     list: [{
       name: 'Web',
@@ -208,7 +240,7 @@ const generalList = ref([
   },
   {
     name: 'OORT.AI',
-    download: 'Link',
+    download: 'link',
     Changelog: 'Changelog',
     list: [{
       name: 'Web',
@@ -218,7 +250,7 @@ const generalList = ref([
   },
   {
     name: 'VLStream',
-    download: 'Download',
+    download: 'download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -242,7 +274,7 @@ const generalList = ref([
 const industryList = ref([
   {
     name: '指挥调度',
-    download: 'Download',
+    download: 'download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -262,7 +294,7 @@ const industryList = ref([
   },
   {
     name: 'AI智眼',
-    download: 'Download',
+    download: 'download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -282,7 +314,7 @@ const industryList = ref([
   },
   {
     name: '智慧园林',
-    download: 'Download',
+    download: 'download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -302,7 +334,7 @@ const industryList = ref([
   },
   {
     name: '智慧安保',
-    download: 'Download',
+    download: 'download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -323,10 +355,9 @@ const industryList = ref([
 ])
 const activeTab = ref('general')
 
-const goProduceLog = (type) => {
-  router.push(`/zh/community/productLog?type=${type}`)
-  // window.open(`https://www.oortcloudsmart.com/zh/community/productLog?type=${type}`)
-}
+// const goProduceLog = (type) => {
+//   window.open(`https://www.oortcloudsmart.com/zh/community/productLog?type=${type}`)
+// }
 
 const goDisk = (value) => {
   if (value === '/img/demo/download/disk.png') {
@@ -411,7 +442,6 @@ definePageMeta({
 }
 
 .color-table-container {
-  // font-family: Arial, sans-serif;
   margin-bottom: 60px;
 }
 
@@ -460,7 +490,6 @@ definePageMeta({
   color: #007cfd;
 }
 
-/* 新增：通用版/行业版切换样式 */
 .tab-switch {
   box-sizing: border-box;
   width: 100%;
@@ -489,7 +518,6 @@ definePageMeta({
 
 .color-table th:nth-child(1) {
   width: 320px;
-  // 固定宽度后，防止内容换行/溢出
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -503,7 +531,6 @@ definePageMeta({
   width: 235px;
 }
 
-// 同步设置td的宽度，保证列对齐
 .color-table td:nth-child(1) {
   width: 320px;
 }
@@ -514,6 +541,13 @@ definePageMeta({
 
 .color-table td:nth-child(3) {
   width: 235px;
+}
+
+:deep(.n-modal-card__header) {
+  padding-bottom: 0 !important;
+  padding-top: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 </style>
