@@ -174,6 +174,11 @@ const generalList = ref([
       name: 'HarmonyOS',
       type: 'HarmonyOS',
       img1: '/img/demo/download/HarmonyOS.png'
+    },
+    {
+      name: 'SDK',
+      type: 'SDK',
+      img1: '/img/demo/download/Google.png'
     }]
   },
   {
@@ -371,6 +376,8 @@ const goGitHub = (value) => {
     window.open('https://sh.oortcloudsmart.com/zh/')
   } else if (value.name === 'OORT.AI') {
     window.open('https://ai.oortcloudsmart.com/zh/')
+  } else if (value.name === 'OortCloud APP') {
+    window.open('https://www.oortcloudsmart.com/zh/siteNew/instantMess#section2')
   }
 }
 definePageMeta({

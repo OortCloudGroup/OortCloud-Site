@@ -164,9 +164,9 @@
                   </div>
                   <div v-show="activeIndexPass === index" class="content-detail">
                     <p>{{ currentPaas.description }}</p>
-                    <div class="detail">
+                    <!-- <div class="detail">
                       查看详情
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -317,9 +317,9 @@
                   </div>
                   <div v-show="activeIndexSass === index" class="content-detail">
                     <p>{{ currentSaas.description }}</p>
-                    <div class="detail">
+                    <!-- <div class="detail">
                       查看详情
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -356,9 +356,9 @@
                   </div>
                   <div v-show="activeIndexCross === index" class="content-detail">
                     <p>{{ currentCross.description }}</p>
-                    <div class="detail">
+                    <!-- <div class="detail">
                       查看详情
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -395,9 +395,9 @@
                   </div>
                   <div v-show="activeIndexoperation === index" class="content-detail">
                     <p>{{ currentoperation.description }}</p>
-                    <div class="detail">
+                    <!-- <div class="detail">
                       查看详情
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -434,9 +434,9 @@
                   </div>
                   <div v-show="activeIndexpractice === index" class="content-detail">
                     <p>{{ currentpractice.description }}</p>
-                    <div class="detail">
+                    <!-- <div class="detail">
                       查看详情
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
