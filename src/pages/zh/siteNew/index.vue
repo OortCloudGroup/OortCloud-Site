@@ -108,17 +108,17 @@
     </div>
     <div class="productBox w1380" style="padding-bottom: 0px;">
       <div class="proT" style="padding-bottom: 40px;">
-        想象一下，<span class="vlsUs vlsUs2">海量商业应用程序</span> 尽在您的指尖
+        想象一下，<span class="vlsUs vlsUs2">海量商业智能体</span> 尽在您的指尖
       </div>
     </div>
     <div class="proTitleBox w1380 plan">
       <div class="plan_t">
-        有什么需要改进吗?我们有相应的应用程序来满足您的需求。
+        有什么需要改进吗?我们有相应的智能体来满足您的需求。
         <br />
         免去复杂流程，不收取额外费用，只需一键安装，即可立即使用。
       </div>
       <div class="plan_t">
-        每个应用程序都是一个简化流程的利器，为更多人赋予力量!
+        每个智能体都是一个简化流程的利器，为更多人赋予力量!
         <br />
         尽情想象，当每个人都能拥有方便工作的合适工具，并实现完美整合时，将会带来何等影响!
       </div>

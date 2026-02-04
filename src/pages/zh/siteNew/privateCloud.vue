@@ -131,9 +131,9 @@
         <div class="content contentBox">
           提供强大的计算、存储、网络等基础设施，确保平台稳定可靠运行
         </div>
-        <div class="detail">
+        <!-- <div class="detail">
           查看详情
-        </div>
+        </div> -->
       </div>
       <div class="w1380 privateBox">
         <div class="proTitleBox w1380 flexRowAC">

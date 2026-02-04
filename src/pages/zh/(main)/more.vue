@@ -414,7 +414,7 @@ const privacyApp = ref({
 // 公安
 const policeApp = ref({
   title: '公安',
-  logo: '/img/app/jinghui.png',
+  logo: '/img/demo/menu/ga.png',
   apps: [
     {
       name: '新一代移动警务平台',
@@ -456,7 +456,7 @@ const policeApp = ref({
 // 智慧派出所
 const policeStationApp = ref({
   title: '智慧派出所',
-  logo: '/img/app/jinghui.png',
+  logo: '/img/demo/menu/zhpcs.png',
   apps: [
     {
       name: '华为IdeaHub警务宝',
@@ -488,7 +488,7 @@ const policeStationApp = ref({
 // 检察
 const procuratorialApp = ref({
   title: '检察',
-  logo: '/img/app/jiancha.png',
+  logo: '/img/demo/menu/jcy.png',
   apps: [
     {
       name: '移动检务',
@@ -516,7 +516,7 @@ const procuratorialApp = ref({
 // 司法监狱
 const prisonApp = ref({
   title: '司法监狱',
-  logo: '/img/app/jinghui.png',
+  logo: '/img/demo/menu/jy.png',
   apps: [
     {
       name: '狱警通',
@@ -538,7 +538,7 @@ const prisonApp = ref({
 // 法院
 const courtApp = ref({
   title: '法院',
-  logo: '/img/app/fayuan.png',
+  logo: '/img/demo/menu/fy.png',
   apps: [
     {
       name: '移动办公加密通信服务',
@@ -549,8 +549,8 @@ const courtApp = ref({
 })
 // 消防
 const fireProtApp = ref({
-  title: '法院',
-  logo: '/img/app/xiaofang.png',
+  title: '消防',
+  logo: '/img/demo/menu/xf.png',
   apps: [
     {
       name: '消防指挥调度',
@@ -572,7 +572,7 @@ const fireProtApp = ref({
 // 档案
 const filesApp = ref({
   title: '档案',
-  logo: '/img/app/dangan.png',
+  logo: '/img/demo/menu/da.png',
   apps: [
     {
       name: '档案宝',
@@ -603,7 +603,7 @@ const filesApp = ref({
 // 政府
 const govermentApp = ref({
   title: '政府',
-  logo: '/img/app/zhengfu.png',
+  logo: '/img/demo/menu/zf.png',
   apps: [
     {
       name: '一网协同',
@@ -635,7 +635,7 @@ const govermentApp = ref({
 // 智慧边海防
 const borderDefendApp = ref({
   title: '智慧边海防',
-  logo: '/img/app/zgbhf.png',
+  logo: '/img/demo/menu/zhbhf.png',
   apps: [
     {
       name: '指挥调度',
@@ -662,7 +662,7 @@ const borderDefendApp = ref({
 // 城管
 const cityAdminApp = ref({
   title: '城管',
-  logo: '/img/app/chengguan.png',
+  logo: '/img/demo/menu/cg.png',
   apps: [
     {
       name: '智慧城管平台',
@@ -679,7 +679,7 @@ const cityAdminApp = ref({
 // 交警
 const trafficPoliceApp = ref({
   title: '交警',
-  logo: '/img/app/jiaojing.png',
+  logo: '/img/demo/menu/jj.png',
   apps: [
     {
       name: '微劝导',
@@ -692,7 +692,7 @@ const trafficPoliceApp = ref({
 // 企业
 const enterpriseApp = ref({
   title: '企业',
-  logo: '/img/app/qiye.png',
+  logo: '/img/demo/menu/qy.png',
   apps: [
     {
       name: '内网“微信”',
@@ -714,7 +714,7 @@ const enterpriseApp = ref({
 // 应急
 const emergencyApp = ref({
   title: '应急',
-  logo: '/img/app/yingji.png',
+  logo: '/img/demo/menu/yj.png',
   apps: [
     {
       name: '应急宝',
@@ -731,7 +731,7 @@ const emergencyApp = ref({
 // 疫情防控
 const plaguePrevApp = ref({
   title: '疫情防控',
-  logo: '/img/app/yiqingfangkong.png',
+  logo: '/img/demo/menu/yqfk.png',
   apps: [
     {
       name: '疫情指挥调度',
@@ -753,7 +753,7 @@ const plaguePrevApp = ref({
 // 物联网
 const iotApp = ref({
   title: '物联网',
-  logo: '/img/app/wlw.png',
+  logo: '/img/demo/menu/wlw.png',
   apps: [
     {
       name: 'AIoTPaaS物联网服务平台',
@@ -799,7 +799,7 @@ const iotApp = ref({
 // 应用软件定制与运维服务外包
 const customizeApp = ref({
   title: '应用软件定制与运维服务外包',
-  logo: '/img/app/yyrjdz.png',
+  logo: '/img/demo/menu/yyrjdz.png',
   apps: [
     {
       name: '应用软件定制',
@@ -828,7 +828,7 @@ const customizeApp = ref({
 // 海外[一带一路] English
 const overseasApp = ref({
   title: '海外[一带一路] English',
-  logo: '/img/app/haiwai.png',
+  logo: '/img/demo/menu/hw.png',
   apps: [
     {
       name: '专属“微信” IM and Mini program',

@@ -198,10 +198,10 @@
     </div>
     <div class="w1380">
       <div class="title1" style="text-align: center;">
-        开始使用 OortCloud Visual Studio
+        开始使用 OortCloud AI Studio
       </div>
       <div class="box5">
-        <div class="box6">
+        <div class="box6" @click="router.push('/zh/siteNew/download')">
           立即体验
         </div>
         <img src="@/assets/img/oortVS_img19.png" alt="" />
@@ -212,6 +212,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useRouter } from 'vue-router'
 import oortImg1 from '@/assets/img/oortVS_img9.png'
 import oortImg2 from '@/assets/img/oortVS_img10.png'
 import oortImg3 from '@/assets/img/oortVS_img11.png'
@@ -225,6 +226,7 @@ import oortImg9 from '@/assets/img/oortVS_img21.png'
 definePageMeta({
   layout: 'site-new'
 })
+const router = useRouter()
 
 // 支持全栈开发
 const practiceItems = ref([

@@ -35,17 +35,18 @@
                     <img class="dropdown_col_sort_logo" src="/img/home/sxt.png" />
                     <span class="dropdown_col_sort_label">安全移动办公</span>
                   </div>
+                  <a href="https://www.myoumuamua.com/" target="_blank">
+                    <div class="dropdown_col_item">
+                      <img class="dropdown_col_item_logo" src="/img/home/xl_2.png" />
+                      <span class="dropdown_col_item_label">OortCloud智能体</span>
+                    </div>
+                  </a>
                   <NuxtLink to="/zh/product_instantMsg" class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/home/xl_1.png" />
                     <span class="dropdown_col_item_label">即时通讯</span>
                     <!-- <span>NEW</span> -->
                   </NuxtLink>
-                  <a href="https://www.myoumuamua.com/" target="_blank">
-                    <div class="dropdown_col_item">
-                      <img class="dropdown_col_item_logo" src="/img/home/xl_2.png" />
-                      <span class="dropdown_col_item_label">私有云部署的移动安全办公云平台</span>
-                    </div>
-                  </a>
+
                   <NuxtLink to="/zh/product" class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/home/xl_3.png" />
                     <span class="dropdown_col_item_label">门户与应用仓库</span>
@@ -56,12 +57,12 @@
                   </div>
                   <div class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/home/xl_6.png" />
-                    <span class="dropdown_col_item_label">定制手机型安全终端</span>
+                    <span class="dropdown_col_item_label">定制手机型安全终端与Pad终端</span>
                   </div>
-                  <div class="dropdown_col_item">
+                  <!-- <div class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/home/xl_7.png" />
                     <span class="dropdown_col_item_label">定制安全Pad终端</span>
-                  </div>
+                  </div> -->
                   <div class="dropdown_col_sort">
                     <img class="dropdown_col_sort_logo" src="/img/home/zhdd.png" />
                     <span class="dropdown_col_sort_label">指挥调度与IOC大数据可视化</span>
@@ -72,7 +73,7 @@
                   </div>
                   <div class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/home/xl_10.png" />
-                    <span class="dropdown_col_item_label">XSmart大数据IOC可视化平台</span>
+                    <span class="dropdown_col_item_label">OORT.DA</span>
                   </div>
                   <div class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/app/icon_apache.png" />
@@ -92,24 +93,24 @@
                   <a href="http://oort.oortcloudsmart.com:32610/oort/oortcloud-frontservice/apaas_web/" target="_blank">
                     <div class="dropdown_col_item">
                       <img class="dropdown_col_item_logo" src="/img/home/xl_11.png" />
-                      <span class="dropdown_col_item_label">智慧云aPaaS应用支撑平台（aPaaS）</span>
+                      <span class="dropdown_col_item_label">OORT.AI</span>
                     </div>
                   </a>
                   <div class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/home/xl_12.png" />
-                    <span class="dropdown_col_item_label">移动端服务化能力支撑平台（mPaaS）</span>
+                    <span class="dropdown_col_item_label">OORT.SH</span>
                   </div>
                   <div class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/home/xl_4.png" />
-                    <span class="dropdown_col_item_label">XMobileStudio移动应用开发支撑平台</span>
+                    <span class="dropdown_col_item_label">VLStream</span>
                   </div>
                   <div class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/home/xl_8.png" />
-                    <span class="dropdown_col_item_label">PGIS地图引擎能力支撑平台(PGISPaaS)</span>
+                    <span class="dropdown_col_item_label">OortCloud AI Studio</span>
                   </div>
                   <div class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/home/xl_13.png" />
-                    <span class="dropdown_col_item_label">XDevStudio“奥尔特云”开发平台</span>
+                    <span class="dropdown_col_item_label">容器云平台</span>
                   </div>
                   <div class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/app/icon_cloud.png" />
@@ -336,11 +337,11 @@ const softwareMenu = ref<Menu[]>([
     title: '云SaaS软件',
     showTitle: true,
     menus: [
-      { name: '交通微劝导系统', logo: '/img/home/aqcp_1.png', link: '/product_microAdvice' },
-      { name: '反诈中心推广统计平台', logo: '/img/home/aqcp_2.png', link: '/product_antiFraud' },
-      { name: '互联网+公安政务服务', logo: '/img/home/aqcp_3.png' },
-      { name: '群防群治', logo: '/img/home/aqcp_4.png' },
-      { name: '辅警平台', logo: '/img/home/yycp_22.png' }
+      { name: '企业办公', logo: '/img/home/aqcp_1.png', link: '/product_microAdvice' },
+      { name: '智慧宣传', logo: '/img/home/aqcp_2.png', link: '/product_antiFraud' },
+      { name: '智慧园林', logo: '/img/demo/menu/yl.png' },
+      { name: '智慧安保', logo: '/img/demo/menu/ab.png' },
+      { name: '智慧档案', logo: '/img/demo/menu/da.png' }
     ]
   },
   {
