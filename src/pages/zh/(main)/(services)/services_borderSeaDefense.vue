@@ -40,7 +40,7 @@ interface Head {
 }
 
 const header = reactive<Head>({
-  logo: '/img/app/zgbhf.png',
+  logo: '/img/demo/menu/zhbhf.png',
   name: '智慧边海防',
   desc: '智慧检务移动平台是基于国产化华为云、华为智慧屏、华为智能协作能力无缝结合的检务一体化平台，同时支持了面向基层的SaaS应用软件，以及为第三方应用开发提供个性化需求快速迭代底座'
 })

@@ -38,15 +38,15 @@ interface Head {
 
 const header = reactive<Head>({
   logo: '/img/demo/menu/ab.png',
-  name: '安保',
-  desc: '加强档案数据库的建设，建立与完善档案目录数据库、纸质档案全文数据库和多媒体数据库，建立区域性档案目录和现行文件全文数据库是大势所趋'
+  name: '智慧安保',
+  desc: ''
 })
 const anchors = ref<Anchor[]>([
-  { title: '安保平台', href: '#安保平台' }
+  { title: '智慧安保平台', href: '#智慧安保平台' }
 ])
 const tabs1 = reactive<Tab[]>([
   {
-    name: '安保平台',
+    name: '智慧安保平台',
     logo: '/img/app/ydbgjm.png',
     content: {
       desc: '应用定制开发一站式服务',

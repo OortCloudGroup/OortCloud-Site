@@ -40,8 +40,8 @@ interface Head {
 }
 
 const header = reactive<Head>({
-  logo: '/img/app/zgbhf.png',
-  name: '疫情防护系统',
+  logo: '/img/demo/menu/yqfk.png',
+  name: '疫情防控',
   desc: '基层社会治理可视化指挥调度一张图系统和智慧社区综合信息平台'
 })
 const anchors = ref<Anchor[]>([

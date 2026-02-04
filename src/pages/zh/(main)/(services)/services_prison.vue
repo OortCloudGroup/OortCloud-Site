@@ -39,9 +39,9 @@ interface Head {
 }
 
 const header = reactive<Head>({
-  logo: '/img/app/jiancha.png',
-  name: '检察',
-  desc: '智慧检务移动平台是基于国产化华为云、华为智慧屏、华为智能协作能力无缝结合的检务一体化平台，同时支持了面向基层的SaaS应用软件，以及为第三方应用开发提供个性化需求快速迭代底座'
+  logo: '/img/demo/menu/jy.png',
+  name: '司法监狱',
+  desc: ''
 })
 const anchors = ref<Anchor[]>([
   { title: '狱内通', href: '#狱内通' },

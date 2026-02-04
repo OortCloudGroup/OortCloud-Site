@@ -40,7 +40,7 @@ interface Head {
 }
 
 const header = reactive<Head>({
-  logo: '/img/app/jinghui.png',
+  logo: '/img/demo/menu/ga.png',
   name: '公安',
   desc: '让海量警务服务快速赋能基层派出所，从“汗水警务”迈向“智慧警务”'
 })

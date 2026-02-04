@@ -38,9 +38,9 @@ interface Head {
 }
 
 const header = reactive<Head>({
-  logo: '/img/app/haiwai.png',
+  logo: '/img/demo/menu/hw.png',
   name: '海外[一带一路] English',
-  desc: '加强档案数据库的建设，建立与完善档案目录数据库、纸质档案全文数据库和多媒体数据库，建立区域性档案目录和现行文件全文数据库是大势所趋'
+  desc: ''
 })
 const anchors = ref<Anchor[]>([
   { title: '专属“微信”IM And Mini Program', href: '#专属“微信”IMandMiniprogram' },

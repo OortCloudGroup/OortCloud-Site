@@ -42,7 +42,7 @@ interface Head {
 }
 
 const header = reactive<Head>({
-  logo: '/img/app/zhengfu.png',
+  logo: '/img/demo/menu/zf.png',
   name: '政府',
   desc: '政务云领域建设打造出安全、可靠、独特的解决方案体系，通过创新的服务能力，借助云计算、大数据，以及人工智能的优势，实现政府简化流程、提升效率、保障安全、降低成本的目标，助力政府实现数字化转型。'
 })

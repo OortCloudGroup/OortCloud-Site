@@ -37,9 +37,9 @@ interface Head {
 }
 
 const header = reactive<Head>({
-  logo: '/img/app/jiaojing.png',
+  logo: '/img/demo/menu/jcy.png',
   name: '交警',
-  desc: '加强档案数据库的建设，建立与完善档案目录数据库、纸质档案全文数据库和多媒体数据库，建立区域性档案目录和现行文件全文数据库是大势所趋'
+  desc: ''
 })
 const anchors = ref<Anchor[]>([
   { title: '微劝导', href: '#微劝导' }
