@@ -27,30 +27,47 @@
     <div class="w1380 webBottomImg">
       <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
     </div>
-    <div class="proTitleBox scene w1380">
-      <div class="subTitle">
-        应用场景
+
+    <div class="tabSwitch">
+      <div class="tabItem" @click="scrollToSection('sceneSection')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='sceneSection'}">应用场景</span>
+        <span class="line" :class="{activeLine:activeSection==='sceneSection'}" />
       </div>
-      <div class="sceneBox">
-        <div class="flexRowAC sceneT">
-          <div v-for="(item,i) in list" :key="i" class="scene_tab" :class="{act:isAct===i}" @click="isAct=i">
-            {{ item.t }}
-          </div>
-        </div>
-        <div class="sceneBoBoxOut flexRowAC">
-          <div class="sceneBoBox">
-            <div class="sceneB_c">
-              {{ list[isAct].c }}
-            </div>
-            <div class="sceneB_c">
-              {{ list[isAct].d }}
-            </div>
-          </div>
-          <img class="dispatch_c1" :src="list[isAct].i" alt="" />
-        </div>
+      <div class="tabItem" @click="scrollToSection('advantageSection')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='advantageSection'}">产品优势</span>
+        <span class="line" :class="{activeLine:activeSection==='advantageSection'}" />
+      </div>
+      <div class="tabItem" @click="scrollToSection('serviceSection')">
+        <span class="tabTitle" :class="{activeTitle:activeSection==='serviceSection'}">产品服务</span>
+        <span class="line" :class="{activeLine:activeSection==='serviceSection'}" />
       </div>
     </div>
-    <div class="proTitleBox w1380">
+
+    <div id="sceneSection" ref="sceneSection" class="proTitleBox scene w1380">
+      <div class="subTitle" style="padding-top: 0;">
+        应用场景
+      </div>
+      <div class="panel">
+        <n-tabs type="line" trigger="click" animated :bar-width="150" @before-leave="onBeforeLeave">
+          <n-tab-pane v-for="(item, index) in list" :key="index" :name="item.t" :tab="item.t">
+            <div class="pane">
+              <div class="pane_left">
+                <span class="pane_left_title">{{ item.c }}</span>
+                <span class="pane_left_intro">{{ item.d }}</span>
+                <n-button v-if="item.site" type="info">
+                  了解详情
+                </n-button>
+              </div>
+              <div class="pane_right">
+                <Image :src="item.i" />
+              </div>
+            </div>
+          </n-tab-pane>
+        </n-tabs>
+      </div>
+    </div>
+
+    <div id="advantageSection" ref="advantageSection" class="proTitleBox w1380">
       <div class="subTitle">
         产品优势
       </div>
@@ -66,89 +83,90 @@
         </div>
       </div>
     </div>
-    <div class="proTitleBox w1380 flexRowAC subTitle">
-      产品服务
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          指挥中心操作台
-        </div>
-        <div class="cl_d">
-          分体式键盘，解锁多种形态，平板笔记本二合一助你快速进入状态，连接蓝牙键盘，还原笔记本办公体验，随时随地高效输出。
-        </div>
+
+    <div id="serviceSection" ref="serviceSection">
+      <div class="proTitleBox w1380 flexRowAC subTitle">
+        产品服务
       </div>
-      <img class="dispatch_c1" src="@/assets/software/command_center_console.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          便携式打印机
+      <div class="w1380 CloudBox flexRowAC">
+        <div class="CloudL">
+          <div class="cl_t">
+            指挥中心操作台
+          </div>
+          <div class="cl_d">
+            分体式键盘，解锁多种形态，平板笔记本二合一助你快速进入状态，连接蓝牙键盘，还原笔记本办公体验，随时随地高效输出。
+          </div>
         </div>
-        <div class="cl_d">
-          充分满足多种使用需求，性价比更高，耐摔防水耐用性强更省心，摆脱传统式数据线连接随身携带更方便。
-        </div>
+        <img class="dispatch_c1" src="@/assets/software/command_center_console.png" alt="" />
       </div>
-      <img class="dispatch_c2" src="@/assets/software/dispatch_c2.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t" style="white-space: nowrap;">
-          执法记录仪/便携摄像头
+      <div class="w1380 CloudBox flexRowAC">
+        <div class="CloudL">
+          <div class="cl_t">
+            便携式打印机
+          </div>
+          <div class="cl_d">
+            充分满足多种使用需求，性价比更高，耐摔防水耐用性强更省心，摆脱传统式数据线连接随身携带更方便。
+          </div>
         </div>
-        <div class="cl_d">
-          持久续航3000mA大容量，满足整天录制需求，采用专业级影像传感器，记录画面更细腻，IP66防护等级，高空防摔。
-        </div>
+        <img class="dispatch_c2" src="@/assets/software/dispatch_c2.png" alt="" />
       </div>
-      <img class="dispatch_c3" src="@/assets/software/dispatch_c3.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          位置服务系统
+      <div class="w1380 CloudBox flexRowAC">
+        <div class="CloudL">
+          <div class="cl_t" style="white-space: nowrap;">
+            执法记录仪/便携摄像头
+          </div>
+          <div class="cl_d">
+            持久续航3000mA大容量，满足整天录制需求，采用专业级影像传感器，记录画面更细腻，IP66防护等级，高空防摔。
+          </div>
         </div>
-        <div class="cl_d">
-          采用GNSS、Wi-Fi、基站等多种混合定位模式进行定位，赋予您的应用程序快速、精准地获取用户位置信息的能力。
-        </div>
+        <img class="dispatch_c3" src="@/assets/software/dispatch_c3.png" alt="" />
       </div>
-      <img class="dispatch_c4" src="@/assets/software/dispatch_c4.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          位置服务终端
+      <div class="w1380 CloudBox flexRowAC">
+        <div class="CloudL">
+          <div class="cl_t">
+            位置服务系统
+          </div>
+          <div class="cl_d">
+            采用GNSS、Wi-Fi、基站等多种混合定位模式进行定位，赋予您的应用程序快速、精准地获取用户位置信息的能力。
+          </div>
         </div>
-        <div class="cl_d">
-          融合4G无线通信技术，高灵敏度GPS+BDS双星定位，支持WIFI室内外定位，AGPS快速辅助定位跟踪同步授时，快速搜星且定位精准。
-        </div>
+        <img class="dispatch_c4" src="@/assets/software/dispatch_c4.png" alt="" />
       </div>
-      <img class="dispatch_c5" src="@/assets/software/dispatch_c5.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          融合通信一张图
-          <br />
-          可视化指挥调度
+      <div class="w1380 CloudBox flexRowAC">
+        <div class="CloudL">
+          <div class="cl_t">
+            位置服务终端
+          </div>
+          <div class="cl_d">
+            融合4G无线通信技术，高灵敏度GPS+BDS双星定位，支持WIFI室内外定位，AGPS快速辅助定位跟踪同步授时，快速搜星且定位精准。
+          </div>
         </div>
-        <div class="cl_d">
-          通过融合应急指挥调度一张图管控端侧资源,形成云计算、一张图、应用端APP落地方案。
-        </div>
+        <img class="dispatch_c5" src="@/assets/software/dispatch_c5.png" alt="" />
       </div>
-      <img class="dispatch_c6" src="@/assets/software/dispatch_c6.png" alt="" />
+      <div class="w1380 CloudBox flexRowAC">
+        <div class="CloudL">
+          <div class="cl_t">
+            融合通信一张图<br />可视化指挥调度
+          </div>
+          <div class="cl_d">
+            通过融合应急指挥调度一张图管控端侧资源,形成云计算、一张图、应用端APP落地方案。
+          </div>
+        </div>
+        <img class="dispatch_c6" src="@/assets/software/dispatch_c6.png" alt="" />
+      </div>
+      <div class="w1380 CloudBox">
+        <div>
+          <div class="cl_t">
+            单兵作战终端 多端协同
+          </div>
+          <div class="cl_d cl_t_d">
+            支持移动端、PC端、执法记录仪端及车载终端协同，提供实时高效的多端联动与指挥管理能力，适用于多场景任务调度。
+          </div>
+        </div>
+        <img class="cl_t_img" src="@/assets/software/zhdd_cpys_ddxt.png" alt="" />
+      </div>
     </div>
 
-    <div class="w1380 CloudBox">
-      <div>
-        <div class="cl_t">
-          单兵作战终端 多端协同
-        </div>
-        <div class="cl_d cl_t_d">
-          支持移动端、PC端、执法记录仪端及车载终端协同，提供实时高效的多端联动与指挥管理能力，适用于多场景任务调度。
-        </div>
-      </div>
-      <img class="cl_t_img" src="@/assets/software/zhdd_cpys_ddxt.png" alt="" />
-    </div>
     <!-- 成功案例 -->
     <div class="productBox w1380">
       <div class="proT">
@@ -230,7 +248,9 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
+import { NTabs, NTabPane, NButton } from 'naive-ui'
+import { useRouter } from 'vue-router'
 import dispatch_bg1 from '@/assets/software/dispatch_bg1.png'
 import dispatch_bg2 from '@/assets/software/dispatch_bg2.png'
 import dispatch_bg3 from '@/assets/software/dispatch_bg3.png'
@@ -248,7 +268,7 @@ const downloadPDF = () => {
 definePageMeta({
   layout: 'site-new'
 })
-let isAct = ref(0)
+// let isAct = ref(0)
 let list = ref([])
 list.value = [
   {
@@ -281,6 +301,14 @@ list.value = [
   }
 ]
 
+const router = useRouter()
+const onBeforeLeave = (index) => {
+  if (index === '更多') {
+    router.push('/services')
+    return false
+  } else return true
+}
+
 let proL = ref([])
 proL.value = [
   { t: '多个接口系统', i: dispatch_pro1, d: '同时提供接处警、警综、视综等13个接口子系统' },
@@ -299,6 +327,53 @@ proL.value = [
   }
 ]
 
+const activeSection = ref('sceneSection')
+
+const sceneSection = ref(null)
+const advantageSection = ref(null)
+const serviceSection = ref(null)
+
+const scrollToSection = (sectionId) => {
+  const element = document.getElementById(sectionId)
+  if (element) {
+    const viewportHeight = window.innerHeight
+    const offset = viewportHeight * 0.15
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+    window.scrollTo({
+      top: elementPosition - offset,
+      behavior: 'smooth'
+    })
+  }
+}
+
+const handleScroll = () => {
+  const sections = [
+    { id: 'sceneSection', ref: sceneSection },
+    { id: 'advantageSection', ref: advantageSection },
+    { id: 'serviceSection', ref: serviceSection }
+  ]
+  const scrollPosition = window.scrollY + 200
+
+  for (const section of sections) {
+    const element = section.ref.value
+    if (element) {
+      const offsetTop = element.offsetTop
+      const offsetHeight = element.offsetHeight
+      // 滚动位置在当前板块范围内，激活对应tab
+      if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+        activeSection.value = section.id
+        break
+      }
+    }
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <style scoped lang="scss">
@@ -315,18 +390,6 @@ proL.value = [
   margin: 0 auto;
 }
 
-// 查看更多
-//.seeMore {
-//  display: inline-block;
-//  padding: 24px 50px;
-//  color: #fff;
-//  border: 1px solid #2278FF;
-//  border-radius: 8px;
-//  background: #2278FF;
-//  box-shadow: 0px 4px 10px 0px #FF5E1033;
-//  font-weight: bold;
-//  font-size: 18px;
-//}
 .platTopOut {
   height: 620px;
   width: auto;
@@ -338,36 +401,12 @@ proL.value = [
   text-align: left;
   padding: 110px 0;
 
-  .plat {
-    text-align: left;
-    display: inline-block;
-    padding: 12px 24px;
-    color: #FF5E10;
-    font-size: 18px;
-    border-radius: 18px;
-    border: 1px solid #E9E9E9;
-  }
-
   .VLStream {
     color: #333333;
     font-weight: bold;
     font-size: 78px;
     padding: 8px 0;
     position: relative;
-
-    .VLStream_img {
-      width: 222px;
-      height: 222px;
-      position: absolute;
-      right: 336px;
-      top: -50px;
-    }
-  }
-
-  .plat_a {
-    color: #333333;
-    font-weight: bold;
-    font-size: 58px;
   }
 
   .plat_cent {
@@ -386,7 +425,6 @@ proL.value = [
       border: 1px solid #2278FF;
       border-radius: 8px;
       background: #2278FF;
-      //box-shadow: 0px 4px 10px 0px #FF5E1033;
       font-weight: bold;
       font-size: 18px;
     }
@@ -405,48 +443,11 @@ proL.value = [
       font-size: 18px;
       background: #fff;
     }
-
-    .seeMore.u2 {
-      display: flex;
-      gap: 10px;
-      border: 1px solid #333;
-      background-color: #333;
-
-      .u2_img {
-        width: 28px;
-        height: 26px;
-      }
-    }
-  }
-}
-
-.WebRTC {
-  gap: 24px;
-  padding-bottom: 80px;
-  animation: scroll 35s linear infinite;
-
-  .webItem {
-    width: auto;
-    height: 120px;
-    border-radius: 16px;
-    background: #E8F7FC;
-    color: #5C6C00;
-    gap: 14px;
-    flex-wrap: nowrap;
-  }
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
   }
 }
 
 .webBottomImg {
-  padding: 110px 0 0;
+  padding: 110px 0 110px 0;
   height: initial;
 
   .wBImg {
@@ -483,39 +484,6 @@ proL.value = [
   .CloudL {
     width: 520px;
   }
-
-  .CloudR {
-    width: 700px;
-    height: auto;
-
-    .CloudRImg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .CloudR2 {
-    width: 700px;
-    height: 700px;
-  }
-}
-
-.ipcBox.CloudBox {
-  padding-bottom: 120px;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  .CloudL {
-    width: 450px;
-    text-align: right;
-    padding-top: 60px;
-  }
-}
-
-.ipcView.CloudBox {
-  .CloudR {
-    height: 460px;
-  }
 }
 
 .productBox {
@@ -529,20 +497,9 @@ proL.value = [
     font-size: 58px;
   }
 
-  .prod {
-    padding-bottom: 60px;
-    color: #717781;
-    font-size: 20px;
-  }
-
   .productImg {
     width: 100%;
     height: 300px;
-
-    .proImg {
-      width: 100%;
-      height: 100%;
-    }
 
     .img1{
       background: url('@/assets/VLimg2.0/jyjg1.png');
@@ -679,101 +636,6 @@ proL.value = [
       }
     }
   }
-
-  .product3Out.productImg {
-    height: initial;
-    margin-bottom: 60px;
-    padding: 40px;
-    border-radius: 24px;
-    background: linear-gradient(180deg, #FEF9F6 0%, #FFFFFF 100%);
-    border: 1px solid #001F5019;
-
-    .p3Box {
-      justify-content: space-between;
-
-      .p3 {
-        width: 358px;
-        height: 170px;
-      }
-    }
-
-    .p3_title {
-      padding-top: 40px;
-      text-align: left;
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .ps_desc {
-      padding-top: 16px;
-      padding-left: 60px;
-      width: 900px;
-      color: #3D3D3D;
-      font-size: 20px;
-      text-align: left;
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: 40px;
-        top: 26px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: #333;
-      }
-    }
-  }
-
-  .p4Out {
-    width: auto;
-    height: 870px;
-  }
-
-  .p5Out {
-    flex-wrap: wrap;
-    gap: 40px;
-
-    .p5Item {
-      padding: 50px 0;
-      flex-direction: column;
-      border-radius: 40px;
-      background: #FFFFFF;
-      box-shadow: 0px 0px 48px 0px #07005714;
-      width: 300px;
-      height: 300px;
-      flex-shrink: 0;
-      gap: 10px;
-      position: relative;
-    }
-
-    .p5Iimg {
-      width: 110px;
-      height: 110px;
-    }
-
-    .p5t {
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .p5d {
-      color: #717781;
-      font-size: 14px;
-    }
-
-    .proCode {
-      width: 70px;
-      height: 70px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      border-radius: 0px 0px 0px 0px;
-    }
-  }
 }
 
 .proTitleBox {
@@ -827,12 +689,6 @@ proL.value = [
       color: #333333;
       font-weight: normal;
       font-size: 24px;
-    }
-
-    .sceneB_d {
-      color: #717781;
-      font-weight: normal;
-      font-size: 18px;
     }
   }
 }
@@ -904,7 +760,142 @@ proL.value = [
   line-height: 88px;
   text-align: center;
   padding-bottom: 60px;
-  padding-top: 160px;
+  padding-top: 80px;
 }
 
+.tabSwitch{
+  position: sticky;
+  top: 82px;
+  z-index: 9;
+  background-color: #fff;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+  border-bottom: 0.5px solid #DFDFDF;
+  margin-bottom: 160px;
+  .tabItem{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .tabTitle{
+      color: #666666;
+      font-size: 28px;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      transition: color 0.3s ease;
+    }
+    .line{
+      width: 64px;
+      height: 4px;
+      background: transparent;
+      transition: background-color 0.3s ease;
+    }
+    .activeTitle{
+      color: #333333;
+      font-weight: 500;
+    }
+    .activeLine{
+      background: #4480FF;
+    }
+  }
+}
+
+.panel {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1380px;
+  box-sizing: border-box;
+}
+.pane {
+  position: relative;
+  display: flex;
+  &_left {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    height: 380px;
+    box-sizing: border-box;
+    &_title {
+      margin-bottom: 22px;
+      font-size: 24px;
+      color: #333333;
+      font-weight: 400;
+    }
+    &_intro {
+      margin-bottom: 38px;
+      font-size: 24px;
+      color: #333333;
+      text-align: justify;
+      font-weight: 400;
+    }
+    &_link {
+      width: 80px;
+      height: 36px;
+      background: #2278FF;
+      border-radius: 4px;
+    }
+  }
+  &_right {
+    position: absolute;
+    top: 0;
+    right: -44px;
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    height: 380px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.n-tabs {
+  margin-top: 0;
+}
+:deep(.n-tabs-tab-pad) {
+  width: 0;
+}
+:deep(.n-tabs-tab) {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+}
+:deep(.n-tabs-tab--active) {
+  color: #2290FF !important;
+  background-image: url('/img/home/program_selected_2x.png');
+  background-size: 100% 100%;
+}
+:deep(.n-tabs-bar) {
+  display: none;
+}
+:deep(.n-tab-pane) {
+  padding: 0;
+  height: 380px;
+  background: #F7F7F7;
+  border: 1px solid rgba(216,216,216,1);
+  border-radius: 0px 10px 10px 10px;
+  box-sizing: border-box;
+}
+:deep(.n-tabs-tab:hover) {
+  color: #2290ff !important;
+}
+:deep(.n-button) {
+  font-size: 16px;
+  width: 100px;
+  height: 40px;
+}
 </style>
