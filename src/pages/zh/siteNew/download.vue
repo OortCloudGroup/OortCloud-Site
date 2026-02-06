@@ -20,7 +20,7 @@
               <thead>
                 <tr>
                   <th>{{ item.name }}</th>
-                  <th>{{ item.download }}</th>
+                  <th>{{ item.Download }}</th>
                   <th>{{ item.Changelog }}</th>
                 </tr>
               </thead>
@@ -49,7 +49,7 @@
               <thead>
                 <tr>
                   <th>{{ value.name }}</th>
-                  <th>{{ value.download }}</th>
+                  <th>{{ value.Download }}</th>
                   <th>{{ value.Changelog }}</th>
                 </tr>
               </thead>
@@ -158,7 +158,7 @@ const goProduceLog = (type) => {
 const generalList = ref([
   {
     name: 'OortCloud APP',
-    download: 'download',
+    Download: 'Download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -183,7 +183,7 @@ const generalList = ref([
   },
   {
     name: 'OortCloud Desktop',
-    download: 'download',
+    Download: 'Download',
     Changelog: 'Changelog',
     list: [{
       name: 'Windows',
@@ -206,7 +206,7 @@ const generalList = ref([
   },
   {
     name: 'OortCloud AI Studio',
-    download: 'download',
+    Download: 'Download',
     Changelog: 'Changelog',
     list: [{
       name: 'Windows',
@@ -235,7 +235,7 @@ const generalList = ref([
   },
   {
     name: 'OORT.SH',
-    download: 'link',
+    Download: 'Link',
     Changelog: 'Changelog',
     list: [{
       name: 'Web',
@@ -245,7 +245,7 @@ const generalList = ref([
   },
   {
     name: 'OORT.AI',
-    download: 'link',
+    Download: 'Link',
     Changelog: 'Changelog',
     list: [{
       name: 'Web',
@@ -255,7 +255,7 @@ const generalList = ref([
   },
   {
     name: 'VLStream',
-    download: 'download',
+    Download: 'Download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -279,7 +279,7 @@ const generalList = ref([
 const industryList = ref([
   {
     name: '指挥调度',
-    download: 'download',
+    Download: 'Download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -299,7 +299,7 @@ const industryList = ref([
   },
   {
     name: 'AI智眼',
-    download: 'download',
+    Download: 'Download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -319,7 +319,7 @@ const industryList = ref([
   },
   {
     name: '智慧园林',
-    download: 'download',
+    Download: 'Download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',
@@ -339,7 +339,7 @@ const industryList = ref([
   },
   {
     name: '智慧安保',
-    download: 'download',
+    Download: 'Download',
     Changelog: 'Changelog',
     list: [{
       name: 'Android',

@@ -159,9 +159,18 @@
           高可用架构与完备容灾方案
         </div>
         <div class="pro3 flexRowAC">
+          <!-- <NuxtLink
+            to="/zh/demoGA"
+            target="_blank"
+          >
+            <div class="pro3_btn flexRowAC">
+              试用
+            </div>
+          </NuxtLink> -->
           <div class="pro3_btn flexRowAC">
-            申请试用
+            试用
           </div>
+
           <div class="pro3_btn p3b flexRowAC">
             详细功能
           </div>
@@ -218,6 +227,7 @@ p5Arr.value = [
   { t: 'Mac OS', d: '版本号：V3.1.06', flag: false, img: product5_6 },
   { t: '银河麒麟', d: '版本号：V3.1.06', flag: false, img: product5_7 }
 ]
+
 </script>
 
 <style scoped lang="scss">
@@ -493,9 +503,10 @@ p5Arr.value = [
   }
 
   .product1 {
+    margin: 0 auto;
     text-align: left;
     color: #fff;
-    width: auto;
+    width: 100%;
     height: 510px;
     background-color: #fff;
     border-radius: 24px;

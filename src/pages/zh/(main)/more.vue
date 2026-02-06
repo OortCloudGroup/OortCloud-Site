@@ -73,14 +73,14 @@ const doubleSysApp = ref({
   apps: [
     {
       name: '即时通讯',
-      logo: '/img/home/xl_1.png',
+      logo: '/img/home/jstx.png',
       excerpt: '单聊、群聊、图文、视频等即时通讯IM',
       link: '/product_instantMsg'
     },
     {
-      name: '私有云部署的移动安全办公云平台',
-      logo: '/img/home/xl_2.png',
-      excerpt: '私有云部署的移动安全办公云平台'
+      name: 'OortCloud智能体',
+      logo: '/img/home/znt.png',
+      excerpt: 'OortCloud智能体'
     },
     {
       name: '门户与应用仓库',
@@ -99,15 +99,15 @@ const doubleSysApp = ref({
       excerpt: '设备管家--MDM移动终端安全管理平台'
     },
     {
-      name: '定制手机型安全终端',
+      name: '定制手机型安全终端与Pad终端',
       logo: '/img/home/xl_6.png',
-      excerpt: '手机终端安全加固组件与刷机服务包'
-    },
-    {
-      name: '定制安全Pad终端',
-      logo: '/img/home/xl_7.png',
-      excerpt: 'Pad终端安全加固组件与刷机服务包'
+      excerpt: '手机和Pad终端安全加固组件与刷机服务包'
     }
+    // {
+    //   name: '定制安全Pad终端',
+    //   logo: '/img/home/xl_7.png',
+    //   excerpt: 'Pad终端安全加固组件与刷机服务包'
+    // }
   ]
 })
 // 指挥调度与IOC大数据可视化
@@ -126,8 +126,8 @@ const viewableApp = ref({
       excerpt: '总揽指挥调度一张图，用于电子指挥大屏操作'
     },
     {
-      name: '大数据IOC可视化平台',
-      logo: '/img/home/xl_10.png',
+      name: 'OORT.DA',
+      logo: '/img/home/da.png',
       excerpt: '大数据处理与IOC可视化系统'
     }
   ]
@@ -187,7 +187,7 @@ const application = ref({
     },
     {
       name: '指挥调度一张图',
-      logo: '/img/home/yycp_6.png',
+      logo: '/img/home/zhddyzt.png',
       excerpt: '可视化实战指挥调度一张图系统'
     },
     {
@@ -195,11 +195,11 @@ const application = ref({
       logo: '/img/home/yycp_7.png',
       excerpt: '基于OpenSergo统一微服务治理警务服务总线软件'
     },
-    {
-      name: '档案宝',
-      logo: '/img/home/dab.png',
-      excerpt: '电子档案安全管理平台'
-    },
+    // {
+    //   name: '智慧档案',
+    //   logo: '/img/home/zhda.png',
+    //   excerpt: '电子档案安全管理平台'
+    // },
     {
       name: '党建宝',
       logo: '/img/home/yycp_9.png',
@@ -278,7 +278,7 @@ const application = ref({
     },
     {
       name: '智能审批',
-      logo: '/img/home/yycp_28.png',
+      logo: '/img/home/znsp.png',
       excerpt: '工作流引擎和自定义表单服务系统'
     },
     {
@@ -302,8 +302,8 @@ const application = ref({
       excerpt: '移动检务宝平台'
     },
     {
-      name: 'OA数字化办公',
-      logo: '/img/app/OAszh.png',
+      name: 'AI办公',
+      logo: '/img/home/aibg.png',
       excerpt: '流程管理、信息门户、知识管理、移动办公、合同管理、人事管理、采购管理、费控管理等数字化办公'
     },
     {
@@ -319,14 +319,14 @@ const saasApp = ref({
   logo: '',
   apps: [
     {
-      name: '交通微劝导系统',
-      logo: '/img/home/aqcp_1.png',
+      name: '企业办公',
+      logo: '/img/home/qybg.png',
       excerpt: '落实公安部交管局“一盔一带”行动计划，助力文明城市迎检工作',
       link: '/product_microAdvice'
     },
     {
-      name: '反诈中心推广统计平台',
-      logo: '/img/home/aqcp_2.png',
+      name: '智慧宣传',
+      logo: '/img/home/zhxc.png',
       excerpt: '反诈APP推广神器——反诈推广码',
       link: '/product_antiFraud'
     },
@@ -344,6 +344,21 @@ const saasApp = ref({
       name: '辅警平台',
       logo: '/img/home/yycp_22.png',
       excerpt: '智慧新警务辅警管理平台'
+    },
+    {
+      name: '智慧园林',
+      logo: '/img/home/zhyl.png',
+      excerpt: '智慧园林管理平台'
+    },
+    {
+      name: '智慧安保',
+      logo: '/img/home/zhab.png',
+      excerpt: '智慧安保管理平台'
+    },
+    {
+      name: '智慧档案',
+      logo: '/img/home/zhda.png',
+      excerpt: '电子档案安全管理平台'
     }
   ]
 })
@@ -371,6 +386,11 @@ const securityApp = ref({
       name: '定制安全Pad终端',
       logo: '/img/home/xl_7.png',
       excerpt: 'Pad终端安全加固组件与刷机服务包'
+    },
+    {
+      name: '计算机保密防范',
+      logo: '/img/app/icon_lock.png',
+      excerpt: '计算机信息保密防范管理平台'
     }
   ]
 })
@@ -575,7 +595,7 @@ const filesApp = ref({
   logo: '/img/demo/menu/da.png',
   apps: [
     {
-      name: '档案宝',
+      name: '智慧档案',
       logo: '/img/app/dab.png',
       excerpt: '电子档案管理系统、声像档案管理系统',
       link: '/product_archiveSoftware'

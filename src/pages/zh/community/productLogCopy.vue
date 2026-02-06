@@ -273,7 +273,7 @@ onMounted(async() => {
 }
 
 .subTile {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 400;
   color: #fff;
   margin-top: 8px;
@@ -335,7 +335,7 @@ onMounted(async() => {
 }
 
 .sidebar-title {
-  font-size: 16px;
+  font-size: 30px;
   font-weight: 600;
   color: #1A1A2E;
   margin-bottom: 16px;
@@ -373,8 +373,8 @@ onMounted(async() => {
 }
 
 .tree-expand-icon {
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -397,16 +397,16 @@ onMounted(async() => {
 }
 
 .release-version-node {
-  font-weight: 600;
+  font-weight: 500;
   color: #1A1A2E;
-  font-size: 14px;
+  font-size: 20px;
   letter-spacing: 0.2px;
 }
 
 .code-version-node {
   font-weight: 400;
   color: #6B7280;
-  font-size: 13px;
+  font-size: 19px;
 }
 
 .tree-node-item.active .release-version-node,
@@ -459,7 +459,7 @@ onMounted(async() => {
 }
 
 .date-text {
-  font-size: 15px;
+  font-size: 21px;
   font-weight: 500;
   color: #1A1A2E;
   line-height: 1.5;
@@ -483,7 +483,7 @@ onMounted(async() => {
 }
 
 .version-text {
-  font-size: 13px;
+  font-size: 19px;
   font-weight: 500;
   color: #059669;
 }
@@ -499,7 +499,7 @@ onMounted(async() => {
 }
 
 .release-text {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
   color: #FFFFFF;
   letter-spacing: 0.3px;
@@ -513,14 +513,14 @@ onMounted(async() => {
 }
 
 .service-title {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 600;
   color: #000000;
   margin-bottom: 4px;
 }
 
 .update-title {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 400;
   color: #666666;
   margin-bottom: 6px;
@@ -549,7 +549,7 @@ onMounted(async() => {
 }
 
 .content-text {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 400;
   color: #4B5563;
   line-height: 1.7;

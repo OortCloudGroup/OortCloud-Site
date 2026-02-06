@@ -32,17 +32,37 @@
                     基础软件
                   </p>
                   <div class="dropdown_col_sort">
+                    <img class="dropdown_col_sort_logo" src="/img/home/zhdd.png" />
+                    <span class="dropdown_col_sort_label">指挥调度与IOC大数据可视化</span>
+                  </div>
+                  <div class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/home/zhddyzt.png" />
+                    <span class="dropdown_col_item_label">指挥调度一张图</span>
+                  </div>
+                  <div class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/home/da.png" />
+                    <span class="dropdown_col_item_label">OORT.DA</span>
+                  </div>
+                  <div class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/home/superset.png" />
+                    <span class="dropdown_col_item_label">Apache Superset</span>
+                  </div>
+                  <div class="dropdown_col_item">
+                    <img class="dropdown_col_item_logo" src="/img/home/dsjdz.png" />
+                    <span class="dropdown_col_item_label">大数据底座</span>
+                  </div>
+                  <div class="dropdown_col_sort">
                     <img class="dropdown_col_sort_logo" src="/img/home/sxt.png" />
-                    <span class="dropdown_col_sort_label">安全移动办公</span>
+                    <span class="dropdown_col_sort_label">双系统安全移动办公</span>
                   </div>
                   <a href="https://www.myoumuamua.com/" target="_blank">
                     <div class="dropdown_col_item">
-                      <img class="dropdown_col_item_logo" src="/img/home/xl_2.png" />
+                      <img class="dropdown_col_item_logo" src="/img/home/znt.png" />
                       <span class="dropdown_col_item_label">OortCloud智能体</span>
                     </div>
                   </a>
                   <NuxtLink to="/zh/product_instantMsg" class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/home/xl_1.png" />
+                    <img class="dropdown_col_item_logo" src="/img/home/jstx.png" />
                     <span class="dropdown_col_item_label">即时通讯</span>
                     <!-- <span>NEW</span> -->
                   </NuxtLink>
@@ -63,26 +83,6 @@
                     <img class="dropdown_col_item_logo" src="/img/home/xl_7.png" />
                     <span class="dropdown_col_item_label">定制安全Pad终端</span>
                   </div> -->
-                  <div class="dropdown_col_sort">
-                    <img class="dropdown_col_sort_logo" src="/img/home/zhdd.png" />
-                    <span class="dropdown_col_sort_label">指挥调度与IOC大数据可视化</span>
-                  </div>
-                  <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/home/xl_9.png" />
-                    <span class="dropdown_col_item_label">指挥调度一张图</span>
-                  </div>
-                  <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/home/xl_10.png" />
-                    <span class="dropdown_col_item_label">OORT.DA</span>
-                  </div>
-                  <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/app/icon_apache.png" />
-                    <span class="dropdown_col_item_label">Apache Superset</span>
-                  </div>
-                  <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/app/icon_xdata.png" />
-                    <span class="dropdown_col_item_label">XDataStudio大数据底座</span>
-                  </div>
                 </div>
                 <div class="dropdown_col" style="flex: 1.5; padding-top: 1.375rem;">
                   <p class="dropdown_col_title" />
@@ -92,29 +92,29 @@
                   </div>
                   <a href="http://oort.oortcloudsmart.com:32610/oort/oortcloud-frontservice/apaas_web/" target="_blank">
                     <div class="dropdown_col_item">
-                      <img class="dropdown_col_item_logo" src="/img/home/xl_11.png" />
+                      <img class="dropdown_col_item_logo" src="/img/home/OORT.AI.png" />
                       <span class="dropdown_col_item_label">OORT.AI</span>
                     </div>
                   </a>
                   <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/home/xl_12.png" />
+                    <img class="dropdown_col_item_logo" src="/img/home/OORT.SH.png" />
                     <span class="dropdown_col_item_label">OORT.SH</span>
                   </div>
                   <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/home/xl_4.png" />
+                    <img class="dropdown_col_item_logo" src="/img/home/VLStream.png" />
                     <span class="dropdown_col_item_label">VLStream</span>
                   </div>
-                  <div class="dropdown_col_item">
+                  <!-- <div class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/home/xl_8.png" />
                     <span class="dropdown_col_item_label">OortCloud AI Studio</span>
-                  </div>
+                  </div> -->
                   <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/home/xl_13.png" />
+                    <img class="dropdown_col_item_logo" src="/img/home/rqypt.png" />
                     <span class="dropdown_col_item_label">容器云平台</span>
                   </div>
                   <div class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/app/icon_cloud.png" />
-                    <span class="dropdown_col_item_label">XProxy跨网智能网关</span>
+                    <span class="dropdown_col_item_label">跨网智能网关</span>
                   </div>
                   <div class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/app/icon_kuboard.png" />
@@ -122,11 +122,11 @@
                   </div>
                   <div class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/app/icon_cloud.png" />
-                    <span class="dropdown_col_item_label">XFileStor分布式文件存储系统</span>
+                    <span class="dropdown_col_item_label">分布式文件存储系统</span>
                   </div>
                   <div class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/app/icon_tianqin.png" />
-                    <span class="dropdown_col_item_label">XCompute天琴虚拟化软件</span>
+                    <span class="dropdown_col_item_label">天琴虚拟化软件</span>
                   </div>
                 </div>
               </NavHeaderDropdown>
@@ -326,31 +326,35 @@ const softwareMenu = ref<Menu[]>([
     title: '应用产品',
     showTitle: true,
     menus: [
-      { name: 'XOA数字化办公', logo: '/img/app/icon_xoa.png' },
-      { name: 'XCreator敏捷发布平台', logo: '/img/app/icon_xcreator.png' },
-      { name: '警卫宝', logo: '/img/home/yycp_10.png' },
-      { name: '视频宝', logo: '/img/home/yycp_12.png' },
-      { name: '天琴智宝', logo: '/img/home/yycp_17.png' }
+      { name: 'AI办公', logo: '/img/home/aibg.png' },
+      { name: '指挥调度', logo: '/img/home/zhddyzt.png' },
+      { name: '即时协同', logo: '/img/home/jsxt.png' },
+      { name: '云课堂', logo: '/img/home/ykt.png' },
+      { name: '智能审批', logo: '/img/home/znsp.png' },
+      { name: '云盘', logo: '/img/home/yp.png' },
+      { name: '安全邮箱', logo: '/img/home/aqyx.png' },
+      { name: '视频融合', logo: '/img/home/sprh.png' },
+      { name: '视频会议', logo: '/img/home/sphy.png' }
     ]
   },
   {
     title: '云SaaS软件',
     showTitle: true,
     menus: [
-      { name: '企业办公', logo: '/img/home/aqcp_1.png', link: '/product_microAdvice' },
-      { name: '智慧宣传', logo: '/img/home/aqcp_2.png', link: '/product_antiFraud' },
-      { name: '智慧园林', logo: '/img/demo/menu/yl.png' },
-      { name: '智慧安保', logo: '/img/demo/menu/ab.png' },
-      { name: '智慧档案', logo: '/img/demo/menu/da.png' }
+      { name: '企业办公', logo: '/img/home/qybg.png', link: '/product_microAdvice' },
+      { name: '智慧宣传', logo: '/img/home/zhxc.png', link: '/product_antiFraud' },
+      { name: '智慧园林', logo: '/img/home/zhyl.png' },
+      { name: '智慧安保', logo: '/img/home/zhab.png' },
+      { name: '智慧档案', logo: '/img/home/zhda.png' }
     ]
   },
   {
     title: '安全产品',
     showTitle: true,
     menus: [
-      { name: '安全管控MDM', logo: '/img/home/aqcp_01.png' },
+      { name: '安全管控MDM', logo: '/img/home/xl_5.png' },
       { name: '枪弹装备室', logo: '/img/home/aqcp_5.png' },
-      { name: '定制手机型安全终端', logo: '/img/home/dzh.png' },
+      { name: '定制手机型安全终端', logo: '/img/home/xl_6.png' },
       { name: '定制安全Pad终端', logo: '/img/home/xl_7.png' },
       { name: '计算机保密防范', logo: '/img/app/icon_lock.png' }
     ]
@@ -373,7 +377,7 @@ const solutionMenu = ref<Menu[]>([
     showTitle: false,
     menus: [
       { name: '法院', logo: '/img/demo/menu/fy.png', link: '/services_court' }, // /img/app/fayuan.png
-      { name: '智慧档案', logo: '/img/demo/menu/da.png', link: '/services_document' },
+      { name: '智慧档案', logo: '/img/home/zhda.png', link: '/services_document' },
       { name: '智慧边海防', logo: '/img/demo/menu/zhbhf.png', link: '/services_borderSeaDefense' },
       { name: '政府', logo: '/img/demo/menu/zf.png', link: '/services_goverment' } // /img/app/zhengfu.png
     ]
@@ -402,9 +406,9 @@ const solutionMenu = ref<Menu[]>([
     title: '',
     showTitle: false,
     menus: [
-      { name: '智慧园林', logo: '/img/demo/menu/yl.png', link: '/services_garden' },
+      { name: '智慧园林', logo: '/img/home/zhyl.png', link: '/services_garden' },
       { name: '智慧武装', logo: '/img/demo/menu/wz.png', link: '/services_armed' },
-      { name: '智慧安保', logo: '/img/demo/menu/ab.png', link: '/services_security' }
+      { name: '智慧安保', logo: '/img/home/zhab.png', link: '/services_security' }
     ]
   }
 ])
@@ -419,7 +423,7 @@ const demoMenu = ref<MenuItem[]>([
   {
     name: '智慧园林',
     desc: '物联网与GIS一张网技术驱动的园林全流程精细化管控平台',
-    logo: '/img/demo/menu/yl.png',
+    logo: '/img/home/zhyl.png',
     link: '/demoYL'
   },
   {
@@ -451,7 +455,7 @@ const demoMenu = ref<MenuItem[]>([
     name: '智慧档案',
     desc: '符合国档规范标准的全门类档案收管存用综合管理系统',
     // logo: '/img/demo/menu/im.png',
-    logo: '/img/demo/menu/da.png',
+    logo: '/img/home/zhda.png',
     // link: '/智慧档案馆管理系统演示系统.html'
     link: '/demoDA2'
   },
@@ -471,13 +475,13 @@ const demoMenu = ref<MenuItem[]>([
   {
     name: '指挥调度',
     desc: '总揽指挥调度一张图、用于大屏、调度、过程可视',
-    logo: '/img/app/zhyzt.png',
+    logo: '/img/home/zhddyzt.png',
     link: '/demoOneMap'
   },
   {
     name: '智慧安保',
     desc: '安全风险智能预警及可视化指挥防护平台',
-    logo: '/img/demo/menu/ab.png',
+    logo: '/img/home/zhab.png',
     link: '/demoAB'
   },
   // {

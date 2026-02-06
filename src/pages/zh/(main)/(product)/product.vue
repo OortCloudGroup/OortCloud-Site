@@ -10,7 +10,7 @@
           </div>
         </NuxtLink>
         <NuxtLink to="/zh/product_instantMsg" class="cd_bottom_list_item">
-          <img src="/img/home/xl_1.png" />
+          <img src="/img/home/jstx.png" />
           <div class="cd_bottom_list_item_right">
             <span>即时通讯</span>
             <span>单聊、群聊、图文、视频等即时通讯IM</span>
