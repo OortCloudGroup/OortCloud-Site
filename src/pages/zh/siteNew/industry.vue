@@ -5,7 +5,8 @@
         <img class="idtImg" src="@/assets/homeImg/industry_i1.png" alt="" />行业
       </div>
       <div class="flexRowAC conBox">
-        <div v-for="(item,i) in idtArr1" :key="i" @click="indClick('行业','/zh/siteNew/industy/overview',item)">
+        <!-- 关键修改1：移除硬编码路径，改为动态获取 -->
+        <div v-for="(item,i) in idtArr1" :key="i" @click="indClick('行业', getIndustryPath(item), item)">
           {{ item }}
         </div>
       </div>
@@ -89,6 +90,24 @@ let idtArr1 = ref([])
 idtArr1.value = [
   '安保', '物业', '园区', '街道', '消防', '律所', '停车', '酒厂'
 ]
+// 关键修改2：创建行业路径映射表
+const industryPathMap = {
+  安保: '/zh/siteNew/industy/security',
+  物业: '/zh/siteNew/industy/property',
+  园区: '/zh/siteNew/industy/park',
+  街道: '/zh/siteNew/industy/overview',
+  消防: '/zh/siteNew/industy/fire',
+  律所: '/zh/siteNew/industy/lawfirm',
+  停车: '/zh/siteNew/industy/parking',
+  酒厂: '/zh/siteNew/industy/winery'
+  // 可以根据需要继续添加更多行业的路径映射
+}
+
+// 关键修改3：创建获取路径的方法
+const getIndustryPath = (item) => {
+  // 如果有对应的映射路径则返回，否则返回默认路径
+  return industryPathMap[item] || '/zh/siteNew/industy/overview'
+}
 idtArr.value = [
   {
     t: '个人效率工具',
