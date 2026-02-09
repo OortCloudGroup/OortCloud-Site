@@ -5,55 +5,76 @@
         热门产品
       </div>
       <div class="cl_list">
-        <div class="cl_item">
-          <img class="cl_item_img" src="@/assets/software/allProducts/ykt.png" />
-          <div class="cl_item_r">
-            <span class="cl_item_r_t">云课堂</span>
-            <span class="cl_item_r_d">基于移动互联网的培训管理和学习交互平台</span>
+        <NuxtLink to="/zh/siteNew/cloudClass" target="_blank">
+          <div class="cl_item">
+            <img class="cl_item_img" src="@/assets/software/allProducts/ykt.png" />
+            <div class="cl_item_r">
+              <span class="cl_item_r_t">云课堂</span>
+              <span class="cl_item_r_d">基于移动互联网的培训管理和学习交互平台</span>
+            </div>
           </div>
-        </div>
-        <div class="cl_item">
-          <img class="cl_item_img" src="@/assets/software/allProducts/jstx.png" />
-          <div class="cl_item_r">
-            <span class="cl_item_r_t">即时通讯</span>
-            <span class="cl_item_r_d">单聊、群聊、图文、视频等即时通讯IM</span>
+        </NuxtLink>
+
+        <NuxtLink to="/zh/siteNew/instantMess" target="_blank">
+          <div class="cl_item">
+            <img class="cl_item_img" src="@/assets/software/allProducts/jstx.png" />
+            <div class="cl_item_r">
+              <span class="cl_item_r_t">即时通讯</span>
+              <span class="cl_item_r_d">单聊、群聊、图文、视频等即时通讯IM</span>
+            </div>
           </div>
-        </div>
-        <div class="cl_item">
-          <img class="cl_item_img" src="@/assets/software/allProducts/znsp.png" />
-          <div class="cl_item_r">
-            <span class="cl_item_r_t">智能审批</span>
-            <span class="cl_item_r_d">工作流引擎和自定义表单服务系统</span>
+        </NuxtLink>
+
+        <NuxtLink to="/zh/siteNew/approval" target="_blank">
+          <div class="cl_item">
+            <img class="cl_item_img" src="@/assets/software/allProducts/znsp.png" />
+            <div class="cl_item_r">
+              <span class="cl_item_r_t">智能审批</span>
+              <span class="cl_item_r_d">工作流引擎和自定义表单服务系统</span>
+            </div>
           </div>
-        </div>
-        <div class="cl_item">
-          <img class="cl_item_img" src="@/assets/software/allProducts/mhyyyck.png" />
-          <div class="cl_item_r">
-            <span class="cl_item_r_t">门户与应用仓库</span>
-            <span class="cl_item_r_d">把小程序搬进APP,快速打造超级APP</span>
+        </NuxtLink>
+
+        <NuxtLink to="/zh/siteNew/portalApp" target="_blank">
+          <div class="cl_item">
+            <img class="cl_item_img" src="@/assets/software/allProducts/mhyyyck.png" />
+            <div class="cl_item_r">
+              <span class="cl_item_r_t">门户与应用仓库</span>
+              <span class="cl_item_r_d">把小程序搬进APP,快速打造超级APP</span>
+            </div>
           </div>
-        </div>
-        <div class="cl_item">
-          <img class="cl_item_img" src="@/assets/software/allProducts/ydjwfwzx.png" />
-          <div class="cl_item_r">
-            <span class="cl_item_r_t">警务服务总线</span>
-            <span class="cl_item_r_d">基于OpenSergo统一微服务治理警务服务总线软件</span>
+        </NuxtLink>
+
+        <NuxtLink to="/zh/siteNew/policeBus" target="_blank">
+          <div class="cl_item">
+            <img class="cl_item_img" src="@/assets/software/allProducts/ydjwfwzx.png" />
+            <div class="cl_item_r">
+              <span class="cl_item_r_t">警务服务总线</span>
+              <span class="cl_item_r_d">基于OpenSergo统一微服务治理警务服务总线软件</span>
+            </div>
           </div>
-        </div>
-        <div class="cl_item">
-          <img class="cl_item_img" src="@/assets/software/allProducts/zhdd.png" />
-          <div class="cl_item_r">
-            <span class="cl_item_r_t">指挥调度</span>
-            <span class="cl_item_r_d">指挥调度，警情、警力、现场、调度、过程可视</span>
+        </NuxtLink>
+
+        <NuxtLink to="/zh/siteNew/dispatch" target="_blank">
+          <div class="cl_item">
+            <img class="cl_item_img" src="@/assets/software/allProducts/zhdd.png" />
+            <div class="cl_item_r">
+              <span class="cl_item_r_t">指挥调度</span>
+              <span class="cl_item_r_d">指挥调度，警情、警力、现场、调度、过程可视</span>
+            </div>
           </div>
-        </div>
-        <div class="cl_item">
-          <img class="cl_item_img" src="@/assets/software/allProducts/k8sAndCMDB.png" />
-          <div class="cl_item_r">
-            <span class="cl_item_r_t">K8S容器管理和CMDB软件</span>
-            <span class="cl_item_r_d">把小程序搬进APP,快速打造超级APP</span>
+        </NuxtLink>
+
+        <NuxtLink to="/zh/siteNew/k8sMana" target="_blank">
+          <div class="cl_item">
+            <img class="cl_item_img" src="@/assets/software/allProducts/k8sAndCMDB.png" />
+            <div class="cl_item_r">
+              <span class="cl_item_r_t">K8S容器管理和CMDB软件</span>
+              <span class="cl_item_r_d">把小程序搬进APP,快速打造超级APP</span>
+            </div>
           </div>
-        </div>
+        </NuxtLink>
+
         <div class="cl_item" @click="viewPath('/zh/siteNew/operationsManPlatform',3)">
           <img class="cl_item_img" src="@/assets/software/allProducts/ywglpt.png" />
           <div class="cl_item_r">
@@ -693,7 +714,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+// import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()

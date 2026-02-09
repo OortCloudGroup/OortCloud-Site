@@ -47,7 +47,7 @@
                     <img class="dropdown_col_item_logo" src="/img/home/superset.png" />
                     <span class="dropdown_col_item_label">Apache Superset</span>
                   </div>
-                  <div class="dropdown_col_item">
+                  <div class="dropdown_col_item" style="margin-bottom: 20px;">
                     <img class="dropdown_col_item_logo" src="/img/home/dsjdz.png" />
                     <span class="dropdown_col_item_label">大数据底座</span>
                   </div>
@@ -345,7 +345,7 @@ const softwareMenu = ref<Menu[]>([
       { name: '智慧宣传', logo: '/img/home/zhxc.png', link: '/product_antiFraud' },
       { name: '智慧园林', logo: '/img/home/zhyl.png' },
       { name: '智慧安保', logo: '/img/home/zhab.png' },
-      { name: '智慧档案', logo: '/img/home/zhda.png' }
+      { name: '智慧档案', logo: '/img/home/zhda.png', link: '/product_projectSolution' }
     ]
   },
   {
