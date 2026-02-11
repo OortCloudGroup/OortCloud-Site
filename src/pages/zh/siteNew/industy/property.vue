@@ -4,7 +4,6 @@
     <section id="home" class="hero">
       <h1>智慧物业管理系统</h1>
       <p>科技赋能社区，智能改变生活 - 打造现代化物业管理新体验</p>
-      <a href="#contact" class="btn">立即咨询</a>
     </section>
 
     <!-- 特性区域 -->

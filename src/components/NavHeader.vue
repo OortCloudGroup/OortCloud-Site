@@ -41,7 +41,7 @@
                   </div>
                   <div class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/home/da.png" />
-                    <span class="dropdown_col_item_label">OORT.DA</span>
+                    <span class="dropdown_col_item_label">OORT.AI</span>
                   </div>
                   <div class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/home/superset.png" />

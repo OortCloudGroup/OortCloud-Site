@@ -5,7 +5,6 @@
         <img class="idtImg" src="@/assets/homeImg/industry_i1.png" alt="" />行业
       </div>
       <div class="flexRowAC conBox">
-        <!-- 关键修改1：移除硬编码路径，改为动态获取 -->
         <div v-for="(item,i) in idtArr1" :key="i" @click="indClick('行业', getIndustryPath(item), item)">
           {{ item }}
         </div>
@@ -25,15 +24,9 @@
         <img class="idtImg" src="@/assets/homeImg/industry_i3.png" alt="" />场景
       </div>
       <div class="flexRowAC conBox">
-        <div>项目管理</div>
-        <div>敏捷研发</div>
-        <div>待办工具</div>
-        <div>数据分析</div>
-        <div>问卷调研</div>
-        <div>综合人事</div>
-        <div>培训学习</div>
-        <div>出差旅行</div>
-        <div>综合行政</div>
+        <div v-for="(item,i) in sceneArr" :key="i" @click="indClick('场景', getScenePath(item), item)">
+          {{ item }}
+        </div>
       </div>
     </div>
     <div v-else class="w1380 appT flexRowAC">
@@ -87,10 +80,15 @@ const emits = defineEmits(['handle'])
 let itemTemp = ref('')
 let idtArr = ref([])
 let idtArr1 = ref([])
+// 场景数组
+let sceneArr = ref([
+  '项目管理', '敏捷研发', '待办工具', '数据分析', '问卷调研', '综合人事', '培训学习', '出差旅行', '综合行政'
+])
+
 idtArr1.value = [
   '安保', '物业', '园区', '街道', '消防', '律所', '停车', '酒厂'
 ]
-// 关键修改2：创建行业路径映射表
+
 const industryPathMap = {
   安保: '/zh/siteNew/industy/security',
   物业: '/zh/siteNew/industy/property',
@@ -100,14 +98,30 @@ const industryPathMap = {
   律所: '/zh/siteNew/industy/lawfirm',
   停车: '/zh/siteNew/industy/parking',
   酒厂: '/zh/siteNew/industy/winery'
-  // 可以根据需要继续添加更多行业的路径映射
 }
 
-// 关键修改3：创建获取路径的方法
+const scenePathMap = {
+  项目管理: '/zh/siteNew/industy/projectManagement',
+  敏捷研发: '/zh/siteNew/industy/agileDevelopment',
+  待办工具: '/zh/siteNew/industy/todoTools',
+  数据分析: '/zh/siteNew/industy/dataAnalysis',
+  问卷调研: '/zh/siteNew/industy/questionnaireSurvey',
+  综合人事: '/zh/siteNew/industy/comprehensiveHr',
+  培训学习: '/zh/siteNew/industy/trainingLearning',
+  出差旅行: '/zh/siteNew/industy/businessTrip',
+  综合行政: '/zh/siteNew/industy/comprehensiveAdmin'
+}
+
 const getIndustryPath = (item) => {
   // 如果有对应的映射路径则返回，否则返回默认路径
   return industryPathMap[item] || '/zh/siteNew/industy/overview'
 }
+
+const getScenePath = (item) => {
+  // 如果有对应的映射路径则返回，否则返回默认路径
+  return scenePathMap[item] || '/zh/siteNew/scene/overview'
+}
+
 idtArr.value = [
   {
     t: '个人效率工具',
