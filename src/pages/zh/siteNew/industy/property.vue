@@ -43,16 +43,6 @@
         </div>
       </div>
     </section>
-
-    <!-- 数据统计 -->
-    <section class="stats">
-      <div class="stats-container">
-        <div v-for="(stat, index) in statsList" :key="index" class="stat-item">
-          <h3>{{ stat.value }}</h3>
-          <p>{{ stat.label }}</p>
-        </div>
-      </div>
-    </section>
   </div>
 </template>
 
@@ -119,14 +109,6 @@ const servicesList = ref([
     title: '客户服务',
     desc: '专业客服团队，及时响应业主需求，提供贴心周到的服务'
   }
-])
-
-// 数据统计列表
-const statsList = ref([
-  { value: '500+', label: '服务社区' },
-  { value: '10000+', label: '服务业主' },
-  { value: '98%', label: '客户满意度' },
-  { value: '10年', label: '行业经验' }
 ])
 
 </script>

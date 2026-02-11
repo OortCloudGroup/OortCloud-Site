@@ -13,12 +13,10 @@
         <img class="idtImg" src="@/assets/homeImg/industry_i2.png" alt="" />职能
       </div>
       <div class="flexRowAC conBox">
-        <div>销售</div>
-        <div>客服</div>
-        <div>产品研发</div>
-        <div>数据分析</div>
-        <div>HR</div>
-        <div>财务</div>
+        <!-- 职能板块重构：使用v-for循环 + 点击事件 -->
+        <div v-for="(item,i) in functionArr" :key="i" @click="indClick('职能', getFunctionPath(item), item)">
+          {{ item }}
+        </div>
       </div>
       <div class="flexRowAC bb idtBox">
         <img class="idtImg" src="@/assets/homeImg/industry_i3.png" alt="" />场景
@@ -80,15 +78,21 @@ const emits = defineEmits(['handle'])
 let itemTemp = ref('')
 let idtArr = ref([])
 let idtArr1 = ref([])
-// 场景数组
-let sceneArr = ref([
-  '项目管理', '敏捷研发', '待办工具', '数据分析', '问卷调研', '综合人事', '培训学习', '出差旅行', '综合行政'
-])
 
+// 1. 行业数组
 idtArr1.value = [
   '安保', '物业', '园区', '街道', '消防', '律所', '停车', '酒厂'
 ]
 
+let sceneArr = ref([
+  '项目管理', '敏捷研发', '待办工具', '数据分析', '问卷调研', '综合人事', '培训学习', '出差旅行', '综合行政'
+])
+
+let functionArr = ref([
+  '销售', '客服', '产品研发', '数据分析', 'HR', '财务'
+])
+
+// 行业
 const industryPathMap = {
   安保: '/zh/siteNew/industy/security',
   物业: '/zh/siteNew/industy/property',
@@ -100,6 +104,7 @@ const industryPathMap = {
   酒厂: '/zh/siteNew/industy/winery'
 }
 
+// 场景
 const scenePathMap = {
   项目管理: '/zh/siteNew/industy/projectManagement',
   敏捷研发: '/zh/siteNew/industy/agileDevelopment',
@@ -112,14 +117,28 @@ const scenePathMap = {
   综合行政: '/zh/siteNew/industy/comprehensiveAdmin'
 }
 
+const functionPathMap = {
+  销售: '/zh/siteNew/industy/sales',
+  客服: '/zh/siteNew/industy/customerService',
+  产品研发: '/zh/siteNew/industy/product',
+  数据分析: '/zh/siteNew/industy/analysis',
+  HR: '/zh/siteNew/industy/hr',
+  财务: '/zh/siteNew/industy/finance'
+}
+
+// 获取行业路径方法
 const getIndustryPath = (item) => {
-  // 如果有对应的映射路径则返回，否则返回默认路径
   return industryPathMap[item] || '/zh/siteNew/industy/overview'
 }
 
+// 获取场景路径方法
 const getScenePath = (item) => {
-  // 如果有对应的映射路径则返回，否则返回默认路径
   return scenePathMap[item] || '/zh/siteNew/scene/overview'
+}
+
+// 获取职能路径方法（新增）
+const getFunctionPath = (item) => {
+  return functionPathMap[item] || '/zh/siteNew/function/overview'
 }
 
 idtArr.value = [
@@ -218,7 +237,7 @@ idtArr.value = [
   }
 ]
 
-// 行业
+// 统一的点击跳转方法
 const indClick = (cla, path, val) => {
   let obj = {
     classify: cla,
@@ -228,7 +247,7 @@ const indClick = (cla, path, val) => {
   emits('handle', obj)
 }
 
-// 行业
+// 应用程序点击方法
 const softClick = (val) => {
   if (val.t === '问题反馈') {
     let obj = {
