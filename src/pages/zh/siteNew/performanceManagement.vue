@@ -1,718 +1,868 @@
 <template>
-  <div class="home_page vls">
-    <div class="platTop w1380">
-      <div class="VLStream">
-        绩效管理
-      </div>
-      <div class="plat_cent">
-        打破信息壁垒，筑牢发展根基：智能化知识库实践路径
-      </div>
-      <div class="flexRowAC useBox">
-        <div class="seeMore">
-          立即试用
-        </div>
-        <div class="seeMore u3">
-          立即购买
-        </div>
-        <div class="seeMore u1">
-          安排演示
-        </div>
-      </div>
-    </div>
-    <div class="w1380 webBottomImg">
-      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          智能检索
-        </div>
-        <div class="cl_d">
-          支持全文检索、语义检索、多维度筛选，基于AI算法精准匹配知识内容，毫秒级响应检索请求，支持PDF/Word/视频/音频等多格式文件内容检索。
-        </div>
-      </div>
-      <img class="approval_c1" src="@/assets/software/approval_c1.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox ipcView  flexRowAC">
-      <img class="approval_c2" src="@/assets/software/approval_c2.png" alt="" />
-      <div class="CloudL" style="text-align: left">
-        <div class="cl_t">
-          协同创作
-        </div>
-        <div class="cl_d">
-          多人实时在线编辑，版本追溯与对比，支持评论批注、权限分级管理，企业内外部人员可按需协作，加速知识沉淀与更新。
-        </div>
-      </div>
-    </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          权限与安全
-        </div>
-        <div class="cl_d">
-          精细化权限管控，支持按部门/角色/人员分级授权，操作日志全程记录，数据加密存储，支持水印防泄露，满足企业级数据安全要求。
-        </div>
-      </div>
-      <img class="approval_c3" src="@/assets/software/approval_c3.png" alt="" />
-    </div>
-    <!-- 成功案例 -->
-    <div class="productBox w1380">
-      <div class="proT">
-        成功案例
-      </div>
-      <div class="productImg p5Out flexRowAC">
-        <div class="item img1">
-          <div class="bottom">
-            <p>城市风光</p>
-          </div>
-        </div>
-        <div class="item img2">
-          <div class="bottom">
-            <p>专业服务</p>
-          </div>
-        </div>
-        <div class="item img3">
-          <div class="bottom">
-            <p>教育机构</p>
-          </div>
-        </div>
-        <div class="item img4">
-          <div class="bottom">
-            <p>精准分析</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="productBox w1380">
-      <div class="proT">
-        现在开始体验
-      </div>
-      <div class="flexRowAC productItem">
-        <div class="productImg productItem1 product1">
-          <img class="pro1_1" src="@/assets/software/down1_.png" alt="" />
-          <div class="pro1_1_s flexRowAC">
-            SaaS版本
-            <span class="pro1_1_s_b">14天功能全免费试用</span>
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            7天快速迭代，问题敏捷解决
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            快速启用，精简运维
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            更低建设成本
-          </div>
-          <div class="pro3 flexRowAC">
-            <div class="pro3_btn flexRowAC">
-              申请试用
+  <div class="performance-app">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="hero-badge">
+              <span>🎯</span>
+              <span>智能绩效管理系统</span>
             </div>
-            <div class="pro3_btn p3b flexRowAC">
-              详细功能
-            </div>
-          </div>
-        </div>
-        <div class="productImg productItem1 product1">
-          <img class="pro1_1" src="@/assets/software/down1.png" alt="" />
-          <div class="pro1_1_s flexRowAC">
-            私有化部署
-            <span class="pro1_1_s_b">1v1 定制方案量身打造</span>
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            1v1 专家服务，定制化解决方案
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            本地化灵活部署，私有化数据存储
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            高可用架构与完备容灾方案
-          </div>
-          <div class="pro3 flexRowAC">
-            <div class="pro3_btn flexRowAC">
-              申请试用
-            </div>
-            <div class="pro3_btn p3b flexRowAC">
-              详细功能
-            </div>
+            <h1>让绩效管理<br /><span>更科学更透明</span></h1>
+            <p>基于OKR、KPI等多种评估模型，实现全员绩效数字化管理。智能评分、数据分析、<br />实时反馈，激发团队潜能，提升组织效能。</p>
           </div>
         </div>
       </div>
-    </div>
-    <!--资料下载-->
-    <div class="productBox w1380">
-      <div class="proT">
-        资料下载
-      </div>
-      <div class="productImg product2Out flexRowAC">
-        <div class="product2Out_it flexRowAC">
-          <div class="pro2o_l flexRowAC">
-            <img class="pro2o_l_l" src="@/assets/software/down3.png" alt="" />
-            产品文档.pdf
-          </div>
-          <div class="pro2o_2" @click="downloadPDF">
-            下载
+    </section>
+
+    <!-- 功能特点 -->
+    <section id="features" class="features-section">
+      <div class="section-container">
+        <div class="section-header">
+          <h2>核心功能特点</h2>
+          <p>全方位的绩效管理解决方案，助力企业数字化转型</p>
+        </div>
+        <div class="features-grid">
+          <div v-for="(feature, index) in featureList" :key="index" class="feature-card">
+            <div class="feature-icon">
+              {{ feature.icon }}
+            </div>
+            <h3>{{ feature.title }}</h3>
+            <p>{{ feature.desc }}</p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- 绩效评估模型 -->
+    <section id="models" class="models-section">
+      <div class="models-container">
+        <div class="section-header">
+          <h2>灵活的评估模型</h2>
+          <p>支持多种主流评估方法，满足不同企业的管理需求</p>
+        </div>
+        <div class="models-grid">
+          <div v-for="(model, index) in modelList" :key="index" class="model-card">
+            <div class="model-header">
+              <div class="model-icon">
+                {{ model.icon }}
+              </div>
+              <h3>{{ model.title }}</h3>
+            </div>
+            <p>{{ model.desc }}</p>
+            <ul class="model-features">
+              <li v-for="(item, i) in model.features" :key="i">
+                {{ item }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import product5_1 from '@/assets/VLimg2.0/product5_1.png'
-import product5_2 from '@/assets/VLimg2.0/product5_2.png'
-import product5_3 from '@/assets/VLimg2.0/product5_3.png'
-import product5_4 from '@/assets/VLimg2.0/product5_4.png'
-import product5_5 from '@/assets/VLimg2.0/product5_5.png'
-import product5_6 from '@/assets/VLimg2.0/product5_6.png'
-import product5_7 from '@/assets/VLimg2.0/product5_7.png'
 definePageMeta({
   layout: 'site-new'
 })
+// 核心功能列表
+const featureList = ref([
+  {
+    icon: '🎯',
+    title: 'OKR目标管理',
+    desc: '支持目标与关键结果管理，帮助企业聚焦战略目标，实现上下对齐，提升团队执行力。'
+  },
+  {
+    icon: '📈',
+    title: 'KPI指标追踪',
+    desc: '自定义关键绩效指标，实时追踪完成情况，数据可视化展示，让绩效评估更客观。'
+  },
+  {
+    icon: '⭐',
+    title: '360度评估',
+    desc: '支持多维度评估体系，包括自评、上级评价、同事互评、下属评价，全面客观反映员工表现。'
+  },
+  {
+    icon: '🤝',
+    title: '实时反馈',
+    desc: '支持随时随地的即时反馈机制，促进沟通与成长，让员工及时了解自己的表现和改进方向。'
+  },
+  {
+    icon: '📊',
+    title: '智能分析',
+    desc: 'AI驱动的数据分析，自动生成绩效报告，发现人才潜力，优化人才配置，辅助管理决策。'
+  },
+  {
+    icon: '🔒',
+    title: '权限管理',
+    desc: '灵活的权限配置体系，确保数据安全与隐私保护，不同角色拥有相应的查看与操作权限。'
+  }
+])
 
-const downloadPDF = () => {
-  const link = document.createElement('a')
-  link.href = '/documents/产品文档.pdf'
-  link.download = '产品文档.pdf'
-  link.click()
-}
+// 评估模型列表
+const modelList = ref([
+  {
+    icon: '🎯',
+    title: 'OKR模型',
+    desc: '目标与关键结果管理法，强调目标设定与结果导向，适合快速成长型企业，帮助团队聚焦核心目标，实现高效协作。',
+    features: [
+      '目标对齐，上下一致',
+      '关键结果可量化',
+      '季度跟踪与复盘',
+      '透明公开的进度'
+    ]
+  },
+  {
+    icon: '📊',
+    title: 'KPI模型',
+    desc: '关键绩效指标管理法，以数据为核心，通过量化指标评估员工表现，适合传统企业及需要精确管控的组织。',
+    features: [
+      '量化指标，客观公正',
+      '权重配置，灵活调整',
+      '实时数据追踪',
+      '自动评分计算'
+    ]
+  }
+])
 
-let p5Arr = ref([])
-p5Arr.value = [
-  { t: 'Windows', d: '版本号：V3.1.06', flag: false, img: product5_1 },
-  { t: 'Android', d: '版本号：V3.1.06', flag: true, img: product5_2 },
-  { t: 'iOS', d: '版本号：V3.1.06', flag: true, img: product5_3 },
-  { t: 'Harmony OS', d: '版本号：V3.1.06', flag: true, img: product5_4 },
-  { t: 'Linux', d: '版本号：V3.1.06', flag: false, img: product5_5 },
-  { t: 'Mac OS', d: '版本号：V3.1.06', flag: false, img: product5_6 },
-  { t: '银河麒麟', d: '版本号：V3.1.06', flag: false, img: product5_7 }
-]
 </script>
 
-<style scoped lang="scss">
+<style scoped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.home_page {
+body {
+  font-family: 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #1e293b;
+  background-color: #f8fafc;
+}
+
+/* Hero Section - 仪表盘式布局 */
+.hero {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  padding: 80px 30px;
   position: relative;
+  overflow: hidden;
 }
 
-.home_page.vls {
-  background-color: #fff;
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(5, 150, 105, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
 }
 
-.w1380 {
-  width: 1380px;
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-text {
+  padding-right: 20px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  color: #059669;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 15px rgba(5, 150, 105, 0.1);
+}
+
+.hero h1 {
+  font-size: 60px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  color: #1e293b;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #64748b;
+  margin-bottom: 35px;
+  line-height: 1.8;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.hero-stat-item {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.hero-stat-number {
+  font-size: 32px;
+  font-weight: 800;
+  color: #059669;
+  margin-bottom: 5px;
+}
+
+.hero-stat-label {
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-lg {
+  padding: 16px 42px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.btn-primary-green {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  color: white;
+  box-shadow: 0 8px 25px rgba(5, 150, 105, 0.25);
+}
+
+.btn-primary-green:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(5, 150, 105, 0.35);
+}
+
+.btn-white {
+  background: white;
+  color: #059669;
+  border: 2px solid #d1fae5;
+}
+
+.btn-white:hover {
+  border-color: #059669;
+}
+
+.hero-dashboard {
+  background: white;
+  border-radius: 24px;
+  padding: 35px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.dashboard-title h3 {
+  font-size: 22px;
+  color: #1e293b;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.dashboard-title p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.dashboard-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dashboard-btn-primary {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  color: white;
+}
+
+.dashboard-btn-secondary {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.dashboard-card {
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.card-trend {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.card-trend.up {
+  color: #059669;
+}
+
+.card-trend.down {
+  color: #ef4444;
+}
+
+.score-display {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.score-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: conic-gradient(#059669 0deg 288deg, #e2e8f0 288deg 360deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-inner {
+  width: 55px;
+  height: 55px;
+  background: #f8fafc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 800;
+  color: #059669;
+}
+
+.score-info h4 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 5px;
+}
+
+.score-info p {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.progress-section {
+  margin-top: 20px;
+}
+
+.progress-item {
+  margin-bottom: 15px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.3s;
+}
+
+.progress-fill.green {
+  background: linear-gradient(90deg, #059669, #10b981);
+}
+
+.progress-fill.blue {
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+}
+
+.progress-fill.orange {
+  background: linear-gradient(90deg, #f97316, #fbbf24);
+}
+
+/* 核心功能 */
+.features-section {
+  padding: 100px 30px;
+  background: white;
+}
+
+.section-container {
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-// 查看更多
-//.seeMore {
-//  display: inline-block;
-//  padding: 24px 50px;
-//  color: #fff;
-//  border: 1px solid #2278FF;
-//  border-radius: 8px;
-//  background: #2278FF;
-//  box-shadow: 0px 4px 10px 0px #FF5E1033;
-//  font-weight: bold;
-//  font-size: 18px;
-//}
-
-.platTop {
+.section-header {
   text-align: center;
-  padding: 110px 0;
-
-  .plat {
-    display: inline-block;
-    padding: 12px 24px;
-    color: #2278FF;
-    font-size: 18px;
-    border-radius: 18px;
-    border: 1px solid #E9E9E9;
-  }
-
-  .VLStream {
-    color: #333333;
-    font-weight: bold;
-    font-size: 78px;
-    padding: 8px 0;
-    position: relative;
-
-    .VLStream_img {
-      width: 222px;
-      height: 222px;
-      position: absolute;
-      right: 336px;
-      top: -50px;
-    }
-  }
-
-  .plat_a {
-    color: #333333;
-    font-weight: bold;
-    font-size: 58px;
-  }
-
-  .plat_cent {
-    padding: 20px 0 50px;
-    color: #717781;
-    font-size: 18px;
-  }
-
-  .useBox {
-    justify-content: center;
-    gap: 20px;
-
-    .seeMore {
-      padding: 24px 50px;
-      color: #fff;
-      border: 1px solid #2278FF;
-      border-radius: 8px;
-      background: #2278FF;
-      //box-shadow: 0px 4px 10px 0px #FF5E1033;
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    .u1 {
-      color: #333;
-      background-color: #F4F4F4;
-      border: 1px solid #F4F4F4;
-    }
-
-    .u3{
-      border-radius: 8px;
-      border: 1px solid #ED2121;
-      color: #ED2121;
-      font-weight: bold;
-      font-size: 18px;
-      background: #fff;
-    }
-
-    .seeMore.u2 {
-      display: flex;
-      gap: 10px;
-      border: 1px solid #333;
-      background-color: #333;
-
-      .u2_img {
-        width: 28px;
-        height: 26px;
-      }
-    }
-  }
+  margin-bottom: 70px;
 }
 
-.WebRTC {
-  gap: 24px;
-  padding-bottom: 80px;
-  animation: scroll 35s linear infinite;
-
-  .webItem {
-    width: auto;
-    height: 120px;
-    border-radius: 16px;
-    background: #E8F7FC;
-    color: #5C6C00;
-    gap: 14px;
-    flex-wrap: nowrap;
-  }
+.section-header h2 {
+  font-size: 40px;
+  margin-bottom: 18px;
+  color: #1e293b;
+  font-weight: 700;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.section-header p {
+  font-size: 18px;
+  color: #64748b;
 }
 
-.webBottomImg {
-  padding: 70px 0 110px;
-  height: initial;
-
-  .wBImg {
-    width: 100%;
-    height: initial;
-    border-radius: 24px;
-  }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
-.CloudBox {
-  padding-bottom: 100px;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  .cl_t {
-    padding-top: 30px;
-    padding-bottom: 40px;
-    color: #333333;
-    font-weight: bold;
-    font-size: 54px;
-    line-height: 82px;
-  }
-
-  .cl_d {
-    padding-bottom: 24px;
-    color: #717781;
-    font-size: 20px;
-  }
-
-  .CloudL {
-    width: 500px;
-  }
-
-  .CloudR {
-    width: 700px;
-    height: auto;
-
-    .CloudRImg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .CloudR2 {
-    width: 700px;
-    height: 700px;
-  }
+.feature-card {
+  background: #fafafa;
+  padding: 40px 35px;
+  border-radius: 18px;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
 }
 
-.ipcBox.CloudBox {
-  padding-bottom: 120px;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  .CloudL {
-    width: 450px;
-    text-align: right;
-    padding-top: 60px;
-  }
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #059669, #10b981);
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-.ipcView.CloudBox {
-  .CloudR {
-    height: 460px;
-  }
+.feature-card:hover {
+  background: white;
+  border-color: #059669;
+  box-shadow: 0 15px 40px rgba(5, 150, 105, 0.12);
+  transform: translateY(-5px);
 }
 
-.productBox {
-  text-align: center;
-  padding-bottom: 140px;
-
-  .productItem {
-    gap: 20px;
-
-    .productItem1 {
-      flex: 1;
-
-      &:nth-child(1) {
-        background: #2278FF;
-
-        .pro3_btn {
-          color: #2278FF;
-        }
-      }
-    }
-  }
-
-  .proT {
-    padding-bottom: 60px;
-    color: #3D3D3D;
-    font-weight: bold;
-    font-size: 58px;
-  }
-
-  .prod {
-    padding-bottom: 60px;
-    color: #717781;
-    font-size: 20px;
-  }
-
-  .productImg {
-    width: 100%;
-    height: 300px;
-
-    .proImg {
-      width: 100%;
-      height: 100%;
-    }
-
-    .img1{
-      background: url('@/assets/VLimg2.0/jyjg1.png');
-    }
-    .img2{
-      background: url('@/assets/VLimg2.0/jyjg2.png');
-    }
-    .img3{
-      background: url('@/assets/VLimg2.0/jyjg3.png');
-    }
-    .img4{
-      background: url('@/assets/VLimg2.0/jyjg4.png');
-    }
-    .item{
-      width: 300px;
-      height: 300px;
-      background-size: cover;
-      position: relative;
-      .bottom{
-        position: absolute;
-        bottom: 0;
-        width: 300px;
-        text-align: left;
-        line-height: 88px;
-        border-radius: 0 0 24px 24px;
-        background: linear-gradient(180deg, rgba(255, 94, 16, 0) 0%, #3C80FF  100%);
-        p{
-          margin-left: 24px;
-          font-size: 28px;
-          font-weight: bold;
-          color: #FFFFFF;
-        }
-      }
-    }
-  }
-
-  .product1 {
-    text-align: left;
-    color: #fff;
-    width: auto;
-    height: 510px;
-    background-color: #fff;
-    border-radius: 24px;
-    background: linear-gradient(135deg, #0C1F40 0%, #252734 98%);
-    padding: 40px;
-
-    .pro1_1 {
-      width: 46px;
-      height: 48px;
-      margin-bottom: 46px;
-    }
-
-    .pro1_1_s {
-      padding-bottom: 50px;
-      gap: 12px;
-      color: #FFFFFF;
-      font-weight: bold;
-      font-size: 24px;
-
-      .pro1_1_s_b {
-        color: #FFFFFF;
-        font-size: 14px;
-        border-radius: 4px;
-        border: 0.5px solid #FFFFFF;
-        padding: 4px 10px;
-      }
-    }
-
-    .pro1_2 {
-      gap: 12px;
-      padding-bottom: 30px;
-
-      .pro1_2_i {
-        width: 16px;
-        height: 16px;
-      }
-    }
-
-    .pro3 {
-      padding-top: 35px;
-      gap: 30px;
-
-      .pro3_btn {
-        flex: 1;
-        padding: 20px 0;
-        justify-content: center;
-        background-color: #fff;
-        border-radius: 4px;
-        color: #333;
-        font-weight: bold;
-        font-size: 18px;
-      }
-
-      .pro3_btn.p3b {
-        background-color: transparent;
-        border: 1px solid #fff;
-        color: #fff;
-      }
-    }
-  }
-
-  .product2Out {
-    padding-bottom: 0;
-    height: 220px;
-    justify-content: center;
-    background-image: url('@/assets/software/downloadBG.png');
-    background-size: 100% 100%;
-
-    .product2Out_it {
-      opacity: 1;
-      color: #333333;
-      font-size: 16px;
-
-      .pro2o_l {
-        padding-left: 12px;
-        width: 600px;
-        height: 54px;
-        background-color: #F0F0F0;
-
-        .pro2o_l_l {
-          width: 34px;
-          height: 34px;
-          margin-right: 12px;
-        }
-      }
-
-      .pro2o_2 {
-        cursor: pointer;
-        width: 100px;
-        line-height: 54px;
-        color: #fff;
-        height: 54px;
-        background-color: #2278FF;
-      }
-    }
-  }
-
-  .product3Out.productImg {
-    height: initial;
-    margin-bottom: 60px;
-    padding: 40px;
-    border-radius: 24px;
-    background: linear-gradient(180deg, #FEF9F6 0%, #FFFFFF 100%);
-    border: 1px solid #001F5019;
-
-    .p3Box {
-      justify-content: space-between;
-
-      .p3 {
-        width: 358px;
-        height: 170px;
-      }
-    }
-
-    .p3_title {
-      padding-top: 40px;
-      text-align: left;
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .ps_desc {
-      padding-top: 16px;
-      padding-left: 60px;
-      width: 900px;
-      color: #3D3D3D;
-      font-size: 20px;
-      text-align: left;
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: 40px;
-        top: 26px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: #333;
-      }
-    }
-  }
-
-  .p4Out {
-    width: auto;
-    height: 870px;
-  }
-
-  .p5Out {
-    flex-wrap: wrap;
-    gap: 40px;
-
-    .p5Item {
-      padding: 50px 0;
-      flex-direction: column;
-      border-radius: 40px;
-      background: #FFFFFF;
-      box-shadow: 0px 0px 48px 0px #07005714;
-      width: 300px;
-      height: 300px;
-      flex-shrink: 0;
-      gap: 10px;
-      position: relative;
-    }
-
-    .p5Iimg {
-      width: 110px;
-      height: 110px;
-    }
-
-    .p5t {
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .p5d {
-      color: #717781;
-      font-size: 14px;
-    }
-
-    .proCode {
-      width: 70px;
-      height: 70px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      border-radius: 0px 0px 0px 0px;
-    }
-  }
+.feature-card:hover::before {
+  opacity: 1;
 }
 
-.proTitleBox {
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  color: #333333;
-  font-weight: bold;
-  font-size: 54px;
-  line-height: 82px;
-  padding-bottom: 100px;
+  font-size: 32px;
+  margin-bottom: 25px;
 }
 
-.approval_bg {
-  width: 100%;
-  height: auto;
+.feature-card:nth-child(1) .feature-icon {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
 }
 
-.approval_c1 {
-  width: 734px;
-  height: auto;
+.feature-card:nth-child(2) .feature-icon {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
 }
 
-.approval_c2 {
-  width: 702px;
-  height: auto;
+.feature-card:nth-child(3) .feature-icon {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
 }
 
-.approval_c3 {
-  width: 587px;
-  height: auto;
+.feature-card:nth-child(4) .feature-icon {
+  background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
 }
 
-.approval_c5 {
-  width: 634px;
-  height: auto;
+.feature-card:nth-child(5) .feature-icon {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
 }
 
-.approval_c6 {
-  width: 602px;
-  height: auto;
+.feature-card:nth-child(6) .feature-icon {
+  background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+}
+
+.feature-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.feature-card p {
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* 绩效评估模型 */
+.models-section {
+  padding: 100px 30px;
+  background: linear-gradient(180deg, #f8fafc 0%, #fff 100%);
+}
+
+.models-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.model-card {
+  background: white;
+  border-radius: 20px;
+  padding: 45px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s;
+}
+
+.model-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.model-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.model-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.model-card:nth-child(1) .model-icon {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+}
+
+.model-card:nth-child(2) .model-icon {
+  background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+}
+
+.model-header h3 {
+  font-size: 26px;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.model-card p {
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.model-features {
+  list-style: none;
+}
+
+.model-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #475569;
+}
+
+.model-features li::before {
+  content: '✓';
+  color: #059669;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* 数据统计 */
+.stats-section {
+  padding: 90px 30px;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: white;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 45px;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-number {
+  font-size: 52px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+}
+
+.stat-label {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* CTA区域 */
+.cta-section {
+  padding: 100px 30px;
+  background: white;
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-container h2 {
+  font-size: 44px;
+  margin-bottom: 20px;
+  color: #1e293b;
+  font-weight: 800;
+}
+
+.cta-container p {
+  font-size: 18px;
+  color: #64748b;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+/* 页脚 */
+.footer {
+  background: #1e293b;
+  color: white;
+  padding: 70px 30px 30px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-brand p {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.8;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.footer-links h4 {
+  font-size: 17px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 14px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #10b981;
+}
+
+.footer-bottom {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .models-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

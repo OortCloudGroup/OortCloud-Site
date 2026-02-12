@@ -1,718 +1,776 @@
 <template>
-  <div class="home_page vls">
-    <div class="platTop w1380">
-      <div class="VLStream">
-        电子邮件
-      </div>
-      <div class="plat_cent">
-        打破信息壁垒，筑牢发展根基：智能化知识库实践路径
-      </div>
-      <div class="flexRowAC useBox">
-        <div class="seeMore">
-          立即试用
-        </div>
-        <div class="seeMore u3">
-          立即购买
-        </div>
-        <div class="seeMore u1">
-          安排演示
-        </div>
-      </div>
-    </div>
-    <div class="w1380 webBottomImg">
-      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          智能检索
-        </div>
-        <div class="cl_d">
-          支持全文检索、语义检索、多维度筛选，基于AI算法精准匹配知识内容，毫秒级响应检索请求，支持PDF/Word/视频/音频等多格式文件内容检索。
-        </div>
-      </div>
-      <img class="approval_c1" src="@/assets/software/approval_c1.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox ipcView  flexRowAC">
-      <img class="approval_c2" src="@/assets/software/approval_c2.png" alt="" />
-      <div class="CloudL" style="text-align: left">
-        <div class="cl_t">
-          协同创作
-        </div>
-        <div class="cl_d">
-          多人实时在线编辑，版本追溯与对比，支持评论批注、权限分级管理，企业内外部人员可按需协作，加速知识沉淀与更新。
-        </div>
-      </div>
-    </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          权限与安全
-        </div>
-        <div class="cl_d">
-          精细化权限管控，支持按部门/角色/人员分级授权，操作日志全程记录，数据加密存储，支持水印防泄露，满足企业级数据安全要求。
-        </div>
-      </div>
-      <img class="approval_c3" src="@/assets/software/approval_c3.png" alt="" />
-    </div>
-    <!-- 成功案例 -->
-    <div class="productBox w1380">
-      <div class="proT">
-        成功案例
-      </div>
-      <div class="productImg p5Out flexRowAC">
-        <div class="item img1">
-          <div class="bottom">
-            <p>城市风光</p>
+  <div class="email-app">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span>✨</span>
+            <span>智能电子邮件系统</span>
           </div>
-        </div>
-        <div class="item img2">
-          <div class="bottom">
-            <p>专业服务</p>
-          </div>
-        </div>
-        <div class="item img3">
-          <div class="bottom">
-            <p>教育机构</p>
-          </div>
-        </div>
-        <div class="item img4">
-          <div class="bottom">
-            <p>精准分析</p>
-          </div>
+          <h1>让邮件沟通<br /><span>更高效更安全</span></h1>
+          <p>企业级邮件解决方案，智能分类、病毒防护、垃圾拦截。支持多域名、<br />无限存储，为企业提供安全可靠的邮件服务，提升沟通效率。</p>
         </div>
       </div>
-    </div>
-    <div class="productBox w1380">
-      <div class="proT">
-        现在开始体验
-      </div>
-      <div class="flexRowAC productItem">
-        <div class="productImg productItem1 product1">
-          <img class="pro1_1" src="@/assets/software/down1_.png" alt="" />
-          <div class="pro1_1_s flexRowAC">
-            SaaS版本
-            <span class="pro1_1_s_b">14天功能全免费试用</span>
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            7天快速迭代，问题敏捷解决
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            快速启用，精简运维
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            更低建设成本
-          </div>
-          <div class="pro3 flexRowAC">
-            <div class="pro3_btn flexRowAC">
-              申请试用
+    </section>
+
+    <!-- 核心功能 -->
+    <section id="features" class="features-section">
+      <div class="section-container">
+        <div class="section-header">
+          <h2>核心功能特点</h2>
+          <p>全方位的邮件管理解决方案</p>
+        </div>
+        <div class="features-grid">
+          <div v-for="(feature, index) in featuresList" :key="index" class="feature-card">
+            <div class="feature-icon">
+              {{ feature.icon }}
             </div>
-            <div class="pro3_btn p3b flexRowAC">
-              详细功能
-            </div>
+            <h3>{{ feature.title }}</h3>
+            <p>{{ feature.desc }}</p>
           </div>
         </div>
-        <div class="productImg productItem1 product1">
-          <img class="pro1_1" src="@/assets/software/down1.png" alt="" />
-          <div class="pro1_1_s flexRowAC">
-            私有化部署
-            <span class="pro1_1_s_b">1v1 定制方案量身打造</span>
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            1v1 专家服务，定制化解决方案
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            本地化灵活部署，私有化数据存储
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            高可用架构与完备容灾方案
-          </div>
-          <div class="pro3 flexRowAC">
-            <div class="pro3_btn flexRowAC">
-              申请试用
+      </div>
+    </section>
+
+    <!-- 邮件安全 -->
+    <section id="security" class="security-section">
+      <div class="security-container">
+        <div class="section-header">
+          <h2>企业级安全防护</h2>
+          <p>多重安全机制，保障邮件通信安全</p>
+        </div>
+        <div class="security-grid">
+          <div v-for="(security, index) in securityList" :key="index" class="security-card">
+            <div class="security-icon">
+              {{ security.icon }}
             </div>
-            <div class="pro3_btn p3b flexRowAC">
-              详细功能
+            <div class="security-content">
+              <h3>{{ security.title }}</h3>
+              <p>{{ security.desc }}</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!--资料下载-->
-    <div class="productBox w1380">
-      <div class="proT">
-        资料下载
-      </div>
-      <div class="productImg product2Out flexRowAC">
-        <div class="product2Out_it flexRowAC">
-          <div class="pro2o_l flexRowAC">
-            <img class="pro2o_l_l" src="@/assets/software/down3.png" alt="" />
-            产品文档.pdf
-          </div>
-          <div class="pro2o_2" @click="downloadPDF">
-            下载
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import product5_1 from '@/assets/VLimg2.0/product5_1.png'
-import product5_2 from '@/assets/VLimg2.0/product5_2.png'
-import product5_3 from '@/assets/VLimg2.0/product5_3.png'
-import product5_4 from '@/assets/VLimg2.0/product5_4.png'
-import product5_5 from '@/assets/VLimg2.0/product5_5.png'
-import product5_6 from '@/assets/VLimg2.0/product5_6.png'
-import product5_7 from '@/assets/VLimg2.0/product5_7.png'
+import { reactive } from 'vue'
+
+// 核心功能列表
+const featuresList = reactive([
+  { icon: '🤖', title: '智能分类', desc: 'AI驱动的智能邮件分类系统，自动识别邮件类型，智能归档，让收件箱井井有条。' },
+  { icon: '🔒', title: '端到端加密', desc: '采用银行级SSL加密技术，确保邮件传输和存储安全，保护企业机密信息。' },
+  { icon: '🛡️', title: '垃圾拦截', desc: '强大的垃圾邮件过滤系统，精准识别拦截垃圾邮件、钓鱼邮件，保护邮箱安全。' },
+  { icon: '📅', title: '日程管理', desc: '内置日历功能，支持日程安排、会议邀请、提醒通知，工作安排更高效。' },
+  { icon: '📱', title: '多端同步', desc: '支持电脑、手机、平板等多设备访问，数据实时同步，随时随地处理邮件。' },
+  { icon: '🌐', title: '多域名支持', desc: '支持企业自定义域名，提升品牌形象，支持无限用户账号创建。' }
+])
+
+// 安全防护列表
+const securityList = reactive([
+  { icon: '🦠', title: '病毒防护', desc: '实时病毒扫描引擎，自动检测并拦截邮件中的病毒、木马等恶意程序，确保系统安全。' },
+  { icon: '🎣', title: '钓鱼防护', desc: '智能识别钓鱼邮件，通过多维度分析邮件来源和内容，有效防范网络诈骗。' },
+  { icon: '🔐', title: '数据加密', desc: '采用AES-256加密技术，对邮件内容和附件进行加密存储，防止数据泄露。' },
+  { icon: '⚡', title: '异地备份', desc: '多地数据备份机制，确保数据永不丢失，支持一键恢复，保障业务连续性。' }
+])
 definePageMeta({
   layout: 'site-new'
 })
 
-const downloadPDF = () => {
-  const link = document.createElement('a')
-  link.href = '/documents/产品文档.pdf'
-  link.download = '产品文档.pdf'
-  link.click()
-}
-
-let p5Arr = ref([])
-p5Arr.value = [
-  { t: 'Windows', d: '版本号：V3.1.06', flag: false, img: product5_1 },
-  { t: 'Android', d: '版本号：V3.1.06', flag: true, img: product5_2 },
-  { t: 'iOS', d: '版本号：V3.1.06', flag: true, img: product5_3 },
-  { t: 'Harmony OS', d: '版本号：V3.1.06', flag: true, img: product5_4 },
-  { t: 'Linux', d: '版本号：V3.1.06', flag: false, img: product5_5 },
-  { t: 'Mac OS', d: '版本号：V3.1.06', flag: false, img: product5_6 },
-  { t: '银河麒麟', d: '版本号：V3.1.06', flag: false, img: product5_7 }
-]
 </script>
 
-<style scoped lang="scss">
-
-.home_page {
-  position: relative;
+<style scoped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.home_page.vls {
+body {
+  font-family: 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #1e293b;
   background-color: #fff;
 }
 
-.w1380 {
-  width: 1380px;
+/* Hero Section - 邮箱界面展示 */
+.hero {
+  background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%);
+  padding: 80px 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -120px;
+  left: -120px;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero-container {
+  text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  padding-right: 20px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  color: #3b82f6;
+  padding: 10px 22px;
+  border-radius: 28px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
+}
+
+.hero h1 {
+  font-size: 60px;
+  line-height: 1.15;
+  margin-bottom: 25px;
+  color: #1e293b;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #64748b;
+  margin-bottom: 35px;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-lg {
+  padding: 16px 42px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.btn-primary-blue {
+  background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+  color: white;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.25);
+}
+
+.btn-primary-blue:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(59, 130, 246, 0.35);
+}
+
+.btn-white {
+  background: white;
+  color: #3b82f6;
+  border: 2px solid #dbeafe;
+}
+
+.btn-white:hover {
+  border-color: #3b82f6;
+}
+
+.hero-visual {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.email-interface {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 500px;
+}
+
+.email-sidebar {
+  background: #f8fafc;
+  padding: 25px 20px;
+  border-right: 1px solid #e2e8f0;
+}
+
+.compose-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.compose-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+.sidebar-menu {
+  list-style: none;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.sidebar-item:hover, .sidebar-item.active {
+  background: #dbeafe;
+  color: #3b82f6;
+}
+
+.sidebar-item .badge {
+  margin-left: auto;
+  background: #ef4444;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.email-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-toolbar {
+  padding: 20px 25px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.email-search {
+  flex: 1;
+  padding: 10px 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s;
+  max-width: 400px;
+}
+
+.email-search:focus {
+  border-color: #3b82f6;
+}
+
+.email-list {
+  flex: 1;
+  padding: 0;
+  list-style: none;
+}
+
+.email-item {
+  display: flex;
+  gap: 15px;
+  padding: 18px 25px;
+  border-bottom: 1px solid #f1f5f9;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.email-item:hover {
+  background: #f8fafc;
+}
+
+.email-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.email-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.email-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.email-sender {
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 15px;
+}
+
+.email-time {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.email-subject {
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.email-preview {
+  font-size: 13px;
+  color: #64748b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.email-item.unread .email-sender,
+.email-item.unread .email-subject {
+  color: #3b82f6;
+}
+
+/* 核心功能 */
+.features-section {
+  padding: 100px 30px;
+  background: white;
+}
+
+.section-container {
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-// 查看更多
-//.seeMore {
-//  display: inline-block;
-//  padding: 24px 50px;
-//  color: #fff;
-//  border: 1px solid #2278FF;
-//  border-radius: 8px;
-//  background: #2278FF;
-//  box-shadow: 0px 4px 10px 0px #FF5E1033;
-//  font-weight: bold;
-//  font-size: 18px;
-//}
-
-.platTop {
+.section-header {
   text-align: center;
-  padding: 110px 0;
-
-  .plat {
-    display: inline-block;
-    padding: 12px 24px;
-    color: #2278FF;
-    font-size: 18px;
-    border-radius: 18px;
-    border: 1px solid #E9E9E9;
-  }
-
-  .VLStream {
-    color: #333333;
-    font-weight: bold;
-    font-size: 78px;
-    padding: 8px 0;
-    position: relative;
-
-    .VLStream_img {
-      width: 222px;
-      height: 222px;
-      position: absolute;
-      right: 336px;
-      top: -50px;
-    }
-  }
-
-  .plat_a {
-    color: #333333;
-    font-weight: bold;
-    font-size: 58px;
-  }
-
-  .plat_cent {
-    padding: 20px 0 50px;
-    color: #717781;
-    font-size: 18px;
-  }
-
-  .useBox {
-    justify-content: center;
-    gap: 20px;
-
-    .seeMore {
-      padding: 24px 50px;
-      color: #fff;
-      border: 1px solid #2278FF;
-      border-radius: 8px;
-      background: #2278FF;
-      //box-shadow: 0px 4px 10px 0px #FF5E1033;
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    .u1 {
-      color: #333;
-      background-color: #F4F4F4;
-      border: 1px solid #F4F4F4;
-    }
-
-    .u3{
-      border-radius: 8px;
-      border: 1px solid #ED2121;
-      color: #ED2121;
-      font-weight: bold;
-      font-size: 18px;
-      background: #fff;
-    }
-
-    .seeMore.u2 {
-      display: flex;
-      gap: 10px;
-      border: 1px solid #333;
-      background-color: #333;
-
-      .u2_img {
-        width: 28px;
-        height: 26px;
-      }
-    }
-  }
+  margin-bottom: 70px;
 }
 
-.WebRTC {
-  gap: 24px;
-  padding-bottom: 80px;
-  animation: scroll 35s linear infinite;
-
-  .webItem {
-    width: auto;
-    height: 120px;
-    border-radius: 16px;
-    background: #E8F7FC;
-    color: #5C6C00;
-    gap: 14px;
-    flex-wrap: nowrap;
-  }
+.section-header h2 {
+  font-size: 40px;
+  margin-bottom: 18px;
+  color: #1e293b;
+  font-weight: 700;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.section-header p {
+  font-size: 18px;
+  color: #64748b;
 }
 
-.webBottomImg {
-  padding: 70px 0 110px;
-  height: initial;
-
-  .wBImg {
-    width: 100%;
-    height: initial;
-    border-radius: 24px;
-  }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
-.CloudBox {
-  padding-bottom: 100px;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  .cl_t {
-    padding-top: 30px;
-    padding-bottom: 40px;
-    color: #333333;
-    font-weight: bold;
-    font-size: 54px;
-    line-height: 82px;
-  }
-
-  .cl_d {
-    padding-bottom: 24px;
-    color: #717781;
-    font-size: 20px;
-  }
-
-  .CloudL {
-    width: 500px;
-  }
-
-  .CloudR {
-    width: 700px;
-    height: auto;
-
-    .CloudRImg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .CloudR2 {
-    width: 700px;
-    height: 700px;
-  }
+.feature-card {
+  background: #fafafa;
+  padding: 40px 35px;
+  border-radius: 18px;
+  transition: all 0.3s;
+  border: 2px solid transparent;
 }
 
-.ipcBox.CloudBox {
-  padding-bottom: 120px;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  .CloudL {
-    width: 450px;
-    text-align: right;
-    padding-top: 60px;
-  }
+.feature-card:hover {
+  background: white;
+  border-color: #3b82f6;
+  box-shadow: 0 15px 40px rgba(59, 130, 246, 0.12);
+  transform: translateY(-5px);
 }
 
-.ipcView.CloudBox {
-  .CloudR {
-    height: 460px;
-  }
-}
-
-.productBox {
-  text-align: center;
-  padding-bottom: 140px;
-
-  .productItem {
-    gap: 20px;
-
-    .productItem1 {
-      flex: 1;
-
-      &:nth-child(1) {
-        background: #2278FF;
-
-        .pro3_btn {
-          color: #2278FF;
-        }
-      }
-    }
-  }
-
-  .proT {
-    padding-bottom: 60px;
-    color: #3D3D3D;
-    font-weight: bold;
-    font-size: 58px;
-  }
-
-  .prod {
-    padding-bottom: 60px;
-    color: #717781;
-    font-size: 20px;
-  }
-
-  .productImg {
-    width: 100%;
-    height: 300px;
-
-    .proImg {
-      width: 100%;
-      height: 100%;
-    }
-
-    .img1{
-      background: url('@/assets/VLimg2.0/jyjg1.png');
-    }
-    .img2{
-      background: url('@/assets/VLimg2.0/jyjg2.png');
-    }
-    .img3{
-      background: url('@/assets/VLimg2.0/jyjg3.png');
-    }
-    .img4{
-      background: url('@/assets/VLimg2.0/jyjg4.png');
-    }
-    .item{
-      width: 300px;
-      height: 300px;
-      background-size: cover;
-      position: relative;
-      .bottom{
-        position: absolute;
-        bottom: 0;
-        width: 300px;
-        text-align: left;
-        line-height: 88px;
-        border-radius: 0 0 24px 24px;
-        background: linear-gradient(180deg, rgba(255, 94, 16, 0) 0%, #3C80FF  100%);
-        p{
-          margin-left: 24px;
-          font-size: 28px;
-          font-weight: bold;
-          color: #FFFFFF;
-        }
-      }
-    }
-  }
-
-  .product1 {
-    text-align: left;
-    color: #fff;
-    width: auto;
-    height: 510px;
-    background-color: #fff;
-    border-radius: 24px;
-    background: linear-gradient(135deg, #0C1F40 0%, #252734 98%);
-    padding: 40px;
-
-    .pro1_1 {
-      width: 46px;
-      height: 48px;
-      margin-bottom: 46px;
-    }
-
-    .pro1_1_s {
-      padding-bottom: 50px;
-      gap: 12px;
-      color: #FFFFFF;
-      font-weight: bold;
-      font-size: 24px;
-
-      .pro1_1_s_b {
-        color: #FFFFFF;
-        font-size: 14px;
-        border-radius: 4px;
-        border: 0.5px solid #FFFFFF;
-        padding: 4px 10px;
-      }
-    }
-
-    .pro1_2 {
-      gap: 12px;
-      padding-bottom: 30px;
-
-      .pro1_2_i {
-        width: 16px;
-        height: 16px;
-      }
-    }
-
-    .pro3 {
-      padding-top: 35px;
-      gap: 30px;
-
-      .pro3_btn {
-        flex: 1;
-        padding: 20px 0;
-        justify-content: center;
-        background-color: #fff;
-        border-radius: 4px;
-        color: #333;
-        font-weight: bold;
-        font-size: 18px;
-      }
-
-      .pro3_btn.p3b {
-        background-color: transparent;
-        border: 1px solid #fff;
-        color: #fff;
-      }
-    }
-  }
-
-  .product2Out {
-    padding-bottom: 0;
-    height: 220px;
-    justify-content: center;
-    background-image: url('@/assets/software/downloadBG.png');
-    background-size: 100% 100%;
-
-    .product2Out_it {
-      opacity: 1;
-      color: #333333;
-      font-size: 16px;
-
-      .pro2o_l {
-        padding-left: 12px;
-        width: 600px;
-        height: 54px;
-        background-color: #F0F0F0;
-
-        .pro2o_l_l {
-          width: 34px;
-          height: 34px;
-          margin-right: 12px;
-        }
-      }
-
-      .pro2o_2 {
-        cursor: pointer;
-        width: 100px;
-        line-height: 54px;
-        color: #fff;
-        height: 54px;
-        background-color: #2278FF;
-      }
-    }
-  }
-
-  .product3Out.productImg {
-    height: initial;
-    margin-bottom: 60px;
-    padding: 40px;
-    border-radius: 24px;
-    background: linear-gradient(180deg, #FEF9F6 0%, #FFFFFF 100%);
-    border: 1px solid #001F5019;
-
-    .p3Box {
-      justify-content: space-between;
-
-      .p3 {
-        width: 358px;
-        height: 170px;
-      }
-    }
-
-    .p3_title {
-      padding-top: 40px;
-      text-align: left;
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .ps_desc {
-      padding-top: 16px;
-      padding-left: 60px;
-      width: 900px;
-      color: #3D3D3D;
-      font-size: 20px;
-      text-align: left;
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: 40px;
-        top: 26px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: #333;
-      }
-    }
-  }
-
-  .p4Out {
-    width: auto;
-    height: 870px;
-  }
-
-  .p5Out {
-    flex-wrap: wrap;
-    gap: 40px;
-
-    .p5Item {
-      padding: 50px 0;
-      flex-direction: column;
-      border-radius: 40px;
-      background: #FFFFFF;
-      box-shadow: 0px 0px 48px 0px #07005714;
-      width: 300px;
-      height: 300px;
-      flex-shrink: 0;
-      gap: 10px;
-      position: relative;
-    }
-
-    .p5Iimg {
-      width: 110px;
-      height: 110px;
-    }
-
-    .p5t {
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .p5d {
-      color: #717781;
-      font-size: 14px;
-    }
-
-    .proCode {
-      width: 70px;
-      height: 70px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      border-radius: 0px 0px 0px 0px;
-    }
-  }
-}
-
-.proTitleBox {
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  color: #333333;
-  font-weight: bold;
-  font-size: 54px;
-  line-height: 82px;
-  padding-bottom: 100px;
+  font-size: 32px;
+  margin-bottom: 25px;
 }
 
-.approval_bg {
-  width: 100%;
-  height: auto;
+.feature-card:nth-child(1) .feature-icon {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
 }
 
-.approval_c1 {
-  width: 734px;
-  height: auto;
+.feature-card:nth-child(2) .feature-icon {
+  background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
 }
 
-.approval_c2 {
-  width: 702px;
-  height: auto;
+.feature-card:nth-child(3) .feature-icon {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
 }
 
-.approval_c3 {
-  width: 587px;
-  height: auto;
+.feature-card:nth-child(4) .feature-icon {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
 }
 
-.approval_c5 {
-  width: 634px;
-  height: auto;
+.feature-card:nth-child(5) .feature-icon {
+  background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
 }
 
-.approval_c6 {
-  width: 602px;
-  height: auto;
+.feature-card:nth-child(6) .feature-icon {
+  background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+}
+
+.feature-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.feature-card p {
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* 邮件安全 */
+.security-section {
+  padding: 100px 30px;
+  background: linear-gradient(180deg, #fafafa 0%, #fff 100%);
+}
+
+.security-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.security-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.security-card {
+  background: white;
+  border-radius: 20px;
+  padding: 45px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s;
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.security-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.security-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  flex-shrink: 0;
+}
+
+.security-card:nth-child(1) .security-icon {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+}
+
+.security-card:nth-child(2) .security-icon {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+}
+
+.security-card:nth-child(3) .security-icon {
+  background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+}
+
+.security-card:nth-child(4) .security-icon {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+}
+
+.security-content h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.security-content p {
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* 数据统计 */
+.stats-section {
+  padding: 90px 30px;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: white;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 45px;
+}
+
+.stat-item {
+  text-align: center;
+  position: relative;
+}
+
+.stat-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 70%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.stat-number {
+  font-size: 52px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+}
+
+.stat-label {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* CTA区域 */
+.cta-section {
+  padding: 100px 30px;
+  background: white;
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-container h2 {
+  font-size: 44px;
+  margin-bottom: 20px;
+  color: #1e293b;
+  font-weight: 800;
+}
+
+.cta-container p {
+  font-size: 18px;
+  color: #64748b;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+/* 页脚 */
+.footer {
+  background: #1e293b;
+  color: white;
+  padding: 70px 30px 30px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-brand p {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.8;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.footer-links h4 {
+  font-size: 17px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 14px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #6366f1;
+}
+
+.footer-bottom {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .email-interface {
+    grid-template-columns: 180px 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .security-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .email-interface {
+    grid-template-columns: 1fr;
+  }
+
+  .email-sidebar {
+    display: none;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

@@ -39,12 +39,12 @@
     </div>
     <div class="idtBottomOut flexRowAC">
       <div class="w1380 idtBottom flexRowAC">
-        <div class="flexRowAC idtBox">
+        <a class="flexRowAC idtBox" href="https://www.oortcloudsmart.com/zh/siteNew/software/unLogin" target="_blank">
           <img class="idtImg" src="@/assets/homeImg/industry_ic1.png" alt="" />第三方应用软件
-        </div>
-        <div class="flexRowAC idtBox">
+        </a>
+        <a class="flexRowAC idtBox" href="https://www.oortcloudsmart.com/zh/product_customizeApp/" target="_blank">
           <img class="idtImg" src="@/assets/homeImg/industry_ic2.png" alt="" />OortCloud 定制
-        </div>
+        </a>
         <a class="flexRowAC idtBox" href="https://sh.oortcloudsmart.com/" target="_blank">
           <img class="idtImg" src="@/assets/homeImg/industry_ic3.png" alt="" />OORT.SH
         </a>

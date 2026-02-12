@@ -1,718 +1,746 @@
 <template>
-  <div class="home_page vls">
-    <div class="platTop w1380">
-      <div class="VLStream">
-        新闻推送
-      </div>
-      <div class="plat_cent">
-        打破信息壁垒，筑牢发展根基：智能化知识库实践路径
-      </div>
-      <div class="flexRowAC useBox">
-        <div class="seeMore">
-          立即试用
-        </div>
-        <div class="seeMore u3">
-          立即购买
-        </div>
-        <div class="seeMore u1">
-          安排演示
+  <div class="news-push-app">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span>🔥</span>
+            <span>智能新闻推送系统</span>
+          </div>
+          <h1>让新闻推送<br /><span>更精准更高效</span></h1>
+          <p>基于AI智能推荐算法，精准匹配用户兴趣，实现新闻内容的个性化推送。支持多渠道分发、实时监控、数据分析，助力企业提升内容传播效果。</p>
         </div>
       </div>
-    </div>
-    <div class="w1380 webBottomImg">
-      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          智能检索
-        </div>
-        <div class="cl_d">
-          支持全文检索、语义检索、多维度筛选，基于AI算法精准匹配知识内容，毫秒级响应检索请求，支持PDF/Word/视频/音频等多格式文件内容检索。
+    </section>
+
+    <!-- 功能特点 -->
+    <section id="features" class="features-section">
+      <div class="section-header">
+        <h2>强大功能，智能推送</h2>
+        <p>基于先进算法与技术，为企业提供全方位的新闻推送解决方案</p>
+      </div>
+      <div class="features-grid">
+        <div v-for="(feature, index) in featuresList" :key="index" class="feature-card">
+          <div class="feature-icon-wrapper">
+            {{ feature.icon }}
+          </div>
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.desc }}</p>
         </div>
       </div>
-      <img class="approval_c1" src="@/assets/software/approval_c1.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox ipcView  flexRowAC">
-      <img class="approval_c2" src="@/assets/software/approval_c2.png" alt="" />
-      <div class="CloudL" style="text-align: left">
-        <div class="cl_t">
-          协同创作
-        </div>
-        <div class="cl_d">
-          多人实时在线编辑，版本追溯与对比，支持评论批注、权限分级管理，企业内外部人员可按需协作，加速知识沉淀与更新。
+    </section>
+
+    <!-- 新闻频道 -->
+    <section id="channels" class="channels-section">
+      <div class="channels-header">
+        <h2>丰富的新闻频道</h2>
+        <p>覆盖多个领域，满足不同用户的阅读需求</p>
+      </div>
+      <div class="channels-grid">
+        <div v-for="(channel, index) in channelsList" :key="index" class="channel-card">
+          <div class="channel-icon">
+            {{ channel.icon }}
+          </div>
+          <h3>{{ channel.title }}</h3>
+          <p>{{ channel.desc }}</p>
         </div>
       </div>
-    </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          权限与安全
-        </div>
-        <div class="cl_d">
-          精细化权限管控，支持按部门/角色/人员分级授权，操作日志全程记录，数据加密存储，支持水印防泄露，满足企业级数据安全要求。
-        </div>
-      </div>
-      <img class="approval_c3" src="@/assets/software/approval_c3.png" alt="" />
-    </div>
-    <!-- 成功案例 -->
-    <div class="productBox w1380">
-      <div class="proT">
-        成功案例
-      </div>
-      <div class="productImg p5Out flexRowAC">
-        <div class="item img1">
-          <div class="bottom">
-            <p>城市风光</p>
-          </div>
-        </div>
-        <div class="item img2">
-          <div class="bottom">
-            <p>专业服务</p>
-          </div>
-        </div>
-        <div class="item img3">
-          <div class="bottom">
-            <p>教育机构</p>
-          </div>
-        </div>
-        <div class="item img4">
-          <div class="bottom">
-            <p>精准分析</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="productBox w1380">
-      <div class="proT">
-        现在开始体验
-      </div>
-      <div class="flexRowAC productItem">
-        <div class="productImg productItem1 product1">
-          <img class="pro1_1" src="@/assets/software/down1_.png" alt="" />
-          <div class="pro1_1_s flexRowAC">
-            SaaS版本
-            <span class="pro1_1_s_b">14天功能全免费试用</span>
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            7天快速迭代，问题敏捷解决
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            快速启用，精简运维
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            更低建设成本
-          </div>
-          <div class="pro3 flexRowAC">
-            <div class="pro3_btn flexRowAC">
-              申请试用
-            </div>
-            <div class="pro3_btn p3b flexRowAC">
-              详细功能
-            </div>
-          </div>
-        </div>
-        <div class="productImg productItem1 product1">
-          <img class="pro1_1" src="@/assets/software/down1.png" alt="" />
-          <div class="pro1_1_s flexRowAC">
-            私有化部署
-            <span class="pro1_1_s_b">1v1 定制方案量身打造</span>
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            1v1 专家服务，定制化解决方案
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            本地化灵活部署，私有化数据存储
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            高可用架构与完备容灾方案
-          </div>
-          <div class="pro3 flexRowAC">
-            <div class="pro3_btn flexRowAC">
-              申请试用
-            </div>
-            <div class="pro3_btn p3b flexRowAC">
-              详细功能
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--资料下载-->
-    <div class="productBox w1380">
-      <div class="proT">
-        资料下载
-      </div>
-      <div class="productImg product2Out flexRowAC">
-        <div class="product2Out_it flexRowAC">
-          <div class="pro2o_l flexRowAC">
-            <img class="pro2o_l_l" src="@/assets/software/down3.png" alt="" />
-            产品文档.pdf
-          </div>
-          <div class="pro2o_2" @click="downloadPDF">
-            下载
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   </div>
 </template>
 
 <script setup>
+
 import { ref } from 'vue'
-import product5_1 from '@/assets/VLimg2.0/product5_1.png'
-import product5_2 from '@/assets/VLimg2.0/product5_2.png'
-import product5_3 from '@/assets/VLimg2.0/product5_3.png'
-import product5_4 from '@/assets/VLimg2.0/product5_4.png'
-import product5_5 from '@/assets/VLimg2.0/product5_5.png'
-import product5_6 from '@/assets/VLimg2.0/product5_6.png'
-import product5_7 from '@/assets/VLimg2.0/product5_7.png'
+
 definePageMeta({
   layout: 'site-new'
 })
+// 功能特点列表
+const featuresList = ref([
+  {
+    icon: '🎯',
+    title: '智能推荐',
+    desc: '基于用户行为分析和兴趣偏好，运用AI算法实现精准的个性化内容推荐，提升用户阅读体验。'
+  },
+  {
+    icon: '📊',
+    title: '数据分析',
+    desc: '实时监控推送数据，提供详细的阅读率、点击率、分享率等多维度分析报告，优化推送策略。'
+  },
+  {
+    icon: '⚡',
+    title: '实时推送',
+    desc: '支持实时新闻推送，第一时间将重要资讯送达用户，确保信息时效性，提升用户粘性。'
+  },
+  {
+    icon: '🌐',
+    title: '多渠道分发',
+    desc: '支持APP、微信、短信、邮件等多种推送渠道，一站式管理，覆盖更广泛的用户群体。'
+  },
+  {
+    icon: '🔔',
+    title: '定时推送',
+    desc: '灵活设置推送时间，支持定时、周期性推送策略，选择最佳时机触达目标用户。'
+  },
+  {
+    icon: '🛡️',
+    title: '内容审核',
+    desc: '内置智能内容审核系统，自动识别违规内容，确保推送内容合规安全，降低运营风险。'
+  }
+])
 
-const downloadPDF = () => {
-  const link = document.createElement('a')
-  link.href = '/documents/产品文档.pdf'
-  link.download = '产品文档.pdf'
-  link.click()
-}
+// 新闻频道列表
+const channelsList = ref([
+  { icon: '🔴', title: '时事热点', desc: '最新国内外新闻' },
+  { icon: '💰', title: '财经资讯', desc: '金融市场动态' },
+  { icon: '💻', title: '科技前沿', desc: '技术创新趋势' },
+  { icon: '🏢', title: '企业动态', desc: '商业新闻资讯' },
+  { icon: '🎮', title: '娱乐八卦', desc: '明星影视资讯' },
+  { icon: '⚽', title: '体育竞技', desc: '赛事新闻动态' },
+  { icon: '🏥', title: '健康生活', desc: '养生保健知识' },
+  { icon: '🚗', title: '汽车资讯', desc: '行业新车发布' }
+])
 
-let p5Arr = ref([])
-p5Arr.value = [
-  { t: 'Windows', d: '版本号：V3.1.06', flag: false, img: product5_1 },
-  { t: 'Android', d: '版本号：V3.1.06', flag: true, img: product5_2 },
-  { t: 'iOS', d: '版本号：V3.1.06', flag: true, img: product5_3 },
-  { t: 'Harmony OS', d: '版本号：V3.1.06', flag: true, img: product5_4 },
-  { t: 'Linux', d: '版本号：V3.1.06', flag: false, img: product5_5 },
-  { t: 'Mac OS', d: '版本号：V3.1.06', flag: false, img: product5_6 },
-  { t: '银河麒麟', d: '版本号：V3.1.06', flag: false, img: product5_7 }
-]
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 
-.home_page {
-  position: relative;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.home_page.vls {
+body {
+  font-family: 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
   background-color: #fff;
 }
 
-.w1380 {
-  width: 1380px;
+/* Hero Section - 左侧文字右侧内容 */
+.hero {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  padding: 100px 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero-container {
+  text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  line-height: 1.15;
+  margin-bottom: 25px;
+  color: #1f2937;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #6b7280;
+  margin-bottom: 35px;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-large {
+  padding: 16px 40px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.btn-primary-orange {
+  background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+  color: white;
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.25);
+}
+
+.btn-primary-orange:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(239, 68, 68, 0.35);
+}
+
+.btn-white {
+  background: white;
+  color: #ef4444;
+  border: 2px solid #fee2e2;
+}
+
+.btn-white:hover {
+  border-color: #ef4444;
+}
+
+.hero-visual {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+}
+
+.news-card-preview {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  max-width: 380px;
+}
+
+.news-card-preview.small {
+  max-width: 280px;
+  transform: translateY(30px);
+}
+
+.preview-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.preview-category {
+  background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.preview-time {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.preview-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.preview-excerpt {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.preview-image {
+  width: 100%;
+  height: 140px;
+  background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.preview-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.preview-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.preview-btn-read {
+  background: #fef2f2;
+  color: #ef4444;
+}
+
+.preview-btn-read:hover {
+  background: #fee2e2;
+}
+
+.preview-btn-share {
+  background: #fff7ed;
+  color: #f97316;
+}
+
+.preview-btn-share:hover {
+  background: #ffedd5;
+}
+
+/* 功能特点 */
+.features-section {
+  padding: 100px 30px;
+  background: white;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 70px;
+}
+
+.section-header h2 {
+  font-size: 40px;
+  margin-bottom: 18px;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 18px;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-// 查看更多
-//.seeMore {
-//  display: inline-block;
-//  padding: 24px 50px;
-//  color: #fff;
-//  border: 1px solid #2278FF;
-//  border-radius: 8px;
-//  background: #2278FF;
-//  box-shadow: 0px 4px 10px 0px #FF5E1033;
-//  font-weight: bold;
-//  font-size: 18px;
-//}
-
-.platTop {
-  text-align: center;
-  padding: 110px 0;
-
-  .plat {
-    display: inline-block;
-    padding: 12px 24px;
-    color: #2278FF;
-    font-size: 18px;
-    border-radius: 18px;
-    border: 1px solid #E9E9E9;
-  }
-
-  .VLStream {
-    color: #333333;
-    font-weight: bold;
-    font-size: 78px;
-    padding: 8px 0;
-    position: relative;
-
-    .VLStream_img {
-      width: 222px;
-      height: 222px;
-      position: absolute;
-      right: 336px;
-      top: -50px;
-    }
-  }
-
-  .plat_a {
-    color: #333333;
-    font-weight: bold;
-    font-size: 58px;
-  }
-
-  .plat_cent {
-    padding: 20px 0 50px;
-    color: #717781;
-    font-size: 18px;
-  }
-
-  .useBox {
-    justify-content: center;
-    gap: 20px;
-
-    .seeMore {
-      padding: 24px 50px;
-      color: #fff;
-      border: 1px solid #2278FF;
-      border-radius: 8px;
-      background: #2278FF;
-      //box-shadow: 0px 4px 10px 0px #FF5E1033;
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    .u1 {
-      color: #333;
-      background-color: #F4F4F4;
-      border: 1px solid #F4F4F4;
-    }
-
-    .u3{
-      border-radius: 8px;
-      border: 1px solid #ED2121;
-      color: #ED2121;
-      font-weight: bold;
-      font-size: 18px;
-      background: #fff;
-    }
-
-    .seeMore.u2 {
-      display: flex;
-      gap: 10px;
-      border: 1px solid #333;
-      background-color: #333;
-
-      .u2_img {
-        width: 28px;
-        height: 26px;
-      }
-    }
-  }
+.feature-card {
+  background: #fafafa;
+  padding: 40px 35px;
+  border-radius: 16px;
+  transition: all 0.3s;
+  border: 2px solid transparent;
 }
 
-.WebRTC {
-  gap: 24px;
-  padding-bottom: 80px;
-  animation: scroll 35s linear infinite;
-
-  .webItem {
-    width: auto;
-    height: 120px;
-    border-radius: 16px;
-    background: #E8F7FC;
-    color: #5C6C00;
-    gap: 14px;
-    flex-wrap: nowrap;
-  }
+.feature-card:hover {
+  background: white;
+  border-color: #ef4444;
+  box-shadow: 0 15px 40px rgba(239, 68, 68, 0.15);
+  transform: translateY(-5px);
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.webBottomImg {
-  padding: 70px 0 110px;
-  height: initial;
-
-  .wBImg {
-    width: 100%;
-    height: initial;
-    border-radius: 24px;
-  }
-}
-
-.CloudBox {
-  padding-bottom: 100px;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  .cl_t {
-    padding-top: 30px;
-    padding-bottom: 40px;
-    color: #333333;
-    font-weight: bold;
-    font-size: 54px;
-    line-height: 82px;
-  }
-
-  .cl_d {
-    padding-bottom: 24px;
-    color: #717781;
-    font-size: 20px;
-  }
-
-  .CloudL {
-    width: 500px;
-  }
-
-  .CloudR {
-    width: 700px;
-    height: auto;
-
-    .CloudRImg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .CloudR2 {
-    width: 700px;
-    height: 700px;
-  }
-}
-
-.ipcBox.CloudBox {
-  padding-bottom: 120px;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  .CloudL {
-    width: 450px;
-    text-align: right;
-    padding-top: 60px;
-  }
-}
-
-.ipcView.CloudBox {
-  .CloudR {
-    height: 460px;
-  }
-}
-
-.productBox {
-  text-align: center;
-  padding-bottom: 140px;
-
-  .productItem {
-    gap: 20px;
-
-    .productItem1 {
-      flex: 1;
-
-      &:nth-child(1) {
-        background: #2278FF;
-
-        .pro3_btn {
-          color: #2278FF;
-        }
-      }
-    }
-  }
-
-  .proT {
-    padding-bottom: 60px;
-    color: #3D3D3D;
-    font-weight: bold;
-    font-size: 58px;
-  }
-
-  .prod {
-    padding-bottom: 60px;
-    color: #717781;
-    font-size: 20px;
-  }
-
-  .productImg {
-    width: 100%;
-    height: 300px;
-
-    .proImg {
-      width: 100%;
-      height: 100%;
-    }
-
-    .img1{
-      background: url('@/assets/VLimg2.0/jyjg1.png');
-    }
-    .img2{
-      background: url('@/assets/VLimg2.0/jyjg2.png');
-    }
-    .img3{
-      background: url('@/assets/VLimg2.0/jyjg3.png');
-    }
-    .img4{
-      background: url('@/assets/VLimg2.0/jyjg4.png');
-    }
-    .item{
-      width: 300px;
-      height: 300px;
-      background-size: cover;
-      position: relative;
-      .bottom{
-        position: absolute;
-        bottom: 0;
-        width: 300px;
-        text-align: left;
-        line-height: 88px;
-        border-radius: 0 0 24px 24px;
-        background: linear-gradient(180deg, rgba(255, 94, 16, 0) 0%, #3C80FF  100%);
-        p{
-          margin-left: 24px;
-          font-size: 28px;
-          font-weight: bold;
-          color: #FFFFFF;
-        }
-      }
-    }
-  }
-
-  .product1 {
-    text-align: left;
-    color: #fff;
-    width: auto;
-    height: 510px;
-    background-color: #fff;
-    border-radius: 24px;
-    background: linear-gradient(135deg, #0C1F40 0%, #252734 98%);
-    padding: 40px;
-
-    .pro1_1 {
-      width: 46px;
-      height: 48px;
-      margin-bottom: 46px;
-    }
-
-    .pro1_1_s {
-      padding-bottom: 50px;
-      gap: 12px;
-      color: #FFFFFF;
-      font-weight: bold;
-      font-size: 24px;
-
-      .pro1_1_s_b {
-        color: #FFFFFF;
-        font-size: 14px;
-        border-radius: 4px;
-        border: 0.5px solid #FFFFFF;
-        padding: 4px 10px;
-      }
-    }
-
-    .pro1_2 {
-      gap: 12px;
-      padding-bottom: 30px;
-
-      .pro1_2_i {
-        width: 16px;
-        height: 16px;
-      }
-    }
-
-    .pro3 {
-      padding-top: 35px;
-      gap: 30px;
-
-      .pro3_btn {
-        flex: 1;
-        padding: 20px 0;
-        justify-content: center;
-        background-color: #fff;
-        border-radius: 4px;
-        color: #333;
-        font-weight: bold;
-        font-size: 18px;
-      }
-
-      .pro3_btn.p3b {
-        background-color: transparent;
-        border: 1px solid #fff;
-        color: #fff;
-      }
-    }
-  }
-
-  .product2Out {
-    padding-bottom: 0;
-    height: 220px;
-    justify-content: center;
-    background-image: url('@/assets/software/downloadBG.png');
-    background-size: 100% 100%;
-
-    .product2Out_it {
-      opacity: 1;
-      color: #333333;
-      font-size: 16px;
-
-      .pro2o_l {
-        padding-left: 12px;
-        width: 600px;
-        height: 54px;
-        background-color: #F0F0F0;
-
-        .pro2o_l_l {
-          width: 34px;
-          height: 34px;
-          margin-right: 12px;
-        }
-      }
-
-      .pro2o_2 {
-        cursor: pointer;
-        width: 100px;
-        line-height: 54px;
-        color: #fff;
-        height: 54px;
-        background-color: #2278FF;
-      }
-    }
-  }
-
-  .product3Out.productImg {
-    height: initial;
-    margin-bottom: 60px;
-    padding: 40px;
-    border-radius: 24px;
-    background: linear-gradient(180deg, #FEF9F6 0%, #FFFFFF 100%);
-    border: 1px solid #001F5019;
-
-    .p3Box {
-      justify-content: space-between;
-
-      .p3 {
-        width: 358px;
-        height: 170px;
-      }
-    }
-
-    .p3_title {
-      padding-top: 40px;
-      text-align: left;
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .ps_desc {
-      padding-top: 16px;
-      padding-left: 60px;
-      width: 900px;
-      color: #3D3D3D;
-      font-size: 20px;
-      text-align: left;
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: 40px;
-        top: 26px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: #333;
-      }
-    }
-  }
-
-  .p4Out {
-    width: auto;
-    height: 870px;
-  }
-
-  .p5Out {
-    flex-wrap: wrap;
-    gap: 40px;
-
-    .p5Item {
-      padding: 50px 0;
-      flex-direction: column;
-      border-radius: 40px;
-      background: #FFFFFF;
-      box-shadow: 0px 0px 48px 0px #07005714;
-      width: 300px;
-      height: 300px;
-      flex-shrink: 0;
-      gap: 10px;
-      position: relative;
-    }
-
-    .p5Iimg {
-      width: 110px;
-      height: 110px;
-    }
-
-    .p5t {
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .p5d {
-      color: #717781;
-      font-size: 14px;
-    }
-
-    .proCode {
-      width: 70px;
-      height: 70px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      border-radius: 0px 0px 0px 0px;
-    }
-  }
-}
-
-.proTitleBox {
+.feature-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  color: #333333;
-  font-weight: bold;
-  font-size: 54px;
-  line-height: 82px;
-  padding-bottom: 100px;
+  font-size: 32px;
+  margin-bottom: 25px;
 }
 
-.approval_bg {
-  width: 100%;
-  height: auto;
+/* 为每个feature-card的icon-wrapper设置渐变背景 */
+.features-grid :nth-child(1) .feature-icon-wrapper {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
 }
 
-.approval_c1 {
-  width: 734px;
-  height: auto;
+.features-grid :nth-child(2) .feature-icon-wrapper {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
 }
 
-.approval_c2 {
-  width: 702px;
-  height: auto;
+.features-grid :nth-child(3) .feature-icon-wrapper {
+  background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
 }
 
-.approval_c3 {
-  width: 587px;
-  height: auto;
+.features-grid :nth-child(4) .feature-icon-wrapper {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
 }
 
-.approval_c5 {
-  width: 634px;
-  height: auto;
+.features-grid :nth-child(5) .feature-icon-wrapper {
+  background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
 }
 
-.approval_c6 {
-  width: 602px;
-  height: auto;
+.features-grid :nth-child(6) .feature-icon-wrapper {
+  background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+}
+
+.feature-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.feature-card p {
+  color: #6b7280;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* 新闻频道 */
+.channels-section {
+  padding: 100px 30px;
+  background: #fafafa;
+}
+
+.channels-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.channels-header h2 {
+  font-size: 40px;
+  margin-bottom: 18px;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.channels-header p {
+  font-size: 18px;
+  color: #6b7280;
+}
+
+.channels-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.channel-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.channel-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.channel-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin: 0 auto 20px;
+}
+
+/* 为每个channel-card的icon设置渐变背景 */
+.channels-grid :nth-child(1) .channel-icon {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.channels-grid :nth-child(2) .channel-icon {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.channels-grid :nth-child(3) .channel-icon {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.channels-grid :nth-child(4) .channel-icon {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.channels-grid :nth-child(5) .channel-icon {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.channels-grid :nth-child(6) .channel-icon {
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+}
+
+.channels-grid :nth-child(7) .channel-icon {
+  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+}
+
+.channels-grid :nth-child(8) .channel-icon {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+}
+
+.channel-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.channel-card p {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* 推送统计 */
+.stats-section {
+  padding: 90px 30px;
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  color: white;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.stat-item {
+  text-align: center;
+  position: relative;
+}
+
+.stat-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 70%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.stat-number {
+  font-size: 52px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+}
+
+.stat-label {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* CTA区域 */
+.cta-section {
+  padding: 100px 30px;
+  background: white;
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-container h2 {
+  font-size: 44px;
+  margin-bottom: 20px;
+  color: #1f2937;
+  font-weight: 800;
+}
+
+.cta-container p {
+  font-size: 18px;
+  color: #6b7280;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+/* 页脚 */
+.footer {
+  background: #1f2937;
+  color: white;
+  padding: 70px 30px 30px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-brand p {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.8;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.footer-links h4 {
+  font-size: 17px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 14px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ef4444;
+}
+
+.footer-bottom {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .channels-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-visual {
+    flex-direction: column;
+  }
+
+  .news-card-preview.small {
+    transform: translateY(0);
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .channels-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

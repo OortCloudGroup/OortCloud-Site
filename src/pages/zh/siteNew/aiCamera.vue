@@ -1,718 +1,1161 @@
 <template>
-  <div class="home_page vls">
-    <div class="platTop w1380">
-      <div class="VLStream">
-        AI摄像机
-      </div>
-      <div class="plat_cent">
-        打破信息壁垒，筑牢发展根基：智能化知识库实践路径
-      </div>
-      <div class="flexRowAC useBox">
-        <div class="seeMore">
-          立即试用
-        </div>
-        <div class="seeMore u3">
-          立即购买
-        </div>
-        <div class="seeMore u1">
-          安排演示
-        </div>
-      </div>
-    </div>
-    <div class="w1380 webBottomImg">
-      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          智能检索
-        </div>
-        <div class="cl_d">
-          支持全文检索、语义检索、多维度筛选，基于AI算法精准匹配知识内容，毫秒级响应检索请求，支持PDF/Word/视频/音频等多格式文件内容检索。
-        </div>
-      </div>
-      <img class="approval_c1" src="@/assets/software/approval_c1.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox ipcView  flexRowAC">
-      <img class="approval_c2" src="@/assets/software/approval_c2.png" alt="" />
-      <div class="CloudL" style="text-align: left">
-        <div class="cl_t">
-          协同创作
-        </div>
-        <div class="cl_d">
-          多人实时在线编辑，版本追溯与对比，支持评论批注、权限分级管理，企业内外部人员可按需协作，加速知识沉淀与更新。
-        </div>
-      </div>
-    </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          权限与安全
-        </div>
-        <div class="cl_d">
-          精细化权限管控，支持按部门/角色/人员分级授权，操作日志全程记录，数据加密存储，支持水印防泄露，满足企业级数据安全要求。
-        </div>
-      </div>
-      <img class="approval_c3" src="@/assets/software/approval_c3.png" alt="" />
-    </div>
-    <!-- 成功案例 -->
-    <div class="productBox w1380">
-      <div class="proT">
-        成功案例
-      </div>
-      <div class="productImg p5Out flexRowAC">
-        <div class="item img1">
-          <div class="bottom">
-            <p>城市风光</p>
+  <div class="ai-camera-page">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1>新一代<span>AI智能摄像机</span><br />重新定义视觉感知</h1>
+          <p>融合深度学习算法与高清成像技术，实现精准目标识别、智能行为分析与实时预警。为安防监控、智慧城市、工业检测等领域提供强大视觉支撑。</p>
+          <div class="hero-badges">
+            <span class="badge">4K超清画质</span>
+            <span class="badge">实时AI识别</span>
+            <span class="badge">边缘计算</span>
+            <span class="badge">低功耗设计</span>
           </div>
         </div>
-        <div class="item img2">
-          <div class="bottom">
-            <p>专业服务</p>
-          </div>
-        </div>
-        <div class="item img3">
-          <div class="bottom">
-            <p>教育机构</p>
-          </div>
-        </div>
-        <div class="item img4">
-          <div class="bottom">
-            <p>精准分析</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="productBox w1380">
-      <div class="proT">
-        现在开始体验
-      </div>
-      <div class="flexRowAC productItem">
-        <div class="productImg productItem1 product1">
-          <img class="pro1_1" src="@/assets/software/down1_.png" alt="" />
-          <div class="pro1_1_s flexRowAC">
-            SaaS版本
-            <span class="pro1_1_s_b">14天功能全免费试用</span>
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            7天快速迭代，问题敏捷解决
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            快速启用，精简运维
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            更低建设成本
-          </div>
-          <div class="pro3 flexRowAC">
-            <div class="pro3_btn flexRowAC">
-              申请试用
+        <div class="hero-visual">
+          <div class="camera-display">
+            <div class="camera-screen">
+              <div class="detection-box detection-box-1" />
+              <div class="detection-box detection-box-2" />
+              <div class="camera-icon">
+                📷
+              </div>
             </div>
-            <div class="pro3_btn p3b flexRowAC">
-              详细功能
-            </div>
-          </div>
-        </div>
-        <div class="productImg productItem1 product1">
-          <img class="pro1_1" src="@/assets/software/down1.png" alt="" />
-          <div class="pro1_1_s flexRowAC">
-            私有化部署
-            <span class="pro1_1_s_b">1v1 定制方案量身打造</span>
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            1v1 专家服务，定制化解决方案
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            本地化灵活部署，私有化数据存储
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            高可用架构与完备容灾方案
-          </div>
-          <div class="pro3 flexRowAC">
-            <div class="pro3_btn flexRowAC">
-              申请试用
-            </div>
-            <div class="pro3_btn p3b flexRowAC">
-              详细功能
+            <div class="camera-info">
+              <div class="info-item">
+                <div class="info-value">
+                  99.8%
+                </div>
+                <div class="info-label">
+                  识别准确率
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-value">
+                  &lt;50ms
+                </div>
+                <div class="info-label">
+                  响应延迟
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-value">
+                  4K
+                </div>
+                <div class="info-label">
+                  视频分辨率
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!--资料下载-->
-    <div class="productBox w1380">
-      <div class="proT">
-        资料下载
-      </div>
-      <div class="productImg product2Out flexRowAC">
-        <div class="product2Out_it flexRowAC">
-          <div class="pro2o_l flexRowAC">
-            <img class="pro2o_l_l" src="@/assets/software/down3.png" alt="" />
-            产品文档.pdf
-          </div>
-          <div class="pro2o_2" @click="downloadPDF">
-            下载
+    </section>
+
+    <!-- 核心特性 -->
+    <section id="features" class="features">
+      <div class="features-container">
+        <div class="section-header">
+          <h2>核心特性</h2>
+          <p>先进AI算法赋能，开启智能视觉新时代</p>
+        </div>
+        <div class="feature-grid">
+          <div v-for="(feature, index) in featuresList" :key="index" class="feature-item">
+            <div class="feature-icon-wrapper">
+              <span class="feature-icon">{{ feature.icon }}</span>
+            </div>
+            <h3>{{ feature.title }}</h3>
+            <p>{{ feature.desc }}</p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- 产品系列 -->
+    <section id="products" class="products">
+      <div class="products-container">
+        <div class="section-header">
+          <h2>产品系列</h2>
+          <p>满足不同场景需求的多样化产品选择</p>
+        </div>
+        <div class="product-list">
+          <div v-for="(product, index) in filteredProducts" :key="index" class="product-card">
+            <div class="product-image">
+              {{ product.icon }}
+            </div>
+            <div class="product-info">
+              <span class="product-badge">{{ product.badge }}</span>
+              <h3>{{ product.title }}</h3>
+              <p>{{ product.desc }}</p>
+              <div class="product-specs">
+                <div v-for="(spec, sIndex) in product.specs" :key="sIndex" class="spec-item">
+                  <span>{{ spec.value }}</span> {{ spec.label }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 应用领域 -->
+    <section id="applications" class="applications">
+      <div class="applications-container">
+        <div class="section-header">
+          <h2>应用领域</h2>
+          <p>广泛适用于各行各业，提供智能视觉解决方案</p>
+        </div>
+        <div class="application-grid">
+          <div v-for="(app, index) in applicationsList" :key="index" class="application-card">
+            <div class="app-icon">
+              {{ app.icon }}
+            </div>
+            <div class="app-title">
+              {{ app.title }}
+            </div>
+            <div class="app-desc">
+              {{ app.desc }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技术参数 -->
+    <section id="specs" class="specs">
+      <div class="specs-container">
+        <div class="specs-header">
+          <h2>技术参数</h2>
+          <p>专业级硬件配置，确保卓越性能表现</p>
+        </div>
+        <div class="specs-table">
+          <div v-for="(spec, index) in specsList" :key="index" class="specs-row">
+            <div class="spec-label">
+              {{ spec.label }}
+            </div>
+            <div class="spec-value">
+              <span>{{ spec.highlight }}</span> {{ spec.value }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import product5_1 from '@/assets/VLimg2.0/product5_1.png'
-import product5_2 from '@/assets/VLimg2.0/product5_2.png'
-import product5_3 from '@/assets/VLimg2.0/product5_3.png'
-import product5_4 from '@/assets/VLimg2.0/product5_4.png'
-import product5_5 from '@/assets/VLimg2.0/product5_5.png'
-import product5_6 from '@/assets/VLimg2.0/product5_6.png'
-import product5_7 from '@/assets/VLimg2.0/product5_7.png'
+import { ref, computed } from 'vue'
 definePageMeta({
   layout: 'site-new'
 })
+// 产品标签激活状态
+const activeTab = ref('all')
 
-const downloadPDF = () => {
-  const link = document.createElement('a')
-  link.href = '/documents/产品文档.pdf'
-  link.download = '产品文档.pdf'
-  link.click()
-}
+// 核心特性数据
+const featuresList = ref([
+  {
+    icon: '🎯',
+    title: '精准目标识别',
+    desc: '基于深度神经网络，支持人脸、车辆、物品等多类别目标识别，准确率高达99.8%，适应复杂环境场景。'
+  },
+  {
+    icon: '📊',
+    title: '智能行为分析',
+    desc: '实时分析人员行为轨迹，识别异常动作如徘徊、奔跑、聚集等，主动预警潜在安全风险。'
+  },
+  {
+    icon: '⚡',
+    title: '边缘AI计算',
+    desc: '内置高性能AI芯片，支持本地化实时推理，无需云端依赖，降低网络带宽需求，提升响应速度。'
+  },
+  {
+    icon: '🌙',
+    title: '全彩夜视',
+    desc: '采用星光级传感器与红外补光技术，即使在极低光照环境下也能呈现清晰彩色画面。'
+  },
+  {
+    icon: '🔒',
+    title: '智能追踪',
+    desc: '支持目标自动追踪功能，360°云台旋转，确保重要目标始终处于监控视野中心。'
+  },
+  {
+    icon: '☁️',
+    title: '云端管理',
+    desc: '支持云平台统一管理，多设备远程配置与监控，数据安全加密存储，随时随地掌控现场。'
+  }
+])
 
-let p5Arr = ref([])
-p5Arr.value = [
-  { t: 'Windows', d: '版本号：V3.1.06', flag: false, img: product5_1 },
-  { t: 'Android', d: '版本号：V3.1.06', flag: true, img: product5_2 },
-  { t: 'iOS', d: '版本号：V3.1.06', flag: true, img: product5_3 },
-  { t: 'Harmony OS', d: '版本号：V3.1.06', flag: true, img: product5_4 },
-  { t: 'Linux', d: '版本号：V3.1.06', flag: false, img: product5_5 },
-  { t: 'Mac OS', d: '版本号：V3.1.06', flag: false, img: product5_6 },
-  { t: '银河麒麟', d: '版本号：V3.1.06', flag: false, img: product5_7 }
-]
+// 产品列表数据
+const productsList = ref([
+  {
+    icon: '📹',
+    badge: '热销',
+    title: 'AI-Pro 4K枪机',
+    desc: '专业级4K超清画质，内置AI芯片，支持人脸识别与行为分析，适用于城市安防、交通监控。',
+    type: 'gun',
+    specs: [
+      { value: '400万', label: '像素' },
+      { value: '100米', label: '红外距离' },
+      { value: 'IP67', label: '防护等级' }
+    ]
+  },
+  {
+    icon: '🎥',
+    badge: '新品',
+    title: 'AI-Speed 智能球机',
+    desc: '360°全景监控，支持智能跟踪与自动巡航，适合广场、商场等开阔场所的大范围监控。',
+    type: 'ball',
+    specs: [
+      { value: '30倍', label: '光学变焦' },
+      { value: '360°', label: '水平旋转' },
+      { value: 'IP66', label: '防护等级' }
+    ]
+  },
+  {
+    icon: '📷',
+    badge: '推荐',
+    title: 'AI-Mini 半球机',
+    desc: '紧凑设计，美观大方，支持多种安装方式，适用于室内办公、零售门店等环境。',
+    type: 'dome',
+    specs: [
+      { value: '200万', label: '像素' },
+      { value: '广角', label: '镜头' },
+      { value: '双向语音', label: '对讲' }
+    ]
+  },
+  {
+    icon: '🔦',
+    badge: '旗舰',
+    title: 'AI-Ultra 超清球机',
+    desc: '800万像素超高清，AI算法全面升级，支持多目标并发识别与智能分析。',
+    type: 'ball',
+    specs: [
+      { value: '800万', label: '像素' },
+      { value: '40倍', label: '光学变焦' },
+      { value: '智能降噪', label: '技术' }
+    ]
+  },
+  {
+    icon: '📡',
+    badge: '专用',
+    title: 'AI-Traffic 交通球机',
+    desc: '专为交通场景优化，支持车牌识别、违章检测、车流统计，助力智慧交通建设。',
+    type: 'ball',
+    specs: [
+      { value: '车牌识别', label: '准确率99%' },
+      { value: '多车道', label: '覆盖' },
+      { value: 'LED补光', label: '功能' }
+    ]
+  },
+  {
+    icon: '🏠',
+    badge: '家用',
+    title: 'AI-Home 家用摄像机',
+    desc: '智能家居首选，支持移动侦测、双向对讲、哭声检测，守护家庭安全。',
+    type: 'dome',
+    specs: [
+      { value: '1080P', label: '高清' },
+      { value: '移动侦测', label: '报警' },
+      { value: '云存储', label: '支持' }
+    ]
+  }
+])
+
+// 过滤产品列表
+const filteredProducts = computed(() => {
+  if (activeTab.value === 'all') {
+    return productsList.value
+  }
+  return productsList.value.filter(product => product.type === activeTab.value)
+})
+
+// 应用领域数据
+const applicationsList = ref([
+  { icon: '🏢', title: '智慧城市', desc: '城市安防、交通管理、公共设施监控' },
+  { icon: '🏭', title: '工业安全', desc: '工厂安全、设备监测、生产管理' },
+  { icon: '🏪', title: '商业零售', desc: '门店管理、客流分析、防盗预警' },
+  { icon: '🏫', title: '智慧校园', desc: '校园安全、考勤管理、行为分析' },
+  { icon: '🏥', title: '医疗健康', desc: '医院安防、病房监护、疫情防控' },
+  { icon: '🚗', title: '智慧交通', desc: '道路监控、车牌识别、违章检测' },
+  { icon: '🌳', title: '智慧园区', desc: '园区安防、访客管理、设备巡检' },
+  { icon: '🏠', title: '智能家居', desc: '家庭安防、老人看护、宠物监控' }
+])
+
+// 技术参数数据
+const specsList = ref([
+  { label: '图像传感器', highlight: '1/1.8英寸', value: 'CMOS 星光级传感器' },
+  { label: '有效像素', highlight: '800万', value: '(3840×2160)' },
+  { label: '视频压缩', highlight: 'H.265+', value: '/ H.264 / MJPEG' },
+  { label: '帧率', highlight: '25/30', value: 'fps (全分辨率)' },
+  { label: '镜头', highlight: '2.8-12mm', value: '自动光圈电动变焦' },
+  { label: '红外距离', highlight: '100米', value: '智能红外补光' },
+  { label: '最低照度', highlight: '0.0005Lux', value: '(星光模式)' },
+  { label: 'AI处理器', highlight: '内置NPU', value: '4 TOPS 算力' },
+  { label: '防护等级', highlight: 'IP67', value: '/ IK10 防暴' },
+  { label: '工作温度', highlight: '-40℃ ~ +70℃', value: '' },
+  { label: '网络接口', highlight: 'RJ45', value: '10/100/1000M 自适应' },
+  { label: '存储接口', highlight: 'SD卡', value: '最大支持256GB' }
+])
 </script>
 
-<style scoped lang="scss">
+<style scoped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.home_page {
+body {
+  font-family: 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8fafc;
+}
+
+/* 导航栏 */
+.navbar {
+  background: white;
+  padding: 0 40px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2d3436;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 45px;
+}
+
+.nav-menu a {
+  color: #636e72;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
   position: relative;
 }
 
-.home_page.vls {
-  background-color: #fff;
+.nav-menu a:hover {
+  color: #00b894;
 }
 
-.w1380 {
-  width: 1380px;
+.nav-menu a.active {
+  color: #00b894;
+}
+
+.nav-cta {
+  background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 184, 148, 0.35);
+}
+
+/* Hero Section */
+.hero {
+  padding: 160px 40px 100px;
+  background: linear-gradient(180deg, #e8f8f5 0%, #f8fafc 100%);
+}
+
+.hero-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  color: #2d3436;
+  margin-bottom: 25px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero-content h1 span {
+  background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #636e72;
+  margin-bottom: 35px;
+  line-height: 1.8;
+  max-width: 520px;
+}
+
+.hero-badges {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: rgba(0, 184, 148, 0.1);
+  color: #00b894;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+}
+
+.hero-btn-primary {
+  background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+  color: white;
+  padding: 16px 40px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 184, 148, 0.35);
+}
+
+.hero-btn-secondary {
+  background: white;
+  color: #2d3436;
+  padding: 16px 40px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  border: 2px solid #dfe6e9;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.hero-btn-secondary:hover {
+  border-color: #00b894;
+  color: #00b894;
+}
+
+.hero-visual {
+  position: relative;
+}
+
+.camera-display {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.camera-display::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  background: linear-gradient(135deg, rgba(0, 184, 148, 0.2) 0%, rgba(0, 206, 201, 0.2) 100%);
+  border-radius: 30px;
+  z-index: -1;
+}
+
+.camera-screen {
+  background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
+  border-radius: 16px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.camera-screen::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border: 2px solid rgba(0, 184, 148, 0.3);
+  border-radius: 8px;
+}
+
+.detection-box {
+  position: absolute;
+  border: 3px solid #00b894;
+  background: rgba(0, 184, 148, 0.1);
+  border-radius: 4px;
+  animation: scan 3s infinite;
+}
+
+.detection-box-1 {
+  top: 30%;
+  left: 20%;
+  width: 120px;
+  height: 100px;
+}
+
+.detection-box-2 {
+  top: 50%;
+  right: 15%;
+  width: 90px;
+  height: 120px;
+  animation-delay: 1s;
+}
+
+@keyframes scan {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.camera-icon {
+  font-size: 80px;
+  opacity: 0.3;
+}
+
+.camera-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #dfe6e9;
+}
+
+.info-item {
+  text-align: center;
+}
+
+.info-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #00b894;
+  margin-bottom: 5px;
+}
+
+.info-label {
+  font-size: 12px;
+  color: #636e72;
+}
+
+/* 核心特性 */
+.features {
+  padding: 100px 40px;
+  background: white;
+}
+
+.features-container {
+  max-width: 1400px;
   margin: 0 auto;
 }
 
-// 查看更多
-//.seeMore {
-//  display: inline-block;
-//  padding: 24px 50px;
-//  color: #fff;
-//  border: 1px solid #2278FF;
-//  border-radius: 8px;
-//  background: #2278FF;
-//  box-shadow: 0px 4px 10px 0px #FF5E1033;
-//  font-weight: bold;
-//  font-size: 18px;
-//}
-
-.platTop {
+.section-header {
   text-align: center;
-  padding: 110px 0;
-
-  .plat {
-    display: inline-block;
-    padding: 12px 24px;
-    color: #2278FF;
-    font-size: 18px;
-    border-radius: 18px;
-    border: 1px solid #E9E9E9;
-  }
-
-  .VLStream {
-    color: #333333;
-    font-weight: bold;
-    font-size: 78px;
-    padding: 8px 0;
-    position: relative;
-
-    .VLStream_img {
-      width: 222px;
-      height: 222px;
-      position: absolute;
-      right: 336px;
-      top: -50px;
-    }
-  }
-
-  .plat_a {
-    color: #333333;
-    font-weight: bold;
-    font-size: 58px;
-  }
-
-  .plat_cent {
-    padding: 20px 0 50px;
-    color: #717781;
-    font-size: 18px;
-  }
-
-  .useBox {
-    justify-content: center;
-    gap: 20px;
-
-    .seeMore {
-      padding: 24px 50px;
-      color: #fff;
-      border: 1px solid #2278FF;
-      border-radius: 8px;
-      background: #2278FF;
-      //box-shadow: 0px 4px 10px 0px #FF5E1033;
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    .u1 {
-      color: #333;
-      background-color: #F4F4F4;
-      border: 1px solid #F4F4F4;
-    }
-
-    .u3{
-      border-radius: 8px;
-      border: 1px solid #ED2121;
-      color: #ED2121;
-      font-weight: bold;
-      font-size: 18px;
-      background: #fff;
-    }
-
-    .seeMore.u2 {
-      display: flex;
-      gap: 10px;
-      border: 1px solid #333;
-      background-color: #333;
-
-      .u2_img {
-        width: 28px;
-        height: 26px;
-      }
-    }
-  }
+  margin-bottom: 70px;
 }
 
-.WebRTC {
-  gap: 24px;
-  padding-bottom: 80px;
-  animation: scroll 35s linear infinite;
-
-  .webItem {
-    width: auto;
-    height: 120px;
-    border-radius: 16px;
-    background: #E8F7FC;
-    color: #5C6C00;
-    gap: 14px;
-    flex-wrap: nowrap;
-  }
+.section-header h2 {
+  font-size: 40px;
+  color: #2d3436;
+  margin-bottom: 18px;
+  font-weight: 700;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.section-header p {
+  color: #636e72;
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.webBottomImg {
-  padding: 70px 0 110px;
-  height: initial;
-
-  .wBImg {
-    width: 100%;
-    height: initial;
-    border-radius: 24px;
-  }
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
-.CloudBox {
-  padding-bottom: 100px;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  .cl_t {
-    padding-top: 30px;
-    padding-bottom: 40px;
-    color: #333333;
-    font-weight: bold;
-    font-size: 54px;
-    line-height: 82px;
-  }
-
-  .cl_d {
-    padding-bottom: 24px;
-    color: #717781;
-    font-size: 20px;
-  }
-
-  .CloudL {
-    width: 500px;
-  }
-
-  .CloudR {
-    width: 700px;
-    height: auto;
-
-    .CloudRImg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .CloudR2 {
-    width: 700px;
-    height: 700px;
-  }
+.feature-item {
+  background: #f8fafc;
+  border-radius: 20px;
+  padding: 40px 35px;
+  transition: all 0.4s;
+  border: 1px solid transparent;
 }
 
-.ipcBox.CloudBox {
-  padding-bottom: 120px;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  .CloudL {
-    width: 450px;
-    text-align: right;
-    padding-top: 60px;
-  }
+.feature-item:hover {
+  background: white;
+  border-color: #00b894;
+  box-shadow: 0 15px 40px rgba(0, 184, 148, 0.15);
+  transform: translateY(-8px);
 }
 
-.ipcView.CloudBox {
-  .CloudR {
-    height: 460px;
-  }
-}
-
-.productBox {
-  text-align: center;
-  padding-bottom: 140px;
-
-  .productItem {
-    gap: 20px;
-
-    .productItem1 {
-      flex: 1;
-
-      &:nth-child(1) {
-        background: #2278FF;
-
-        .pro3_btn {
-          color: #2278FF;
-        }
-      }
-    }
-  }
-
-  .proT {
-    padding-bottom: 60px;
-    color: #3D3D3D;
-    font-weight: bold;
-    font-size: 58px;
-  }
-
-  .prod {
-    padding-bottom: 60px;
-    color: #717781;
-    font-size: 20px;
-  }
-
-  .productImg {
-    width: 100%;
-    height: 300px;
-
-    .proImg {
-      width: 100%;
-      height: 100%;
-    }
-
-    .img1{
-      background: url('@/assets/VLimg2.0/jyjg1.png');
-    }
-    .img2{
-      background: url('@/assets/VLimg2.0/jyjg2.png');
-    }
-    .img3{
-      background: url('@/assets/VLimg2.0/jyjg3.png');
-    }
-    .img4{
-      background: url('@/assets/VLimg2.0/jyjg4.png');
-    }
-    .item{
-      width: 300px;
-      height: 300px;
-      background-size: cover;
-      position: relative;
-      .bottom{
-        position: absolute;
-        bottom: 0;
-        width: 300px;
-        text-align: left;
-        line-height: 88px;
-        border-radius: 0 0 24px 24px;
-        background: linear-gradient(180deg, rgba(255, 94, 16, 0) 0%, #3C80FF  100%);
-        p{
-          margin-left: 24px;
-          font-size: 28px;
-          font-weight: bold;
-          color: #FFFFFF;
-        }
-      }
-    }
-  }
-
-  .product1 {
-    text-align: left;
-    color: #fff;
-    width: auto;
-    height: 510px;
-    background-color: #fff;
-    border-radius: 24px;
-    background: linear-gradient(135deg, #0C1F40 0%, #252734 98%);
-    padding: 40px;
-
-    .pro1_1 {
-      width: 46px;
-      height: 48px;
-      margin-bottom: 46px;
-    }
-
-    .pro1_1_s {
-      padding-bottom: 50px;
-      gap: 12px;
-      color: #FFFFFF;
-      font-weight: bold;
-      font-size: 24px;
-
-      .pro1_1_s_b {
-        color: #FFFFFF;
-        font-size: 14px;
-        border-radius: 4px;
-        border: 0.5px solid #FFFFFF;
-        padding: 4px 10px;
-      }
-    }
-
-    .pro1_2 {
-      gap: 12px;
-      padding-bottom: 30px;
-
-      .pro1_2_i {
-        width: 16px;
-        height: 16px;
-      }
-    }
-
-    .pro3 {
-      padding-top: 35px;
-      gap: 30px;
-
-      .pro3_btn {
-        flex: 1;
-        padding: 20px 0;
-        justify-content: center;
-        background-color: #fff;
-        border-radius: 4px;
-        color: #333;
-        font-weight: bold;
-        font-size: 18px;
-      }
-
-      .pro3_btn.p3b {
-        background-color: transparent;
-        border: 1px solid #fff;
-        color: #fff;
-      }
-    }
-  }
-
-  .product2Out {
-    padding-bottom: 0;
-    height: 220px;
-    justify-content: center;
-    background-image: url('@/assets/software/downloadBG.png');
-    background-size: 100% 100%;
-
-    .product2Out_it {
-      opacity: 1;
-      color: #333333;
-      font-size: 16px;
-
-      .pro2o_l {
-        padding-left: 12px;
-        width: 600px;
-        height: 54px;
-        background-color: #F0F0F0;
-
-        .pro2o_l_l {
-          width: 34px;
-          height: 34px;
-          margin-right: 12px;
-        }
-      }
-
-      .pro2o_2 {
-        cursor: pointer;
-        width: 100px;
-        line-height: 54px;
-        color: #fff;
-        height: 54px;
-        background-color: #2278FF;
-      }
-    }
-  }
-
-  .product3Out.productImg {
-    height: initial;
-    margin-bottom: 60px;
-    padding: 40px;
-    border-radius: 24px;
-    background: linear-gradient(180deg, #FEF9F6 0%, #FFFFFF 100%);
-    border: 1px solid #001F5019;
-
-    .p3Box {
-      justify-content: space-between;
-
-      .p3 {
-        width: 358px;
-        height: 170px;
-      }
-    }
-
-    .p3_title {
-      padding-top: 40px;
-      text-align: left;
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .ps_desc {
-      padding-top: 16px;
-      padding-left: 60px;
-      width: 900px;
-      color: #3D3D3D;
-      font-size: 20px;
-      text-align: left;
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: 40px;
-        top: 26px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: #333;
-      }
-    }
-  }
-
-  .p4Out {
-    width: auto;
-    height: 870px;
-  }
-
-  .p5Out {
-    flex-wrap: wrap;
-    gap: 40px;
-
-    .p5Item {
-      padding: 50px 0;
-      flex-direction: column;
-      border-radius: 40px;
-      background: #FFFFFF;
-      box-shadow: 0px 0px 48px 0px #07005714;
-      width: 300px;
-      height: 300px;
-      flex-shrink: 0;
-      gap: 10px;
-      position: relative;
-    }
-
-    .p5Iimg {
-      width: 110px;
-      height: 110px;
-    }
-
-    .p5t {
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .p5d {
-      color: #717781;
-      font-size: 14px;
-    }
-
-    .proCode {
-      width: 70px;
-      height: 70px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      border-radius: 0px 0px 0px 0px;
-    }
-  }
-}
-
-.proTitleBox {
+.feature-icon-wrapper {
+  width: 65px;
+  height: 65px;
+  background: linear-gradient(135deg, rgba(0, 184, 148, 0.15) 0%, rgba(0, 206, 201, 0.15) 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  color: #333333;
-  font-weight: bold;
-  font-size: 54px;
-  line-height: 82px;
-  padding-bottom: 100px;
+  margin-bottom: 25px;
 }
 
-.approval_bg {
-  width: 100%;
-  height: auto;
+.feature-icon {
+  font-size: 28px;
 }
 
-.approval_c1 {
-  width: 734px;
-  height: auto;
+.feature-item h3 {
+  font-size: 22px;
+  color: #2d3436;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
-.approval_c2 {
-  width: 702px;
-  height: auto;
+.feature-item p {
+  color: #636e72;
+  font-size: 15px;
+  line-height: 1.8;
 }
 
-.approval_c3 {
-  width: 587px;
-  height: auto;
+/* 产品展示 */
+.products {
+  padding: 100px 40px;
+  background: #f8fafc;
 }
 
-.approval_c5 {
-  width: 634px;
-  height: auto;
+.products-container {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.approval_c6 {
-  width: 602px;
-  height: auto;
+.product-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.product-tab {
+  background: white;
+  color: #636e72;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  border: 1px solid #dfe6e9;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.product-tab.active,
+.product-tab:hover {
+  background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s;
+}
+
+.product-card:hover {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+}
+
+.product-image {
+  height: 220px;
+  background: linear-gradient(135deg, #e8f8f5 0%, #d1f2eb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+}
+
+.product-info {
+  padding: 30px;
+}
+
+.product-badge {
+  background: rgba(0, 184, 148, 0.1);
+  color: #00b894;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.product-info h3 {
+  font-size: 20px;
+  color: #2d3436;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.product-info p {
+  color: #636e72;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.product-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #dfe6e9;
+}
+
+.spec-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #636e72;
+}
+
+.spec-item span {
+  color: #00b894;
+  font-weight: 600;
+}
+
+/* 应用领域 */
+.applications {
+  padding: 100px 40px;
+  background: white;
+}
+
+.applications-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.application-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.application-card {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 35px 25px;
+  text-align: center;
+  transition: all 0.4s;
+  border: 1px solid transparent;
+}
+
+.application-card:hover {
+  background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+  transform: translateY(-10px);
+}
+
+.application-card:hover .app-icon {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.application-card:hover .app-title {
+  color: white;
+}
+
+.application-card:hover .app-desc {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.app-icon {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 26px;
+  transition: all 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.app-title {
+  font-size: 18px;
+  color: #2d3436;
+  margin-bottom: 10px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.app-desc {
+  color: #636e72;
+  font-size: 13px;
+  line-height: 1.6;
+  transition: color 0.3s;
+}
+
+/* 技术参数 */
+.specs {
+  padding: 100px 40px;
+  background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
+}
+
+.specs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.specs-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.specs-header h2 {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.specs-header p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.specs-table {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.specs-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 22px 35px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.specs-row:last-child {
+  border-bottom: none;
+}
+
+.specs-row:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.spec-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+}
+
+.spec-value {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.spec-value span {
+  color: #00cec9;
+}
+
+/* CTA区域 */
+.cta-section {
+  padding: 120px 40px;
+  text-align: center;
+  background: linear-gradient(135deg, #e8f8f5 0%, #d1f2eb 100%);
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 42px;
+  color: #2d3436;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta-content p {
+  color: #636e72;
+  font-size: 18px;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.cta-btn-primary {
+  background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+  color: white;
+  padding: 18px 50px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 184, 148, 0.35);
+}
+
+.cta-btn-secondary {
+  background: white;
+  color: #2d3436;
+  padding: 18px 50px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  border: 2px solid #dfe6e9;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.cta-btn-secondary:hover {
+  border-color: #00b894;
+  color: #00b894;
+}
+
+/* 页脚 */
+.footer {
+  background: #2d3436;
+  padding: 60px 40px 30px;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.footer-brand h3 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.footer-brand p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 320px;
+}
+
+.footer-links h4 {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 22px;
+  font-weight: 600;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 14px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #00cec9;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-badges {
+    justify-content: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .application-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-tabs {
+    flex-direction: column;
+  }
+
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+
+  .application-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .specs-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
