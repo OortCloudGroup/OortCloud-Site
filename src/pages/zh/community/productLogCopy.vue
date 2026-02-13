@@ -267,13 +267,13 @@ onMounted(async() => {
 }
 
 .title {
-  font-size: 48px;
+  font-size: 64px;
   font-weight: 700;
   color: #fff;
 }
 
 .subTile {
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 400;
   color: #fff;
   margin-top: 8px;
@@ -312,7 +312,7 @@ onMounted(async() => {
 
 /* 主容器 */
 .main_body {
-  max-width: 1200px;
+  max-width: 1400px;
   width: 80%;
   margin: 0 auto;
   min-height: 100vh;
@@ -335,7 +335,7 @@ onMounted(async() => {
 }
 
 .sidebar-title {
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 600;
   color: #1A1A2E;
   margin-bottom: 16px;
@@ -399,14 +399,14 @@ onMounted(async() => {
 .release-version-node {
   font-weight: 500;
   color: #1A1A2E;
-  font-size: 20px;
+  font-size: 26px;
   letter-spacing: 0.2px;
 }
 
 .code-version-node {
   font-weight: 400;
   color: #6B7280;
-  font-size: 19px;
+  font-size: 25px;
 }
 
 .tree-node-item.active .release-version-node,
@@ -425,7 +425,7 @@ onMounted(async() => {
 
 .container {
   width: 100%;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -459,7 +459,7 @@ onMounted(async() => {
 }
 
 .date-text {
-  font-size: 21px;
+  font-size: 27px;
   font-weight: 500;
   color: #1A1A2E;
   line-height: 1.5;
@@ -483,7 +483,7 @@ onMounted(async() => {
 }
 
 .version-text {
-  font-size: 19px;
+  font-size: 25px;
   font-weight: 500;
   color: #059669;
 }
@@ -499,7 +499,7 @@ onMounted(async() => {
 }
 
 .release-text {
-  font-size: 20px;
+  font-size: 26px;
   font-weight: 600;
   color: #FFFFFF;
   letter-spacing: 0.3px;
@@ -513,14 +513,14 @@ onMounted(async() => {
 }
 
 .service-title {
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 600;
   color: #000000;
   margin-bottom: 4px;
 }
 
 .update-title {
-  font-size: 20px;
+  font-size: 26px;
   font-weight: 400;
   color: #666666;
   margin-bottom: 6px;
@@ -544,12 +544,12 @@ onMounted(async() => {
   height: 6px;
   background-color: #9CA3AF;
   border-radius: 50%;
-  margin-top: 8px;
+  margin-top: 27px;
   flex-shrink: 0;
 }
 
 .content-text {
-  font-size: 20px;
+  font-size: 30px !important;
   font-weight: 400;
   color: #4B5563;
   line-height: 1.7;

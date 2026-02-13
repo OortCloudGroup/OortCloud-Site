@@ -1,718 +1,945 @@
 <template>
-  <div class="home_page vls">
-    <div class="platTop w1380">
-      <div class="VLStream">
-        来访预约
-      </div>
-      <div class="plat_cent">
-        预约先行筑规范，来访管控更高效
-      </div>
-      <div class="flexRowAC useBox">
-        <div class="seeMore">
-          立即试用
-        </div>
-        <div class="seeMore u3">
-          立即购买
-        </div>
-        <div class="seeMore u1">
-          安排演示
+  <div class="visitor-booking">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1>来访预约系统<br /><span class="gradient">智能接待新体验</span></h1>
+          <p>融合在线预约、快速登记、智能识别、访客管理等功能，打造全方位来访<br />预约解决方案，让预约更便捷，让接待更高效，让管理更规范。</p>
         </div>
       </div>
-    </div>
-    <div class="w1380 webBottomImg">
-      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
-    </div>
-    <div class="w1380 CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          多渠道预约
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <div class="features-container">
+        <div class="features-header">
+          <h2>核心功能特色</h2>
+          <p>全方位来访预约解决方案，让接待更高效</p>
         </div>
-        <div class="cl_d">
-          开通线上（微信小程序、APP、官网表单、电话）、线下（前台登记处）双渠道预约，适配不同来访人群需求；线上预约支持填写来访人信息、随行人员、来访时间、来访事由、对接人等核心内容，可上传身份证明、邀请函等附件，线下由工作人员协助录入，确保预约信息完整
-        </div>
-      </div>
-      <img class="approval_c1" src="@/assets/software/approval_c1.png" alt="" />
-    </div>
-    <div class="w1380 CloudBox ipcView  flexRowAC">
-      <img class="approval_c2" src="@/assets/software/approval_c2.png" alt="" />
-      <div class="CloudL" style="text-align: left">
-        <div class="cl_t">
-          分级审批流程
-        </div>
-        <div class="cl_d">
-          根据来访类型、来访对象、对接部门设定分级审批机制，如普通商务来访由对接人审批，重要公务来访需部门负责人审批，参观考察需分管领导审批；审批人可在线查看预约信息、附件材料，快速通过或驳回，驳回需注明原因，实现审批流程闭环
-        </div>
-      </div>
-    </div>
-    <div class="w1380 ipcView CloudBox flexRowAC">
-      <div class="CloudL">
-        <div class="cl_t">
-          来访准入管控
-        </div>
-        <div class="cl_d">
-          前台核验通过后，为来访人发放临时通行凭证（访客证、临时门禁卡），明确通行范围与有效时长；严禁无预约、信息不符、携带危险品的人员进入，对临时新增随行人员需重新补录信息并核验，严控准入风险
-        </div>
-      </div>
-      <img class="approval_c3" src="@/assets/software/approval_c3.png" alt="" />
-    </div>
-    <!-- 成功案例 -->
-    <div class="productBox w1380">
-      <div class="proT">
-        成功案例
-      </div>
-      <div class="productImg p5Out flexRowAC">
-        <div class="item img1">
-          <div class="bottom">
-            <p>城市风光</p>
-          </div>
-        </div>
-        <div class="item img2">
-          <div class="bottom">
-            <p>专业服务</p>
-          </div>
-        </div>
-        <div class="item img3">
-          <div class="bottom">
-            <p>教育机构</p>
-          </div>
-        </div>
-        <div class="item img4">
-          <div class="bottom">
-            <p>精准分析</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="productBox w1380">
-      <div class="proT">
-        现在开始体验
-      </div>
-      <div class="flexRowAC productItem">
-        <div class="productImg productItem1 product1">
-          <img class="pro1_1" src="@/assets/software/down1_.png" alt="" />
-          <div class="pro1_1_s flexRowAC">
-            SaaS版本
-            <span class="pro1_1_s_b">14天功能全免费试用</span>
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            7天快速迭代，问题敏捷解决
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            快速启用，精简运维
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            更低建设成本
-          </div>
-          <div class="pro3 flexRowAC">
-            <div class="pro3_btn flexRowAC">
-              申请试用
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon-box">
+              📱
             </div>
-            <div class="pro3_btn p3b flexRowAC">
-              详细功能
+            <h3>在线预约</h3>
+            <p>支持手机、电脑多端预约，一键提交，方便快捷。</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon-box">
+              🎯
             </div>
+            <h3>智能审核</h3>
+            <p>AI智能算法自动审核，提高审批效率。</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon-box">
+              📊
+            </div>
+            <h3>快速登记</h3>
+            <p>二维码快速签到，电子通行证，减少等待时间。</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon-box">
+              🔐
+            </div>
+            <h3>身份识别</h3>
+            <p>人脸识别、身份证识别，确保访客身份准确。</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon-box">
+              ⭐
+            </div>
+            <h3>访客管理</h3>
+            <p>访客信息管理、历史记录、黑名单管理。</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon-box">
+              📈
+            </div>
+            <h3>数据分析</h3>
+            <p>预约数据统计分析，为管理决策提供支撑。</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon-box">
+              🔔
+            </div>
+            <h3>消息提醒</h3>
+            <p>智能消息推送，及时通知预约状态和提醒。</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon-box">
+              🚪
+            </div>
+            <h3>门禁集成</h3>
+            <p>与门禁系统集成，自动授权访客通行权限。</p>
           </div>
         </div>
-        <div class="productImg productItem1 product1">
-          <img class="pro1_1" src="@/assets/software/down1.png" alt="" />
-          <div class="pro1_1_s flexRowAC">
-            私有化部署
-            <span class="pro1_1_s_b">1v1 定制方案量身打造</span>
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            1v1 专家服务，定制化解决方案
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            本地化灵活部署，私有化数据存储
-          </div>
-          <div class="pro1_2 flexRowAC">
-            <img class="pro1_2_i" src="@/assets/software/down2.png" alt="" />
-            高可用架构与完备容灾方案
-          </div>
-          <div class="pro3 flexRowAC">
-            <div class="pro3_btn flexRowAC">
-              申请试用
+      </div>
+    </section>
+
+    <!-- Booking Types Section -->
+    <section id="types" class="booking-types">
+      <div class="booking-container">
+        <div class="booking-header">
+          <h2>预约类型</h2>
+          <p>覆盖多种来访场景，满足不同需求</p>
+        </div>
+        <div class="booking-types-grid">
+          <div class="booking-type-item">
+            <div class="booking-type-icon">
+              💼
             </div>
-            <div class="pro3_btn p3b flexRowAC">
-              详细功能
+            <div class="booking-type-name">
+              商务洽谈
+            </div>
+            <div class="booking-type-desc">
+              客户拜访、商务合作洽谈
+            </div>
+            <div class="booking-type-stats">
+              <div class="booking-type-stat">
+                <div class="booking-stat-num">
+                  65
+                </div>
+                <div class="booking-stat-text">
+                  今日预约
+                </div>
+              </div>
+              <div class="booking-type-stat">
+                <div class="booking-stat-num">
+                  90%
+                </div>
+                <div class="booking-stat-text">
+                  审核通过
+                </div>
+              </div>
             </div>
           </div>
+          <div class="booking-type-item">
+            <div class="booking-type-icon">
+              👔
+            </div>
+            <div class="booking-type-name">
+              面试交流
+            </div>
+            <div class="booking-type-desc">
+              人才面试、岗位交流
+            </div>
+            <div class="booking-type-stats">
+              <div class="booking-type-stat">
+                <div class="booking-stat-num">
+                  38
+                </div>
+                <div class="booking-stat-text">
+                  今日预约
+                </div>
+              </div>
+              <div class="booking-type-stat">
+                <div class="booking-stat-num">
+                  95%
+                </div>
+                <div class="booking-stat-text">
+                  审核通过
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="booking-type-item">
+            <div class="booking-type-icon">
+              🎓
+            </div>
+            <div class="booking-type-name">
+              技术交流
+            </div>
+            <div class="booking-type-desc">
+              技术研讨、项目交流
+            </div>
+            <div class="booking-type-stats">
+              <div class="booking-type-stat">
+                <div class="booking-stat-num">
+                  42
+                </div>
+                <div class="booking-stat-text">
+                  今日预约
+                </div>
+              </div>
+              <div class="booking-type-stat">
+                <div class="booking-stat-num">
+                  88%
+                </div>
+                <div class="booking-stat-text">
+                  审核通过
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="booking-type-item">
+            <div class="booking-type-icon">
+              👀
+            </div>
+            <div class="booking-type-name">
+              参观考察
+            </div>
+            <div class="booking-type-desc">
+              园区参观、实地考察
+            </div>
+            <div class="booking-type-stats">
+              <div class="booking-type-stat">
+                <div class="booking-stat-num">
+                  41
+                </div>
+                <div class="booking-stat-text">
+                  今日预约
+                </div>
+              </div>
+              <div class="booking-type-stat">
+                <div class="booking-stat-num">
+                  92%
+                </div>
+                <div class="booking-stat-text">
+                  审核通过
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <!--资料下载-->
-    <div class="productBox w1380">
-      <div class="proT">
-        资料下载
-      </div>
-      <div class="productImg product2Out flexRowAC">
-        <div class="product2Out_it flexRowAC">
-          <div class="pro2o_l flexRowAC">
-            <img class="pro2o_l_l" src="@/assets/software/down3.png" alt="" />
-            产品文档.pdf
-          </div>
-          <div class="pro2o_2" @click="downloadPDF">
-            下载
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import product5_1 from '@/assets/VLimg2.0/product5_1.png'
-import product5_2 from '@/assets/VLimg2.0/product5_2.png'
-import product5_3 from '@/assets/VLimg2.0/product5_3.png'
-import product5_4 from '@/assets/VLimg2.0/product5_4.png'
-import product5_5 from '@/assets/VLimg2.0/product5_5.png'
-import product5_6 from '@/assets/VLimg2.0/product5_6.png'
-import product5_7 from '@/assets/VLimg2.0/product5_7.png'
 definePageMeta({
   layout: 'site-new'
 })
-
-const downloadPDF = () => {
-  const link = document.createElement('a')
-  link.href = '/documents/产品文档.pdf'
-  link.download = '产品文档.pdf'
-  link.click()
-}
-
-let p5Arr = ref([])
-p5Arr.value = [
-  { t: 'Windows', d: '版本号：V3.1.06', flag: false, img: product5_1 },
-  { t: 'Android', d: '版本号：V3.1.06', flag: true, img: product5_2 },
-  { t: 'iOS', d: '版本号：V3.1.06', flag: true, img: product5_3 },
-  { t: 'Harmony OS', d: '版本号：V3.1.06', flag: true, img: product5_4 },
-  { t: 'Linux', d: '版本号：V3.1.06', flag: false, img: product5_5 },
-  { t: 'Mac OS', d: '版本号：V3.1.06', flag: false, img: product5_6 },
-  { t: '银河麒麟', d: '版本号：V3.1.06', flag: false, img: product5_7 }
-]
 </script>
 
-<style scoped lang="scss">
+<style scoped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.home_page {
+body {
+  font-family: 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background-color: #fce7f3;
+}
+
+/* 导航栏 */
+.navbar {
+  background: white;
+  padding: 0 35px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.logo-text {
+  color: #1f2937;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.logo-text span {
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 38px;
+}
+
+.nav-menu a {
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s;
   position: relative;
 }
 
-.home_page.vls {
-  background-color: #fff;
+.nav-menu a:hover {
+  color: #ec4899;
 }
 
-.w1380 {
-  width: 1380px;
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -26px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #ec4899, #db2777);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.nav-menu a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-right {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.nav-btn {
+  padding: 10px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.nav-btn-ghost {
+  color: #4b5563;
+}
+
+.nav-btn-ghost:hover {
+  color: #ec4899;
+  background: #fce7f3;
+}
+
+.nav-btn-primary {
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  color: white;
+}
+
+.nav-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(236, 72, 153, 0.3);
+}
+
+/* Hero Section */
+.hero {
+  padding: 150px 35px 120px;
+  background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  left: -150px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(219, 39, 119, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  padding-right: 30px;
+}
+
+.hero-badges {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.hero-badge {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(219, 39, 119, 0.15) 100%);
+  color: #ec4899;
+  padding: 7px 18px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero-badge.pink {
+  color: #db2777;
+}
+
+.hero h1 {
+  font-size: 52px;
+  line-height: 1.15;
+  margin-bottom: 25px;
+  color: #1f2937;
+  font-weight: 900;
+}
+
+.hero h1 .gradient {
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #6b7280;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.hero-metric {
+  background: white;
+  border-radius: 16px;
+  padding: 22px 18px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f3f4f6;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.hero-metric:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(236, 72, 153, 0.15);
+}
+
+.hero-metric-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  font-size: 22px;
+}
+
+.hero-metric-number {
+  font-size: 26px;
+  font-weight: 800;
+  color: #ec4899;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.hero-metric-label {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  padding: 16px 38px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-btn-primary {
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  color: white;
+  box-shadow: 0 6px 20px rgba(236, 72, 153, 0.3);
+}
+
+.hero-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(236, 72, 153, 0.4);
+}
+
+.hero-btn-secondary {
+  background: white;
+  color: #4b5563;
+  border: 2px solid #e5e7eb;
+}
+
+.hero-btn-secondary:hover {
+  border-color: #ec4899;
+  color: #ec4899;
+}
+
+.hero-visual {
+  position: relative;
+}
+
+.hero-calendar {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  border: 1px solid #f3f4f6;
+}
+
+.calendar-header {
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calendar-title {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.calendar-status {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.calendar-body {
+  padding: 25px;
+  background: #fafafa;
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.booking-card {
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  border: 1px solid #f3f4f6;
+  transition: all 0.3s;
+}
+
+.booking-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-color: transparent;
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.booking-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.booking-status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
+}
+
+.booking-status.pending {
+  background: #f59e0b;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
+}
+
+.booking-status.checkin {
+  background: #3b82f6;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+.booking-info {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.booking-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.calendar-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.calendar-stat {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  border: 1px solid #f3f4f6;
+}
+
+.calendar-stat-number {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ec4899;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.calendar-stat-label {
+  font-size: 11px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Features Section */
+.features {
+  padding: 110px 35px;
+  background: white;
+}
+
+.features-container {
+  max-width: 1400px;
   margin: 0 auto;
 }
 
-// 查看更多
-//.seeMore {
-//  display: inline-block;
-//  padding: 24px 50px;
-//  color: #fff;
-//  border: 1px solid #2278FF;
-//  border-radius: 8px;
-//  background: #2278FF;
-//  box-shadow: 0px 4px 10px 0px #FF5E1033;
-//  font-weight: bold;
-//  font-size: 18px;
-//}
-
-.platTop {
+.features-header {
   text-align: center;
-  padding: 110px 0;
-
-  .plat {
-    display: inline-block;
-    padding: 12px 24px;
-    color: #2278FF;
-    font-size: 18px;
-    border-radius: 18px;
-    border: 1px solid #E9E9E9;
-  }
-
-  .VLStream {
-    color: #333333;
-    font-weight: bold;
-    font-size: 78px;
-    padding: 8px 0;
-    position: relative;
-
-    .VLStream_img {
-      width: 222px;
-      height: 222px;
-      position: absolute;
-      right: 336px;
-      top: -50px;
-    }
-  }
-
-  .plat_a {
-    color: #333333;
-    font-weight: bold;
-    font-size: 58px;
-  }
-
-  .plat_cent {
-    padding: 20px 0 50px;
-    color: #717781;
-    font-size: 18px;
-  }
-
-  .useBox {
-    justify-content: center;
-    gap: 20px;
-
-    .seeMore {
-      padding: 24px 50px;
-      color: #fff;
-      border: 1px solid #2278FF;
-      border-radius: 8px;
-      background: #2278FF;
-      //box-shadow: 0px 4px 10px 0px #FF5E1033;
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    .u1 {
-      color: #333;
-      background-color: #F4F4F4;
-      border: 1px solid #F4F4F4;
-    }
-
-    .u3{
-      border-radius: 8px;
-      border: 1px solid #ED2121;
-      color: #ED2121;
-      font-weight: bold;
-      font-size: 18px;
-      background: #fff;
-    }
-
-    .seeMore.u2 {
-      display: flex;
-      gap: 10px;
-      border: 1px solid #333;
-      background-color: #333;
-
-      .u2_img {
-        width: 28px;
-        height: 26px;
-      }
-    }
-  }
+  margin-bottom: 75px;
 }
 
-.WebRTC {
-  gap: 24px;
-  padding-bottom: 80px;
-  animation: scroll 35s linear infinite;
-
-  .webItem {
-    width: auto;
-    height: 120px;
-    border-radius: 16px;
-    background: #E8F7FC;
-    color: #5C6C00;
-    gap: 14px;
-    flex-wrap: nowrap;
-  }
+.features-header h2 {
+  font-size: 42px;
+  color: #1f2937;
+  margin-bottom: 16px;
+  font-weight: 900;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.features-header p {
+  color: #6b7280;
+  font-size: 18px;
+  max-width: 650px;
+  margin: 0 auto;
 }
 
-.webBottomImg {
-  padding: 70px 0 110px;
-  height: initial;
-
-  .wBImg {
-    width: 100%;
-    height: initial;
-    border-radius: 24px;
-  }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
 }
 
-.CloudBox {
-  padding-bottom: 100px;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  .cl_t {
-    padding-top: 30px;
-    padding-bottom: 40px;
-    color: #333333;
-    font-weight: bold;
-    font-size: 54px;
-    line-height: 82px;
-  }
-
-  .cl_d {
-    padding-bottom: 24px;
-    color: #717781;
-    font-size: 20px;
-  }
-
-  .CloudL {
-    width: 500px;
-  }
-
-  .CloudR {
-    width: 700px;
-    height: auto;
-
-    .CloudRImg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .CloudR2 {
-    width: 700px;
-    height: 700px;
-  }
+.feature-box {
+  background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+  border-radius: 20px;
+  padding: 38px 28px;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
 }
 
-.ipcBox.CloudBox {
-  padding-bottom: 120px;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  .CloudL {
-    width: 450px;
-    text-align: right;
-    padding-top: 60px;
-  }
-}
-
-.ipcView.CloudBox {
-  .CloudR {
-    height: 460px;
-  }
-}
-
-.productBox {
-  text-align: center;
-  padding-bottom: 140px;
-
-  .productItem {
-    gap: 20px;
-
-    .productItem1 {
-      flex: 1;
-
-      &:nth-child(1) {
-        background: #2278FF;
-
-        .pro3_btn {
-          color: #2278FF;
-        }
-      }
-    }
-  }
-
-  .proT {
-    padding-bottom: 60px;
-    color: #3D3D3D;
-    font-weight: bold;
-    font-size: 58px;
-  }
-
-  .prod {
-    padding-bottom: 60px;
-    color: #717781;
-    font-size: 20px;
-  }
-
-  .productImg {
-    width: 100%;
-    height: 300px;
-
-    .proImg {
-      width: 100%;
-      height: 100%;
-    }
-
-    .img1{
-      background: url('@/assets/VLimg2.0/jyjg1.png');
-    }
-    .img2{
-      background: url('@/assets/VLimg2.0/jyjg2.png');
-    }
-    .img3{
-      background: url('@/assets/VLimg2.0/jyjg3.png');
-    }
-    .img4{
-      background: url('@/assets/VLimg2.0/jyjg4.png');
-    }
-    .item{
-      width: 300px;
-      height: 300px;
-      background-size: cover;
-      position: relative;
-      .bottom{
-        position: absolute;
-        bottom: 0;
-        width: 300px;
-        text-align: left;
-        line-height: 88px;
-        border-radius: 0 0 24px 24px;
-        background: linear-gradient(180deg, rgba(255, 94, 16, 0) 0%, #3C80FF  100%);
-        p{
-          margin-left: 24px;
-          font-size: 28px;
-          font-weight: bold;
-          color: #FFFFFF;
-        }
-      }
-    }
-  }
-
-  .product1 {
-    text-align: left;
-    color: #fff;
-    width: auto;
-    height: 510px;
-    background-color: #fff;
-    border-radius: 24px;
-    background: linear-gradient(135deg, #0C1F40 0%, #252734 98%);
-    padding: 40px;
-
-    .pro1_1 {
-      width: 46px;
-      height: 48px;
-      margin-bottom: 46px;
-    }
-
-    .pro1_1_s {
-      padding-bottom: 50px;
-      gap: 12px;
-      color: #FFFFFF;
-      font-weight: bold;
-      font-size: 24px;
-
-      .pro1_1_s_b {
-        color: #FFFFFF;
-        font-size: 14px;
-        border-radius: 4px;
-        border: 0.5px solid #FFFFFF;
-        padding: 4px 10px;
-      }
-    }
-
-    .pro1_2 {
-      gap: 12px;
-      padding-bottom: 30px;
-
-      .pro1_2_i {
-        width: 16px;
-        height: 16px;
-      }
-    }
-
-    .pro3 {
-      padding-top: 35px;
-      gap: 30px;
-
-      .pro3_btn {
-        flex: 1;
-        padding: 20px 0;
-        justify-content: center;
-        background-color: #fff;
-        border-radius: 4px;
-        color: #333;
-        font-weight: bold;
-        font-size: 18px;
-      }
-
-      .pro3_btn.p3b {
-        background-color: transparent;
-        border: 1px solid #fff;
-        color: #fff;
-      }
-    }
-  }
-
-  .product2Out {
-    padding-bottom: 0;
-    height: 220px;
-    justify-content: center;
-    background-image: url('@/assets/software/downloadBG.png');
-    background-size: 100% 100%;
-
-    .product2Out_it {
-      opacity: 1;
-      color: #333333;
-      font-size: 16px;
-
-      .pro2o_l {
-        padding-left: 12px;
-        width: 600px;
-        height: 54px;
-        background-color: #F0F0F0;
-
-        .pro2o_l_l {
-          width: 34px;
-          height: 34px;
-          margin-right: 12px;
-        }
-      }
-
-      .pro2o_2 {
-        cursor: pointer;
-        width: 100px;
-        line-height: 54px;
-        color: #fff;
-        height: 54px;
-        background-color: #2278FF;
-      }
-    }
-  }
-
-  .product3Out.productImg {
-    height: initial;
-    margin-bottom: 60px;
-    padding: 40px;
-    border-radius: 24px;
-    background: linear-gradient(180deg, #FEF9F6 0%, #FFFFFF 100%);
-    border: 1px solid #001F5019;
-
-    .p3Box {
-      justify-content: space-between;
-
-      .p3 {
-        width: 358px;
-        height: 170px;
-      }
-    }
-
-    .p3_title {
-      padding-top: 40px;
-      text-align: left;
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .ps_desc {
-      padding-top: 16px;
-      padding-left: 60px;
-      width: 900px;
-      color: #3D3D3D;
-      font-size: 20px;
-      text-align: left;
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: 40px;
-        top: 26px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: #333;
-      }
-    }
-  }
-
-  .p4Out {
-    width: auto;
-    height: 870px;
-  }
-
-  .p5Out {
-    flex-wrap: wrap;
-    gap: 40px;
-
-    .p5Item {
-      padding: 50px 0;
-      flex-direction: column;
-      border-radius: 40px;
-      background: #FFFFFF;
-      box-shadow: 0px 0px 48px 0px #07005714;
-      width: 300px;
-      height: 300px;
-      flex-shrink: 0;
-      gap: 10px;
-      position: relative;
-    }
-
-    .p5Iimg {
-      width: 110px;
-      height: 110px;
-    }
-
-    .p5t {
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .p5d {
-      color: #717781;
-      font-size: 14px;
-    }
-
-    .proCode {
-      width: 70px;
-      height: 70px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      border-radius: 0px 0px 0px 0px;
-    }
-  }
-}
-
-.proTitleBox {
-  justify-content: center;
-  color: #333333;
-  font-weight: bold;
-  font-size: 54px;
-  line-height: 82px;
-  padding-bottom: 100px;
-}
-
-.approval_bg {
+.feature-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
+  height: 5px;
+  background: linear-gradient(90deg, #ec4899, #db2777);
+  transform: scaleX(0);
+  transition: transform 0.4s;
 }
 
-.approval_c1 {
-  width: 734px;
-  height: auto;
+.feature-box:hover {
+  background: white;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
 }
 
-.approval_c2 {
-  width: 702px;
-  height: auto;
+.feature-box:hover::before {
+  transform: scaleX(1);
 }
 
-.approval_c3 {
-  width: 587px;
-  height: auto;
+.feature-icon-box {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  font-size: 28px;
 }
 
-.approval_c5 {
-  width: 634px;
-  height: auto;
+.feature-box h3 {
+  font-size: 19px;
+  color: #1f2937;
+  margin-bottom: 12px;
+  font-weight: 800;
 }
 
-.approval_c6 {
-  width: 602px;
-  height: auto;
+.feature-box p {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Booking Types Section */
+.booking-types {
+  padding: 110px 35px;
+  background: linear-gradient(180deg, #fafafa 0%, white 100%);
+}
+
+.booking-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.booking-header {
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+.booking-header h2 {
+  font-size: 42px;
+  color: #1f2937;
+  margin-bottom: 16px;
+  font-weight: 900;
+}
+
+.booking-header p {
+  color: #6b7280;
+  font-size: 18px;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.booking-types-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.booking-type-item {
+  background: white;
+  border-radius: 20px;
+  padding: 28px 24px;
+  border: 1px solid #f3f4f6;
+  transition: all 0.4s;
+  text-align: center;
+}
+
+.booking-type-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  border-color: transparent;
+}
+
+.booking-type-icon {
+  height: 100px;
+  background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.booking-type-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.booking-type-desc {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.booking-type-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.booking-type-stat {
+  background: #fce7f3;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.booking-stat-num {
+  font-size: 20px;
+  font-weight: 800;
+  color: #ec4899;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.booking-stat-text {
+  font-size: 11px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.booking-type-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.booking-type-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.3);
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding-right: 0;
+  }
+
+  .hero-badges {
+    justify-content: center;
+  }
+
+  .hero-metrics {
+    justify-content: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking-types-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-right {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-types-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-footer {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
