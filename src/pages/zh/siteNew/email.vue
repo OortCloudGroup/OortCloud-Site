@@ -14,6 +14,10 @@
       </div>
     </section>
 
+    <div class="w1380">
+      <video class="wBImg" src="/documents/电子邮件.mp4" controls autoplay muted />
+    </div>
+
     <!-- 核心功能 -->
     <section id="features" class="features-section">
       <div class="section-container">
@@ -771,6 +775,16 @@ body {
 
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+}
+.w1380 {
+  width: 1380px;
+  margin: 0 auto;
+  margin-top: 100px;
+  .wBImg {
+    width: 100%;
+    height: initial;
+    border-radius: 24px;
   }
 }
 </style>

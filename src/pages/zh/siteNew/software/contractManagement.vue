@@ -23,7 +23,7 @@
       <img class="cloudAlbum_bg" src="@/assets/software/contractManagement/htgl_bg.png" alt="" />
     </div>
     <div class="w1380 webBottomImg">
-      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
+      <video class="wBImg" src="/documents/合同管理.mp4" controls autoplay muted />
     </div>
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">

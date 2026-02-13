@@ -23,7 +23,7 @@
       <img class="cloudAlbum_bg" src="@/assets/problemFeedback/cloudAlbum_bg.png" alt="" />
     </div>
     <div class="w1380 webBottomImg">
-      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
+      <video class="wBImg" src="/documents/云盘.mp4" controls autoplay muted />
     </div>
     <!--闪传-->
     <div class="productBox w1380">

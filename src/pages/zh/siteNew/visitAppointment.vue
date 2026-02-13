@@ -10,6 +10,10 @@
       </div>
     </section>
 
+    <div class="w1380">
+      <video class="wBImg" src="/documents/来访预约.mp4" controls autoplay muted />
+    </div>
+
     <!-- Features Section -->
     <section id="features" class="features">
       <div class="features-container">
@@ -940,6 +944,16 @@ body {
 
   .calendar-footer {
     grid-template-columns: 1fr;
+  }
+}
+.w1380 {
+  width: 1380px;
+  margin: 0 auto;
+  margin-top: 100px;
+  .wBImg {
+    width: 100%;
+    height: initial;
+    border-radius: 24px;
   }
 }
 </style>
