@@ -1,59 +1,89 @@
 <template>
   <div class="industryPage">
-    <div v-if="itemTemp==='行业' || itemTemp==='街道'" class="w1380 indT">
-      <div class="flexRowAC bb idtBox" @click="indClick('行业','/zh/siteNew','行业')">
-        <img class="idtImg" src="@/assets/homeImg/industry_i1.png" alt="" />行业
-      </div>
-      <div class="flexRowAC conBox">
-        <div v-for="(item,i) in idtArr1" :key="i" @click="indClick('行业', getIndustryPath(item), item)">
-          {{ item }}
-        </div>
-      </div>
-      <div class="flexRowAC bb idtBox">
-        <img class="idtImg" src="@/assets/homeImg/industry_i2.png" alt="" />职能
-      </div>
-      <div class="flexRowAC conBox">
-        <!-- 职能板块重构：使用v-for循环 + 点击事件 -->
-        <div v-for="(item,i) in functionArr" :key="i" @click="indClick('职能', getFunctionPath(item), item)">
-          {{ item }}
-        </div>
-      </div>
-      <div class="flexRowAC bb idtBox">
-        <img class="idtImg" src="@/assets/homeImg/industry_i3.png" alt="" />场景
-      </div>
-      <div class="flexRowAC conBox">
-        <div v-for="(item,i) in sceneArr" :key="i" @click="indClick('场景', getScenePath(item), item)">
-          {{ item }}
-        </div>
-      </div>
-    </div>
-    <div v-else class="w1380 appT flexRowAC">
-      <div v-for="(item,i) in idtArr" :key="i" class="appTItem">
+    <div v-if="itemTemp==='社区'" class="w1380 appT ">
+      <div v-for="(item,i) in idtArr2" :key="i" class="appTItem">
         <div class="flexRowAC bb idtBox">
           <img class="idtImg" :src="item.img" alt="" />{{ item.t }}
         </div>
-        <div v-for="(dd,tt) in item.d" :key="tt" class="appT_t" @click="softClick(dd)">
+        <div v-for="(dd,tt) in item.d" :key="tt" class="appT_t" @click="communityClick(dd.t)">
           {{ dd.t }}
         </div>
       </div>
+      <div class="idtBottomOut flexRowAC" style="flex-wrap: wrap;">
+        <div class="w1380 idtBottom flexRowAC gap50">
+          <a v-for="(i,index) in iconList" :key="index" :href="i.path" class="idtBox">
+            <img class="idtImg" :src="i.img" alt="" />
+          </a>
+        </div>
+        <div class="w1380 itemBottom flexRowAC">
+          <div class="item flexRowAC">
+            <img src="@/assets/homeImg/phone.png" alt="" />(+86)189 3808 3835
+          </div>
+          <div class="item flexRowAC">
+            <img src="@/assets/homeImg/wx.png" alt="" />WeChat 与我们联系
+          </div>
+          <div class="item flexRowAC">
+            <img src="@/assets/homeImg/ys.png" alt="" />获取演示
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="idtBottomOut flexRowAC">
-      <div class="w1380 idtBottom flexRowAC">
-        <a class="flexRowAC idtBox" href="https://www.oortcloudsmart.com/zh/siteNew/software/unLogin" target="_blank">
-          <img class="idtImg" src="@/assets/homeImg/industry_ic1.png" alt="" />第三方应用软件
-        </a>
-        <a class="flexRowAC idtBox" href="https://www.oortcloudsmart.com/zh/product_customizeApp/" target="_blank">
-          <img class="idtImg" src="@/assets/homeImg/industry_ic2.png" alt="" />OortCloud 定制
-        </a>
-        <a class="flexRowAC idtBox" href="https://sh.oortcloudsmart.com/" target="_blank">
-          <img class="idtImg" src="@/assets/homeImg/industry_ic3.png" alt="" />OORT.SH
-        </a>
-        <a class="flexRowAC idtBox" href="https://ai.oortcloudsmart.com/" target="_blank">
-          <img class="idtImg" src="@/assets/homeImg/industry_ic4.png" alt="" />OORT.AI
-        </a>
-        <a class="flexRowAC idtBox" href="https://da.oortcloudsmart.com/" target="_blank">
-          <img class="idtImg" src="@/assets/homeImg/industry_ic5.png" alt="" />VLStream
-        </a>
+    <div v-else>
+      <div v-if="itemTemp==='行业' || itemTemp==='街道'" class="w1380 indT">
+        <div class="flexRowAC bb idtBox" @click="indClick('行业','/zh/siteNew','行业')">
+          <img class="idtImg" src="@/assets/homeImg/industry_i1.png" alt="" />行业
+        </div>
+        <div class="flexRowAC conBox">
+          <div v-for="(item,i) in idtArr1" :key="i" @click="indClick('行业', getIndustryPath(item), item)">
+            {{ item }}
+          </div>
+        </div>
+        <div class="flexRowAC bb idtBox">
+          <img class="idtImg" src="@/assets/homeImg/industry_i2.png" alt="" />职能
+        </div>
+        <div class="flexRowAC conBox">
+          <!-- 职能板块重构：使用v-for循环 + 点击事件 -->
+          <div v-for="(item,i) in functionArr" :key="i" @click="indClick('职能', getFunctionPath(item), item)">
+            {{ item }}
+          </div>
+        </div>
+        <div class="flexRowAC bb idtBox">
+          <img class="idtImg" src="@/assets/homeImg/industry_i3.png" alt="" />场景
+        </div>
+        <div class="flexRowAC conBox">
+          <div v-for="(item,i) in sceneArr" :key="i" @click="indClick('场景', getScenePath(item), item)">
+            {{ item }}
+          </div>
+        </div>
+      </div>
+      <div v-else class="w1380 appT flexRowAC">
+        <div v-for="(item,i) in idtArr" :key="i" class="appTItem">
+          <div class="flexRowAC bb idtBox">
+            <img class="idtImg" :src="item.img" alt="" />{{ item.t }}
+          </div>
+          <div v-for="(dd,tt) in item.d" :key="tt" class="appT_t" @click="softClick(dd)">
+            {{ dd.t }}
+          </div>
+        </div>
+      </div>
+      <div class="idtBottomOut flexRowAC">
+        <div class="w1380 idtBottom flexRowAC">
+          <a class="flexRowAC idtBox" href="https://www.oortcloudsmart.com/zh/siteNew/software/unLogin" target="_blank">
+            <img class="idtImg" src="@/assets/homeImg/industry_ic1.png" alt="" />第三方应用软件
+          </a>
+          <a class="flexRowAC idtBox" href="https://www.oortcloudsmart.com/zh/product_customizeApp/" target="_blank">
+            <img class="idtImg" src="@/assets/homeImg/industry_ic2.png" alt="" />OortCloud 定制
+          </a>
+          <a class="flexRowAC idtBox" href="https://sh.oortcloudsmart.com/" target="_blank">
+            <img class="idtImg" src="@/assets/homeImg/industry_ic3.png" alt="" />OORT.SH
+          </a>
+          <a class="flexRowAC idtBox" href="https://ai.oortcloudsmart.com/" target="_blank">
+            <img class="idtImg" src="@/assets/homeImg/industry_ic4.png" alt="" />OORT.AI
+          </a>
+          <a class="flexRowAC idtBox" href="https://da.oortcloudsmart.com/" target="_blank">
+            <img class="idtImg" src="@/assets/homeImg/industry_ic5.png" alt="" />VLStream
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -61,6 +91,7 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue'
+import { useRouter } from 'vue-router'
 
 import industry_ti1 from '@/assets/homeImg/industry_ti1.png'
 import industry_ti2 from '@/assets/homeImg/industry_ti2.png'
@@ -70,15 +101,112 @@ import industry_ti5 from '@/assets/homeImg/industry_ti5.png'
 import industry_ti6 from '@/assets/homeImg/industry_ti6.png'
 import industry_ti7 from '@/assets/homeImg/industry_ti7.png'
 import industry_ti8 from '@/assets/homeImg/industry_ti8.png'
+import sp from '@/assets/homeImg/sp.png'
+import dy from '@/assets/homeImg/dy.png'
+import wb from '@/assets/homeImg/wb.png'
+import wx from '@/assets/homeImg/wx.png'
+import github from '@/assets/homeImg/github.png'
+import ins from '@/assets/homeImg/in.png'
+import tt from '@/assets/homeImg/tt.png'
+import zh from '@/assets/homeImg/zh.png'
 definePageMeta({
   layout: 'site-new'
 })
+const router = useRouter()
 const props = defineProps(['item'])
 const emits = defineEmits(['handle'])
 let itemTemp = ref('')
 let idtArr = ref([])
 let idtArr1 = ref([])
+let idtArr2 = ref([
+  {
+    t: '学习',
+    img: industry_ti1,
+    d: [
+      { t: '教学视频' },
+      { t: '文档' },
+      { t: '认证' },
+      { t: '培训' },
+      { t: '云备忘录' },
+      { t: '移动视频' }
+    ]
+  },
+  {
+    t: '获取软件',
+    img: industry_ti2,
+    d: [
+      { t: '下载' },
+      { t: '版本对比' },
+      { t: '发布' }
+    ]
+  },
+  {
+    t: '合作',
+    img: industry_ti3,
+    d: [
+      { t: 'GitHub' },
+      { t: '论坛' },
+      { t: '近期活动' },
+      { t: '成为合作伙伴' },
+      { t: '合作伙伴服务' }
+    ]
+  },
+  {
+    t: '获取服务',
+    img: industry_ti4,
+    d: [
+      { t: '寻找合作伙伴' },
+      { t: '预约顾问咨询' },
+      { t: '安装及推行服务' },
+      { t: '客户参考' },
+      { t: '支持' },
+      { t: '升级' }
+    ]
+  },
+  {
+    t: '赋能教育',
+    img: industry_ti5,
+    d: [
+      { t: '教育计划' },
+      { t: '参观OORT' }
+    ]
+  }
+])
+const iconList = ref([
+  {
+    img: sp,
+    path: ''
+  },
+  {
+    img: dy,
+    path: ''
+  },
+  {
+    img: wb,
+    path: ''
+  },
+  {
+    img: wx,
+    path: ''
+  },
+  {
+    img: github,
+    path: ''
+  },
+  {
+    img: ins,
+    path: ''
+  },
+  {
+    img: tt,
+    path: ''
+  },
+  {
+    img: zh,
+    path: ''
+  }
 
+])
 // 1. 行业数组
 idtArr1.value = [
   '安保', '物业', '园区', '街道', '消防', '律所', '停车', '酒厂'
@@ -236,6 +364,49 @@ idtArr.value = [
     ]
   }
 ]
+
+const communityClick = (val) => {
+  if (val === '教学视频') {
+    router.push('/zh/community/educationalVideo')
+    emits('handle')
+  }
+  if (val === '文档') {
+    router.push('/zh/community/document')
+    emits('handle')
+  }
+  if (val === '云备忘录') {
+    router.push('/zh/siteNew/software/cloudMemo')
+    emits('handle')
+  }
+  if (val === '移动视频') {
+    router.push('/zh/siteNew/mobileVideo')
+    emits('handle')
+  }
+  if (val === '下载') {
+    router.push('/zh/siteNew/download')
+    emits('handle')
+  }
+  if (val === 'GitHub') {
+    window.open('https://github.com/OortCloudGroup', '_blank')
+    emits('handle')
+  }
+  if (val === '近期活动') {
+    router.push('/zh/siteNew/recentActivities')
+    emits('handle')
+  }
+  if (val === '寻找合作伙伴') {
+    router.push('/zh/siteNew/partner')
+    emits('handle')
+  }
+  if (val === '支持') {
+    router.push('/zh/siteNew/support')
+    emits('handle')
+  }
+  if (val === '升级') {
+    router.push('/zh/siteNew/support')
+    emits('handle')
+  }
+}
 
 // 统一的点击跳转方法
 const indClick = (cla, path, val) => {
@@ -666,8 +837,12 @@ watch(() => props.item, (newVal: any) => {
   }
 }
 
+.gap50{
+  gap: 50px;
+}
 .appT {
   gap: 20px;
+  display: flex;
   flex-wrap: wrap;
 
   .appTItem {
@@ -690,6 +865,20 @@ watch(() => props.item, (newVal: any) => {
       font-size: 16px;
       text-align: left;
     }
+  }
+}
+.itemBottom{
+  gap: 100px;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: #3D3D3D;
+}
+.item{
+  img{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
   }
 }
 </style>

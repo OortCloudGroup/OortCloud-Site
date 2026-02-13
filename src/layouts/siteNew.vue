@@ -48,7 +48,9 @@ const handle = (t) => {
 // 选择
 const handleI = (val) => {
   hVisi.value = false
-  router.push(val?.path)
+  if (val) {
+    router.push(val?.path)
+  }
 }
 
 const anchor = ref(null)
