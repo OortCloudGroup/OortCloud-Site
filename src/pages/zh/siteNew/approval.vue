@@ -26,7 +26,7 @@
       <img class="approval_bg" src="@/assets/software/approval_bg.png" alt="" />
     </div>
     <div class="w1380 webBottomImg">
-      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
+      <video class="wBImg" src="/documents/智能审批.mp4" controls autoplay muted />
     </div>
     <div class="proTitleBox w1380 flexRowAC" style="justify-content: flex-start">
       <div>

@@ -23,7 +23,7 @@
       <img class="cloudAlbum_bg" src="@/assets/software/problemFeedback/wtfk_bg.png" alt="" />
     </div>
     <div class="w1380 webBottomImg">
-      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
+      <video class="wBImg" src="/documents/问题反馈.mp4" controls autoplay muted />
     </div>
     <div class="productBox w1380">
       <div class="proT">
