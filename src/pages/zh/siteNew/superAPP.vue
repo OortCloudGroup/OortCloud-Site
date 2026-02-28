@@ -29,7 +29,7 @@
       <img class="platTopOutImg" src="@/assets/software/workApp.png" alt="" />
     </div>
     <div class="w1380 webBottomImg">
-      <video class="wBImg" src="/documents/superAPP.mp4" controls autoplay muted />
+      <video class="wBImg" src="/documents/workup.mp4" controls autoplay muted />
     </div>
     <div class="tabSwitch">
       <div class="tabItem" @click="scrollToSection('section1')">

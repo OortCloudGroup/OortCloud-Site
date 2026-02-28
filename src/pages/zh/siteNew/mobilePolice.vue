@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="w1380 webBottomImg">
-      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
+      <video class="wBImg" src="/documents/移动警务.mp4" controls autoplay muted />
     </div>
     <div class="proTitleBox mb_h_t w1380 flexRowAC" style="justify-content: space-between">
       <img class="VLStream_top" src="@/assets/software/mobilePolice_bg1.png" alt="" />

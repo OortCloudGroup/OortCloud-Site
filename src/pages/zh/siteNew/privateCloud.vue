@@ -24,7 +24,7 @@
       <img class="VLStream_top" src="@/assets/img/privateImg.png" alt="" />
     </div>
     <div class="w1380 webBottomImg">
-      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
+      <video class="wBImg" src="/documents/私有云.mp4" controls autoplay muted />
     </div>
     <div class="tabSwitch">
       <div class="tabItem" @click="scrollToSection('section1')">
