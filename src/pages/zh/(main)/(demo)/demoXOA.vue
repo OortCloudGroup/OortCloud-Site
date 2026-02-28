@@ -6,7 +6,7 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
   <div class="page_container">
     <div class="demo_body">
       <div class="demo_body_left">
-        <span class="demo_body_left_title">XOA数字化办公</span>
+        <span class="demo_body_left_title">企业办公</span>
         <span class="demo_body_left_subtitle">新一代OA数字化办公生产力工具</span>
         <div class="demo_body_left_items">
           <client-only>
@@ -153,7 +153,7 @@ import { NPopover, NIcon, NModal } from 'naive-ui'
 
 definePageMeta({
   layout: 'demo',
-  title: 'XOA数字化办公',
+  title: '企业办公',
   subTitle: '演示环境',
   logo: '/img/demo/xoa/xoa_logo.png'
 })

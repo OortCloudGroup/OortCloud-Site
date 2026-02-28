@@ -79,6 +79,12 @@ const doubleSysApp = ref({
       logo: '/img/demo/menu/jy.png',
       excerpt: '执法任务一体化平台',
       link: '/demoIM'
+    },
+    {
+      name: '企业办公',
+      logo: '/img/demo/menu/oa.png',
+      excerpt: '新一代OA数字化办公生产力工具',
+      link: '/demoXOA'
     }
   ]
 })
