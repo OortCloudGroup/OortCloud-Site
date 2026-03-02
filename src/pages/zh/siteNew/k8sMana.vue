@@ -27,7 +27,7 @@
       <img class="platTopOutImg" src="@/assets/software/k8sMana_bg1.png" alt="" />
     </div>
     <div class="w1380 webBottomImg">
-      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
+      <video class="wBImg" src="/documents/k8s.mp4" controls autoplay muted />
     </div>
     <div class="tabSwitch">
       <div class="tabItem" @click="scrollToSection('section0')">

@@ -23,6 +23,10 @@
       <img class="cloudAlbum_bg" src="@/assets/software/videoFusion/sprh_tab_bg.png" alt="" />
     </div>
 
+    <div class="w1380 webBottomImg">
+      <video class="wBImg" src="/documents/视频融合.mp4" controls autoplay muted />
+    </div>
+
     <div class="w1380 CloudBox flexRowAC">
       <div class="CloudL">
         <div class="cl_l_w">
@@ -284,7 +288,8 @@ definePageMeta({
 }
 
 .webBottomImg {
-  padding: 0;
+  // padding: 0;
+  padding-bottom: 120px;
   height: initial;
 
   .wBImg {

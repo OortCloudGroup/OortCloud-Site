@@ -25,7 +25,7 @@
       </div>
     </div>
     <div class="w1380 webBottomImg">
-      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
+      <video class="wBImg" src="/documents/指挥调度.mp4" controls autoplay muted />
     </div>
 
     <div class="tabSwitch">

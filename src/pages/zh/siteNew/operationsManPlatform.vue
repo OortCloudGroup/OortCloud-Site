@@ -23,7 +23,7 @@
       <img class="platTopOutImg" src="@/assets/software/operationsManPlatform/yypt_bg.png" alt="" />
     </div>
     <div class="w1380 webBottomImg">
-      <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
+      <video class="wBImg" src="/documents/运维管理.mp4" controls autoplay muted />
     </div>
     <div class="tabSwitch">
       <div class="tabItem" @click="scrollToSection('section0')">
