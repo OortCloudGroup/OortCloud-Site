@@ -40,6 +40,9 @@
         <div class="demo_bottom_subtitle line_height">
           集文件档案管理与业务处理于一体的自动化软件，可实现文件档案采集、整理、利用等工作，对目录和电子原文两层对象进行管理；同时依托计算机辅助开展档案统计、鉴定、销毁、借阅、催还及参考资料编研等业务。
         </div>
+        <div class="seeMore" @click="seeMore">
+          查看更多
+        </div>
       </div>
       <div class="demo_bottom_box">
         <div class="demo_bottom_item">
@@ -107,6 +110,10 @@ const goToDemoDA = () => {
   const targetUrl = router.resolve('/zh/demoDA').href
   // 2. 新窗口打开
   window.open(targetUrl, '_blank')
+}
+
+const seeMore = () => {
+  window.open('https://www.oortcloudsmart.com/zh/product_projectSolution/', '_blank')
 }
 
 definePageMeta({
@@ -325,5 +332,11 @@ definePageMeta({
 }
 .size{
   font-size: 28px;
+}
+.seeMore{
+  cursor: pointer;
+  color: #1B396C;
+  font-size: 20px;
+  margin-top: 20px;
 }
 </style>

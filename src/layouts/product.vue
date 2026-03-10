@@ -65,6 +65,15 @@ const carouseList = ref([
       { text: '了解详情', link: '/product' },
       { text: '立即体验', link: 'https://myoumuamua.com/download.html' }
     ]
+  },
+  {
+    url: '/img/home/mhck.png',
+    title: '智慧档案',
+    desc: '集文件档案管理与业务处理于一体的自动化软件，可实现文件档案采集、整理、利用等工作，对目录和电子原文两层对象进行管理；同时依托计算机辅助开展档案统计、鉴定、销毁、借阅、催还及参考资料编研等业务。',
+    buttons: [
+      { text: '立即购买', link: 'https://marketplace.huaweicloud.com/contents/6d75e4f6-6825-49f1-8acc-52dcffa4b9b6#productid=OFFI768401716871081984' },
+      { text: '立即体验', link: 'https://www.oortcloudsmart.com/zh/demoDA/' }
+    ]
   }
 ])
 </script>
