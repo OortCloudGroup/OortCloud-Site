@@ -378,6 +378,8 @@ const goGitHub = (value) => {
     window.open('https://ai.oortcloudsmart.com/zh/')
   } else if (value.name === 'OortCloud APP') {
     window.open('https://www.oortcloudsmart.com/zh/siteNew/instantMess#section2')
+  } else if (value.name === 'OortCloud Desktop') {
+    window.open('https://github.com/OortCloudGroup/OortCloudDesktop/releases ')
   }
 }
 definePageMeta({

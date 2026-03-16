@@ -41,7 +41,7 @@
           集文件档案管理与业务处理于一体的自动化软件，可实现文件档案采集、整理、利用等工作，对目录和电子原文两层对象进行管理；同时依托计算机辅助开展档案统计、鉴定、销毁、借阅、催还及参考资料编研等业务。
         </div>
         <div class="seeMore" @click="seeMore">
-          查看更多
+          查看更多 <img src="/img/demo/download/seeMore.png" alt="" />
         </div>
       </div>
       <div class="demo_bottom_box">
@@ -334,9 +334,17 @@ definePageMeta({
   font-size: 28px;
 }
 .seeMore{
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
   cursor: pointer;
-  color: #1B396C;
-  font-size: 20px;
-  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2278FF;
+  img{
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+  }
 }
 </style>
