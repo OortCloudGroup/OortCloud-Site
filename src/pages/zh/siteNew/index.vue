@@ -128,7 +128,7 @@
         提升您的 <span style="color: #2278FF;">工作品质</span>
       </div>
       <div class="w1380 webBottomImg2">
-        <video class="wBImg" src="/documents/superAPP.mp4" controls autoplay muted />
+        <video class="wBImg" src="/documents/首页.mp4" controls autoplay muted />
       </div>
     </div>
     <div class="productBox w1380">
