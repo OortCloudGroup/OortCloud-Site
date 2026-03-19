@@ -6,7 +6,7 @@
           <span class="demo_body_left_title">智慧武装</span>
           <span class="demo_body_left_subtitle">聚焦传统武装工作信息化痛点，以 AI、AR、物联网为核心驱动，重构基层武装八项核心工作流程，搭建标准化数据体系，实现 “一网、一链、一库、一图”，精准掌握辖区战略实况，提升武装工作正规化水平与国防动员能力。</span>
           <div class="demo_body_pdf">
-            <div class="demo_body_pdf_item">
+            <div class="demo_body_pdf_item" @click="downloadPDF">
               <img src="/img/demo/pdf_download.png" />
               <span>资料下载</span>
               <n-icon :component="IosArrowForward" />
@@ -205,6 +205,12 @@ definePageMeta({
 })
 
 const activeTab = ref('item1')
+const downloadPDF = () => {
+  const link = document.createElement('a')
+  link.href = '/documents/智慧武装.pdf'
+  link.download = '智慧武装.pdf'
+  link.click()
+}
 
 const goToTab = (tabKey: string) => {
   activeTab.value = tabKey

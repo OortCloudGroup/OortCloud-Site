@@ -22,7 +22,7 @@
               <n-icon :component="IosArrowForward" />
             </div>
           </a> -->
-            <div class="demo_body_pdf_item">
+            <div class="demo_body_pdf_item" @click="downloadPDF">
               <img src="/img/demo/pdf_download.png" />
               <span>资料下载</span>
               <n-icon :component="IosArrowForward" />
@@ -214,6 +214,13 @@ definePageMeta({
   subTitle: '演示环境',
   logo: '/img/demo/menu/ga.png'
 })
+
+const downloadPDF = () => {
+  const link = document.createElement('a')
+  link.href = '/documents/智慧公安.pdf'
+  link.download = '智慧公安.pdf'
+  link.click()
+}
 
 const router = useRouter()
 const goDetail = () => {

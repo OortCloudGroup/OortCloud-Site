@@ -21,7 +21,7 @@
               <n-icon :component="IosArrowForward" />
             </div>
           </a> -->
-          <div class="demo_body_pdf_item">
+          <div class="demo_body_pdf_item" @click="downloadPDF">
             <img src="/img/demo/pdf_download.png" />
             <span>资料下载</span>
             <n-icon :component="IosArrowForward" />
@@ -114,6 +114,13 @@ const goToDemoDA = () => {
 
 const seeMore = () => {
   window.open('https://www.oortcloudsmart.com/zh/product_projectSolution/', '_blank')
+}
+
+const downloadPDF = () => {
+  const link = document.createElement('a')
+  link.href = '/documents/档案宝画册.pdf'
+  link.download = '档案宝画册.pdf'
+  link.click()
 }
 
 definePageMeta({
