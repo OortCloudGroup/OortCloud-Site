@@ -87,11 +87,48 @@
         </div>
       </div>
     </div>
+    <div class="w1380">
+      <div class="app-titile">
+        应用产品
+      </div>
+      <div class="app-list">
+        <div v-for="item in list" :key="item.app_id" class="app" @click="appDetail(item.app_id)">
+          <img :src="item.icon_url" />
+          {{ item.app_name }}
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
 // import NavHeader from '@/components/siteNew/NavHeader.vue'
+import { ref, onMounted } from 'vue'
+import { appList } from '@/api'
+
+const list = ref([])
+
+onMounted(() => {
+  getMealList()
+})
+
+const getMealList = async() => {
+  try {
+    const data = {
+      page: 1,
+      pagesize: 100
+    }
+    const res = await appList(data)
+    list.value = res.data.list
+  } catch (err) {
+    console.error('获取应用列表失败:', err)
+  }
+}
+
+const appDetail = (id) => {
+  console.log(id)
+}
+
 definePageMeta({
   layout: 'demo1'
 })
@@ -574,5 +611,33 @@ definePageMeta({
       font-weight: bold;
     }
   }
+}
+
+.app-titile{
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+.app-list{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 150px;
+  gap: 20px;
+  .app{
+    cursor: pointer;
+    width: 325px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #b0c6f0;
+    border-radius: 8px;
+    font-size: 20px;
+    img{
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+  }
+
 }
 </style>

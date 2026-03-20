@@ -1,101 +1,190 @@
 <template>
   <div class="home_page vls">
-    <div class="platTop w1380">
+    <div class="platTop page-start">
       <div class="VLStream">
         超值<span style="color: #2278FF;">低价</span> <span class="vlsUs">不是做梦!</span>
       </div>
+      <div>选择一个合适您的套餐</div>
     </div>
-    <div class="platTop priceTBox w1380 flexRowAC">
-      <div class="price_tabs flexRowAC">
-        <div class="pt_btn " :class="{act:isAct===0}" @click="isAct=0">
-          年缴
+    <div class="priceBox">
+      <div v-for="item in list" :key="item.id" class="item" :class="{yellow: item.name === '企业版'}">
+        <div>
+          <div class="item-1 title1">
+            {{ item.name }}
+            <div v-if="item.name === '企业版'" class="Popular">
+              热门推荐
+            </div>
+          </div>
+          <div class="item-2 title2">
+            {{ item.annual_price_desc }}
+          <!-- <span class="title3" style="color: #818089;">/年</span> -->
+          </div>
+          <div class="item-3 title3" style="color: #818089;">
+            折合{{ (item.annual_price / 1200).toFixed(2) }}/月
+          </div>
+          <div class="item-4 title3">
+            {{ item.remark }}
+          </div>
+          <div v-for="(value,index) in item.highlights" :key="index" class="item-5 title3 ">
+            <!-- <img src="@/assets/software/double-yes.png" alt="" /> -->
+            {{ value }}
+          </div>
         </div>
-        <div class="pt_btn" :class="{act:isAct===1}" @click="isAct=1">
-          月缴
+        <div class="item_content">
+          <div class="item-6" :class="{yellow_buy: item.name === '企业版'}">
+            立即购买
+          </div>
+          <div class="item-7" :class="{yewllow_meal: item.name === '企业版'}">
+            <div class="meal" @click="dialogVisible = true">
+              <img src="@/assets/software/tcxq.png" alt="" />套餐详情
+            </div>
+            <div class="meal">
+              <img src="@/assets/software/zzgm.png" alt="" />增值购买
+            </div>
+          </div>
         </div>
       </div>
-      <div class="price_cont flexRowAC">
-        <div class="p_c_it" :class="{p2:isActp===0}" @click="isActp=0">
-          <div class="pcIt_t">
-            <span class="p_c_it_s">单个</span>&nbsp;应用程序免费
-          </div>
-          <div class="pcIt_m">
-            ￥0 <span>/月</span>
-          </div>
-          <div class="pcIt_l flexRowAC">
-            <span class="line" /><img class="lineImg" src="@/assets/software/price_icon.png" alt="" /><span class="line" />
-          </div>
-          <div class="pcIt_t1_out">
-            <div class="pcIt_t1 flexRowAC">
-              <span class="pcIt_t1_dot" />仅限 一个应用程序，不限制用户数
-            </div>
-            <div class="pcIt_t1 flexRowAC">
-              <span class="pcIt_t1_dot" />OortCloud 在线
-            </div>
-          </div>
-          <div class="pcIt_tbtn">
-            立即使用
-          </div>
-        </div>
-        <div class="p_c_it" :class="{p2:isActp===1}" @click="isActp=1">
-          <div class="pcIt_t">
-            标准
-          </div>
-          <div class="pcIt_m">
-            ￥13.5 <span>/每用户/月</span>
-          </div>
-          <div class="pcIt_l flexRowAC">
-            <span class="line" /><img class="lineImg" src="@/assets/software/price_icon.png" alt="" /><span class="line" />
-          </div>
-          <div class="pcIt_t1_out">
-            <div class="pcIt_t1 flexRowAC">
-              <span class="pcIt_t1_dot" />所有应用程序
-            </div>
-            <div class="pcIt_t1 flexRowAC">
-              <span class="pcIt_t1_dot" />OortCloud 在线
-            </div>
-          </div>
-          <div class="pcIt_tbtn btn1">
-            立即购买
-          </div>
-          <div class="pcIt_tbtn btn2">
-            免费试用
-          </div>
-        </div>
-        <div class="p_c_it" :class="{p2:isActp===2}" @click="isActp=2">
-          <div class="pcIt_t">
-            单个&nbsp;应用程序免费
-          </div>
-          <div class="pcIt_m">
-            ￥20.6 <span>/每用户/月</span>
-          </div>
-          <div class="pcIt_l flexRowAC">
-            <span class="line" /><img class="lineImg" src="@/assets/software/price_icon.png" alt="" /><span class="line" />
-          </div>
-          <div class="pcIt_t1_out">
-            <div class="pcIt_t1 flexRowAC">
-              <span class="pcIt_t1_dot" />所有应用程序
-            </div>
-            <div class="pcIt_t1 flexRowAC">
-              <span class="pcIt_t1_dot" />OortCloud 云端版 / 0ortCloud.sh / 离线版
-            </div>
-            <div class="pcIt_t1 flexRowAC">
-              <span class="pcIt_t1_dot" />OortCloud 定制
-            </div>
-            <div class="pcIt_t1 flexRowAC">
-              <span class="pcIt_t1_dot" />多公司
-            </div>
-            <div class="pcIt_t1 flexRowAC">
-              <span class="pcIt_t1_dot" />外部API
-            </div>
-          </div>
-          <div class="pcIt_tbtn">
-            立即购买
-          </div>
-          <div class="pcIt_tbtn btn3">
-            免费试用
-          </div>
-        </div>
+    </div>
+    <div class="w1380">
+      <div class="optional">
+        自选购买
+      </div>
+      <div class="descripe">
+        *在已选套餐基础上，灵活补充额外资源与功能，满足阶段性扩容或个性化需求，无需更换主套餐。
+      </div>
+    </div>
+    <div class="contrast">
+      <div class="contrast_tiitle">
+        版本功能对比
+      </div>
+      为你的业务需求找到正确的<br />订阅套餐
+    </div>
+    <div class="w1380">
+      <div class="table-container">
+        <table class="version-table">
+          <thead>
+            <tr>
+              <th>功能项</th>
+              <th>标准版</th>
+              <th class="highlight-col">
+                高级版
+              </th>
+              <th>企业版</th>
+              <th>旗舰版</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>付费价格</td>
+              <td>¥1229/年</td>
+              <td class="highlight-col">
+                ¥2229/年
+              </td>
+              <td>¥5229/年</td>
+              <td>¥8229/年</td>
+            </tr>
+            <tr>
+              <td>用户席位</td>
+              <td>10 位</td>
+              <td class="highlight-col">
+                20 位
+              </td>
+              <td>50 位</td>
+              <td>不限</td>
+            </tr>
+            <tr>
+              <td>联系人上限</td>
+              <td>50 个</td>
+              <td class="highlight-col">
+                100 个
+              </td>
+              <td>500 个</td>
+              <td>不限</td>
+            </tr>
+            <tr>
+              <td>应用部署上限</td>
+              <td>10 个</td>
+              <td class="highlight-col">
+                20 个
+              </td>
+              <td>50 个</td>
+              <td>80 个</td>
+            </tr>
+            <tr>
+              <td>服务部署上限</td>
+              <td>6 个</td>
+              <td class="highlight-col">
+                12 个
+              </td>
+              <td>30 个</td>
+              <td>60 个</td>
+            </tr>
+            <tr>
+              <td>Agent 调用额度 (月)</td>
+              <td>100 次</td>
+              <td class="highlight-col">
+                300 次
+              </td>
+              <td>1000 次</td>
+              <td>不限</td>
+            </tr>
+            <tr>
+              <td>自动化工作流</td>
+              <td>基础版</td>
+              <td class="highlight-col">
+                高级可视化版
+              </td>
+              <td>企业级引擎版</td>
+              <td>私有定制版</td>
+            </tr>
+            <tr>
+              <td>API 访问权限</td>
+              <td><span class="icon-cross">✕</span></td>
+              <td class="highlight-col">
+                基础版 (1万次/月)
+              </td>
+              <td>不限</td>
+              <td>不限</td>
+            </tr>
+            <tr>
+              <td>数据存储量</td>
+              <td>10 GB</td>
+              <td class="highlight-col">
+                50 GB
+              </td>
+              <td>200 GB</td>
+              <td>1000 GB + 备份服务</td>
+            </tr>
+            <tr>
+              <td>专属客户经理</td>
+              <td><span class="icon-cross">✕</span></td>
+              <td class="highlight-col">
+                <span class="icon-check">✓</span>
+              </td>
+              <td><span class="icon-check">✓</span></td>
+              <td><span class="icon-check">✓</span></td>
+            </tr>
+            <tr>
+              <td>客服等级支持</td>
+              <td>标准支持 (8小时响应)</td>
+              <td class="highlight-col">
+                优先支持 (4小时响应)
+              </td>
+              <td>7×12 专属客户经理</td>
+              <td>7×24 首席数据顾问</td>
+            </tr>
+            <tr>
+              <td>安全与合规</td>
+              <td>标准加密存储</td>
+              <td class="highlight-col">
+                标准加密存储
+              </td>
+              <td>审计日志 + SSO 单点登录</td>
+              <td>GDPR / 等保合规咨询</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="highlight" />
       </div>
     </div>
     <div class="platTop w1380">
@@ -176,7 +265,7 @@
         </div>
       </div>
     </div>
-    <div class="proTitleBox w1380 flexRowAC" style="justify-content: flex-start;padding: 0;">
+    <div class="proTitleBox w1380 flexRowAC" style="justify-content: flex-start;padding: 0; color: #fff;">
       <div>
         有疑问<span style="color: #FFB53B">?</span>
         <div class="pri_why">
@@ -226,11 +315,19 @@
         什么是外部API?
       </div>
     </div>
+    <el-dialog
+      v-model="dialogVisible"
+      width="1200px"
+      destroy-on-close
+    >
+      <priceDetail />
+    </el-dialog>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import priceDetail from './priceDetail.vue'
 import product5_1 from '@/assets/VLimg2.0/product5_1.png'
 import product5_2 from '@/assets/VLimg2.0/product5_2.png'
 import product5_3 from '@/assets/VLimg2.0/product5_3.png'
@@ -238,13 +335,33 @@ import product5_4 from '@/assets/VLimg2.0/product5_4.png'
 import product5_5 from '@/assets/VLimg2.0/product5_5.png'
 import product5_6 from '@/assets/VLimg2.0/product5_6.png'
 import product5_7 from '@/assets/VLimg2.0/product5_7.png'
+
+import { mealList } from '@/api'
+const list = ref([])
+
+onMounted(() => {
+  getMealList()
+})
+
+const getMealList = async() => {
+  try {
+    const data = {
+      page: 1,
+      pagesize: 10
+    }
+    const res = await mealList(data)
+    list.value = res.data.list
+  } catch (err) {
+    console.error('获取套餐列表失败:', err)
+  }
+}
+
 definePageMeta({
   layout: 'site-new'
 })
 
 let p5Arr = ref([])
-let isAct = ref(0)
-let isActp = ref(1)
+const dialogVisible = ref(false)
 p5Arr.value = [
   { t: 'Windows', d: '版本号：V3.1.06', flag: false, img: product5_1 },
   { t: 'Android', d: '版本号：V3.1.06', flag: true, img: product5_2 },
@@ -254,6 +371,57 @@ p5Arr.value = [
   { t: 'Mac OS', d: '版本号：V3.1.06', flag: false, img: product5_6 },
   { t: '银河麒麟', d: '版本号：V3.1.06', flag: false, img: product5_7 }
 ]
+
+// const list = ref([
+//   {
+//     title: '标准版',
+//     price: '¥1229',
+//     monthlyPrice: '¥102.41',
+//     desc: 'Perfect for solo founders and small teams just getting started.',
+//     seat: '10 位',
+//     contact: '50 个',
+//     deployment: '10 个',
+//     service: '6 个',
+//     agent: '100 次 / 月',
+//     automation: '基础自动化流程'
+//   },
+//   {
+//     title: '高级版',
+//     price: '¥2229',
+//     monthlyPrice: '¥185.75',
+//     desc: 'For growing teams that need more reach and smarter insights.',
+//     seat: '20 位',
+//     contact: '100 个',
+//     deployment: '20 个',
+//     service: '12 个',
+//     agent: '300 次 / 月',
+//     automation: '高级自动化流程'
+//   },
+//   {
+//     title: '企业版',
+//     price: '¥5229',
+//     monthlyPrice: '¥435.75',
+//     desc: 'Perfect for solo founders and small teams just getting started.',
+//     seat: '50 位',
+//     contact: '500 个',
+//     deployment: '60 个',
+//     service: '30 个',
+//     agent: '1000 次 / 月',
+//     automation: '企业级自动化引擎'
+//   },
+//   {
+//     title: '旗舰版',
+//     price: '8229',
+//     monthlyPrice: '¥685.75',
+//     desc: 'Perfect for solo founders and small teams just getting started.',
+//     seat: '不限',
+//     contact: '不限',
+//     deployment: '80 个',
+//     service: '60 个',
+//     agent: '不限',
+//     automation: '私有定制自动化服务'
+//   }
+// ])
 </script>
 
 <style scoped lang="scss">
@@ -263,7 +431,7 @@ p5Arr.value = [
 }
 
 .home_page.vls {
-  background-color: #fff;
+  background-color: #00020F;
 }
 
 .w1380 {
@@ -303,10 +471,10 @@ p5Arr.value = [
   }
 
   .VLStream {
-    color: #333333;
+    color: #fff;
     font-weight: bold;
     font-size: 78px;
-    padding: 8px 0;
+    padding-bottom: 30px;
     position: relative;
 
     .VLStream_img {
@@ -754,11 +922,12 @@ p5Arr.value = [
     border-radius: 12px;
     padding: 20px;
     margin-bottom: 20px;
-    color: #333333;
+    color: #fff;
     font-weight: normal;
     font-size: 20px;
     text-align: left;
-    border: 1px solid #EEEEEE;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.02);
   }
 
   .advantBoxImg {
@@ -772,15 +941,15 @@ p5Arr.value = [
 .vlsUs {
   opacity: 1;
   border-radius: 0px;
-  background: linear-gradient(270deg, #2278FF0A 0%, #2278FF51 100%);
-  border-left: 6px solid #2278FF;
+  background: linear-gradient(270deg, rgba(146, 59, 255, 0.04) 0%, rgba(146, 59, 255, 0.32) 100%);
+  border-left: 6px solid #923BFF;
   padding-left: 10px;
-  color: #000;
+  color: #fff;
 }
 
 .pri_why {
   padding: 20px 0 40px;
-  color: #333333;
+  color: #fff;
   font-weight: normal;
   font-size: 20px;
 }
@@ -802,7 +971,7 @@ p5Arr.value = [
 .proTitleBox.plan {
   .plan_t {
     padding-bottom: 48px;
-    color: #333333;
+    color: #fff;
     font-weight: normal;
     font-size: 24px;
     text-align: center;
@@ -843,7 +1012,7 @@ p5Arr.value = [
   }
 
   .priceTi {
-    color: #3D3D3D;
+    color: #fff;
     font-weight: normal;
     font-size: 20px;
     text-align: center;
@@ -1000,4 +1169,214 @@ p5Arr.value = [
     }
   }
 }
+.page-start{
+  height: 220px;
+  background: url(@/assets/software/price-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+  padding-top: 190px;
+  color: #fff;
+  font-size: 24px;
+}
+
+.title1{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.title2{
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.title3{
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.priceBox{
+  padding: 0 140px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item{
+  border-radius: 16px;
+  color: #fff;
+  background-color: #000F26;
+  box-sizing: border-box;
+  padding: 32px;
+  width: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .item-1{
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    .Popular{
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+      background-color: #FECE02;
+      padding: 5px 15px;
+      margin-left: 15px;
+      border-radius: 99px;
+    }
+  }
+  .item-2{
+    margin-bottom: 10px;
+  }
+  .item-3{
+    margin-bottom: 25px;
+  }
+  .item-4{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .item-5{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    img{
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+  }
+  .item-6{
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 30px;
+  }
+  .item-7{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    color: #2278FF;
+    margin-top: 20px;
+    .meal{
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    img{
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.yellow{
+  border: 1px solid #FECE04;
+  box-shadow: 0px 0px 24px 0px rgba(254, 206, 2, 0.6);
+  background-color: rgba(254, 206, 2, 0.2);
+
+}
+.yellow_buy{
+  background: linear-gradient(106deg, #FFDB43 26%, #F5A10A 79%);
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0px 0px 21px 0px rgba(254, 206, 2, 0.2);
+}
+.yewllow_meal{
+  color: #FECE04 !important;
+  img{
+    filter: hue-rotate(180deg) saturate(1.0) brightness(1.9);
+  }
+}
+
+.optional{
+  cursor: pointer;
+  padding: 12px 50px;
+  border-radius: 8px;
+  border: 1px solid #FFFFFF;
+  width: fit-content;
+  margin: 40px auto;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.descripe{
+  text-align: center;
+  color: #fff;
+}
+.contrast{
+  font-size: 48px;
+  text-align: center;
+  color: #fff;
+  margin-top: 150px;
+  margin-bottom: 40px;
+  .contrast_tiitle{
+    margin: 0 auto;
+    width: fit-content;
+    padding:  5px 16px;
+    font-size: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 99px;
+    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: 20px;
+  }
+}
+
+.table-container {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.highlight{
+  top: 10px;
+  left: 570px;
+  position: absolute;
+  width: 250px;
+  height: 870px;
+  border: 1px solid #FFFFFF;
+  box-shadow: inset 0px 0px 40px 0px #2278FF;
+  border-radius: 16px;
+}
+
+.version-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #e0e0e0;
+  font-size: 14px;
+  table-layout: fixed;
+}
+
+.version-table thead th {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px 12px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  position: relative;
+}
+
+.version-table tbody td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 12px;
+  font-size: 16px;
+  text-align: center;
+  vertical-align: middle;
+  transition: background-color 0.2s;
+}
+
+.version-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
 </style>
