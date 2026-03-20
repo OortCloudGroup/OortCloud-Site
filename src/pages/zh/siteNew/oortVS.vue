@@ -222,6 +222,7 @@ import oortImg6 from '@/assets/img/oortVS_img14.png'
 import oortImg7 from '@/assets/img/oortVS_img15.png'
 import oortImg8 from '@/assets/img/oortVS_img20.png'
 import oortImg9 from '@/assets/img/oortVS_img21.png'
+import oortImg10 from '@/assets/img/oortVS_img22.png'
 
 definePageMeta({
   layout: 'site-new'
@@ -274,6 +275,11 @@ const practiceItems = ref([
     title: '模型标注与训练 ',
     description: '先对数据进行精准标注，构建高质量数据集，再开展模型训练，优化参数提升 AI 性能',
     image: oortImg9
+  },
+  {
+    title: 'AIGC生成 ',
+    description: '依托算法与大数据，可自动创作文本、图像、音频等多元内容，高效赋能创作、设计、传媒等领域',
+    image: oortImg10
   }
 ])
 const activeIndexpractice = ref(0)
