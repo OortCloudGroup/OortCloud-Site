@@ -93,7 +93,7 @@
       </div>
       <div class="app-list">
         <div v-for="item in list" :key="item.app_id" class="app" @click="appDetail(item.app_id)">
-          <img :src="item.icon_url" />
+          <oort-img :src="item.icon_url" />
           {{ item.app_name }}
         </div>
       </div>
