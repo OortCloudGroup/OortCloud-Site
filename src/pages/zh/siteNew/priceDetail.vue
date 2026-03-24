@@ -4,7 +4,7 @@
       套餐详情
     </div>
     <div class="meal">
-      <img src="@/assets/software/gjbtc.png" alt="" />高级版套餐
+      <img src="@/assets/software/gjbtc.png" alt="" />{{ detail.name }}
     </div>
     <div class="treeTitle">
       基本信息
@@ -13,73 +13,57 @@
       <tbody>
         <tr>
           <td>付费价格</td>
-          <td>¥1229/年</td>
-          <td>用户席位</td>
-          <td>10 位</td>
+          <td>{{ detail.annual_price_desc }}</td>
         </tr>
-        <tr>
-          <td>联系人上限</td>
-          <td>50 个</td>
-          <td>应用部署上限</td>
-          <td>10 个</td>
-        </tr>
-        <tr>
-          <td>服务部署上限</td>
-          <td>6 个</td>
-          <td>Agent 调用额度</td>
-          <td>100 次</td>
-        </tr>
-        <tr>
-          <td>自动化工作流</td>
-          <td>基础版</td>
-          <td>数据存储量</td>
-          <td>10 GB</td>
-        </tr>
-        <tr>
-          <td>客服等级支持</td>
-          <td>标准支持（8 小时响应）</td>
-          <td>安全与合规</td>
-          <td>标准加密存储</td>
+        <tr v-for="(item, index) in highlightList" :key="index">
+          <td>{{ item.title }}</td>
+          <td>{{ item.desc }}</td>
         </tr>
       </tbody>
     </table>
     <div class="treeTitle">
       授权应用
     </div>
-    <table class="package-table2">
-      <tbody>
-        <tr>
-          <td style=" font-weight: 500;">
-            序号
-          </td>
-          <td style=" font-weight: 500;">
-            应用名称
-          </td>
-          <td style=" font-weight: 500;">
-            应用功能
-          </td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>
-            <div class="table_box">
-              <img class="table_img" src="@/assets/site/homeApp_a5.png" alt="" />云课堂
-            </div>
-          </td>
-          <td>用户注册 / 登录、消息中心、意见反馈、创建课程、编辑课程、删除课程、课程发布、课程下架、课程观看、视频评论、直播录制、连麦互动、举手提问、直播禁言、全员静音</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>
-            <div class="table_box">
-              <img class="table_img" src="@/assets/site/homeApp_d5.png" alt="" />云相册
-            </div>
-          </td>
-          <td>用户注册 / 登录、消息中心、意见反馈、创建课程、编辑课程、删除课程、课程发布、课程下架、课程观看、视频评论、直播录制、连麦互动、举手提问、直播禁言、全员静音</td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="treeTitle">
+    <el-table :data="detail.items" style="width: 100%">
+      <el-table-column type="expand">
+        <template #default="scope">
+          <div class="funtionTable">
+            <el-table :data="scope.row.feature_config_views" :border="childBorder">
+              <el-table-column label="功能点名称" prop="display_name" />
+              <el-table-column label="功能点类型" prop="type">
+                <template #default="cope">
+                  {{ cope.row.value_type === 1 ? '开关 / 是否支持' : '数量 / 额度' }}
+                </template>
+              </el-table-column>
+              <el-table-column label="值" prop="display_value">
+                <template #default="cope">
+                  <span v-if="cope.row.type === 1">
+                    {{ cope.row.display_value ? '支持' : '不支持' }}
+                  </span>
+                  <span v-else>
+                    {{ cope.row.display_value }}
+                  </span>
+                </template>
+              </el-table-column>
+              <el-table-column label="单位" prop="unit" />
+              <el-table-column label="说明" prop="description" />
+            </el-table>
+          </div>
+        </template>
+      </el-table-column>
+      <el-table-column type="index" label="序号" width="70" />
+      <el-table-column prop="icon_url" label="logo" width="100">
+        <template #default="scope">
+          <div class="box">
+            <oort-img :src="scope.row.icon_url" />
+          </div>
+        </template>
+      </el-table-column>
+      <el-table-column prop="display_name" label="应用名称" />
+      <el-table-column prop="app_version" label="版本号" />
+      <el-table-column prop="intro" label="简介" />
+    </el-table>
+    <!-- <div class="treeTitle">
       授权服务
     </div>
     <table class="package-table2">
@@ -114,11 +98,42 @@
           <td>用户注册 / 登录、消息中心、意见反馈、创建课程、编辑课程、删除课程、课程发布、课程下架、课程观看、视频评论、直播录制、连麦互动、举手提问、直播禁言、全员静音</td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref, onMounted, computed } from 'vue'
+import { mealDetail } from '@/api'
+onMounted(() => {
+  getMealDetail()
+})
+
+const detail = ref({})
+
+const props = defineProps({
+  id: {
+    type: [String, Number],
+    required: true
+  }
+})
+
+const highlightList = computed(() => {
+  if (!detail.value.highlights) return []
+  return detail.value.highlights.map((item) => {
+    const [title, ...descParts] = item.split('：')
+    return {
+      title: title.trim(),
+      desc: descParts.join('：').trim()
+    }
+  })
+})
+
+const getMealDetail = async() => {
+  const res = await mealDetail({ id: props.id })
+  detail.value = res.data
+}
+</script>
 
 <style scoped lang="scss">
 .package-table {
@@ -150,17 +165,15 @@
 }
 
 /* 左侧标签列 */
-.package-table td:first-child,
-.package-table td:nth-child(3){
+.package-table td:first-child{
   width: 20%;
   font-weight: 500;
   background-color: #E6EEF9;
 }
 
 /* 右侧内容列 */
-.package-table td:last-child,
-.package-table td:nth-child(2) {
-  width: 30%;
+.package-table td:last-child{
+  width: 80%;
 }
 
 .meal_detail{
@@ -251,5 +264,20 @@
 .table_box{
   display: flex;
   align-items: center;
+}
+.box{
+  display: flex;
+  align-items: center;
+  img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 16px;
+  }
+}
+.funtionTable{
+  width: 80%;
+  margin-left: auto;
+
 }
 </style>

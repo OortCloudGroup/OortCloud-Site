@@ -98,13 +98,22 @@
         </div>
       </div>
     </div>
+
+    <AppDetailModal
+      v-model="showModal"
+      :app-id="currentAppId"
+    />
   </div>
 </template>
 
 <script setup>
 // import NavHeader from '@/components/siteNew/NavHeader.vue'
 import { ref, onMounted } from 'vue'
+import AppDetailModal from './AppDetailModal.vue'
 import { appList } from '@/api'
+
+const showModal = ref(false) // 控制弹窗显示/隐藏
+const currentAppId = ref(null) // 当前选中的应用ID
 
 const list = ref([])
 
@@ -126,7 +135,8 @@ const getMealList = async() => {
 }
 
 const appDetail = (id) => {
-  console.log(id)
+  currentAppId.value = id
+  showModal.value = true
 }
 
 definePageMeta({

@@ -35,7 +35,7 @@
             立即购买
           </div>
           <div class="item-7" :class="{yewllow_meal: item.name === '企业版'}">
-            <div class="meal" @click="dialogVisible = true">
+            <div class="meal" @click="mealDetail(item.id)">
               <img src="@/assets/software/tcxq.png" alt="" />套餐详情
             </div>
             <div class="meal">
@@ -55,7 +55,7 @@
     </div>
     <div class="contrast">
       <div class="contrast_tiitle">
-        版本功能对比
+        套餐对比
       </div>
       为你的业务需求找到正确的<br />订阅套餐
     </div>
@@ -320,7 +320,7 @@
       width="1200px"
       destroy-on-close
     >
-      <priceDetail />
+      <priceDetail :id="id" />
     </el-dialog>
   </div>
 </template>
@@ -338,6 +338,7 @@ import product5_7 from '@/assets/VLimg2.0/product5_7.png'
 
 import { mealList } from '@/api'
 const list = ref([])
+const id = ref(1)
 
 onMounted(() => {
   getMealList()
@@ -354,6 +355,11 @@ const getMealList = async() => {
   } catch (err) {
     console.error('获取套餐列表失败:', err)
   }
+}
+
+const mealDetail = (data) => {
+  dialogVisible.value = true
+  id.value = data
 }
 
 definePageMeta({
@@ -1275,6 +1281,11 @@ p5Arr.value = [
       margin-right: 5px;
     }
   }
+}
+
+.item:hover{
+  border: 1px solid #2278FF;
+  box-shadow: 0px 0px 24px 0px rgba(65, 50, 224, 0.6);
 }
 
 .yellow{
