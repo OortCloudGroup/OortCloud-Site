@@ -12,7 +12,7 @@
     <div class="dialog-content">
       <!-- 应用头部信息 -->
       <div class="app-header">
-        <img :src="detail.icon_url" class="app-icon" />
+        <oort-img :src="detail.icon_url" class="app-icon" />
         <div class="app-info">
           <h2>{{ detail.app_name }}</h2>
           <p class="app-tagline">
