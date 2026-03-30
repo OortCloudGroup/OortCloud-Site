@@ -4,6 +4,13 @@ import { resolve } from 'path'
 export default defineNuxtConfig({
   srcDir: 'src',
 
+  runtimeConfig: {
+    public: {
+      // 图片网关地址，可通过环境变量 NUXT_PUBLIC_IMAGE_GATEWAY 覆盖
+      imageGateway: process.env.NUXT_PUBLIC_IMAGE_GATEWAY || 'https://workup-dev.myoumuamua.com:6433'
+    }
+  },
+
   alias: {
     '~': resolve(__dirname, './src'),
     '@': resolve(__dirname, './src')

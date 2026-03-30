@@ -20,11 +20,15 @@
       </div>
     </div>
     <div class="flexRowAC nav_r">
-      <NuxtLink to="http://oort.oortcloudsmart.com:23410" target="_blank">
+      <NuxtLink v-if="!data" :to="gotoLoginURL" target="_blank">
         <div class="login_but">
           <span>登录</span>
         </div>
       </NuxtLink>
+      <div v-else class="user_info">
+        <oort-img :src="data.photo" />
+        <span>{{ data.user_name }} </span>
+      </div>
       <el-popover v-if="isLogin" placement="bottom" trigger="click" popper-class="popover_panel">
         <template #reference>
           <img class="right_info_nine" src="@/assets/navheader/nightpointpng.png" />
@@ -59,6 +63,9 @@
 <script setup>
 import { ref, defineEmits, computed, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
+
+import { useRouteQuery } from '@vueuse/router'
+import { ofetch } from 'ofetch'
 import commonRightPoPover from './components/commonRightPoPover.vue'
 // import { useI18n } from 'vue-i18n'
 
@@ -302,6 +309,57 @@ watch(isActPath, (newVal) => {
   }
 }, { immediate: true })
 
+const gotoLoginURL = ref('https://workup-dev.myoumuamua.com:6433/bus/apaas-web/loginPage/index.html?appname=OortCloud Site&redirect_uri=' + encodeURIComponent('https://oortcloudsmart.com/zh/siteNew/'))
+// test
+// const gotoLoginURL = ref('https://workup-dev.myoumuamua.com:6433/bus/apaas-web/loginPage/index.html?appname=OortCloud Site&redirect_uri=' + encodeURIComponent('http://localhost:8080/zh/siteNew/'))
+
+// 1. 获取路由参数
+const token = useRouteQuery('access_token', '')
+const tenantId = useRouteQuery('tenant_id', '')
+
+// 2. 接口地址
+const baseUrl = 'https://workup-dev.myoumuamua.com:6433'
+
+// 3. 使用 ofetch 发送请求
+const data = ref(null)
+const isLoading = ref(false)
+
+const fetchUserInfo = async() => {
+  if (!token.value) return
+  isLoading.value = true
+  try {
+    const res = await ofetch(baseUrl + '/bus/apaas-sso/sso/v1/getUserInfo', {
+      method: 'POST',
+      body: {
+        accessToken: token.value
+      },
+      headers: {
+        'Content-Type': 'application/json',
+        tenantId: tenantId.value,
+        accesstoken: token.value,
+        appid: 'e1a36857e77c4e238703a06e0e57e7a0',
+        secretkey: '557d8735b655426cb21a4771b901de61',
+        requesttype: 'app'
+      }
+    })
+    if (res.code === 200) {
+      data.value = res.data
+    }
+  } catch (error) {
+    console.error('获取用户信息失败:', error)
+    data.value = null
+  } finally {
+    isLoading.value = false
+  }
+}
+
+// 4. 监听 token 变化 → 自动调用接口
+watch(token, (newToken) => {
+  if (newToken) {
+    fetchUserInfo()
+  }
+}, { immediate: true })
+
 </script>
 
 <style>
@@ -462,6 +520,22 @@ watch(isActPath, (newVal) => {
     height: 20px;
     background: #CCC;
     margin-left: 17px;
+  }
+}
+
+.user_info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+  }
+  span {
+    font-size: 16px;
+    color: #333;
+    margin-left: 8px;
   }
 }
 
