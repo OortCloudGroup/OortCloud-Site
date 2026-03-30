@@ -360,6 +360,40 @@ watch(token, (newToken) => {
   }
 }, { immediate: true })
 
+// 定时验证token
+const verifyToken = async() => {
+  if (!token.value) return
+  try {
+    const res = await ofetch(baseUrl + '/bus/apaas-sso/sso/v1/verifyToken', {
+      method: 'POST',
+      body: {
+        accessToken: token.value
+      },
+      headers: {
+        'Content-Type': 'application/json',
+        tenantId: tenantId.value,
+        accesstoken: token.value,
+        appid: 'e1a36857e77c4e238703a06e0e57e7a0',
+        secretkey: '557d8735b655426cb21a4771b901de61',
+        requesttype: 'app'
+      }
+    })
+    if (res.code === 200) {
+      // 更新session 的值
+      // accessToken: "b283b91918304cd4882250c51adf2fa4"
+      // tenantId: "0e391fd7-1033-4f09-88c0-187582fee462"
+      useSessionStorage('accessToken', res.data.accessToken, { shallow: false })
+      useSessionStorage('tenantId', res.data.tenantId, { shallow: false })
+    }
+  } catch (error) {
+    console.error('token验证失败:', error)
+  }
+}
+
+onMounted(() => {
+  setInterval(verifyToken, 10 * 1000)
+})
+
 </script>
 
 <style>
