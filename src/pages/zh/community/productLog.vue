@@ -254,7 +254,7 @@ onMounted(async() => {
       changelogJSONUrl += 'changelog.json'
       break
   }
-  const response = await fetch(changelogJSONUrl)
+  const response = await fetch(changelogJSONUrl + '?' + Date.now())
   const data = await response.json()
   changelog.value = data
 })
