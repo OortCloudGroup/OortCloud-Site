@@ -104,7 +104,7 @@
         </div>
       </div>
     </div>
-    <AppMealDetail v-model="showModal" :list="appMealDetailList" />
+    <AppMealDetail v-model="showModal" :detail="appMealDetails" />
   </el-dialog>
 </template>
 
@@ -130,7 +130,7 @@ const appImg = ref([])
 
 const emit = defineEmits(['update:modelValue'])
 const appMeal = ref([])
-const appMealDetailList = ref([])
+const appMealDetails = ref({})
 
 const visible = computed({
   get: () => props.modelValue,
@@ -169,7 +169,7 @@ const getAppMealList = async() => {
 
 const mealDetail = async(value) => {
   const res = await appMealDetail({ app_id: props.appId, id: value.id })
-  appMealDetailList.value = res.data.capability_items
+  appMealDetails.value = res.data
   showModal.value = true
 }
 
