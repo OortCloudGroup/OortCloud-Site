@@ -24,13 +24,14 @@
     <div class="treeTitle">
       授权应用
     </div>
-    <el-table :data="detail.items" style="width: 100%">
+    <el-table :data="detail.items" style="width: 100%" show-overflow-tooltip>
       <el-table-column type="expand">
         <template #default="scope">
           <div class="funtionTable">
-            <el-table :data="scope.row.feature_config_views" :border="childBorder">
+            <el-table :data="scope.row.feature_config_views" :border="childBorder" show-overflow-tooltip>
               <el-table-column label="功能点名称" prop="display_name" />
-              <el-table-column label="功能点类型" prop="type">
+              <el-table-column label="使用额度" prop="grant_desc" />
+              <!-- <el-table-column label="功能点类型" prop="type">
                 <template #default="cope">
                   {{ cope.row.value_type === 1 ? '开关 / 是否支持' : '数量 / 额度' }}
                 </template>
@@ -45,8 +46,8 @@
                   </span>
                 </template>
               </el-table-column>
-              <el-table-column label="单位" prop="unit" />
-              <el-table-column label="说明" prop="description" />
+              <el-table-column label="单位" prop="unit" /> -->
+              <el-table-column label="说明" prop="description" min-width="200px" />
             </el-table>
           </div>
         </template>
@@ -279,5 +280,14 @@ const getMealDetail = async() => {
   width: 80%;
   margin-left: auto;
 
+}
+
+:deep(.el-popper.is-dark) {
+  max-width: 400px !important;
+  padding: 6px 10px !important;
+}
+
+:deep(.el-table .el-table__row){
+  height: 70px;
 }
 </style>

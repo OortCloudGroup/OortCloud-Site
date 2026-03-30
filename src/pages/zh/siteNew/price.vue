@@ -59,7 +59,38 @@
       </div>
       为你的业务需求找到正确的<br />订阅套餐
     </div>
-    <div class="w1380">
+    <div class="compare-table w1380">
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>功能内容</th>
+            <!-- 动态列头：自动循环套餐名称 -->
+            <th v-for="name in packageColumns" :key="name">
+              {{ name }}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(item, idx) in tableData" :key="idx">
+            <!-- 图标 + 文字 垂直水平居中 -->
+            <td class="table-cell-center">
+              <oort-img v-if="item.icon_url" :src="item.icon_url" alt="" class="iconImg" />
+              <span>{{ item.featureName }}</span>
+            </td>
+
+            <!-- 动态列内容 -->
+            <td v-for="name in packageColumns" :key="name">
+              <!-- 服务行（带图标的行）不显示 - -->
+              <span v-if="item.isServiceRow" />
+              <!-- 功能行才显示值或 - -->
+              <span v-else>{{ item.values[name] || '-' }}</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- <div class="highlight" /> -->
+    </div>
+    <!-- <div class="w1380">
       <div class="table-container">
         <table class="version-table">
           <thead>
@@ -186,7 +217,7 @@
         </table>
         <div class="highlight" />
       </div>
-    </div>
+    </div> -->
     <div class="platTop w1380">
       <div class="VLStream us1">
         <span class="vlsUs us1s"><span>标准</span> 和 <span>定制</span> 服务计划，</span> 均为单一费用涵盖所有 OortCloud 应用程序
@@ -336,11 +367,13 @@ import product5_5 from '@/assets/VLimg2.0/product5_5.png'
 import product5_6 from '@/assets/VLimg2.0/product5_6.png'
 import product5_7 from '@/assets/VLimg2.0/product5_7.png'
 
-import { mealList } from '@/api'
+import { mealList, mealCompare } from '@/api'
 const list = ref([])
 const id = ref(1)
+const compareData = ref({})
 
 onMounted(() => {
+  getMealCompare()
   getMealList()
 })
 
@@ -357,6 +390,15 @@ const getMealList = async() => {
   }
 }
 
+const getMealCompare = async() => {
+  try {
+    const res = await mealCompare({})
+    compareData.value = res.data
+    buildTableData()
+  } catch (err) {
+    console.error('获取套餐对比:', err)
+  }
+}
 const mealDetail = (data) => {
   dialogVisible.value = true
   id.value = data
@@ -428,6 +470,76 @@ p5Arr.value = [
 //     automation: '私有定制自动化服务'
 //   }
 // ])
+
+// 表格数据
+const tableData = ref([])
+// 动态列配置（套餐名称）
+const packageColumns = ref([])
+
+// 封装获取对应套餐对应服务的功能配置值
+const getFeatureValue = (packageDisplayName, serviceName, featureName) => {
+  if (!compareData.value?.platform_package_views) return '-'
+  const targetPackage = compareData.value.platform_package_views.find(
+    item => item.display_name === packageDisplayName
+  )
+  if (!targetPackage) return '-'
+
+  const targetService = targetPackage.service_views.find(
+    item => item.display_name === serviceName
+  )
+  if (!targetService) return '-'
+
+  const targetFeature = targetService.feature_config_views.find(
+    item => item.display_name === featureName
+  )
+  return targetFeature ? targetFeature.display_value : '-'
+}
+
+// 构建表格数据 + 动态列
+const buildTableData = () => {
+  tableData.value = []
+  packageColumns.value = []
+
+  const packageList = compareData.value.platform_package_views || []
+  if (!packageList.length) return
+
+  // 生成列名（自动从接口取 display_name）
+  packageColumns.value = packageList.map(p => p.display_name)
+
+  // 取最后一个套餐作为基础结构
+  const basePackage = packageList.at(-1)
+
+  // 遍历服务
+  basePackage.service_views.forEach((service) => {
+    // 服务标题行
+    const row = {
+      featureName: service.display_name,
+      icon_url: service.icon_url,
+      isServiceRow: true,
+      values: {}
+    }
+
+    // 给每个套餐赋值
+    packageColumns.value.forEach((col) => {
+      row.values[col] = ''
+    })
+    tableData.value.push(row)
+
+    // 功能配置行
+    service.feature_config_views?.forEach((feature) => {
+      const fRow = {
+        featureName: feature.display_name,
+        icon_url: '',
+        values: {}
+      }
+      packageColumns.value.forEach((col) => {
+        fRow.values[col] = getFeatureValue(col, service.display_name, feature.display_name)
+      })
+      tableData.value.push(fRow)
+    })
+  })
+}
+
 </script>
 
 <style scoped lang="scss">
@@ -1348,11 +1460,11 @@ p5Arr.value = [
 }
 
 .highlight{
-  top: 10px;
+  top: 12px;
   left: 570px;
   position: absolute;
   width: 250px;
-  height: 870px;
+  height: 95%;
   border: 1px solid #FFFFFF;
   box-shadow: inset 0px 0px 40px 0px #2278FF;
   border-radius: 16px;
@@ -1389,5 +1501,46 @@ p5Arr.value = [
 .version-table tbody tr:last-child td {
   border-bottom: none;
 }
+.compare-table{
+  position: relative;
+  font-size: 20px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
 
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+  font-size: 16px;
+  table-layout: fixed;
+}
+
+.custom-table th {
+  padding: 30px 12px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.custom-table td {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.iconImg{
+  width: 50px;
+  height: 50px;
+  border-radius: 16px;
+}
+
+.table-cell-center {
+  padding: 20px 0 20px 70px !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 </style>

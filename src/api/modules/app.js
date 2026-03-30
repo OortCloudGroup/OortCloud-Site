@@ -48,3 +48,11 @@ export const appMealDetail = (data) => {
     body: data
   })
 }
+
+// 套餐对比
+export const mealCompare = (data) => {
+  return request('/openapis/platformPackages/v1/public_compare', {
+    method: 'POST',
+    body: data
+  })
+}

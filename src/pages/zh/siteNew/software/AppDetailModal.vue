@@ -35,35 +35,19 @@
           <el-tab-pane label="介绍" name="intro">
             <div class="intro-content">
               <p class="app-desc">
-                {{ detail.oneword }}
+                &emsp;&emsp;{{ detail.intro }}
               </p>
-              <ul class="app-features">
-                <li v-for="(feature, idx) in detail.features" :key="idx">
-                  - {{ feature }}
-                </li>
-              </ul>
-
-              <!-- 视频区域 -->
-              <div v-if="detail.video_url" class="video-section">
-                <video controls class="app-video" :poster="detail.video_poster">
-                  <source :src="detail.video_url" type="video/mp4" />
-                  您的浏览器不支持视频播放
-                </video>
+              <div v-for="(value,index) in appImg" :key="index">
+                <img :src="value" alt="" />
               </div>
-
-              <!-- 功能模块 -->
-              <div v-if="detail.modules && detail.modules.length" class="feature-modules">
-                <div v-for="(mod, idx) in detail.modules" :key="idx" class="module">
-                  <h3>{{ mod.title }}</h3>
-                  <img :src="mod.screenshot" class="module-img" />
-                  <p>{{ mod.desc }}</p>
-                </div>
-              </div>
+              <p class="app-desc">
+                &emsp;&emsp;{{ detail.description }}
+              </p>
             </div>
           </el-tab-pane>
           <el-tab-pane label="付费方案" name="pricing">
             <div class="pricing-content">
-              <el-table :data="appMeal" style="width: 100%">
+              <el-table :data="appMeal" style="width: 100%" show-overflow-tooltip>
                 <el-table-column prop="name" label="套餐名称" />
                 <el-table-column prop="app_version" label="应用版本" />
                 <el-table-column prop="pricing_type" label="定价类型">
@@ -94,9 +78,15 @@
         <div class="sidebar">
           <div class="sidebar-section">
             <h4>开发者</h4>
-            <p>{{ detail.develop_unit || '未知' }}</p>
-            <p>电话：{{ detail.phone || '未提供' }}</p>
-            <a v-if="detail.website" :href="detail.website" target="_blank">应用官网</a>
+            <p>开发单位：{{ detail.develop_unit || '' }}</p>
+            <p>电话：{{ detail.phone || '' }}</p>
+            <p v-if="detail.address">
+              企业地址：{{ detail.address || '' }}
+            </p>
+            <p v-if="detail.region">
+              应用归属地：{{ detail.region }}
+            </p>
+            <a v-if="detail.helptext" :href="detail.helptext" target="_blank">说明文档</a>
           </div>
           <div class="sidebar-section">
             <h4>标签</h4>
@@ -136,6 +126,7 @@ const props = defineProps({
 })
 
 const showModal = ref(false) // 控制弹窗显示/隐藏
+const appImg = ref([])
 
 const emit = defineEmits(['update:modelValue'])
 const appMeal = ref([])
@@ -161,6 +152,7 @@ const fetchAppDetail = async() => {
   try {
     const res = await appDetail({ app_id: props.appId })
     detail.value = res.data || {}
+    appImg.value = JSON.parse(detail.value.screenshot_url)
   } catch (err) {
     ElMessage.error('获取应用详情失败，请稍后重试')
   }
@@ -286,12 +278,17 @@ const mealDetail = async(value) => {
 
 // 介绍页内容
 .intro-content {
+  img{
+    width: 800px;
+    height: auto;
+    margin-bottom: 20px;
+  }
   .app-desc {
     width: 800px;
     font-size: 18px;
     color: #333;
     line-height: 1.6;
-    margin: 0 0 16px;
+    margin: 0 0 20px;
   }
 
   .app-features {
@@ -401,7 +398,7 @@ const mealDetail = async(value) => {
     }
 
     p {
-      margin: 4px 0;
+      margin-bottom: 5px;
       color: #333;
       font-size: 14px;
     }
@@ -435,6 +432,15 @@ const mealDetail = async(value) => {
   .feature-modules {
     grid-template-columns: 1fr !important;
   }
+}
+
+:deep(.el-popper.is-dark) {
+  max-width: 400px !important;
+  padding: 6px 10px !important;
+}
+
+:deep(.el-table .el-table__row){
+  height: 50px;
 }
 
 </style>
