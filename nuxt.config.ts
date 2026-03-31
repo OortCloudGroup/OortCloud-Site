@@ -50,7 +50,7 @@ export default defineNuxtConfig({
         { name: 'keywords', content: '奥陌陌，警务宝，一体化智慧基层平台，治安宝，奥尔特云，公共安全，移动办公，私有化部署，天琴智慧，午托管理，人脸识别考勤，托管人脸识别考勤，移动警务，智慧警务，即时通讯服务，安全加密通讯，实时音视频服务，私有化部署的移动安全办公云平台，微服务架构，分层解耦，共享服务，去烟囱，去竖井' }
       ],
       script: [
-        { src: 'http://map.qq.com/api/gljs?v=2.exp&key=QJ2BZ-UC26D-DR64X-HDFRX-L6KRE-VABBM', type: 'text/javascript' }
+        { src: 'https://map.qq.com/api/gljs?v=2.exp&key=QJ2BZ-UC26D-DR64X-HDFRX-L6KRE-VABBM', type: 'text/javascript' }
         // { src: 'http://map.qq.com/api/js?v=2.exp&callback=init&key=QJ2BZ-UC26D-DR64X-HDFRX-L6KRE-VABBM', type: 'text/javascript' }
       ]
     }
