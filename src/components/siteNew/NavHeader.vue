@@ -309,9 +309,9 @@ watch(isActPath, (newVal) => {
   }
 }, { immediate: true })
 
-const gotoLoginURL = ref('https://workup-dev.myoumuamua.com:6433/bus/apaas-web/loginPage/index.html?appname=OortCloud Site&redirect_uri=' + encodeURIComponent('https://oortcloudsmart.com/zh/siteNew/'))
+// const gotoLoginURL = ref('https://workup-dev.myoumuamua.com:6433/bus/apaas-web/loginPage/index.html?appname=OortCloud Site&redirect_uri=' + encodeURIComponent('https://oortcloudsmart.com/zh/siteNew/'))
 // test
-// const gotoLoginURL = ref('https://workup-dev.myoumuamua.com:6433/bus/apaas-web/loginPage/index.html?appname=OortCloud Site&redirect_uri=' + encodeURIComponent('http://localhost:8080/zh/siteNew/'))
+const gotoLoginURL = ref('https://workup-dev.myoumuamua.com:6433/bus/apaas-web/loginPage/index.html?appname=OortCloud Site&redirect_uri=' + encodeURIComponent('http://localhost:8080/zh/siteNew/'))
 
 // 1. 获取路由参数
 const token = useRouteQuery('access_token', '')
@@ -391,6 +391,7 @@ const verifyToken = async() => {
 }
 
 onMounted(() => {
+  verifyToken()
   setInterval(verifyToken, 10 * 1000)
 })
 

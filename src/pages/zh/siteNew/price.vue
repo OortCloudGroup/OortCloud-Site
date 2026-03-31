@@ -31,14 +31,14 @@
           </div>
         </div>
         <div class="item_content">
-          <div class="item-6" :class="{yellow_buy: item.name === '企业版'}">
+          <div class="item-6" :class="{yellow_buy: item.name === '企业版'}" @click="buyFn(item.id)">
             立即购买
           </div>
           <div class="item-7" :class="{yewllow_meal: item.name === '企业版'}">
             <div class="meal" @click="mealDetail(item.id)">
               <img src="@/assets/software/tcxq.png" alt="" />套餐详情
             </div>
-            <div class="meal">
+            <div class="meal" @click="addBuyFn">
               <img src="@/assets/software/zzgm.png" alt="" />增值购买
             </div>
           </div>
@@ -353,24 +353,22 @@
     >
       <priceDetail :id="id" />
     </el-dialog>
+    <el-drawer v-model="drawer" size="90%">
+      <buyDrawer :id="id" />
+    </el-drawer>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
 import priceDetail from './priceDetail.vue'
-import product5_1 from '@/assets/VLimg2.0/product5_1.png'
-import product5_2 from '@/assets/VLimg2.0/product5_2.png'
-import product5_3 from '@/assets/VLimg2.0/product5_3.png'
-import product5_4 from '@/assets/VLimg2.0/product5_4.png'
-import product5_5 from '@/assets/VLimg2.0/product5_5.png'
-import product5_6 from '@/assets/VLimg2.0/product5_6.png'
-import product5_7 from '@/assets/VLimg2.0/product5_7.png'
+import buyDrawer from './buyDrawer.vue'
 
-import { mealList, mealCompare } from '@/api'
+import { mealList, mealCompare, createOrder } from '@/api'
 const list = ref([])
 const id = ref(1)
 const compareData = ref({})
+const drawer = ref(false)
 
 onMounted(() => {
   getMealCompare()
@@ -407,18 +405,7 @@ const mealDetail = (data) => {
 definePageMeta({
   layout: 'site-new'
 })
-
-let p5Arr = ref([])
 const dialogVisible = ref(false)
-p5Arr.value = [
-  { t: 'Windows', d: '版本号：V3.1.06', flag: false, img: product5_1 },
-  { t: 'Android', d: '版本号：V3.1.06', flag: true, img: product5_2 },
-  { t: 'iOS', d: '版本号：V3.1.06', flag: true, img: product5_3 },
-  { t: 'Harmony OS', d: '版本号：V3.1.06', flag: true, img: product5_4 },
-  { t: 'Linux', d: '版本号：V3.1.06', flag: false, img: product5_5 },
-  { t: 'Mac OS', d: '版本号：V3.1.06', flag: false, img: product5_6 },
-  { t: '银河麒麟', d: '版本号：V3.1.06', flag: false, img: product5_7 }
-]
 
 // const list = ref([
 //   {
@@ -538,6 +525,50 @@ const buildTableData = () => {
       tableData.value.push(fRow)
     })
   })
+}
+
+const addBuyFn = () => {
+  drawer.value = true
+}
+
+const buyFn = async(id) => {
+  const request_id = generate36UniqueKey()
+  const items = [
+    {
+      item_type: 3,
+      platform_package_id: id,
+      purchase_years: 1
+    }
+  ]
+  const data = {
+    request_id,
+    order_type: 1,
+    pay_mode: 1,
+    currency: 'CNY',
+    terms_agreement: [
+      {
+        terms_id: 'privacy-v1',
+        channel: 'web'
+      }
+    ],
+    items
+  }
+
+  const res = await createOrder(data)
+  console.log(res, '订单')
+}
+
+// 生成36位唯一标识符
+const generate36UniqueKey = () => {
+  const timestamp = Date.now().toString()
+  const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+  let randomStr = ''
+  const needLength = 36 - timestamp.length
+  for (let i = 0; i < needLength; i++) {
+    randomStr += chars.charAt(Math.floor(Math.random() * chars.length))
+  }
+  let result = (timestamp + randomStr).split('').sort(() => Math.random() - 0.5).join('')
+  return result.slice(0, 36)
 }
 
 </script>
@@ -1542,5 +1573,8 @@ const buildTableData = () => {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+:deep(.el-drawer){
+  background-color: #f7f7f7;
 }
 </style>

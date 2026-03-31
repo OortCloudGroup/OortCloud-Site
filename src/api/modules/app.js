@@ -1,5 +1,8 @@
 
+import { useSessionStorage } from '@vueuse/core'
 import request from '../request'
+
+const token = useSessionStorage('accessToken', '')
 
 // 获取套餐列表
 export const mealList = (data) => {
@@ -54,5 +57,14 @@ export const mealCompare = (data) => {
   return request('/openapis/platformPackages/v1/public_compare', {
     method: 'POST',
     body: data
+  })
+}
+
+// 创建统一收银台订单
+export const createOrder = (data) => {
+  return request('/checkout/v1/createOrder', {
+    method: 'POST',
+    body: data,
+    headers: { accessToken: token.value }
   })
 }
