@@ -66,9 +66,6 @@
 import { ref, onMounted, computed } from 'vue'
 import { Search } from '@element-plus/icons-vue'
 import { appList } from '@/api'
-definePageMeta({
-  layout: 'site-new'
-})
 
 onMounted(() => {
   appListFn()

@@ -19,7 +19,7 @@
             {{ item.annual_price_desc }}
           <!-- <span class="title3" style="color: #818089;">/年</span> -->
           </div>
-          <div class="item-3 title3" style="color: #818089;">
+          <div class="item-3 title3" style="color: #666;">
             折合{{ (item.annual_price / 1200).toFixed(2) }}/月
           </div>
           <div class="item-4 title3">
@@ -59,171 +59,53 @@
       </div>
       为你的业务需求找到正确的<br />订阅套餐
     </div>
-    <div class="compare-table w1380">
-      <table class="custom-table">
+    <div
+      v-for="(serviceItem, sIdx) in serviceList"
+      :key="sIdx"
+      class="w1380 compare-table"
+    >
+      <div class="app-title">
+        <img :src="serviceItem.icon_url" alt="" style="width:36px;height:36px;margin-right:10px;" />
+        {{ serviceItem.display_name }}
+      </div>
+      <table class="im-table">
         <thead>
           <tr>
-            <th>功能内容</th>
-            <!-- 动态列头：自动循环套餐名称 -->
-            <th v-for="name in packageColumns" :key="name">
-              {{ name }}
+            <th class="center-text">
+              功能项
+            </th>
+            <th
+              v-for="pkg in packageColumns"
+              :key="pkg"
+            >
+              {{ pkg }}
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(item, idx) in tableData" :key="idx">
-            <!-- 图标 + 文字 垂直水平居中 -->
-            <td class="table-cell-center">
-              <oort-img v-if="item.icon_url" :src="item.icon_url" alt="" class="iconImg" />
-              <span>{{ item.featureName }}</span>
+          <tr
+            v-for="(feat, fIdx) in serviceItem.feature_config_views"
+            :key="fIdx"
+          >
+            <td class="center-text">
+              {{ feat.display_name }}
             </td>
-
-            <!-- 动态列内容 -->
-            <td v-for="name in packageColumns" :key="name">
-              <!-- 服务行（带图标的行）不显示 - -->
-              <span v-if="item.isServiceRow" />
-              <!-- 功能行才显示值或 - -->
-              <span v-else>{{ item.values[name] || '-' }}</span>
+            <td
+              v-for="pkg in packageColumns"
+              :key="pkg"
+            >
+              {{ getFeatureValue(pkg, serviceItem.display_name, feat.display_name) || '-' }}
             </td>
           </tr>
         </tbody>
       </table>
-      <!-- <div class="highlight" /> -->
     </div>
-    <!-- <div class="w1380">
-      <div class="table-container">
-        <table class="version-table">
-          <thead>
-            <tr>
-              <th>功能项</th>
-              <th>标准版</th>
-              <th class="highlight-col">
-                高级版
-              </th>
-              <th>企业版</th>
-              <th>旗舰版</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>付费价格</td>
-              <td>¥1229/年</td>
-              <td class="highlight-col">
-                ¥2229/年
-              </td>
-              <td>¥5229/年</td>
-              <td>¥8229/年</td>
-            </tr>
-            <tr>
-              <td>用户席位</td>
-              <td>10 位</td>
-              <td class="highlight-col">
-                20 位
-              </td>
-              <td>50 位</td>
-              <td>不限</td>
-            </tr>
-            <tr>
-              <td>联系人上限</td>
-              <td>50 个</td>
-              <td class="highlight-col">
-                100 个
-              </td>
-              <td>500 个</td>
-              <td>不限</td>
-            </tr>
-            <tr>
-              <td>应用部署上限</td>
-              <td>10 个</td>
-              <td class="highlight-col">
-                20 个
-              </td>
-              <td>50 个</td>
-              <td>80 个</td>
-            </tr>
-            <tr>
-              <td>服务部署上限</td>
-              <td>6 个</td>
-              <td class="highlight-col">
-                12 个
-              </td>
-              <td>30 个</td>
-              <td>60 个</td>
-            </tr>
-            <tr>
-              <td>Agent 调用额度 (月)</td>
-              <td>100 次</td>
-              <td class="highlight-col">
-                300 次
-              </td>
-              <td>1000 次</td>
-              <td>不限</td>
-            </tr>
-            <tr>
-              <td>自动化工作流</td>
-              <td>基础版</td>
-              <td class="highlight-col">
-                高级可视化版
-              </td>
-              <td>企业级引擎版</td>
-              <td>私有定制版</td>
-            </tr>
-            <tr>
-              <td>API 访问权限</td>
-              <td><span class="icon-cross">✕</span></td>
-              <td class="highlight-col">
-                基础版 (1万次/月)
-              </td>
-              <td>不限</td>
-              <td>不限</td>
-            </tr>
-            <tr>
-              <td>数据存储量</td>
-              <td>10 GB</td>
-              <td class="highlight-col">
-                50 GB
-              </td>
-              <td>200 GB</td>
-              <td>1000 GB + 备份服务</td>
-            </tr>
-            <tr>
-              <td>专属客户经理</td>
-              <td><span class="icon-cross">✕</span></td>
-              <td class="highlight-col">
-                <span class="icon-check">✓</span>
-              </td>
-              <td><span class="icon-check">✓</span></td>
-              <td><span class="icon-check">✓</span></td>
-            </tr>
-            <tr>
-              <td>客服等级支持</td>
-              <td>标准支持 (8小时响应)</td>
-              <td class="highlight-col">
-                优先支持 (4小时响应)
-              </td>
-              <td>7×12 专属客户经理</td>
-              <td>7×24 首席数据顾问</td>
-            </tr>
-            <tr>
-              <td>安全与合规</td>
-              <td>标准加密存储</td>
-              <td class="highlight-col">
-                标准加密存储
-              </td>
-              <td>审计日志 + SSO 单点登录</td>
-              <td>GDPR / 等保合规咨询</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="highlight" />
-      </div>
-    </div> -->
-    <div class="platTop w1380">
+    <!-- <div class="platTop w1380">
       <div class="VLStream us1">
         <span class="vlsUs us1s"><span>标准</span> 和 <span>定制</span> 服务计划，</span> 均为单一费用涵盖所有 OortCloud 应用程序
       </div>
-    </div>
-    <div class="proTitleBox priceIconBox w1380 flexRowAC" style="justify-content: space-between">
+    </div> -->
+    <!-- <div class="proTitleBox priceIconBox w1380 flexRowAC" style="justify-content: space-between">
       <div class="priceIconIt flexRowAC">
         <img class="priceImg" src="@/assets/software/price_c1.png" alt="" />
         <div class="priceTi">
@@ -272,8 +154,8 @@
           IOT
         </div>
       </div>
-    </div>
-    <div class="proTitleBox lineBox w1380 flexRowAC">
+    </div> -->
+    <!-- <div class="proTitleBox lineBox w1380 flexRowAC">
       <div class="line" />
       还有更多
       <img class="lineImg" src="@/assets/software/price_icon.png" alt="" />
@@ -295,8 +177,8 @@
           安排演示
         </div>
       </div>
-    </div>
-    <div class="proTitleBox w1380 flexRowAC" style="justify-content: flex-start;padding: 0; color: #fff;">
+    </div> -->
+    <div class="proTitleBox w1380 flexRowAC" style="justify-content: flex-start;">
       <div>
         有疑问<span style="color: #FFB53B">?</span>
         <div class="pri_why">
@@ -346,6 +228,7 @@
         什么是外部API?
       </div>
     </div>
+
     <el-dialog
       v-model="dialogVisible"
       width="1200px"
@@ -356,6 +239,9 @@
     <el-drawer v-model="drawer" size="90%">
       <buyDrawer :id="id" />
     </el-drawer>
+    <el-drawer v-model="drawer2" size="90%">
+      <payDrawer :order-data="orderData" />
+    </el-drawer>
   </div>
 </template>
 
@@ -363,12 +249,15 @@
 import { ref, onMounted } from 'vue'
 import priceDetail from './priceDetail.vue'
 import buyDrawer from './buyDrawer.vue'
+import payDrawer from './payDrawer.vue'
 
 import { mealList, mealCompare, createOrder } from '@/api'
 const list = ref([])
 const id = ref(1)
 const compareData = ref({})
 const drawer = ref(false)
+const drawer2 = ref(false)
+const orderData = ref({})
 
 onMounted(() => {
   getMealCompare()
@@ -407,124 +296,32 @@ definePageMeta({
 })
 const dialogVisible = ref(false)
 
-// const list = ref([
-//   {
-//     title: '标准版',
-//     price: '¥1229',
-//     monthlyPrice: '¥102.41',
-//     desc: 'Perfect for solo founders and small teams just getting started.',
-//     seat: '10 位',
-//     contact: '50 个',
-//     deployment: '10 个',
-//     service: '6 个',
-//     agent: '100 次 / 月',
-//     automation: '基础自动化流程'
-//   },
-//   {
-//     title: '高级版',
-//     price: '¥2229',
-//     monthlyPrice: '¥185.75',
-//     desc: 'For growing teams that need more reach and smarter insights.',
-//     seat: '20 位',
-//     contact: '100 个',
-//     deployment: '20 个',
-//     service: '12 个',
-//     agent: '300 次 / 月',
-//     automation: '高级自动化流程'
-//   },
-//   {
-//     title: '企业版',
-//     price: '¥5229',
-//     monthlyPrice: '¥435.75',
-//     desc: 'Perfect for solo founders and small teams just getting started.',
-//     seat: '50 位',
-//     contact: '500 个',
-//     deployment: '60 个',
-//     service: '30 个',
-//     agent: '1000 次 / 月',
-//     automation: '企业级自动化引擎'
-//   },
-//   {
-//     title: '旗舰版',
-//     price: '8229',
-//     monthlyPrice: '¥685.75',
-//     desc: 'Perfect for solo founders and small teams just getting started.',
-//     seat: '不限',
-//     contact: '不限',
-//     deployment: '80 个',
-//     service: '60 个',
-//     agent: '不限',
-//     automation: '私有定制自动化服务'
-//   }
-// ])
-
-// 表格数据
-const tableData = ref([])
-// 动态列配置（套餐名称）
 const packageColumns = ref([])
+const serviceList = ref([])
 
-// 封装获取对应套餐对应服务的功能配置值
-const getFeatureValue = (packageDisplayName, serviceName, featureName) => {
-  if (!compareData.value?.platform_package_views) return '-'
-  const targetPackage = compareData.value.platform_package_views.find(
-    item => item.display_name === packageDisplayName
-  )
-  if (!targetPackage) return '-'
+// 构建表格结构
+const buildTableData = () => {
+  const pkgViews = compareData.value?.platform_package_views || []
+  if (!pkgViews.length) return
 
-  const targetService = targetPackage.service_views.find(
-    item => item.display_name === serviceName
-  )
-  if (!targetService) return '-'
+  // 套餐列名
+  packageColumns.value = pkgViews.map(p => p.display_name)
 
-  const targetFeature = targetService.feature_config_views.find(
-    item => item.display_name === featureName
-  )
-  return targetFeature ? targetFeature.display_value : '-'
+  // 取第一个套餐下的服务作为结构基准
+  const basePackage = pkgViews[0]
+  serviceList.value = basePackage.service_views || []
 }
 
-// 构建表格数据 + 动态列
-const buildTableData = () => {
-  tableData.value = []
-  packageColumns.value = []
+const getFeatureValue = (packageName, serviceName, featureName) => {
+  const pkgViews = compareData.value?.platform_package_views || []
+  const pkg = pkgViews.find(p => p.display_name === packageName)
+  if (!pkg) return '-'
 
-  const packageList = compareData.value.platform_package_views || []
-  if (!packageList.length) return
+  const service = pkg.service_views.find(s => s.display_name === serviceName)
+  if (!service) return '-'
 
-  // 生成列名（自动从接口取 display_name）
-  packageColumns.value = packageList.map(p => p.display_name)
-
-  // 取最后一个套餐作为基础结构
-  const basePackage = packageList.at(-1)
-
-  // 遍历服务
-  basePackage.service_views.forEach((service) => {
-    // 服务标题行
-    const row = {
-      featureName: service.display_name,
-      icon_url: service.icon_url,
-      isServiceRow: true,
-      values: {}
-    }
-
-    // 给每个套餐赋值
-    packageColumns.value.forEach((col) => {
-      row.values[col] = ''
-    })
-    tableData.value.push(row)
-
-    // 功能配置行
-    service.feature_config_views?.forEach((feature) => {
-      const fRow = {
-        featureName: feature.display_name,
-        icon_url: '',
-        values: {}
-      }
-      packageColumns.value.forEach((col) => {
-        fRow.values[col] = getFeatureValue(col, service.display_name, feature.display_name)
-      })
-      tableData.value.push(fRow)
-    })
-  })
+  const feat = service.feature_config_views.find(f => f.display_name === featureName)
+  return feat?.display_value || '-'
 }
 
 const addBuyFn = () => {
@@ -532,30 +329,37 @@ const addBuyFn = () => {
 }
 
 const buyFn = async(id) => {
-  const request_id = generate36UniqueKey()
-  const items = [
-    {
-      item_type: 3,
-      platform_package_id: id,
-      purchase_years: 1
-    }
-  ]
-  const data = {
-    request_id,
-    order_type: 1,
-    pay_mode: 1,
-    currency: 'CNY',
-    terms_agreement: [
+  try {
+    const request_id = generate36UniqueKey()
+    const items = [
       {
-        terms_id: 'privacy-v1',
-        channel: 'web'
+        item_type: 3,
+        platform_package_id: id,
+        purchase_years: 1
       }
-    ],
-    items
-  }
+    ]
+    const data = {
+      request_id,
+      order_type: 1,
+      pay_mode: 1,
+      currency: 'CNY',
+      terms_agreement: [
+        {
+          terms_id: 'privacy-v1',
+          channel: 'web'
+        }
+      ],
+      items
+    }
 
-  const res = await createOrder(data)
-  console.log(res, '订单')
+    const res = await createOrder(data)
+    if (res.code === 200) {
+      orderData.value = res.data
+      drawer2.value = true
+    }
+  } catch (error) {
+    console.error('创建订单失败：', error)
+  }
 }
 
 // 生成36位唯一标识符
@@ -577,10 +381,6 @@ const generate36UniqueKey = () => {
 
 .home_page {
   position: relative;
-}
-
-.home_page.vls {
-  background-color: #00020F;
 }
 
 .w1380 {
@@ -620,7 +420,7 @@ const generate36UniqueKey = () => {
   }
 
   .VLStream {
-    color: #fff;
+    color: #333;
     font-weight: bold;
     font-size: 78px;
     padding-bottom: 30px;
@@ -1045,7 +845,7 @@ const generate36UniqueKey = () => {
   color: #3D3D3D;
   font-weight: bold;
   font-size: 58px;
-  padding-bottom: 100px;
+  padding-top: 100px;
 }
 
 .mb_h_t {
@@ -1071,11 +871,11 @@ const generate36UniqueKey = () => {
     border-radius: 12px;
     padding: 20px;
     margin-bottom: 20px;
-    color: #fff;
+    color: #333;
     font-weight: normal;
     font-size: 20px;
     text-align: left;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid #E4E4E7;
     background-color: rgba(255, 255, 255, 0.02);
   }
 
@@ -1090,15 +890,15 @@ const generate36UniqueKey = () => {
 .vlsUs {
   opacity: 1;
   border-radius: 0px;
-  background: linear-gradient(270deg, rgba(146, 59, 255, 0.04) 0%, rgba(146, 59, 255, 0.32) 100%);
+  background: linear-gradient(270deg, rgba(16, 208, 127, 0.04) 0%, rgba(16, 208, 127, 0.32) 100%);
   border-left: 6px solid #923BFF;
   padding-left: 10px;
-  color: #fff;
+  color: #333;
 }
 
 .pri_why {
   padding: 20px 0 40px;
-  color: #fff;
+  color: #333;
   font-weight: normal;
   font-size: 20px;
 }
@@ -1120,7 +920,7 @@ const generate36UniqueKey = () => {
 .proTitleBox.plan {
   .plan_t {
     padding-bottom: 48px;
-    color: #fff;
+    color: #333;
     font-weight: normal;
     font-size: 24px;
     text-align: center;
@@ -1161,7 +961,7 @@ const generate36UniqueKey = () => {
   }
 
   .priceTi {
-    color: #fff;
+    color: #333;
     font-weight: normal;
     font-size: 20px;
     text-align: center;
@@ -1320,11 +1120,11 @@ const generate36UniqueKey = () => {
 }
 .page-start{
   height: 220px;
-  background: url(@/assets/software/price-bg.png);
+  // background: url(@/assets/software/price-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0;
-  padding-top: 190px;
+  padding-top: 140px;
   color: #fff;
   font-size: 24px;
 }
@@ -1352,8 +1152,8 @@ const generate36UniqueKey = () => {
 
 .item{
   border-radius: 16px;
-  color: #fff;
-  background-color: #000F26;
+  color: #333;
+  background-color: #E8F0FE;
   box-sizing: border-box;
   padding: 32px;
   width: 390px;
@@ -1401,7 +1201,8 @@ const generate36UniqueKey = () => {
     width: 100%;
     padding: 12px;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #2278FF;
+    color: #fff;
     border-radius: 8px;
     font-size: 16px;
     font-weight: 500;
@@ -1433,20 +1234,21 @@ const generate36UniqueKey = () => {
 
 .yellow{
   border: 1px solid #FECE04;
-  box-shadow: 0px 0px 24px 0px rgba(254, 206, 2, 0.6);
+  // box-shadow: 0px 0px 24px 0px rgba(254, 206, 2, 0.6);
   background-color: rgba(254, 206, 2, 0.2);
 
 }
 .yellow_buy{
+  color: #333 !important;
   background: linear-gradient(106deg, #FFDB43 26%, #F5A10A 79%);
   box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: inset 0px 0px 21px 0px rgba(254, 206, 2, 0.2);
 }
 .yewllow_meal{
-  color: #FECE04 !important;
+  color: #F5A10A !important;
   img{
-    filter: hue-rotate(180deg) saturate(1.0) brightness(1.9);
+    filter: hue-rotate(180deg) saturate(1.0) brightness(1.4);
   }
 }
 
@@ -1454,7 +1256,7 @@ const generate36UniqueKey = () => {
   cursor: pointer;
   padding: 12px 50px;
   border-radius: 8px;
-  border: 1px solid #FFFFFF;
+  background-color: #2278FF;
   width: fit-content;
   margin: 40px auto;
   margin-bottom: 20px;
@@ -1462,12 +1264,13 @@ const generate36UniqueKey = () => {
 }
 .descripe{
   text-align: center;
-  color: #fff;
+  color: #666666;
 }
 .contrast{
   font-size: 48px;
+  font-weight: bold;
   text-align: center;
-  color: #fff;
+  color: #333;
   margin-top: 150px;
   margin-bottom: 40px;
   .contrast_tiitle{
@@ -1475,9 +1278,10 @@ const generate36UniqueKey = () => {
     width: fit-content;
     padding:  5px 16px;
     font-size: 18px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: normal;
+    color: #2278FF;
+    border: 1px solid #2278FF;
     border-radius: 99px;
-    background: rgba(255, 255, 255, 0.05);
     margin-bottom: 20px;
   }
 }
@@ -1532,49 +1336,89 @@ const generate36UniqueKey = () => {
 .version-table tbody tr:last-child td {
   border-bottom: none;
 }
-.compare-table{
-  position: relative;
-  font-size: 20px;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-}
 
-.custom-table {
-  width: 100%;
-  border-collapse: collapse;
-  color: #fff;
-  font-size: 16px;
-  table-layout: fixed;
-}
-
-.custom-table th {
-  padding: 30px 12px;
-  text-align: center;
-  font-weight: 500;
-  font-size: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.custom-table td {
-  text-align: center;
-  padding: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.iconImg{
-  width: 50px;
-  height: 50px;
-  border-radius: 16px;
-}
-
-.table-cell-center {
-  padding: 20px 0 20px 70px !important;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
 :deep(.el-drawer){
   background-color: #f7f7f7;
+}
+:deep(.el-drawer__header){
+  margin-bottom: 0;
+}
+
+.im-table-container {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.table-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.header-icon {
+  width: 48px;
+  height: 48px;
+  background: #4080FF;
+  border-radius: 12px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1d2129;
+}
+
+.im-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.im-table th,
+.im-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  color: #1d2129;
+}
+
+.im-table th {
+  font-weight: 600;
+  background: #f7f8fa;
+}
+
+.im-table tr:last-child td {
+  border-bottom: none;
+}
+
+.center-text {
+  text-align: left !important;
+  width: 280px;
+}
+.compare-table{
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  margin-bottom: 50px;
+  .app-title{
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    background: #f7f8fa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    img{
+      width: 36px;
+      height: 36px;
+      margin-right: 10px;
+    }
+  }
 }
 </style>

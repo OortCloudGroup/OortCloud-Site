@@ -34,6 +34,7 @@
     "naive-ui": "^2.34.3",
     "pinia": "^2.0.33",
     "postcss-px-to-viewport": "^1.1.1",
+    "qrcode.vue": "^3.8.0",
     "sass": "^1.59.3"
   },
   "husky": {

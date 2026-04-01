@@ -3,7 +3,7 @@ import { ofetch } from 'ofetch'
 
 // 创建请求实例
 const request = ofetch.create({
-  baseURL: 'http://192.168.60.76:32620/bus/apaas-appstore',
+  baseURL: 'http://192.168.60.76:32620/bus',
   timeout: 10000, // 超时时间
   headers: {
     'Content-Type': 'application/json'

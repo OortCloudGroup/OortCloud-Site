@@ -3,10 +3,18 @@ import { useSessionStorage } from '@vueuse/core'
 import request from '../request'
 
 const token = useSessionStorage('accessToken', '')
-
+const tenantId = useSessionStorage('tenantId', '')
+const headers = {
+  'Content-Type': 'application/json',
+  tenantId: tenantId.value,
+  accesstoken: token.value,
+  appid: 'e1a36857e77c4e238703a06e0e57e7a0',
+  secretkey: '557d8735b655426cb21a4771b901de61',
+  requesttype: 'app'
+}
 // 获取套餐列表
 export const mealList = (data) => {
-  return request('/openapis/platformPackages/v1/public_list', {
+  return request('/apaas-appstore/openapis/platformPackages/v1/public_list', {
     method: 'POST',
     body: data
   })
@@ -14,7 +22,7 @@ export const mealList = (data) => {
 
 // 套餐详情
 export const mealDetail = (data) => {
-  return request('/openapis/platformPackages/v1/public_detail', {
+  return request('/apaas-appstore/openapis/platformPackages/v1/public_detail', {
     method: 'POST',
     body: data
   })
@@ -22,7 +30,7 @@ export const mealDetail = (data) => {
 
 // 获取应用列表
 export const appList = (data) => {
-  return request('/marketApps/v1/list', {
+  return request('/apaas-appstore/marketApps/v1/list', {
     method: 'POST',
     body: data
   })
@@ -30,7 +38,7 @@ export const appList = (data) => {
 
 // 应用详情
 export const appDetail = (data) => {
-  return request('/marketApps/v1/detail', {
+  return request('/apaas-appstore/marketApps/v1/detail', {
     method: 'POST',
     body: data
   })
@@ -38,7 +46,7 @@ export const appDetail = (data) => {
 
 // 获取应用的套餐列表
 export const appMealList = (data) => {
-  return request('/openapis/marketPackages/v1/public_list', {
+  return request('/apaas-appstore/openapis/marketPackages/v1/public_list', {
     method: 'POST',
     body: data
   })
@@ -46,7 +54,7 @@ export const appMealList = (data) => {
 
 // 获取应用的套餐详情
 export const appMealDetail = (data) => {
-  return request('/openapis/marketPackages/v1/public_detail', {
+  return request('/apaas-appstore/openapis/marketPackages/v1/public_detail', {
     method: 'POST',
     body: data
   })
@@ -54,7 +62,7 @@ export const appMealDetail = (data) => {
 
 // 套餐对比
 export const mealCompare = (data) => {
-  return request('/openapis/platformPackages/v1/public_compare', {
+  return request('/apaas-appstore/openapis/platformPackages/v1/public_compare', {
     method: 'POST',
     body: data
   })
@@ -62,9 +70,27 @@ export const mealCompare = (data) => {
 
 // 创建统一收银台订单
 export const createOrder = (data) => {
-  return request('/checkout/v1/createOrder', {
+  return request('/apaas-appstore/checkout/v1/createOrder', {
     method: 'POST',
     body: data,
     headers: { accessToken: token.value }
+  })
+}
+
+// 创建支付单
+export const createBill = (data) => {
+  return request('/apaas-payment-service/pay/v1/create', {
+    method: 'POST',
+    body: data,
+    headers
+  })
+}
+
+// 订单详情
+export const orderDetail = (data) => {
+  return request('/apaas-order-service/orders/v1/detail', {
+    method: 'POST',
+    body: data,
+    headers
   })
 }
