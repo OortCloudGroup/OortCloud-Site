@@ -61,36 +61,36 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
             </div>
           </a>
         </div>
-        <div class="demo_body_right">
-          <img src="/img/demo/xc/xc_right.png" />
-        </div>
       </div>
-      <div class="demo_bottom">
-        <div class="demo_bottom_intro">
-          <span>平台介绍</span>
-          <span>XCreator敏捷发布平台基于顶层设计构建技术统一，功能统一，结构统一，资源向上归集、面向多服务对象、多渠道、多层级、多部门的网站集群平台，由多个构建在同一数据体系上的门户网站群构成。目前，该产品已在20+ 门户网站项目中落地，并在客户信创环境中稳定运行，帮助客户实现安全可靠的集约化管理。未来，品高软件将坚持以相关政府文件为总体指导，并积极运用大数据、云计算、人工智能等技术进行创新驱动，为政府行业用户统筹管理网站提供有力支撑。</span>
+      <div class="demo_body_right">
+        <img src="/img/demo/xc/xc_right.png" />
+      </div>
+    </div>
+    <div class="demo_bottom">
+      <div class="demo_bottom_intro">
+        <span>平台介绍</span>
+        <span>XCreator敏捷发布平台基于顶层设计构建技术统一，功能统一，结构统一，资源向上归集、面向多服务对象、多渠道、多层级、多部门的网站集群平台，由多个构建在同一数据体系上的门户网站群构成。目前，该产品已在20+ 门户网站项目中落地，并在客户信创环境中稳定运行，帮助客户实现安全可靠的集约化管理。未来，品高软件将坚持以相关政府文件为总体指导，并积极运用大数据、云计算、人工智能等技术进行创新驱动，为政府行业用户统筹管理网站提供有力支撑。</span>
+      </div>
+      <div class="demo_bottom_group">
+        <div>
+          <img src="/img/demo/xc/xc_d1.png" />
+          <span>基础资源层面</span>
+          <span>云平台统一提供资源<br />节约建设成本</span>
         </div>
-        <div class="demo_bottom_group">
-          <div>
-            <img src="/img/demo/xc/xc_d1.png" />
-            <span>基础资源层面</span>
-            <span>云平台统一提供资源<br />节约建设成本</span>
-          </div>
-          <div>
-            <img src="/img/demo/xc/xc_d2.png" />
-            <span>数据层面</span>
-            <span>门户网站信息高度整合</span>
-          </div>
-          <div>
-            <img src="/img/demo/xc/xc_d3.png" />
-            <span>业务层面</span>
-            <span>站群大后台信息统一监管</span>
-          </div>
-          <div>
-            <img src="/img/demo/xc/xc_d4.png" />
-            <span>信息安全方面</span>
-            <span>完善的信息安全体系<br />集中防护<br />保障信息安全</span>
-          </div>
+        <div>
+          <img src="/img/demo/xc/xc_d2.png" />
+          <span>数据层面</span>
+          <span>门户网站信息高度整合</span>
+        </div>
+        <div>
+          <img src="/img/demo/xc/xc_d3.png" />
+          <span>业务层面</span>
+          <span>站群大后台信息统一监管</span>
+        </div>
+        <div>
+          <img src="/img/demo/xc/xc_d4.png" />
+          <span>信息安全方面</span>
+          <span>完善的信息安全体系<br />集中防护<br />保障信息安全</span>
         </div>
       </div>
     </div>

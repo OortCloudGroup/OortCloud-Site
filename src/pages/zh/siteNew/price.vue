@@ -65,7 +65,7 @@
       class="w1380 compare-table"
     >
       <div class="app-title">
-        <img :src="serviceItem.icon_url" alt="" style="width:36px;height:36px;margin-right:10px;" />
+        <oort-img :src="serviceItem.icon_url" alt="" style="width:36px;height:36px;margin-right:10px;" />
         {{ serviceItem.display_name }}
       </div>
       <table class="im-table">
@@ -247,11 +247,14 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useSessionStorage } from '@vueuse/core'
 import priceDetail from './priceDetail.vue'
 import buyDrawer from './buyDrawer.vue'
 import payDrawer from './payDrawer.vue'
 
 import { mealList, mealCompare, createOrder } from '@/api'
+
+const token = useSessionStorage('accessToken', '')
 const list = ref([])
 const id = ref(1)
 const compareData = ref({})
@@ -329,6 +332,10 @@ const addBuyFn = () => {
 }
 
 const buyFn = async(id) => {
+  if (!token.value) {
+    window.open('https://workup-dev.myoumuamua.com:6433/bus/apaas-web/loginPage/index.html?appname=OortCloud Site&redirect_uri=' + encodeURIComponent('https://oortcloudsmart.com/zh/siteNew/'), '_blank')
+    return
+  }
   try {
     const request_id = generate36UniqueKey()
     const items = [

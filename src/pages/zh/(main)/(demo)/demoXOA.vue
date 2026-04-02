@@ -1,13 +1,10 @@
-/**
-Created by  lanjian   on 2023/8/20  18:05
-Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
-*/
+
 <template>
   <div class="page_container">
     <div class="demo_body">
       <div class="demo_body_left">
-        <span class="demo_body_left_title">企业办公</span>
-        <span class="demo_body_left_subtitle">新一代OA数字化办公生产力工具</span>
+        <span class="demo_body_left_title">企业自动化</span>
+        <span class="demo_body_left_subtitle">AI 赋能的新一代数字化办公生产力工具</span>
         <div class="demo_body_left_items">
           <client-only>
             <n-popover trigger="hover" arrow-point-to-center placement="right">
@@ -101,9 +98,44 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
         <img src="/img/demo/xoa/xoa_right.png" />
       </div>
     </div>
+    <div class="ai-employee-container">
+      <!-- 头部 -->
+      <div class="header-section">
+        <h1 class="main-title">
+          <span class="title-normal">Altman 助你 </span>
+          <span class="title-highlight"> 企业自动化</span>
+        </h1>
+        <p class="subtitle">
+          基于自研大模型，为不同业务场景量身定制的 AI 数字员工，不仅是工具，更是智慧合伙人
+        </p>
+      </div>
+
+      <!-- 卡片列表 -->
+      <div class="cards-grid">
+        <div
+          v-for="item in cardList"
+          :key="item.title"
+          class="card"
+          :class="`card-${item.color}`"
+        >
+          <div class="card-avatar">
+            <img :src="item.avatar" alt="" />
+          </div>
+          <h3 class="card-title">
+            {{ item.title }}
+          </h3>
+          <ul class="card-features">
+            <li v-for="(feat, idx) in item.features" :key="idx">
+              <span class="feature-icon" :class="`icon-${item.color}`">✓</span>
+              <span>{{ feat }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="demo_bottom">
       <div class="demo_bottom_title">
-        基础功能
+        基础办公能力 稳定可靠
       </div>
       <div class="demo_bottom_group">
         <div>
@@ -150,6 +182,7 @@ Copyright 奥尔特云（深圳）智慧科技有限公司. All rights reserved.
 
 import { IosArrowForward } from '@vicons/ionicons4'
 import { NPopover, NIcon, NModal } from 'naive-ui'
+import { ref } from 'vue'
 
 definePageMeta({
   layout: 'demo',
@@ -168,7 +201,56 @@ useSeoMeta({
 
 const showModal = ref(false)
 const videoUrl = ref('https://v.qq.com/txp/iframe/player.html?vid=h3155cunx94')
-
+const cardList = ref([
+  {
+    title: '通用',
+    color: 'blue',
+    avatar: '/img/demo/xoa/ty.png',
+    features: ['对话基础交互', '文档、表格、PPT处理生成', '多场景适配']
+  },
+  {
+    title: '办公',
+    color: 'green',
+    avatar: '/img/demo/xoa/bg.png',
+    features: ['公文自动生成', '政策解读', '流程审批辅助']
+  },
+  {
+    title: '营销',
+    color: 'red',
+    avatar: '/img/demo/xoa/yx.png',
+    features: ['营销话术生成', '客户画像分析', '活动方案策划']
+  },
+  {
+    title: '编程',
+    color: 'yellow',
+    avatar: '/img/demo/xoa/bc.png',
+    features: ['代码生成与解释', 'Bug 排查', '技术文档编写']
+  },
+  {
+    title: '运维',
+    color: 'red',
+    avatar: '/img/demo/xoa/yw.png',
+    features: ['故障自动排查', '日志分析', '资源监控预警']
+  },
+  {
+    title: 'HR',
+    color: 'blue',
+    avatar: '/img/demo/xoa/hr.png',
+    features: ['简历筛选', '面试邀约', '员工绩效分析']
+  },
+  {
+    title: '会议',
+    color: 'yellow',
+    avatar: '/img/demo/xoa/hy.png',
+    features: ['会议纪要自动生成', '内容要点提炼', '多语言实时转写']
+  },
+  {
+    title: '感知',
+    color: 'green',
+    avatar: '/img/demo/xoa/gz.png',
+    features: ['多模态内容理解', '场景化感知推荐', '智能意图识别']
+  }
+])
 </script>
 
 <style lang="scss" scoped>
@@ -228,10 +310,12 @@ const videoUrl = ref('https://v.qq.com/txp/iframe/player.html?vid=h3155cunx94')
   width: 80%;
   flex-direction: column;
   &_title {
-    font-size: 28px;
-    color: #1B396C;
+    text-align: center;
+    font-size: 40px;
+    color: #333;
     letter-spacing: 0;
     font-weight: 700;
+    margin-bottom: 60px;
   }
   &_subtitle {
     font-size: 20px;
@@ -349,6 +433,115 @@ const videoUrl = ref('https://v.qq.com/txp/iframe/player.html?vid=h3155cunx94')
       letter-spacing: 0;
       text-align: right;
       font-weight: 400;
+    }
+  }
+}
+
+.ai-employee-container {
+  width: 80%;
+  margin: 120px auto;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  .main-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+    .title-normal { color: #333; }
+    .title-highlight { color: #4080ff; }
+  }
+
+  .subtitle {
+    font-size: 16px;
+    color: #666;
+    max-width: 500px;
+    margin: 0;
+  }
+}
+
+/* Flex 卡片布局 */
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.card {
+  flex: 0 0 calc(25% - 18px);
+  min-width: 280px;
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-sizing: border-box;
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+
+  &.card-blue { background: #e8f0fe; }
+  &.card-green { background: #e8f8f0; }
+  &.card-red { background: #ffeef0; }
+  &.card-yellow { background: #fff8e8; }
+
+  .card-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .card-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    padding-bottom: 12px;
+  }
+
+  .card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+
+      .feature-icon {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        color: #fff;
+        flex-shrink: 0;
+      }
+      .icon-blue { background: #4080ff; }
+      .icon-green { background: #36d399; }
+      .icon-red { background: #f87272; }
+      .icon-yellow { background: #fbbf24; }
     }
   }
 }

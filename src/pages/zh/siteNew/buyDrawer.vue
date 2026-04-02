@@ -25,7 +25,7 @@
             :value="item"
           >
             <div class="flexRowAC priceIconIt">
-              <img class="priceImg" :src="item.icon_url" alt="" />
+              <oort-img class="priceImg" :src="item.icon_url" alt="" />
               <div class="priceTi">
                 {{ item.app_name }}
               </div>
@@ -71,14 +71,10 @@ onMounted(() => {
   appListFn()
 })
 
-// 接口返回的原始应用列表
 const appListRaw = ref([])
-// 搜索关键词
 const searchValue = ref('')
-// 选中的应用集合（直接存完整item对象）
 const checkedApps = ref([])
 
-// 过滤后的应用列表（支持搜索）
 const filteredAppList = computed(() => {
   if (!searchValue.value) return appListRaw.value
   return appListRaw.value.filter(item =>
@@ -94,7 +90,6 @@ const appListFn = async() => {
       pagesize: 100
     }
     const res = await appList(data)
-    // 直接将接口返回的list赋值给原始列表
     appListRaw.value = res.data.list
   } catch (err) {
     console.error('获取应用列表失败:', err)
@@ -104,7 +99,6 @@ const appListFn = async() => {
 // 立即购买
 const buyClick = () => {
   if (!checkedApps.value.length) return false
-  // 可在这里将选中的应用数据传给后端，再跳转
   console.log('选中的应用：', checkedApps.value)
   window.open('http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html', '_blank')
 }

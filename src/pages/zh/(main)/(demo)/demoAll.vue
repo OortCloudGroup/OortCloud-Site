@@ -21,7 +21,7 @@ const doubleSysApp = ref({
     },
     {
       name: '智慧园林',
-      logo: '/img/home/zhyl.png',
+      logo: '/img/demo/menu/yl.png',
       excerpt: '物联网与GIS一张网技术驱动的园林全流程精细化管控平台',
       link: '/demoYL'
     },
@@ -85,6 +85,12 @@ const doubleSysApp = ref({
       logo: '/img/demo/menu/oa.png',
       excerpt: '新一代OA数字化办公生产力工具',
       link: '/demoXOA'
+    },
+    {
+      name: '智慧党建',
+      logo: '/img/demo/menu/dj.png',
+      excerpt: '新一代OA数字化办公生产力工具',
+      link: '/demoDJ'
     }
   ]
 })
