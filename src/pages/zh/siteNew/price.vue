@@ -38,7 +38,7 @@
             <div class="meal" @click="mealDetail(item.id)">
               <img src="@/assets/software/tcxq.png" alt="" />套餐详情
             </div>
-            <div class="meal" @click="addBuyFn">
+            <div class="meal" @click="addBuyFn(item.id)">
               <img src="@/assets/software/zzgm.png" alt="" />增值购买
             </div>
           </div>
@@ -233,11 +233,12 @@
       v-model="dialogVisible"
       width="1200px"
       destroy-on-close
+      top="5vh"
     >
       <priceDetail :id="id" />
     </el-dialog>
     <el-drawer v-model="drawer" size="90%">
-      <buyDrawer :id="id" />
+      <buyDrawer :platform-id="platformId" />
     </el-drawer>
     <el-drawer v-model="drawer2" size="90%">
       <payDrawer :order-data="orderData" />
@@ -261,6 +262,7 @@ const compareData = ref({})
 const drawer = ref(false)
 const drawer2 = ref(false)
 const orderData = ref({})
+const platformId = ref(1)
 
 onMounted(() => {
   getMealCompare()
@@ -327,8 +329,9 @@ const getFeatureValue = (packageName, serviceName, featureName) => {
   return feat?.display_value || '-'
 }
 
-const addBuyFn = () => {
+const addBuyFn = (id) => {
   drawer.value = true
+  platformId.value = id
 }
 
 const buyFn = async(id) => {
@@ -1132,7 +1135,7 @@ const generate36UniqueKey = () => {
   background-size: cover;
   padding: 0;
   padding-top: 140px;
-  color: #fff;
+  color: #333;
   font-size: 24px;
 }
 

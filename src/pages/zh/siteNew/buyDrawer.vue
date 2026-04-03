@@ -23,6 +23,7 @@
             :key="item.app_id || itemIndex"
             :label="item.app_id"
             :value="item"
+            @change="(val) => handleAppCheck(val, item)"
           >
             <div class="flexRowAC priceIconIt">
               <oort-img class="priceImg" :src="item.icon_url" alt="" />
@@ -59,14 +60,29 @@
         </div>
       </div>
     </div>
+    <el-dialog
+      v-model="dialogVisible"
+      width="80%"
+      destroy-on-close
+      top="5vh"
+    >
+      <addBuyDetail :current-app="currentApp" :platform-id="props.platformId" />
+    </el-dialog>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { Search } from '@element-plus/icons-vue'
+import addBuyDetail from './addBuyDetail.vue'
 import { appList } from '@/api'
 
+const props = defineProps({
+  platformId: {
+    type: Number,
+    required: true
+  }
+})
 onMounted(() => {
   appListFn()
 })
@@ -74,6 +90,8 @@ onMounted(() => {
 const appListRaw = ref([])
 const searchValue = ref('')
 const checkedApps = ref([])
+const dialogVisible = ref(false)
+const currentApp = ref(null)
 
 const filteredAppList = computed(() => {
   if (!searchValue.value) return appListRaw.value
@@ -96,6 +114,13 @@ const appListFn = async() => {
   }
 }
 
+const handleAppCheck = (isChecked, item) => {
+  if (isChecked) {
+    currentApp.value = item
+    dialogVisible.value = true
+    console.log(item)
+  }
+}
 // 立即购买
 const buyClick = () => {
   if (!checkedApps.value.length) return false
