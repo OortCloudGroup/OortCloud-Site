@@ -4,7 +4,7 @@
     <div class="app">
       <oort-img class="app-icon" :src="props.currentApp.icon_url" alt="" />{{ props.currentApp.app_name }}
     </div>
-    <el-tabs v-model="activeName" class="demo-tabs">
+    <el-tabs v-model="activeName" class="demo-tabs" @tab-click="handleTabClick">
       <el-tab-pane label="超值套餐" name="first">
         <div class="priceBox">
           <div
@@ -81,7 +81,7 @@
 
 <script setup>
 import { ref, watch, computed } from 'vue'
-import { appMealList } from '@/api'
+import { appMealList, capabilityList } from '@/api'
 const activeName = ref('first')
 const props = defineProps({
   currentApp: {
@@ -101,6 +101,24 @@ const hasIncludedPackage = computed(() => {
   return public_list.value.some(item => item.in_platform_package === 1)
 })
 
+const capabilityListFn = async() => {
+  try {
+    const res = await capabilityList({
+      app_id: props.currentApp.app_id,
+      platform_package_id: props.platformId,
+      app_version_id: props.currentApp.latest_version.version_id,
+      app_package_id: selectedItemId.value
+    })
+
+    packageList.value = res.data.map(item => ({
+      ...item,
+      price: Number((item.annual_price / 100).toFixed(2))
+    }))
+  } catch (err) {
+    console.error('获取应用套餐列表失败:', err)
+  }
+}
+
 const getAppMealList = async() => {
   try {
     const res = await appMealList({ app_id: props.currentApp.app_id, platform_package_id: props.platformId })
@@ -116,6 +134,12 @@ const getAppMealList = async() => {
   }
 }
 
+const handleTabClick = (tab) => {
+  if (tab.props.name === 'second') {
+    capabilityListFn()
+  }
+}
+
 // 选择套餐点击事件
 const buyFn = (item) => {
   // 有已包含套餐，禁止点击
@@ -124,12 +148,14 @@ const buyFn = (item) => {
   console.log('已选择套餐：', item)
 }
 
-const packageList = ref([
-  { name: '课程存储空间 10 GB', price: 38.8, checked: false, disabled: false },
-  { name: '视频清晰度', price: 38.8, checked: false, disabled: false },
-  { name: '视频清晰度', price: 38.8, checked: false, disabled: false },
-  { name: '视频清晰度', price: 38.8, checked: false, disabled: false }
-])
+// const packageList = ref([
+//   { name: '课程存储空间 10 GB', price: 38.8, checked: false, disabled: false },
+//   { name: '视频清晰度', price: 38.8, checked: false, disabled: false },
+//   { name: '视频清晰度', price: 38.8, checked: false, disabled: false },
+//   { name: '视频清晰度', price: 38.8, checked: false, disabled: false }
+// ])
+
+const packageList = ref([])
 
 const totalAmount = computed(() => {
   return packageList.value

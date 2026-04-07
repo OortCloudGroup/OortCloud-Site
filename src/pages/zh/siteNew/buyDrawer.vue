@@ -46,7 +46,7 @@
           :key="i"
         >
           <div class="buyAppsOut_t flexRowAC t">
-            <img class="buyAppsOut_t_img" :src="item.icon_url" alt="" />
+            <oort-img class="buyAppsOut_t_img" :src="item.icon_url" alt="" />
             {{ item.app_name }}
           </div>
         </div>

@@ -94,3 +94,12 @@ export const orderDetail = (data) => {
     headers
   })
 }
+
+// 能力点
+export const capabilityList = (data) => {
+  return request('/apaas-appstore/openapis/marketApps/v1/public_capability_price_list', {
+    method: 'POST',
+    body: data,
+    headers
+  })
+}

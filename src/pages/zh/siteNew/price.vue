@@ -1157,7 +1157,8 @@ const generate36UniqueKey = () => {
 .priceBox{
   padding: 0 140px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px;
 }
 
 .item{
