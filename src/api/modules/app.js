@@ -103,3 +103,12 @@ export const capabilityList = (data) => {
     headers
   })
 }
+
+// 收银台总价
+export const calcPrice = (data) => {
+  return request('/apaas-appstore/checkout/v1/calcPrice', {
+    method: 'POST',
+    body: data,
+    headers
+  })
+}

@@ -64,18 +64,17 @@
             <span class="total-label">合计金额</span>
             <span class="total-price">¥ {{ totalAmount.toFixed(2) }}</span>
           </div>
-
-          <div class="btn-group">
-            <el-button type="primary" size="large" @click="handleConfirm">
-              确定
-            </el-button>
-            <el-button size="large" @click="handleCancel">
-              取消
-            </el-button>
-          </div>
         </div>
       </el-tab-pane>
     </el-tabs>
+    <div class="btn-group">
+      <el-button size="large" @click="handleCancel">
+        取消
+      </el-button>
+      <el-button type="primary" size="large" @click="handleConfirm">
+        确定
+      </el-button>
+    </div>
   </div>
 </template>
 
@@ -93,6 +92,7 @@ const props = defineProps({
     required: true
   }
 })
+const emit = defineEmits(['confirm-data'])
 const public_list = ref([])
 
 const selectedItemId = ref(null)
@@ -168,12 +168,29 @@ const handleCheckChange = () => {
 }
 
 const handleConfirm = () => {
-  const selected = packageList.value.filter(item => item.checked)
-  console.log('提交的套餐：', selected, '合计金额：', totalAmount.value)
+  // 1. 组装选中的功能ID数组
+  const capabilityIds = packageList.value
+    .filter(item => item.checked)
+    .map(item => item.capability_id)
+
+  // 2. 按照你要求的格式组装数据
+  const result = {
+    app_id: props.currentApp.app_id,
+    platform_package_id: props.platformId,
+    app_version_id: props.currentApp.latest_version.version_id,
+    package_id: selectedItemId.value,
+    capability_id: capabilityIds,
+    purchase_years: 1,
+    quantity: 1
+  }
+
+  // 3. 把数据发送给父组件
+  emit('confirm-data', result)
 }
 
 const handleCancel = () => {
-  console.log('用户取消操作')
+  // 通知父组件关闭弹窗
+  emit('update:modelValue', false)
 }
 
 watch(() => props.currentApp, (newId) => {
@@ -185,8 +202,10 @@ watch(() => props.currentApp, (newId) => {
 
 <style scoped lang="scss">
 .Detail-page{
+  position: relative;
   box-sizing: border-box;
   padding: 60px;
+  padding-bottom: 100px;
   min-height: 900px;
   color: #333;
   h2{
@@ -379,7 +398,11 @@ watch(() => props.currentApp, (newId) => {
   }
 }
 .btn-group {
+  position: absolute;
   display: flex;
+  justify-content: flex-end;
+  bottom: 20px;
+  right: 60px;
   gap: 16px;
   .el-button {
     width: 200px;

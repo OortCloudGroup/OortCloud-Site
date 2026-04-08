@@ -66,7 +66,7 @@
       destroy-on-close
       top="5vh"
     >
-      <addBuyDetail :current-app="currentApp" :platform-id="props.platformId" />
+      <addBuyDetail v-model="dialogVisible" :current-app="currentApp" :platform-id="props.platformId" @confirm-data="handleGetChildData" />
     </el-dialog>
   </div>
 </template>
@@ -75,7 +75,7 @@
 import { ref, onMounted, computed } from 'vue'
 import { Search } from '@element-plus/icons-vue'
 import addBuyDetail from './addBuyDetail.vue'
-import { appList } from '@/api'
+import { appList, calcPrice } from '@/api'
 
 const props = defineProps({
   platformId: {
@@ -92,6 +92,7 @@ const searchValue = ref('')
 const checkedApps = ref([])
 const dialogVisible = ref(false)
 const currentApp = ref(null)
+const buyList = ref([])
 
 const filteredAppList = computed(() => {
   if (!searchValue.value) return appListRaw.value
@@ -116,16 +117,78 @@ const appListFn = async() => {
 
 const handleAppCheck = (isChecked, item) => {
   if (isChecked) {
+    // 勾选 → 打开弹窗
     currentApp.value = item
     dialogVisible.value = true
-    console.log(item)
+  } else {
+    // 取消勾选 → 根据 app_id 删除 buyList 里的数据
+    buyList.value = buyList.value.filter(
+      data => data.app_id !== item.app_id
+    )
+    console.log('取消勾选，已删除对应数据，最终buyList：', buyList.value)
   }
 }
+
+const handleGetChildData = (data) => {
+  console.log('子组件传回的数据：', data)
+
+  buyList.value = buyList.value.filter(
+    item => item.app_id !== data.app_id
+  )
+  buyList.value.push(data)
+
+  console.log('最终购买列表 buyList：', buyList.value)
+  dialogVisible.value = false
+}
 // 立即购买
-const buyClick = () => {
-  if (!checkedApps.value.length) return false
-  console.log('选中的应用：', checkedApps.value)
-  window.open('http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html', '_blank')
+// const buyClick = () => {
+//   if (!checkedApps.value.length) return false
+//   console.log('选中的应用：', checkedApps.value)
+//   // window.open('http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html', '_blank')
+// }
+const buyClick = async() => {
+  if (!checkedApps.value.length) {
+    ElMessage.warning('请先选择应用')
+    return false
+  }
+  const items = []
+
+  buyList.value.forEach((item) => {
+    const { app_id, app_version_id, package_id, capability_id } = item
+
+    if (package_id) {
+      items.push({
+        app_id,
+        app_version_id,
+        package_id,
+        item_type: 1,
+        purchase_years: 1,
+        quantity: 1
+      })
+    }
+    if (capability_id.length !== 0) {
+      capability_id.forEach((cid) => {
+        items.push({
+          app_id,
+          app_version_id,
+          capability_id: cid,
+          item_type: 2,
+          purchase_years: 1,
+          quantity: 1
+        })
+      })
+    }
+  })
+  const data = {
+    currency: 'CNY',
+    items
+  }
+  try {
+    const res = await calcPrice(data)
+    console.log('价格计算成功：', res)
+  } catch (err) {
+    console.error('价格计算失败：', err)
+  }
 }
 </script>
 
