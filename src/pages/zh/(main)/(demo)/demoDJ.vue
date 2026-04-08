@@ -4,7 +4,7 @@
     <div class="demo_body">
       <div class="demo_body_left">
         <span class="demo_body_left_title">智慧党建</span>
-        <span class="demo_body_left_subtitle">不忘初心 牢记使命</span>
+        <span class="demo_body_left_subtitle">用数字力量，筑牢党建阵地</span>
         <div class="demo_body_left_items">
           <client-only>
             <n-popover trigger="hover" arrow-point-to-center placement="right">

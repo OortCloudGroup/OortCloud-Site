@@ -81,15 +81,15 @@ const doubleSysApp = ref({
       link: '/demoIM'
     },
     {
-      name: '企业办公',
+      name: '企业自动化',
       logo: '/img/demo/menu/oa.png',
-      excerpt: '新一代OA数字化办公生产力工具',
+      excerpt: 'Altman助你企业自动化',
       link: '/demoXOA'
     },
     {
       name: '智慧党建',
       logo: '/img/demo/menu/dj.png',
-      excerpt: '新一代OA数字化办公生产力工具',
+      excerpt: '用数字力量，筑牢党建阵地',
       link: '/demoDJ'
     }
   ]

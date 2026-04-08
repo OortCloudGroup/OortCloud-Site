@@ -4,7 +4,7 @@
     <div class="demo_body">
       <div class="demo_body_left">
         <span class="demo_body_left_title">企业自动化</span>
-        <span class="demo_body_left_subtitle">AI 赋能的新一代数字化办公生产力工具</span>
+        <span class="demo_body_left_subtitle">Altman 助你 企业自动化</span>
         <div class="demo_body_left_items">
           <client-only>
             <n-popover trigger="hover" arrow-point-to-center placement="right">
@@ -102,12 +102,8 @@
       <!-- 头部 -->
       <div class="header-section">
         <h1 class="main-title">
-          <span class="title-normal">Altman 助你 </span>
-          <span class="title-highlight"> 企业自动化</span>
+          <span class="title-normal">基于自研大模型，为不同业务场景量身定制的 AI 数字员工，不仅是工具，更是智慧合伙人</span>
         </h1>
-        <p class="subtitle">
-          基于自研大模型，为不同业务场景量身定制的 AI 数字员工，不仅是工具，更是智慧合伙人
-        </p>
       </div>
 
       <!-- 卡片列表 -->
@@ -186,7 +182,7 @@ import { ref } from 'vue'
 
 definePageMeta({
   layout: 'demo',
-  title: '企业办公',
+  title: '企业自动化',
   subTitle: '演示环境',
   logo: '/img/demo/xoa/xoa_logo.png'
 })
@@ -194,8 +190,8 @@ definePageMeta({
 useSeoMeta({
   title: 'XOA数字化办公',
   ogTitle: 'XOA数字化办公-演示环境',
-  description: '新一代OA数字化办公生产力工具',
-  ogDescription: '新一代OA数字化办公生产力工具',
+  description: 'Altman助你企业自动化',
+  ogDescription: 'Altman助你企业自动化',
   ogImage: '/img/demo/xoa/xoa_logo.png'
 })
 
@@ -455,6 +451,7 @@ const cardList = ref([
   .main-title {
     font-size: 40px;
     font-weight: 700;
+    width: 40%;
     margin: 0;
     .title-normal { color: #333; }
     .title-highlight { color: #4080ff; }

@@ -90,16 +90,19 @@
                     <img class="dropdown_col_sort_logo" src="/img/home/dzh.png" />
                     <span class="dropdown_col_sort_label">私有云</span>
                   </div>
-                  <a href="http://oort.oortcloudsmart.com:32610/oort/oortcloud-frontservice/apaas_web/" target="_blank">
+                  <a href="https://ai.oortcloudsmart.com/zh/" target="_blank">
                     <div class="dropdown_col_item">
                       <img class="dropdown_col_item_logo" src="/img/home/OORT.AI.png" />
                       <span class="dropdown_col_item_label">OORT.AI</span>
                     </div>
                   </a>
-                  <div class="dropdown_col_item">
-                    <img class="dropdown_col_item_logo" src="/img/home/OORT.SH.png" />
-                    <span class="dropdown_col_item_label">OORT.SH</span>
-                  </div>
+                  <a href="https://sh.oortcloudsmart.com/zh/" target="_blank">
+                    <div class="dropdown_col_item">
+                      <img class="dropdown_col_item_logo" src="/img/home/OORT.SH.png" />
+                      <span class="dropdown_col_item_label">OORT.SH</span>
+                    </div>
+                  </a>
+
                   <div class="dropdown_col_item">
                     <img class="dropdown_col_item_logo" src="/img/home/VLStream.png" />
                     <span class="dropdown_col_item_label">VLStream</span>
