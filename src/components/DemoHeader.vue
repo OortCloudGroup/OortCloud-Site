@@ -1,9 +1,9 @@
 <template>
-  <div class="demo_header">
+  <div class="demo_header" :class="title === '智慧党建' ? 'party-header' : ''">
     <a href="https://oortcloudsmart.com/" target="_blank"><img :src="logo" /></a>
     <span>{{ title }}</span>
-    <span />
-    <span>{{ meta.subTitle }}</span>
+    <span v-if="title != '智慧党建'" />
+    <span v-if="title != '智慧党建'">{{ meta.subTitle }}</span>
   </div>
 </template>
 
@@ -67,6 +67,20 @@ async function getConfigA() {
       color: #FFFFFF;
       margin: 0 16px;
       font-weight: 400;
+    }
+  }
+
+  .party-header {
+    padding-left: 200px;
+    background: url(@/assets/img/demoHeader.png) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    span:nth-of-type(1) {
+      font-size: 24px;
+      color: #E52B1D;
+      letter-spacing: 0;
+      font-weight: 400;
+      margin: 0 16px;
     }
   }
 

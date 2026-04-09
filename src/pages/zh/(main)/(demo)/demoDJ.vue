@@ -65,7 +65,7 @@
         </div>
       </div>
     </div>
-    <div class="demo_content w1200">
+    <div class="demo_content w1520">
       <div class="introduction">
         <div class="intro-item1">
           <h2>智慧党建系统的定位</h2>
@@ -73,7 +73,7 @@
         </div>
         <div class="intro-item2">
           <h2>智慧党建系统的定位</h2>
-          <p>互联网的迅猛发展，对党的建设，特别是拓展党建工作空间、创新党组织活动方式，党建管理，党员学习等方面提出了新挑战新要求。为进一步利用“互联网”在发挥党建工作服务人民各项工作中的核心作用，突出破解流动党员教育及管理难题，巩固常规性党建工作阵地，打破时间、空间等方面条件的限制，将传统的工作方法与信息化管理手段有机结合起来，提升党建工作新高度。</p>
+          <p>建立完善在线教育管理服务体系。开设党员E家、党群互助、党务管理、人才互助等模块，充分利用“二维码”、“云平台”等现代科技，为动党员提供在线学习教育、参加组织生活、网上缴纳党费、接转组织关系等服务。建立流动党员支部网络化模式，打破时空界限、身份壁垒和人数限制，健全组织机构，强化组织领导，建立覆盖区、街、社区三级党组织的开放式、多层次、立体化的建工作模式，提高党建效能。</p>
         </div>
       </div>
       <div class="difficult">
@@ -194,8 +194,8 @@ const goDetail = () => {
 </script>
 
 <style lang="scss" scoped>
-.w1200{
-  width: 1200px;
+.w1520{
+  width: 1520px;
   margin: 0 auto;
 }
 .page_container {
@@ -350,18 +350,18 @@ const goDetail = () => {
   gap: 20px;
   margin-bottom: 80px;
   .intro-item1, .intro-item2{
-    width: 590px;
-    height: 311px;
+    width: 750px;
+    height: 328px;
     box-sizing: border-box;
     padding: 40px;
     h2{
-      font-size: 20px;
+      font-size: 30px;
       font-weight: 500;
       color: #E52B1D;
       margin-bottom: 11px;
     }
     p{
-      font-size: 14px;
+      font-size: 20px;
       font-weight: normal;
       color: #825F5F;
     }
@@ -376,30 +376,30 @@ const goDetail = () => {
   }
 }
 .title-text{
-  font-size: 28px;
+  font-size: 48px;
   font-weight: bold;
   color: #E52B1D;
   margin-bottom: 36px;
 }
 .difficult{
-  margin-bottom: 80px;
+  margin-bottom: 150px;
   .difficult-img{
     text-align: center;
     img{
-      width: 610px;
-      height: 550px;
+      width: 1000px;
+      height: 900px;
     }
   }
 }
 
 .system{
-  margin-bottom: 80px;
+  margin-bottom: 150px;
   .system-img{
     display: flex;
     justify-content: space-between;
     img{
-      width: 386px;
-      height: 400px;
+      width: 493px;
+      height: 492px;
     }
   }
 }
@@ -413,8 +413,8 @@ const goDetail = () => {
   .card-item{
     background-image: url("@/assets/img/dj_img7.png");
     background-size: cover;
-    width: 386px;
-    height: 238px;
+    width: 493px;
+    height: 260px;
     box-sizing: border-box;
     padding: 40px 20px;
     .card-header{
@@ -428,7 +428,7 @@ const goDetail = () => {
       }
       .header-title{
         font-weight: 700;
-        font-size: 18px;
+        font-size: 32px;
       }
     }
     .card-content{
@@ -436,7 +436,7 @@ const goDetail = () => {
       flex-wrap: wrap;
       gap: 12px;
       .content-item{
-        font-size: 14px;
+        font-size: 20px;
         border-radius: 4px;
         padding: 9px 16px;
         background-color: #FFF3F3;
@@ -445,10 +445,10 @@ const goDetail = () => {
   }
 }
 .system-jg{
-  width: 1200px;
-  height: 957px;
+  width: 1520px;
+  height: 1212px;
 }
 .system-screen{
-  margin-bottom: 80px;
+  margin-bottom: 150px;
 }
 </style>
