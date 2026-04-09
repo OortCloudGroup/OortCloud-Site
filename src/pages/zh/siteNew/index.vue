@@ -265,21 +265,21 @@ import { ref, onMounted } from 'vue'
 // import homeApp_a2 from '@/assets/site/homeApp_a2.png'
 // import homeApp_a3 from '@/assets/site/homeApp_a3.png'
 // import homeApp_a4 from '@/assets/site/homeApp_a4.png'
-import homeApp_a5 from '@/assets/site/homeApp_a5.png'
-import homeApp_a6 from '@/assets/site/homeApp_a6.png'
-import homeApp_a7 from '@/assets/site/homeApp_a7.png'
+// import homeApp_a5 from '@/assets/site/homeApp_a5.png'
+// import homeApp_a6 from '@/assets/site/homeApp_a6.png'
+// import homeApp_a7 from '@/assets/site/homeApp_a7.png'
 // import homeApp_d1 from '@/assets/site/homeApp_d1.png'
 // import homeApp_d2 from '@/assets/site/homeApp_d2.png'
 // import homeApp_d3 from '@/assets/site/homeApp_d3.png'
 // import homeApp_d4 from '@/assets/site/homeApp_d4.png'
 // import homeApp_d5 from '@/assets/site/homeApp_d5.png'
 
-import homeApp_yp from '@/assets/site/homeApp_yp.png'
-import homeApp_sprh from '@/assets/site/homeApp_sprh.png'
-import homeApp_sphy from '@/assets/site/homeApp_sphy.png'
-import homeApp_AI from '@/assets/site/homeApp_AI.png'
-import homeApp_zhdd from '@/assets/site/homeApp_zhdd.png'
-import homeApp_jsxt from '@/assets/site/homeApp_jsxt.png'
+// import homeApp_yp from '@/assets/site/homeApp_yp.png'
+// import homeApp_sprh from '@/assets/site/homeApp_sprh.png'
+// import homeApp_sphy from '@/assets/site/homeApp_sphy.png'
+// import homeApp_AI from '@/assets/site/homeApp_AI.png'
+// import homeApp_zhdd from '@/assets/site/homeApp_zhdd.png'
+// import homeApp_jsxt from '@/assets/site/homeApp_jsxt.png'
 // import homeApp_a8 from '@/assets/site/homeApp_a8.png'
 // import homeApp_a9 from '@/assets/site/homeApp_a9.png'
 // import homeApp_b1 from '@/assets/site/homeApp_b1.png'
@@ -288,6 +288,14 @@ import homeApp_jsxt from '@/assets/site/homeApp_jsxt.png'
 // import homeApp_c3 from '@/assets/site/homeApp_c3.png'
 // import homeApp_c4 from '@/assets/site/homeApp_c4.png'
 // import homeApp_c5 from '@/assets/site/homeApp_c5.png'
+import ty from '@/assets/img/ty.png'
+import bg from '@/assets/img/bg.png'
+import yx from '@/assets/img/yx.png'
+import bc from '@/assets/img/bc.png'
+import yw from '@/assets/img/yw.png'
+import hr from '@/assets/img/hr.png'
+import hy from '@/assets/img/hy.png'
+import gz from '@/assets/img/gz.png'
 
 definePageMeta({
   layout: 'site-new'
@@ -296,17 +304,16 @@ definePageMeta({
 let appList = ref([])
 appList.value = [
 
-  { t: 'AI办公', dec: 'AI 赋能办公，效率一键拉满', img: homeApp_AI },
-  { t: '指挥调度', dec: '资源、现场、调度、过程全可视', img: homeApp_zhdd },
-  { t: '即时协同', dec: '打破时空限制，即时协同畅无阻', img: homeApp_jsxt },
+  { t: '通用', dec: '自然对话，智能生成文档 / 表格 / PPT', img: ty },
+  { t: '办公', dec: 'AI 生成公文，解读政策辅助审批', img: bg },
+  { t: '营销', dec: 'AI 生成话术，分析画像策划活动', img: yx },
 
-  { t: '云课堂', dec: '基于移动互联网的培训管理和学习交互平台', img: homeApp_a5 },
-  { t: '智能审批', dec: '智能审批管办一体 助力企业效能提升', img: homeApp_a7 },
-  { t: '安全邮箱', dec: '确保信息传输的保密性与安全性', img: homeApp_a6 },
+  { t: '编程', dec: 'AI 智能编码，高效生成与调试代码', img: bc },
+  { t: '运维', dec: 'AI 故障排查，监控预警 7×24 小时', img: yw },
+  { t: 'HR', dec: 'AI 筛选简历，面试邀约绩效分析', img: hr },
 
-  { t: '云盘', dec: '一键上云，文件随身，多端同步更省心', img: homeApp_yp },
-  { t: '视频融合', dec: '智能融合视频流，全景视界一键掌控', img: homeApp_sprh },
-  { t: '视频会议', dec: '一键开启视频会议，沟通协作无阻', img: homeApp_sphy }
+  { t: '会议', dec: 'AI 生成纪要，多语言实时转写', img: hy },
+  { t: '感知', dec: '多模态理解，智能预判用户需求', img: gz }
 ]
 // appList.value = [
 //   { t: '通知公告', img: homeApp_a1 },
