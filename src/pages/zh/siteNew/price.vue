@@ -240,7 +240,7 @@
     <el-drawer v-model="drawer" size="90%">
       <buyDrawer :platform-id="platformId" />
     </el-drawer>
-    <el-drawer v-model="drawer2" size="90%">
+    <el-drawer v-model="drawer2" size="90%" @close="handleDrawerClose">
       <payDrawer :order-data="orderData" />
     </el-drawer>
   </div>
@@ -372,6 +372,9 @@ const buyFn = async(id) => {
   }
 }
 
+const handleDrawerClose = () => {
+  orderData.value = {} // 清空数据
+}
 // 生成36位唯一标识符
 const generate36UniqueKey = () => {
   const timestamp = Date.now().toString()
@@ -1239,7 +1242,7 @@ const generate36UniqueKey = () => {
 }
 
 .item:hover{
-  border: 1px solid #2278FF;
+  // border: 1px solid #2278FF;
   box-shadow: 0px 0px 24px 0px rgba(65, 50, 224, 0.6);
 }
 

@@ -50,7 +50,10 @@
             {{ item.app_name }}
           </div>
         </div>
-
+        <div class="total-section">
+          <span class="total-label">合计金额</span>
+          <span class="total-price">¥ {{ (totalAmount/100).toFixed(2) }}</span>
+        </div>
         <div
           :class="{opa: !checkedApps.length}"
           class="buyBtn flexRowAC"
@@ -68,14 +71,18 @@
     >
       <addBuyDetail v-model="dialogVisible" :current-app="currentApp" :platform-id="props.platformId" @confirm-data="handleGetChildData" />
     </el-dialog>
+    <el-drawer v-model="drawer2" size="90%" @close="handleDrawerClose">
+      <payDrawer :order-data="orderData" />
+    </el-drawer>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { Search } from '@element-plus/icons-vue'
+import payDrawer from './payDrawer.vue'
 import addBuyDetail from './addBuyDetail.vue'
-import { appList, calcPrice } from '@/api'
+import { appList, calcPrice, createOrder } from '@/api'
 
 const props = defineProps({
   platformId: {
@@ -93,6 +100,9 @@ const checkedApps = ref([])
 const dialogVisible = ref(false)
 const currentApp = ref(null)
 const buyList = ref([])
+const totalAmount = ref(0)
+const drawer2 = ref(false)
+const orderData = ref({})
 
 const filteredAppList = computed(() => {
   if (!searchValue.value) return appListRaw.value
@@ -125,6 +135,7 @@ const handleAppCheck = (isChecked, item) => {
     buyList.value = buyList.value.filter(
       data => data.app_id !== item.app_id
     )
+    calcPriceFn()
     console.log('取消勾选，已删除对应数据，最终buyList：', buyList.value)
   }
 }
@@ -139,6 +150,7 @@ const handleGetChildData = (data) => {
 
   console.log('最终购买列表 buyList：', buyList.value)
   dialogVisible.value = false
+  calcPriceFn()
 }
 // 立即购买
 // const buyClick = () => {
@@ -146,13 +158,13 @@ const handleGetChildData = (data) => {
 //   console.log('选中的应用：', checkedApps.value)
 //   // window.open('http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html', '_blank')
 // }
-const buyClick = async() => {
-  if (!checkedApps.value.length) {
-    ElMessage.warning('请先选择应用')
-    return false
-  }
+const itemsList = ref([])
+const calcPriceFn = async() => {
   const items = []
-
+  if (buyList.value.length === 0) {
+    totalAmount.value = 0
+    return
+  }
   buyList.value.forEach((item) => {
     const { app_id, app_version_id, package_id, capability_id } = item
 
@@ -179,16 +191,64 @@ const buyClick = async() => {
       })
     }
   })
+  itemsList.value = items
   const data = {
     currency: 'CNY',
     items
   }
   try {
     const res = await calcPrice(data)
-    console.log('价格计算成功：', res)
+    totalAmount.value = res.data.total_price
   } catch (err) {
     console.error('价格计算失败：', err)
   }
+}
+
+const buyClick = async() => {
+  if (!checkedApps.value.length) {
+    ElMessage.warning('请先选择应用')
+    return false
+  }
+  try {
+    const request_id = generate36UniqueKey()
+    const data = {
+      request_id,
+      order_type: 1,
+      pay_mode: 1,
+      currency: 'CNY',
+      terms_agreement: [
+        {
+          terms_id: 'privacy-v1',
+          channel: 'web'
+        }
+      ],
+      items: itemsList.value
+    }
+
+    const res = await createOrder(data)
+    if (res.code === 200) {
+      orderData.value = res.data
+      drawer2.value = true
+    }
+  } catch (error) {
+    console.error('创建订单失败：', error)
+  }
+}
+// 关闭抽屉时清除子组件定时器
+const handleDrawerClose = () => {
+  orderData.value = {} // 清空数据
+}
+// 生成36位唯一标识符
+const generate36UniqueKey = () => {
+  const timestamp = Date.now().toString()
+  const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+  let randomStr = ''
+  const needLength = 36 - timestamp.length
+  for (let i = 0; i < needLength; i++) {
+    randomStr += chars.charAt(Math.floor(Math.random() * chars.length))
+  }
+  let result = (timestamp + randomStr).split('').sort(() => Math.random() - 0.5).join('')
+  return result.slice(0, 36)
 }
 </script>
 
@@ -317,6 +377,22 @@ const buyClick = async() => {
   .el-checkbox__input{
     position: absolute;
     right: 20px;
+  }
+}
+.total-section {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 24px;
+  padding: 0 4px;
+  .total-label {
+    font-size: 16px;
+    color: #909399;
+    margin-right: 8px;
+  }
+  .total-price {
+    font-size: 32px;
+    font-weight: bold;
+    color: #303133;
   }
 }
 </style>

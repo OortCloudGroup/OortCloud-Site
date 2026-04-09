@@ -104,7 +104,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch, onUnmounted, onMounted } from 'vue'
+import { ref, watch, onUnmounted } from 'vue'
 import { Check } from '@element-plus/icons-vue'
 import QrcodeVue from 'qrcode.vue'
 import { useRouter } from 'vue-router'
@@ -122,15 +122,13 @@ const props = defineProps({
 
 // 选中的支付方式
 const selectedMethod = ref('alipay')
-// 更多选择的选中项
 const moreSelected = ref('cloud')
 const payCode = ref('')
-// 实付金额
 const payAmount = ref(0)
-// 订单号
 const orderNo = ref('')
-// 轮询定时器 ID
-let pollTimer: any = null
+
+// 轮询定时器
+let pollTimer:any = null
 
 const thirdPartyMethods = ref([
   {
@@ -147,9 +145,9 @@ const thirdPartyMethods = ref([
     img: zfb,
     color: '#1677ff'
   }
-
 ])
 
+// 创建支付单
 const createBillFn = async() => {
   try {
     const data = {
@@ -163,13 +161,13 @@ const createBillFn = async() => {
       payCode.value = res.data.params.qr_code
       payAmount.value = res.data.pay_amount
       orderNo.value = res.data.order_no
-      console.log(payCode.value)
     }
   } catch (err) {
     console.log('创建支付单失败：', err)
   }
 }
 
+// 查询订单状态
 const orderDetailFn = async() => {
   try {
     const res = await orderDetail({
@@ -177,10 +175,8 @@ const orderDetailFn = async() => {
     })
     if (res.code === 200) {
       const status = res.data.order_info.status
-      // 订单状态不为 0,清除定时器并跳转
       if (status !== 0) {
-        clearTimer()
-        // 路由跳转并携带状态
+        stopPolling() // 订单完成 → 停止轮询
         sessionStorage.setItem('orderInfo', JSON.stringify(res.data.order_info))
         router.push({ path: '/zh/siteNew/pay' })
       }
@@ -190,32 +186,48 @@ const orderDetailFn = async() => {
   }
 }
 
-// 清除定时器
-const clearTimer = () => {
+// 停止轮询
+const stopPolling = () => {
   if (pollTimer) {
     clearInterval(pollTimer)
     pollTimer = null
   }
 }
 
-onMounted(() => {
-  if (props.orderData?.order_info.order_no) {
-    pollTimer = setInterval(() => {
-      orderDetailFn()
-    }, 2000)
-  }
-})
+// 开始轮询
+const startPolling = () => {
+  // 先清旧定时器
+  stopPolling()
 
-// 组件卸载 → 清除定时器
-onUnmounted(() => {
-  clearTimer()
-})
+  if (!props.orderData?.order_info.order_no) return
 
-watch(() => props.orderData, () => {
-  if (props.orderData) {
+  // 2秒轮询一次
+  pollTimer = setInterval(() => {
+    orderDetailFn()
+  }, 2000)
+}
+
+// 监听 orderData 变化 → 自动重启定时器
+watch(
+  () => props.orderData,
+  (newVal) => {
+    // 空数据 → 停止
+    if (!newVal || Object.keys(newVal).length === 0) {
+      stopPolling()
+      return
+    }
+
+    // 有订单 → 创建支付单 + 启动轮询
     createBillFn()
-  }
-}, { deep: true, immediate: true })
+    startPolling()
+  },
+  { deep: true, immediate: true }
+)
+
+// 组件卸载 → 停止
+onUnmounted(() => {
+  stopPolling()
+})
 </script>
 
 <style scoped lang="scss">
