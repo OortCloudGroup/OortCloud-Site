@@ -88,8 +88,7 @@ const props = defineProps({
     required: true
   },
   platformId: {
-    type: Number,
-    required: true
+    type: Number
   }
 })
 const emit = defineEmits(['confirm-data'])
@@ -103,12 +102,22 @@ const hasIncludedPackage = computed(() => {
 
 const capabilityListFn = async() => {
   try {
-    const res = await capabilityList({
-      app_id: props.currentApp.app_id,
-      platform_package_id: props.platformId,
-      app_version_id: props.currentApp.latest_version.version_id,
-      app_package_id: selectedItemId.value
-    })
+    const data = ref({})
+    if (props.platformId) {
+      data.value = {
+        app_id: props.currentApp.app_id,
+        platform_package_id: props.platformId,
+        app_version_id: props.currentApp.latest_version.version_id,
+        package_id: selectedItemId.value
+      }
+    } else {
+      data.value = {
+        app_id: props.currentApp.app_id,
+        app_version_id: props.currentApp.latest_version.version_id,
+        package_id: selectedItemId.value
+      }
+    }
+    const res = await capabilityList({ ...data.value })
 
     packageList.value = res.data.map(item => ({
       ...item,
@@ -121,7 +130,18 @@ const capabilityListFn = async() => {
 
 const getAppMealList = async() => {
   try {
-    const res = await appMealList({ app_id: props.currentApp.app_id, platform_package_id: props.platformId })
+    const data = ref({})
+    if (props.platformId) {
+      data.value = {
+        app_id: props.currentApp.app_id,
+        platform_package_id: props.platformId
+      }
+    } else {
+      data.value = {
+        app_id: props.currentApp.app_id
+      }
+    }
+    const res = await appMealList({ ...data.value })
     public_list.value = res.data.list
     const includedItem = public_list.value.find(item => item.in_platform_package === 1)
     if (includedItem) {

@@ -86,8 +86,7 @@ import { appList, calcPrice, createOrder } from '@/api'
 
 const props = defineProps({
   platformId: {
-    type: Number,
-    required: true
+    type: Number
   }
 })
 onMounted(() => {
@@ -250,6 +249,20 @@ const generate36UniqueKey = () => {
   let result = (timestamp + randomStr).split('').sort(() => Math.random() - 0.5).join('')
   return result.slice(0, 36)
 }
+
+const resetChecked = () => {
+  checkedApps.value = [] // 清空勾选
+  buyList.value = [] // 清空购买列表
+  totalAmount.value = 0 // 清空总价
+  itemsList.value = [] // 清空价格计算项
+  searchValue.value = '' // 清空搜索框
+  currentApp.value = null // 重置当前选中APP
+}
+
+// 暴露给父组件调用
+defineExpose({
+  resetChecked
+})
 </script>
 
 <style scoped lang="scss">

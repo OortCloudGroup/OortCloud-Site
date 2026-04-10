@@ -46,7 +46,7 @@
       </div>
     </div>
     <div class="w1380">
-      <div class="optional">
+      <div class="optional" @click="ownBuy">
         自选购买
       </div>
       <div class="descripe">
@@ -237,8 +237,8 @@
     >
       <priceDetail :id="id" />
     </el-dialog>
-    <el-drawer v-model="drawer" size="90%">
-      <buyDrawer :platform-id="platformId" />
+    <el-drawer v-model="drawer" size="90%" @close="handleClose">
+      <buyDrawer ref="buyDrawerRef" :platform-id="platformId" />
     </el-drawer>
     <el-drawer v-model="drawer2" size="90%" @close="handleDrawerClose">
       <payDrawer :order-data="orderData" />
@@ -330,6 +330,10 @@ const getFeatureValue = (packageName, serviceName, featureName) => {
 }
 
 const addBuyFn = (id) => {
+  if (!token.value) {
+    window.open('https://workup-dev.myoumuamua.com:6433/bus/apaas-web/loginPage/index.html?appname=OortCloud Site&redirect_uri=' + encodeURIComponent('https://oortcloudsmart.com/zh/siteNew/'), '_blank')
+    return
+  }
   drawer.value = true
   platformId.value = id
 }
@@ -372,6 +376,15 @@ const buyFn = async(id) => {
   }
 }
 
+const ownBuy = () => {
+  if (!token.value) {
+    window.open('https://workup-dev.myoumuamua.com:6433/bus/apaas-web/loginPage/index.html?appname=OortCloud Site&redirect_uri=' + encodeURIComponent('https://oortcloudsmart.com/zh/siteNew/'), '_blank')
+    return
+  }
+  drawer.value = true
+  platformId.value = 0
+}
+
 const handleDrawerClose = () => {
   orderData.value = {} // 清空数据
 }
@@ -386,6 +399,15 @@ const generate36UniqueKey = () => {
   }
   let result = (timestamp + randomStr).split('').sort(() => Math.random() - 0.5).join('')
   return result.slice(0, 36)
+}
+
+const buyDrawerRef = ref(null)
+
+// 关闭抽屉时清空子组件勾选状态
+const handleClose = () => {
+  if (buyDrawerRef.value) {
+    buyDrawerRef.value.resetChecked()
+  }
 }
 
 </script>
