@@ -344,6 +344,10 @@ const fetchUserInfo = async() => {
     })
     if (res.code === 200) {
       data.value = res.data
+      console.log('获取用户信息成功:', res.data)
+      useSessionStorage('phone', data.value.user_detail.ex_data.phone, { shallow: false })
+      useSessionStorage('realName', data.value.user_detail.ex_data.realName, { shallow: false })
+      useSessionStorage('email', data.value.user_detail.ex_data.email, { shallow: false })
     }
   } catch (error) {
     console.error('获取用户信息失败:', error)

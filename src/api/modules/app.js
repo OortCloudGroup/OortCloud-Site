@@ -112,3 +112,11 @@ export const calcPrice = (data) => {
     headers
   })
 }
+// 收银台总价
+export const message = (data) => {
+  return request('/apaas-sso/sso/v1/message', {
+    method: 'POST',
+    body: data,
+    headers
+  })
+}

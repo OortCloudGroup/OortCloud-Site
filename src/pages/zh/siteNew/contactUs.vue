@@ -19,18 +19,18 @@
           <!--            <span class="red">*</span>-->
           <!--            <el-input v-model="value" class="themeInput" placeholder=""/>-->
           <!--          </div>-->
-          <el-input v-model="value" class="themeInput" placeholder="名称*" />
-          <el-input v-model="value1" class="themeInput" placeholder="手机号*" />
+          <el-input v-model="name" class="themeInput" placeholder="名称*" />
+          <el-input v-model="phone" class="themeInput" placeholder="手机号*" />
         </div>
-        <el-input v-model="value2" class="themeInput" placeholder="电子邮箱" />
-        <el-input v-model="value3" class="themeInput" placeholder="公司" />
-        <el-input v-model="value4" class="themeInput" placeholder="主题" />
-        <el-input v-model="value5" class="themeInput" placeholder="公司规模" />
-        <el-input v-model="value6" type="textarea" :rows="5" class="themeInput" placeholder="问题描述*" />
+        <el-input v-model="email" class="themeInput" placeholder="电子邮箱" />
+        <el-input v-model="company" class="themeInput" placeholder="公司" />
+        <el-input v-model="subject" class="themeInput" placeholder="主题" />
+        <el-input v-model="company_size" class="themeInput" placeholder="公司规模" />
+        <el-input v-model="description" type="textarea" :rows="5" class="themeInput" placeholder="问题描述*" />
         <div class="cu_mess heightbg">
           OortCloud处理您的个人信息时，将按照 <span style="color: #2278FF">隐私政策</span> 回答您的问题并提供产品和服务资料
         </div>
-        <div class="cu_submit flexRowAC">
+        <div class="cu_submit flexRowAC" @click="handleSubmit">
           提交
         </div>
       </div>
@@ -72,17 +72,66 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useSessionStorage } from '@vueuse/core'
+import { ElMessage } from 'element-plus' // 引入提示
+import { message } from '@/api'
+
 definePageMeta({
   layout: 'site-new'
 })
 
-let value1 = ref('')
-let value2 = ref('')
-let value3 = ref('')
-let value4 = ref('')
-let value5 = ref('')
-let value6 = ref('')
-let value = ref('')
+const company_size = ref('')
+const description = ref('')
+const subject = ref('')
+const company = ref('')
+const name = useSessionStorage('realName', '')
+const phone = useSessionStorage('phone', '')
+const email = useSessionStorage('email', '')
+
+const handleSubmit = async() => {
+  // 1. 必填校验
+  if (!name.value.trim()) {
+    ElMessage.warning('请输入名称')
+    return
+  }
+  if (!phone.value.trim()) {
+    ElMessage.warning('请输入手机号')
+    return
+  }
+  if (!description.value.trim()) {
+    ElMessage.warning('请输入问题描述')
+    return
+  }
+
+  // 2. 只组装有值的字段，空的不传
+  const params = {}
+
+  if (name.value) params.name = name.value
+  if (phone.value) params.phone = phone.value
+  if (description.value) params.description = description.value
+  if (email.value?.trim()) params.email = email.value.trim()
+  if (company.value?.trim()) params.company = company.value.trim()
+  if (subject.value?.trim()) params.subject = subject.value.trim()
+  if (company_size.value?.trim()) params.company_size = company_size.value.trim()
+
+  try {
+    // 3. 调用接口
+    await message(params)
+    ElMessage.success('提交成功，我们会尽快与您联系！')
+
+    // 4. 清空非缓存字段
+    description.value = ''
+    subject.value = ''
+    company.value = ''
+    company_size.value = ''
+    email.value = ''
+    name.value = ''
+    phone.value = ''
+  } catch (error) {
+    ElMessage.error('提交失败，请稍后重试')
+    console.error('提交报错：', error)
+  }
+}
 </script>
 
 <style scoped lang="scss">
