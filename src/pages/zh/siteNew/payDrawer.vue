@@ -40,7 +40,7 @@
         </div>
 
         <!-- 更多选择 -->
-        <div class="payment-group more-group">
+        <div v-if="false" class="payment-group more-group">
           <p class="group-title">
             更多选择
           </p>
@@ -150,15 +150,16 @@ const thirdPartyMethods = ref([
 // 创建支付单
 const createBillFn = async() => {
   try {
+    const isWechatPay = selectedMethod.value === 'wxpay'
     const data = {
       order_no: props.orderData?.order_info.order_no,
-      pay_channel: 2,
+      pay_channel: isWechatPay ? 1 : 2,
       period_no: 0,
-      trade_type: 'PRECREATE'
+      trade_type: isWechatPay ? 'NATIVE' : 'PRECREATE'
     }
     const res = await createBill(data)
     if (res.code === 200) {
-      payCode.value = res.data.params.qr_code
+      payCode.value = res.data.params.code_url || res.data.params.qr_code
       payAmount.value = res.data.pay_amount
       orderNo.value = res.data.order_no
     }
@@ -222,6 +223,14 @@ watch(
     startPolling()
   },
   { deep: true, immediate: true }
+)
+
+watch(
+  () => selectedMethod.value,
+  () => {
+    if (!props.orderData?.order_info?.order_no) return
+    createBillFn()
+  }
 )
 
 // 组件卸载 → 停止
