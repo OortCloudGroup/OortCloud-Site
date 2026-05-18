@@ -245,6 +245,18 @@ const cardList = ref([
     color: 'green',
     avatar: '/img/demo/xoa/gz.png',
     features: ['多模态内容理解', '场景化感知推荐', '智能意图识别']
+  },
+  {
+    title: '培训',
+    color: 'blue',
+    avatar: '/img/demo/xoa/px.png',
+    features: ['个性化 AI 课程生成', '学习行为智能分析', '培训效果自动评估']
+  },
+  {
+    title: '客服',
+    color: 'green',
+    avatar: '/img/demo/xoa/kf.png',
+    features: ['7×24 小时智能对话交互', '客户意图精准识别与响应', '服务数据自动复盘与优化']
   }
 ])
 </script>
