@@ -4,7 +4,7 @@
     "build": "nuxt build",
     "start": "nuxt dev",
     "build-fix-poper-not-found-bug": "nuxi build && mkdir .output/server/node_modules/@popperjs && mv .output/server/node_modules/@sxzz/popperjs-es .output/server/node_modules/@popperjs/core",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate && sh ./copyEn.sh",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "prepare": "husky install",
