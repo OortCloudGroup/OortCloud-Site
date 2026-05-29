@@ -291,7 +291,7 @@ const handleLanguageSwitch = (languageKey) => {
     router.push('/zh/siteNew/')
     return
   }
-  router.push('/en/')
+  window.location.href = '/en/'
 }
 </script>
 

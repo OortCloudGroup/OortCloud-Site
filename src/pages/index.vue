@@ -20,6 +20,11 @@ const detectTargetPath = () => {
 
   return matchedLanguage.toLowerCase().startsWith('zh') ? '/zh/siteNew/' : '/en/'
 }
+// 这里因为en 目录下的是AI生成的不是框架里里的路由页面了 使用需要使用跳转方法
+if (detectTargetPath() === '/en/') {
+  window.location.href = '/en/'
+} else {
+  router.replace(detectTargetPath())
+}
 
-router.replace(detectTargetPath())
 </script>
