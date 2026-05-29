@@ -84,3 +84,8 @@ export default defineNuxtConfig({
 ### 注意
 
 ssr false 方可执行 generate 命令 生成静态 html
+
+
+## 关于 thirdHtml 的说明  
+
+是 AI 生成的 html 文件
