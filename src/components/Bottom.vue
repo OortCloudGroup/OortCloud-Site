@@ -218,9 +218,9 @@
           <div class="bse_t bse_language">
             <div class="bse_language_select">
               <img src="@/assets/bottomImg/chinese.png" alt="" />
-              <n-dropdown trigger="hover" :options="[{label: '简体中文'},{label: 'English'}]">
+              <n-dropdown trigger="hover" :options="languageOptions" @select="handleLanguageSwitch">
                 <div class="bse_language_select_box">
-                  <span>简体中文</span>
+                  <span>{{ currentLanguageLabel }}</span>
                   <span class="bse_language_icon" />
                 </div>
               </n-dropdown>
@@ -263,18 +263,35 @@
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router'
+import { computed } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { NDropdown } from 'naive-ui'
 
 const router = useRouter()
-// const route = useRoute()
-// let value = ref('')
+const route = useRoute()
+
+const languageOptions = [
+  { label: '简体中文', key: 'zh' },
+  { label: 'English', key: 'en' }
+]
+
+const currentLanguageLabel = computed(() => {
+  return route.path.startsWith('/zh') ? '简体中文' : 'English'
+})
 
 const viewPath = (path) => {
   if (router.currentRoute.value.path === path) {
     window?.scrollTo(0, 0)
   }
   router.push({ path })
+}
+
+const handleLanguageSwitch = (languageKey) => {
+  if (languageKey === 'zh') {
+    router.push('/zh/siteNew/')
+    return
+  }
+  router.push('/en/')
 }
 </script>
 
