@@ -113,46 +113,16 @@
         </div>
       </div>
     </div>
-    <n-modal
-      v-model:show="logDialogVisible"
-      preset="card"
-      title="版本更新日志"
-      :style="{ width: '70%', height: `${viewHeight * 0.8}px` }"
-    >
-      <iframe
-        :src="logIframeSrc"
-        style="width: 100%; height: 100%; border: none"
-      />
-    </n-modal>
   </div>
 </template>
 
 <script setup>
 // import { download } from 'naive-ui/es/_utils'
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref } from 'vue'
 // import { useRouter } from 'vue-router'
-import { NModal } from 'naive-ui'
-
-const logDialogVisible = ref(false)
-const logIframeSrc = ref('')
-
-const viewHeight = ref(window.innerHeight)
-
-const updateViewHeight = () => {
-  viewHeight.value = window.innerHeight
-}
-
-onMounted(() => {
-  window.addEventListener('resize', updateViewHeight)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('resize', updateViewHeight)
-})
 
 const goProduceLog = (type) => {
-  logIframeSrc.value = `https://www.oortcloudsmart.com/zh/community/productLogCopy?type=${type}`
-  logDialogVisible.value = true
+  window.open(`/zh/community/productLog?type=${type}`, '_blank')
 }
 
 const generalList = ref([
@@ -360,10 +330,6 @@ const industryList = ref([
 ])
 const activeTab = ref('general')
 
-// const goProduceLog = (type) => {
-//   window.open(`https://www.oortcloudsmart.com/zh/community/productLog?type=${type}`)
-// }
-
 const goDisk = (value) => {
   if (value === '/img/demo/download/disk.png') {
     window.open('http://prod.oort.oortcloudsmart.com:32610/oort/oortcloud-policefront/cloud_disk/index.html?accessToken=g02dce3c79a42653f0314ae2e1bdbebd0')
@@ -550,13 +516,6 @@ definePageMeta({
 
 .color-table td:nth-child(3) {
   width: 235px;
-}
-
-:deep(.n-modal-card__header) {
-  padding-bottom: 0 !important;
-  padding-top: 16px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 </style>
