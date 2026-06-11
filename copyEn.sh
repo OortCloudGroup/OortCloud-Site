@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env bash
+#!/usr/bin/env bash
 
 # 这个脚本将 AI 生成的 thirdHtml 多语言目录复制到 dist 对应语言目录中
 # 以便在生成静态站点时包含这些多语言静态文件
@@ -30,10 +30,13 @@ for LANGUAGE in "${LANGUAGES[@]}"; do
     rm -rf "$TARGET_LANGUAGE_DIR"
   fi
 
-  mkdir -p "$TARGET_LANGUAGE_DIR"
+  if [ -e "$TARGET_LANGUAGE_DIR" ]; then
+    echo "[copyEn] 删除目标目录失败: $TARGET_LANGUAGE_DIR"
+    exit 1
+  fi
 
-  # 复制当前语言目录下所有文件（包含隐藏文件）到 dist/语言缩写
-  cp -R "$SOURCE_LANGUAGE_DIR"/. "$TARGET_LANGUAGE_DIR"/
+  # 整目录复制到 dist/语言缩写，避免旧文件与旧目录逐项覆盖冲突
+  cp -R "$SOURCE_LANGUAGE_DIR" "$TARGET_LANGUAGE_DIR"
 
   echo "[copyEn] 已完成复制: $SOURCE_LANGUAGE_DIR -> $TARGET_LANGUAGE_DIR"
 done
