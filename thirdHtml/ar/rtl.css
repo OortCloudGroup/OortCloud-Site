@@ -1,0 +1,245 @@
+/* ===== RTL (Right-to-Left) Layout Overrides for Arabic ===== */
+
+/* Base Direction */
+html {
+    direction: rtl;
+    text-align: right;
+}
+
+body {
+    font-family: 'Noto Naskh Arabic', 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    text-align: right;
+}
+
+/* ===== Navigation RTL ===== */
+.nav-container {
+    flex-direction: row-reverse;
+}
+
+.nav-links {
+    flex-direction: row-reverse;
+}
+
+.nav-links a::after {
+    left: auto;
+    right: 0;
+}
+
+.nav-right {
+    flex-direction: row-reverse;
+}
+
+.nav-lang-dropdown {
+    right: auto;
+    left: 0;
+}
+
+.nav-lang-item {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.nav-user-dropdown {
+    right: auto;
+    left: 0;
+}
+
+.nav-user-dropdown a,
+.nav-user-dropdown button {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.nav-login {
+    flex-direction: row-reverse;
+}
+
+/* ===== Hero RTL ===== */
+.hero-content {
+    text-align: center;
+}
+
+/* ===== Featured Section RTL ===== */
+.featured-card {
+    direction: rtl;
+}
+
+.featured-list li {
+    padding-left: 0;
+    padding-right: 24px;
+}
+
+.featured-list li::before {
+    left: auto;
+    right: 0;
+}
+
+/* ===== Products Section RTL ===== */
+.section-header {
+    text-align: center;
+}
+
+.category-title {
+    text-align: right;
+}
+
+.product-card {
+    text-align: right;
+}
+
+/* ===== Stats RTL ===== */
+.stats-grid {
+    direction: rtl;
+}
+
+/* ===== CTA RTL ===== */
+.cta-content {
+    text-align: center;
+}
+
+.cta-buttons {
+    flex-direction: row-reverse;
+}
+
+/* ===== Footer RTL ===== */
+.footer-grid {
+    direction: rtl;
+}
+
+.footer-brand {
+    align-items: flex-end;
+}
+
+.footer-links {
+    text-align: right;
+}
+
+.footer-bottom {
+    flex-direction: row-reverse;
+}
+
+.footer-social {
+    flex-direction: row-reverse;
+}
+
+/* ===== Product Card RTL ===== */
+.product-card::before {
+    background: linear-gradient(270deg, var(--blue), var(--purple));
+}
+
+/* ===== Orbit Dots - Mirror for RTL ===== */
+.dot-1 {
+    transform-origin: 140px 0;
+}
+
+.dot-2 {
+    transform-origin: 230px 0;
+}
+
+.dot-3 {
+    transform-origin: 315px 0;
+}
+
+.dot-4 {
+    transform-origin: -180px 0;
+}
+
+/* ===== Responsive RTL ===== */
+@media (max-width: 768px) {
+    .nav-lang-dropdown {
+        right: auto;
+        left: -10px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ===== Form Elements RTL ===== */
+input,
+textarea,
+select {
+    text-align: right;
+    direction: rtl;
+}
+
+/* Keep LTR for email and URL inputs */
+input[type="email"],
+input[type="url"],
+input[type="tel"] {
+    direction: ltr;
+    text-align: left;
+}
+
+/* ===== Breadcrumb RTL ===== */
+.product-breadcrumb {
+    flex-direction: row-reverse;
+}
+
+.breadcrumb-separator {
+    transform: scaleX(-1);
+}
+
+/* ===== About Page RTL ===== */
+.mission-grid {
+    direction: rtl;
+}
+
+.mission-content {
+    text-align: right;
+}
+
+.timeline {
+    padding-left: 0;
+    padding-right: 40px;
+}
+
+.timeline::before {
+    left: auto;
+    right: 7px;
+}
+
+.timeline-marker {
+    left: auto;
+    right: -40px;
+}
+
+.timeline-content {
+    text-align: right;
+}
+
+.pillar-card {
+    text-align: right;
+}
+
+.pillar-products {
+    flex-direction: row-reverse;
+}
+
+.value-card {
+    text-align: right;
+}
+
+.industry-card {
+    text-align: right;
+}
+
+/* ===== Responsive About RTL ===== */
+@media (max-width: 768px) {
+    .timeline {
+        padding-right: 30px;
+        padding-left: 0;
+    }
+
+    .timeline-marker {
+        right: -30px;
+        left: auto;
+    }
+}

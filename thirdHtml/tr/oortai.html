@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OORT.AI - Kurumsal Yapay Zeka Ajan Platformu | OortCloud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="oortai.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="alternate" hreflang="en" href="https://oortcloudsmart.com/en/oortai.html" />
+    <link rel="alternate" hreflang="tr" href="https://oortcloudsmart.com/tr/oortai.html" />
+    <link rel="alternate" hreflang="x-default" href="https://oortcloudsmart.com/en/oortai.html" />
+    <style>:root { --font-primary: 'Noto Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }</style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">Ürünler</a>
+                <a href="index.html#platform">Platform</a>
+                <a href="index.html#enterprise">Kurumsal</a>
+                <a href="index.html#about">Hakkında</a>
+            </div>
+            <a href="#get-started" class="nav-cta">Başlayın</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="Dil Değiştir">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">TR</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item active" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    Giriş Yap
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">Kullanıcı</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Kontrol Paneli
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            Çıkış Yap
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menüyü aç/kapat"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="ai-hero">
+        <div class="ai-hero-bg"></div>
+        <div class="container">
+            <div class="ai-hero-grid">
+                <div class="ai-hero-content">
+                    <div class="product-breadcrumb">
+                        <a href="index.html">Ürünler</a>
+                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <span>OORT.AI</span>
+                    </div>
+                    <h1>Sadece araç değil, <span class="gradient-text-ai">sonuç teslim eden</span> yapay zeka ajanları</h1>
+                    <p class="ai-hero-desc">Yapay Zeka Ofisi, Yapay Zeka Programlama, Yapay Zeka Operasyonları, Akıllı Müşteri Hizmetleri ve Ajan Yönetimi'ni kapsayan kurumsal otomasyon ajan platformu. Karmaşık kurumsal izin sistemlerine uyarlanabilir — yazılım değil, işi tamamlayan yapay zeka dağıtın.</p>
+                    <div class="hero-actions">
+                        <a href="#get-started" class="btn-primary btn-large btn-ai">Ücretsiz Deneyin</a>
+                        <a href="#agents" class="btn-secondary btn-large">Ajanları Keşfedin</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span class="trust-badge"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.5 3.5L7 9l-3 1.5.5-3.5L2 4.5 5.5 4z" fill="#9b72cb"/></svg> 9 Uzmanlaşmış Ajan</span>
+                        <span class="trust-badge"><svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M5 7l1.5 1.5L9 5.5" fill="none" stroke="#9b72cb" stroke-width="1.3" stroke-linecap="round"/></svg> Kurumsal İzinlere Hazır</span>
+                        <span class="trust-badge"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="4" width="10" height="7" rx="1.5" fill="none" stroke="#9b72cb" stroke-width="1.3"/><path d="M2 6h10" stroke="#9b72cb" stroke-width="1"/></svg> Özel Dağıtım</span>
+                    </div>
+                </div>
+                <div class="ai-hero-visual">
+                    <div class="agent-hub-mockup">
+                        <div class="hub-header">
+                            <span class="hub-title">OORT.AI Agent Hub</span>
+                            <div class="hub-status"><span class="status-dot-active"></span> 9 Ajan Aktif</div>
+                        </div>
+                        <div class="hub-body">
+                            <div class="agent-orbit">
+                                <div class="orbit-center">
+                                    <svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12" fill="url(#aiCoreGrad)" opacity="0.9"/><path d="M12 16l3 3 5-6" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="aiCoreGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#9b72cb"/><stop offset="100%" stop-color="#4285f4"/></linearGradient></defs></svg>
+                                </div>
+                                <div class="orbit-agent agent-1" title="Ofis">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="2" width="10" height="12" rx="1.5" fill="white" opacity="0.9"/><path d="M5.5 5h5M5.5 7.5h5M5.5 10h3" stroke="#9b72cb" stroke-width="0.8" stroke-linecap="round"/></svg>
+                                </div>
+                                <div class="orbit-agent agent-2" title="Programlama">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M5 5L2.5 8 5 11M11 5l2.5 3L11 11" fill="none" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round"/><path d="M9 3l-2 10" stroke="#4285f4" stroke-width="1" stroke-linecap="round"/></svg>
+                                </div>
+                                <div class="orbit-agent agent-3" title="Müşteri Hizmetleri">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 6c0-3 2.5-4 5-4s5 1 5 4v2c0 2-1.5 3-3 3h-1l-2 2v-2H5c-1.5 0-2-1-2-3V6z" fill="none" stroke="#34a853" stroke-width="1.2"/></svg>
+                                </div>
+                                <div class="orbit-agent agent-4" title="Operasyonlar">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5" fill="none" stroke="#ea4335" stroke-width="1.2"/><path d="M8 5v3l2 1.5" fill="none" stroke="#ea4335" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                </div>
+                                <div class="orbit-agent agent-5" title="Pazarlama">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 12l3-4 3 2 4-7" fill="none" stroke="#fbbc04" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                            </div>
+                            <div class="hub-task-feed">
+                                <div class="task-item completed">
+                                    <span class="task-agent">Ofis</span>
+                                    <span class="task-desc">Q3 Raporu taslağı hazırlandı</span>
+                                    <span class="task-status">Bitti</span>
+                                </div>
+                                <div class="task-item active">
+                                    <span class="task-agent">Kod</span>
+                                    <span class="task-desc">API incelemesi devam ediyor</span>
+                                    <span class="task-status">Çalışıyor</span>
+                                </div>
+                                <div class="task-item completed">
+                                    <span class="task-agent">MH</span>
+                                    <span class="task-desc">142 talep çözüldü</span>
+                                    <span class="task-status">Bitti</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Impact Stats -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <span class="impact-number">9</span>
+                    <span class="impact-label">Uzmanlaşmış yapay zeka ajanları</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">80%</span>
+                    <span class="impact-label">Rutin görev otomasyonu</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">24/7</span>
+                    <span class="impact-label">Kesintisiz operasyon</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">100%</span>
+                    <span class="impact-label">Veri egemenliği</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agent Categories -->
+    <section class="agents-section" id="agents">
+        <div class="container">
+            <div class="section-header">
+                <h2>Dokuz uzmanlaşmış ajan, tek birleşik platform</h2>
+                <p>Her ajan, kurumsal iş akışları için amaca yönelik tasarlanmış olup, kesin prosedürleri esnek yaratıcılıkla birleştirir</p>
+            </div>
+            <div class="agents-grid">
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #9b72cb, #7c4dff);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="4" width="18" height="20" rx="2.5" fill="white" opacity="0.9"/><path d="M9 9h10M9 13h10M9 17h6" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>Yapay Zeka Ofisi</h4>
+                    <p>Belge taslağı, veri birleştirme, zamanlama ve onay iş akışı desteği. Tekrarlayan idari görevleri otomatikleştirin.</p>
+                    <div class="agent-tasks">
+                        <span>Belge Taslağı</span>
+                        <span>Veri Raporları</span>
+                        <span>Zamanlama</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #4285f4, #1a73e8);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M9 8L5 14l4 6M19 8l4 6-4 6" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M16 5l-4 18" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/></svg>
+                    </div>
+                    <h4>Yapay Zeka Programlama</h4>
+                    <p>Kod üretimi, güvenlik açığı tarama, betik optimizasyonu ve teknik dokümantasyon. Geliştirme iş akışlarını hızlandırın.</p>
+                    <div class="agent-tasks">
+                        <span>Kod Üretimi</span>
+                        <span>Güvenlik Taraması</span>
+                        <span>Dokümantasyon</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #ea4335, #ff6e40);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="9" fill="none" stroke="white" stroke-width="2.5"/><path d="M14 9v5l3 2" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>Yapay Zeka Operasyonları</h4>
+                    <p>Sistem izleme, veri günlük derleme, arıza teşhisi ve bakım raporları. Altyapıyı otomatik olarak sağlıklı tutun.</p>
+                    <div class="agent-tasks">
+                        <span>İzleme</span>
+                        <span>Arıza Teşhisi</span>
+                        <span>Raporlar</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #34a853, #00c853);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M6 10c0-3.5 3.5-5 8-5s8 1.5 8 5v4c0 3-2.5 5-5 5h-2l-3 3v-3H9c-2 0-3-2-3-5v-4z" fill="white" opacity="0.9"/><circle cx="11" cy="12" r="1.2" fill="#34a853"/><circle cx="14" cy="12" r="1.2" fill="#34a853"/><circle cx="17" cy="12" r="1.2" fill="#34a853"/></svg>
+                    </div>
+                    <h4>Akıllı Müşteri Hizmetleri</h4>
+                    <p>Rutin sorgu yönetimi, talep kaydı, iş emri otomasyonu ve SSS yönetimi. Anında, tutarlı destek sağlayın.</p>
+                    <div class="agent-tasks">
+                        <span>Otomatik Yanıt</span>
+                        <span>Talep Yönlendirme</span>
+                        <span>Bilgi Bankası</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #fbbc04, #f09800);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M6 20l4-6 4 4 5-9 3 5" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h4>Yapay Zeka Pazarlama</h4>
+                    <p>Pazar istihbaratı, tanıtım içeriği, kitle segmentasyonu ve kampanya varlık optimizasyonu. Ölçekte veri odaklı pazarlama.</p>
+                    <div class="agent-tasks">
+                        <span>İçerik Üretimi</span>
+                        <span>Segmentasyon</span>
+                        <span>Analitik</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #00bcd4, #0097a7);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="10" r="5" fill="white" opacity="0.9"/><path d="M7 22c0-4 3-6 7-6s7 2 7 6" fill="white" opacity="0.7"/></svg>
+                    </div>
+                    <h4>Yapay Zeka İK</h4>
+                    <p>Özgeçmiş tarama, işe alım otomasyonu, devam takibi, eğitim materyali oluşturma ve işgücü veri yönetimi.</p>
+                    <div class="agent-tasks">
+                        <span>İşe Alım</span>
+                        <span>Oryantasyon</span>
+                        <span>Eğitim</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #ff5722, #e64a19);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="6" width="18" height="16" rx="2" fill="none" stroke="white" stroke-width="2.5"/><path d="M5 11h18" stroke="white" stroke-width="1.5"/><rect x="8" y="14" width="5" height="4" rx="1" fill="white" opacity="0.7"/></svg>
+                    </div>
+                    <h4>Yapay Zeka Eğitim</h4>
+                    <p>Kurumsal öğrenme için özelleştirilmiş ders materyali geliştirme, standartlaştırılmış öğretim senaryoları ve değerlendirme metrikleri toplama.</p>
+                    <div class="agent-tasks">
+                        <span>Ders Materyali</span>
+                        <span>Değerlendirme</span>
+                        <span>Sertifikasyon</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #607d8b, #455a64);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="8" fill="none" stroke="white" stroke-width="2.5"/><circle cx="14" cy="14" r="3" fill="white" opacity="0.8"/><path d="M14 8v2M14 18v2M8 14h2M18 14h2" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>Yapay Zeka Algı</h4>
+                    <p>Resim, metin ve ses verileri için çok modlu işleme. Yapılandırılmamış içeriği otomatik olarak tanımlayın, sınıflandırın ve düzenleyin.</p>
+                    <div class="agent-tasks">
+                        <span>Görüntü Tanıma</span>
+                        <span>NLP</span>
+                        <span>Ses İşleme</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #3f51b5, #303f9f);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="8" width="18" height="12" rx="2" fill="none" stroke="white" stroke-width="2.5"/><circle cx="14" cy="6" r="2" fill="white" opacity="0.7"/><path d="M9 14h2M13 14h2M17 14h2" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>Yapay Zeka Toplantı</h4>
+                    <p>Otomatik transkripsiyon, eylem maddesi çıkarma, görev dağılımı ve toplantı sonrası yürütme takibi. Hiçbir takip işini kaçırmayın.</p>
+                    <div class="agent-tasks">
+                        <span>Transkripsiyon</span>
+                        <span>Eylem Maddeleri</span>
+                        <span>Takip</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kurumsal düzeyde yapay zeka dağıtımı için tasarlandı</h2>
+                <p>Ajan oluşturmaktan izin yönetimine, yapay zekayı operasyonelleştirmek için ihtiyacınız olan her şey</p>
+            </div>
+
+            <!-- Feature 1: Agent Creation & Management -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #9b72cb, #4285f4);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="8" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><path d="M11 14h6M14 11v6" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Ajan Oluşturma ve Yönetimi</h3>
+                    <p>Görsel iş akışı oluşturucuyla yapay zeka ajanları oluşturun, dağıtın ve yönetin. Kodlama gerekmez — davranışları tanımlayın, korumaları ayarlayın ve mevcut araçlarınızla entegre çalışan ajanları başlatın.</p>
+                    <ul class="feature-list">
+                        <li><strong>Görsel Ajan Oluşturucu</strong><span>Ajan davranışları ve karar ağaçları oluşturmak için sürükle-bırak iş akışı tasarlayıcısı</span></li>
+                        <li><strong>Ajan Pazar Yeri</strong><span>Yaygın kurumsal senaryolar için özelleştirmeye hazır önceden oluşturulmuş ajan şablonları</span></li>
+                        <li><strong>Sürüm Kontrolü</strong><span>Değişiklikleri takip edin, yapılandırmaları geri alın ve ajan davranışlarını A/B test edin</span></li>
+                        <li><strong>Performans İzleme</strong><span>Görev tamamlama, doğruluk ve kaynak kullanımı hakkında gerçek zamanlı metrikler</span></li>
+                        <li><strong>Çoklu Ajan Orkestrasyonu</strong><span>Karmaşık, çok adımlı iş akışları için birden fazla ajanı zincirleyin</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="agent-builder-visual">
+                        <div class="builder-panel">
+                            <div class="builder-header">Ajan Oluşturucu</div>
+                            <div class="builder-canvas">
+                                <div class="builder-node trigger">
+                                    <span class="node-icon">&#9889;</span>
+                                    <span class="node-label">Tetikleyici</span>
+                                </div>
+                                <div class="builder-connector"></div>
+                                <div class="builder-node process">
+                                    <span class="node-icon">&#9881;</span>
+                                    <span class="node-label">İşlem</span>
+                                </div>
+                                <div class="builder-connector"></div>
+                                <div class="builder-node action">
+                                    <span class="node-icon">&#10003;</span>
+                                    <span class="node-label">Eylem</span>
+                                </div>
+                            </div>
+                            <div class="builder-sidebar">
+                                <div class="builder-component">
+                                    <span>Belge Ayrıştırıcı</span>
+                                </div>
+                                <div class="builder-component">
+                                    <span>Karar Kapısı</span>
+                                </div>
+                                <div class="builder-component">
+                                    <span>API Bağlayıcı</span>
+                                </div>
+                                <div class="builder-component active">
+                                    <span>Çıktı Biçimlendirici</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Enterprise Permission System -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 4L6 8v6c0 6 4 11 8 12 4-1 8-6 8-12V8l-8-4z" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><path d="M11 14l2 2 4-4" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Kurumsal İzin Mimarisi</h3>
+                    <p>Mevcut organizasyonel hiyerarşinize saygı duyan yapay zeka dağıtın. İnce taneli erişim kontrolleri, ajanların yalnızca yetkili kapsamlarındaki verilere erişmesini ve eylemler gerçekleştirmesini sağlar.</p>
+                    <ul class="feature-list">
+                        <li><strong>Rol Tabanlı Ajan Erişimi</strong><span>Ajanları devralınan izinlerle departmanlara, ekiplere veya kişilere atayın</span></li>
+                        <li><strong>Veri Kapsam Kontrolleri</strong><span>Her ajanın hangi verileri okuyabileceğini, işleyebileceğini ve çıktılayabileceğini kısıtlayın</span></li>
+                        <li><strong>Eylem Yetkilendirmesi</strong><span>Ajanların hangi gerçek dünya eylemlerini özerk olarak veya onayla gerçekleştirebileceğini tanımlayın</span></li>
+                        <li><strong>Denetim ve Uyumluluk</strong><span>Düzenleyici uyumluluk için tüm ajan eylemlerinin tam denetim izi</span></li>
+                        <li><strong>SSO ve Dizin Entegrasyonu</strong><span>LDAP, Active Directory ve SAML sağlayıcılarıyla sorunsuz entegrasyon</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="permission-visual">
+                        <div class="perm-panel">
+                            <div class="perm-header">İzin Matrisi</div>
+                            <div class="perm-tree">
+                                <div class="perm-org">
+                                    <div class="perm-node root">
+                                        <span class="perm-dot"></span>
+                                        <span>Organizasyon</span>
+                                    </div>
+                                    <div class="perm-branch">
+                                        <div class="perm-node dept">
+                                            <span class="perm-dot"></span>
+                                            <span>Mühendislik</span>
+                                            <span class="perm-badge">5 ajan</span>
+                                        </div>
+                                        <div class="perm-node dept">
+                                            <span class="perm-dot"></span>
+                                            <span>Pazarlama</span>
+                                            <span class="perm-badge">3 ajan</span>
+                                        </div>
+                                        <div class="perm-node dept">
+                                            <span class="perm-dot"></span>
+                                            <span>Destek</span>
+                                            <span class="perm-badge">4 ajan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="perm-access-list">
+                                <div class="perm-access-item"><span class="pa-icon read"></span><span>Okuma: Müşteri Kayıtları</span><span class="pa-status granted">Verildi</span></div>
+                                <div class="perm-access-item"><span class="pa-icon write"></span><span>Yazma: Destek Talepleri</span><span class="pa-status granted">Verildi</span></div>
+                                <div class="perm-access-item"><span class="pa-icon exec"></span><span>Yürütme: İade İşlemleri</span><span class="pa-status review">Onay Gerektirir</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: AI Office -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #9b72cb, #7c4dff);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="4" width="18" height="20" rx="2.5" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><path d="M9 9h10M9 13h10M9 17h6" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Yapay Zeka Destekli Ofis Otomasyonu</h3>
+                    <p>İdari yükü otomatik iş akışlarına dönüştürün. Belge taslağından veri birleştirmeye ve onay yönetimine — yapay zeka ofis asistanınız her şeyi halleder.</p>
+                    <ul class="feature-list">
+                        <li><strong>Akıllı Belge Taslağı</strong><span>Kısa talimatlardan veya şablonlardan sözleşmeler, raporlar ve notlar oluşturun</span></li>
+                        <li><strong>Veri Birleştirme</strong><span>Birden fazla kaynaktan veriyi otomatik olarak birleştirilmiş, biçimlendirilmiş raporlara toplayın</span></li>
+                        <li><strong>Akıllı Zamanlama</strong><span>Yapay zeka destekli takvim yönetimi, toplantı koordinasyonu ve çatışma çözümü</span></li>
+                        <li><strong>Onay İş Akışı Desteği</strong><span>Taslakları hazırlayın, destekleyici belgeleri ekleyin ve onay zincirlerinden yönlendirin</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="office-visual">
+                        <div class="office-demo">
+                            <div class="office-header">Yapay Zeka Ofis Ajanı</div>
+                            <div class="office-conversation">
+                                <div class="office-msg user">
+                                    <span class="office-msg-label">Siz</span>
+                                    <p>Satış ve operasyon veritabanlarından verileri kullanarak Q3 mali özet raporunu hazırla.</p>
+                                </div>
+                                <div class="office-msg agent">
+                                    <span class="office-msg-label">Yapay Zeka Ofisi</span>
+                                    <p>Rapor oluşturuldu. Temel bulgular:</p>
+                                    <ul>
+                                        <li>Gelir çeyreklik bazda %23 arttı</li>
+                                        <li>Operasyonel maliyetler %8 azaldı</li>
+                                        <li>3 öneri eklendi</li>
+                                    </ul>
+                                    <div class="office-output">
+                                        <span class="output-file"><svg width="12" height="12" viewBox="0 0 12 12"><rect x="2" y="1" width="8" height="10" rx="1" fill="none" stroke="currentColor" stroke-width="1"/><path d="M4 4h4M4 6h4M4 8h2" stroke="currentColor" stroke-width="0.7" stroke-linecap="round"/></svg> Q3_Summary.pdf</span>
+                                        <span class="output-file"><svg width="12" height="12" viewBox="0 0 12 12"><rect x="2" y="1" width="8" height="10" rx="1" fill="none" stroke="currentColor" stroke-width="1"/><path d="M4 4h4M4 6h4M4 8h2" stroke="currentColor" stroke-width="0.7" stroke-linecap="round"/></svg> Data_Appendix.xlsx</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: AI Programming -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #4285f4, #1a73e8);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M9 8L5 14l4 6M19 8l4 6-4 6" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M16 5l-4 18" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/></svg>
+                    </div>
+                    <h3>Yapay Zeka Programlama Asistanı</h3>
+                    <p>Kod tablonuzu anlayan yapay zekayla geliştirme ekibinizi güçlendirin. Kod üretin, güvenlik açıklarını tarayın, betikleri optimize edin ve teknik dokümantasyon oluşturun.</p>
+                    <ul class="feature-list">
+                        <li><strong>Bağlam Farkında Kod Üretimi</strong><span>Projenizin kodlama standartlarına uygun fonksiyonlar, sınıflar ve modüller oluşturun</span></li>
+                        <li><strong>Güvenlik Açığı Tarama</strong><span>OWASP Top 10 ve ötesi için düzeltme önerileriyle sürekli güvenlik analizi</span></li>
+                        <li><strong>Betik Optimizasyonu</strong><span>Performans, okunabilirlik ve bakım kolaylığı için kodu analiz edin ve yeniden düzenleyin</span></li>
+                        <li><strong>API Dokümantasyonu</strong><span>API dokümanları, değişiklik günlükleri ve geliştirici kılavuzlarını otomatik oluşturun ve sürdürün</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="code-visual">
+                        <div class="code-panel">
+                            <div class="code-header">
+                                <div class="code-dots"><span></span><span></span><span></span></div>
+                                <span class="code-filename">api_service.py</span>
+                            </div>
+                            <div class="code-body">
+                                <div class="code-line"><span class="ln">1</span><span class="kw">async def</span> <span class="fn">process_order</span>(order_id):</div>
+                                <div class="code-line"><span class="ln">2</span>    order = <span class="kw">await</span> db.get(order_id)</div>
+                                <div class="code-line"><span class="ln">3</span>    <span class="kw">if</span> order.status == <span class="str">"pending"</span>:</div>
+                                <div class="code-line ai-generated"><span class="ln">4</span>        <span class="comment"># AI: Added validation</span></div>
+                                <div class="code-line ai-generated"><span class="ln">5</span>        <span class="kw">await</span> validate_inventory(order)</div>
+                                <div class="code-line ai-generated"><span class="ln">6</span>        <span class="kw">await</span> charge_payment(order)</div>
+                                <div class="code-line ai-generated"><span class="ln">7</span>        order.status = <span class="str">"confirmed"</span></div>
+                                <div class="code-line"><span class="ln">8</span>    <span class="kw">return</span> order</div>
+                            </div>
+                            <div class="code-ai-badge">
+                                <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="4" fill="#9b72cb" opacity="0.8"/><path d="M4 6l1.5 1.5L8 5" fill="none" stroke="white" stroke-width="1" stroke-linecap="round"/></svg>
+                                <span>Yapay zeka 4 satır üretti &bull; Güvenlik kontrolü yapıldı</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5: Intelligent Customer Service -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #00c853);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M6 10c0-3.5 3.5-5 8-5s8 1.5 8 5v4c0 3-2.5 5-5 5h-2l-3 3v-3H9c-2 0-3-2-3-5v-4z" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><circle cx="11" cy="12" r="1.5" fill="white"/><circle cx="14" cy="12" r="1.5" fill="white"/><circle cx="17" cy="12" r="1.5" fill="white"/></svg>
+                    </div>
+                    <h3>Akıllı Müşteri Hizmetleri</h3>
+                    <p>Bağlamı anlayan, konuşma geçmişini sürdüren ve ne zaman yükseltme yapılacağını bilen yapay zekayla müşteri sorgularını anında çözün. Ölçekte tutarlı, 7/24 destek sağlayın.</p>
+                    <ul class="feature-list">
+                        <li><strong>Çoklu Kanal Desteği</strong><span>Sohbet, e-posta, telefon ve sosyal medyadan gelen sorguları tek birleşik sistemde yönetin</span></li>
+                        <li><strong>Akıllı Talep Yönlendirme</strong><span>Sorunları otomatik sınıflandırın ve anında doğru ajan veya departmana yönlendirin</span></li>
+                        <li><strong>Bilgi Bankası Yapay Zeka</strong><span>Çözüm verilerine dayalı olarak yanıtları geliştiren kendini öğrenen bilgi bankası</span></li>
+                        <li><strong>İnsan Aktarımı</strong><span>Gerektiğinde tam bağlam aktarımıyla insan ajanlara sorunsuz yükseltme</span></li>
+                        <li><strong>Memnuniyet Analitiği</strong><span>CSAT, çözüm süresi takip edin ve hizmet iyileştirme alanlarını belirleyin</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="cs-visual">
+                        <div class="cs-panel">
+                            <div class="cs-header">Müşteri Hizmetleri Paneli</div>
+                            <div class="cs-stats-row">
+                                <div class="cs-stat"><span class="cs-val">142</span><span class="cs-lbl">Bugün Çözülen</span></div>
+                                <div class="cs-stat"><span class="cs-val">%98</span><span class="cs-lbl">CSAT Puanı</span></div>
+                                <div class="cs-stat"><span class="cs-val">&lt;30sn</span><span class="cs-lbl">Ort. Yanıt</span></div>
+                            </div>
+                            <div class="cs-conversation">
+                                <div class="cs-msg customer">
+                                    <span class="cs-name">Müşteri</span>
+                                    <p>#4521 numaralı siparişimi iade etmek istiyorum</p>
+                                </div>
+                                <div class="cs-msg ai">
+                                    <span class="cs-name">Yapay Zeka Ajanı</span>
+                                    <p>#4521 numaralı siparişinizi buldum. İadeniz uygun. Süreci başlattım ve e-postanıza bir iade etiketi gönderdim. İade 3-5 iş günü içinde işlenecektir.</p>
+                                    <span class="cs-auto-badge">Otomatik çözüldü</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Features -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>İlk günden itibaren kurumsal kullanıma hazır</h2>
+                <p>Her katmana entegre edilmiş güvenlik, uyumluluk ve ölçeklenebilirlik</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V7l-8-5z" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M9 12l2 2 4-4" fill="none" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg><h5>Özel Dağıtım</h5><p>Şirket içi veya özel bulut — verileriniz asla altyapınızdan ayrılmaz</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M3 10h18" stroke="#4285f4" stroke-width="1"/><circle cx="7" cy="7" r="1" fill="#4285f4"/><circle cx="10" cy="7" r="1" fill="#4285f4"/></svg><h5>Özel Bilgi Bankası</h5><p>Ajanları tescilli verileriniz, SOP'leriniz ve sektöre özel bilginizle eğitin</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M8 12h8M12 8v8" stroke="#34a853" stroke-width="1.5" stroke-linecap="round"/></svg><h5>Çoklu Dil</h5><p>Ajanlar 20+ dilde ana dil seviyesinde anlar ve yanıt verir</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="#ea4335" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg><h5>API Entegrasyonu</h5><p>ERP, CRM ve özel sistemler için REST API'ları, webhook'lar ve bağlayıcılar</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M12 7v5l3 3" fill="none" stroke="#fbbc04" stroke-width="1.8" stroke-linecap="round"/></svg><h5>Sürekli Öğrenme</h5><p>Ajanlar geri bildirim döngüleri ve performans optimizasyonuyla zamanla gelişir</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M4 22v-7" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg><h5>Uyumluluğa Hazır</h5><p>SOC 2, GDPR ve sektöre özel uyumluluk çerçeveleri entegre</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="2" y="6" width="9" height="12" rx="1.5" fill="none" stroke="#1a73e8" stroke-width="1.5"/><rect x="13" y="4" width="9" height="16" rx="1.5" fill="none" stroke="#1a73e8" stroke-width="1.5"/></svg><h5>Mobil Erişim</h5><p>Ajanları her yerden, her cihazdan yönetin ve etkileşime geçin</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="#34a853" stroke-width="1.5" opacity="0.6"/></svg><h5>Ölçeklenebilir Mimari</h5><p>Yatay otomatik ölçeklendirmeyle binlerce eşzamanlı görevi işleyin</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>Bugün otomasyona başlayın</h2>
+                <p>Kuruluşunuzun ihtiyaçlarına uygun planı seçin</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Başlangıç</h4>
+                        <div class="price-amount">$49</div>
+                        <span class="price-period">kullanıcı / ay</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>3 yapay zeka ajanı dahil</li>
+                        <li>Ayda 5.000 görev</li>
+                        <li>Temel bilgi bankası</li>
+                        <li>E-posta desteği</li>
+                        <li>Standart entegrasyonlar</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn">Başlayın</a>
+                </div>
+                <div class="pricing-card popular">
+                    <span class="popular-badge">En Popüler</span>
+                    <div class="pricing-header">
+                        <h4>İş</h4>
+                        <div class="price-amount">$99</div>
+                        <span class="price-period">kullanıcı / ay</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Tüm 9 yapay zeka ajanı</li>
+                        <li>Sınırsız görev</li>
+                        <li>Özel bilgi bankası</li>
+                        <li>Öncelikli destek</li>
+                        <li>Gelişmiş entegrasyonlar</li>
+                        <li>Ajan iş akışı oluşturucu</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn btn-ai">Ücretsiz Deneyin</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Kurumsal</h4>
+                        <div class="price-amount">Özel</div>
+                        <span class="price-period">özel fiyatlandırma</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>İş'teki her şey</li>
+                        <li>Özel dağıtım</li>
+                        <li>Özel ajan geliştirme</li>
+                        <li>Kurumsal SSO ve izinler</li>
+                        <li>Özel başarı ekibi</li>
+                        <li>Özel SLA</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary pricing-btn">Satış İletişimi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Çalışan yapay zeka dağıtmaya hazır mısınız?</h2>
+                <p>Sadece araç değil, tamamlanmış iş teslim eden kurumsal yapay zeka ajanlarını deneyimleyin. Ücretsiz denemenize bugün başlayın.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">Ücretsiz Deneyin</a>
+                    <a href="#" class="btn-secondary btn-large">Demo Planlayın</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36"><p class="footer-tagline">Kurumsal teknolojinin geleceğini inşa ediyoruz.</p></div>
+                <div class="footer-links"><h5>Ürünler</h5><a href="https://vls.oortcloudsmart.com/tr/" target="_blank">VLStream</a><a href="workup.html">Workup</a><a href="#">OORT.AI</a><a href="https://sh.oortcloudsmart.com/tr/" target="_blank">OORT.SH</a><a href="classroom.html">Bulut Sınıf</a></div>
+                <div class="footer-links"><h5>Çözümler</h5><a href="messenger.html">Anlık Mesajlaşma</a><a href="clouddisk.html">Bulut Disk</a><a href="email.html">E-posta</a><a href="approval.html">Akıllı Onay</a><a href="dispatch.html">Komuta ve Sevk</a><a href="fieldmanager.html">Saha Yöneticisi</a></div>
+                <div class="footer-links"><h5>Şirket</h5><a href="about.html">Hakkımızda</a><a href="#">Kariyer</a><a href="#">Blog</a><a href="contact.html">İletişim</a><a href="#">Gizlilik Politikası</a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 OortCloud Technology. Tüm hakları saklıdır.</p><div class="footer-social"><a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a><a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a><a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a></div></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

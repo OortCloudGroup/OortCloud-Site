@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" hreflang="ko" href="https://oortcloudsmart.com/ko/">
+    <title>OortCloud 소개 - 엔터프라이즈 AI 및 클라우드 기술</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">제품</a>
+                <a href="index.html#platform">플랫폼</a>
+                <a href="index.html#enterprise">엔터프라이즈</a>
+                <a href="about.html" class="active">소개</a>
+            </div>
+            <a href="index.html#get-started" class="nav-cta">시작하기</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="언어 전환">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">KO</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item active" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    로그인
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">사용자</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            대시보드
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            로그아웃
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="메뉴 전환"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <h1>도구가 아닌 <span class="gradient-text-about">성과를 전달</span>하는 기술</h1>
+                <p class="about-hero-desc">OortCloud는 조직의 운영 방식을 혁신하는 지능형 클라우드 플랫폼과 AI 에이전트를 구축하는 엔터프라이즈 기술 기업입니다. 우리는 AI를 활용해 완성된 업무를 제공하는 기업이 미래의 주인공이라고 믿습니다.</p>
+            </div>
+        </div>
+        <div class="about-hero-visual">
+            <div class="floating-orbs">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-grid">
+                <div class="mission-content">
+                    <h2>우리의 미션</h2>
+                    <p class="mission-statement">복잡함을 명확함으로 대체하는 지능형 클라우드 인프라와 AI 기반 자동화로 기업에 힘을 실어주어, 일상적인 운영을 자동화된 성과로 전환합니다.</p>
+                    <p class="mission-detail">2019년 중국 선전에서 설립된 OortCloud는 프라이빗 클라우드 솔루션 제공업체에서 종합적인 엔터프라이즈 AI 플랫폼 기업으로 성장했습니다. 전 세계의 정부 기관, 공공 안전 부서, 의료 시스템, 교육 기관, 상업 기업을 서비스하고 있습니다.</p>
+                </div>
+                <div class="mission-stats">
+                    <div class="mission-stat">
+                        <span class="ms-number">300+</span>
+                        <span class="ms-label">엔터프라이즈 제품</span>
+                    </div>
+                    <div class="mission-stat">
+                        <span class="ms-number">150M+</span>
+                        <span class="ms-label">서비스 사용자</span>
+                    </div>
+                    <div class="mission-stat">
+                        <span class="ms-number">2019</span>
+                        <span class="ms-label">설립 연도</span>
+                    </div>
+                    <div class="mission-stat">
+                        <span class="ms-number">AAA</span>
+                        <span class="ms-label">신용 등급</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do -->
+    <section class="whatwedo-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>우리가 하는 일</h2>
+                <p>세 가지 축을 중심으로 실제 비즈니스 문제를 해결하는 기술을 구축합니다</p>
+            </div>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="18" fill="none" stroke="#4285f4" stroke-width="3"/><circle cx="24" cy="24" r="6" fill="#4285f4" opacity="0.3"/><circle cx="24" cy="10" r="3" fill="#4285f4"/><circle cx="36" cy="30" r="3" fill="#1a73e8"/><circle cx="12" cy="30" r="3" fill="#8ab4f8"/></svg>
+                    </div>
+                    <h3>지능형 클라우드 플랫폼</h3>
+                    <p>데이터 주권과 운영 제어를 요구하는 조직을 위해 설계된 프라이빗 클라우드 인프라, aPaaS 애플리케이션 플랫폼, 배포 솔루션입니다. 모든 규모의 기업에 맞는 디지털 전환을 지원합니다.</p>
+                    <div class="pillar-products">
+                        <a href="clouddisk.html">클라우드 디스크</a>
+                        <a href="email.html">이메일</a>
+                        <a href="workup.html">Workup</a>
+                    </div>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="32" rx="6" fill="none" stroke="#9b72cb" stroke-width="3"/><circle cx="24" cy="20" r="6" fill="#9b72cb" opacity="0.3"/><path d="M16 34c0-5 3.5-8 8-8s8 3 8 8" fill="none" stroke="#9b72cb" stroke-width="2.5"/><circle cx="36" cy="12" r="4" fill="none" stroke="#7c4dff" stroke-width="2"/><path d="M34 12h-4" stroke="#7c4dff" stroke-width="1.5" stroke-dasharray="2"/></svg>
+                    </div>
+                    <h3>엔터프라이즈 AI 에이전트</h3>
+                    <p>일상적인 기업 업무를 처리하는 9개의 전문 AI 에이전트입니다. 사무 행정, 프로그래밍부터 고객 서비스, 운영까지 완성된 업무를 제공합니다.</p>
+                    <div class="pillar-products">
+                        <a href="oortai.html">OORT.AI</a>
+                        <a href="classroom.html">Cloud Classroom</a>
+                    </div>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48"><path d="M24 6l16 9v18l-16 9-16-9V15l16-9z" fill="none" stroke="#34a853" stroke-width="3"/><path d="M24 6v36M8 15l16 9 16-9" fill="none" stroke="#34a853" stroke-width="2" opacity="0.4"/></svg>
+                    </div>
+                    <h3>운영 및 지휘</h3>
+                    <p>실시간 모니터링, 자원 조정, 사고 관리를 위한 미션 크리티컬 시스템입니다. 신뢰할 수 있는 상황 인식과 빠른 대응 능력이 필요한 조직을 위해 구축되었습니다.</p>
+                    <div class="pillar-products">
+                        <a href="dispatch.html">지휘 및 파견</a>
+                        <a href="approval.html">지능형 결재</a>
+                        <a href="messenger.html">Messenger</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>우리의 발자취</h2>
+                <p>프라이빗 클라우드 솔루션에서 글로벌 엔터프라이즈 AI 플랫폼까지</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2025</span>
+                        <h4>엔터프라이즈 AI의 미래</h4>
+                        <p>"도구로서의 AI"에서 "서비스로서의 AI"로의 전환을 선도하며, 자율 엔터프라이즈 에이전트를 통해 완성된 운영 성과를 제공합니다.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2024</span>
+                        <h4>글로벌 확장</h4>
+                        <p>OORT.SH 개발자 플랫폼을 출시했습니다. 해외 시장에 맞는 현지화 제품으로 국제적으로 확장했습니다. 누적 사용자 1억 5,000만 명을 돌파했습니다.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2023</span>
+                        <h4>AI 에이전트 플랫폼</h4>
+                        <p>9개의 전문 엔터프라이즈 에이전트를 탑재한 OORT.AI를 출시했습니다. MIT 오픈소스 라이선스로 VLStream 비주얼 AI 플랫폼을 공개했습니다. 국가급 기술 중소기업으로 인정받았습니다.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2022</span>
+                        <h4>플랫폼 확장</h4>
+                        <p>AAA 신용 등급을 달성했습니다. 제품군을 300개 이상의 엔터프라이즈 애플리케이션으로 확장했습니다. ISO 9001, ISO 14001, ISO 45001 인증을 획득했습니다.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2021</span>
+                        <h4>Workup 슈퍼 앱 출시</h4>
+                        <p>메신저, 이메일, 결재, 드라이브, 클래스룸을 통합한 올인원 기업 워크스페이스를 출시했습니다. Huawei 및 CETC와 전략적 파트너십을 체결했습니다.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2020</span>
+                        <h4>첫 엔터프라이즈 배포</h4>
+                        <p>핵심 클라우드 플랫폼과 지휘 파견 솔루션을 출시했습니다. 프라이빗 배포 아키텍처로 초기 기업 및 정부 고객을 확보했습니다.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2019</span>
+                        <h4>선전 설립</h4>
+                        <p>OortCloud가 설립되었습니다. 엔터프라이즈 및 공공 안전 부문을 위한 프라이빗 클라우드 인프라와 지능형 애플리케이션 개발에 집중했습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>우리를 이끄는 가치</h2>
+                <p>우리가 만드는 모든 제품 뒤의 원칙</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-number">01</div>
+                    <h4>도구가 아닌 성과</h4>
+                    <p>더 많은 일을 만드는 소프트웨어가 아닌, 완성된 업무를 제공하는 AI를 만듭니다. 운영 오버헤드를 줄이는 것이 목표이며, 복잡성을 추가하지 않습니다.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-number">02</div>
+                    <h4>기본적으로 보안</h4>
+                    <p>기업 데이터 주권은 협상 불가입니다. 모든 제품은 프라이빗 배포, 종단간 암호화, 글로벌 표준 준수를 지원합니다.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-number">03</div>
+                    <h4>통합 우선</h4>
+                    <p>고립된 도구는 사일로를 만듭니다. 전체 플랫폼에서 컨텍스트, 데이터, 워크플로를 공유하며 원활하게 작동하는 제품을 만듭니다.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-number">04</div>
+                    <h4>엔터프라이즈 적응성</h4>
+                    <p>모든 조직은 다릅니다. 복잡한 권한 시스템, 기존 인프라, 고유한 운영 요구 사항에 맞게 플랫폼이 적응합니다.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-number">05</div>
+                    <h4>오픈 이노베이션</h4>
+                    <p>VLStream(MIT 라이선스)과 OORT.SH를 통해 오픈소스 커뮤니티에 기여하며, 열린 협업이 모두의 혁신을 가속화한다고 믿습니다.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-number">06</div>
+                    <h4>글로벌 사고</h4>
+                    <p>선전에서 만들어, 세계를 위해 설계합니다. 국경, 언어, 산업을 초월하는 기술을 만들어, 기업이 운영되는 모든 곳에서 서비스합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners & Certifications -->
+    <section class="partners-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>업계 리더의 신뢰</h2>
+                <p>우수성에 대한 우리의 약속을 입증하는 전략적 파트너십 및 인증</p>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-badge">
+                    <div class="pb-icon"><svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="4" fill="none" stroke="#ea4335" stroke-width="2"/><path d="M9 14h10M14 9v10" stroke="#ea4335" stroke-width="2" stroke-linecap="round"/></svg></div>
+                    <strong>Huawei 클라우드 파트너</strong>
+                    <span>전략적 기술 협업</span>
+                </div>
+                <div class="partner-badge">
+                    <div class="pb-icon"><svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="10" fill="none" stroke="#4285f4" stroke-width="2"/><path d="M10 14l3 3 5-6" fill="none" stroke="#4285f4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                    <strong>ISO 9001 인증</strong>
+                    <span>품질 경영 시스템</span>
+                </div>
+                <div class="partner-badge">
+                    <div class="pb-icon"><svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 4L6 8v6c0 6 4 11 8 12 4-1 8-6 8-12V8l-8-4z" fill="none" stroke="#34a853" stroke-width="2"/></svg></div>
+                    <strong>ISO 14001 & 45001</strong>
+                    <span>환경 및 안전 기준</span>
+                </div>
+                <div class="partner-badge">
+                    <div class="pb-icon"><svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 4l3 6h6l-5 4.5 2 6.5L14 17.5 8 21l2-6.5L5 10h6z" fill="none" stroke="#fbbc04" stroke-width="2" stroke-linejoin="round"/></svg></div>
+                    <strong>AAA Credit Rating</strong>
+                    <span>기업 신용 우수성</span>
+                </div>
+                <div class="partner-badge">
+                    <div class="pb-icon"><svg width="28" height="28" viewBox="0 0 28 28"><rect x="6" y="6" width="16" height="16" rx="3" fill="none" stroke="#9b72cb" stroke-width="2"/><path d="M10 10h8M10 14h8M10 18h5" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+                    <strong>국가급 기술 중소기업</strong>
+                    <span>정부 인정 혁신</span>
+                </div>
+                <div class="partner-badge">
+                    <div class="pb-icon"><svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="10" fill="none" stroke="#1a73e8" stroke-width="2"/><path d="M14 8v6l4 3" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round"/></svg></div>
+                    <strong>CETC 협업</strong>
+                    <span>중국 전자 파트너십</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries -->
+    <section class="industries-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>서비스 산업</h2>
+                <p>다양한 운영 환경에 맞춘 엔터프라이즈 기술 솔루션</p>
+            </div>
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <svg width="32" height="32" viewBox="0 0 32 32"><rect x="4" y="8" width="24" height="18" rx="3" fill="none" stroke="#4285f4" stroke-width="2.5"/><path d="M4 14h24" stroke="#4285f4" stroke-width="1.5"/><rect x="7" y="17" width="7" height="5" rx="1" fill="#4285f4" opacity="0.2"/></svg>
+                    <h5>정부 및 공공 안전</h5>
+                    <p>디지털 거버넌스, 지휘 파견, 안전한 협업 플랫폼</p>
+                </div>
+                <div class="industry-card">
+                    <svg width="32" height="32" viewBox="0 0 32 32"><path d="M16 4l12 6v12l-12 6-12-6V10l12-6z" fill="none" stroke="#34a853" stroke-width="2.5"/><path d="M16 4v24M4 10l12 6 12-6" fill="none" stroke="#34a853" stroke-width="1.5" opacity="0.4"/></svg>
+                    <h5>기업 및 법인</h5>
+                    <p>통합 워크스페이스, AI 자동화, 대규모 프로세스 최적화</p>
+                </div>
+                <div class="industry-card">
+                    <svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="14" r="6" fill="none" stroke="#ea4335" stroke-width="2.5"/><path d="M8 28c0-5 3.5-8 8-8s8 3 8 8" fill="none" stroke="#ea4335" stroke-width="2.5"/><path d="M22 10a4 4 0 014 0" fill="none" stroke="#ea4335" stroke-width="2" stroke-linecap="round" opacity="0.5"/></svg>
+                    <h5>의료</h5>
+                    <p>안전한 환자 데이터, 원격 협업, 운영 조정</p>
+                </div>
+                <div class="industry-card">
+                    <svg width="32" height="32" viewBox="0 0 32 32"><rect x="6" y="4" width="20" height="24" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/><path d="M10 10h12M10 14h12M10 18h8M10 22h5" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>교육</h5>
+                    <p>클라우드 클래스룸, 학습 관리, 캠퍼스 행정</p>
+                </div>
+                <div class="industry-card">
+                    <svg width="32" height="32" viewBox="0 0 32 32"><rect x="4" y="10" width="24" height="16" rx="2" fill="none" stroke="#fbbc04" stroke-width="2.5"/><path d="M4 16h24" stroke="#fbbc04" stroke-width="1.5"/><path d="M10 6h12v4H10z" fill="none" stroke="#fbbc04" stroke-width="2"/></svg>
+                    <h5>제조업</h5>
+                    <p>운영 모니터링, 파견 시스템, 공급망 인텔리전스</p>
+                </div>
+                <div class="industry-card">
+                    <svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12" fill="none" stroke="#1a73e8" stroke-width="2.5"/><path d="M16 4c5 5 7 8 7 12s-2 7-7 12" fill="none" stroke="#1a73e8" stroke-width="1.5"/><path d="M4 16h24" stroke="#1a73e8" stroke-width="1.5"/></svg>
+                    <h5>다국적 조직</h5>
+                    <p>글로벌 협업, 다국어 지원, 분산 운영</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>함께 미래를 구축합니다</h2>
+                <p>엔터프라이즈 클라우드 솔루션, AI 자동화, 운영 지휘 시스템을 찾고 계신다면 저희가 도와드리겠습니다.</p>
+                <div class="cta-buttons">
+                    <a href="index.html#products" class="btn-primary btn-large">제품 알아보기</a>
+                    <a href="contact.html" class="btn-secondary btn-large">문의하기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36"><p class="footer-tagline">기업 기술의 미래를 구축합니다.</p></div>
+                <div class="footer-links"><h5>제품</h5><a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a><a href="workup.html">Workup</a><a href="oortai.html">OORT.AI</a><a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a><a href="classroom.html">Cloud Classroom</a></div>
+                <div class="footer-links"><h5>솔루션</h5><a href="messenger.html">인스턴트 메신저</a><a href="clouddisk.html">클라우드 디스크</a><a href="email.html">이메일</a><a href="approval.html">지능형 결재</a><a href="dispatch.html">지휘 및 파견</a><a href="fieldmanager.html">현장 관리자</a></div>
+                <div class="footer-links"><h5>회사</h5><a href="about.html">회사 소개</a><a href="#">채용</a><a href="#">블로그</a><a href="contact.html">문의</a><a href="#">개인정보 처리방침</a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 OortCloud Technology. 모든 권리 보유.</p><div class="footer-social"><a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a><a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a><a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a></div></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

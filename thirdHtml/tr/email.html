@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OortCloud E-posta - Güvenli Kurumsal E-posta ve Özel Dağıtım</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="email.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="alternate" hreflang="en" href="https://oortcloudsmart.com/en/email.html" />
+    <link rel="alternate" hreflang="tr" href="https://oortcloudsmart.com/tr/email.html" />
+    <link rel="alternate" hreflang="x-default" href="https://oortcloudsmart.com/en/email.html" />
+    <style>:root { --font-primary: 'Noto Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }</style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">Ürünler</a>
+                <a href="index.html#platform">Platform</a>
+                <a href="index.html#enterprise">Kurumsal</a>
+                <a href="index.html#about">Hakkında</a>
+            </div>
+            <a href="#get-started" class="nav-cta">Ücretsiz Başlayın</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="Dil Değiştir">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">TR</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item active" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    Giriş Yap
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">Kullanıcı</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Kontrol Paneli
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            Çıkış Yap
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menüyü aç/kapat">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Product Hero -->
+    <header class="email-hero">
+        <div class="container">
+            <div class="email-hero-grid">
+                <div class="email-hero-content">
+                    <div class="product-breadcrumb">
+                        <a href="index.html">Ürünler</a>
+                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <span>E-posta</span>
+                    </div>
+                    <h1>Güvenli, akıllı ve <span class="gradient-text">tamamen sizin</span></h1>
+                    <p class="email-hero-desc">İşletmenizi güvende ve üretken tutan kurumsal düzey e-posta. Yapay zeka destekli özellikler, uçtan uca şifreleme ve tam özel dağıtım desteği — verileriniz sizin kontrolünüzde kalır.</p>
+                    <div class="hero-actions">
+                        <a href="#get-started" class="btn-primary btn-large">Ücretsiz Denemeye Başlayın</a>
+                        <a href="#features" class="btn-secondary btn-large">Özellikleri Keşfedin</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 1l2 3h3.5l-2.5 3 1 3.5L8 8.5 4 10.5l1-3.5L2.5 4H6l2-3z" fill="#fbbc04"/></svg>
+                            500+ kuruluş tarafından güveniliyor
+                        </span>
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Özel dağıtıma hazır
+                        </span>
+                    </div>
+                </div>
+                <div class="email-hero-visual">
+                    <div class="email-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="mockup-search">
+                                <svg width="14" height="14" viewBox="0 0 16 16"><circle cx="7" cy="7" r="5" fill="none" stroke="#9aa0a6" stroke-width="1.5"/><path d="M11 11l3 3" stroke="#9aa0a6" stroke-width="1.5" stroke-linecap="round"/></svg>
+                                <span>E-posta ara</span>
+                            </div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mockup-sidebar">
+                                <div class="sidebar-btn compose">Oluştur</div>
+                                <div class="sidebar-item active">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><rect x="2" y="4" width="12" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M2 5.5l6 4 6-4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+                                    Gelen Kutusu <span class="badge">12</span>
+                                </div>
+                                <div class="sidebar-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 2l1.5 3H13l-2.5 2.5 1 3.5L8 9l-3.5 2 1-3.5L3 5h3.5L8 2z" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+                                    Yıldızlı
+                                </div>
+                                <div class="sidebar-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                    Gönderilenler
+                                </div>
+                                <div class="sidebar-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="3" width="10" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M6 8h4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                    Taslaklar
+                                </div>
+                            </div>
+                            <div class="mockup-inbox">
+                                <div class="inbox-item unread">
+                                    <div class="inbox-avatar" style="background: #4285f4;">T</div>
+                                    <div class="inbox-content">
+                                        <span class="inbox-sender">Teknik Ekip</span>
+                                        <span class="inbox-subject">Dağıtım başarıyla tamamlandı</span>
+                                        <span class="inbox-preview">— Tüm servisler artık yeni altyapıda çalışıyor...</span>
+                                    </div>
+                                    <span class="inbox-time">10:24 AM</span>
+                                </div>
+                                <div class="inbox-item unread">
+                                    <div class="inbox-avatar" style="background: #ea4335;">S</div>
+                                    <div class="inbox-content">
+                                        <span class="inbox-sender">Güvenlik Uyarısı</span>
+                                        <span class="inbox-subject">Aylık güvenlik raporu hazır</span>
+                                        <span class="inbox-preview">— Kuruluşunuzun Nisan ayı güvenlik metrikleri...</span>
+                                    </div>
+                                    <span class="inbox-time">9:15 AM</span>
+                                </div>
+                                <div class="inbox-item">
+                                    <div class="inbox-avatar" style="background: #34a853;">P</div>
+                                    <div class="inbox-content">
+                                        <span class="inbox-sender">Ürün Güncellemeleri</span>
+                                        <span class="inbox-subject">Yeni yapay zeka özellikleri kullanıma hazır</span>
+                                        <span class="inbox-preview">— Akıllı oluşturma ve akıllı kategorilendirme...</span>
+                                    </div>
+                                    <span class="inbox-time">Dün</span>
+                                </div>
+                                <div class="inbox-item">
+                                    <div class="inbox-avatar" style="background: #9b72cb;">P</div>
+                                    <div class="inbox-content">
+                                        <span class="inbox-sender">Pazarlama</span>
+                                        <span class="inbox-subject">Q2 kampanya sonuçları</span>
+                                        <span class="inbox-preview">— İşte Q2 pazarlamamızın özeti...</span>
+                                    </div>
+                                    <span class="inbox-time">Dün</span>
+                                </div>
+                                <div class="inbox-item">
+                                    <div class="inbox-avatar" style="background: #fbbc04;">İ</div>
+                                    <div class="inbox-content">
+                                        <span class="inbox-sender">İK Departmanı</span>
+                                        <span class="inbox-subject">Güncellenmiş şirket politikaları</span>
+                                        <span class="inbox-preview">— Lütfen güncellenmiş uzaktan çalışma politikasını inceleyin...</span>
+                                    </div>
+                                    <span class="inbox-time">Pzt</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Key Benefits Bar -->
+    <section class="benefits-bar">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V7l-8-5z" fill="none" stroke="#4285f4" stroke-width="1.8"/><path d="M9 12l2 2 4-4" fill="none" stroke="#4285f4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <strong>Kurumsal Güvenlik</strong>
+                        <span>Uçtan uca şifreleme ve sıfır güven mimarisi</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="#ea4335" stroke-width="1.8"/><path d="M7 15h4M7 12h8" stroke="#ea4335" stroke-width="1.5" stroke-linecap="round"/><circle cx="17" cy="8" r="2" fill="#ea4335" opacity="0.3"/></svg>
+                    <div>
+                        <strong>Yapay Zeka Destekli</strong>
+                        <span>Akıllı oluşturma, otomatik kategorize ve akıllı arama</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="#34a853" stroke-width="1.8"/><path d="M4 12h16M12 4v16" stroke="#34a853" stroke-width="1.2" opacity="0.5"/><circle cx="8" cy="8" r="1.5" fill="#34a853"/><circle cx="16" cy="16" r="1.5" fill="#34a853"/></svg>
+                    <div>
+                        <strong>Özel Dağıtım</strong>
+                        <span>Kendi altyapınızla tam yerinde dağıtım</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" fill="none" stroke="#9b72cb" stroke-width="1.8"/><path d="M12 6v6l4 2" fill="none" stroke="#9b72cb" stroke-width="2" stroke-linecap="round"/></svg>
+                    <div>
+                        <strong>%99,9 Çalışma Süresi</strong>
+                        <span>Garantili kullanılabilirlik ile kurumsal SLA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>İşletme e-postanız için ihtiyacınız olan her şey</h2>
+                <p>Ekibinizin daha etkili ve güvenli iletişim kurmasına yardımcı olan güçlü özellikler</p>
+            </div>
+
+            <!-- Feature 1: AI Smart Features -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #4285f4, #9b72cb);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="10" r="5" fill="white" opacity="0.9"/><path d="M7 24c0-4 3-7 7-7s7 3 7 7" fill="none" stroke="white" stroke-width="2" opacity="0.7"/><path d="M20 6l3-2M21 10h3" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/></svg>
+                    </div>
+                    <h3>Yapay Zeka Destekli Akıl</h3>
+                    <p>Yapay zekanın tekrarlayan işleri halletmesine izin verin, siz önemli olana odaklanın. Akıllı e-posta sistemimiz, daha hızlı çalışmanıza yardımcı olmak için yazım stilinizi ve iletişim kalıplarınızı öğrenir.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Akıllı Oluşturma</strong>
+                            <span>Yapay zeka, tonunuza ve bağlamınıza uyum sağlayarak yazarken tam cümleler önerir</span>
+                        </li>
+                        <li>
+                            <strong>Akıllı Yanıt</strong>
+                            <span>E-posta içeriğine ve yanıt kalıplarınıza dayalı akıllı yanıt önerileri alın</span>
+                        </li>
+                        <li>
+                            <strong>Otomatik Kategorilendirme</strong>
+                            <span>E-postalar otomatik olarak Birincil, Sosyal, Güncellemeler ve Promosyonlar olarak sıralanır</span>
+                        </li>
+                        <li>
+                            <strong>Öncelikli Gelen Kutusu</strong>
+                            <span>Yapay zeka önemli e-postaları tanımlar ve önce bunları gösterir, gürültüyü azaltır</span>
+                        </li>
+                        <li>
+                            <strong>Akıllı Arama</strong>
+                            <span>Yapay zeka destekli öneriler ve filtrelerle doğal dil araması</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="ai-compose-demo">
+                        <div class="compose-window">
+                            <div class="compose-header">
+                                <span>Yeni Mesaj</span>
+                                <div class="compose-actions">
+                                    <span>—</span><span>□</span><span>&times;</span>
+                                </div>
+                            </div>
+                            <div class="compose-field"><span class="field-label">Kime:</span> team@company.com</div>
+                            <div class="compose-field"><span class="field-label">Konu:</span> Proje Güncellemesi - Q2 İnceleme</div>
+                            <div class="compose-body">
+                                <p>Selam ekip,</p>
+                                <p>Bu çeyrek dönemdeki ilerlememiz hakkında kısa bir güncelleme paylaşmak istedim. <span class="ai-suggestion">Tüm büyük kilometre taşlarını planlanandan önce başarıyla tamamladık ve müşteri geri bildirimleri son derece olumlu oldu.</span></p>
+                                <div class="ai-label">
+                                    <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#4285f4" opacity="0.2"/><path d="M4 6l1.5 1.5L8 5" fill="none" stroke="#4285f4" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                    Yapay Zeka Akıllı Oluşturma
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Security -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 3L5 8v7c0 6.3 4 11.2 9 12.7 5-1.5 9-6.4 9-12.7V8L14 3z" fill="white" opacity="0.9"/><path d="M10 14l3 3 5-5" fill="none" stroke="#ea4335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Gelişmiş Güvenlik ve Uyumluluk</h3>
+                    <p>Kuruluşunuzu, gelen kutunuza ulaşmadan önce spam, oltalama ve kötü amaçlı yazılımların %99,9'unu engelleyen çok katmanlı güvenlik ile tehditlerden koruyun.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Uçtan Uca Şifreleme</strong>
+                            <span>Transit veriler için TLS şifreleme, beklemedeki veriler için AES-256 şifreleme</span>
+                        </li>
+                        <li>
+                            <strong>Anti-Oltalama Koruması</strong>
+                            <span>Gelişmiş oltalama girişimlerinin ve sosyal mühendisliğin yapay zeka destekli tespiti</span>
+                        </li>
+                        <li>
+                            <strong>Gizli Mod</strong>
+                            <span>Son kullanma tarihleri belirleyin ve gönderilen e-postalara erişimi iptal edin, yönlendirmeyi ve indirmeyi engelleyin</span>
+                        </li>
+                        <li>
+                            <strong>DLP (Veri Kaybı Önleme)</strong>
+                            <span>Hassas verilerin harici olarak paylaşılmasını otomatik olarak algılayın ve önleyin</span>
+                        </li>
+                        <li>
+                            <strong>Uyumluluk ve Arşivleme</strong>
+                            <span>eDiscovery, saklama politikaları ve denetim günlükleri ile düzenleyici gereklilikleri karşılayın</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="security-visual">
+                        <div class="shield-container">
+                            <div class="shield-ring ring-1"></div>
+                            <div class="shield-ring ring-2"></div>
+                            <div class="shield-ring ring-3"></div>
+                            <div class="shield-center">
+                                <svg width="48" height="48" viewBox="0 0 48 48">
+                                    <path d="M24 6L10 13v10c0 11 6 20 14 23 8-3 14-12 14-23V13L24 6z" fill="#ea4335" opacity="0.1" stroke="#ea4335" stroke-width="2"/>
+                                    <path d="M18 24l4 4 8-8" fill="none" stroke="#ea4335" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="security-stats">
+                            <div class="sec-stat">
+                                <span class="sec-stat-num">99.9%</span>
+                                <span class="sec-stat-label">Spam engellendi</span>
+                            </div>
+                            <div class="sec-stat">
+                                <span class="sec-stat-num">AES-256</span>
+                                <span class="sec-stat-label">Şifreleme</span>
+                            </div>
+                            <div class="sec-stat">
+                                <span class="sec-stat-num">Zero-Trust</span>
+                                <span class="sec-stat-label">Mimari</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Private Deployment -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #4285f4);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="6" y="12" width="16" height="12" rx="2" fill="white" opacity="0.9"/><rect x="8" y="4" width="12" height="8" rx="2" fill="white" opacity="0.6"/><path d="M14 12v-4" stroke="white" stroke-width="1.5" opacity="0.5"/><circle cx="14" cy="18" r="2" fill="#34a853" opacity="0.5"/></svg>
+                    </div>
+                    <h3>Özel Dağıtım ve Veri Egemenliği</h3>
+                    <p>Genel bulut e-postasının aksine, OortCloud E-posta tam özel dağıtım desteği sunar. Kurumsal düzey özelliklerin keyfini çıkarırken tüm verileri kendi altyapınızda tutun.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Yerinde Kurulum</strong>
+                            <span>Kendi sunucularınıza, özel bulutunuza veya hibrit ortamınıza dağıtın</span>
+                        </li>
+                        <li>
+                            <strong>Veri Egemenliği</strong>
+                            <span>Veri konumu üzerinde tam kontrol — yerel veri ikamet yasalarına uyun</span>
+                        </li>
+                        <li>
+                            <strong>Özel Alan Adı</strong>
+                            <span>Tam DNS ve yönlendirme kontrolü ile kendi alan adınızı kullanın</span>
+                        </li>
+                        <li>
+                            <strong>Hava Boşluğu Desteği</strong>
+                            <span>Maksimum güvenlik ortamları için internetten tamamen bağlantısız çalışın</span>
+                        </li>
+                        <li>
+                            <strong>Esnek Mimari</strong>
+                            <span>Kubernetes yerlisi, kuruluşunuzun büyümesiyle yatay ölçeklendirme</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="deploy-visual">
+                        <div class="deploy-diagram">
+                            <div class="deploy-node node-cloud">
+                                <div class="node-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M6 19a4 4 0 01-.5-7.97A7 7 0 0118.5 11 4.5 4.5 0 0119 19H6z" fill="none" stroke="#4285f4" stroke-width="1.5"/></svg>
+                                </div>
+                                <span>Bulut</span>
+                            </div>
+                            <div class="deploy-node node-hybrid">
+                                <div class="node-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="8" rx="2" fill="none" stroke="#9b72cb" stroke-width="1.5"/><circle cx="8" cy="12" r="1" fill="#9b72cb"/><circle cx="12" cy="12" r="1" fill="#9b72cb"/><path d="M4 4h16M4 20h16" stroke="#9b72cb" stroke-width="1" opacity="0.4"/></svg>
+                                </div>
+                                <span>Hibrit</span>
+                            </div>
+                            <div class="deploy-node node-private active">
+                                <div class="node-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M8 10V7a4 4 0 018 0v3" fill="none" stroke="#34a853" stroke-width="1.5"/><circle cx="12" cy="15" r="1.5" fill="#34a853"/></svg>
+                                </div>
+                                <span>Özel</span>
+                            </div>
+                        </div>
+                        <div class="deploy-features">
+                            <div class="deploy-tag">Kubernetes Yerlisi</div>
+                            <div class="deploy-tag">Hava Boşluğuna Hazır</div>
+                            <div class="deploy-tag">Otomatik Ölçeklendirme</div>
+                            <div class="deploy-tag">HA Kümesi</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: Collaboration -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #fbbc04, #ea4335);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="10" cy="10" r="4" fill="white" opacity="0.9"/><circle cx="18" cy="10" r="4" fill="white" opacity="0.6"/><path d="M4 22c0-4 3-6 6-6s6 2 6 6" fill="white" opacity="0.7"/><path d="M14 22c0-4 3-6 6-6s6 2 6 6" fill="white" opacity="0.5"/></svg>
+                    </div>
+                    <h3>Kesintisiz İşbirliği</h3>
+                    <p>E-posta sadece başlangıç. Entegre araçlar, ekibinizin bağlam değiştirmeden işbirliği yapmasına yardımcı olur, konuşmaları ve işleri tek bir yerde tutar.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Entegre Takvim</strong>
+                            <span>E-postadan doğrudan toplantı planlayın, akıllı zaman önerileri ve uygunluk ile</span>
+                        </li>
+                        <li>
+                            <strong>Paylaşılan Posta Kutuları</strong>
+                            <span>Departmanlar, destek sıraları veya proje grupları için ekip gelen kutuları oluşturun</span>
+                        </li>
+                        <li>
+                            <strong>Bulut Disk ile Büyük Ekler</strong>
+                            <span>Entegre Bulut Disk depolama üzerinden 10 GB'a kadar dosyaları sorunsuz paylaşın</span>
+                        </li>
+                        <li>
+                            <strong>E-posta Yetkilendirme</strong>
+                            <span>Ayrıntılı izin kontrolleri ile asistanlara e-posta erişimi yetkisi verin</span>
+                        </li>
+                        <li>
+                            <strong>Workup Entegrasyonu</strong>
+                            <span>Messenger, Onay iş akışları ve diğer OortCloud ürünleriyle bağlanın</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="collab-visual">
+                        <div class="collab-cards">
+                            <div class="collab-card card-calendar">
+                                <div class="collab-card-header">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><rect x="2" y="3" width="12" height="11" rx="2" fill="none" stroke="#4285f4" stroke-width="1.2"/><path d="M2 6h12M5 1v3M11 1v3" stroke="#4285f4" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                    <span>Takvim</span>
+                                </div>
+                                <div class="calendar-event">
+                                    <div class="event-dot" style="background: #4285f4;"></div>
+                                    <div>
+                                        <strong>Ekip Toplantısı</strong>
+                                        <span>9:00 - 9:30</span>
+                                    </div>
+                                </div>
+                                <div class="calendar-event">
+                                    <div class="event-dot" style="background: #34a853;"></div>
+                                    <div>
+                                        <strong>Ürün İncelemesi</strong>
+                                        <span>14:00 - 15:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collab-card card-contacts">
+                                <div class="collab-card-header">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="6" r="3" fill="none" stroke="#34a853" stroke-width="1.2"/><path d="M3 14c0-3 2-5 5-5s5 2 5 5" fill="none" stroke="#34a853" stroke-width="1.2"/></svg>
+                                    <span>Ekip</span>
+                                </div>
+                                <div class="contact-avatars">
+                                    <div class="mini-avatar" style="background: #4285f4;">A</div>
+                                    <div class="mini-avatar" style="background: #ea4335;">B</div>
+                                    <div class="mini-avatar" style="background: #34a853;">C</div>
+                                    <div class="mini-avatar" style="background: #fbbc04;">D</div>
+                                    <div class="mini-avatar more">+5</div>
+                                </div>
+                            </div>
+                            <div class="collab-card card-files">
+                                <div class="collab-card-header">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 4c0-1 .5-2 2-2h3l1.5 2H12c1.5 0 2 1 2 2v6c0 1-.5 2-2 2H4c-1.5 0-2-1-2-2V4z" fill="none" stroke="#fbbc04" stroke-width="1.2"/></svg>
+                                    <span>Paylaşılan Dosyalar</span>
+                                </div>
+                                <div class="file-list">
+                                    <div class="file-item">Q2_Report.pdf</div>
+                                    <div class="file-item">Design_v3.fig</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5: Admin & Management -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #1a73e8, #174ea6);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="4" fill="white" opacity="0.2"/><path d="M10 10h8M10 14h8M10 18h5" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.9"/><circle cx="20" cy="20" r="5" fill="white" opacity="0.8"/><path d="M18.5 20l1 1 2-2" fill="none" stroke="#1a73e8" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Güçlü Yönetim</h3>
+                    <p>BT ekiplerine sezgisel bir yönetim konsolu ile tam kontrol verin. Kullanıcıları yönetin, politikaları uygulayın ve sistem sağlığını izleyin — hepsi tek bir panelden.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Yönetim Konsolu</strong>
+                            <span>Kullanıcı yönetimi, politikalar ve sistem izleme için merkezi panel</span>
+                        </li>
+                        <li>
+                            <strong>Grup ve Rol Yönetimi</strong>
+                            <span>Rol tabanlı erişim ve izin devralma ile örgütsel birimler oluşturun</span>
+                        </li>
+                        <li>
+                            <strong>Taşıma Araçları</strong>
+                            <span>Gmail, Exchange veya herhangi bir IMAP sunucusundan sıfır kesinti ile sorunsuz geçiş</span>
+                        </li>
+                        <li>
+                            <strong>Denetim Günlükleri ve Analitik</strong>
+                            <span>E-posta etkinliği, oturum açma olayları ve güvenlik olayları hakkında tam görünürlük</span>
+                        </li>
+                        <li>
+                            <strong>API ve Entegrasyon</strong>
+                            <span>RESTful API'ler, SMTP/IMAP desteği ve özel entegrasyonlar için web kancaları</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="admin-visual">
+                        <div class="admin-panel">
+                            <div class="admin-panel-header">
+                                <span class="admin-title">Yönetim Konsolu</span>
+                                <div class="admin-status">
+                                    <span class="status-dot"></span> Tüm sistemler çalışıyor
+                                </div>
+                            </div>
+                            <div class="admin-stats-row">
+                                <div class="admin-stat">
+                                    <span class="admin-stat-value">2,847</span>
+                                    <span class="admin-stat-label">Aktif Kullanıcı</span>
+                                </div>
+                                <div class="admin-stat">
+                                    <span class="admin-stat-value">12.4TB</span>
+                                    <span class="admin-stat-label">Kullanılan Depolama</span>
+                                </div>
+                                <div class="admin-stat">
+                                    <span class="admin-stat-value">99.99%</span>
+                                    <span class="admin-stat-label">Çalışma Süresi</span>
+                                </div>
+                            </div>
+                            <div class="admin-chart">
+                                <div class="chart-bar" style="height: 40%;"></div>
+                                <div class="chart-bar" style="height: 65%;"></div>
+                                <div class="chart-bar" style="height: 55%;"></div>
+                                <div class="chart-bar" style="height: 80%;"></div>
+                                <div class="chart-bar" style="height: 70%;"></div>
+                                <div class="chart-bar" style="height: 90%;"></div>
+                                <div class="chart-bar" style="height: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Features Grid -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ve çok daha fazlası</h2>
+                <p>Profesyonel iş iletişimi için ihtiyacınız olan her özellik</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="none" stroke="#4285f4" stroke-width="1.5" rx="2"/><path d="M4 9h16M9 9v11" stroke="#4285f4" stroke-width="1.5"/></svg>
+                    <h5>Özel İmzalar</h5>
+                    <p>Resimler, bağlantılar ve dinamik şirket markalaması ile zengin HTML imzaları</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M12 7v5l3 3" fill="none" stroke="#ea4335" stroke-width="1.8" stroke-linecap="round"/></svg>
+                    <h5>Daha Sonra Gönder</h5>
+                    <p>Herhangi bir saat diliminde mükemmel zamanda gönderilecek e-postaları planlayın</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M3 12h4l3-9 4 18 3-9h4" fill="none" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h5>Okundu Bilgisi</h5>
+                    <p>Ayrıntılı analizlerle e-postaların ne zaman açıldığını ve bağlantıların tıklandığını takip edin</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M9 7h6M9 11h6M9 15h4" stroke="#9b72cb" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <h5>Şablonlar</h5>
+                    <p>Yaygın yanıtlar ve erişim için yeniden kullanılabilir e-posta şablonları oluşturun</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 8l8 5 8-5" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M4 8v8a2 2 0 002 2h12a2 2 0 002-2V8" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M12 3v5" stroke="#fbbc04" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>Posta Kuralları ve Filtreler</h5>
+                    <p>Güçlü kurallar, etiketler ve otomatik yönlendirme ile e-posta organizasyonunu otomatikleştirin</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="2" y="6" width="8" height="12" rx="1.5" fill="none" stroke="#1a73e8" stroke-width="1.5"/><rect x="14" y="4" width="8" height="16" rx="1.5" fill="none" stroke="#1a73e8" stroke-width="1.5"/><circle cx="18" cy="17" r="1" fill="#1a73e8"/></svg>
+                    <h5>Çoklu Cihaz Senkronizasyonu</h5>
+                    <p>Masaüstü ve mobil arasında gerçek zamanlı senkronizasyon ile herhangi bir cihazdan e-postanıza erişin</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20" fill="none" stroke="#ea4335" stroke-width="1.2"/></svg>
+                    <h5>Çoklu Dil</h5>
+                    <p>40+ dil ve RTL düzenler desteği ile tam uluslararasılaştırma</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="#34a853" stroke-width="1.5" opacity="0.6"/></svg>
+                    <h5>Sınırsız Depolama</h5>
+                    <p>Posta kutusu sınırı yok — kuruluşunuz büyüdükçe depolamayı ölçeklendirin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Neden OortCloud E-posta?</h2>
+                <p>Diğer kurumsal e-posta çözümleriyle nasıl karşılaştırdığımızı görün</p>
+            </div>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Özellik</th>
+                            <th class="highlight-col">OortCloud E-posta</th>
+                            <th>Gmail (Workspace)</th>
+                            <th>Outlook (365)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Özel Dağıtım</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="partial">Kısmi</span></td>
+                        </tr>
+                        <tr>
+                            <td>Hava Boşluğu Desteği</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Yapay Zeka Akıllı Oluşturma</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="check">&#10003;</span></td>
+                            <td><span class="check">&#10003;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Uçtan Uca Şifreleme</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="partial">Kısmi</span></td>
+                            <td><span class="check">&#10003;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Veri Egemenliği Kontrolü</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="partial">Kısmi</span></td>
+                        </tr>
+                        <tr>
+                            <td>Sınırsız Depolama</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Süper Uygulama Entegrasyonu</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="partial">Kısmi</span></td>
+                            <td><span class="partial">Kısmi</span></td>
+                        </tr>
+                        <tr>
+                            <td>Özel Dağıtım Mimarisi</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sizinle büyüyen planlar</h2>
+                <p>Ücretsiz başlayın, hazır olduğunuzda yükseltin</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Başlangıç</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">$4</span>
+                            <span class="price-period">/kullanıcı/ay</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Özel işletme e-postası</li>
+                        <li>Kullanıcı başına 30 GB depolama</li>
+                        <li>Temel yapay zeka özellikleri</li>
+                        <li>Standart güvenlik</li>
+                        <li>E-posta desteği</li>
+                    </ul>
+                    <a href="#" class="btn-secondary pricing-btn">Ücretsiz Denemeye Başlayın</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">En Popüler</div>
+                    <div class="pricing-header">
+                        <h4>İş</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">$8</span>
+                            <span class="price-period">/kullanıcı/ay</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Başlangıç'taki her şey</li>
+                        <li>Sınırsız depolama</li>
+                        <li>Tam yapay zeka paketi</li>
+                        <li>Gelişmiş güvenlik ve DLP</li>
+                        <li>Yönetim konsolu</li>
+                        <li>Öncelikli destek</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn">Ücretsiz Denemeye Başlayın</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Kurumsal</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">Özel</span>
+                            <span class="price-period"></span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>İş'teki her şey</li>
+                        <li>Özel dağıtım</li>
+                        <li>Hava boşluğu desteği</li>
+                        <li>Özel SLA (%99,99)</li>
+                        <li>Özel hesap yöneticisi</li>
+                        <li>Yerinde destek</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary pricing-btn">Satış İletişimi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Kurumsal e-postanızı yükseltmeye hazır mısınız?</h2>
+                <p>Güvenli, akıllı iletişim için OortCloud E-posta'ya güvenen 500+ kuruluşa katılın.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">Ücretsiz Denemeye Başlayın</a>
+                    <a href="#" class="btn-secondary btn-large">Bir Uzmanla Görüşün</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36">
+                    <p class="footer-tagline">Kurumsal teknolojinin geleceğini inşa ediyoruz.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Ürünler</h5>
+                    <a href="https://vls.oortcloudsmart.com/tr/" target="_blank">VLStream</a>
+                    <a href="workup.html">Workup</a>
+                    <a href="oortai.html">OORT.AI</a>
+                    <a href="https://sh.oortcloudsmart.com/tr/" target="_blank">OORT.SH</a>
+                    <a href="classroom.html">Bulut Sınıf</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Çözümler</h5>
+                    <a href="messenger.html">Anlık Mesajlaşma</a>
+                    <a href="clouddisk.html">Bulut Disk</a>
+                    <a href="#">E-posta</a>
+                    <a href="approval.html">Akıllı Onay</a>
+                    <a href="dispatch.html">Komuta ve Sevk</a>
+                    <a href="fieldmanager.html">Saha Yöneticisi</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Şirket</h5>
+                    <a href="about.html">Hakkımızda</a>
+                    <a href="#">Kariyer</a>
+                    <a href="#">Blog</a>
+                    <a href="contact.html">İletişim</a>
+                    <a href="#">Gizlilik Politikası</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OortCloud Technology. Tüm hakları saklıdır.</p>
+                <div class="footer-social">
+                    <a href="https://x.com/zhngxulin311636" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg>
+                    </a>
+                    <a href="https://github.com/OortCloudGroup" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

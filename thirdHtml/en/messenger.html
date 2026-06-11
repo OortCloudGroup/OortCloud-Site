@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Messenger - Enterprise Team Communication | OortCloud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="messenger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">Products</a>
+                <a href="index.html#platform">Platform</a>
+                <a href="index.html#enterprise">Enterprise</a>
+                <a href="index.html#about">About</a>
+            </div>
+            <a href="#get-started" class="nav-cta">Get Started Free</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="Switch Language">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">EN</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item active" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    Login
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">User</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Dashboard
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="im-hero">
+        <div class="container">
+            <div class="im-hero-grid">
+                <div class="im-hero-content">
+                    <div class="product-breadcrumb">
+                        <a href="index.html">Products</a>
+                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <span>Instant Messenger</span>
+                    </div>
+                    <h1>Where teams <span class="gradient-text-teal">connect and build</span></h1>
+                    <p class="im-hero-desc">Enterprise messaging that brings your team together. Direct messages, group spaces, threaded conversations, and deep integration with every OortCloud product — all secured for business.</p>
+                    <div class="hero-actions">
+                        <a href="#get-started" class="btn-primary btn-large btn-teal">Start Free Trial</a>
+                        <a href="#features" class="btn-secondary btn-large">Explore Features</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            End-to-end encrypted
+                        </span>
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Private deployment ready
+                        </span>
+                    </div>
+                </div>
+                <div class="im-hero-visual">
+                    <div class="chat-mockup">
+                        <div class="chat-sidebar">
+                            <div class="chat-sidebar-header">
+                                <div class="user-avatar-sm" style="background:#4285f4;">JS</div>
+                                <span class="sidebar-user-name">John Smith</span>
+                                <div class="online-dot"></div>
+                            </div>
+                            <div class="chat-search-bar">
+                                <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="5.5" cy="5.5" r="4" fill="none" stroke="#9aa0a6" stroke-width="1.2"/><path d="M8.5 8.5l2.5 2.5" stroke="#9aa0a6" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                <span>Search messages</span>
+                            </div>
+                            <div class="chat-nav-section">
+                                <span class="nav-section-title">Spaces</span>
+                                <div class="chat-nav-item active">
+                                    <span class="nav-icon space-icon">#</span>
+                                    <span>Engineering</span>
+                                    <span class="unread-badge">3</span>
+                                </div>
+                                <div class="chat-nav-item">
+                                    <span class="nav-icon space-icon">#</span>
+                                    <span>Product</span>
+                                </div>
+                                <div class="chat-nav-item">
+                                    <span class="nav-icon space-icon">#</span>
+                                    <span>General</span>
+                                </div>
+                            </div>
+                            <div class="chat-nav-section">
+                                <span class="nav-section-title">Direct Messages</span>
+                                <div class="chat-nav-item">
+                                    <div class="user-avatar-xs" style="background:#34a853;">SC</div>
+                                    <span>Sarah Chen</span>
+                                </div>
+                                <div class="chat-nav-item">
+                                    <div class="user-avatar-xs" style="background:#ea4335;">MR</div>
+                                    <span>Mike Roberts</span>
+                                    <span class="unread-badge">1</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-main">
+                            <div class="chat-main-header">
+                                <span class="chat-channel-name"># Engineering</span>
+                                <span class="chat-members">24 members</span>
+                            </div>
+                            <div class="chat-messages">
+                                <div class="chat-message">
+                                    <div class="msg-avatar" style="background:#34a853;">SC</div>
+                                    <div class="msg-content">
+                                        <div class="msg-header">
+                                            <span class="msg-author">Sarah Chen</span>
+                                            <span class="msg-time">10:24 AM</span>
+                                        </div>
+                                        <p class="msg-text">Just deployed v2.4 to staging. Can the QA team take a look? 🚀</p>
+                                    </div>
+                                </div>
+                                <div class="chat-message">
+                                    <div class="msg-avatar" style="background:#9b72cb;">AK</div>
+                                    <div class="msg-content">
+                                        <div class="msg-header">
+                                            <span class="msg-author">Alex Kim</span>
+                                            <span class="msg-time">10:26 AM</span>
+                                        </div>
+                                        <p class="msg-text">On it! I'll run the test suite now.</p>
+                                        <div class="msg-reaction">
+                                            <span class="reaction">👍 2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chat-message">
+                                    <div class="msg-avatar" style="background:#4285f4;">JS</div>
+                                    <div class="msg-content">
+                                        <div class="msg-header">
+                                            <span class="msg-author">John Smith</span>
+                                            <span class="msg-time">10:28 AM</span>
+                                        </div>
+                                        <p class="msg-text">Great work team! Here's the release notes:</p>
+                                        <div class="msg-attachment">
+                                            <svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="1.5" width="10" height="11" rx="1.5" fill="none" stroke="#4285f4" stroke-width="1"/><path d="M4 4.5h6M4 6.5h4" stroke="#4285f4" stroke-width="0.8" stroke-linecap="round"/></svg>
+                                            <span>release_notes_v2.4.md</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-input">
+                                <div class="input-actions">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="none" stroke="#9aa0a6" stroke-width="1.2"/><path d="M7 4.5v5M4.5 7h5" stroke="#9aa0a6" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                </div>
+                                <span class="input-placeholder">Message #Engineering</span>
+                                <div class="input-send">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7l10-5-3 5 3 5z" fill="#4285f4" opacity="0.8"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Benefits Bar -->
+    <section class="benefits-bar">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.4 8.4 0 01-3.8-.9L3 21l1.9-5.7A8.4 8.4 0 014 11.5 8.5 8.5 0 018.7 3.9 8.4 8.4 0 0112.5 3h.5a8.5 8.5 0 018 8v.5z" fill="none" stroke="#34a853" stroke-width="1.8"/></svg>
+                    <div>
+                        <strong>Real-Time Messaging</strong>
+                        <span>Instant delivery with typing indicators & read receipts</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" fill="none" stroke="#4285f4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <strong>Team Spaces</strong>
+                        <span>Organized channels for projects, teams & topics</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="#9b72cb" stroke-width="1.8"/><path d="M3 9h18M9 3v18" stroke="#9b72cb" stroke-width="1.2" opacity="0.4"/><path d="M12 12l3 3M12 12l-3 3M12 12V7" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <div>
+                        <strong>Rich Media</strong>
+                        <span>Share files, images, video & voice messages</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V7l-8-5z" fill="none" stroke="#ea4335" stroke-width="1.8"/><path d="M9 12l2 2 4-4" fill="none" stroke="#ea4335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <strong>Enterprise Security</strong>
+                        <span>E2E encryption, DLP & compliance controls</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Communication built for modern teams</h2>
+                <p>Every tool your team needs to communicate, collaborate, and stay aligned</p>
+            </div>
+
+            <!-- Feature 1: Messaging -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #4285f4);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M6 8c0-2 1.5-3 3-3h10c1.5 0 3 1 3 3v8c0 2-1.5 3-3 3h-3l-4 4v-4H9c-1.5 0-3-1-3-3V8z" fill="white" opacity="0.9"/><circle cx="11" cy="12" r="1.2" fill="#34a853"/><circle cx="14" cy="12" r="1.2" fill="#34a853"/><circle cx="17" cy="12" r="1.2" fill="#34a853"/></svg>
+                    </div>
+                    <h3>Powerful Messaging</h3>
+                    <p>Rich, real-time messaging with all the features modern teams expect — threads, reactions, mentions, and smart formatting that keeps conversations organized.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Threaded Conversations</strong>
+                            <span>Keep discussions focused with reply threads that reduce noise in main channels</span>
+                        </li>
+                        <li>
+                            <strong>Rich Text & Markdown</strong>
+                            <span>Format messages with bold, italic, code blocks, lists, and embedded links</span>
+                        </li>
+                        <li>
+                            <strong>@Mentions & Notifications</strong>
+                            <span>Tag individuals or groups with smart notification routing and priority levels</span>
+                        </li>
+                        <li>
+                            <strong>Reactions & Emoji</strong>
+                            <span>React to messages with emoji, custom reactions, and quick acknowledgements</span>
+                        </li>
+                        <li>
+                            <strong>Message Actions</strong>
+                            <span>Pin, bookmark, forward, schedule, and set reminders on any message</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="messaging-visual">
+                        <div class="thread-demo">
+                            <div class="thread-parent">
+                                <div class="tp-avatar" style="background:#4285f4;">JD</div>
+                                <div class="tp-content">
+                                    <strong>Jake Davis</strong>
+                                    <p>What do you all think about the new API design? I've pushed the draft to the repo.</p>
+                                    <div class="tp-reactions">
+                                        <span class="reaction">👀 4</span>
+                                        <span class="reaction">💬 3 replies</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="thread-replies">
+                                <div class="thread-reply">
+                                    <div class="tp-avatar small" style="background:#34a853;">LL</div>
+                                    <div class="tp-content small">
+                                        <strong>Lisa Lee</strong>
+                                        <p>Looks great! One suggestion on the auth endpoint...</p>
+                                    </div>
+                                </div>
+                                <div class="thread-reply">
+                                    <div class="tp-avatar small" style="background:#ea4335;">MK</div>
+                                    <div class="tp-content small">
+                                        <strong>Mark K.</strong>
+                                        <p>+1, the pagination approach is solid 👍</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Spaces & Channels -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #4285f4, #9b72cb);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="9" height="9" rx="2" fill="white" opacity="0.9"/><rect x="15" y="4" width="9" height="9" rx="2" fill="white" opacity="0.6"/><rect x="4" y="15" width="9" height="9" rx="2" fill="white" opacity="0.6"/><rect x="15" y="15" width="9" height="9" rx="2" fill="white" opacity="0.4"/></svg>
+                    </div>
+                    <h3>Spaces & Channels</h3>
+                    <p>Organize conversations by team, project, or topic. Spaces give your team a dedicated home for collaboration with shared files, tasks, and pinned resources.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Public & Private Spaces</strong>
+                            <span>Open spaces for company-wide topics, private ones for teams and sensitive discussions</span>
+                        </li>
+                        <li>
+                            <strong>Topic Channels</strong>
+                            <span>Sub-channels within spaces for focused discussions without creating new groups</span>
+                        </li>
+                        <li>
+                            <strong>Shared Resources</strong>
+                            <span>Pin important files, links, and documents for easy access by all space members</span>
+                        </li>
+                        <li>
+                            <strong>Member Management</strong>
+                            <span>Role-based permissions — admins, moderators, and members with custom access levels</span>
+                        </li>
+                        <li>
+                            <strong>Space Discovery</strong>
+                            <span>Browse and join public spaces across the organization with smart recommendations</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="spaces-visual">
+                        <div class="spaces-grid-demo">
+                            <div class="space-card-demo">
+                                <div class="space-icon" style="background: #4285f4;">#</div>
+                                <div class="space-info">
+                                    <strong>Engineering</strong>
+                                    <span>24 members &bull; Active now</span>
+                                </div>
+                            </div>
+                            <div class="space-card-demo">
+                                <div class="space-icon" style="background: #34a853;">#</div>
+                                <div class="space-info">
+                                    <strong>Product Design</strong>
+                                    <span>12 members &bull; 5 min ago</span>
+                                </div>
+                            </div>
+                            <div class="space-card-demo">
+                                <div class="space-icon" style="background: #ea4335;">#</div>
+                                <div class="space-info">
+                                    <strong>Marketing</strong>
+                                    <span>18 members &bull; 1h ago</span>
+                                </div>
+                            </div>
+                            <div class="space-card-demo">
+                                <div class="space-icon" style="background: #fbbc04;">#</div>
+                                <div class="space-info">
+                                    <strong>General</strong>
+                                    <span>156 members &bull; Active now</span>
+                                </div>
+                            </div>
+                            <div class="space-card-demo private">
+                                <div class="space-icon" style="background: #9b72cb;">🔒</div>
+                                <div class="space-info">
+                                    <strong>Leadership</strong>
+                                    <span>8 members &bull; Private</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Voice & Video -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="7" width="18" height="14" rx="3" fill="white" opacity="0.9"/><path d="M23 11l4-2v8l-4-2" fill="white" opacity="0.6"/><circle cx="14" cy="14" r="3" fill="#ea4335" opacity="0.3"/></svg>
+                    </div>
+                    <h3>Voice & Video Calls</h3>
+                    <p>Start instant voice or video calls from any conversation. HD quality, screen sharing, and meeting recording — no separate app needed.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>One-Click Calls</strong>
+                            <span>Start audio or video calls instantly from any chat — 1:1 or group, up to 100 participants</span>
+                        </li>
+                        <li>
+                            <strong>Screen Sharing</strong>
+                            <span>Share your entire screen or specific windows with annotation tools</span>
+                        </li>
+                        <li>
+                            <strong>Meeting Recording</strong>
+                            <span>Record calls and automatically save to Cloud Disk with AI-generated transcripts</span>
+                        </li>
+                        <li>
+                            <strong>Voice Messages</strong>
+                            <span>Send voice messages when typing isn't convenient — auto-transcribed for searchability</span>
+                        </li>
+                        <li>
+                            <strong>Virtual Backgrounds</strong>
+                            <span>Professional backgrounds and blur effects for any video call environment</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="video-visual">
+                        <div class="video-call-demo">
+                            <div class="video-grid">
+                                <div class="video-participant">
+                                    <div class="vp-placeholder" style="background: linear-gradient(135deg, #1a1f36, #2d1b4e);">
+                                        <div class="vp-avatar" style="background:#4285f4;">JS</div>
+                                    </div>
+                                    <span class="vp-name">John Smith</span>
+                                </div>
+                                <div class="video-participant">
+                                    <div class="vp-placeholder" style="background: linear-gradient(135deg, #1a2f36, #1b4e2d);">
+                                        <div class="vp-avatar" style="background:#34a853;">SC</div>
+                                    </div>
+                                    <span class="vp-name">Sarah Chen</span>
+                                </div>
+                                <div class="video-participant">
+                                    <div class="vp-placeholder" style="background: linear-gradient(135deg, #2f1a36, #4e1b2d);">
+                                        <div class="vp-avatar" style="background:#ea4335;">MR</div>
+                                    </div>
+                                    <span class="vp-name">Mike R.</span>
+                                </div>
+                                <div class="video-participant">
+                                    <div class="vp-placeholder" style="background: linear-gradient(135deg, #36341a, #4e4b1b);">
+                                        <div class="vp-avatar" style="background:#fbbc04;">LK</div>
+                                    </div>
+                                    <span class="vp-name">Lisa K.</span>
+                                </div>
+                            </div>
+                            <div class="video-controls">
+                                <div class="vc-btn"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2v10M4 5l3-3 3 3" fill="none" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+                                <div class="vc-btn"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="4" y="3" width="6" height="8" rx="3" fill="none" stroke="white" stroke-width="1.2"/><path d="M7 11v2M5 13h4" stroke="white" stroke-width="1" stroke-linecap="round"/></svg></div>
+                                <div class="vc-btn end-call"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M1 6c0-1 2-3 6-3s6 2 6 3v2c0 .5-.5 1-1 1h-2c-.5 0-1-.5-1-1V7c-1-.3-2.7-.3-4 0v1c0 .5-.5 1-1 1H2c-.5 0-1-.5-1-1V6z" fill="white"/></svg></div>
+                                <div class="vc-btn"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="3" width="10" height="8" rx="1.5" fill="none" stroke="white" stroke-width="1.2"/><path d="M5 7h4" stroke="white" stroke-width="1" stroke-linecap="round"/></svg></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: File Sharing & Integration -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #fbbc04, #34a853);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M6 8c0-1 .5-2 2-2h4l2 2h6c1.5 0 2 1 2 2v10c0 1-.5 2-2 2H8c-1.5 0-2-1-2-2V8z" fill="white" opacity="0.9"/><path d="M11 14h6M14 11v6" stroke="#fbbc04" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/></svg>
+                    </div>
+                    <h3>File Sharing & Integrations</h3>
+                    <p>Share files directly in conversations with preview, collaborate on documents without leaving the chat, and connect with all your favorite tools.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Inline File Preview</strong>
+                            <span>Preview images, PDFs, videos, and documents directly in the chat — no downloads needed</span>
+                        </li>
+                        <li>
+                            <strong>Cloud Disk Integration</strong>
+                            <span>Share files from Cloud Disk with real-time permission controls and version tracking</span>
+                        </li>
+                        <li>
+                            <strong>Bot & Workflow Integration</strong>
+                            <span>Connect with Intelligent Approval, task bots, CI/CD alerts, and custom webhooks</span>
+                        </li>
+                        <li>
+                            <strong>App Marketplace</strong>
+                            <span>Install apps for project management, polls, standup bots, and more from the marketplace</span>
+                        </li>
+                        <li>
+                            <strong>Slash Commands</strong>
+                            <span>Quick actions with /commands — create tasks, set reminders, start polls, search files</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="integrations-visual">
+                        <div class="integrations-demo">
+                            <div class="int-header">Connected Apps</div>
+                            <div class="int-grid">
+                                <div class="int-app">
+                                    <div class="int-icon" style="background: linear-gradient(135deg, #4285f4, #34a853);">CD</div>
+                                    <span>Cloud Disk</span>
+                                </div>
+                                <div class="int-app">
+                                    <div class="int-icon" style="background: linear-gradient(135deg, #fbbc04, #ea4335);">IA</div>
+                                    <span>Approval</span>
+                                </div>
+                                <div class="int-app">
+                                    <div class="int-icon" style="background: linear-gradient(135deg, #ea4335, #9b72cb);">CC</div>
+                                    <span>Classroom</span>
+                                </div>
+                                <div class="int-app">
+                                    <div class="int-icon" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">EM</div>
+                                    <span>Email</span>
+                                </div>
+                                <div class="int-app">
+                                    <div class="int-icon" style="background: linear-gradient(135deg, #5f6368, #3c4043);">GH</div>
+                                    <span>GitHub</span>
+                                </div>
+                                <div class="int-app">
+                                    <div class="int-icon" style="background: linear-gradient(135deg, #1a73e8, #4285f4);">CI</div>
+                                    <span>CI/CD</span>
+                                </div>
+                            </div>
+                            <div class="int-bot-msg">
+                                <div class="bot-icon">🤖</div>
+                                <div class="bot-content">
+                                    <strong>Approval Bot</strong>
+                                    <p>New request from Alex Chen: Purchase Request ($8,500)</p>
+                                    <div class="bot-actions">
+                                        <button class="bot-btn approve">Approve</button>
+                                        <button class="bot-btn view">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5: Security & Admin -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #1a73e8, #174ea6);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 3L5 8v7c0 6.3 4 11.2 9 12.7 5-1.5 9-6.4 9-12.7V8L14 3z" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><path d="M10 14l3 3 5-5" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Enterprise Security & Admin</h3>
+                    <p>Built for organizations that take security seriously. Full control over data, users, and compliance — with private deployment for maximum sovereignty.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>End-to-End Encryption</strong>
+                            <span>All messages encrypted in transit and at rest. Optional client-side encryption for sensitive chats</span>
+                        </li>
+                        <li>
+                            <strong>Data Loss Prevention</strong>
+                            <span>Automatically detect and block sharing of sensitive information like credit cards and PII</span>
+                        </li>
+                        <li>
+                            <strong>Message Retention</strong>
+                            <span>Configure retention policies — auto-delete after 30/60/90 days or retain indefinitely</span>
+                        </li>
+                        <li>
+                            <strong>Compliance & eDiscovery</strong>
+                            <span>Full message archive with search, export, and legal hold for regulatory compliance</span>
+                        </li>
+                        <li>
+                            <strong>Private Deployment</strong>
+                            <span>Deploy on your own infrastructure with air-gap support for maximum data control</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="security-visual">
+                        <div class="security-panel">
+                            <div class="sec-panel-header">Security Dashboard</div>
+                            <div class="sec-metrics">
+                                <div class="sec-metric">
+                                    <span class="sec-metric-icon" style="color:#34a853;">●</span>
+                                    <span>Encryption</span>
+                                    <strong>Active</strong>
+                                </div>
+                                <div class="sec-metric">
+                                    <span class="sec-metric-icon" style="color:#34a853;">●</span>
+                                    <span>DLP Policy</span>
+                                    <strong>Enforced</strong>
+                                </div>
+                                <div class="sec-metric">
+                                    <span class="sec-metric-icon" style="color:#34a853;">●</span>
+                                    <span>Compliance</span>
+                                    <strong>Compliant</strong>
+                                </div>
+                                <div class="sec-metric">
+                                    <span class="sec-metric-icon" style="color:#fbbc04;">●</span>
+                                    <span>Retention</span>
+                                    <strong>90 days</strong>
+                                </div>
+                            </div>
+                            <div class="sec-blocked">
+                                <span class="sec-blocked-title">Threats Blocked Today</span>
+                                <div class="sec-blocked-stats">
+                                    <div class="blocked-item">
+                                        <span class="blocked-num">23</span>
+                                        <span>Sensitive data</span>
+                                    </div>
+                                    <div class="blocked-item">
+                                        <span class="blocked-num">7</span>
+                                        <span>Phishing links</span>
+                                    </div>
+                                    <div class="blocked-item">
+                                        <span class="blocked-num">2</span>
+                                        <span>Malware files</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Features -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>And so much more</h2>
+                <p>Every feature you need for enterprise team communication</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M21 21l-4.35-4.35" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>Global Search</h5>
+                    <p>Search across all messages, files, and spaces with filters and date ranges</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M2 12h20M12 2c3 3 4.5 6 4.5 10s-1.5 7-4.5 10c-3-3-4.5-6-4.5-10S9 5 12 2z" fill="none" stroke="#ea4335" stroke-width="1.2"/></svg>
+                    <h5>Multi-Language</h5>
+                    <p>Real-time message translation and support for 40+ interface languages</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M12 7v5l3 3" fill="none" stroke="#34a853" stroke-width="1.8" stroke-linecap="round"/></svg>
+                    <h5>Status & Presence</h5>
+                    <p>Set custom status, availability, and working hours with auto DND modes</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M4 22v-7" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>Announcements</h5>
+                    <p>Broadcast important messages with read tracking and acknowledgement</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M3 10h18" stroke="#fbbc04" stroke-width="1.2"/><path d="M8 18v2M16 18v2" stroke="#fbbc04" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>Desktop & Mobile</h5>
+                    <p>Native apps for every platform with push notifications and offline access</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="#1a73e8" stroke-width="1.5"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="#1a73e8" stroke-width="1.5" opacity="0.6"/></svg>
+                    <h5>Unlimited History</h5>
+                    <p>Full searchable message history with no storage limits or message caps</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M9 7h6M9 11h6M9 15h4" stroke="#ea4335" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <h5>Tasks & Reminders</h5>
+                    <p>Create tasks from messages, assign to team members, and track progress</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    <h5>Cross-Platform Sync</h5>
+                    <p>Seamless sync across all devices — pick up conversations where you left off</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>Plans for every team size</h2>
+                <p>Start free, scale as your team grows</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Starter</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">$3</span>
+                            <span class="price-period">/user/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Up to 100 users</li>
+                        <li>Unlimited messaging</li>
+                        <li>5 GB file storage per user</li>
+                        <li>1:1 voice & video calls</li>
+                        <li>Basic search</li>
+                    </ul>
+                    <a href="#" class="btn-secondary pricing-btn">Start Free Trial</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h4>Business</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">$7</span>
+                            <span class="price-period">/user/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Unlimited users</li>
+                        <li>Group video calls (100 people)</li>
+                        <li>Unlimited file storage</li>
+                        <li>Screen sharing & recording</li>
+                        <li>Admin console & DLP</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn btn-teal">Start Free Trial</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Enterprise</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">Custom</span>
+                            <span class="price-period"></span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Everything in Business</li>
+                        <li>Private deployment</li>
+                        <li>E2E encryption</li>
+                        <li>eDiscovery & legal hold</li>
+                        <li>Custom integrations</li>
+                        <li>Dedicated account manager</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary pricing-btn">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to transform team communication?</h2>
+                <p>Join organizations worldwide that rely on Instant Messenger for secure, seamless collaboration.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">Start Free Trial</a>
+                    <a href="#" class="btn-secondary btn-large">Request a Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36">
+                    <p class="footer-tagline">Building the future of enterprise technology.</p>
+                </div>
+                <div class="footer-links"><h5>Products</h5><a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a><a href="workup.html">Workup</a><a href="oortai.html">OORT.AI</a><a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a><a href="classroom.html">Cloud Classroom</a></div>
+                <div class="footer-links"><h5>Solutions</h5><a href="#">Instant Messenger</a><a href="clouddisk.html">Cloud Disk</a><a href="email.html">Email</a><a href="approval.html">Intelligent Approval</a><a href="dispatch.html">Command & Dispatch</a><a href="fieldmanager.html">Field Manager</a></div>
+                <div class="footer-links"><h5>Company</h5><a href="about.html">About Us</a><a href="#">Careers</a><a href="#">Blog</a><a href="contact.html">Contact</a><a href="#">Privacy Policy</a></div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OortCloud Technology. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a>
+                    <a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a>
+                    <a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

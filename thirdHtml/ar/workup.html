@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workup - التطبيق المؤسسي الشامل | OortCloud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="workup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="alternate" hreflang="en" href="https://oortcloudsmart.com/en/workup.html">
+    <link rel="alternate" hreflang="ar" href="https://oortcloudsmart.com/ar/workup.html">
+    <link rel="alternate" hreflang="x-default" href="https://oortcloudsmart.com/en/workup.html">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">المنتجات</a>
+                <a href="index.html#platform">المنصة</a>
+                <a href="index.html#enterprise">المؤسسات</a>
+                <a href="about.html">عن الشركة</a>
+            </div>
+            <a href="#get-started" class="nav-cta">ابدأ الآن</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="تبديل اللغة">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">AR</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item active" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    تسجيل الدخول
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">م</div>
+                    <span class="nav-username" id="navUsername">مستخدم</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            لوحة التحكم
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            تسجيل الخروج
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="القائمة"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="workup-hero">
+        <div class="container">
+            <div class="workup-hero-grid">
+                <div class="workup-hero-content">
+                    <div class="product-breadcrumb">
+                        <a href="index.html">المنتجات</a>
+                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <span>Workup</span>
+                    </div>
+                    <h1>كل ما يحتاجه فريقك، <span class="gradient-text-workup">في تطبيق واحد</span></h1>
+                    <p class="workup-hero-desc">التطبيق المؤسسي الشامل الذي يوحّد المراسلة والموافقات والفصول الدراسية والتخزين السحابي والبريد الإلكتروني ومنظومة قابلة للتوسع من التطبيقات الفرعية والمصغرة. تسجيل دخول واحد، واجهة واحدة، دون تبديل بين التطبيقات.</p>
+                    <div class="hero-actions">
+                        <a href="#get-started" class="btn-primary btn-large btn-workup">ابدأ تجربة مجانية</a>
+                        <a href="#apps" class="btn-secondary btn-large">استكشف التطبيقات</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span class="trust-badge"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="2" width="10" height="10" rx="2" fill="none" stroke="#4285f4" stroke-width="1.3"/><path d="M2 5h10" stroke="#4285f4" stroke-width="1"/><rect x="3.5" y="6.5" width="3" height="3" rx="0.5" fill="#4285f4" opacity="0.5"/></svg> +٦ تطبيقات مدمجة</span>
+                        <span class="trust-badge"><svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5" fill="none" stroke="#34a853" stroke-width="1.3"/><path d="M4 7h6M7 4v6" stroke="#34a853" stroke-width="1.2" stroke-linecap="round"/></svg> تطبيقات مصغرة قابلة للتوسع</span>
+                        <span class="trust-badge"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2l5 3v4c0 3-2.2 5.5-5 6-2.8-.5-5-3-5-6V5l5-3z" fill="none" stroke="#ea4335" stroke-width="1.3"/></svg> أمان مؤسسي</span>
+                    </div>
+                </div>
+                <div class="workup-hero-visual">
+                    <div class="superapp-mockup">
+                        <div class="sa-header">
+                            <div class="sa-header-left">
+                                <div class="sa-logo-mark">W</div>
+                                <span class="sa-title">Workup</span>
+                            </div>
+                            <div class="sa-header-right">
+                                <div class="sa-search">
+                                    <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="5.5" cy="5.5" r="3.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M8 8l2.5 2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                    <span>البحث في كل شيء...</span>
+                                </div>
+                                <div class="sa-avatar">أح</div>
+                            </div>
+                        </div>
+                        <div class="sa-body">
+                            <div class="sa-sidebar">
+                                <div class="sa-nav-item active"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 5l5-3 5 3v6a1 1 0 01-1 1H3a1 1 0 01-1-1V5z" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><span>الرئيسية</span></div>
+                                <div class="sa-nav-item"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 4c0-1 .8-1.5 1.5-1.5h5c.7 0 1.5.5 1.5 1.5v5c0 1-.8 1.5-1.5 1.5H7l-2 2v-2H4.5C3.8 10.5 3 10 3 9V4z" fill="none" stroke="currentColor" stroke-width="1.1"/></svg><span>المراسلة</span></div>
+                                <div class="sa-nav-item"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="4" width="10" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M2 5.5l5 3 5-3" fill="none" stroke="currentColor" stroke-width="1"/></svg><span>البريد</span></div>
+                                <div class="sa-nav-item"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2l1.5 3H12l-2.5 2 1 3L7 8.5 3.5 10l1-3L2 5h3.5z" fill="none" stroke="currentColor" stroke-width="1.1"/></svg><span>الموافقات</span></div>
+                                <div class="sa-nav-item"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="3" y="2" width="8" height="10" rx="1" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M5 5h4M5 7h4M5 9h2" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"/></svg><span>التخزين</span></div>
+                                <div class="sa-nav-item"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="3" width="10" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.1"/><circle cx="7" cy="9" r="0.8" fill="currentColor"/></svg><span>الفصول</span></div>
+                                <div class="sa-nav-divider"></div>
+                                <div class="sa-nav-item mini"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="2" width="4.5" height="4.5" rx="1" fill="none" stroke="currentColor" stroke-width="1"/><rect x="7.5" y="2" width="4.5" height="4.5" rx="1" fill="none" stroke="currentColor" stroke-width="1"/><rect x="2" y="7.5" width="4.5" height="4.5" rx="1" fill="none" stroke="currentColor" stroke-width="1"/><rect x="7.5" y="7.5" width="4.5" height="4.5" rx="1" fill="none" stroke="currentColor" stroke-width="1"/></svg><span>التطبيقات المصغرة</span></div>
+                            </div>
+                            <div class="sa-main">
+                                <div class="sa-welcome">
+                                    <span class="sa-greeting">صباح الخير، أحمد</span>
+                                    <span class="sa-date">الأربعاء، ٢٨ مايو</span>
+                                </div>
+                                <div class="sa-widgets">
+                                    <div class="sa-widget msg-widget"><span class="widget-title">الرسائل</span><span class="widget-count">٥ غير مقروءة</span></div>
+                                    <div class="sa-widget approval-widget"><span class="widget-title">الموافقات</span><span class="widget-count">٣ معلقة</span></div>
+                                    <div class="sa-widget drive-widget"><span class="widget-title">الملفات الأخيرة</span><span class="widget-count">محدّث قبل دقيقتين</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Integrated Apps Bar -->
+    <section class="apps-bar" id="apps">
+        <div class="container">
+            <div class="apps-bar-grid">
+                <div class="app-bar-item">
+                    <div class="abi-icon" style="background: linear-gradient(135deg, #34a853, #4285f4);"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M4 6c0-1.5 1.2-2.5 2.5-2.5h7c1.3 0 2.5 1 2.5 2.5v6c0 1.5-1.2 2.5-2.5 2.5H11l-3 3v-3H6.5C5.2 15 4 14 4 12.5V6z" fill="white" opacity="0.9"/></svg></div>
+                    <strong>المراسلة الفورية</strong>
+                    <span>التواصل بين الفريق</span>
+                </div>
+                <div class="app-bar-item">
+                    <div class="abi-icon" style="background: linear-gradient(135deg, #ea4335, #fbbc04);"><svg width="20" height="20" viewBox="0 0 20 20"><rect x="3" y="5" width="14" height="10" rx="2" fill="white" opacity="0.9"/><path d="M3 7l7 4.5 7-4.5" fill="none" stroke="#ea4335" stroke-width="1.2" opacity="0.6"/></svg></div>
+                    <strong>البريد الإلكتروني</strong>
+                    <span>بريد مؤسسي</span>
+                </div>
+                <div class="app-bar-item">
+                    <div class="abi-icon" style="background: linear-gradient(135deg, #fbbc04, #f09800);"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 3l2 4h4l-3.5 3 1 4L10 12l-3.5 2 1-4L4 7h4z" fill="white" opacity="0.9"/></svg></div>
+                    <strong>الموافقات</strong>
+                    <span>أتمتة سير العمل</span>
+                </div>
+                <div class="app-bar-item">
+                    <div class="abi-icon" style="background: linear-gradient(135deg, #34a853, #1a73e8);"><svg width="20" height="20" viewBox="0 0 20 20"><rect x="4" y="3" width="12" height="14" rx="2" fill="white" opacity="0.9"/><path d="M7 7h6M7 10h6M7 13h4" stroke="#34a853" stroke-width="1" stroke-linecap="round" opacity="0.6"/></svg></div>
+                    <strong>التخزين السحابي</strong>
+                    <span>تخزين سحابي</span>
+                </div>
+                <div class="app-bar-item">
+                    <div class="abi-icon" style="background: linear-gradient(135deg, #ea4335, #9b72cb);"><svg width="20" height="20" viewBox="0 0 20 20"><rect x="3" y="4" width="14" height="12" rx="2" fill="white" opacity="0.9"/><circle cx="10" cy="13" r="1" fill="#ea4335" opacity="0.6"/><path d="M3 8h14" stroke="#ea4335" stroke-width="0.8" opacity="0.4"/></svg></div>
+                    <strong>الفصول الدراسية</strong>
+                    <span>التعلم والتدريب</span>
+                </div>
+                <div class="app-bar-item">
+                    <div class="abi-icon" style="background: linear-gradient(135deg, #4285f4, #9b72cb);"><svg width="20" height="20" viewBox="0 0 20 20"><rect x="3" y="3" width="6" height="6" rx="1.5" fill="white" opacity="0.9"/><rect x="11" y="3" width="6" height="6" rx="1.5" fill="white" opacity="0.7"/><rect x="3" y="11" width="6" height="6" rx="1.5" fill="white" opacity="0.7"/><rect x="11" y="11" width="6" height="6" rx="1.5" fill="white" opacity="0.5"/></svg></div>
+                    <strong>التطبيقات المصغرة</strong>
+                    <span>منظومة قابلة للتوسع</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>مساحة عمل موحدة، بلا احتكاك</h2>
+                <p>توقف عن التبديل بين أدوات منفصلة. Workup يجمع كل شيء معاً ليتمكن فريقك من التركيز على ما يهم.</p>
+            </div>
+            <div class="benefits-grid-3">
+                <div class="benefit-card">
+                    <div class="benefit-card-icon"><svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12" fill="none" stroke="#4285f4" stroke-width="2.5"/><path d="M10 16h12M16 10v12" stroke="#4285f4" stroke-width="2" stroke-linecap="round"/></svg></div>
+                    <h4>تسجيل دخول موحد</h4>
+                    <p>حساب واحد، تسجيل دخول واحد. الوصول إلى المراسلة والبريد والتخزين والفصول والموافقات وجميع التطبيقات المصغرة بهوية واحدة.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-card-icon"><svg width="32" height="32" viewBox="0 0 32 32"><path d="M8 12l8-6 8 6v10a2 2 0 01-2 2H10a2 2 0 01-2-2V12z" fill="none" stroke="#34a853" stroke-width="2.5"/><path d="M13 24v-6h6v6" fill="none" stroke="#34a853" stroke-width="2"/></svg></div>
+                    <h4>صفحة رئيسية موحدة</h4>
+                    <p>لوحة تحكم مخصصة تجمع الإشعارات والمهام والرسائل والموافقات من جميع التطبيقات المتكاملة.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-card-icon"><svg width="32" height="32" viewBox="0 0 32 32"><rect x="6" y="6" width="8" height="8" rx="2" fill="none" stroke="#ea4335" stroke-width="2.5"/><rect x="18" y="6" width="8" height="8" rx="2" fill="none" stroke="#fbbc04" stroke-width="2.5"/><rect x="6" y="18" width="8" height="8" rx="2" fill="none" stroke="#9b72cb" stroke-width="2.5"/><rect x="18" y="18" width="8" height="8" rx="2" fill="none" stroke="#34a853" stroke-width="2.5"/></svg></div>
+                    <h4>منظومة التطبيقات المصغرة</h4>
+                    <p>وسّع Workup بتطبيقات فرعية ومصغرة — أدوات مخصصة يبنيها فريقك أو يتم تثبيتها من المتجر.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cross-App Features -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>قوة التكامل</h2>
+                <p>ميزات لا تعمل إلا لأن كل شيء يعيش معاً</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M12 7v5l4 2" fill="none" stroke="#4285f4" stroke-width="1.8" stroke-linecap="round"/></svg><h5>بحث شامل</h5><p>البحث في الرسائل والبريد والملفات والموافقات والتطبيقات المصغرة من شريط بحث واحد</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V7l-8-5z" fill="none" stroke="#ea4335" stroke-width="1.5"/></svg><h5>أمان موحد</h5><p>سياسة أمان واحدة، وحدة تحكم إدارية واحدة، حماية متسقة عبر جميع التطبيقات</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="6" width="7" height="12" rx="1.5" fill="none" stroke="#34a853" stroke-width="1.5"/><rect x="14" y="4" width="7" height="16" rx="1.5" fill="none" stroke="#34a853" stroke-width="1.5"/></svg><h5>مزامنة عبر الأجهزة</h5><p>تجربة سلسة عبر الحاسب والهاتف والويب — أكمل من حيث توقفت</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="8" cy="12" r="3" fill="none" stroke="#9b72cb" stroke-width="1.5"/><circle cx="16" cy="12" r="3" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M11 12h2" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg><h5>جهات اتصال مشتركة</h5><p>دليل جهات اتصال واحد يخدم المراسلة والبريد والموافقات والفصول</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="#fbbc04" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg><h5>أتمتة سير العمل</h5><p>إنشاء سير عمل آلي يمتد عبر تطبيقات متعددة — تفعيل إجراءات عبر المنصة</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" fill="none" stroke="#1a73e8" stroke-width="1.5"/><path d="M2 12h20M12 2c3 3 4.5 6 4.5 10s-1.5 7-4.5 10" fill="none" stroke="#1a73e8" stroke-width="1.2"/></svg><h5>تعدد اللغات</h5><p>دعم كامل للترجمة بأكثر من ٢٠ لغة عبر جميع التطبيقات المتكاملة</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M4 12h16M12 4v16" stroke="#34a853" stroke-width="1" opacity="0.4"/></svg><h5>وحدة الإدارة</h5><p>إدارة مركزية للمستخدمين والصلاحيات والسياسات والتحليلات</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="#ea4335" stroke-width="1.5" opacity="0.6"/></svg><h5>واجهات برمجة مفتوحة</h5><p>واجهات REST API لكل وحدة — بناء تكاملات مخصصة وتوسيع المنصة</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>خطط لكل حجم فريق</h2>
+                <p>ابدأ مجاناً، وتوسّع مع نموك</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>الفريق</h4>
+                        <div class="price-amount">$١٢</div>
+                        <span class="price-period">لكل مستخدم / شهرياً</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>المراسلة + البريد + التخزين</li>
+                        <li>سير عمل موافقات أساسي</li>
+                        <li>١٠ جيجابايت لكل مستخدم</li>
+                        <li>٣ تطبيقات مصغرة</li>
+                        <li>دعم قياسي</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn">ابدأ الآن</a>
+                </div>
+                <div class="pricing-card popular">
+                    <span class="popular-badge">الأكثر شعبية</span>
+                    <div class="pricing-header">
+                        <h4>الأعمال</h4>
+                        <div class="price-amount">$٢٨</div>
+                        <span class="price-period">لكل مستخدم / شهرياً</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>جميع التطبيقات المتكاملة</li>
+                        <li>مُنشئ موافقات متقدم</li>
+                        <li>١٠٠ جيجابايت لكل مستخدم</li>
+                        <li>تطبيقات مصغرة غير محدودة</li>
+                        <li>فصول دراسية للتدريب</li>
+                        <li>دعم ذو أولوية</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn btn-workup">ابدأ تجربة مجانية</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>المؤسسات</h4>
+                        <div class="price-amount">مخصص</div>
+                        <span class="price-period">تسعير حسب الطلب</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>كل ما في خطة الأعمال</li>
+                        <li>خيار النشر الخاص</li>
+                        <li>تخزين غير محدود</li>
+                        <li>تطوير تطبيقات مصغرة مخصصة</li>
+                        <li>SSO مؤسسي والامتثال</li>
+                        <li>مدير نجاح مخصص</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary pricing-btn">تواصل مع المبيعات</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>مستعد لتوحيد مساحة عملك؟</h2>
+                <p>استبدل الأدوات المنفصلة بمنصة ذكية واحدة. ابدأ تجربتك المجانية واكتشف الفرق الذي يحدثه التكامل.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">ابدأ تجربة مجانية</a>
+                    <a href="#" class="btn-secondary btn-large">حجز عرض تجريبي</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36"><p class="footer-tagline">نبني مستقبل تقنية المؤسسات.</p></div>
+                <div class="footer-links"><h5>المنتجات</h5><a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a><a href="workup.html">Workup</a><a href="oortai.html">OORT.AI</a><a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a><a href="classroom.html">Cloud Classroom</a></div>
+                <div class="footer-links"><h5>الحلول</h5><a href="messenger.html">المراسلة الفورية</a><a href="clouddisk.html">Cloud Disk</a><a href="email.html">البريد الإلكتروني</a><a href="approval.html">الموافقات الذكية</a><a href="dispatch.html">القيادة والإرسال</a><a href="fieldmanager.html">مدير الميدان</a></div>
+                <div class="footer-links"><h5>الشركة</h5><a href="about.html">عن الشركة</a><a href="#">الوظائف</a><a href="#">المدونة</a><a href="contact.html">تواصل معنا</a><a href="#">سياسة الخصوصية</a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; ٢٠٢٦ OortCloud Technology. جميع الحقوق محفوظة.</p><div class="footer-social"><a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a><a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a><a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a></div></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

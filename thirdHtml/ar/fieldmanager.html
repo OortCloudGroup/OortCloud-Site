@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدير الميدان - منصة العمليات الميدانية الموحدة | OortCloud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dispatch.css">
+    <link rel="stylesheet" href="fieldmanager.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="alternate" hreflang="ar" href="https://oortcloudsmart.com/ar/fieldmanager.html">
+    <link rel="alternate" hreflang="en" href="https://oortcloudsmart.com/en/fieldmanager.html">
+    <link rel="alternate" hreflang="x-default" href="https://oortcloudsmart.com/en/fieldmanager.html">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40"></a>
+            <div class="nav-links"><a href="index.html#products">المنتجات</a><a href="index.html#platform">المنصة</a><a href="index.html#enterprise">المؤسسات</a><a href="index.html#about">عن الشركة</a></div>
+            <a href="#get-started" class="nav-cta">تواصل معنا</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="تبديل اللغة">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">AR</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item active" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>تسجيل الدخول</a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">مستخدم</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>لوحة التحكم</a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>تسجيل الخروج</button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="تبديل القائمة"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="fm-hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="container">
+            <div class="fm-hero-content">
+                <div class="product-breadcrumb">
+                    <a href="index.html">المنتجات</a>
+                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M10 3l-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <span>مدير الميدان</span>
+                </div>
+                <h1>قِد. أرسل. <span class="gradient-text-navy">تحكّم.</span></h1>
+                <p class="fm-hero-desc">منصة إدارة ميدانية من الجيل القادم توحّد إرسال الأفراد، تنسيق الأسطول، مراقبة المرافق، تتبع المسارات الفوري، التنبيه البصري بالذكاء الاصطناعي، وتكامل قنوات المراسلة في واجهة قيادة ذكية واحدة.</p>
+                <div class="hero-actions">
+                    <a href="#get-started" class="btn-primary btn-large btn-navy">اطلب عرضاً توضيحياً</a>
+                    <a href="#pillars" class="btn-secondary btn-large">استكشف القدرات</a>
+                </div>
+            </div>
+            <div class="fm-hero-visual">
+                <div class="fm-command-mockup">
+                    <div class="fm-mockup-header">
+                        <div class="fm-mockup-header-left"><span class="fm-mockup-title">مدير الميدان</span><span class="fm-mockup-status"><span class="status-dot-live"></span> مباشر</span></div>
+                        <div class="fm-mockup-header-right"><span class="fm-mockup-time">١٤:٣٢:٠٧</span><span class="fm-mockup-date">٧ يونيو ٢٠٢٦</span></div>
+                    </div>
+                    <div class="fm-mockup-body">
+                        <div class="fm-map">
+                            <div class="fm-map-grid"></div>
+                            <div class="fm-map-pin pin-worker" style="top:25%;left:20%;"><span class="fm-pin-pulse"></span></div>
+                            <div class="fm-map-pin pin-worker" style="top:40%;left:45%;"></div>
+                            <div class="fm-map-pin pin-vehicle" style="top:55%;left:30%;"><span class="fm-pin-pulse"></span></div>
+                            <div class="fm-map-pin pin-vehicle" style="top:35%;left:65%;"></div>
+                            <div class="fm-map-pin pin-facility" style="top:65%;left:55%;"></div>
+                            <div class="fm-map-pin pin-alert" style="top:20%;left:75%;"><span class="fm-pin-pulse"></span></div>
+                            <div class="fm-map-stats">
+                                <div class="fm-map-stat"><span class="fm-ms-num">١٢٨</span><span class="fm-ms-label">أفراد</span></div>
+                                <div class="fm-map-stat"><span class="fm-ms-num">٤٢</span><span class="fm-ms-label">مركبة</span></div>
+                                <div class="fm-map-stat"><span class="fm-ms-num">٨</span><span class="fm-ms-label">مرافق</span></div>
+                            </div>
+                        </div>
+                        <div class="fm-sidebar-panel">
+                            <div class="fm-sidebar-title">الوحدات النشطة</div>
+                            <div class="fm-module-item"><span class="fm-module-dot workforce"></span><div class="fm-module-info"><strong>القوى العاملة</strong><span>١٢٨ نشط</span></div></div>
+                            <div class="fm-module-item"><span class="fm-module-dot fleet"></span><div class="fm-module-info"><strong>عمليات الأسطول</strong><span>٤٢ وحدة</span></div></div>
+                            <div class="fm-module-item"><span class="fm-module-dot facility"></span><div class="fm-module-info"><strong>المرافق</strong><span>٨ مواقع</span></div></div>
+                            <div class="fm-module-item"><span class="fm-module-dot tracking"></span><div class="fm-module-info"><strong>التتبع</strong><span>فوري</span></div></div>
+                            <div class="fm-module-item"><span class="fm-module-dot ai-vision"></span><div class="fm-module-info"><strong>رؤية AI</strong><span>٣ تنبيهات</span></div></div>
+                            <div class="fm-module-item"><span class="fm-module-dot im"></span><div class="fm-module-info"><strong>قناة IM</strong><span>متصل</span></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Impact Stats -->
+    <section class="fm-impact-section">
+        <div class="container">
+            <div class="fm-impact-grid">
+                <div class="fm-impact-item"><span class="fm-impact-number">٣٦٠°</span><span class="fm-impact-label">الوعي بالموقف</span></div>
+                <div class="fm-impact-item"><span class="fm-impact-number">فوري</span><span class="fm-impact-label">التتبع والإرسال</span></div>
+                <div class="fm-impact-item"><span class="fm-impact-number">بالذكاء الاصطناعي</span><span class="fm-impact-label">التنبيه البصري</span></div>
+                <div class="fm-impact-item"><span class="fm-impact-number">الكل في واحد</span><span class="fm-impact-label">منصة القيادة</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Six Pillars -->
+    <section class="fm-pillars-section" id="pillars">
+        <div class="container">
+            <div class="section-header">
+                <h2>ست ركائز لإدارة الميدان</h2>
+                <p>منصة شاملة تغطي كل جانب من عملياتك الميدانية</p>
+            </div>
+            <div class="fm-pillars-grid">
+                <div class="fm-pillar-card workforce">
+                    <div class="fm-pillar-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    <h4>إدارة القوى العاملة</h4>
+                    <p>رؤية فورية لجميع الأفراد الميدانيين. تعيين المهام ومراقبة الحالة وتنسيق الفرق من لوحة إرسال موحدة.</p>
+                    <ul class="fm-pillar-features"><li>تحكم وصول قائم على الأدوار</li><li>تعيين مهام ذكي</li><li>مراقبة حالة فورية</li></ul>
+                </div>
+                <div class="fm-pillar-card fleet">
+                    <div class="fm-pillar-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#ff8800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+                    <h4>عمليات الأسطول</h4>
+                    <p>تتبع وإرسال وتحسين أسطولك الميداني في الوقت الفعلي. مراقبة صحة المركبات والوقود وكفاءة المسار.</p>
+                    <ul class="fm-pillar-features"><li>تكامل GPS مباشر</li><li>مراقبة صحة المركبات</li><li>تحسين المسارات</li></ul>
+                </div>
+                <div class="fm-pillar-card facility">
+                    <div class="fm-pillar-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00cc88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="6" x2="15" y2="6"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="15" y2="14"/></svg></div>
+                    <h4>مراقبة المرافق</h4>
+                    <p>مراقبة شاملة للمواقع الميدانية والبنية التحتية. تتبع الوصول والامتثال وحالة المعدات.</p>
+                    <ul class="fm-pillar-features"><li>لوحة تحكم متعددة المواقع</li><li>تتبع الامتثال والسلامة</li><li>مراقبة حالة المعدات</li></ul>
+                </div>
+                <div class="fm-pillar-card tracking">
+                    <div class="fm-pillar-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#aa66ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
+                    <h4>تتبع المسارات</h4>
+                    <p>تصور أنماط الحركة والمسارات التاريخية للأفراد والمركبات. تنبيهات السياج الجغرافي وتحسين المسار.</p>
+                    <ul class="fm-pillar-features"><li>إعادة تشغيل المسار التاريخي</li><li>سياج جغرافي وتنبيهات المناطق</li><li>تحليل مسار تنبؤي</li></ul>
+                </div>
+                <div class="fm-pillar-card ai-vision">
+                    <div class="fm-pillar-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#ff4466" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+                    <h4>تنبيه رؤية AI</h4>
+                    <p>استفد من نماذج الرؤية لتحليل بث الكاميرات المباشر. كشف تلقائي لمخاطر السلامة وانتهاكات الامتثال.</p>
+                    <ul class="fm-pillar-features"><li>كشف المخاطر الفوري</li><li>مراقبة الامتثال</li><li>مشغلات تنبيه فورية</li></ul>
+                </div>
+                <div class="fm-pillar-card im">
+                    <div class="fm-pillar-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#44aaff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="9" y1="12" x2="13" y2="12"/></svg></div>
+                    <h4>تكامل قناة المراسلة</h4>
+                    <p>إرسال تحديثات العمليات الميدانية مباشرة لقنوات المراسلة. المديرون عن بُعد يبقون على اطلاع.</p>
+                    <ul class="fm-pillar-features"><li>إشعارات فورية</li><li>اتصال ثنائي الاتجاه</li><li>إرسال أوامر عبر المراسلة</li></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enterprise CTA -->
+    <section class="fm-pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>مصمم خصيصاً لمؤسستك</h2>
+                <p>مدير الميدان يُخصص لكل نشر. تواصل معنا لحل مخصص.</p>
+            </div>
+            <div class="fm-cta-card">
+                <div class="fm-cta-card-content">
+                    <h3>النشر المؤسسي</h3>
+                    <p>كل مؤسسة لديها متطلبات عمليات ميدانية فريدة. فريقنا يعمل معك لتصميم ونشر وتحسين نظام الإدارة الميدانية المثالي.</p>
+                    <ul class="fm-cta-features">
+                        <li>بنية نشر مخصصة</li>
+                        <li>تكامل مع الأنظمة الحالية</li>
+                        <li>تدريب ودعم ميداني</li>
+                        <li>فريق نجاح مخصص</li>
+                        <li>اتفاقية SLA ودعم ٢٤/٧</li>
+                    </ul>
+                </div>
+                <div class="fm-cta-card-action">
+                    <a href="#" class="btn-primary btn-large btn-navy">جدول استشارة</a>
+                    <a href="#" class="btn-secondary btn-large">تحميل الكتيب</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>مستعد لتحويل عملياتك الميدانية؟</h2>
+                <p>شاهد كيف يمكن لمدير الميدان توحيد إدارة القوى العاملة والأسطول والمرافق مع عرض توضيحي مخصص.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">اطلب عرضاً توضيحياً</a>
+                    <a href="#" class="btn-secondary btn-large">تحدث مع خبير</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36"><p class="footer-tagline">نبني مستقبل تقنية المؤسسات.</p></div>
+                <div class="footer-links"><h5>المنتجات</h5><a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a><a href="workup.html">Workup</a><a href="oortai.html">OORT.AI</a><a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a><a href="classroom.html">Cloud Classroom</a></div>
+                <div class="footer-links"><h5>الحلول</h5><a href="messenger.html">المراسلة الفورية</a><a href="clouddisk.html">Cloud Disk</a><a href="email.html">البريد الإلكتروني</a><a href="approval.html">الموافقات الذكية</a><a href="dispatch.html">القيادة والتوجيه</a><a href="#">مدير الميدان</a></div>
+                <div class="footer-links"><h5>الشركة</h5><a href="about.html">عن الشركة</a><a href="#">الوظائف</a><a href="#">المدونة</a><a href="contact.html">تواصل معنا</a><a href="#">سياسة الخصوصية</a></div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ٢٠٢٦ OortCloud Technology. جميع الحقوق محفوظة.</p>
+                <div class="footer-social">
+                    <a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a>
+                    <a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a>
+                    <a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

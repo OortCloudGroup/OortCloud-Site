@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الموافقات الذكية - إدارة سير العمل المؤسسي | OortCloud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="approval.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="alternate" hreflang="en" href="https://oortcloudsmart.com/en/approval.html">
+    <link rel="alternate" hreflang="ar" href="https://oortcloudsmart.com/ar/approval.html">
+    <link rel="alternate" hreflang="x-default" href="https://oortcloudsmart.com/en/approval.html">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40"></a>
+            <div class="nav-links">
+                <a href="index.html#products">المنتجات</a>
+                <a href="index.html#platform">المنصة</a>
+                <a href="index.html#enterprise">المؤسسات</a>
+                <a href="about.html">عن الشركة</a>
+            </div>
+            <a href="#get-started" class="nav-cta">ابدأ مجاناً</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="تبديل اللغة">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">AR</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item active" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>تسجيل الدخول</a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">مستخدم</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>لوحة التحكم</a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>تسجيل الخروج</button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="القائمة"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="approval-hero">
+        <div class="container">
+            <div class="approval-hero-grid">
+                <div class="approval-hero-content">
+                    <div class="product-breadcrumb">
+                        <a href="index.html">المنتجات</a>
+                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M10 3l-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <span>الموافقات الذكية</span>
+                    </div>
+                    <h1>أتمتة القرارات، <span class="gradient-text-amber">تسريع الأعمال</span></h1>
+                    <p class="approval-hero-desc">إدارة سير العمل المؤسسي التي تحوّل عمليات الموافقة المعقدة إلى تدفقات عمل آلية ومبسطة. مصمم تدفق مرئي، نماذج ذكية، وتوجيه مدعوم بالذكاء الاصطناعي — احصل على الموافقات بشكل أسرع.</p>
+                    <div class="hero-actions">
+                        <a href="#get-started" class="btn-primary btn-large btn-amber">ابدأ التجربة المجانية</a>
+                        <a href="#features" class="btn-secondary btn-large">شاهد كيف يعمل</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span class="trust-badge"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>دورات موافقة أسرع بـ ٦٠٪</span>
+                        <span class="trust-badge"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>بناء التدفقات بدون أكواد</span>
+                    </div>
+                </div>
+                <div class="approval-hero-visual">
+                    <div class="workflow-mockup">
+                        <div class="workflow-canvas">
+                            <div class="wf-node wf-start"><div class="wf-node-icon start-icon"><svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="#34a853"/><polygon points="6.5,5 6.5,11 11,8" fill="white"/></svg></div><span>تقديم</span></div>
+                            <div class="wf-connector"></div>
+                            <div class="wf-node wf-approver"><div class="wf-node-icon approver-icon"><svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="6" r="3" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M3 14c0-3 2-5 5-5s5 2 5 5" fill="none" stroke="#4285f4" stroke-width="1.5"/></svg></div><span>المدير</span><span class="wf-status approved">تمت الموافقة</span></div>
+                            <div class="wf-connector"></div>
+                            <div class="wf-node wf-condition"><div class="wf-node-icon condition-icon"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 2l6 6-6 6-6-6z" fill="none" stroke="#fbbc04" stroke-width="1.5"/></svg></div><span>المبلغ > $٥ آلاف؟</span></div>
+                            <div class="wf-branch">
+                                <div class="wf-branch-line left"><span class="branch-label">نعم</span></div>
+                                <div class="wf-branch-line right"><span class="branch-label">لا</span></div>
+                            </div>
+                            <div class="wf-branch-nodes">
+                                <div class="wf-node wf-approver small"><div class="wf-node-icon approver-icon"><svg width="14" height="14" viewBox="0 0 16 16"><circle cx="8" cy="6" r="3" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M3 14c0-3 2-5 5-5s5 2 5 5" fill="none" stroke="#9b72cb" stroke-width="1.5"/></svg></div><span>نائب المالية</span><span class="wf-status pending">قيد الانتظار</span></div>
+                                <div class="wf-node wf-end small"><div class="wf-node-icon end-icon"><svg width="14" height="14" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="#34a853" opacity="0.2" stroke="#34a853" stroke-width="1.5"/><path d="M5 8l2 2 4-4" fill="none" stroke="#34a853" stroke-width="1.5" stroke-linecap="round"/></svg></div><span>مكتمل</span></div>
+                            </div>
+                        </div>
+                        <div class="workflow-sidebar-panel">
+                            <div class="wf-panel-title">تفاصيل الموافقة</div>
+                            <div class="wf-detail-item"><span class="wf-detail-label">النوع</span><span class="wf-detail-value">طلب شراء</span></div>
+                            <div class="wf-detail-item"><span class="wf-detail-label">المبلغ</span><span class="wf-detail-value">$٨,٥٠٠.٠٠</span></div>
+                            <div class="wf-detail-item"><span class="wf-detail-label">مقدم من</span><span class="wf-detail-value">خالد أحمد</span></div>
+                            <div class="wf-detail-item"><span class="wf-detail-label">الحالة</span><span class="wf-detail-value status-active">قيد التنفيذ</span></div>
+                            <div class="wf-timeline">
+                                <div class="timeline-item done"><div class="timeline-dot"></div><div class="timeline-content"><span>تم التقديم</span><span class="timeline-time">١٠:٢٤ ص</span></div></div>
+                                <div class="timeline-item done"><div class="timeline-dot"></div><div class="timeline-content"><span>وافق المدير</span><span class="timeline-time">١١:٠٥ ص</span></div></div>
+                                <div class="timeline-item current"><div class="timeline-dot"></div><div class="timeline-content"><span>مراجعة نائب المالية</span><span class="timeline-time">بانتظار...</span></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Impact Stats -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-item"><span class="impact-number">٦٠٪</span><span class="impact-label">دورات موافقة أسرع</span></div>
+                <div class="impact-item"><span class="impact-number">٩٠٪</span><span class="impact-label">تقليل العمل اليدوي</span></div>
+                <div class="impact-item"><span class="impact-number">+٢٠٠</span><span class="impact-label">قالب جاهز</span></div>
+                <div class="impact-item"><span class="impact-number">١٠٠٪</span><span class="impact-label">رؤية كاملة للعمليات</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="usecases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>أتمتة أي عملية عمل</h2>
+                <p>من طلبات الإجازة البسيطة إلى سير عمل المشتريات المعقدة متعددة الأقسام</p>
+            </div>
+            <div class="usecases-grid">
+                <div class="usecase-card"><div class="usecase-icon"><svg viewBox="0 0 48 48" width="40" height="40"><rect x="10" y="8" width="28" height="32" rx="4" fill="none" stroke="#fbbc04" stroke-width="2.5"/><path d="M18 18h12M18 24h8M18 30h10" stroke="#fbbc04" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="18" r="1.5" fill="#fbbc04"/><circle cx="14" cy="24" r="1.5" fill="#fbbc04"/><circle cx="14" cy="30" r="1.5" fill="#fbbc04"/></svg></div><h4>المصروفات والاسترداد</h4><p>أتمتة طلبات المصروفات مع مسح الإيصالات ضوئياً، فحص السياسات، وموافقة متعددة المستويات حسب مبالغ الحد الأقصى.</p></div>
+                <div class="usecase-card"><div class="usecase-icon"><svg viewBox="0 0 48 48" width="40" height="40"><rect x="8" y="12" width="32" height="24" rx="4" fill="none" stroke="#4285f4" stroke-width="2.5"/><path d="M16 20h16M16 26h12M16 32h8" stroke="#4285f4" stroke-width="2" stroke-linecap="round"/></svg></div><h4>أوامر الشراء</h4><p>تبسيط المشتريات مع اختيار المورد، والتحقق من الميزانية، والتوجيه التلقائي للموافقين المناسبين.</p></div>
+                <div class="usecase-card"><div class="usecase-icon"><svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="18" r="8" fill="none" stroke="#34a853" stroke-width="2.5"/><path d="M12 38c0-7 5-12 12-12s12 5 12 12" fill="none" stroke="#34a853" stroke-width="2.5"/></svg></div><h4>الموارد البشرية والإجازات</h4><p>معالجة طلبات الإجازة والتعيين والاستقالة وتغييرات الموظفين بسير عمل آلي.</p></div>
+                <div class="usecase-card"><div class="usecase-icon"><svg viewBox="0 0 48 48" width="40" height="40"><path d="M12 14h24v20H12z" fill="none" stroke="#ea4335" stroke-width="2.5" rx="3"/><path d="M12 14l12 10 12-10" fill="none" stroke="#ea4335" stroke-width="2"/></svg></div><h4>العقود والمستندات</h4><p>مراجعة وتعديل واعتماد العقود مع تتبع الإصدارات والتوقيع الإلكتروني وفحوصات الامتثال.</p></div>
+                <div class="usecase-card"><div class="usecase-icon"><svg viewBox="0 0 48 48" width="40" height="40"><rect x="8" y="10" width="14" height="14" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/><rect x="26" y="10" width="14" height="14" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/><rect x="16" y="26" width="14" height="14" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/></svg></div><h4>تقنية المعلومات والصلاحيات</h4><p>إدارة صلاحيات الوصول وتوفير البرمجيات وطلبات البنية التحتية مع تطبيق سياسات الأمان.</p></div>
+                <div class="usecase-card"><div class="usecase-icon"><svg viewBox="0 0 48 48" width="40" height="40"><path d="M10 38V18l14-8 14 8v20" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linejoin="round"/><path d="M18 38v-10h12v10" fill="none" stroke="#1a73e8" stroke-width="2"/></svg></div><h4>المرافق والإدارة</h4><p>حجز القاعات، طلبات الصيانة، تصاريح الزوار، وطلبات مستلزمات المكتب — كلها آلية.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>محرك سير عمل قوي، بدون أكواد</h2>
+                <p>صمم عمليات موافقة معقدة بأدوات مرئية بديهية — بدون حاجة لمطورين</p>
+            </div>
+
+            <!-- Feature 1: Visual Flow Designer -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #fbbc04, #ea4335);"><svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="4" fill="white" opacity="0.2"/><circle cx="10" cy="10" r="3" fill="white" opacity="0.9"/><circle cx="18" cy="18" r="3" fill="white" opacity="0.9"/><path d="M12 11l4 5" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/></svg></div>
+                    <h3>مصمم التدفق المرئي</h3>
+                    <p>بناء سير العمل بالسحب والإفلات يحوّل العمليات المعقدة إلى مخططات تدفق واضحة ومرئية. صمم واختبر وانشر تدفقات الموافقة في دقائق — وليس أسابيع.</p>
+                    <ul class="feature-list">
+                        <li><strong>لوحة السحب والإفلات</strong><span>بناء التدفقات مرئياً مع عقد الموافقة والشروط والفروع والمسارات المتوازية</span></li>
+                        <li><strong>التفرع الشرطي</strong><span>توجيه الموافقات بناءً على المبلغ أو القسم أو الدور أو أي حقل مخصص</span></li>
+                        <li><strong>موافقات متوازية وتسلسلية</strong><span>تكوين موافقات متعددة المستويات، توقيع مشترك، أو سلاسل موافقة تسلسلية</span></li>
+                        <li><strong>موافقون ديناميكيون</strong><span>تعيين تلقائي للموافقين بناءً على الهيكل التنظيمي أو رئيس القسم أو دور المشروع</span></li>
+                        <li><strong>قوالب التدفق</strong><span>أكثر من ٢٠٠ قالب جاهز لعمليات الأعمال الشائعة — خصص وانشر فوراً</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="designer-visual">
+                        <div class="designer-canvas">
+                            <div class="canvas-toolbar">
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5" fill="none" stroke="#5f6368" stroke-width="1.2"/></svg></div>
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="2" width="10" height="10" rx="2" fill="none" stroke="#5f6368" stroke-width="1.2"/></svg></div>
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2l5 5-5 5-5-5z" fill="none" stroke="#5f6368" stroke-width="1.2"/></svg></div>
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10M7 2v10" stroke="#5f6368" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+                            </div>
+                            <div class="canvas-flow">
+                                <div class="flow-node fn-start">بداية</div>
+                                <div class="flow-arrow"></div>
+                                <div class="flow-node fn-task">تعبئة النموذج</div>
+                                <div class="flow-arrow"></div>
+                                <div class="flow-node fn-approval">المدير المباشر</div>
+                                <div class="flow-arrow"></div>
+                                <div class="flow-node fn-condition">فحص الميزانية</div>
+                                <div class="flow-split">
+                                    <div class="split-branch"><span class="split-label">&gt;$١٠ آلاف</span><div class="flow-node fn-approval small">المدير العام</div></div>
+                                    <div class="split-branch"><span class="split-label">&le;$١٠ آلاف</span><div class="flow-node fn-end small">مكتمل</div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Smart Forms -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #4285f4, #34a853);"><svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="3" width="18" height="22" rx="3" fill="white" opacity="0.9"/><path d="M9 9h10M9 13h7M9 17h8" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/><rect x="9" y="20" width="4" height="2" rx="1" fill="#34a853" opacity="0.7"/></svg></div>
+                    <h3>بناء النماذج الذكية</h3>
+                    <p>إنشاء نماذج ذكية تتكيف مع مدخلات المستخدم. أنواع حقول غنية، قواعد تحقق، حساب تلقائي، وربط البيانات تجعل جمع البيانات سهلاً.</p>
+                    <ul class="feature-list">
+                        <li><strong>أنواع حقول غنية</strong><span>نص، رقم، تاريخ، قائمة منسدلة، رفع ملفات، موقع، توقيع، جدول، وأكثر من ٣٠ نوع حقل</span></li>
+                        <li><strong>المنطق الشرطي</strong><span>إظهار/إخفاء الحقول وتعيين قواعد الإلزام والتعبئة التلقائية بناءً على الاختيارات السابقة</span></li>
+                        <li><strong>الحساب التلقائي</strong><span>صيغ مدمجة للإجماليات والضرائب والخصومات والحسابات التجارية المعقدة</span></li>
+                        <li><strong>ربط البيانات</strong><span>سحب البيانات من أنظمة أخرى — دليل الموظفين، قاعدة المشاريع، سجلات الميزانية</span></li>
+                        <li><strong>محسّن للجوال</strong><span>النماذج تظهر بشكل مثالي على الجوال مع التقاط الكاميرا وموقع GPS والعمل بدون اتصال</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="form-visual">
+                        <div class="form-demo">
+                            <div class="form-header"><span>طلب شراء</span><span class="form-badge">مسودة</span></div>
+                            <div class="form-body">
+                                <div class="form-field"><label>القسم</label><div class="field-select">الهندسة <svg width="10" height="10" viewBox="0 0 10 10"><path d="M3 4l2 2 2-2" fill="none" stroke="#9aa0a6" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
+                                <div class="form-field"><label>وصف العنصر</label><div class="field-input">MacBook Pro 16" للموظفين الجدد</div></div>
+                                <div class="form-row"><div class="form-field half"><label>الكمية</label><div class="field-input">٥</div></div><div class="form-field half"><label>سعر الوحدة</label><div class="field-input">$٢,٤٩٩</div></div></div>
+                                <div class="form-field calculated"><label>المبلغ الإجمالي</label><div class="field-calculated">$١٢,٤٩٥.٠٠</div><span class="calc-note">محسوب تلقائياً</span></div>
+                                <div class="form-field"><label>المرفقات</label><div class="field-upload"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 10V3M5 5l3-3 3 3M3 10v3h10v-3" fill="none" stroke="#9aa0a6" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>اسحب الملفات أو انقر للرفع</span></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Intelligent Routing -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #9b72cb, #4285f4);"><svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="10" fill="white" opacity="0.2"/><path d="M9 14l3 3 7-7" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                    <h3>التوجيه الذكي والأتمتة</h3>
+                    <p>توجيه مدعوم بالذكاء الاصطناعي يحدد تلقائياً الموافقين المناسبين، ويصعّد الطلبات المتأخرة، ويعالج الاستثناءات — حتى لا يُفقد شيء.</p>
+                    <ul class="feature-list">
+                        <li><strong>توجيه تلقائي بالهيكل التنظيمي</strong><span>توجيه تلقائي لمدير المقدم المباشر أو القفز لمستوى أعلى أو رئيس القسم</span></li>
+                        <li><strong>المواعيد النهائية والتصعيد</strong><span>تعيين SLA لكل خطوة — تذكير تلقائي، تصعيد، أو موافقة تلقائية عند انتهاء المهلة</span></li>
+                        <li><strong>التفويض والوكالة</strong><span>يمكن للموافقين التفويض لآخرين أثناء الإجازة بصلاحيات وكالة محددة بوقت</span></li>
+                        <li><strong>الموافقة الجماعية</strong><span>مراجعة والموافقة على طلبات متعددة دفعة واحدة بإجراءات مجمعة</span></li>
+                        <li><strong>الاسترجاع والإلغاء</strong><span>يمكن لمقدمي الطلبات استرجاعها ويمكن للمدراء إلغاء الموافقات مع سجل تدقيق كامل</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="routing-visual">
+                        <div class="routing-demo">
+                            <div class="routing-header">محرك التوجيه التلقائي</div>
+                            <div class="routing-rules">
+                                <div class="rule-item"><div class="rule-condition">إذا المبلغ &le; $١,٠٠٠</div><div class="rule-arrow">←</div><div class="rule-action">المدير المباشر</div></div>
+                                <div class="rule-item"><div class="rule-condition">إذا المبلغ $١K - $١٠K</div><div class="rule-arrow">←</div><div class="rule-action">المدير + المدير العام</div></div>
+                                <div class="rule-item highlight"><div class="rule-condition">إذا المبلغ &gt; $١٠,٠٠٠</div><div class="rule-arrow">←</div><div class="rule-action">المدير + النائب + CFO</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Features -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header"><h2>والمزيد أيضاً</h2><p>كل ميزة تحتاجها لإدارة سير العمل المؤسسي</p></div>
+            <div class="mini-features-grid">
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M8 12h8M12 8v8" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round"/></svg><h5>حقول مخصصة</h5><p>توسيع النماذج بأنواع حقول مخصصة وجداول بحث ومنطق أعمال</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><h5>API و Webhooks</h5><p>تشغيل الموافقات من أنظمة خارجية وإرسال النتائج عبر REST API</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/></svg><h5>متعدد اللغات</h5><p>دعم كامل للعالمية — النماذج والتدفقات تدعم أكثر من ٢٠ لغة</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M12 6v6l4 2" fill="none" stroke="#ea4335" stroke-width="1.8" stroke-linecap="round"/></svg><h5>إدارة SLA</h5><p>تحديد أهداف وقت الاستجابة لكل عملية مع قواعد تصعيد تلقائي</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V7l-8-5z" fill="none" stroke="#1a73e8" stroke-width="1.5"/><path d="M9 12l2 2 4-4" fill="none" stroke="#1a73e8" stroke-width="1.5" stroke-linecap="round"/></svg><h5>التوقيعات الإلكترونية</h5><p>توقيعات إلكترونية ملزمة قانونياً مع التحقق من الشهادات</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M5 20c0-4 3-7 7-7s7 3 7 7" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M16 4l2 2-2 2" stroke="#fbbc04" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg><h5>قواعد التفويض</h5><p>تعيين تفويض تلقائي عندما يكون الموافقون في إجازة أو غير متاحين</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><h5>تصدير البيانات</h5><p>تصدير جميع بيانات الموافقات إلى Excel أو CSV أو الاتصال بمستودع البيانات</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M3 10h18" stroke="#ea4335" stroke-width="1.2"/><path d="M8 18v2M16 18v2" stroke="#ea4335" stroke-width="1.5" stroke-linecap="round"/></svg><h5>تطبيق الجوال</h5><p>موافقة الطلبات أثناء التنقل مع تطبيقات iOS و Android الأصلية</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header"><h2>خطط تنمو معك</h2><p>ابدأ مجاناً، وترقّ مع توسع سير العمل</p></div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header"><h4>المبتدئ</h4><div class="pricing-price"><span class="price-amount">$٤</span><span class="price-period">/مستخدم/شهر</span></div></div>
+                    <ul class="pricing-features"><li>حتى ٥٠ مستخدم</li><li>١٠ سير عمل مخصصة</li><li>بناء نماذج أساسي</li><li>إشعارات بريدية</li><li>دعم بالبريد</li></ul>
+                    <a href="#" class="btn-secondary pricing-btn">ابدأ التجربة المجانية</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">الأكثر شعبية</div>
+                    <div class="pricing-header"><h4>الأعمال</h4><div class="pricing-price"><span class="price-amount">$٩</span><span class="price-period">/مستخدم/شهر</span></div></div>
+                    <ul class="pricing-features"><li>مستخدمون غير محدودين</li><li>سير عمل غير محدودة</li><li>نماذج وتوجيه متقدم</li><li>لوحة تحليلات</li><li>وصول API</li><li>دعم أولوي</li></ul>
+                    <a href="#" class="btn-primary pricing-btn btn-amber">ابدأ التجربة المجانية</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header"><h4>المؤسسات</h4><div class="pricing-price"><span class="price-amount">مخصص</span><span class="price-period"></span></div></div>
+                    <ul class="pricing-features"><li>كل ميزات الأعمال</li><li>نشر خاص</li><li>تكاملات مخصصة</li><li>توقيعات إلكترونية و DLP</li><li>مدير نجاح مخصص</li><li>تدريب في الموقع</li></ul>
+                    <a href="contact.html" class="btn-secondary pricing-btn">تواصل مع المبيعات</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>مستعد لتبسيط موافقاتك؟</h2>
+                <p>انضم لمئات المؤسسات التي أزالت عقبات الموافقة مع الموافقات الذكية.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">ابدأ التجربة المجانية</a>
+                    <a href="#" class="btn-secondary btn-large">اطلب عرضاً توضيحياً</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36"><p class="footer-tagline">نبني مستقبل تقنية المؤسسات.</p></div>
+                <div class="footer-links"><h5>المنتجات</h5><a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a><a href="workup.html">Workup</a><a href="oortai.html">OORT.AI</a><a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a><a href="classroom.html">Cloud Classroom</a></div>
+                <div class="footer-links"><h5>الحلول</h5><a href="messenger.html">المراسلة الفورية</a><a href="clouddisk.html">القرص السحابي</a><a href="email.html">البريد الإلكتروني</a><a href="#">الموافقات الذكية</a><a href="dispatch.html">القيادة والإرسال</a><a href="fieldmanager.html">مدير الميدان</a></div>
+                <div class="footer-links"><h5>الشركة</h5><a href="about.html">عن الشركة</a><a href="#">الوظائف</a><a href="#">المدونة</a><a href="contact.html">تواصل معنا</a><a href="#">سياسة الخصوصية</a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; ٢٠٢٦ OortCloud Technology. جميع الحقوق محفوظة.</p><div class="footer-social"><a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a><a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a><a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a></div></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

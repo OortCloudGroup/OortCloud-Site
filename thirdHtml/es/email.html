@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" hreflang="en" href="https://oortcloudsmart.com/en/email">
+    <link rel="alternate" hreflang="es" href="https://oortcloudsmart.com/es/email">
+    <link rel="alternate" hreflang="x-default" href="https://oortcloudsmart.com/en/email">
+    <title>Correo electrónico OortCloud - Correo empresarial seguro con despliegue privado</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="email.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">Productos</a>
+                <a href="index.html#platform">Plataforma</a>
+                <a href="index.html#enterprise">Empresa</a>
+                <a href="index.html#about">Acerca de</a>
+            </div>
+            <a href="#get-started" class="nav-cta">Comenzar gratis</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="Switch Language">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">ES</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item active" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    Iniciar sesión
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">Usuario</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Panel de control
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            Cerrar sesión
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Product Hero -->
+    <header class="email-hero">
+        <div class="container">
+            <div class="email-hero-grid">
+                <div class="email-hero-content">
+                    <div class="product-breadcrumb">
+                        <a href="index.html">Productos</a>
+                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <span>Correo electrónico</span>
+                    </div>
+                    <h1>Seguro, inteligente y <span class="gradient-text">completamente tuyo</span></h1>
+                    <p class="email-hero-desc">Correo electrónico empresarial que mantiene tu negocio seguro y productivo. Funciones impulsadas por IA, cifrado de extremo a extremo y soporte completo de despliegue privado — tus datos permanecen bajo tu control.</p>
+                    <div class="hero-actions">
+                        <a href="#get-started" class="btn-primary btn-large">Iniciar prueba gratuita</a>
+                        <a href="#features" class="btn-secondary btn-large">Explorar funciones</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 1l2 3h3.5l-2.5 3 1 3.5L8 8.5 4 10.5l1-3.5L2.5 4H6l2-3z" fill="#fbbc04"/></svg>
+                            Más de 500 empresas confían en nosotros
+                        </span>
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Listo para despliegue privado
+                        </span>
+                    </div>
+                </div>
+                <div class="email-hero-visual">
+                    <div class="email-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="mockup-search">
+                                <svg width="14" height="14" viewBox="0 0 16 16"><circle cx="7" cy="7" r="5" fill="none" stroke="#9aa0a6" stroke-width="1.5"/><path d="M11 11l3 3" stroke="#9aa0a6" stroke-width="1.5" stroke-linecap="round"/></svg>
+                                <span>Buscar correo</span>
+                            </div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mockup-sidebar">
+                                <div class="sidebar-btn compose">Redactar</div>
+                                <div class="sidebar-item active">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><rect x="2" y="4" width="12" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M2 5.5l6 4 6-4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+                                    Bandeja de entrada <span class="badge">12</span>
+                                </div>
+                                <div class="sidebar-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 2l1.5 3H13l-2.5 2.5 1 3.5L8 9l-3.5 2 1-3.5L3 5h3.5L8 2z" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+                                    Destacados
+                                </div>
+                                <div class="sidebar-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                    Enviados
+                                </div>
+                                <div class="sidebar-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="3" width="10" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M6 8h4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                    Borradores
+                                </div>
+                            </div>
+                            <div class="mockup-inbox">
+                                <div class="inbox-item unread">
+                                    <div class="inbox-avatar" style="background: #4285f4;">T</div>
+                                    <div class="inbox-content">
+                                        <span class="inbox-sender">Equipo Técnico</span>
+                                        <span class="inbox-subject">Despliegue completado exitosamente</span>
+                                        <span class="inbox-preview">— Todos los servicios están ahora funcionando en la nueva infraestructura...</span>
+                                    </div>
+                                    <span class="inbox-time">10:24 AM</span>
+                                </div>
+                                <div class="inbox-item unread">
+                                    <div class="inbox-avatar" style="background: #ea4335;">S</div>
+                                    <div class="inbox-content">
+                                        <span class="inbox-sender">Alerta de seguridad</span>
+                                        <span class="inbox-subject">Informe mensual de seguridad listo</span>
+                                        <span class="inbox-preview">— Las métricas de seguridad de tu organización para abril...</span>
+                                    </div>
+                                    <span class="inbox-time">9:15 AM</span>
+                                </div>
+                                <div class="inbox-item">
+                                    <div class="inbox-avatar" style="background: #34a853;">P</div>
+                                    <div class="inbox-content">
+                                        <span class="inbox-sender">Actualizaciones de producto</span>
+                                        <span class="inbox-subject">Nuevas funciones de IA disponibles</span>
+                                        <span class="inbox-preview">— Redacción inteligente y categorización automática...</span>
+                                    </div>
+                                    <span class="inbox-time">Ayer</span>
+                                </div>
+                                <div class="inbox-item">
+                                    <div class="inbox-avatar" style="background: #9b72cb;">M</div>
+                                    <div class="inbox-content">
+                                        <span class="inbox-sender">Marketing</span>
+                                        <span class="inbox-subject">Resultados de campaña Q2</span>
+                                        <span class="inbox-preview">— Aquí está el resumen de nuestro marketing Q2...</span>
+                                    </div>
+                                    <span class="inbox-time">Ayer</span>
+                                </div>
+                                <div class="inbox-item">
+                                    <div class="inbox-avatar" style="background: #fbbc04;">H</div>
+                                    <div class="inbox-content">
+                                        <span class="inbox-sender">Recursos Humanos</span>
+                                        <span class="inbox-subject">Políticas de empresa actualizadas</span>
+                                        <span class="inbox-preview">— Por favor revisa la política actualizada de trabajo remoto...</span>
+                                    </div>
+                                    <span class="inbox-time">Mon</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Key Benefits Bar -->
+    <section class="benefits-bar">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V7l-8-5z" fill="none" stroke="#4285f4" stroke-width="1.8"/><path d="M9 12l2 2 4-4" fill="none" stroke="#4285f4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <strong>Seguridad empresarial</strong>
+                        <span>Cifrado de extremo a extremo y arquitectura de confianza cero</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="#ea4335" stroke-width="1.8"/><path d="M7 15h4M7 12h8" stroke="#ea4335" stroke-width="1.5" stroke-linecap="round"/><circle cx="17" cy="8" r="2" fill="#ea4335" opacity="0.3"/></svg>
+                    <div>
+                        <strong>Impulsado por IA</strong>
+                        <span>Redacción inteligente, autocategorización y búsqueda inteligente</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="#34a853" stroke-width="1.8"/><path d="M4 12h16M12 4v16" stroke="#34a853" stroke-width="1.2" opacity="0.5"/><circle cx="8" cy="8" r="1.5" fill="#34a853"/><circle cx="16" cy="16" r="1.5" fill="#34a853"/></svg>
+                    <div>
+                        <strong>Despliegue privado</strong>
+                        <span>Despliegue completo on-premise con tu infraestructura</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" fill="none" stroke="#9b72cb" stroke-width="1.8"/><path d="M12 6v6l4 2" fill="none" stroke="#9b72cb" stroke-width="2" stroke-linecap="round"/></svg>
+                    <div>
+                        <strong>99,9% Disponibilidad</strong>
+                        <span>SLA empresarial con disponibilidad garantizada</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Todo lo que tu correo empresarial necesita</h2>
+                <p>Funciones potentes que ayudan a tu equipo a comunicarse de forma más efectiva y segura</p>
+            </div>
+
+            <!-- Feature 1: AI Smart Features -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #4285f4, #9b72cb);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="10" r="5" fill="white" opacity="0.9"/><path d="M7 24c0-4 3-7 7-7s7 3 7 7" fill="none" stroke="white" stroke-width="2" opacity="0.7"/><path d="M20 6l3-2M21 10h3" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/></svg>
+                    </div>
+                    <h3>Inteligencia impulsada por IA</h3>
+                    <p>Deja que la IA se encargue del trabajo repetitivo para que puedas centrarte en lo importante. Nuestro sistema inteligente de correo aprende tu estilo de escritura y patrones de comunicación para ayudarte a trabajar más rápido.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Redacción inteligente</strong>
+                            <span>La IA sugiere oraciones completas mientras escribes, adaptándose a tu tono y contexto</span>
+                        </li>
+                        <li>
+                            <strong>Respuesta inteligente</strong>
+                            <span>Obtén sugerencias de respuesta inteligentes basadas en el contenido del correo y tus patrones de respuesta</span>
+                        </li>
+                        <li>
+                            <strong>Autocategorización</strong>
+                            <span>Los correos se clasifican automáticamente en Principal, Social, Actualizaciones y Promociones</span>
+                        </li>
+                        <li>
+                            <strong>Bandeja prioritaria</strong>
+                            <span>La IA identifica correos importantes y los muestra primero, reduciendo el ruido</span>
+                        </li>
+                        <li>
+                            <strong>Búsqueda inteligente</strong>
+                            <span>Búsqueda en lenguaje natural con sugerencias y filtros impulsados por IA</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="ai-compose-demo">
+                        <div class="compose-window">
+                            <div class="compose-header">
+                                <span>Nuevo mensaje</span>
+                                <div class="compose-actions">
+                                    <span>—</span><span>□</span><span>&times;</span>
+                                </div>
+                            </div>
+                            <div class="compose-field"><span class="field-label">Para:</span> equipo@empresa.com</div>
+                            <div class="compose-field"><span class="field-label">Asunto:</span> Actualización del proyecto - Revisión Q2</div>
+                            <div class="compose-body">
+                                <p>Hola equipo,</p>
+                                <p>Quería compartir una rápida actualización sobre nuestro progreso este trimestre. Hemos <span class="ai-suggestion">completado exitosamente todos los hitos principales antes de lo previsto, y los comentarios del cliente han sido abrumadoramente positivos.</span></p>
+                                <div class="ai-label">
+                                    <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#4285f4" opacity="0.2"/><path d="M4 6l1.5 1.5L8 5" fill="none" stroke="#4285f4" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                    Redacción inteligente IA
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Security -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 3L5 8v7c0 6.3 4 11.2 9 12.7 5-1.5 9-6.4 9-12.7V8L14 3z" fill="white" opacity="0.9"/><path d="M10 14l3 3 5-5" fill="none" stroke="#ea4335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Seguridad avanzada y cumplimiento</h3>
+                    <p>Protege tu organización de amenazas con seguridad multicapa que bloquea el 99,9% del spam, phishing y malware antes de que lleguen a tu bandeja de entrada.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Cifrado de extremo a extremo</strong>
+                            <span>Cifrado TLS para datos en tránsito, cifrado AES-256 para datos en reposo</span>
+                        </li>
+                        <li>
+                            <strong>Protección anti-phishing</strong>
+                            <span>Detección impulsada por IA de intentos sofisticados de phishing e ingeniería social</span>
+                        </li>
+                        <li>
+                            <strong>Modo confidencial</strong>
+                            <span>Establece fechas de expiración y revoca acceso a correos enviados, evita reenvío y descarga</span>
+                        </li>
+                        <li>
+                            <strong>DLP (Prevención de pérdida de datos)</strong>
+                            <span>Detecta y previene automáticamente que datos sensibles se compartan externamente</span>
+                        </li>
+                        <li>
+                            <strong>Cumplimiento y archivado</strong>
+                            <span>Cumple requisitos regulatorios con eDiscovery, políticas de retención y registros de auditoría</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="security-visual">
+                        <div class="shield-container">
+                            <div class="shield-ring ring-1"></div>
+                            <div class="shield-ring ring-2"></div>
+                            <div class="shield-ring ring-3"></div>
+                            <div class="shield-center">
+                                <svg width="48" height="48" viewBox="0 0 48 48">
+                                    <path d="M24 6L10 13v10c0 11 6 20 14 23 8-3 14-12 14-23V13L24 6z" fill="#ea4335" opacity="0.1" stroke="#ea4335" stroke-width="2"/>
+                                    <path d="M18 24l4 4 8-8" fill="none" stroke="#ea4335" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="security-stats">
+                            <div class="sec-stat">
+                                <span class="sec-stat-num">99.9%</span>
+                                <span class="sec-stat-label">Spam bloqueado</span>
+                            </div>
+                            <div class="sec-stat">
+                                <span class="sec-stat-num">AES-256</span>
+                                <span class="sec-stat-label">Cifrado</span>
+                            </div>
+                            <div class="sec-stat">
+                                <span class="sec-stat-num">Zero-Trust</span>
+                                <span class="sec-stat-label">Arquitectura</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Private Deployment -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #4285f4);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="6" y="12" width="16" height="12" rx="2" fill="white" opacity="0.9"/><rect x="8" y="4" width="12" height="8" rx="2" fill="white" opacity="0.6"/><path d="M14 12v-4" stroke="white" stroke-width="1.5" opacity="0.5"/><circle cx="14" cy="18" r="2" fill="#34a853" opacity="0.5"/></svg>
+                    </div>
+                    <h3>Despliegue privado y soberanía de datos</h3>
+                    <p>A diferencia del correo en nube pública, OortCloud Email soporta despliegue privado completo. Mantén todos los datos dentro de tu propia infraestructura mientras disfrutas de funciones de nivel empresarial.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Instalación on-premise</strong>
+                            <span>Despliega en tus propios servidores, nube privada o entorno híbrido</span>
+                        </li>
+                        <li>
+                            <strong>Soberanía de datos</strong>
+                            <span>Control total sobre la ubicación de datos — cumple con leyes locales de residencia de datos</span>
+                        </li>
+                        <li>
+                            <strong>Dominio personalizado</strong>
+                            <span>Usa tu propio nombre de dominio con control completo de DNS y enrutamiento</span>
+                        </li>
+                        <li>
+                            <strong>Soporte air-gap</strong>
+                            <span>Funciona completamente desconectado de internet para entornos de máxima seguridad</span>
+                        </li>
+                        <li>
+                            <strong>Arquitectura flexible</strong>
+                            <span>Nativo de Kubernetes, escala horizontalmente con el crecimiento de tu organización</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="deploy-visual">
+                        <div class="deploy-diagram">
+                            <div class="deploy-node node-cloud">
+                                <div class="node-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M6 19a4 4 0 01-.5-7.97A7 7 0 0118.5 11 4.5 4.5 0 0119 19H6z" fill="none" stroke="#4285f4" stroke-width="1.5"/></svg>
+                                </div>
+                                <span>Nube</span>
+                            </div>
+                            <div class="deploy-node node-hybrid">
+                                <div class="node-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="8" rx="2" fill="none" stroke="#9b72cb" stroke-width="1.5"/><circle cx="8" cy="12" r="1" fill="#9b72cb"/><circle cx="12" cy="12" r="1" fill="#9b72cb"/><path d="M4 4h16M4 20h16" stroke="#9b72cb" stroke-width="1" opacity="0.4"/></svg>
+                                </div>
+                                <span>Híbrido</span>
+                            </div>
+                            <div class="deploy-node node-private active">
+                                <div class="node-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M8 10V7a4 4 0 018 0v3" fill="none" stroke="#34a853" stroke-width="1.5"/><circle cx="12" cy="15" r="1.5" fill="#34a853"/></svg>
+                                </div>
+                                <span>Privado</span>
+                            </div>
+                        </div>
+                        <div class="deploy-features">
+                            <div class="deploy-tag">Nativo Kubernetes</div>
+                            <div class="deploy-tag">Listo Air-Gap</div>
+                            <div class="deploy-tag">Autoescalado</div>
+                            <div class="deploy-tag">Clúster HA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: Collaboration -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #fbbc04, #ea4335);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="10" cy="10" r="4" fill="white" opacity="0.9"/><circle cx="18" cy="10" r="4" fill="white" opacity="0.6"/><path d="M4 22c0-4 3-6 6-6s6 2 6 6" fill="white" opacity="0.7"/><path d="M14 22c0-4 3-6 6-6s6 2 6 6" fill="white" opacity="0.5"/></svg>
+                    </div>
+                    <h3>Colaboración fluida</h3>
+                    <p>El correo es solo el comienzo. Las herramientas integradas ayudan a tu equipo a colaborar sin cambiar de contexto, manteniendo conversaciones y trabajo en un solo lugar.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Calendario integrado</strong>
+                            <span>Programa reuniones directamente desde el correo, con sugerencias inteligentes de horarios y disponibilidad</span>
+                        </li>
+                        <li>
+                            <strong>Buzones compartidos</strong>
+                            <span>Crea bandejas de equipo para departamentos, colas de soporte o grupos de proyecto</span>
+                        </li>
+                        <li>
+                            <strong>Archivos grandes vía Disco en la nube</strong>
+                            <span>Comparte archivos de hasta 10GB a través del almacenamiento integrado de Disco en la nube</span>
+                        </li>
+                        <li>
+                            <strong>Delegación de correo</strong>
+                            <span>Delega acceso al correo a asistentes con controles granulares de permisos</span>
+                        </li>
+                        <li>
+                            <strong>Integración Workup</strong>
+                            <span>Conéctate con Messenger, flujos de Aprobación y otros productos OortCloud</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="collab-visual">
+                        <div class="collab-cards">
+                            <div class="collab-card card-calendar">
+                                <div class="collab-card-header">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><rect x="2" y="3" width="12" height="11" rx="2" fill="none" stroke="#4285f4" stroke-width="1.2"/><path d="M2 6h12M5 1v3M11 1v3" stroke="#4285f4" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                    <span>Calendario</span>
+                                </div>
+                                <div class="calendar-event">
+                                    <div class="event-dot" style="background: #4285f4;"></div>
+                                    <div>
+                                        <strong>Reunión diaria</strong>
+                                        <span>9:00 AM - 9:30 AM</span>
+                                    </div>
+                                </div>
+                                <div class="calendar-event">
+                                    <div class="event-dot" style="background: #34a853;"></div>
+                                    <div>
+                                        <strong>Revisión de producto</strong>
+                                        <span>2:00 PM - 3:00 PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collab-card card-contacts">
+                                <div class="collab-card-header">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="6" r="3" fill="none" stroke="#34a853" stroke-width="1.2"/><path d="M3 14c0-3 2-5 5-5s5 2 5 5" fill="none" stroke="#34a853" stroke-width="1.2"/></svg>
+                                    <span>Equipo</span>
+                                </div>
+                                <div class="contact-avatars">
+                                    <div class="mini-avatar" style="background: #4285f4;">A</div>
+                                    <div class="mini-avatar" style="background: #ea4335;">B</div>
+                                    <div class="mini-avatar" style="background: #34a853;">C</div>
+                                    <div class="mini-avatar" style="background: #fbbc04;">D</div>
+                                    <div class="mini-avatar more">+5</div>
+                                </div>
+                            </div>
+                            <div class="collab-card card-files">
+                                <div class="collab-card-header">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 4c0-1 .5-2 2-2h3l1.5 2H12c1.5 0 2 1 2 2v6c0 1-.5 2-2 2H4c-1.5 0-2-1-2-2V4z" fill="none" stroke="#fbbc04" stroke-width="1.2"/></svg>
+                                    <span>Archivos compartidos</span>
+                                </div>
+                                <div class="file-list">
+                                    <div class="file-item">Q2_Report.pdf</div>
+                                    <div class="file-item">Design_v3.fig</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5: Admin & Management -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #1a73e8, #174ea6);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="4" fill="white" opacity="0.2"/><path d="M10 10h8M10 14h8M10 18h5" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.9"/><circle cx="20" cy="20" r="5" fill="white" opacity="0.8"/><path d="M18.5 20l1 1 2-2" fill="none" stroke="#1a73e8" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Administración potente</h3>
+                    <p>Da a los equipos de TI control completo con una consola de administración intuitiva. Gestiona usuarios, aplica políticas y monitoriza el estado del sistema — todo desde un solo panel.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Consola de administración</strong>
+                            <span>Panel centralizado para gestión de usuarios, políticas y monitoreo del sistema</span>
+                        </li>
+                        <li>
+                            <strong>Gestión de grupos y roles</strong>
+                            <span>Crea unidades organizativas con acceso basado en roles y herencia de permisos</span>
+                        </li>
+                        <li>
+                            <strong>Herramientas de migración</strong>
+                            <span>Migra sin problemas desde Gmail, Exchange o cualquier servidor IMAP sin tiempo de inactividad</span>
+                        </li>
+                        <li>
+                            <strong>Registros de auditoría y análisis</strong>
+                            <span>Visibilidad completa de la actividad del correo, eventos de inicio de sesión e incidentes de seguridad</span>
+                        </li>
+                        <li>
+                            <strong>API e integración</strong>
+                            <span>APIs RESTful, soporte SMTP/IMAP y webhooks para integraciones personalizadas</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="admin-visual">
+                        <div class="admin-panel">
+                            <div class="admin-panel-header">
+                                <span class="admin-title">Consola de administración</span>
+                                <div class="admin-status">
+                                    <span class="status-dot"></span> Todos los sistemas operativos
+                                </div>
+                            </div>
+                            <div class="admin-stats-row">
+                                <div class="admin-stat">
+                                    <span class="admin-stat-value">2,847</span>
+                                    <span class="admin-stat-label">Usuarios activos</span>
+                                </div>
+                                <div class="admin-stat">
+                                    <span class="admin-stat-value">12.4TB</span>
+                                    <span class="admin-stat-label">Almacenamiento usado</span>
+                                </div>
+                                <div class="admin-stat">
+                                    <span class="admin-stat-value">99.99%</span>
+                                    <span class="admin-stat-label">Disponibilidad</span>
+                                </div>
+                            </div>
+                            <div class="admin-chart">
+                                <div class="chart-bar" style="height: 40%;"></div>
+                                <div class="chart-bar" style="height: 65%;"></div>
+                                <div class="chart-bar" style="height: 55%;"></div>
+                                <div class="chart-bar" style="height: 80%;"></div>
+                                <div class="chart-bar" style="height: 70%;"></div>
+                                <div class="chart-bar" style="height: 90%;"></div>
+                                <div class="chart-bar" style="height: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Features Grid -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Y mucho más</h2>
+                <p>Todas las funciones que necesitas para la comunicación empresarial profesional</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="none" stroke="#4285f4" stroke-width="1.5" rx="2"/><path d="M4 9h16M9 9v11" stroke="#4285f4" stroke-width="1.5"/></svg>
+                    <h5>Firmas personalizadas</h5>
+                    <p>Firmas HTML enriquecidas con imágenes, enlaces y marca dinámica de empresa</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M12 7v5l3 3" fill="none" stroke="#ea4335" stroke-width="1.8" stroke-linecap="round"/></svg>
+                    <h5>Envío programado</h5>
+                    <p>Programa correos para enviar en el momento perfecto en cualquier zona horaria</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M3 12h4l3-9 4 18 3-9h4" fill="none" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h5>Acuse de lectura</h5>
+                    <p>Rastrea cuándo se abren los correos y se hacen clic en los enlaces con análisis detallados</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M9 7h6M9 11h6M9 15h4" stroke="#9b72cb" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <h5>Plantillas</h5>
+                    <p>Crea plantillas de correo reutilizables para respuestas comunes y comunicaciones</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 8l8 5 8-5" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M4 8v8a2 2 0 002 2h12a2 2 0 002-2V8" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M12 3v5" stroke="#fbbc04" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>Reglas y filtros de correo</h5>
+                    <p>Automatiza la organización del correo con reglas potentes, etiquetas y reenvío automático</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="2" y="6" width="8" height="12" rx="1.5" fill="none" stroke="#1a73e8" stroke-width="1.5"/><rect x="14" y="4" width="8" height="16" rx="1.5" fill="none" stroke="#1a73e8" stroke-width="1.5"/><circle cx="18" cy="17" r="1" fill="#1a73e8"/></svg>
+                    <h5>Sincronización multidispositivo</h5>
+                    <p>Accede a tu correo desde cualquier dispositivo con sincronización en tiempo real entre escritorio y móvil</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20" fill="none" stroke="#ea4335" stroke-width="1.2"/></svg>
+                    <h5>Multi-idioma</h5>
+                    <p>Internacionalización completa con soporte para más de 40 idiomas y diseños RTL</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="#34a853" stroke-width="1.5" opacity="0.6"/></svg>
+                    <h5>Almacenamiento ilimitado</h5>
+                    <p>Sin límites de buzón — escala el almacenamiento a medida que tu organización crece</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Por qué elegir OortCloud Email?</h2>
+                <p>Mira cómo nos comparamos con otras soluciones de correo empresarial</p>
+            </div>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Función</th>
+                            <th class="highlight-col">OortCloud Email</th>
+                            <th>Gmail (Workspace)</th>
+                            <th>Outlook (365)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Despliegue privado</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="partial">Parcial</span></td>
+                        </tr>
+                        <tr>
+                            <td>Soporte air-gap</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Redacción inteligente IA</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="check">&#10003;</span></td>
+                            <td><span class="check">&#10003;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Cifrado de extremo a extremo</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="partial">Parcial</span></td>
+                            <td><span class="check">&#10003;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Control de soberanía de datos</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="partial">Parcial</span></td>
+                        </tr>
+                        <tr>
+                            <td>Almacenamiento ilimitado</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Integración Super App</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="partial">Parcial</span></td>
+                            <td><span class="partial">Parcial</span></td>
+                        </tr>
+                        <tr>
+                            <td>Arquitectura de despliegue personalizada</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>Planes que escalan contigo</h2>
+                <p>Comienza gratis, actualiza cuando estés listo</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Inicial</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">$4</span>
+                            <span class="price-period">/usuario/mes</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Correo empresarial personalizado</li>
+                        <li>30 GB de almacenamiento por usuario</li>
+                        <li>Funciones básicas de IA</li>
+                        <li>Seguridad estándar</li>
+                        <li>Soporte por correo</li>
+                    </ul>
+                    <a href="#" class="btn-secondary pricing-btn">Iniciar prueba gratuita</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Más popular</div>
+                    <div class="pricing-header">
+                        <h4>Negocio</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">$8</span>
+                            <span class="price-period">/usuario/mes</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Todo lo de Inicial</li>
+                        <li>Almacenamiento ilimitado</li>
+                        <li>Suite completa de IA</li>
+                        <li>Seguridad avanzada y DLP</li>
+                        <li>Consola de administración</li>
+                        <li>Soporte prioritario</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn">Iniciar prueba gratuita</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Empresa</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">Personalizado</span>
+                            <span class="price-period"></span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Todo lo de Negocio</li>
+                        <li>Despliegue privado</li>
+                        <li>Soporte air-gap</li>
+                        <li>SLA personalizado (99,99%)</li>
+                        <li>Gestor de cuenta dedicado</li>
+                        <li>Soporte en sitio</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary pricing-btn">Contactar ventas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para mejorar tu correo empresarial?</h2>
+                <p>Únete a más de 500 organizaciones que confían en OortCloud Email para una comunicación segura e inteligente.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">Iniciar prueba gratuita</a>
+                    <a href="#" class="btn-secondary btn-large">Hablar con un experto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36">
+                    <p class="footer-tagline">Construyendo el futuro de la tecnología empresarial.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Productos</h5>
+                    <a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a>
+                    <a href="workup.html">Workup</a>
+                    <a href="oortai.html">OORT.AI</a>
+                    <a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a>
+                    <a href="classroom.html">Aula en la nube</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Soluciones</h5>
+                    <a href="messenger.html">Mensajería instantánea</a>
+                    <a href="clouddisk.html">Disco en la nube</a>
+                    <a href="#">Correo electrónico</a>
+                    <a href="approval.html">Aprobación inteligente</a>
+                    <a href="dispatch.html">Comando y Despacho</a>
+                    <a href="fieldmanager.html">Gestor de campo</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Empresa</h5>
+                    <a href="about.html">Acerca de nosotros</a>
+                    <a href="#">Carreras</a>
+                    <a href="#">Blog</a>
+                    <a href="contact.html">Contacto</a>
+                    <a href="#">Política de privacidad</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OortCloud Technology. Todos los derechos reservados.</p>
+                <div class="footer-social">
+                    <a href="https://x.com/zhngxulin311636" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg>
+                    </a>
+                    <a href="https://github.com/OortCloudGroup" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" hreflang="en" href="https://oortcloudsmart.com/en/oortai">
+    <link rel="alternate" hreflang="es" href="https://oortcloudsmart.com/es/oortai">
+    <link rel="alternate" hreflang="x-default" href="https://oortcloudsmart.com/en/oortai">
+    <title>OORT.AI - Plataforma de agentes de IA empresarial | OortCloud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="oortai.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">Productos</a>
+                <a href="index.html#platform">Plataforma</a>
+                <a href="index.html#enterprise">Empresa</a>
+                <a href="index.html#about">Acerca de</a>
+            </div>
+            <a href="#get-started" class="nav-cta">Comenzar ahora</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="Switch Language">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">ES</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item active" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    Iniciar sesión
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">Usuario</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Panel de control
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            Cerrar sesión
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="ai-hero">
+        <div class="ai-hero-bg"></div>
+        <div class="container">
+            <div class="ai-hero-grid">
+                <div class="ai-hero-content">
+                    <div class="product-breadcrumb">
+                        <a href="index.html">Productos</a>
+                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <span>OORT.AI</span>
+                    </div>
+                    <h1>Agentes de IA que <span class="gradient-text-ai">entregan resultados</span>, no solo herramientas</h1>
+                    <p class="ai-hero-desc">Plataforma empresarial de agentes automatizados con IA que cubre Ofimática con IA, Programación con IA, Operaciones con IA, Atención al cliente inteligente y Gestión de agentes. Adaptable a sistemas de permisos empresariales complejos — implemente IA que completa el trabajo, no software que lo requiere.</p>
+                    <div class="hero-actions">
+                        <a href="#get-started" class="btn-primary btn-large btn-ai">Iniciar prueba gratuita</a>
+                        <a href="#agents" class="btn-secondary btn-large">Explorar agentes</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span class="trust-badge"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.5 3.5L7 9l-3 1.5.5-3.5L2 4.5 5.5 4z" fill="#9b72cb"/></svg> 9 agentes especializados</span>
+                        <span class="trust-badge"><svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M5 7l1.5 1.5L9 5.5" fill="none" stroke="#9b72cb" stroke-width="1.3" stroke-linecap="round"/></svg> Permisos empresariales listos</span>
+                        <span class="trust-badge"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="4" width="10" height="7" rx="1.5" fill="none" stroke="#9b72cb" stroke-width="1.3"/><path d="M2 6h10" stroke="#9b72cb" stroke-width="1"/></svg> Implementación privada</span>
+                    </div>
+                </div>
+                <div class="ai-hero-visual">
+                    <div class="agent-hub-mockup">
+                        <div class="hub-header">
+                            <span class="hub-title">OORT.AI Agent Hub</span>
+                            <div class="hub-status"><span class="status-dot-active"></span> 9 agentes activos</div>
+                        </div>
+                        <div class="hub-body">
+                            <div class="agent-orbit">
+                                <div class="orbit-center">
+                                    <svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12" fill="url(#aiCoreGrad)" opacity="0.9"/><path d="M12 16l3 3 5-6" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="aiCoreGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#9b72cb"/><stop offset="100%" stop-color="#4285f4"/></linearGradient></defs></svg>
+                                </div>
+                                <div class="orbit-agent agent-1" title="Office">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="2" width="10" height="12" rx="1.5" fill="white" opacity="0.9"/><path d="M5.5 5h5M5.5 7.5h5M5.5 10h3" stroke="#9b72cb" stroke-width="0.8" stroke-linecap="round"/></svg>
+                                </div>
+                                <div class="orbit-agent agent-2" title="Programming">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M5 5L2.5 8 5 11M11 5l2.5 3L11 11" fill="none" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round"/><path d="M9 3l-2 10" stroke="#4285f4" stroke-width="1" stroke-linecap="round"/></svg>
+                                </div>
+                                <div class="orbit-agent agent-3" title="Customer Service">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 6c0-3 2.5-4 5-4s5 1 5 4v2c0 2-1.5 3-3 3h-1l-2 2v-2H5c-1.5 0-2-1-2-3V6z" fill="none" stroke="#34a853" stroke-width="1.2"/></svg>
+                                </div>
+                                <div class="orbit-agent agent-4" title="Operations">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5" fill="none" stroke="#ea4335" stroke-width="1.2"/><path d="M8 5v3l2 1.5" fill="none" stroke="#ea4335" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                </div>
+                                <div class="orbit-agent agent-5" title="Marketing">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 12l3-4 3 2 4-7" fill="none" stroke="#fbbc04" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                            </div>
+                            <div class="hub-task-feed">
+                                <div class="task-item completed">
+                                    <span class="task-agent">Ofimática</span>
+                                    <span class="task-desc">Informe Q3 redactado</span>
+                                    <span class="task-status">Listo</span>
+                                </div>
+                                <div class="task-item active">
+                                    <span class="task-agent">Código</span>
+                                    <span class="task-desc">Revisión de API en curso</span>
+                                    <span class="task-status">Ejecutando</span>
+                                </div>
+                                <div class="task-item completed">
+                                    <span class="task-agent">AC</span>
+                                    <span class="task-desc">142 tickets resueltos</span>
+                                    <span class="task-status">Listo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Impact Stats -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <span class="impact-number">9</span>
+                    <span class="impact-label">Agentes de IA especializados</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">80%</span>
+                    <span class="impact-label">Automatización de tareas rutinarias</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">24/7</span>
+                    <span class="impact-label">Operación continua</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">100%</span>
+                    <span class="impact-label">Soberanía de datos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agent Categories -->
+    <section class="agents-section" id="agents">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nueve agentes especializados, una plataforma unificada</h2>
+                <p>Cada agente está diseñado para flujos de trabajo empresariales, combinando procedimientos rigurosos con creatividad flexible</p>
+            </div>
+            <div class="agents-grid">
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #9b72cb, #7c4dff);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="4" width="18" height="20" rx="2.5" fill="white" opacity="0.9"/><path d="M9 9h10M9 13h10M9 17h6" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>Ofimática con IA</h4>
+                    <p>Redacción de documentos, consolidación de datos, programación y soporte de flujos de aprobación. Automatice las tareas administrativas repetitivas.</p>
+                    <div class="agent-tasks">
+                        <span>Redacción</span>
+                        <span>Informes de datos</span>
+                        <span>Programación</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #4285f4, #1a73e8);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M9 8L5 14l4 6M19 8l4 6-4 6" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M16 5l-4 18" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/></svg>
+                    </div>
+                    <h4>Programación con IA</h4>
+                    <p>Generación de código, escaneo de vulnerabilidades, optimización de scripts y documentación técnica. Acelere los flujos de desarrollo.</p>
+                    <div class="agent-tasks">
+                        <span>Generación de código</span>
+                        <span>Escaneo de seguridad</span>
+                        <span>Documentación</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #ea4335, #ff6e40);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="9" fill="none" stroke="white" stroke-width="2.5"/><path d="M14 9v5l3 2" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>Operaciones con IA</h4>
+                    <p>Monitoreo de sistemas, recopilación de registros de datos, diagnóstico de fallos e informes de mantenimiento. Mantenga la infraestructura saludable automáticamente.</p>
+                    <div class="agent-tasks">
+                        <span>Monitoreo</span>
+                        <span>Diagnóstico de fallos</span>
+                        <span>Informes</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #34a853, #00c853);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M6 10c0-3.5 3.5-5 8-5s8 1.5 8 5v4c0 3-2.5 5-5 5h-2l-3 3v-3H9c-2 0-3-2-3-5v-4z" fill="white" opacity="0.9"/><circle cx="11" cy="12" r="1.2" fill="#34a853"/><circle cx="14" cy="12" r="1.2" fill="#34a853"/><circle cx="17" cy="12" r="1.2" fill="#34a853"/></svg>
+                    </div>
+                    <h4>Atención al cliente inteligente</h4>
+                    <p>Gestión de consultas rutinarias, registro de tickets, automatización de órdenes de trabajo y gestión de preguntas frecuentes. Ofrezca soporte instantáneo y consistente.</p>
+                    <div class="agent-tasks">
+                        <span>Respuesta automática</span>
+                        <span>Enrutamiento de tickets</span>
+                        <span>Base de conocimientos</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #fbbc04, #f09800);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M6 20l4-6 4 4 5-9 3 5" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h4>Marketing con IA</h4>
+                    <p>Inteligencia de mercado, contenido promocional, segmentación de audiencia y optimización de activos de campaña. Marketing basado en datos a escala.</p>
+                    <div class="agent-tasks">
+                        <span>Creación de contenido</span>
+                        <span>Segmentación</span>
+                        <span>Analítica</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #00bcd4, #0097a7);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="10" r="5" fill="white" opacity="0.9"/><path d="M7 22c0-4 3-6 7-6s7 2 7 6" fill="white" opacity="0.7"/></svg>
+                    </div>
+                    <h4>RRHH con IA</h4>
+                    <p>Cribado de currículums, automatización de incorporación, seguimiento de asistencia, creación de material formativo y gestión de datos de plantilla.</p>
+                    <div class="agent-tasks">
+                        <span>Reclutamiento</span>
+                        <span>Incorporación</span>
+                        <span>Formación</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #ff5722, #e64a19);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="6" width="18" height="16" rx="2" fill="none" stroke="white" stroke-width="2.5"/><path d="M5 11h18" stroke="white" stroke-width="1.5"/><rect x="8" y="14" width="5" height="4" rx="1" fill="white" opacity="0.7"/></svg>
+                    </div>
+                    <h4>Formación con IA</h4>
+                    <p>Desarrollo de material didáctico personalizado, guiones de enseñanza estandarizados y agregación de métricas de evaluación para el aprendizaje empresarial.</p>
+                    <div class="agent-tasks">
+                        <span>Material didáctico</span>
+                        <span>Evaluación</span>
+                        <span>Certificación</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #607d8b, #455a64);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="8" fill="none" stroke="white" stroke-width="2.5"/><circle cx="14" cy="14" r="3" fill="white" opacity="0.8"/><path d="M14 8v2M14 18v2M8 14h2M18 14h2" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>Percepción con IA</h4>
+                    <p>Procesamiento multimodal de datos de imagen, texto y voz. Identifique, clasifique y organice contenido no estructurado automáticamente.</p>
+                    <div class="agent-tasks">
+                        <span>Reconocimiento de imágenes</span>
+                        <span>NLP</span>
+                        <span>Procesamiento de voz</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #3f51b5, #303f9f);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="8" width="18" height="12" rx="2" fill="none" stroke="white" stroke-width="2.5"/><circle cx="14" cy="6" r="2" fill="white" opacity="0.7"/><path d="M9 14h2M13 14h2M17 14h2" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>Reuniones con IA</h4>
+                    <p>Transcripción automática, extracción de acciones, desglose de tareas y seguimiento de ejecución post-reunión. No pierda ningún seguimiento.</p>
+                    <div class="agent-tasks">
+                        <span>Transcripción</span>
+                        <span>Acciones</span>
+                        <span>Seguimiento</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Diseñado para implementación de IA empresarial</h2>
+                <p>Desde la creación de agentes hasta la gestión de permisos, todo lo que necesita para operativizar la IA</p>
+            </div>
+
+            <!-- Feature 1: Agent Creation & Management -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #9b72cb, #4285f4);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="8" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><path d="M11 14h6M14 11v6" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Creación y gestión de agentes</h3>
+                    <p>Cree, implemente y gestione agentes de IA con un constructor visual de flujos de trabajo. No requiere programación — defina comportamientos, establezca salvaguardas y lance agentes que se integren con sus herramientas existentes.</p>
+                    <ul class="feature-list">
+                        <li><strong>Constructor visual de agentes</strong><span>Diseñador de flujos de trabajo con arrastrar y soltar para crear comportamientos y árboles de decisión</span></li>
+                        <li><strong>Mercado de agentes</strong><span>Plantillas de agentes prediseñadas para escenarios empresariales comunes, listas para personalizar</span></li>
+                        <li><strong>Control de versiones</strong><span>Seguimiento de cambios, reversión de configuraciones y pruebas A/B de comportamientos</span></li>
+                        <li><strong>Monitoreo de rendimiento</strong><span>Métricas en tiempo real sobre finalización de tareas, precisión y uso de recursos</span></li>
+                        <li><strong>Orquestación multi-agente</strong><span>Encadene múltiples agentes para flujos de trabajo complejos y de múltiples pasos</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="agent-builder-visual">
+                        <div class="builder-panel">
+                            <div class="builder-header">Constructor de agentes</div>
+                            <div class="builder-canvas">
+                                <div class="builder-node trigger">
+                                    <span class="node-icon">&#9889;</span>
+                                    <span class="node-label">Disparador</span>
+                                </div>
+                                <div class="builder-connector"></div>
+                                <div class="builder-node process">
+                                    <span class="node-icon">&#9881;</span>
+                                    <span class="node-label">Proceso</span>
+                                </div>
+                                <div class="builder-connector"></div>
+                                <div class="builder-node action">
+                                    <span class="node-icon">&#10003;</span>
+                                    <span class="node-label">Acción</span>
+                                </div>
+                            </div>
+                            <div class="builder-sidebar">
+                                <div class="builder-component">
+                                    <span>Analizador de documentos</span>
+                                </div>
+                                <div class="builder-component">
+                                    <span>Puerta de decisión</span>
+                                </div>
+                                <div class="builder-component">
+                                    <span>Conector API</span>
+                                </div>
+                                <div class="builder-component active">
+                                    <span>Formateador de salida</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Enterprise Permission System -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 4L6 8v6c0 6 4 11 8 12 4-1 8-6 8-12V8l-8-4z" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><path d="M11 14l2 2 4-4" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Arquitectura de permisos empresariales</h3>
+                    <p>Implemente IA que respeta la jerarquía organizativa existente. Los controles de acceso detallados garantizan que los agentes solo accedan a datos y realicen acciones dentro de su alcance autorizado.</p>
+                    <ul class="feature-list">
+                        <li><strong>Acceso de agentes por rol</strong><span>Asigne agentes a departamentos, equipos o individuos con permisos heredados</span></li>
+                        <li><strong>Controles de alcance de datos</strong><span>Restrinja qué datos puede leer, procesar y generar cada agente</span></li>
+                        <li><strong>Autorización de acciones</strong><span>Defina qué acciones del mundo real pueden tomar los agentes autónomamente vs. con aprobación</span></li>
+                        <li><strong>Auditoría y cumplimiento</strong><span>Registro de auditoría completo de todas las acciones del agente para cumplimiento normativo</span></li>
+                        <li><strong>Integración SSO y directorio</strong><span>Integración perfecta con proveedores LDAP, Active Directory y SAML</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="permission-visual">
+                        <div class="perm-panel">
+                            <div class="perm-header">Matriz de permisos</div>
+                            <div class="perm-tree">
+                                <div class="perm-org">
+                                    <div class="perm-node root">
+                                        <span class="perm-dot"></span>
+                                        <span>Organización</span>
+                                    </div>
+                                    <div class="perm-branch">
+                                        <div class="perm-node dept">
+                                            <span class="perm-dot"></span>
+                                            <span>Ingeniería</span>
+                                            <span class="perm-badge">5 agentes</span>
+                                        </div>
+                                        <div class="perm-node dept">
+                                            <span class="perm-dot"></span>
+                                            <span>Marketing</span>
+                                            <span class="perm-badge">3 agentes</span>
+                                        </div>
+                                        <div class="perm-node dept">
+                                            <span class="perm-dot"></span>
+                                            <span>Soporte</span>
+                                            <span class="perm-badge">4 agentes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="perm-access-list">
+                                <div class="perm-access-item"><span class="pa-icon read"></span><span>Lectura: Registros de clientes</span><span class="pa-status granted">Concedido</span></div>
+                                <div class="perm-access-item"><span class="pa-icon write"></span><span>Escritura: Tickets de soporte</span><span class="pa-status granted">Concedido</span></div>
+                                <div class="perm-access-item"><span class="pa-icon exec"></span><span>Ejecución: Acciones de reembolso</span><span class="pa-status review">Requiere aprobación</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: AI Office -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #9b72cb, #7c4dff);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="4" width="18" height="20" rx="2.5" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><path d="M9 9h10M9 13h10M9 17h6" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Automatización ofimática con IA</h3>
+                    <p>Transforme la sobrecarga administrativa en flujos de trabajo automatizados. Desde la redacción de documentos hasta la consolidación de datos y la gestión de aprobaciones — su asistente ofimático de IA lo gestiona todo.</p>
+                    <ul class="feature-list">
+                        <li><strong>Redacción inteligente de documentos</strong><span>Genere contratos, informes y memorandos a partir de instrucciones breves o plantillas</span></li>
+                        <li><strong>Consolidación de datos</strong><span>Agregue datos de múltiples fuentes en informes unificados y formateados automáticamente</span></li>
+                        <li><strong>Programación inteligente</strong><span>Gestión de calendario asistida por IA, coordinación de reuniones y resolución de conflictos</span></li>
+                        <li><strong>Soporte de flujos de aprobación</strong><span>Redacte envíos, adjunte documentos de soporte y enrute a través de cadenas de aprobación</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="office-visual">
+                        <div class="office-demo">
+                            <div class="office-header">Agente de ofimática IA</div>
+                            <div class="office-conversation">
+                                <div class="office-msg user">
+                                    <span class="office-msg-label">Usted</span>
+                                    <p>Redacta el informe de resumen financiero del Q3 usando datos de las bases de datos de ventas y operaciones.</p>
+                                </div>
+                                <div class="office-msg agent">
+                                    <span class="office-msg-label">IA Ofimática</span>
+                                    <p>Informe generado. Hallazgos clave:</p>
+                                    <ul>
+                                        <li>Ingresos +23% trimestral</li>
+                                        <li>Costes operativos reducidos un 8%</li>
+                                        <li>3 recomendaciones adjuntas</li>
+                                    </ul>
+                                    <div class="office-output">
+                                        <span class="output-file"><svg width="12" height="12" viewBox="0 0 12 12"><rect x="2" y="1" width="8" height="10" rx="1" fill="none" stroke="currentColor" stroke-width="1"/><path d="M4 4h4M4 6h4M4 8h2" stroke="currentColor" stroke-width="0.7" stroke-linecap="round"/></svg> Q3_Summary.pdf</span>
+                                        <span class="output-file"><svg width="12" height="12" viewBox="0 0 12 12"><rect x="2" y="1" width="8" height="10" rx="1" fill="none" stroke="currentColor" stroke-width="1"/><path d="M4 4h4M4 6h4M4 8h2" stroke="currentColor" stroke-width="0.7" stroke-linecap="round"/></svg> Data_Appendix.xlsx</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: AI Programming -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #4285f4, #1a73e8);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M9 8L5 14l4 6M19 8l4 6-4 6" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M16 5l-4 18" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/></svg>
+                    </div>
+                    <h3>Asistente de programación con IA</h3>
+                    <p>Potencie su equipo de desarrollo con IA que comprende su base de código. Genere código, escanee vulnerabilidades, optimice scripts y produzca documentación técnica.</p>
+                    <ul class="feature-list">
+                        <li><strong>Generación de código contextual</strong><span>Genere funciones, clases y módulos alineados con los estándares de codificación de su proyecto</span></li>
+                        <li><strong>Escaneo de vulnerabilidades</strong><span>Análisis de seguridad continuo con sugerencias de corrección para OWASP Top 10 y más</span></li>
+                        <li><strong>Optimización de scripts</strong><span>Analice y refactorice código para rendimiento, legibilidad y mantenibilidad</span></li>
+                        <li><strong>Documentación de API</strong><span>Genere y mantenga automáticamente documentación de API, registros de cambios y guías para desarrolladores</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="code-visual">
+                        <div class="code-panel">
+                            <div class="code-header">
+                                <div class="code-dots"><span></span><span></span><span></span></div>
+                                <span class="code-filename">api_service.py</span>
+                            </div>
+                            <div class="code-body">
+                                <div class="code-line"><span class="ln">1</span><span class="kw">async def</span> <span class="fn">process_order</span>(order_id):</div>
+                                <div class="code-line"><span class="ln">2</span>    order = <span class="kw">await</span> db.get(order_id)</div>
+                                <div class="code-line"><span class="ln">3</span>    <span class="kw">if</span> order.status == <span class="str">"pending"</span>:</div>
+                                <div class="code-line ai-generated"><span class="ln">4</span>        <span class="comment"># AI: Added validation</span></div>
+                                <div class="code-line ai-generated"><span class="ln">5</span>        <span class="kw">await</span> validate_inventory(order)</div>
+                                <div class="code-line ai-generated"><span class="ln">6</span>        <span class="kw">await</span> charge_payment(order)</div>
+                                <div class="code-line ai-generated"><span class="ln">7</span>        order.status = <span class="str">"confirmed"</span></div>
+                                <div class="code-line"><span class="ln">8</span>    <span class="kw">return</span> order</div>
+                            </div>
+                            <div class="code-ai-badge">
+                                <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="4" fill="#9b72cb" opacity="0.8"/><path d="M4 6l1.5 1.5L8 5" fill="none" stroke="white" stroke-width="1" stroke-linecap="round"/></svg>
+                                <span>IA generó 4 líneas &bull; Seguridad verificada</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5: Intelligent Customer Service -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #00c853);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M6 10c0-3.5 3.5-5 8-5s8 1.5 8 5v4c0 3-2.5 5-5 5h-2l-3 3v-3H9c-2 0-3-2-3-5v-4z" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><circle cx="11" cy="12" r="1.5" fill="white"/><circle cx="14" cy="12" r="1.5" fill="white"/><circle cx="17" cy="12" r="1.5" fill="white"/></svg>
+                    </div>
+                    <h3>Atención al cliente inteligente</h3>
+                    <p>Resuelva consultas de clientes instantáneamente con IA que comprende el contexto, mantiene el historial de conversaciones y sabe cuándo escalar. Ofrezca soporte consistente y 24/7 a escala.</p>
+                    <ul class="feature-list">
+                        <li><strong>Soporte multicanal</strong><span>Gestione consultas de chat, correo electrónico, teléfono y redes sociales en un sistema unificado</span></li>
+                        <li><strong>Enrutamiento inteligente de tickets</strong><span>Clasifique automáticamente los problemas y enrute al agente o departamento adecuado al instante</span></li>
+                        <li><strong>Base de conocimientos con IA</strong><span>Base de conocimientos auto-aprendizaje que mejora las respuestas según los datos de resolución</span></li>
+                        <li><strong>Transferencia humana</strong><span>Escalación perfecta a agentes humanos con transferencia completa de contexto cuando sea necesario</span></li>
+                        <li><strong>Analítica de satisfacción</strong><span>Seguimiento de CSAT, tiempo de resolución e identificación de áreas de mejora del servicio</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="cs-visual">
+                        <div class="cs-panel">
+                            <div class="cs-header">Panel de atención al cliente</div>
+                            <div class="cs-stats-row">
+                                <div class="cs-stat"><span class="cs-val">142</span><span class="cs-lbl">Resueltos hoy</span></div>
+                                <div class="cs-stat"><span class="cs-val">98%</span><span class="cs-lbl">Puntuación CSAT</span></div>
+                                <div class="cs-stat"><span class="cs-val">&lt;30s</span><span class="cs-lbl">Respuesta promedio</span></div>
+                            </div>
+                            <div class="cs-conversation">
+                                <div class="cs-msg customer">
+                                    <span class="cs-name">Cliente</span>
+                                    <p>Quiero devolver mi pedido #4521</p>
+                                </div>
+                                <div class="cs-msg ai">
+                                    <span class="cs-name">Agente IA</span>
+                                    <p>He encontrado el pedido #4521. Su devolución es elegible. He iniciado el proceso y enviado una etiqueta de devolución a su correo. El reembolso se procesará en 3-5 días hábiles.</p>
+                                    <span class="cs-auto-badge">Resuelto automáticamente</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Features -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Listo para la empresa desde el primer día</h2>
+                <p>Seguridad, cumplimiento y escalabilidad integrados en cada capa</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V7l-8-5z" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M9 12l2 2 4-4" fill="none" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg><h5>Implementación privada</h5><p>En sitio o nube privada — sus datos nunca salen de su infraestructura</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M3 10h18" stroke="#4285f4" stroke-width="1"/><circle cx="7" cy="7" r="1" fill="#4285f4"/><circle cx="10" cy="7" r="1" fill="#4285f4"/></svg><h5>Base de conocimientos personalizada</h5><p>Entrene agentes con sus datos propietarios, SOPs y conocimientos específicos del sector</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M8 12h8M12 8v8" stroke="#34a853" stroke-width="1.5" stroke-linecap="round"/></svg><h5>Multi-idioma</h5><p>Los agentes comprenden y responden en más de 20 idiomas con fluidez nativa</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="#ea4335" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg><h5>Integración API</h5><p>APIs REST, webhooks y conectores para ERP, CRM y sistemas personalizados</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M12 7v5l3 3" fill="none" stroke="#fbbc04" stroke-width="1.8" stroke-linecap="round"/></svg><h5>Aprendizaje continuo</h5><p>Los agentes mejoran con el tiempo mediante bucles de retroalimentación y optimización del rendimiento</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M4 22v-7" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg><h5>Cumplimiento normativo</h5><p>SOC 2, GDPR y marcos de cumplimiento específicos del sector integrados</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="2" y="6" width="9" height="12" rx="1.5" fill="none" stroke="#1a73e8" stroke-width="1.5"/><rect x="13" y="4" width="9" height="16" rx="1.5" fill="none" stroke="#1a73e8" stroke-width="1.5"/></svg><h5>Acceso móvil</h5><p>Gestione e interactúe con agentes desde cualquier dispositivo, en cualquier lugar</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="#34a853" stroke-width="1.5" opacity="0.6"/></svg><h5>Arquitectura escalable</h5><p>Gestione miles de tareas simultáneas con autoescalado horizontal</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>Comience a automatizar hoy</h2>
+                <p>Elija el plan que se adapte a las necesidades de su organización</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Inicial</h4>
+                        <div class="price-amount">$49</div>
+                        <span class="price-period">por usuario / mes</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>3 agentes de IA incluidos</li>
+                        <li>5.000 tareas al mes</li>
+                        <li>Base de conocimientos básica</li>
+                        <li>Soporte por correo electrónico</li>
+                        <li>Integraciones estándar</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn">Comenzar ahora</a>
+                </div>
+                <div class="pricing-card popular">
+                    <span class="popular-badge">Más popular</span>
+                    <div class="pricing-header">
+                        <h4>Empresarial</h4>
+                        <div class="price-amount">$99</div>
+                        <span class="price-period">por usuario / mes</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Los 9 agentes de IA</li>
+                        <li>Tareas ilimitadas</li>
+                        <li>Base de conocimientos personalizada</li>
+                        <li>Soporte prioritario</li>
+                        <li>Integraciones avanzadas</li>
+                        <li>Constructor de flujos de agentes</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn btn-ai">Iniciar prueba gratuita</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Enterprise</h4>
+                        <div class="price-amount">Personalizado</div>
+                        <span class="price-period">precios a medida</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Todo en Empresarial</li>
+                        <li>Implementación privada</li>
+                        <li>Desarrollo de agentes personalizados</li>
+                        <li>SSO y permisos empresariales</li>
+                        <li>Equipo de éxito dedicado</li>
+                        <li>SLA personalizado</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary pricing-btn">Contactar ventas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para implementar IA que funciona?</h2>
+                <p>Experimente agentes de IA empresariales que entregan trabajo completado — no solo herramientas. Comience su prueba gratuita hoy.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">Iniciar prueba gratuita</a>
+                    <a href="#" class="btn-secondary btn-large">Programar demostración</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36"><p class="footer-tagline">Construyendo el futuro de la tecnología empresarial.</p></div>
+                <div class="footer-links"><h5>Productos</h5><a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a><a href="workup.html">Workup</a><a href="#">OORT.AI</a><a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a><a href="classroom.html">Aula en la nube</a></div>
+                <div class="footer-links"><h5>Soluciones</h5><a href="messenger.html">Mensajería instantánea</a><a href="clouddisk.html">Disco en la nube</a><a href="email.html">Correo electrónico</a><a href="approval.html">Aprobación inteligente</a><a href="dispatch.html">Comando y Despacho</a><a href="fieldmanager.html">Gestor de campo</a></div>
+                <div class="footer-links"><h5>Empresa</h5><a href="about.html">Acerca de nosotros</a><a href="#">Carreras</a><a href="#">Blog</a><a href="contact.html">Contacto</a><a href="#">Política de privacidad</a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 OortCloud Technology. Todos los derechos reservados.</p><div class="footer-social"><a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a><a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a><a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a></div></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

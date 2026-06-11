@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" hreflang="ko" href="https://oortcloudsmart.com/ko/">
+    <title>지능형 결재 - 엔터프라이즈 워크플로 관리 | OortCloud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="approval.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">제품</a>
+                <a href="index.html#platform">플랫폼</a>
+                <a href="index.html#enterprise">엔터프라이즈</a>
+                <a href="index.html#about">소개</a>
+            </div>
+            <a href="#get-started" class="nav-cta">무료로 시작</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="언어 전환">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">KO</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item active" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    로그인
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">사용자</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            대시보드
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            로그아웃
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="메뉴 전환">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="approval-hero">
+        <div class="container">
+            <div class="approval-hero-grid">
+                <div class="approval-hero-content">
+                    <div class="product-breadcrumb">
+                        <a href="index.html">제품</a>
+                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <span>지능형 결재</span>
+                    </div>
+                    <h1>의사결정을 자동화하고, <span class="gradient-text-amber">비즈니스를 가속화</span></h1>
+                    <p class="approval-hero-desc">복잡한 결재 프로세스를 간소화된 자동화 워크플로로 전환하는 엔터프라이즈 워크플로 관리입니다. 비주얼 플로우 디자이너, 스마트 폼, AI 기반 라우팅으로 더 빠르게 결재합니다.</p>
+                    <div class="hero-actions">
+                        <a href="#get-started" class="btn-primary btn-large btn-amber">무료 체험 시작</a>
+                        <a href="#features" class="btn-secondary btn-large">작동 방식 보기</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            60% 빠른 결재 주기
+                        </span>
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            노코드 플로우 빌더
+                        </span>
+                    </div>
+                </div>
+                <div class="approval-hero-visual">
+                    <div class="workflow-mockup">
+                        <div class="workflow-canvas">
+                            <div class="wf-node wf-start">
+                                <div class="wf-node-icon start-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="#34a853"/><polygon points="6.5,5 6.5,11 11,8" fill="white"/></svg>
+                                </div>
+                                <span>제출</span>
+                            </div>
+                            <div class="wf-connector"></div>
+                            <div class="wf-node wf-approver">
+                                <div class="wf-node-icon approver-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="6" r="3" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M3 14c0-3 2-5 5-5s5 2 5 5" fill="none" stroke="#4285f4" stroke-width="1.5"/></svg>
+                                </div>
+                                <span>관리자</span>
+                                <span class="wf-status approved">결재 완료</span>
+                            </div>
+                            <div class="wf-connector"></div>
+                            <div class="wf-node wf-condition">
+                                <div class="wf-node-icon condition-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 2l6 6-6 6-6-6z" fill="none" stroke="#fbbc04" stroke-width="1.5"/></svg>
+                                </div>
+                                <span>금액 > ₩500만?</span>
+                            </div>
+                            <div class="wf-branch">
+                                <div class="wf-branch-line left">
+                                    <span class="branch-label">예</span>
+                                </div>
+                                <div class="wf-branch-line right">
+                                    <span class="branch-label">아니오</span>
+                                </div>
+                            </div>
+                            <div class="wf-branch-nodes">
+                                <div class="wf-node wf-approver small">
+                                    <div class="wf-node-icon approver-icon">
+                                        <svg width="14" height="14" viewBox="0 0 16 16"><circle cx="8" cy="6" r="3" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M3 14c0-3 2-5 5-5s5 2 5 5" fill="none" stroke="#9b72cb" stroke-width="1.5"/></svg>
+                                    </div>
+                                    <span>재무 이사</span>
+                                    <span class="wf-status pending">대기 중</span>
+                                </div>
+                                <div class="wf-node wf-end small">
+                                    <div class="wf-node-icon end-icon">
+                                        <svg width="14" height="14" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="#34a853" opacity="0.2" stroke="#34a853" stroke-width="1.5"/><path d="M5 8l2 2 4-4" fill="none" stroke="#34a853" stroke-width="1.5" stroke-linecap="round"/></svg>
+                                    </div>
+                                    <span>완료</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="workflow-sidebar-panel">
+                            <div class="wf-panel-title">결재 상세</div>
+                            <div class="wf-detail-item">
+                                <span class="wf-detail-label">유형</span>
+                                <span class="wf-detail-value">구매 요청</span>
+                            </div>
+                            <div class="wf-detail-item">
+                                <span class="wf-detail-label">금액</span>
+                                <span class="wf-detail-value">₩8,500,000</span>
+                            </div>
+                            <div class="wf-detail-item">
+                                <span class="wf-detail-label">요청자</span>
+                                <span class="wf-detail-value">Alex Chen</span>
+                            </div>
+                            <div class="wf-detail-item">
+                                <span class="wf-detail-label">상태</span>
+                                <span class="wf-detail-value status-active">진행 중</span>
+                            </div>
+                            <div class="wf-timeline">
+                                <div class="timeline-item done">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span>제출됨</span>
+                                        <span class="timeline-time">10:24 AM</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item done">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span>관리자 결재 완료</span>
+                                        <span class="timeline-time">11:05 AM</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item current">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span>재무 이사 검토</span>
+                                        <span class="timeline-time">대기 중...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Impact Stats -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <span class="impact-number">60%</span>
+                    <span class="impact-label">빠른 결재 주기</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">90%</span>
+                    <span class="impact-label">수작업 감소</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">200+</span>
+                    <span class="impact-label">사전 구축 템플릿</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">100%</span>
+                    <span class="impact-label">프로세스 가시성</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="usecases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>모든 비즈니스 프로세스를 자동화</h2>
+                <p>간단한 휴가 요청부터 복잡한 다부서 구매 워크플로까지</p>
+            </div>
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="10" y="8" width="28" height="32" rx="4" fill="none" stroke="#fbbc04" stroke-width="2.5"/>
+                            <path d="M18 18h12M18 24h8M18 30h10" stroke="#fbbc04" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="14" cy="18" r="1.5" fill="#fbbc04"/>
+                            <circle cx="14" cy="24" r="1.5" fill="#fbbc04"/>
+                            <circle cx="14" cy="30" r="1.5" fill="#fbbc04"/>
+                        </svg>
+                    </div>
+                    <h4>경비 및 환급</h4>
+                    <p>영수증 OCR, 정책 확인, 금액 기준 다단계 결재로 경비 청구를 자동화합니다.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="8" y="12" width="32" height="24" rx="4" fill="none" stroke="#4285f4" stroke-width="2.5"/>
+                            <path d="M16 20h16M16 26h12M16 32h8" stroke="#4285f4" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M8 18h32" stroke="#4285f4" stroke-width="1.5" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <h4>구매 주문</h4>
+                    <p>공급업체 선택, 예산 검증, 적절한 결재자에게 자동 라우팅으로 구매 프로세스를 간소화합니다.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <circle cx="24" cy="18" r="8" fill="none" stroke="#34a853" stroke-width="2.5"/>
+                            <path d="M12 38c0-7 5-12 12-12s12 5 12 12" fill="none" stroke="#34a853" stroke-width="2.5"/>
+                            <path d="M30 16l3-3M32 20h4" stroke="#34a853" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>인사 및 휴가 관리</h4>
+                    <p>자동화된 HR 워크플로로 휴가 요청, 온보딩, 오프보딩, 인사 변경을 처리합니다.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <path d="M12 14h24v20H12z" fill="none" stroke="#ea4335" stroke-width="2.5" rx="3"/>
+                            <path d="M12 14l12 10 12-10" fill="none" stroke="#ea4335" stroke-width="2"/>
+                            <path d="M20 38l4-4 4 4" fill="none" stroke="#ea4335" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>계약 및 문서</h4>
+                    <p>버전 추적, 전자 서명, 컴플라이언스 확인으로 계약을 검토, 수정, 결재합니다.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="8" y="10" width="14" height="14" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/>
+                            <rect x="26" y="10" width="14" height="14" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/>
+                            <rect x="16" y="26" width="14" height="14" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/>
+                            <path d="M22 17h4M23 24v4" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2"/>
+                        </svg>
+                    </div>
+                    <h4>IT 및 접근 요청</h4>
+                    <p>보안 정책 시행으로 시스템 접근, 소프트웨어 프로비저닝, 인프라 요청을 관리합니다.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <path d="M10 38V18l14-8 14 8v20" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linejoin="round"/>
+                            <path d="M18 38v-10h12v10" fill="none" stroke="#1a73e8" stroke-width="2"/>
+                            <path d="M20 22h8" stroke="#1a73e8" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>시설 및 행정</h4>
+                    <p>회의실 예약, 유지보수 요청, 방문자 패스, 사무용품 주문을 모두 자동화합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>강력한 워크플로 엔진, 코드 불필요</h2>
+                <p>직관적인 비주얼 도구로 복잡한 결재 프로세스를 설계합니다. 개발자 불필요</p>
+            </div>
+
+            <!-- Feature 1: Visual Flow Designer -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #fbbc04, #ea4335);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="4" fill="white" opacity="0.2"/><circle cx="10" cy="10" r="3" fill="white" opacity="0.9"/><circle cx="18" cy="18" r="3" fill="white" opacity="0.9"/><path d="M12 11l4 5" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/></svg>
+                    </div>
+                    <h3>비주얼 플로우 디자이너</h3>
+                    <p>복잡한 프로세스를 명확한 비주얼 플로우차트로 변환하는 드래그 앤 드롭 워크플로 빌더입니다. 몇 주가 아닌 몇 분 만에 결재 플로우를 설계, 테스트, 배포합니다.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>드래그 앤 드롭 캔버스</strong>
+                            <span>결재 노드, 조건, 분기, 병렬 경로로 비주얼 플로우를 구축합니다</span>
+                        </li>
+                        <li>
+                            <strong>조건부 분기</strong>
+                            <span>금액, 부서, 역할 또는 임의의 사용자 정의 필드 값에 기반하여 결재를 라우팅합니다</span>
+                        </li>
+                        <li>
+                            <strong>병렬 및 순차 결재</strong>
+                            <span>다단계, 회서, 또는 순차 결재 체인을 구성합니다</span>
+                        </li>
+                        <li>
+                            <strong>동적 결재자</strong>
+                            <span>조직 체계, 부서장 또는 프로젝트 역할에 기반하여 결재자를 자동 배정합니다</span>
+                        </li>
+                        <li>
+                            <strong>플로우 템플릿</strong>
+                            <span>일반적인 비즈니스 프로세스를 위한 200개 이상의 사전 구축 템플릿을 즉시 커스터마이즈하고 배포합니다</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="designer-visual">
+                        <div class="designer-canvas">
+                            <div class="canvas-toolbar">
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5" fill="none" stroke="#5f6368" stroke-width="1.2"/></svg></div>
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="2" width="10" height="10" rx="2" fill="none" stroke="#5f6368" stroke-width="1.2"/></svg></div>
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2l5 5-5 5-5-5z" fill="none" stroke="#5f6368" stroke-width="1.2"/></svg></div>
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10M7 2v10" stroke="#5f6368" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+                            </div>
+                            <div class="canvas-flow">
+                                <div class="flow-node fn-start">시작</div>
+                                <div class="flow-arrow"></div>
+                                <div class="flow-node fn-task">폼 작성</div>
+                                <div class="flow-arrow"></div>
+                                <div class="flow-node fn-approval">직속 관리자</div>
+                                <div class="flow-arrow"></div>
+                                <div class="flow-node fn-condition">예산 확인</div>
+                                <div class="flow-split">
+                                    <div class="split-branch">
+                                        <span class="split-label">&gt;$10K</span>
+                                        <div class="flow-node fn-approval small">임원</div>
+                                    </div>
+                                    <div class="split-branch">
+                                        <span class="split-label">&le;$10K</span>
+                                        <div class="flow-node fn-end small">완료</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Smart Forms -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #4285f4, #34a853);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="3" width="18" height="22" rx="3" fill="white" opacity="0.9"/><path d="M9 9h10M9 13h7M9 17h8" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/><rect x="9" y="20" width="4" height="2" rx="1" fill="#34a853" opacity="0.7"/></svg>
+                    </div>
+                    <h3>스마트 폼 빌더</h3>
+                    <p>사용자 입력에 따라 적응하는 지능형 폼을 만듭니다. 다양한 필드 유형, 검증 규칙, 자동 계산, 데이터 연계로 데이터 수집을 손쉽게 합니다.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>다양한 필드 유형</strong>
+                            <span>텍스트, 숫자, 날짜, 드롭다운, 파일 업로드, 위치, 서명, 테이블 등 30개 이상의 필드 유형</span>
+                        </li>
+                        <li>
+                            <strong>조건부 로직</strong>
+                            <span>이전 선택에 따라 필드 표시/숨기기, 필수 규칙 설정, 데이터 자동 입력</span>
+                        </li>
+                        <li>
+                            <strong>자동 계산</strong>
+                            <span>합계, 세금, 할인 및 복잡한 비즈니스 계산을 위한 내장 수식</span>
+                        </li>
+                        <li>
+                            <strong>데이터 연계</strong>
+                            <span>다른 시스템에서 데이터 가져오기 — 직원 디렉토리, 프로젝트 DB, 예산 기록</span>
+                        </li>
+                        <li>
+                            <strong>모바일 최적화</strong>
+                            <span>카메라 캡처, GPS 위치, 오프라인 지원으로 모바일에서 완벽하게 렌더링됩니다</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="form-visual">
+                        <div class="form-demo">
+                            <div class="form-header">
+                                <span>구매 요청</span>
+                                <span class="form-badge">임시 저장</span>
+                            </div>
+                            <div class="form-body">
+                                <div class="form-field">
+                                    <label>부서</label>
+                                    <div class="field-select">엔지니어링 <svg width="10" height="10" viewBox="0 0 10 10"><path d="M3 4l2 2 2-2" fill="none" stroke="#9aa0a6" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+                                </div>
+                                <div class="form-field">
+                                    <label>품목 설명</label>
+                                    <div class="field-input">MacBook Pro 16" for new hires</div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-field half">
+                                        <label>수량</label>
+                                        <div class="field-input">5</div>
+                                    </div>
+                                    <div class="form-field half">
+                                        <label>단가</label>
+                                        <div class="field-input">₩2,499,000</div>
+                                    </div>
+                                </div>
+                                <div class="form-field calculated">
+                                    <label>총 금액</label>
+                                    <div class="field-calculated">₩12,495,000</div>
+                                    <span class="calc-note">자동 계산</span>
+                                </div>
+                                <div class="form-field">
+                                    <label>첨부파일</label>
+                                    <div class="field-upload">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 10V3M5 5l3-3 3 3M3 10v3h10v-3" fill="none" stroke="#9aa0a6" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        <span>파일을 드래그하거나 클릭하여 업로드</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Intelligent Routing -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #9b72cb, #4285f4);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="10" fill="white" opacity="0.2"/><path d="M9 14l3 3 7-7" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>지능형 라우팅 및 자동화</h3>
+                    <p>AI 기반 라우팅이 적절한 결재자를 자동으로 결정하고, 기한 초과 요청을 에스컬레이션하고, 예외를 처리합니다.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>조직도 기반 자동 라우팅</strong>
+                            <span>요청자의 직속 관리자, 스킵 레벨 또는 부서장에게 자동으로 라우팅합니다</span>
+                        </li>
+                        <li>
+                            <strong>기한 및 에스컬레이션</strong>
+                            <span>각 단계의 SLA를 설정하여 기한 초과 시 자동 알림, 에스컬레이션 또는 자동 결재합니다</span>
+                        </li>
+                        <li>
+                            <strong>위임 및 대리</strong>
+                            <span>결재자는 휴가 중 시간 제한 대리 권한으로 다른 사람에게 위임할 수 있습니다</span>
+                        </li>
+                        <li>
+                            <strong>일괄 결재</strong>
+                            <span>대량 작업 및 빠른 결재로 여러 요청을 한 번에 검토하고 결재합니다</span>
+                        </li>
+                        <li>
+                            <strong>철회 및 취소</strong>
+                            <span>요청자는 요청을 철회할 수 있으며, 관리자는 전체 감사 추적로 결재를 취소할 수 있습니다</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="routing-visual">
+                        <div class="routing-demo">
+                            <div class="routing-header">자동 라우팅 엔진</div>
+                            <div class="routing-rules">
+                                <div class="rule-item">
+                                    <div class="rule-condition">IF 금액 ≤ ₩100만</div>
+                                    <div class="rule-arrow">→</div>
+                                    <div class="rule-action">직속 관리자</div>
+                                </div>
+                                <div class="rule-item">
+                                    <div class="rule-condition">IF 금액 ₩100만 ~ ₩1,000만</div>
+                                    <div class="rule-arrow">→</div>
+                                    <div class="rule-action">관리자 + 임원</div>
+                                </div>
+                                <div class="rule-item highlight">
+                                    <div class="rule-condition">IF 금액 &gt; ₩1,000만</div>
+                                    <div class="rule-arrow">→</div>
+                                    <div class="rule-action">관리자 + 부사장 + CFO</div>
+                                </div>
+                            </div>
+                            <div class="routing-extras">
+                                <div class="extra-tag">
+                                    <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="none" stroke="#ea4335" stroke-width="1.2"/><path d="M6 3.5v3l2 1" fill="none" stroke="#ea4335" stroke-width="1" stroke-linecap="round"/></svg>
+                                    SLA: 단계당 24시간
+                                </div>
+                                <div class="extra-tag">
+                                    <svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 2v4l3 2" fill="none" stroke="#fbbc04" stroke-width="1.2" stroke-linecap="round"/><circle cx="6" cy="6" r="5" fill="none" stroke="#fbbc04" stroke-width="1.2"/></svg>
+                                    48시간 후 자동 에스컬레이션
+                                </div>
+                                <div class="extra-tag">
+                                    <svg width="12" height="12" viewBox="0 0 12 12"><path d="M3 6l2 2 4-4" fill="none" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    ₩10만 미만 자동 결재
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: Analytics & Monitoring -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #1a73e8);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="3" fill="white" opacity="0.2"/><path d="M8 18l4-5 4 3 4-8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>분석 및 프로세스 마이닝</h3>
+                    <p>모든 결재 프로세스를 완벽하게 파악합니다. 병목 현상을 식별하고, 효율성을 측정하고, 데이터 기반 인사이트로 워크플로를 지속적으로 최적화합니다.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>실시간 대시보드</strong>
+                            <span>모든 프로세스의 대기, 결재 완료, 반려, 기한 초과 요청을 모니터링합니다</span>
+                        </li>
+                        <li>
+                            <strong>병목 감지</strong>
+                            <span>AI가 결재가 정체되는 위치를 식별하고 최적화를 제안합니다</span>
+                        </li>
+                        <li>
+                            <strong>주기 시간 분석</strong>
+                            <span>프로세스, 부서, 개인 결재자별 평균 결재 시간을 추적합니다</span>
+                        </li>
+                        <li>
+                            <strong>컴플라이언스 보고서</strong>
+                            <span>SOX, ISO 및 업계별 컴플라이언스 요구 사항에 대한 감사 보고서를 생성합니다</span>
+                        </li>
+                        <li>
+                            <strong>내보내기 및 통합</strong>
+                            <span>BI 도구로 데이터를 내보내거나, 웹훅으로 외부 시스템에 이벤트를 전달합니다</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="analytics-visual">
+                        <div class="analytics-panel">
+                            <div class="analytics-header">
+                                <span>프로세스 분석</span>
+                                <span class="analytics-period">이번 달</span>
+                            </div>
+                            <div class="analytics-kpis">
+                                <div class="kpi">
+                                    <span class="kpi-value">847</span>
+                                    <span class="kpi-label">전체 요청</span>
+                                    <span class="kpi-trend up">+18%</span>
+                                </div>
+                                <div class="kpi">
+                                    <span class="kpi-value">4.2h</span>
+                                    <span class="kpi-label">평균 주기 시간</span>
+                                    <span class="kpi-trend up">-32%</span>
+                                </div>
+                                <div class="kpi">
+                                    <span class="kpi-value">96%</span>
+                                    <span class="kpi-label">결재율</span>
+                                    <span class="kpi-trend up">+3%</span>
+                                </div>
+                            </div>
+                            <div class="analytics-bars">
+                                <div class="ana-bar-item">
+                                    <span class="bar-label">경비</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 85%; background: #fbbc04;"></div></div>
+                                    <span class="bar-value">312</span>
+                                </div>
+                                <div class="ana-bar-item">
+                                    <span class="bar-label">구매</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 65%; background: #4285f4;"></div></div>
+                                    <span class="bar-value">238</span>
+                                </div>
+                                <div class="ana-bar-item">
+                                    <span class="bar-label">휴가</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 50%; background: #34a853;"></div></div>
+                                    <span class="bar-value">184</span>
+                                </div>
+                                <div class="ana-bar-item">
+                                    <span class="bar-label">기타</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 30%; background: #9b72cb;"></div></div>
+                                    <span class="bar-value">113</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5: Mobile & Notifications -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #9b72cb);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="8" y="3" width="12" height="22" rx="3" fill="white" opacity="0.9"/><circle cx="14" cy="21" r="1.5" fill="#ea4335" opacity="0.5"/><path d="M11 7h6" stroke="#ea4335" stroke-width="1" opacity="0.3" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>모바일 우선 및 알림</h3>
+                    <p>어디서든 모든 기기에서 결재합니다. 실시간 푸시 알림, 인앱 메시징, Workup 통합으로 결재자가 요청을 놓치지 않습니다.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>모바일 결재</strong>
+                            <span>풀 기능 모바일 앱에서 세부 정보를 검토하고, 댓글을 추가하고, 한 번의 탭으로 결재합니다</span>
+                        </li>
+                        <li>
+                            <strong>푸시 알림</strong>
+                            <span>조치가 필요할 때 푸시, 이메일, SMS, 메신저로 즉시 알림을 보냅니다</span>
+                        </li>
+                        <li>
+                            <strong>채팅을 통한 결재</strong>
+                            <span>앱을 열지 않고 인스턴트 메신저나 Workup에서 직접 결재합니다</span>
+                        </li>
+                        <li>
+                            <strong>오프라인 지원</strong>
+                            <span>인터넷 없이도 검토하고 결재합니다. 연결 복원 시 동기화됩니다</span>
+                        </li>
+                        <li>
+                            <strong>Workup 통합</strong>
+                            <span>Workup 슈퍼 앱 내에 내장되어 일상 업무에서 원활하게 접근합니다</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="mobile-visual">
+                        <div class="phone-mockup">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <div class="phone-header">
+                                    <span>결재</span>
+                                    <span class="phone-badge">3</span>
+                                </div>
+                                <div class="phone-card">
+                                    <div class="phone-card-header">
+                                        <div class="pc-avatar" style="background: #4285f4;">AC</div>
+                                        <div class="pc-info">
+                                            <strong>Alex Chen</strong>
+                                            <span>구매 요청 &bull; ₩8,500,000</span>
+                                        </div>
+                                    </div>
+                                    <div class="phone-card-actions">
+                                        <button class="pc-btn reject">반려</button>
+                                        <button class="pc-btn approve">결재</button>
+                                    </div>
+                                </div>
+                                <div class="phone-card">
+                                    <div class="phone-card-header">
+                                        <div class="pc-avatar" style="background: #34a853;">LW</div>
+                                        <div class="pc-info">
+                                            <strong>Lisa Wang</strong>
+                                            <span>휴가 요청 &bull; 3일</span>
+                                        </div>
+                                    </div>
+                                    <div class="phone-card-actions">
+                                        <button class="pc-btn reject">반려</button>
+                                        <button class="pc-btn approve">결재</button>
+                                    </div>
+                                </div>
+                                <div class="phone-card">
+                                    <div class="phone-card-header">
+                                        <div class="pc-avatar" style="background: #fbbc04;">MR</div>
+                                        <div class="pc-info">
+                                            <strong>Mike Roberts</strong>
+                                            <span>경비 청구 &bull; ₩342,000</span>
+                                        </div>
+                                    </div>
+                                    <div class="phone-card-actions">
+                                        <button class="pc-btn reject">반려</button>
+                                        <button class="pc-btn approve">결재</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Features Grid -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>엔터프라이즈 워크플로를 위한 모든 것</h2>
+                <p>지능형 결재를 완전한 솔루션으로 만드는 추가 기능</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="none" stroke="#fbbc04" stroke-width="1.5" rx="2"/><path d="M9 9h6v6H9z" fill="#fbbc04" opacity="0.2"/><path d="M4 9h16M9 4v16" stroke="#fbbc04" stroke-width="1"/></svg>
+                    <h5>인쇄 및 내보내기</h5>
+                    <p>전체 기록이 포함된 PDF로 결재를 내보내거나, 서식 있는 문서를 인쇄합니다</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M8 12h8M12 8v8" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>사용자 정의 필드</h5>
+                    <p>사용자 정의 필드 유형, 조회 테이블, 비즈니스 로직으로 폼을 확장합니다</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    <h5>API 및 웹훅</h5>
+                    <p>외부 시스템에서 결재를 트리거하고 REST API로 결과를 전달합니다</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/></svg>
+                    <h5>다국어 지원</h5>
+                    <p>완전한 국제화 — 폼과 플로우가 20개 이상의 언어를 지원합니다</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M12 6v6l4 2" fill="none" stroke="#ea4335" stroke-width="1.8" stroke-linecap="round"/></svg>
+                    <h5>SLA 관리</h5>
+                    <p>프로세스별 응답 시간 목표를 설정하고 자동 에스컬레이션 규칙을 적용합니다</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V7l-8-5z" fill="none" stroke="#1a73e8" stroke-width="1.5"/><path d="M9 12l2 2 4-4" fill="none" stroke="#1a73e8" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>전자 서명</h5>
+                    <p>인증서 검증이 포함된 법적 구속력 있는 전자 서명</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M5 20c0-4 3-7 7-7s7 3 7 7" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M16 4l2 2-2 2" stroke="#fbbc04" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+                    <h5>위임 규칙</h5>
+                    <p>결재자가 휴가 중이거나 부재 중일 때 자동 위임을 설정합니다</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    <h5>데이터 내보내기</h5>
+                    <p>모든 결재 데이터를 Excel, CSV로 내보내거나 데이터 웨어하우스와 연동합니다</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>함께 성장하는 요금제</h2>
+                <p>무료로 시작하여 워크플로 규모에 맞게 업그레이드하세요</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Starter</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">₩4,000</span>
+                            <span class="price-period">/사용자/월</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>최대 50명 사용자</li>
+                        <li>10개 사용자 정의 워크플로</li>
+                        <li>기본 폼 빌더</li>
+                        <li>이메일 알림</li>
+                        <li>이메일 지원</li>
+                    </ul>
+                    <a href="#" class="btn-secondary pricing-btn">무료 체험 시작</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">가장 인기</div>
+                    <div class="pricing-header">
+                        <h4>Business</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">₩9,000</span>
+                            <span class="price-period">/사용자/월</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>무제한 사용자</li>
+                        <li>무제한 워크플로</li>
+                        <li>고급 폼 및 라우팅</li>
+                        <li>분석 대시보드</li>
+                        <li>API 접근</li>
+                        <li>우선 지원</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn btn-amber">무료 체험 시작</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Enterprise</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">맞춤 견적</span>
+                            <span class="price-period"></span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Business의 모든 기능</li>
+                        <li>프라이빗 배포</li>
+                        <li>사용자 정의 통합</li>
+                        <li>전자 서명 및 DLP</li>
+                        <li>전담 성공 관리자</li>
+                        <li>현장 교육</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary pricing-btn">영업 문의</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>결재 프로세스를 간소화할 준비가 되셨나요?</h2>
+                <p>지능형 결재로 결재 병목 현상을 제거한 수백 개의 조직에 합류하세요.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">무료 체험 시작</a>
+                    <a href="#" class="btn-secondary btn-large">데모 요청</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36">
+                    <p class="footer-tagline">기업 기술의 미래를 구축합니다.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>제품</h5>
+                    <a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a>
+                    <a href="workup.html">Workup</a>
+                    <a href="oortai.html">OORT.AI</a>
+                    <a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a>
+                    <a href="classroom.html">Cloud Classroom</a>
+                </div>
+                <div class="footer-links">
+                    <h5>솔루션</h5>
+                    <a href="messenger.html">인스턴트 메신저</a>
+                    <a href="clouddisk.html">클라우드 디스크</a>
+                    <a href="email.html">이메일</a>
+                    <a href="#">지능형 결재</a>
+                    <a href="dispatch.html">지휘 및 파견</a>
+                    <a href="fieldmanager.html">현장 관리자</a>
+                </div>
+                <div class="footer-links">
+                    <h5>회사</h5>
+                    <a href="about.html">회사 소개</a>
+                    <a href="#">채용</a>
+                    <a href="#">블로그</a>
+                    <a href="contact.html">문의</a>
+                    <a href="#">개인정보 처리방침</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OortCloud Technology. 모든 권리 보유.</p>
+                <div class="footer-social">
+                    <a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a>
+                    <a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a>
+                    <a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

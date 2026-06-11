@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" hreflang="ru" href="https://oortcloudsmart.com/ru/approval.html">
+    <title>Интеллектуальное согласование — Управление рабочими процессами | OortCloud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="approval.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Google+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">Продукты</a>
+                <a href="index.html#platform">Платформа</a>
+                <a href="index.html#enterprise">Предприятиям</a>
+                <a href="index.html#about">О компании</a>
+            </div>
+            <a href="#get-started" class="nav-cta">Начать бесплатно</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="Сменить язык">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">RU</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item active" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    Войти
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">Пользователь</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Панель управления
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            Выйти
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Переключить меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="approval-hero">
+        <div class="container">
+            <div class="approval-hero-grid">
+                <div class="approval-hero-content">
+                    <div class="product-breadcrumb">
+                        <a href="index.html">Продукты</a>
+                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <span>Интеллектуальное согласование</span>
+                    </div>
+                    <h1>Автоматизируйте решения, <span class="gradient-text-amber">ускоряйте бизнес</span></h1>
+                    <p class="approval-hero-desc">Управление рабочими процессами для предприятий, которое превращает сложные процедуры согласования в оптимизированные автоматизированные потоки. Визуальный конструктор процессов, интеллектуальные формы и маршрутизация на базе ИИ — согласования выполняются быстрее.</p>
+                    <div class="hero-actions">
+                        <a href="#get-started" class="btn-primary btn-large btn-amber">Начать бесплатный пробный период</a>
+                        <a href="#features" class="btn-secondary btn-large">Узнать, как это работает</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            На 60% быстрее циклы согласования
+                        </span>
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Конструктор процессов без кода
+                        </span>
+                    </div>
+                </div>
+                <div class="approval-hero-visual">
+                    <div class="workflow-mockup">
+                        <div class="workflow-canvas">
+                            <div class="wf-node wf-start">
+                                <div class="wf-node-icon start-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="#34a853"/><polygon points="6.5,5 6.5,11 11,8" fill="white"/></svg>
+                                </div>
+                                <span>Отправить</span>
+                            </div>
+                            <div class="wf-connector"></div>
+                            <div class="wf-node wf-approver">
+                                <div class="wf-node-icon approver-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="6" r="3" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M3 14c0-3 2-5 5-5s5 2 5 5" fill="none" stroke="#4285f4" stroke-width="1.5"/></svg>
+                                </div>
+                                <span>Руководитель</span>
+                                <span class="wf-status approved">Согласовано</span>
+                            </div>
+                            <div class="wf-connector"></div>
+                            <div class="wf-node wf-condition">
+                                <div class="wf-node-icon condition-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 2l6 6-6 6-6-6z" fill="none" stroke="#fbbc04" stroke-width="1.5"/></svg>
+                                </div>
+                                <span>Сумма &gt; $5K?</span>
+                            </div>
+                            <div class="wf-branch">
+                                <div class="wf-branch-line left">
+                                    <span class="branch-label">Да</span>
+                                </div>
+                                <div class="wf-branch-line right">
+                                    <span class="branch-label">Нет</span>
+                                </div>
+                            </div>
+                            <div class="wf-branch-nodes">
+                                <div class="wf-node wf-approver small">
+                                    <div class="wf-node-icon approver-icon">
+                                        <svg width="14" height="14" viewBox="0 0 16 16"><circle cx="8" cy="6" r="3" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M3 14c0-3 2-5 5-5s5 2 5 5" fill="none" stroke="#9b72cb" stroke-width="1.5"/></svg>
+                                    </div>
+                                    <span>Вице-президент по финансам</span>
+                                    <span class="wf-status pending">Ожидание</span>
+                                </div>
+                                <div class="wf-node wf-end small">
+                                    <div class="wf-node-icon end-icon">
+                                        <svg width="14" height="14" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="#34a853" opacity="0.2" stroke="#34a853" stroke-width="1.5"/><path d="M5 8l2 2 4-4" fill="none" stroke="#34a853" stroke-width="1.5" stroke-linecap="round"/></svg>
+                                    </div>
+                                    <span>Завершено</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="workflow-sidebar-panel">
+                            <div class="wf-panel-title">Детали согласования</div>
+                            <div class="wf-detail-item">
+                                <span class="wf-detail-label">Тип</span>
+                                <span class="wf-detail-value">Заявка на закупку</span>
+                            </div>
+                            <div class="wf-detail-item">
+                                <span class="wf-detail-label">Сумма</span>
+                                <span class="wf-detail-value">$8 500,00</span>
+                            </div>
+                            <div class="wf-detail-item">
+                                <span class="wf-detail-label">Подана</span>
+                                <span class="wf-detail-value">Алексей Чен</span>
+                            </div>
+                            <div class="wf-detail-item">
+                                <span class="wf-detail-label">Статус</span>
+                                <span class="wf-detail-value status-active">В процессе</span>
+                            </div>
+                            <div class="wf-timeline">
+                                <div class="timeline-item done">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span>Подана</span>
+                                        <span class="timeline-time">10:24</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item done">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span>Руководитель согласовал</span>
+                                        <span class="timeline-time">11:05</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item current">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span>Рассмотрение вице-президентом</span>
+                                        <span class="timeline-time">Ожидание...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Impact Stats -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <span class="impact-number">60%</span>
+                    <span class="impact-label">Быстрее циклы согласования</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">90%</span>
+                    <span class="impact-label">Сокращение ручной работы</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">200+</span>
+                    <span class="impact-label">Готовых шаблонов</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">100%</span>
+                    <span class="impact-label">Прозрачность процессов</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="usecases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Автоматизация любых бизнес-процессов</h2>
+                <p>От простых заявок на отпуск до сложных многоступенчатых процессов закупок</p>
+            </div>
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="10" y="8" width="28" height="32" rx="4" fill="none" stroke="#fbbc04" stroke-width="2.5"/>
+                            <path d="M18 18h12M18 24h8M18 30h10" stroke="#fbbc04" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="14" cy="18" r="1.5" fill="#fbbc04"/>
+                            <circle cx="14" cy="24" r="1.5" fill="#fbbc04"/>
+                            <circle cx="14" cy="30" r="1.5" fill="#fbbc04"/>
+                        </svg>
+                    </div>
+                    <h4>Расходы и компенсации</h4>
+                    <p>Автоматизация заявок на возмещение расходов с распознаванием чеков, проверкой политик и многоступенчатым согласованием в зависимости от суммы.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="8" y="12" width="32" height="24" rx="4" fill="none" stroke="#4285f4" stroke-width="2.5"/>
+                            <path d="M16 20h16M16 26h12M16 32h8" stroke="#4285f4" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M8 18h32" stroke="#4285f4" stroke-width="1.5" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <h4>Заказы на закупку</h4>
+                    <p>Оптимизация закупок с выбором поставщиков, проверкой бюджета и автоматической маршрутизацией к нужным согласующим.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <circle cx="24" cy="18" r="8" fill="none" stroke="#34a853" stroke-width="2.5"/>
+                            <path d="M12 38c0-7 5-12 12-12s12 5 12 12" fill="none" stroke="#34a853" stroke-width="2.5"/>
+                            <path d="M30 16l3-3M32 20h4" stroke="#34a853" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Управление персоналом и отпусками</h4>
+                    <p>Обработка заявок на отпуск, приём на работу, увольнение и кадровые изменения с помощью автоматизированных HR-процессов.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <path d="M12 14h24v20H12z" fill="none" stroke="#ea4335" stroke-width="2.5" rx="3"/>
+                            <path d="M12 14l12 10 12-10" fill="none" stroke="#ea4335" stroke-width="2"/>
+                            <path d="M20 38l4-4 4 4" fill="none" stroke="#ea4335" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Договоры и документы</h4>
+                    <p>Рассмотрение, редактирование и согласование договоров с отслеживанием версий, электронными подписями и проверкой на соответствие требованиям.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="8" y="10" width="14" height="14" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/>
+                            <rect x="26" y="10" width="14" height="14" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/>
+                            <rect x="16" y="26" width="14" height="14" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/>
+                            <path d="M22 17h4M23 24v4" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2"/>
+                        </svg>
+                    </div>
+                    <h4>ИТ и запросы доступа</h4>
+                    <p>Управление доступом к системам, provisionированием ПО и инфраструктурными запросами с обеспечением политик безопасности.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <path d="M10 38V18l14-8 14 8v20" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linejoin="round"/>
+                            <path d="M18 38v-10h12v10" fill="none" stroke="#1a73e8" stroke-width="2"/>
+                            <path d="M20 22h8" stroke="#1a73e8" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>АХО и администрирование</h4>
+                    <p>Бронирование помещений, заявки на обслуживание, пропуска для посетителей и заказ канцелярии — всё автоматизировано.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Мощный движок рабочих процессов — без единой строки кода</h2>
+                <p>Проектируйте сложные процессы согласования с помощью интуитивных визуальных инструментов — без привлечения разработчиков</p>
+            </div>
+
+            <!-- Feature 1: Visual Flow Designer -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #fbbc04, #ea4335);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="4" fill="white" opacity="0.2"/><circle cx="10" cy="10" r="3" fill="white" opacity="0.9"/><circle cx="18" cy="18" r="3" fill="white" opacity="0.9"/><path d="M12 11l4 5" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/></svg>
+                    </div>
+                    <h3>Визуальный конструктор процессов</h3>
+                    <p>Конструктор рабочих процессов с перетаскиванием элементов, превращающий сложные процедуры в наглядные блок-схемы. Создавайте, тестируйте и внедряйте процессы согласования за минуты, а не за недели.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Холст с перетаскиванием</strong>
+                            <span>Создавайте процессы визуально с узлами согласования, условиями, ветвлениями и параллельными путями</span>
+                        </li>
+                        <li>
+                            <strong>Условные ветвления</strong>
+                            <span>Маршрутизация согласований по сумме, подразделению, роли или любому другому значению поля</span>
+                        </li>
+                        <li>
+                            <strong>Параллельные и последовательные согласования</strong>
+                            <span>Настройка многоуровневых, совместных и последовательных цепочек согласования</span>
+                        </li>
+                        <li>
+                            <strong>Динамические согласующие</strong>
+                            <span>Автоматическое назначение согласующих по организационной иерархии, руководителю подразделения или роли в проекте</span>
+                        </li>
+                        <li>
+                            <strong>Шаблоны процессов</strong>
+                            <span>Более 200 готовых шаблонов для типичных бизнес-процессов — настраивайте и внедряйте мгновенно</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="designer-visual">
+                        <div class="designer-canvas">
+                            <div class="canvas-toolbar">
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5" fill="none" stroke="#5f6368" stroke-width="1.2"/></svg></div>
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="2" width="10" height="10" rx="2" fill="none" stroke="#5f6368" stroke-width="1.2"/></svg></div>
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2l5 5-5 5-5-5z" fill="none" stroke="#5f6368" stroke-width="1.2"/></svg></div>
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10M7 2v10" stroke="#5f6368" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+                            </div>
+                            <div class="canvas-flow">
+                                <div class="flow-node fn-start">Старт</div>
+                                <div class="flow-arrow"></div>
+                                <div class="flow-node fn-task">Заполнить форму</div>
+                                <div class="flow-arrow"></div>
+                                <div class="flow-node fn-approval">Непосредственный руководитель</div>
+                                <div class="flow-arrow"></div>
+                                <div class="flow-node fn-condition">Проверка бюджета</div>
+                                <div class="flow-split">
+                                    <div class="split-branch">
+                                        <span class="split-label">&gt;$10K</span>
+                                        <div class="flow-node fn-approval small">Директор</div>
+                                    </div>
+                                    <div class="split-branch">
+                                        <span class="split-label">&le;$10K</span>
+                                        <div class="flow-node fn-end small">Готово</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Smart Forms -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #4285f4, #34a853);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="3" width="18" height="22" rx="3" fill="white" opacity="0.9"/><path d="M9 9h10M9 13h7M9 17h8" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/><rect x="9" y="20" width="4" height="2" rx="1" fill="#34a853" opacity="0.7"/></svg>
+                    </div>
+                    <h3>Интеллектуальный конструктор форм</h3>
+                    <p>Создавайте интеллектуальные формы, адаптирующиеся к вводу данных. Разнообразные типы полей, правила валидации, автовычисления и связывание данных делают сбор информации максимально удобным.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Разнообразные типы полей</strong>
+                            <span>Текст, число, дата, выпадающий список, загрузка файлов, местоположение, подпись, таблица и ещё более 30 типов полей</span>
+                        </li>
+                        <li>
+                            <strong>Условная логика</strong>
+                            <span>Показ/скрытие полей, настройка обязательных полей и автозаполнение данных на основе предыдущих выборов</span>
+                        </li>
+                        <li>
+                            <strong>Автовычисления</strong>
+                            <span>Встроенные формулы для итогов, налогов, скидок и сложных бизнес-расчётов</span>
+                        </li>
+                        <li>
+                            <strong>Связывание данных</strong>
+                            <span>Подтягивание данных из других систем — справочник сотрудников, база проектов, бюджетные данные</span>
+                        </li>
+                        <li>
+                            <strong>Оптимизация для мобильных</strong>
+                            <span>Формы идеально отображаются на мобильных устройствах с поддержкой камеры, GPS и автономного режима</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="form-visual">
+                        <div class="form-demo">
+                            <div class="form-header">
+                                <span>Заявка на закупку</span>
+                                <span class="form-badge">Черновик</span>
+                            </div>
+                            <div class="form-body">
+                                <div class="form-field">
+                                    <label>Подразделение</label>
+                                    <div class="field-select">Разработка <svg width="10" height="10" viewBox="0 0 10 10"><path d="M3 4l2 2 2-2" fill="none" stroke="#9aa0a6" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+                                </div>
+                                <div class="form-field">
+                                    <label>Описание позиции</label>
+                                    <div class="field-input">MacBook Pro 16" для новых сотрудников</div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-field half">
+                                        <label>Количество</label>
+                                        <div class="field-input">5</div>
+                                    </div>
+                                    <div class="form-field half">
+                                        <label>Цена за единицу</label>
+                                        <div class="field-input">$2 499</div>
+                                    </div>
+                                </div>
+                                <div class="form-field calculated">
+                                    <label>Общая сумма</label>
+                                    <div class="field-calculated">$12 495,00</div>
+                                    <span class="calc-note">Вычислено автоматически</span>
+                                </div>
+                                <div class="form-field">
+                                    <label>Вложения</label>
+                                    <div class="field-upload">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 10V3M5 5l3-3 3 3M3 10v3h10v-3" fill="none" stroke="#9aa0a6" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        <span>Перетащите файлы или нажмите для загрузки</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Intelligent Routing -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #9b72cb, #4285f4);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="10" fill="white" opacity="0.2"/><path d="M9 14l3 3 7-7" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Интеллектуальная маршрутизация и автоматизация</h3>
+                    <p>Маршрутизация на базе ИИ автоматически определяет нужных согласующих, эскалирует просроченные запросы и обрабатывает исключения — ничего не останется без внимания.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Автомаршрутизация по оргструктуре</strong>
+                            <span>Автоматическая маршрутизация к непосредственному руководителю, вышестоящему руководителю или главе подразделения</span>
+                        </li>
+                        <li>
+                            <strong>Сроки и эскалация</strong>
+                            <span>Установите SLA для каждого этапа — автоматические напоминания, эскалация или автосогласование при истечении срока</span>
+                        </li>
+                        <li>
+                            <strong>Делегирование и замещение</strong>
+                            <span>Согласующие могут делегировать полномочия на период отпуска с ограниченным по времени правом замещения</span>
+                        </li>
+                        <li>
+                            <strong>Пакетное согласование</strong>
+                            <span>Рассматривайте и согласовывайте несколько заявок одновременно с помощью массовых действий и быстрого согласования</span>
+                        </li>
+                        <li>
+                            <strong>Отзыв и отмена</strong>
+                            <span>Заявители могут отзывать заявки; администраторы могут отменять согласования с полным аудитом</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="routing-visual">
+                        <div class="routing-demo">
+                            <div class="routing-header">Модуль автомаршрутизации</div>
+                            <div class="routing-rules">
+                                <div class="rule-item">
+                                    <div class="rule-condition">ЕСЛИ сумма &le; $1 000</div>
+                                    <div class="rule-arrow">→</div>
+                                    <div class="rule-action">Непосредственный руководитель</div>
+                                </div>
+                                <div class="rule-item">
+                                    <div class="rule-condition">ЕСЛИ сумма $1K – $10K</div>
+                                    <div class="rule-arrow">→</div>
+                                    <div class="rule-action">Руководитель + Директор</div>
+                                </div>
+                                <div class="rule-item highlight">
+                                    <div class="rule-condition">ЕСЛИ сумма &gt; $10 000</div>
+                                    <div class="rule-arrow">→</div>
+                                    <div class="rule-action">Руководитель + Вице-президент + CFO</div>
+                                </div>
+                            </div>
+                            <div class="routing-extras">
+                                <div class="extra-tag">
+                                    <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="none" stroke="#ea4335" stroke-width="1.2"/><path d="M6 3.5v3l2 1" fill="none" stroke="#ea4335" stroke-width="1" stroke-linecap="round"/></svg>
+                                    SLA: 24ч на этап
+                                </div>
+                                <div class="extra-tag">
+                                    <svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 2v4l3 2" fill="none" stroke="#fbbc04" stroke-width="1.2" stroke-linecap="round"/><circle cx="6" cy="6" r="5" fill="none" stroke="#fbbc04" stroke-width="1.2"/></svg>
+                                    Автоэскалация через 48ч
+                                </div>
+                                <div class="extra-tag">
+                                    <svg width="12" height="12" viewBox="0 0 12 12"><path d="M3 6l2 2 4-4" fill="none" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    Автосогласование при &lt; $100
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: Analytics & Monitoring -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #1a73e8);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="3" fill="white" opacity="0.2"/><path d="M8 18l4-5 4 3 4-8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Аналитика и анализ процессов</h3>
+                    <p>Полная прозрачность каждого процесса согласования. Выявляйте узкие места, измеряйте эффективность и непрерывно оптимизируйте рабочие процессы на основе данных.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Панель мониторинга в реальном времени</strong>
+                            <span>Контроль ожидающих, согласованных, отклонённых и просроченных заявок по всем процессам</span>
+                        </li>
+                        <li>
+                            <strong>Обнаружение узких мест</strong>
+                            <span>ИИ определяет, где задерживаются согласования, и предлагает оптимизации</span>
+                        </li>
+                        <li>
+                            <strong>Аналитика времени цикла</strong>
+                            <span>Отслеживание среднего времени согласования по процессу, подразделению и отдельному согласующему</span>
+                        </li>
+                        <li>
+                            <strong>Отчёты о соответствии</strong>
+                            <span>Формирование аудиторских отчётов для SOX, ISO и отраслевых требований</span>
+                        </li>
+                        <li>
+                            <strong>Экспорт и интеграция</strong>
+                            <span>Экспорт данных в BI-системы или передача событий во внешние системы через вебхуки</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="analytics-visual">
+                        <div class="analytics-panel">
+                            <div class="analytics-header">
+                                <span>Аналитика процессов</span>
+                                <span class="analytics-period">Текущий месяц</span>
+                            </div>
+                            <div class="analytics-kpis">
+                                <div class="kpi">
+                                    <span class="kpi-value">847</span>
+                                    <span class="kpi-label">Всего заявок</span>
+                                    <span class="kpi-trend up">+18%</span>
+                                </div>
+                                <div class="kpi">
+                                    <span class="kpi-value">4,2ч</span>
+                                    <span class="kpi-label">Среднее время цикла</span>
+                                    <span class="kpi-trend up">-32%</span>
+                                </div>
+                                <div class="kpi">
+                                    <span class="kpi-value">96%</span>
+                                    <span class="kpi-label">Доля согласованных</span>
+                                    <span class="kpi-trend up">+3%</span>
+                                </div>
+                            </div>
+                            <div class="analytics-bars">
+                                <div class="ana-bar-item">
+                                    <span class="bar-label">Расходы</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 85%; background: #fbbc04;"></div></div>
+                                    <span class="bar-value">312</span>
+                                </div>
+                                <div class="ana-bar-item">
+                                    <span class="bar-label">Закупки</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 65%; background: #4285f4;"></div></div>
+                                    <span class="bar-value">238</span>
+                                </div>
+                                <div class="ana-bar-item">
+                                    <span class="bar-label">Отпуска</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 50%; background: #34a853;"></div></div>
+                                    <span class="bar-value">184</span>
+                                </div>
+                                <div class="ana-bar-item">
+                                    <span class="bar-label">Прочее</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 30%; background: #9b72cb;"></div></div>
+                                    <span class="bar-value">113</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5: Mobile & Notifications -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #9b72cb);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="8" y="3" width="12" height="22" rx="3" fill="white" opacity="0.9"/><circle cx="14" cy="21" r="1.5" fill="#ea4335" opacity="0.5"/><path d="M11 7h6" stroke="#ea4335" stroke-width="1" opacity="0.3" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Мобильность и уведомления</h3>
+                    <p>Согласовывайте на ходу с любого устройства. Push-уведомления в реальном времени, сообщения в приложении и интеграция с Workup гарантируют, что согласующие не пропустят ни одной заявки.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Мобильное согласование</strong>
+                            <span>Полнофункциональное мобильное приложение — просматривайте детали, добавляйте комментарии и согласовывайте одним нажатием</span>
+                        </li>
+                        <li>
+                            <strong>Push-уведомления</strong>
+                            <span>Мгновенные оповещения через push, электронную почту, SMS и Messenger при необходимости действий</span>
+                        </li>
+                        <li>
+                            <strong>Согласование через чат</strong>
+                            <span>Согласовывайте прямо в Instant Messenger или Workup, не открывая приложение</span>
+                        </li>
+                        <li>
+                            <strong>Автономный режим</strong>
+                            <span>Рассматривайте и согласовывайте даже без интернета — синхронизация при восстановлении подключения</span>
+                        </li>
+                        <li>
+                            <strong>Интеграция с Workup</strong>
+                            <span>Встроено в суперприложение Workup для удобного доступа к рабочим процессам каждый день</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="mobile-visual">
+                        <div class="phone-mockup">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <div class="phone-header">
+                                    <span>Согласования</span>
+                                    <span class="phone-badge">3</span>
+                                </div>
+                                <div class="phone-card">
+                                    <div class="phone-card-header">
+                                        <div class="pc-avatar" style="background: #4285f4;">АЧ</div>
+                                        <div class="pc-info">
+                                            <strong>Алексей Чен</strong>
+                                            <span>Заявка на закупку &bull; $8 500</span>
+                                        </div>
+                                    </div>
+                                    <div class="phone-card-actions">
+                                        <button class="pc-btn reject">Отклонить</button>
+                                        <button class="pc-btn approve">Согласовать</button>
+                                    </div>
+                                </div>
+                                <div class="phone-card">
+                                    <div class="phone-card-header">
+                                        <div class="pc-avatar" style="background: #34a853;">ЛВ</div>
+                                        <div class="pc-info">
+                                            <strong>Лиза Ван</strong>
+                                            <span>Заявка на отпуск &bull; 3 дня</span>
+                                        </div>
+                                    </div>
+                                    <div class="phone-card-actions">
+                                        <button class="pc-btn reject">Отклонить</button>
+                                        <button class="pc-btn approve">Согласовать</button>
+                                    </div>
+                                </div>
+                                <div class="phone-card">
+                                    <div class="phone-card-header">
+                                        <div class="pc-avatar" style="background: #fbbc04;">МР</div>
+                                        <div class="pc-info">
+                                            <strong>Михаил Робертс</strong>
+                                            <span>Заявка на расходы &bull; $342</span>
+                                        </div>
+                                    </div>
+                                    <div class="phone-card-actions">
+                                        <button class="pc-btn reject">Отклонить</button>
+                                        <button class="pc-btn approve">Согласовать</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Features Grid -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Всё для корпоративного документооборота</h2>
+                <p>Дополнительные возможности, делающие Intelligent Approval комплексным решением</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="none" stroke="#fbbc04" stroke-width="1.5" rx="2"/><path d="M9 9h6v6H9z" fill="#fbbc04" opacity="0.2"/><path d="M4 9h16M9 4v16" stroke="#fbbc04" stroke-width="1"/></svg>
+                    <h5>Печать и экспорт</h5>
+                    <p>Экспорт согласований в PDF с полной историей или печать отформатированных документов</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M8 12h8M12 8v8" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>Настраиваемые поля</h5>
+                    <p>Расширение форм пользовательскими типами полей, справочниками и бизнес-логикой</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    <h5>API и вебхуки</h5>
+                    <p>Запуск согласований из внешних систем и передача результатов через REST API</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/></svg>
+                    <h5>Многоязычность</h5>
+                    <p>Полная интернационализация — формы и процессы поддерживают более 20 языков</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M12 6v6l4 2" fill="none" stroke="#ea4335" stroke-width="1.8" stroke-linecap="round"/></svg>
+                    <h5>Управление SLA</h5>
+                    <p>Определение целевых показателей времени отклика для каждого процесса с правилами автоэскалации</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V7l-8-5z" fill="none" stroke="#1a73e8" stroke-width="1.5"/><path d="M9 12l2 2 4-4" fill="none" stroke="#1a73e8" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>Электронные подписи</h5>
+                    <p>Юридически значимые электронные подписи с проверкой сертификатов</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M5 20c0-4 3-7 7-7s7 3 7 7" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M16 4l2 2-2 2" stroke="#fbbc04" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+                    <h5>Правила делегирования</h5>
+                    <p>Настройка автоматического делегирования, когда согласующие в отпуске или недоступны</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    <h5>Экспорт данных</h5>
+                    <p>Экспорт всех данных согласований в Excel, CSV или подключение к хранилищу данных</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>Тарифы, которые растут вместе с вами</h2>
+                <p>Начните бесплатно, переходите на новый уровень по мере масштабирования процессов</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Стартовый</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">$4</span>
+                            <span class="price-period">/пользователь/месяц</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>До 50 пользователей</li>
+                        <li>10 настраиваемых процессов</li>
+                        <li>Базовый конструктор форм</li>
+                        <li>Уведомления по электронной почте</li>
+                        <li>Поддержка по электронной почте</li>
+                    </ul>
+                    <a href="#" class="btn-secondary pricing-btn">Начать бесплатный пробный период</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Самый популярный</div>
+                    <div class="pricing-header">
+                        <h4>Бизнес</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">$9</span>
+                            <span class="price-period">/пользователь/месяц</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Неограниченное число пользователей</li>
+                        <li>Неограниченные процессы</li>
+                        <li>Расширенные формы и маршрутизация</li>
+                        <li>Панель аналитики</li>
+                        <li>Доступ к API</li>
+                        <li>Приоритетная поддержка</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn btn-amber">Начать бесплатный пробный период</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Корпоративный</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">По запросу</span>
+                            <span class="price-period"></span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Всё из тарифа «Бизнес»</li>
+                        <li>Частное развёртывание</li>
+                        <li>Индивидуальные интеграции</li>
+                        <li>Электронные подписи и DLP</li>
+                        <li>Персональный менеджер по работе с клиентами</li>
+                        <li>Обучение на площадке заказчика</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary pricing-btn">Связаться с нами</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Готовы оптимизировать согласования?</h2>
+                <p>Присоединяйтесь к сотням организаций, устранивших задержки в согласованиях с помощью Intelligent Approval.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">Начать бесплатный пробный период</a>
+                    <a href="#" class="btn-secondary btn-large">Запросить демонстрацию</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36">
+                    <p class="footer-tagline">Создаём будущее корпоративных технологий.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Продукты</h5>
+                    <a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a>
+                    <a href="workup.html">Workup</a>
+                    <a href="oortai.html">OORT.AI</a>
+                    <a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a>
+                    <a href="classroom.html">Cloud Classroom</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Решения</h5>
+                    <a href="messenger.html">Мессенджер</a>
+                    <a href="clouddisk.html">Облачный диск</a>
+                    <a href="email.html">Электронная почта</a>
+                    <a href="#">Интеллектуальное согласование</a>
+                    <a href="../dispatch.html">Команда и диспетчеризация</a>
+                    <a href="fieldmanager.html">Управление полевыми операциями</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Компания</h5>
+                    <a href="about.html">О компании</a>
+                    <a href="#">Карьера</a>
+                    <a href="#">Блог</a>
+                    <a href="contact.html">Контакты</a>
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OortCloud Technology. Все права защищены.</p>
+                <div class="footer-social">
+                    <a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a>
+                    <a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a>
+                    <a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

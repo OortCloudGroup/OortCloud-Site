@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OortCloud - Produtos para Todos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="Logo OortCloud" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="#products">Produtos</a>
+                <a href="#platform">Plataforma</a>
+                <a href="#enterprise">Empresarial</a>
+                <a href="about.html">Sobre</a>
+            </div>
+            <a href="#contact" class="nav-cta">Falar com Vendas</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="Trocar Idioma">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">PT</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en">
+                            <span class="nav-lang-item-flag">🇺🇸</span>
+                            <span class="nav-lang-item-label">English</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="zh">
+                            <span class="nav-lang-item-flag">🇨🇳</span>
+                            <span class="nav-lang-item-label">中文</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="es">
+                            <span class="nav-lang-item-flag">🇪🇸</span>
+                            <span class="nav-lang-item-label">Español</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ar">
+                            <span class="nav-lang-item-flag">🇸🇦</span>
+                            <span class="nav-lang-item-label">العربية</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="de">
+                            <span class="nav-lang-item-flag">🇩🇪</span>
+                            <span class="nav-lang-item-label">Deutsch</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="fr">
+                            <span class="nav-lang-item-flag">🇫🇷</span>
+                            <span class="nav-lang-item-label">Français</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ja">
+                            <span class="nav-lang-item-flag">🇯🇵</span>
+                            <span class="nav-lang-item-label">日本語</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item active" data-lang="pt">
+                            <span class="nav-lang-item-flag">🇧🇷</span>
+                            <span class="nav-lang-item-label">Português</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ru">
+                            <span class="nav-lang-item-flag">🇷🇺</span>
+                            <span class="nav-lang-item-label">Русский</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ko">
+                            <span class="nav-lang-item-flag">🇰🇷</span>
+                            <span class="nav-lang-item-label">한국어</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="id">
+                            <span class="nav-lang-item-flag">🇮🇩</span>
+                            <span class="nav-lang-item-label">Indonesia</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="tr">
+                            <span class="nav-lang-item-flag">🇹🇷</span>
+                            <span class="nav-lang-item-label">Türkçe</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    Entrar
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">Usuário</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Painel
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            Sair
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1>Produtos feitos para <span class="gradient-text">todos</span></h1>
+            <p class="hero-subtitle">Da inteligência visual com IA à colaboração empresarial, a OortCloud cria produtos que ajudam empresas a trabalhar de forma mais inteligente, se conectar mais rápido e escalar mais longe.</p>
+            <a href="#products" class="hero-btn">Conheça nossos produtos</a>
+        </div>
+        <div class="hero-visual">
+            <div class="orbit-container">
+                <div class="orbit orbit-1"></div>
+                <div class="orbit orbit-2"></div>
+                <div class="orbit orbit-3"></div>
+                <div class="orbit-dot dot-1"></div>
+                <div class="orbit-dot dot-2"></div>
+                <div class="orbit-dot dot-3"></div>
+                <div class="orbit-dot dot-4"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Product -->
+    <section class="featured-section" id="platform">
+        <div class="container">
+            <div class="featured-card">
+                <div class="featured-content">
+                    <span class="featured-badge">Destaque</span>
+                    <h2>VLStream</h2>
+                    <p class="featured-desc">A plataforma completa de desenvolvimento de IA visual. Integre rotulagem de dados, treinamento e deploy de modelos em um único fluxo. Suporte completo à série YOLO, do YOLOv5 ao YOLOv26.</p>
+                    <ul class="featured-list">
+                        <li>Pipeline de IA ponta a ponta</li>
+                        <li>Suporte completo aos modelos YOLO (v5 - v26)</li>
+                        <li>Rotulagem e anotação de dados</li>
+                        <li>Deploy de modelos com um clique</li>
+                    </ul>
+                    <a href="https://vls.oortcloudsmart.com/en/" target="_blank" class="btn-primary">Saiba mais</a>
+                </div>
+                <div class="featured-visual">
+                    <div class="vlstream-graphic">
+                        <div class="ai-node node-center">
+                            <svg viewBox="0 0 48 48" width="48" height="48">
+                                <rect x="4" y="4" width="40" height="40" rx="8" fill="#4285f4" opacity="0.1"/>
+                                <path d="M14 34V14h6l4 12 4-12h6v20h-5V21l-4 13h-3l-4-13v13h-4z" fill="#4285f4"/>
+                            </svg>
+                        </div>
+                        <div class="ai-node node-tl">
+                            <svg viewBox="0 0 32 32" width="32" height="32"><rect x="2" y="2" width="28" height="28" rx="6" fill="#34a853" opacity="0.15"/><path d="M8 16h16M16 8v16" stroke="#34a853" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        </div>
+                        <div class="ai-node node-tr">
+                            <svg viewBox="0 0 32 32" width="32" height="32"><rect x="2" y="2" width="28" height="28" rx="6" fill="#ea4335" opacity="0.15"/><circle cx="16" cy="16" r="6" fill="none" stroke="#ea4335" stroke-width="2"/><path d="M16 12v4l3 2" stroke="#ea4335" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                        <div class="ai-node node-bl">
+                            <svg viewBox="0 0 32 32" width="32" height="32"><rect x="2" y="2" width="28" height="28" rx="6" fill="#fbbc04" opacity="0.15"/><path d="M10 22l4-6 4 4 4-8" stroke="#fbbc04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="ai-node node-br">
+                            <svg viewBox="0 0 32 32" width="32" height="32"><rect x="2" y="2" width="28" height="28" rx="6" fill="#9b72cb" opacity="0.15"/><path d="M10 16h12M10 12h8M10 20h10" stroke="#9b72cb" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                        <svg class="connection-lines" viewBox="0 0 300 250">
+                            <line x1="150" y1="125" x2="50" y2="40" stroke="#4285f4" stroke-width="1" opacity="0.3" stroke-dasharray="4"/>
+                            <line x1="150" y1="125" x2="250" y2="40" stroke="#ea4335" stroke-width="1" opacity="0.3" stroke-dasharray="4"/>
+                            <line x1="150" y1="125" x2="50" y2="210" stroke="#fbbc04" stroke-width="1" opacity="0.3" stroke-dasharray="4"/>
+                            <line x1="150" y1="125" x2="250" y2="210" stroke="#9b72cb" stroke-width="1" opacity="0.3" stroke-dasharray="4"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Produtos</h2>
+                <p>Um ecossistema completo de ferramentas pensadas para empresas modernas</p>
+            </div>
+
+            <!-- Category: Collaboration -->
+            <div class="product-category">
+                <h3 class="category-title">Colaboração e Comunicação</h3>
+                <div class="products-grid">
+                    <!-- Workup -->
+                    <a href="workup.html" class="product-card-link">
+                    <div class="product-card">
+                        <div class="product-icon" style="background: linear-gradient(135deg, #4285f4, #9b72cb);">
+                            <svg viewBox="0 0 48 48" width="36" height="36">
+                                <rect x="8" y="8" width="14" height="14" rx="3" fill="white" opacity="0.9"/>
+                                <rect x="26" y="8" width="14" height="14" rx="3" fill="white" opacity="0.7"/>
+                                <rect x="8" y="26" width="14" height="14" rx="3" fill="white" opacity="0.7"/>
+                                <rect x="26" y="26" width="14" height="14" rx="3" fill="white" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <h4>Workup</h4>
+                        <p>Super app completo que integra Messenger, Aprovações, Classroom, Drive, E-mail e aplicações. Seu espaço de trabalho digital completo.</p>
+                        <span class="product-tag">Super App</span>
+                    </div>
+                    </a>
+
+                    <!-- Instant Messenger -->
+                    <a href="messenger.html" class="product-card-link">
+                    <div class="product-card">
+                        <div class="product-icon" style="background: linear-gradient(135deg, #34a853, #4285f4);">
+                            <svg viewBox="0 0 48 48" width="36" height="36">
+                                <path d="M12 14c0-2.2 1.8-4 4-4h16c2.2 0 4 1.8 4 4v12c0 2.2-1.8 4-4 4h-4l-6 6v-6h-6c-2.2 0-4-1.8-4-4V14z" fill="white" opacity="0.9"/>
+                                <circle cx="20" cy="20" r="1.5" fill="#34a853"/>
+                                <circle cx="24" cy="20" r="1.5" fill="#34a853"/>
+                                <circle cx="28" cy="20" r="1.5" fill="#34a853"/>
+                            </svg>
+                        </div>
+                        <h4>Instant Messenger</h4>
+                        <p>Plataforma de mensagens corporativa para comunicação fluida da equipe, com compartilhamento de mídia e colaboração em grupo.</p>
+                        <span class="product-tag">Comunicação</span>
+                    </div>
+                    </a>
+
+                    <!-- Email System -->
+                    <a href="email.html" class="product-card-link">
+                    <div class="product-card">
+                        <div class="product-icon" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">
+                            <svg viewBox="0 0 48 48" width="36" height="36">
+                                <rect x="8" y="14" width="32" height="22" rx="3" fill="white" opacity="0.9"/>
+                                <path d="M8 17l16 10 16-10" fill="none" stroke="#ea4335" stroke-width="2" opacity="0.6"/>
+                            </svg>
+                        </div>
+                        <h4>E-mail</h4>
+                        <p>Sistema de e-mail empresarial completo com suporte a deploy privado. Seguro, confiável e totalmente sob seu controle.</p>
+                        <span class="product-tag">Comunicação</span>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Category: Productivity -->
+            <div class="product-category">
+                <h3 class="category-title">Produtividade e Gestão</h3>
+                <div class="products-grid">
+                    <!-- Intelligent Approval -->
+                    <a href="approval.html" class="product-card-link">
+                    <div class="product-card">
+                        <div class="product-icon" style="background: linear-gradient(135deg, #fbbc04, #ea4335);">
+                            <svg viewBox="0 0 48 48" width="36" height="36">
+                                <path d="M14 24l6 6 14-14" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+                                <circle cx="24" cy="24" r="16" fill="none" stroke="white" stroke-width="2.5" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <h4>Aprovação Inteligente</h4>
+                        <p>Simplifique seus processos com gestão inteligente de fluxos. Automatize aprovações, acompanhe o progresso e garanta conformidade.</p>
+                        <span class="product-tag">Fluxo de Trabalho</span>
+                    </div>
+                    </a>
+
+                    <!-- Cloud Disk -->
+                    <a href="clouddisk.html" class="product-card-link">
+                    <div class="product-card">
+                        <div class="product-icon" style="background: linear-gradient(135deg, #4285f4, #34a853);">
+                            <svg viewBox="0 0 48 48" width="36" height="36">
+                                <path d="M16 34h16l6-10-8-14H18l-8 14 6 10z" fill="white" opacity="0.9"/>
+                                <path d="M10 24h28" stroke="#4285f4" stroke-width="1.5" opacity="0.4"/>
+                            </svg>
+                        </div>
+                        <h4>Cloud Disk</h4>
+                        <p>Armazenamento seguro na nuvem para sua empresa. Guarde, compartilhe e colabore em arquivos com controle de acesso e versionamento.</p>
+                        <span class="product-tag">Armazenamento</span>
+                    </div>
+                    </a>
+
+                    <!-- Cloud Classroom -->
+                    <a href="classroom.html" class="product-card-link">
+                    <div class="product-card">
+                        <div class="product-icon" style="background: linear-gradient(135deg, #ea4335, #9b72cb);">
+                            <svg viewBox="0 0 48 48" width="36" height="36">
+                                <rect x="10" y="12" width="28" height="20" rx="3" fill="white" opacity="0.9"/>
+                                <path d="M18 36h12" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+                                <path d="M24 32v4" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+                                <polygon points="20,18 20,26 28,22" fill="#ea4335" opacity="0.7"/>
+                            </svg>
+                        </div>
+                        <h4>Cloud Classroom</h4>
+                        <p>Plataforma de aprendizado e compartilhamento de conhecimento com foco em vídeo. Crie, publique e gerencie conteúdo de treinamento em escala empresarial.</p>
+                        <span class="product-tag">Aprendizado</span>
+                    </div>
+                    </a>
+
+                    <!-- Command & Dispatch -->
+                    <a href="dispatch.html" class="product-card-link">
+                    <div class="product-card">
+                        <div class="product-icon" style="background: linear-gradient(135deg, #1a73e8, #174ea6);">
+                            <svg viewBox="0 0 48 48" width="36" height="36">
+                                <circle cx="24" cy="24" r="14" fill="none" stroke="white" stroke-width="2.5" opacity="0.7"/>
+                                <circle cx="24" cy="24" r="4" fill="white" opacity="0.9"/>
+                                <path d="M24 14v4M24 30v4M14 24h4M30 24h4" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+                                <path d="M17 17l3 3M28 28l3 3M17 31l3-3M28 20l3-3" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <h4>Comando e Despacho</h4>
+                        <p>Sistema centralizado de despacho de operações. Monitoramento em tempo real, alocação de recursos e resposta a incidentes.</p>
+                        <span class="product-tag">Operações</span>
+                    </div>
+                    </a>
+
+                    <!-- Field Manager -->
+                    <a href="fieldmanager.html" class="product-card-link">
+                    <div class="product-card">
+                        <div class="product-icon" style="background: linear-gradient(135deg, #00b4ff, #0055cc);">
+                            <svg viewBox="0 0 48 48" width="36" height="36">
+                                <polygon points="24 4 44 14.5 44 33.5 24 44 4 33.5 4 14.5 24 4" fill="none" stroke="white" stroke-width="2" opacity="0.8"/>
+                                <line x1="24" y1="44" x2="24" y2="24" stroke="white" stroke-width="2" opacity="0.6"/>
+                                <polyline points="44 14.5 24 24 4 14.5" fill="none" stroke="white" stroke-width="1.5" opacity="0.5"/>
+                                <circle cx="24" cy="24" r="3" fill="white" opacity="0.9"/>
+                            </svg>
+                        </div>
+                        <h4>Field Manager</h4>
+                        <p>Plataforma unificada de operações de campo com despacho de equipes, coordenação de frotas, monitoramento de instalações, alertas de IA e rastreamento de trajetórias.</p>
+                        <span class="product-tag">Campo</span>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Category: AI & Infrastructure -->
+            <div class="product-category" id="enterprise">
+                <h3 class="category-title">IA e Infraestrutura</h3>
+                <div class="products-grid">
+                    <!-- OORT.AI -->
+                    <a href="oortai.html" class="product-card-link">
+                    <div class="product-card card-highlight">
+                        <div class="product-icon" style="background: linear-gradient(135deg, #9b72cb, #4285f4);">
+                            <svg viewBox="0 0 48 48" width="36" height="36">
+                                <circle cx="24" cy="18" r="8" fill="white" opacity="0.9"/>
+                                <path d="M14 38c0-6 4-10 10-10s10 4 10 10" fill="none" stroke="white" stroke-width="2.5" opacity="0.7"/>
+                                <circle cx="36" cy="14" r="3" fill="white" opacity="0.6"/>
+                                <path d="M34 14h-6" stroke="white" stroke-width="1.5" opacity="0.4" stroke-dasharray="2"/>
+                            </svg>
+                        </div>
+                        <h4>OORT.AI</h4>
+                        <p>Software de agentes automatizados empresariais. AI Office, AI Programming, AI Operations, Atendimento Inteligente e criação de Agentes — tudo adaptável a sistemas complexos de permissões.</p>
+                        <span class="product-tag">Agentes de IA</span>
+                    </div>
+                    </a>
+
+                    <!-- OORT.SH -->
+                    <a href="https://sh.oortcloudsmart.com/en/" target="_blank" class="product-card-link">
+                    <div class="product-card card-highlight">
+                        <div class="product-icon" style="background: linear-gradient(135deg, #34a853, #1a73e8);">
+                            <svg viewBox="0 0 48 48" width="36" height="36">
+                                <rect x="10" y="10" width="28" height="28" rx="4" fill="white" opacity="0.2"/>
+                                <path d="M16 22l4 4-4 4" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+                                <path d="M24 30h8" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+                            </svg>
+                        </div>
+                        <h4>OORT.SH</h4>
+                        <p>Plataforma de hospedagem de aplicações empresarial. Mais completa que Railway e Vercel — faça deploy, escale e gerencie aplicações com suporte total a deploy privado.</p>
+                        <span class="product-tag">Hospedagem</span>
+                    </div>
+                    </a>
+
+                    <!-- VLStream -->
+                    <a href="https://vls.oortcloudsmart.com/en/" target="_blank" class="product-card-link">
+                    <div class="product-card card-highlight">
+                        <div class="product-icon" style="background: linear-gradient(135deg, #4285f4, #ea4335);">
+                            <svg viewBox="0 0 48 48" width="36" height="36">
+                                <rect x="8" y="12" width="32" height="24" rx="4" fill="white" opacity="0.2"/>
+                                <rect x="12" y="16" width="12" height="8" rx="2" fill="white" opacity="0.9"/>
+                                <rect x="12" y="26" width="8" height="6" rx="1" fill="white" opacity="0.6"/>
+                                <rect x="22" y="26" width="8" height="6" rx="1" fill="white" opacity="0.6"/>
+                                <rect x="26" y="16" width="10" height="16" rx="2" fill="white" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <h4>VLStream</h4>
+                        <p>Plataforma completa de IA visual. Rotulagem de dados, treinamento de modelos e deploy com suporte completo à série YOLO (v5 a v26).</p>
+                        <span class="product-tag">Plataforma de IA</span>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Produtos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Clientes Empresariais</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50M+</span>
+                    <span class="stat-label">Usuários no Mundo</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">99,9%</span>
+                    <span class="stat-label">SLA de Disponibilidade</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Pronto para transformar sua empresa?</h2>
+                <p>Entre em contato com nossa equipe e descubra como os produtos OortCloud podem acelerar sua transformação digital.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary btn-large">Falar com Vendas</a>
+                    <a href="#" class="btn-secondary btn-large">Ver Documentação</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="about">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="Logo OortCloud" height="36">
+                    <p class="footer-tagline">Construindo o futuro da tecnologia empresarial.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Produtos</h5>
+                    <a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a>
+                    <a href="workup.html">Workup</a>
+                    <a href="oortai.html">OORT.AI</a>
+                    <a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a>
+                    <a href="classroom.html">Cloud Classroom</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Soluções</h5>
+                    <a href="messenger.html">Instant Messenger</a>
+                    <a href="clouddisk.html">Cloud Disk</a>
+                    <a href="email.html">E-mail</a>
+                    <a href="approval.html">Aprovação Inteligente</a>
+                    <a href="dispatch.html">Comando e Despacho</a>
+                    <a href="fieldmanager.html">Field Manager</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Empresa</h5>
+                    <a href="about.html">Sobre Nós</a>
+                    <a href="#">Carreiras</a>
+                    <a href="#">Blog</a>
+                    <a href="contact.html">Contato</a>
+                    <a href="#">Política de Privacidade</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OortCloud Technology. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="https://x.com/zhngxulin311636" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg>
+                    </a>
+                    <a href="https://github.com/OortCloudGroup" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

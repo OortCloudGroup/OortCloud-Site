@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지휘 및 파견 시스템 - 중앙 집중형 운영 관리 | OortCloud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dispatch.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="alternate" hreflang="ko" href="https://oortcloudsmart.com/ko/">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">제품</a>
+                <a href="index.html#platform">플랫폼</a>
+                <a href="index.html#enterprise">엔터프라이즈</a>
+                <a href="index.html#about">소개</a>
+            </div>
+            <a href="#get-started" class="nav-cta">영업팀 문의</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="언어 전환">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">KO</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item active" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    로그인
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">사용자</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            대시보드
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            로그아웃
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="메뉴 전환"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="dispatch-hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="container">
+            <div class="dispatch-hero-content">
+                <div class="product-breadcrumb">
+                    <a href="index.html">제품</a>
+                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <span>Command & Dispatch</span>
+                </div>
+                <h1>모든 작전을 <span class="gradient-text-navy">하나의 중심</span>에서 지휘하세요</h1>
+                <p class="dispatch-hero-desc">실시간 모니터링, 자원 배치, 사건 대응을 위한 중앙 집중형 지휘 스케줄링 플랫폼입니다. 통합 지휘 대시보드에서 팀을 조정하고 이벤트를 관리하고 완전한 상황 인식을 유지하세요.</p>
+                <div class="hero-actions">
+                    <a href="#get-started" class="btn-primary btn-large btn-navy">데모 요청</a>
+                    <a href="#features" class="btn-secondary btn-large">기능 살펴보기</a>
+                </div>
+            </div>
+            <div class="dispatch-hero-visual">
+                <div class="command-center-mockup">
+                    <div class="cc-header">
+                        <div class="cc-header-left">
+                            <span class="cc-title">지휘 센터</span>
+                            <span class="cc-status"><span class="status-dot-live"></span> 실시간</span>
+                        </div>
+                        <div class="cc-header-right">
+                            <span class="cc-time">14:32:07</span>
+                            <span class="cc-date">2026년 5월 28일</span>
+                        </div>
+                    </div>
+                    <div class="cc-body">
+                        <div class="cc-map">
+                            <div class="map-grid">
+                                <div class="map-pin pin-1"><span class="pin-pulse"></span></div>
+                                <div class="map-pin pin-2"><span class="pin-pulse"></span></div>
+                                <div class="map-pin pin-3"></div>
+                                <div class="map-pin pin-4"></div>
+                                <div class="map-pin pin-5"><span class="pin-pulse"></span></div>
+                            </div>
+                            <div class="map-overlay-stats">
+                                <div class="map-stat"><span class="ms-num">23</span><span class="ms-label">활성 유닛</span></div>
+                                <div class="map-stat"><span class="ms-num">5</span><span class="ms-label">사건</span></div>
+                                <div class="map-stat"><span class="ms-num">98%</span><span class="ms-label">커버리지</span></div>
+                            </div>
+                        </div>
+                        <div class="cc-sidebar-panel">
+                            <div class="cc-incident-list">
+                                <div class="cc-incident priority-high">
+                                    <span class="incident-priority">긴급</span>
+                                    <div class="incident-info">
+                                        <strong>교통 사고 - 고속도로 101</strong>
+                                        <span>3개 유닛 파견</span>
+                                    </div>
+                                </div>
+                                <div class="cc-incident priority-medium">
+                                    <span class="incident-priority">중간</span>
+                                    <div class="incident-info">
+                                        <strong>장비 정비</strong>
+                                        <span>예약됨 - B 구역</span>
+                                    </div>
+                                </div>
+                                <div class="cc-incident priority-low">
+                                    <span class="incident-priority">낮음</span>
+                                    <div class="incident-info">
+                                        <strong>정기 점검</strong>
+                                        <span>1개 유닛 배정</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Impact Stats -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <span class="impact-number">40%</span>
+                    <span class="impact-label">더 빨라진 대응 시간</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">실시간</span>
+                    <span class="impact-label">상황 인식</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">10K+</span>
+                    <span class="impact-label">동시 자원 관리</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">99.99%</span>
+                    <span class="impact-label">시스템 가용성</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="usecases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>모든 시나리오에 대한 지휘 및 통제</h2>
+                <p>일상 운영부터 긴급 사건 대응까지, 하나의 플랫폼으로 모두 처리</p>
+            </div>
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="24" r="16" fill="none" stroke="#1a73e8" stroke-width="2.5"/><circle cx="24" cy="24" r="4" fill="#1a73e8"/><path d="M24 12v4M24 32v4M12 24h4M32 24h4" stroke="#1a73e8" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>실시간 모니터링</h4>
+                    <p>통합 지리 대시보드에서 실시간 GPS 추적, IoT 센서 피드, 영상 감시, 상태 업데이트를 확인하세요.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40"><path d="M14 18h20v16H14z" fill="none" stroke="#ea4335" stroke-width="2.5" rx="2"/><path d="M18 18v-4a6 6 0 0112 0v4" fill="none" stroke="#ea4335" stroke-width="2.5"/><circle cx="24" cy="27" r="2.5" fill="#ea4335"/><path d="M24 29.5v3" stroke="#ea4335" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>사건 대응</h4>
+                    <p>신속한 사건 생성, 우선순위 분류, 팀 파견, 시간 제약이 있는 이벤트를 위한 에스컬레이션 워크플로를 제공합니다.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="16" cy="16" r="6" fill="none" stroke="#34a853" stroke-width="2.5"/><circle cx="32" cy="16" r="6" fill="none" stroke="#34a853" stroke-width="2.5"/><circle cx="24" cy="34" r="6" fill="none" stroke="#34a853" stroke-width="2.5"/><path d="M20 20l4 10M28 20l-4 10" stroke="#34a853" stroke-width="1.5" stroke-dasharray="3"/></svg>
+                    </div>
+                    <h4>자원 스케줄링</h4>
+                    <p>가용성, 위치, 기술 요구사항에 기반하여 인력, 차량, 장비 배치를 최적화합니다.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40"><rect x="8" y="10" width="32" height="22" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/><path d="M8 16h32" stroke="#9b72cb" stroke-width="1.5"/><rect x="12" y="20" width="10" height="8" rx="1" fill="#9b72cb" opacity="0.2"/><rect x="26" y="20" width="10" height="8" rx="1" fill="#9b72cb" opacity="0.2"/></svg>
+                    </div>
+                    <h4>영상 감시</h4>
+                    <p>중앙 집중형 콘솔에서 실시간 카메라 피드, 녹화 재생, AI 기반 이상 탐지를 통합합니다.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40"><path d="M12 14c0-2 1.5-3 3-3h18c1.5 0 3 1 3 3v12c0 2-1.5 3-3 3h-4l-5 5v-5h-9c-1.5 0-3-1-3-3V14z" fill="none" stroke="#fbbc04" stroke-width="2.5"/><path d="M18 19h12M18 23h8" stroke="#fbbc04" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>다채널 커뮤니케이션</h4>
+                    <p>음성, 영상, 메시징, 방송을 라디오, 전화, 데이터 네트워크에서 통합 인터페이스로 제공합니다.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40"><path d="M10 38l6-10 6 6 8-16 8 12" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="38" r="2" fill="#1a73e8"/><circle cx="16" cy="28" r="2" fill="#1a73e8"/><circle cx="38" cy="30" r="2" fill="#1a73e8"/></svg>
+                    </div>
+                    <h4>분석 및 보고</h4>
+                    <p>운영 대시보드, KPI 추적, 사후 분석, 자동 규정 준수 보고를 제공합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>풀 스펙트럼 지휘 기능</h2>
+                <p>실시간 운영 제어가 필요한 조직을 위해 특별히 구축</p>
+            </div>
+
+            <!-- Feature 1: Situational Awareness -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #1a73e8, #174ea6);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="10" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><circle cx="14" cy="14" r="3" fill="white"/><path d="M14 6v3M14 19v3M6 14h3M19 14h3" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/></svg>
+                    </div>
+                    <h3>실시간 상황 인식</h3>
+                    <p>GPS 추적, IoT 센서, 영상 피드, 상태 데이터를 인터랙티브 지리 지도에 결합한 통합 운영 상황도입니다. 모든 곳에서 일어나는 일을 실시간으로 파악하세요.</p>
+                    <ul class="feature-list">
+                        <li><strong>인터랙티브 GIS 지도</strong><span>위성, 지형, 커스텀 오버레이를 지원하는 다층 지리 시각화</span></li>
+                        <li><strong>실시간 GPS 추적</strong><span>모든 인력, 차량, 자산의 실시간 위치와 이동 경로 기록</span></li>
+                        <li><strong>IoT 및 센서 연동</strong><span>환경 센서, 경보, 접근 제어, 모든 IoT 디바이스 연결</span></li>
+                        <li><strong>지오펜싱 및 알림</strong><span>구역 정의 및 자원 진입/이탈 시 자동 알림 트리거</span></li>
+                        <li><strong>다중 화면 디스플레이</strong><span>비디오 월 및 다중 모니터 지휘 센터 레이아웃 지원</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="gis-visual">
+                        <div class="gis-map-demo">
+                            <div class="gis-layers">
+                                <div class="gis-zone zone-a"></div>
+                                <div class="gis-zone zone-b"></div>
+                            </div>
+                            <div class="gis-pins">
+                                <div class="gis-pin vehicle" style="top:30%;left:25%;"><svg width="16" height="16" viewBox="0 0 16 16"><rect x="2" y="6" width="12" height="6" rx="2" fill="#4285f4"/><circle cx="5" cy="12" r="1.5" fill="#333"/><circle cx="11" cy="12" r="1.5" fill="#333"/></svg></div>
+                                <div class="gis-pin vehicle" style="top:55%;left:60%;"><svg width="16" height="16" viewBox="0 0 16 16"><rect x="2" y="6" width="12" height="6" rx="2" fill="#34a853"/><circle cx="5" cy="12" r="1.5" fill="#333"/><circle cx="11" cy="12" r="1.5" fill="#333"/></svg></div>
+                                <div class="gis-pin person" style="top:40%;left:45%;"><svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="4" r="2.5" fill="#ea4335"/><path d="M2 11c0-2.5 1.8-4 4-4s4 1.5 4 4" fill="#ea4335"/></svg></div>
+                                <div class="gis-pin alert" style="top:20%;left:70%;"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1l6 11H1z" fill="#fbbc04"/><path d="M7 5v3M7 9.5v.5" stroke="#1a1a1a" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+                            </div>
+                            <div class="gis-legend">
+                                <span><i style="background:#4285f4;"></i>차량</span>
+                                <span><i style="background:#ea4335;"></i>인력</span>
+                                <span><i style="background:#fbbc04;"></i>알림</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Dispatch & Scheduling -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #1a73e8);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="6" width="20" height="16" rx="3" fill="white" opacity="0.2"/><path d="M4 11h20" stroke="white" stroke-width="1.5"/><path d="M9 4v4M19 4v4" stroke="white" stroke-width="2" stroke-linecap="round"/><rect x="7" y="14" width="4" height="3" rx="1" fill="white" opacity="0.8"/><rect x="12" y="14" width="4" height="3" rx="1" fill="white" opacity="0.5"/></svg>
+                    </div>
+                    <h3>지능형 파견 및 스케줄링</h3>
+                    <p>근접성, 능력, 업무량, 우선순위 규칙에 기반하여 적절한 자원을 적절한 업무에 자동 배정하는 AI 기반 파견 엔진입니다.</p>
+                    <ul class="feature-list">
+                        <li><strong>스마트 자동 파견</strong><span>거리, 기술, 가용성에 기반한 최적 자원 배정 추천</span></li>
+                        <li><strong>드래그 앤 드롭 스케줄링</strong><span>교대, 경로, 업무 배정을 위한 비주얼 간트 스타일 스케줄링 보드</span></li>
+                        <li><strong>우선순위 큐</strong><span>구성 가능한 에스컬레이션 규칙 및 SLA 추적을 통한 자동 우선순위화</span></li>
+                        <li><strong>수요 계획</strong><span>과거 패턴에 기반한 수요 예측 및 최적 인력 수준 산정</span></li>
+                        <li><strong>모바일 파견</strong><span>현장 작업자가 내비게이션, 폼, 상태 업데이트와 함께 모바일로 업무 배정 수신</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="dispatch-visual">
+                        <div class="dispatch-board">
+                            <div class="dispatch-board-header">파견 큐</div>
+                            <div class="dispatch-item high">
+                                <div class="di-priority">P1</div>
+                                <div class="di-info">
+                                    <strong>긴급 대응 - 7 구역</strong>
+                                    <span>예상 도착: 4분 &bull; 알파-3 유닛</span>
+                                </div>
+                                <div class="di-status dispatched">파견 완료</div>
+                            </div>
+                            <div class="dispatch-item medium">
+                                <div class="di-priority">P2</div>
+                                <div class="di-info">
+                                    <strong>유지보수 요청 - C 건물</strong>
+                                    <span>예상 도착: 15분 &bull; 브라보 팀</span>
+                                </div>
+                                <div class="di-status enroute">이동 중</div>
+                            </div>
+                            <div class="dispatch-item low">
+                                <div class="di-priority">P3</div>
+                                <div class="di-info">
+                                    <strong>정기 순찰 - 동부 구역</strong>
+                                    <span>예약: 15:00 &bull; 찰리-1 유닛</span>
+                                </div>
+                                <div class="di-status scheduled">예약됨</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Communication -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="4" fill="white"/><path d="M8 8a9 9 0 000 12M20 8a9 9 0 010 12" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/><path d="M5 5a14 14 0 000 18M23 5a14 14 0 010 18" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/></svg>
+                    </div>
+                    <h3>통합 커뮤니케이션</h3>
+                    <p>커뮤니케이션 사일로들을 허물세요. 음성, 영상, 메시징, 방송을 하나의 인터페이스에서 — 라디오 시스템, 전화, 데이터 네트워크와 상호 운용 가능합니다.</p>
+                    <ul class="feature-list">
+                        <li><strong>푸시투토크(PTT)</strong><span>기존 무전기처럼 개인 또는 그룹과 즉시 음성 통신</span></li>
+                        <li><strong>화상 회의</strong><span>최대 500명 참가자와 임시 화상 통화 또는 예약된 브리핑 시작</span></li>
+                        <li><strong>그룹 방송</strong><span>전체 유닛, 특정 구역 또는 커스텀 그룹에 알림 및 공지 전송</span></li>
+                        <li><strong>무전기 게이트웨이</strong><span>디지털 및 아날로그 무전기 시스템을 연결하여 원활한 상호 운용성 제공</span></li>
+                        <li><strong>인스턴트 메신저 연동</strong><span>Oort 메신저를 통한 스레드 메시징, 파일 공유, 조정 채널</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="comm-visual">
+                        <div class="comm-panel">
+                            <div class="comm-header">커뮤니케이션</div>
+                            <div class="comm-channels">
+                                <div class="comm-channel active">
+                                    <div class="ch-icon ptt"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="4" y="2" width="6" height="7" rx="3" fill="none" stroke="white" stroke-width="1.2"/><path d="M7 9v2M5 11h4" stroke="white" stroke-width="1" stroke-linecap="round"/></svg></div>
+                                    <div class="ch-info"><strong>전체 유닛</strong><span>PTT 채널</span></div>
+                                    <span class="ch-live">LIVE</span>
+                                </div>
+                                <div class="comm-channel">
+                                    <div class="ch-icon video"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="1" y="4" width="8" height="6" rx="1" fill="none" stroke="white" stroke-width="1.2"/><path d="M9 6l3-1.5v5L9 8" fill="none" stroke="white" stroke-width="1.2"/></svg></div>
+                                    <div class="ch-info"><strong>지휘 브리핑</strong><span>영상 &bull; 12명 참가</span></div>
+                                </div>
+                                <div class="comm-channel">
+                                    <div class="ch-icon msg"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 4c0-1 .5-1.5 1.5-1.5h7c1 0 1.5.5 1.5 1.5v5c0 1-.5 1.5-1.5 1.5H7l-2.5 2v-2H3.5C2.5 10.5 2 10 2 9V4z" fill="none" stroke="white" stroke-width="1.2"/></svg></div>
+                                    <div class="ch-info"><strong>현장 업데이트</strong><span>메신저 &bull; 8건 신규</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: Incident Management -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #fbbc04, #ea4335);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 4l10 18H4z" fill="white" opacity="0.2" stroke="white" stroke-width="2" stroke-linejoin="round"/><path d="M14 11v5M14 19v1" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>사건 관리</h3>
+                    <p>발생부터 해결까지 완전한 사건 수명 주기 관리. 표준 운영 절차, 에스컬레이션 워크플로, 사후 분석이 내장되어 있습니다.</p>
+                    <ul class="feature-list">
+                        <li><strong>사건 생성 및 분류</strong><span>유형, 우선순위, 위치, 영향 구역으로 사건 신속 생성</span></li>
+                        <li><strong>표준 운영 절차</strong><span>자원을 자동 배정하고 알림을 트리거하는 사전 정의된 대응 계획</span></li>
+                        <li><strong>에스컬레이션 워크플로</strong><span>시간 기반 및 조건 기반 상위 지휘 단계로의 에스컬레이션</span></li>
+                        <li><strong>타임라인 및 로그</strong><span>모든 조치, 커뮤니케이션, 의사결정의 완전한 시간순 기록</span></li>
+                        <li><strong>사후 검토</strong><span>타임라인 재생, KPI 분석, 개선 권장사항이 포함된 자동 보고서</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="incident-visual">
+                        <div class="incident-panel">
+                            <div class="incident-panel-header">
+                                <span>Incident #2847</span>
+                                <span class="incident-badge high">긴급</span>
+                            </div>
+                            <div class="incident-details">
+                                <div class="id-row"><span class="id-label">유형</span><span class="id-value">교통 사고</span></div>
+                                <div class="id-row"><span class="id-label">위치</span><span class="id-value">고속도로 101, 42km 지점</span></div>
+                                <div class="id-row"><span class="id-label">유닛</span><span class="id-value">알파-3, 브라보-7, 메드-2</span></div>
+                                <div class="id-row"><span class="id-label">상태</span><span class="id-value status-active">진행 중 - 출동 중</span></div>
+                            </div>
+                            <div class="incident-timeline">
+                                <div class="it-item done"><span class="it-dot"></span><span class="it-text">14:22 - 사건 접수</span></div>
+                                <div class="it-item done"><span class="it-dot"></span><span class="it-text">14:23 - 유닛 파견</span></div>
+                                <div class="it-item done"><span class="it-dot"></span><span class="it-text">14:27 - 첫 유닛 현장 도착</span></div>
+                                <div class="it-item current"><span class="it-dot"></span><span class="it-text">14:32 - 현장 평가</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5: Analytics & Admin -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #9b72cb, #1a73e8);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="3" fill="white" opacity="0.2"/><path d="M8 18l4-5 4 3 4-8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>분석 및 관리</h3>
+                    <p>성과 최적화에 도움이 되는 운영 인텔리전스입니다. 과거 분석, 예측 인사이트, 완전한 플랫폼 제어를 위한 종합 관리 도구를 제공합니다.</p>
+                    <ul class="feature-list">
+                        <li><strong>운영 대시보드</strong><span>대응 시간, 해결률, 자원 활용도, 커버리지 KPI</span></li>
+                        <li><strong>과거 분석</strong><span>과거 사건, 파견 패턴, 자원 이동을 쿼리 및 분석</span></li>
+                        <li><strong>예측 분석</strong><span>AI가 수요 패턴을 예측하고 최적 자원 배치를 제안</span></li>
+                        <li><strong>맞춤 보고서</strong><span>규정 준수, 운영 검토, 계획을 위한 자동 보고서 생성</span></li>
+                        <li><strong>역할 기반 관리</strong><span>운영자, 파견자, 감독자, 관리자를 위한 세분화된 권한</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="analytics-visual">
+                        <div class="ops-dashboard">
+                            <div class="ops-header">운영 현황</div>
+                            <div class="ops-kpis">
+                                <div class="ops-kpi"><span class="kpi-val">3.2분</span><span class="kpi-lbl">평균 대응 시간</span></div>
+                                <div class="ops-kpi"><span class="kpi-val">94%</span><span class="kpi-lbl">SLA 달성률</span></div>
+                                <div class="ops-kpi"><span class="kpi-val">87%</span><span class="kpi-lbl">자원 활용도</span></div>
+                            </div>
+                            <div class="ops-chart">
+                                <svg viewBox="0 0 200 60" width="100%"><polyline points="0,45 30,40 60,35 90,20 120,25 150,15 180,18 200,10" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round"/><polyline points="0,45 30,40 60,35 90,20 120,25 150,15 180,18 200,10" fill="url(#opsGrad)" opacity="0.15"/><defs><linearGradient id="opsGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a73e8"/><stop offset="100%" stop-color="#1a73e8" stop-opacity="0"/></linearGradient></defs></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Features -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>기업급 플랫폼</h2>
+                <p>신뢰성에 타협 없는 미션 크리티컬 운영을 위해 구축</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V7l-8-5z" fill="none" stroke="#1a73e8" stroke-width="1.5"/></svg><h5>고 가용성</h5><p>액티브-액티브 클러스터링 및 자동 페일오버로 99.99% 가동률</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M4 12h16M12 4v16" stroke="#ea4335" stroke-width="1" opacity="0.4"/></svg><h5>프라이빗 배포</h5><p>완전한 데이터 주권을 위한 온프레미스 또는 프라이빗 클라우드 배포</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M2 12h20M12 2c3 3 4.5 6 4.5 10s-1.5 7-4.5 10" fill="none" stroke="#34a853" stroke-width="1.2"/></svg><h5>다중 사이트</h5><p>여러 지휘 센터를 원활하게 연결하는 연합 아키텍처</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg><h5>API 및 연동</h5><p>REST API, 웹훅, CAD, ERP, GIS 시스템용 사전 구축 커넥터</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="2" y="6" width="9" height="12" rx="1.5" fill="none" stroke="#fbbc04" stroke-width="1.5"/><rect x="13" y="4" width="9" height="16" rx="1.5" fill="none" stroke="#fbbc04" stroke-width="1.5"/></svg><h5>모바일 지휘</h5><p>현장 지휘관 및 원격 운영을 위한 풀 기능 모바일 앱</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#1a73e8" stroke-width="1.5"/><path d="M12 7v5l3 3" fill="none" stroke="#1a73e8" stroke-width="1.8" stroke-linecap="round"/></svg><h5>감사 추적</h5><p>책임 소재 및 검토를 위한 완전한 타임스탬프 작업 로그</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M4 22v-7" stroke="#ea4335" stroke-width="1.5" stroke-linecap="round"/></svg><h5>알림 엔진</h5><p>위치, 시간, 상태, 커스텀 트리거 규칙 기반 구성 가능한 알림</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="#34a853" stroke-width="1.5" opacity="0.6"/></svg><h5>확장형 아키텍처</h5><p>수평 확장으로 10,000개 이상의 동시 자원 처리</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / CTA -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>조직에 맞춤화된 솔루션</h2>
+                <p>지휘 및 파견은 각 배포 환경에 맞게 커스터마이징됩니다. 맞춤 솔루션을 위해 문의해 주세요.</p>
+            </div>
+            <div class="enterprise-cta-card">
+                <div class="ent-card-content">
+                    <h3>엔터프라이즈 배포</h3>
+                    <p>모든 조직에는 고유한 운영 요구사항이 있습니다. 저희 팀이 최적의 지휘 시스템을 설계, 배포, 최적화하기 위해 함께 협력합니다.</p>
+                    <ul class="ent-features">
+                        <li>맞춤 배포 아키텍처</li>
+                        <li>기존 시스템과의 연동</li>
+                        <li>현장 교육 및 지원</li>
+                        <li>전담 성공 팀</li>
+                        <li>맞춤 SLA 및 24/7 지원</li>
+                    </ul>
+                </div>
+                <div class="ent-card-action">
+                    <a href="#" class="btn-primary btn-large btn-navy">컨설테이션 예약</a>
+                    <a href="#" class="btn-secondary btn-large">브로슈어 다운로드</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>운영을 현대화할 준비가 되셨나요?</h2>
+                <p>맞춤형 데모로 지휘 및 파견이 운영 효율성을 어떻게 혁신할 수 있는지 확인하세요.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">데모 요청</a>
+                    <a href="#" class="btn-secondary btn-large">전문가와 상담</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36"><p class="footer-tagline">기업 기술의 미래를 구축합니다.</p></div>
+                <div class="footer-links"><h5>제품</h5><a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a><a href="workup.html">Workup</a><a href="oortai.html">OORT.AI</a><a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a><a href="classroom.html">Cloud Classroom</a></div>
+                <div class="footer-links"><h5>솔루션</h5><a href="messenger.html">인스턴트 메신저</a><a href="clouddisk.html">클라우드 디스크</a><a href="email.html">이메일</a><a href="approval.html">지능형 결재</a><a href="#">지휘 및 파견</a><a href="fieldmanager.html">현장 관리자</a></div>
+                <div class="footer-links"><h5>회사</h5><a href="about.html">회사 소개</a><a href="#">채용</a><a href="#">블로그</a><a href="contact.html">문의</a><a href="#">개인정보 처리방침</a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 OortCloud Technology. 모든 권리 보유.</p><div class="footer-social"><a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a><a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a><a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a></div></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

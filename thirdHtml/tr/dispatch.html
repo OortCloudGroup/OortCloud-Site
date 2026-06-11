@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komuta ve Sevk Sistemi - Merkezi Operasyon Yönetimi | OortCloud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dispatch.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="alternate" hreflang="en" href="https://oortcloudsmart.com/en/dispatch.html" />
+    <link rel="alternate" hreflang="tr" href="https://oortcloudsmart.com/tr/dispatch.html" />
+    <link rel="alternate" hreflang="x-default" href="https://oortcloudsmart.com/en/dispatch.html" />
+    <style>:root { --font-primary: 'Noto Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }</style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">Ürünler</a>
+                <a href="index.html#platform">Platform</a>
+                <a href="index.html#enterprise">Kurumsal</a>
+                <a href="index.html#about">Hakkında</a>
+            </div>
+            <a href="#get-started" class="nav-cta">Satış İletişimi</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="Dil Değiştir">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">TR</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item active" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    Giriş Yap
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">Kullanıcı</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Kontrol Paneli
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            Çıkış Yap
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menüyü aç/kapat"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="dispatch-hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="container">
+            <div class="dispatch-hero-content">
+                <div class="product-breadcrumb">
+                    <a href="index.html">Ürünler</a>
+                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <span>Komuta ve Sevk</span>
+                </div>
+                <h1>Her operasyonu <span class="gradient-text-navy">tek bir merkezden</span> yönetin</h1>
+                <p class="dispatch-hero-desc">Gerçek zamanlı izleme, kaynak tahsisi ve olay müdahalesi için merkezi komuta planlama platformu. Ekipleri koordine edin, olayları yönetin ve tam durumsal farkındalık sağlayın — hepsi birleşik bir komuta panelinden.</p>
+                <div class="hero-actions">
+                    <a href="#get-started" class="btn-primary btn-large btn-navy">Demo Talep Edin</a>
+                    <a href="#features" class="btn-secondary btn-large">Yetenekleri Keşfedin</a>
+                </div>
+            </div>
+            <div class="dispatch-hero-visual">
+                <div class="command-center-mockup">
+                    <div class="cc-header">
+                        <div class="cc-header-left">
+                            <span class="cc-title">Komuta Merkezi</span>
+                            <span class="cc-status"><span class="status-dot-live"></span> CANLI</span>
+                        </div>
+                        <div class="cc-header-right">
+                            <span class="cc-time">14:32:07</span>
+                            <span class="cc-date">28 Mayıs 2026</span>
+                        </div>
+                    </div>
+                    <div class="cc-body">
+                        <div class="cc-map">
+                            <div class="map-grid">
+                                <div class="map-pin pin-1"><span class="pin-pulse"></span></div>
+                                <div class="map-pin pin-2"><span class="pin-pulse"></span></div>
+                                <div class="map-pin pin-3"></div>
+                                <div class="map-pin pin-4"></div>
+                                <div class="map-pin pin-5"><span class="pin-pulse"></span></div>
+                            </div>
+                            <div class="map-overlay-stats">
+                                <div class="map-stat"><span class="ms-num">23</span><span class="ms-label">Aktif Birim</span></div>
+                                <div class="map-stat"><span class="ms-num">5</span><span class="ms-label">Olay</span></div>
+                                <div class="map-stat"><span class="ms-num">%98</span><span class="ms-label">Kapsama</span></div>
+                            </div>
+                        </div>
+                        <div class="cc-sidebar-panel">
+                            <div class="cc-incident-list">
+                                <div class="cc-incident priority-high">
+                                    <span class="incident-priority">YÜKSEK</span>
+                                    <div class="incident-info">
+                                        <strong>Trafik Olayı - Otoyol 101</strong>
+                                        <span>3 birim sevk edildi</span>
+                                    </div>
+                                </div>
+                                <div class="cc-incident priority-medium">
+                                    <span class="incident-priority">ORTA</span>
+                                    <div class="incident-info">
+                                        <strong>Ekipman Bakımı</strong>
+                                        <span>Planlandı - Bölge B</span>
+                                    </div>
+                                </div>
+                                <div class="cc-incident priority-low">
+                                    <span class="incident-priority">DÜŞÜK</span>
+                                    <div class="incident-info">
+                                        <strong>Rutin Denetim</strong>
+                                        <span>1 birim atandı</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Impact Stats -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <span class="impact-number">40%</span>
+                    <span class="impact-label">Daha hızlı müdahale süresi</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">Gerçek Zamanlı</span>
+                    <span class="impact-label">Durumsal farkındalık</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">10K+</span>
+                    <span class="impact-label">Eşzamanlı kaynak</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">99.99%</span>
+                    <span class="impact-label">Sistem kullanılabilirliği</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="usecases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Her senaryo için komuta ve kontrol</h2>
+                <p>Günlük operasyonlardan kritik olay müdahalesine, tek platform her şeyi yönetir</p>
+            </div>
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="24" r="16" fill="none" stroke="#1a73e8" stroke-width="2.5"/><circle cx="24" cy="24" r="4" fill="#1a73e8"/><path d="M24 12v4M24 32v4M12 24h4M32 24h4" stroke="#1a73e8" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>Gerçek Zamanlı İzleme</h4>
+                    <p>Birleşik coğrafi panelde canlı GPS takibi, IoT sensör beslemeleri, video gözetimi ve durum güncellemeleri.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40"><path d="M14 18h20v16H14z" fill="none" stroke="#ea4335" stroke-width="2.5" rx="2"/><path d="M18 18v-4a6 6 0 0112 0v4" fill="none" stroke="#ea4335" stroke-width="2.5"/><circle cx="24" cy="27" r="2.5" fill="#ea4335"/><path d="M24 29.5v3" stroke="#ea4335" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>Olay Müdahalesi</h4>
+                    <p>Zamana duyarlı olaylar için hızlı olay oluşturma, öncelik sınıflandırması, ekip sevki ve yükseltme iş akışları.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="16" cy="16" r="6" fill="none" stroke="#34a853" stroke-width="2.5"/><circle cx="32" cy="16" r="6" fill="none" stroke="#34a853" stroke-width="2.5"/><circle cx="24" cy="34" r="6" fill="none" stroke="#34a853" stroke-width="2.5"/><path d="M20 20l4 10M28 20l-4 10" stroke="#34a853" stroke-width="1.5" stroke-dasharray="3"/></svg>
+                    </div>
+                    <h4>Kaynak Planlaması</h4>
+                    <p>Personel, araç ve ekipman tahsisini kullanılabilirlik, konum ve beceri gereksinimlerine göre optimize edin.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40"><rect x="8" y="10" width="32" height="22" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/><path d="M8 16h32" stroke="#9b72cb" stroke-width="1.5"/><rect x="12" y="20" width="10" height="8" rx="1" fill="#9b72cb" opacity="0.2"/><rect x="26" y="20" width="10" height="8" rx="1" fill="#9b72cb" opacity="0.2"/></svg>
+                    </div>
+                    <h4>Video Gözetimi</h4>
+                    <p>Merkezi bir konsoldan canlı kamera beslemelerini, kayıtları ve yapay zeka destekli anomali tespitini entegre edin.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40"><path d="M12 14c0-2 1.5-3 3-3h18c1.5 0 3 1 3 3v12c0 2-1.5 3-3 3h-4l-5 5v-5h-9c-1.5 0-3-1-3-3V14z" fill="none" stroke="#fbbc04" stroke-width="2.5"/><path d="M18 19h12M18 23h8" stroke="#fbbc04" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>Çoklu Kanal İletişim</h4>
+                    <p>Birleşik arayüzde telsiz, telefon ve veri ağları üzerinden ses, video, mesajlaşma ve yayın.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40"><path d="M10 38l6-10 6 6 8-16 8 12" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="38" r="2" fill="#1a73e8"/><circle cx="16" cy="28" r="2" fill="#1a73e8"/><circle cx="38" cy="30" r="2" fill="#1a73e8"/></svg>
+                    </div>
+                    <h4>Analitik ve Raporlama</h4>
+                    <p>Operasyonel paneller, KPI takibi, olay sonrası analiz ve otomatik uyumluluk raporlaması.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tam spektrumlu komuta yetenekleri</h2>
+                <p>Gerçek zamanlı operasyonel kontrole ihtiyaç duyan kuruluşlar için özel olarak tasarlandı</p>
+            </div>
+
+            <!-- Feature 1: Situational Awareness -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #1a73e8, #174ea6);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="10" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><circle cx="14" cy="14" r="3" fill="white"/><path d="M14 6v3M14 19v3M6 14h3M19 14h3" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/></svg>
+                    </div>
+                    <h3>Gerçek Zamanlı Durumsal Farkındalık</h3>
+                    <p>GPS takibi, IoT sensörleri, video beslemeleri ve durum verilerini interaktif coğrafi haritada birleştiren operasyonel görünüm. Her yerde, gerçek zamanlı olarak ne olduğunu bilin.</p>
+                    <ul class="feature-list">
+                        <li><strong>İnteraktif GIS Haritası</strong><span>Uydu, arazi ve özel katmanlarla çoklu katman coğrafi görselleştirme</span></li>
+                        <li><strong>Canlı GPS Takibi</strong><span>Tüm personel, araç ve varlıkların iz geçmişi ile gerçek zamanlı konumu</span></li>
+                        <li><strong>IoT ve Sensör Entegrasyonu</strong><span>Çevresel sensörler, alarmlar, erişim kontrolleri ve herhangi bir IoT cihazı bağlayın</span></li>
+                        <li><strong>Coğrafi Çit ve Uyarılar</strong><span>Bölgeler tanımlayın ve kaynaklar alanlara girdiğinde veya çıktığında otomatik uyarılar tetikleyin</span></li>
+                        <li><strong>Çoklu Ekran Görüntüsü</strong><span>Video duvarları ve çoklu monitör komuta merkezi düzenleri desteği</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="gis-visual">
+                        <div class="gis-map-demo">
+                            <div class="gis-layers">
+                                <div class="gis-zone zone-a"></div>
+                                <div class="gis-zone zone-b"></div>
+                            </div>
+                            <div class="gis-pins">
+                                <div class="gis-pin vehicle" style="top:30%;left:25%;"><svg width="16" height="16" viewBox="0 0 16 16"><rect x="2" y="6" width="12" height="6" rx="2" fill="#4285f4"/><circle cx="5" cy="12" r="1.5" fill="#333"/><circle cx="11" cy="12" r="1.5" fill="#333"/></svg></div>
+                                <div class="gis-pin vehicle" style="top:55%;left:60%;"><svg width="16" height="16" viewBox="0 0 16 16"><rect x="2" y="6" width="12" height="6" rx="2" fill="#34a853"/><circle cx="5" cy="12" r="1.5" fill="#333"/><circle cx="11" cy="12" r="1.5" fill="#333"/></svg></div>
+                                <div class="gis-pin person" style="top:40%;left:45%;"><svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="4" r="2.5" fill="#ea4335"/><path d="M2 11c0-2.5 1.8-4 4-4s4 1.5 4 4" fill="#ea4335"/></svg></div>
+                                <div class="gis-pin alert" style="top:20%;left:70%;"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1l6 11H1z" fill="#fbbc04"/><path d="M7 5v3M7 9.5v.5" stroke="#1a1a1a" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+                            </div>
+                            <div class="gis-legend">
+                                <span><i style="background:#4285f4;"></i>Araçlar</span>
+                                <span><i style="background:#ea4335;"></i>Personel</span>
+                                <span><i style="background:#fbbc04;"></i>Uyarılar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Dispatch & Scheduling -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #1a73e8);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="6" width="20" height="16" rx="3" fill="white" opacity="0.2"/><path d="M4 11h20" stroke="white" stroke-width="1.5"/><path d="M9 4v4M19 4v4" stroke="white" stroke-width="2" stroke-linecap="round"/><rect x="7" y="14" width="4" height="3" rx="1" fill="white" opacity="0.8"/><rect x="12" y="14" width="4" height="3" rx="1" fill="white" opacity="0.5"/></svg>
+                    </div>
+                    <h3>Akıllı Sevk ve Planlama</h3>
+                    <p>Yakınlık, yetenek, iş yükü ve öncelik kurallarına göre doğru kaynakları doğru görevlere otomatik olarak atayan yapay zeka destekli sevk motoru.</p>
+                    <ul class="feature-list">
+                        <li><strong>Akıllı Otomatik Sevk</strong><span>Yapay zeka, mesafe, beceri ve kullanılabilirliğe göre optimal kaynak ataması önerir</span></li>
+                        <li><strong>Sürükle ve Bırak Planlama</strong><span>Vardiyalar, rotalar ve görev atamaları için görsel Gantt tarzı planlama panosu</span></li>
+                        <li><strong>Öncelik Kuyruğu</strong><span>Yapılandırılabilir yükseltme kuralları ve SLA takibi ile otomatik önceliklendirme</span></li>
+                        <li><strong>Kapasite Planlaması</strong><span>Geçmiş kalıplara dayalı talebi tahmin edin ve personel seviyelerini optimize edin</span></li>
+                        <li><strong>Mobil Sevk</strong><span>Saha çalışanları, navigasyon, formlar ve durum güncellemeleri ile mobil üzerinde görevleri alır</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="dispatch-visual">
+                        <div class="dispatch-board">
+                            <div class="dispatch-board-header">Sevk Kuyruğu</div>
+                            <div class="dispatch-item high">
+                                <div class="di-priority">P1</div>
+                                <div class="di-info">
+                                    <strong>Acil Müdahale - Sektör 7</strong>
+                                    <span>Varış: 4 dk &bull; Alfa-3 Birimi</span>
+                                </div>
+                                <div class="di-status dispatched">Sevk Edildi</div>
+                            </div>
+                            <div class="dispatch-item medium">
+                                <div class="di-priority">P2</div>
+                                <div class="di-info">
+                                    <strong>Bakım Talebi - Bina C</strong>
+                                    <span>Varış: 15 dk &bull; Bravo Ekibi</span>
+                                </div>
+                                <div class="di-status enroute">Yolda</div>
+                            </div>
+                            <div class="dispatch-item low">
+                                <div class="di-priority">P3</div>
+                                <div class="di-info">
+                                    <strong>Rutin Devriye - Doğu Bölgesi</strong>
+                                    <span>Planlandı: 15:00 &bull; Charlie-1 Birimi</span>
+                                </div>
+                                <div class="di-status scheduled">Planlandı</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Communication -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="4" fill="white"/><path d="M8 8a9 9 0 000 12M20 8a9 9 0 010 12" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/><path d="M5 5a14 14 0 000 18M23 5a14 14 0 010 18" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/></svg>
+                    </div>
+                    <h3>Birleşik İletişim</h3>
+                    <p>İletişim silolarını kırın. Ses, video, mesajlaşma ve yayın hepsi tek arayüzde — telsiz sistemleri, telefonlar ve veri ağları ile birlikte çalışabilir.</p>
+                    <ul class="feature-list">
+                        <li><strong>Bas-Konuş (PTT)</strong><span>Geleneksel telsiz gibi bireylere veya gruplara anlık ses iletişimi</span></li>
+                        <li><strong>Video Konferans</strong><span>500 katılımcıya kadar anlık video aramaları veya planlanmış brifingler başlatın</span></li>
+                        <li><strong>Grup Yayını</strong><span>Tüm birimlere, belirli bölgelere veya özel gruplara uyarılar ve duyurular gönderin</span></li>
+                        <li><strong>Telsiz Ağ Geçidi</strong><span>Kesintisiz birlikte çalışabilirlik için dijital ve analog telsiz sistemlerini köprülendirin</span></li>
+                        <li><strong>Anlık Mesajlaşma Entegrasyonu</strong><span>Oort Messenger üzerinden iş parçacıklı mesajlaşma, dosya paylaşımı ve koordinasyon kanalları</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="comm-visual">
+                        <div class="comm-panel">
+                            <div class="comm-header">İletişim</div>
+                            <div class="comm-channels">
+                                <div class="comm-channel active">
+                                    <div class="ch-icon ptt"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="4" y="2" width="6" height="7" rx="3" fill="none" stroke="white" stroke-width="1.2"/><path d="M7 9v2M5 11h4" stroke="white" stroke-width="1" stroke-linecap="round"/></svg></div>
+                                    <div class="ch-info"><strong>Tüm Birimler</strong><span>PTT Kanalı</span></div>
+                                    <span class="ch-live">CANLI</span>
+                                </div>
+                                <div class="comm-channel">
+                                    <div class="ch-icon video"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="1" y="4" width="8" height="6" rx="1" fill="none" stroke="white" stroke-width="1.2"/><path d="M9 6l3-1.5v5L9 8" fill="none" stroke="white" stroke-width="1.2"/></svg></div>
+                                    <div class="ch-info"><strong>Komuta Brifingi</strong><span>Video &bull; 12 katılımcı</span></div>
+                                </div>
+                                <div class="comm-channel">
+                                    <div class="ch-icon msg"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 4c0-1 .5-1.5 1.5-1.5h7c1 0 1.5.5 1.5 1.5v5c0 1-.5 1.5-1.5 1.5H7l-2.5 2v-2H3.5C2.5 10.5 2 10 2 9V4z" fill="none" stroke="white" stroke-width="1.2"/></svg></div>
+                                    <div class="ch-info"><strong>Saha Güncellemeleri</strong><span>Messenger &bull; 8 yeni</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: Incident Management -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #fbbc04, #ea4335);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 4l10 18H4z" fill="white" opacity="0.2" stroke="white" stroke-width="2" stroke-linejoin="round"/><path d="M14 11v5M14 19v1" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Olay Yönetimi</h3>
+                    <p>Tespitten çözüme tam olay yaşam döngüsü yönetimi. Standart işletim prosedürleri, yükseltme iş akışları ve olay sonrası analizi dahili olarak sağlanır.</p>
+                    <ul class="feature-list">
+                        <li><strong>Olay Oluşturma ve Sınıflandırma</strong><span>Tür, öncelik, konum ve etkilenen alan ile hızlı olay oluşturma</span></li>
+                        <li><strong>Standart İşletim Prosedürleri</strong><span>Kaynakları otomatik atayan ve bildirimleri tetikleyen önceden tanımlı müdahale planları</span></li>
+                        <li><strong>Yükseltme İş Akışları</strong><span>Zamana ve koşullara dayalı olarak daha yüksek komuta seviyelerine yükseltme</span></li>
+                        <li><strong>Zaman Çizelgesi ve Günlük</strong><span>Tüm eylemlerin, iletişimlerin ve kararların eksiksiz kronolojik kaydı</span></li>
+                        <li><strong>Olay Sonrası İnceleme</strong><span>Zaman çizelgesi tekrarı, KPI analizi ve iyileştirme önerileri ile otomatik raporlar</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="incident-visual">
+                        <div class="incident-panel">
+                            <div class="incident-panel-header">
+                                <span>Olay #2847</span>
+                                <span class="incident-badge high">YÜKSEK ÖNCELİK</span>
+                            </div>
+                            <div class="incident-details">
+                                <div class="id-row"><span class="id-label">Tür</span><span class="id-value">Trafik Olayı</span></div>
+                                <div class="id-row"><span class="id-label">Konum</span><span class="id-value">Otoyol 101, Kilometre 42</span></div>
+                                <div class="id-row"><span class="id-label">Birimler</span><span class="id-value">Alfa-3, Bravo-7, Med-2</span></div>
+                                <div class="id-row"><span class="id-label">Durum</span><span class="id-value status-active">Aktif - Müdahale Ediliyor</span></div>
+                            </div>
+                            <div class="incident-timeline">
+                                <div class="it-item done"><span class="it-dot"></span><span class="it-text">14:22 - Olay bildirildi</span></div>
+                                <div class="it-item done"><span class="it-dot"></span><span class="it-text">14:23 - Birimler sevk edildi</span></div>
+                                <div class="it-item done"><span class="it-dot"></span><span class="it-text">14:27 - İlk birim olay yerinde</span></div>
+                                <div class="it-item current"><span class="it-dot"></span><span class="it-text">14:32 - Olay yeri değerlendirmesi</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5: Analytics & Admin -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #9b72cb, #1a73e8);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="3" fill="white" opacity="0.2"/><path d="M8 18l4-5 4 3 4-8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Analitik ve Yönetim</h3>
+                    <p>Performansı optimize etmenize yardımcı olan operasyonel istihbarat. Geçmiş analiz, tahmin içgörüleri ve tam platform kontrolü için kapsamlı yönetim araçları.</p>
+                    <ul class="feature-list">
+                        <li><strong>Operasyon Paneli</strong><span>Müdahale süresi, çözüm oranı, kaynak kullanımı ve kapsama için KPI'lar</span></li>
+                        <li><strong>Geçmiş Analiz</strong><span>Geçmiş olayları, sevk kalıplarını ve kaynak hareketlerini sorgulayın ve analiz edin</span></li>
+                        <li><strong>Tahmin Analitiği</strong><span>Yapay zeka talep kalıplarını tahmin eder ve optimal kaynak konumlandırma önerir</span></li>
+                        <li><strong>Özel Raporlar</strong><span>Uyumluluk, operasyon incelemesi ve planlama için otomatik rapor oluşturma</span></li>
+                        <li><strong>Rol Tabanlı Yönetim</strong><span>Operatörler, sevk görevlileri, süpervizörler ve yöneticiler için ayrıntılı izinler</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="analytics-visual">
+                        <div class="ops-dashboard">
+                            <div class="ops-header">Operasyon Genel Bakış</div>
+                            <div class="ops-kpis">
+                                <div class="ops-kpi"><span class="kpi-val">3,2 dk</span><span class="kpi-lbl">Ort. Müdahale</span></div>
+                                <div class="ops-kpi"><span class="kpi-val">%94</span><span class="kpi-lbl">SLA Karşılandı</span></div>
+                                <div class="ops-kpi"><span class="kpi-val">%87</span><span class="kpi-lbl">Kullanım</span></div>
+                            </div>
+                            <div class="ops-chart">
+                                <svg viewBox="0 0 200 60" width="100%"><polyline points="0,45 30,40 60,35 90,20 120,25 150,15 180,18 200,10" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round"/><polyline points="0,45 30,40 60,35 90,20 120,25 150,15 180,18 200,10" fill="url(#opsGrad)" opacity="0.15"/><defs><linearGradient id="opsGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a73e8"/><stop offset="100%" stop-color="#1a73e8" stop-opacity="0"/></linearGradient></defs></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Features -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kurumsal düzey platform</h2>
+                <p>Güvenilirlikten ödün vermeden kritik operasyonlar için tasarlandı</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V7l-8-5z" fill="none" stroke="#1a73e8" stroke-width="1.5"/></svg><h5>Yüksek Kullanılabilirlik</h5><p>Aktif-aktif kümeleme ve otomatik yük devretme ile %99,99 çalışma süresi</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M4 12h16M12 4v16" stroke="#ea4335" stroke-width="1" opacity="0.4"/></svg><h5>Özel Dağıtım</h5><p>Tam veri egemenliği için yerinde veya özel bulut dağıtımı</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M2 12h20M12 2c3 3 4.5 6 4.5 10s-1.5 7-4.5 10" fill="none" stroke="#34a853" stroke-width="1.2"/></svg><h5>Çoklu Site</h5><p>Birden fazla komuta merkezini kesintisiz bağlayan federe mimari</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg><h5>API ve Entegrasyon</h5><p>CAD, ERP ve GIS sistemleri için REST API, web kancaları ve önceden oluşturulmuş bağlayıcılar</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="2" y="6" width="9" height="12" rx="1.5" fill="none" stroke="#fbbc04" stroke-width="1.5"/><rect x="13" y="4" width="9" height="16" rx="1.5" fill="none" stroke="#fbbc04" stroke-width="1.5"/></svg><h5>Mobil Komuta</h5><p>Saha komutanları ve uzaktan operasyonlar için tam özellikli mobil uygulama</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#1a73e8" stroke-width="1.5"/><path d="M12 7v5l3 3" fill="none" stroke="#1a73e8" stroke-width="1.8" stroke-linecap="round"/></svg><h5>Denetim İzi</h5><p>Hesap verebilirlik ve inceleme için tüm eylemlerin tam zaman damgalı günlüğü</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M4 22v-7" stroke="#ea4335" stroke-width="1.5" stroke-linecap="round"/></svg><h5>Uyarı Motoru</h5><p>Konum, zaman, durum ve özel tetikleme kurallarına dayalı yapılandırılabilir uyarılar</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="#34a853" stroke-width="1.5" opacity="0.6"/></svg><h5>Ölçeklenebilir Mimari</h5><p>Yatay ölçeklendirme ile 10.000+ eşzamanlı kaynağı yönetin</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / CTA -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kuruluşunuz için özel olarak tasarlandı</h2>
+                <p>Komuta ve Sevk, her dağıtım için özelleştirilir. Kişiselleştirilmiş bir çözüm için bizimle iletişime geçin.</p>
+            </div>
+            <div class="enterprise-cta-card">
+                <div class="ent-card-content">
+                    <h3>Kurumsal Dağıtım</h3>
+                    <p>Her kuruluşun benzersiz operasyonel gereksinimleri vardır. Ekibimiz, mükemmel komuta sistemini tasarlamak, dağıtmak ve optimize etmek için sizinle çalışır.</p>
+                    <ul class="ent-features">
+                        <li>Özel dağıtım mimarisi</li>
+                        <li>Mevcut sistemlerle entegrasyon</li>
+                        <li>Yerinde eğitim ve destek</li>
+                        <li>Özel başarı ekibi</li>
+                        <li>Özel SLA ve 7/24 destek</li>
+                    </ul>
+                </div>
+                <div class="ent-card-action">
+                    <a href="#" class="btn-primary btn-large btn-navy">Danışmanlık Planlayın</a>
+                    <a href="#" class="btn-secondary btn-large">Broşür İndirin</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Operasyonlarınızı modernleştirmeye hazır mısınız?</h2>
+                <p>Komuta ve Sevk'in operasyonel verimliliğinizi kişiselleştirilmiş bir demo ile nasıl dönüştürebileceğini görün.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">Demo Talep Edin</a>
+                    <a href="#" class="btn-secondary btn-large">Bir Uzmanla Görüşün</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36"><p class="footer-tagline">Kurumsal teknolojinin geleceğini inşa ediyoruz.</p></div>
+                <div class="footer-links"><h5>Ürünler</h5><a href="https://vls.oortcloudsmart.com/tr/" target="_blank">VLStream</a><a href="workup.html">Workup</a><a href="oortai.html">OORT.AI</a><a href="https://sh.oortcloudsmart.com/tr/" target="_blank">OORT.SH</a><a href="classroom.html">Bulut Sınıf</a></div>
+                <div class="footer-links"><h5>Çözümler</h5><a href="messenger.html">Anlık Mesajlaşma</a><a href="clouddisk.html">Bulut Disk</a><a href="email.html">E-posta</a><a href="approval.html">Akıllı Onay</a><a href="#">Komuta ve Sevk</a><a href="fieldmanager.html">Saha Yöneticisi</a></div>
+                <div class="footer-links"><h5>Şirket</h5><a href="about.html">Hakkımızda</a><a href="#">Kariyer</a><a href="#">Blog</a><a href="contact.html">İletişim</a><a href="#">Gizlilik Politikası</a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 OortCloud Technology. Tüm hakları saklıdır.</p><div class="footer-social"><a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a><a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a><a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a></div></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

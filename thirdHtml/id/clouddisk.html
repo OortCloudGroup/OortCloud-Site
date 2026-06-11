@@ -1,0 +1,869 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Disk - Penyimpanan Cloud Enterprise yang Aman | OortCloud</title>
+    <link rel="alternate" hreflang="en" href="https://oortcloudsmart.com/en/" />
+    <link rel="alternate" hreflang="zh" href="https://oortcloudsmart.com/zh/siteNew/" />
+    <link rel="alternate" hreflang="es" href="https://oortcloudsmart.com/es/" />
+    <link rel="alternate" hreflang="ar" href="https://oortcloudsmart.com/ar/" />
+    <link rel="alternate" hreflang="de" href="https://oortcloudsmart.com/de/" />
+    <link rel="alternate" hreflang="fr" href="https://oortcloudsmart.com/fr/" />
+    <link rel="alternate" hreflang="ja" href="https://oortcloudsmart.com/ja/" />
+    <link rel="alternate" hreflang="pt" href="https://oortcloudsmart.com/pt/" />
+    <link rel="alternate" hreflang="ru" href="https://oortcloudsmart.com/ru/" />
+    <link rel="alternate" hreflang="ko" href="https://oortcloudsmart.com/ko/" />
+    <link rel="alternate" hreflang="id" href="https://oortcloudsmart.com/id/" />
+    <link rel="alternate" hreflang="tr" href="https://oortcloudsmart.com/tr/" />
+    <link rel="alternate" hreflang="x-default" href="https://oortcloudsmart.com/en/" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="clouddisk.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">Produk</a>
+                <a href="index.html#platform">Platform</a>
+                <a href="index.html#enterprise">Enterprise</a>
+                <a href="index.html#about">Tentang</a>
+            </div>
+            <a href="#get-started" class="nav-cta">Mulai Gratis</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="Ganti Bahasa">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">ID</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item active" data-lang="id"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item active" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    Login
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">Pengguna</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Dashboard
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="disk-hero">
+        <div class="container">
+            <div class="disk-hero-grid">
+                <div class="disk-hero-content">
+                    <div class="product-breadcrumb">
+                        <a href="index.html">Produk</a>
+                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <span>Cloud Disk</span>
+                    </div>
+                    <h1>Simpan, bagikan, dan kolaborasi — <span class="gradient-text-green">dengan aman</span></h1>
+                    <p class="disk-hero-desc">Penyimpanan cloud enterprise yang menjaga file tim Anda tetap aman, terorganisir, dan dapat diakses dari mana saja. Dengan pencarian berbasis AI, kolaborasi real-time, dan dukungan deployment privat.</p>
+                    <div class="hero-actions">
+                        <a href="#get-started" class="btn-primary btn-large btn-green">Mulai Uji Coba Gratis</a>
+                        <a href="#features" class="btn-secondary btn-large">Jelajahi Fitur</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 1l2 3h3.5l-2.5 3 1 3.5L8 8.5 4 10.5l1-3.5L2.5 4H6l2-3z" fill="#fbbc04"/></svg>
+                            Dipercaya oleh 500+ enterprise
+                        </span>
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Terenkripsi end-to-end
+                        </span>
+                    </div>
+                </div>
+                <div class="disk-hero-visual">
+                    <div class="file-explorer-mockup">
+                        <div class="explorer-header">
+                            <div class="explorer-dots"><span></span><span></span><span></span></div>
+                            <div class="explorer-path">
+                                <svg width="14" height="14" viewBox="0 0 16 16"><path d="M2 4c0-1 .5-1.5 1.5-1.5h3.5l1.5 1.5h5c1 0 1.5.5 1.5 1.5v7c0 1-.5 1.5-1.5 1.5h-10C2.5 14 2 13.5 2 12.5V4z" fill="none" stroke="#4285f4" stroke-width="1.2"/></svg>
+                                <span>Drive Saya</span>
+                                <svg width="10" height="10" viewBox="0 0 10 10"><path d="M3 4l2 2 2-2" fill="none" stroke="#9aa0a6" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                <span>Proyek</span>
+                            </div>
+                            <div class="explorer-actions">
+                                <div class="view-toggle">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1" y="1" width="5" height="5" rx="1" fill="#4285f4"/><rect x="8" y="1" width="5" height="5" rx="1" fill="#4285f4" opacity="0.5"/><rect x="1" y="8" width="5" height="5" rx="1" fill="#4285f4" opacity="0.5"/><rect x="8" y="8" width="5" height="5" rx="1" fill="#4285f4" opacity="0.3"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explorer-body">
+                            <div class="explorer-sidebar">
+                                <div class="sidebar-nav-item active">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><path d="M1 3.5c0-.8.4-1.2 1.2-1.2h2.8l1.2 1.2h4c.8 0 1.2.4 1.2 1.2v5.6c0 .8-.4 1.2-1.2 1.2H2.2c-.8 0-1.2-.4-1.2-1.2V3.5z" fill="#4285f4" opacity="0.2" stroke="#4285f4" stroke-width="0.8"/></svg>
+                                    Drive Saya
+                                </div>
+                                <div class="sidebar-nav-item">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="5" r="2.5" fill="none" stroke="#5f6368" stroke-width="0.8"/><path d="M3.5 12c0-2 1.5-3.5 3.5-3.5s3.5 1.5 3.5 3.5" fill="none" stroke="#5f6368" stroke-width="0.8"/></svg>
+                                    Shared with me
+                                </div>
+                                <div class="sidebar-nav-item">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5.5" fill="none" stroke="#5f6368" stroke-width="0.8"/><path d="M7 4v3l2 1.5" fill="none" stroke="#5f6368" stroke-width="0.8" stroke-linecap="round"/></svg>
+                                    Recent
+                                </div>
+                                <div class="sidebar-nav-item">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2l1.2 2.4h2.8l-2 2 .8 2.6L7 7.5 4.2 9l.8-2.6-2-2h2.8L7 2z" fill="none" stroke="#5f6368" stroke-width="0.8"/></svg>
+                                    Starred
+                                </div>
+                                <div class="sidebar-nav-item">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 3.5h8M3 7h8M3 10.5h5" stroke="#5f6368" stroke-width="0.8" stroke-linecap="round"/></svg>
+                                    Trash
+                                </div>
+                                <div class="sidebar-storage">
+                                    <div class="storage-bar"><div class="storage-fill" style="width: 42%;"></div></div>
+                                    <span>4,2 TB dari 10 TB terpakai</span>
+                                </div>
+                            </div>
+                            <div class="explorer-files">
+                                <div class="file-row header-row">
+                                    <span>Nama</span>
+                                    <span>Diubah</span>
+                                    <span>Ukuran</span>
+                                </div>
+                                <div class="file-row folder-row">
+                                    <div class="file-name">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 4c0-.8.4-1.2 1.2-1.2h3l1.2 1.2h5.4c.8 0 1.2.4 1.2 1.2v6.4c0 .8-.4 1.2-1.2 1.2H3.2c-.8 0-1.2-.4-1.2-1.2V4z" fill="#4285f4" opacity="0.8"/></svg>
+                                        <span>Product Design</span>
+                                    </div>
+                                    <span class="file-meta">Hari ini</span>
+                                    <span class="file-meta">—</span>
+                                </div>
+                                <div class="file-row folder-row">
+                                    <div class="file-name">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 4c0-.8.4-1.2 1.2-1.2h3l1.2 1.2h5.4c.8 0 1.2.4 1.2 1.2v6.4c0 .8-.4 1.2-1.2 1.2H3.2c-.8 0-1.2-.4-1.2-1.2V4z" fill="#34a853" opacity="0.8"/></svg>
+                                        <span>Engineering Docs</span>
+                                    </div>
+                                    <span class="file-meta">Kemarin</span>
+                                    <span class="file-meta">—</span>
+                                </div>
+                                <div class="file-row">
+                                    <div class="file-name">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="2" width="10" height="12" rx="1.5" fill="none" stroke="#ea4335" stroke-width="1"/><path d="M5 5h6M5 7h6M5 9h4" stroke="#ea4335" stroke-width="0.7" stroke-linecap="round"/></svg>
+                                        <span>Q2 Strategy.pdf</span>
+                                    </div>
+                                    <span class="file-meta">May 24</span>
+                                    <span class="file-meta">2.4 MB</span>
+                                </div>
+                                <div class="file-row">
+                                    <div class="file-name">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="2" width="10" height="12" rx="1.5" fill="none" stroke="#34a853" stroke-width="1"/><path d="M5 5h2v2H5zM8 5h3M5 8h6M5 11h4" stroke="#34a853" stroke-width="0.7" stroke-linecap="round"/></svg>
+                                        <span>Budget_2026.xlsx</span>
+                                    </div>
+                                    <span class="file-meta">May 22</span>
+                                    <span class="file-meta">856 KB</span>
+                                </div>
+                                <div class="file-row">
+                                    <div class="file-name">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="2" width="10" height="12" rx="1.5" fill="none" stroke="#4285f4" stroke-width="1"/><path d="M5 6h6M5 8h4M5 10h5" stroke="#4285f4" stroke-width="0.7" stroke-linecap="round"/></svg>
+                                        <span>Meeting_Notes.docx</span>
+                                    </div>
+                                    <span class="file-meta">May 20</span>
+                                    <span class="file-meta">124 KB</span>
+                                </div>
+                                <div class="file-row">
+                                    <div class="file-name">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="2" width="10" height="12" rx="1.5" fill="none" stroke="#9b72cb" stroke-width="1"/><rect x="5" y="5" width="6" height="4" rx="0.5" fill="#9b72cb" opacity="0.2"/></svg>
+                                        <span>Presentation.pptx</span>
+                                    </div>
+                                    <span class="file-meta">May 18</span>
+                                    <span class="file-meta">8.7 MB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Key Benefits -->
+    <section class="benefits-bar">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V7l-8-5z" fill="none" stroke="#34a853" stroke-width="1.8"/><path d="M9 12l2 2 4-4" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <strong>Keamanan Enterprise</strong>
+                        <span>Enkripsi AES-256, arsitektur zero-knowledge</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" fill="none" stroke="#4285f4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <strong>Kolaborasi Real-Time</strong>
+                        <span>Edit file bersama tim secara bersamaan</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" fill="none" stroke="#9b72cb" stroke-width="1.8"/><path d="M21 21l-4.35-4.35" stroke="#9b72cb" stroke-width="1.8" stroke-linecap="round"/><path d="M8 11h6M11 8v6" stroke="#9b72cb" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/></svg>
+                    <div>
+                        <strong>Pencarian Berbasis AI</strong>
+                        <span>Temukan file apa pun secara instan dengan pencarian cerdas</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="#ea4335" stroke-width="1.8"/><path d="M4 12h16M12 4v16" stroke="#ea4335" stroke-width="1.2" opacity="0.4"/><circle cx="8" cy="8" r="1.5" fill="#ea4335"/><circle cx="16" cy="16" r="1.5" fill="#ea4335"/></svg>
+                    <div>
+                        <strong>Deployment Privat</strong>
+                        <span>On-premise atau hybrid cloud, pilihan Anda</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Semua yang tim Anda butuhkan untuk mengelola file</h2>
+                <p>Penyimpanan aman, kolaborasi powerful, dan organisasi cerdas dalam satu platform</p>
+            </div>
+
+            <!-- Feature 1: File Storage & Sync -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #4285f4, #34a853);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M8 22h12l4-7-5-9H9l-5 9 4 7z" fill="white" opacity="0.9"/><path d="M4 15h20" stroke="white" stroke-width="1" opacity="0.4"/></svg>
+                    </div>
+                    <h3>Penyimpanan & Sinkronisasi Tanpa Batas</h3>
+                    <p>Simpan tipe file apa pun tanpa batas ukuran. Sinkronisasi otomatis di semua perangkat Anda memastikan Anda selalu memiliki versi terbaru di ujung jari.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Kapasitas Tanpa Batas</strong>
+                            <span>Tidak ada batas per-file atau total penyimpanan — simpan semua yang organisasi Anda butuhkan</span>
+                        </li>
+                        <li>
+                            <strong>Sinkronisasi Cerdas</strong>
+                            <span>Akses file sesuai kebutuhan tanpa memenuhi penyimpanan lokal. File hanya didownload saat dibuka</span>
+                        </li>
+                        <li>
+                            <strong>Aplikasi Desktop & Mobile</strong>
+                            <span>Aplikasi native untuk Windows, macOS, Linux, iOS, dan Android dengan akses offline</span>
+                        </li>
+                        <li>
+                            <strong>Dukungan File Besar</strong>
+                            <span>Upload file hingga 100GB dengan upload yang dapat dilanjutkan dan verifikasi integritas</span>
+                        </li>
+                        <li>
+                            <strong>Backup Otomatis</strong>
+                            <span>Backup terus-menerus folder yang dipilih dari komputer Anda ke cloud</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="sync-visual">
+                        <div class="sync-diagram">
+                            <div class="sync-center-node">
+                                <svg width="36" height="36" viewBox="0 0 36 36"><path d="M6 22a10 10 0 01-.5-9.5A10 10 0 0128 10.5 7 7 0 0129 24H6z" fill="#4285f4" opacity="0.15" stroke="#4285f4" stroke-width="1.5"/></svg>
+                                <span>Cloud Disk</span>
+                            </div>
+                            <div class="sync-devices">
+                                <div class="sync-device">
+                                    <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="14" rx="2" fill="none" stroke="#5f6368" stroke-width="1.5"/><path d="M8 22h12" stroke="#5f6368" stroke-width="1.5" stroke-linecap="round"/><path d="M14 18v4" stroke="#5f6368" stroke-width="1.5"/></svg>
+                                    <span>Desktop</span>
+                                </div>
+                                <div class="sync-device">
+                                    <svg width="28" height="28" viewBox="0 0 28 28"><rect x="8" y="3" width="12" height="22" rx="2.5" fill="none" stroke="#5f6368" stroke-width="1.5"/><circle cx="14" cy="21" r="1.2" fill="#5f6368"/></svg>
+                                    <span>Mobile</span>
+                                </div>
+                                <div class="sync-device">
+                                    <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="6" width="20" height="14" rx="2" fill="none" stroke="#5f6368" stroke-width="1.5"/><path d="M10 23h8" stroke="#5f6368" stroke-width="1.5" stroke-linecap="round"/></svg>
+                                    <span>Tablet</span>
+                                </div>
+                            </div>
+                            <div class="sync-arrows">
+                                <div class="sync-arrow a1"></div>
+                                <div class="sync-arrow a2"></div>
+                                <div class="sync-arrow a3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Sharing & Collaboration -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #fbbc04);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="10" cy="10" r="4" fill="white" opacity="0.9"/><circle cx="18" cy="10" r="4" fill="white" opacity="0.6"/><path d="M4 22c0-4 3-6 6-6s6 2 6 6" fill="white" opacity="0.7"/><path d="M16 22c0-4 3-6 6-6s4 2 4 6" fill="white" opacity="0.5"/></svg>
+                    </div>
+                    <h3>Berbagi & Kolaborasi</h3>
+                    <p>Bagikan file dan folder dengan permission yang detail. Berkolaborasi secara real-time dengan tim, mitra, dan pemangku kepentingan eksternal — dengan aman.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Permission Granular</strong>
+                            <span>Pemilik, Editor, Pemberi Komentar, Viewer — kontrol persis siapa yang bisa melakukan apa</span>
+                        </li>
+                        <li>
+                            <strong>Drive Bersama</strong>
+                            <span>Ruang penyimpanan milik tim di mana file menjadi milik tim, bukan individu</span>
+                        </li>
+                        <li>
+                            <strong>Berbagi Eksternal</strong>
+                            <span>Bagikan dengan kolaborator eksternal melalui tautan aman dengan kedaluwarsa dan perlindungan kata sandi</span>
+                        </li>
+                        <li>
+                            <strong>Kolaborasi Edit Real-Time</strong>
+                            <span>Beberapa pengguna mengedit dokumen secara bersamaan dengan indikator kehadiran dan komentar</span>
+                        </li>
+                        <li>
+                            <strong>Alur Kerja Persetujuan</strong>
+                            <span>Integrasikan dengan Intelligent Approval untuk proses tinjauan dan penandatanganan dokumen</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="collab-visual">
+                        <div class="share-panel">
+                            <div class="share-header">
+                                <span>Bagikan "Strategi Q2.pdf"</span>
+                            </div>
+                            <div class="share-input">
+                                <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="5" r="2.5" fill="none" stroke="#9aa0a6" stroke-width="1"/><path d="M3 12c0-2.5 1.8-4 4-4s4 1.5 4 4" fill="none" stroke="#9aa0a6" stroke-width="1"/></svg>
+                                <span class="share-placeholder">Tambahkan orang atau grup</span>
+                            </div>
+                            <div class="share-people">
+                                <div class="share-person">
+                                    <div class="person-avatar" style="background: #4285f4;">JC</div>
+                                    <div class="person-info">
+                                        <span class="person-name">Jane Cooper</span>
+                                        <span class="person-email">jane@company.com</span>
+                                    </div>
+                                    <span class="person-role">Editor</span>
+                                </div>
+                                <div class="share-person">
+                                    <div class="person-avatar" style="background: #34a853;">MR</div>
+                                    <div class="person-info">
+                                        <span class="person-name">Mike Richards</span>
+                                        <span class="person-email">mike@company.com</span>
+                                    </div>
+                                    <span class="person-role">Viewer</span>
+                                </div>
+                                <div class="share-person">
+                                    <div class="person-avatar" style="background: #ea4335;">SK</div>
+                                    <div class="person-info">
+                                        <span class="person-name">Sarah Kim</span>
+                                        <span class="person-email">sarah@partner.io</span>
+                                    </div>
+                                    <span class="person-role">Pemberi Komentar</span>
+                                </div>
+                            </div>
+                            <div class="share-link">
+                                <svg width="14" height="14" viewBox="0 0 14 14"><path d="M6 8a3 3 0 004 1l1-1a3 3 0 000-4l-1-1a3 3 0 00-4 0" fill="none" stroke="#4285f4" stroke-width="1.2" stroke-linecap="round"/><path d="M8 6a3 3 0 00-4-1l-1 1a3 3 0 000 4l1 1a3 3 0 004 0" fill="none" stroke="#4285f4" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                <span>Salin tautan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Security & Compliance -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 3L5 8v7c0 6.3 4 11.2 9 12.7 5-1.5 9-6.4 9-12.7V8L14 3z" fill="white" opacity="0.9"/><path d="M10 14l3 3 5-5" fill="none" stroke="#ea4335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Keamanan & Kepatuhan</h3>
+                    <p>Perlindungan kelas enterprise untuk data paling sensitif Anda. Beberapa lapisan keamanan memastikan file Anda aman dari akses yang tidak sah dan kehilangan data.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Enkripsi AES-256</strong>
+                            <span>File terenkripsi saat disimpan dan dalam perjalanan. Enkripsi sisi klien tersedia untuk keamanan maksimal</span>
+                        </li>
+                        <li>
+                            <strong>Pencegahan Kebocoran Data (DLP)</strong>
+                            <span>Deteksi dan lindungi informasi sensitif secara otomatis — kartu kredit, PII, rahasia dagang</span>
+                        </li>
+                        <li>
+                            <strong>Riwayat Versi</strong>
+                            <span>Riwayat versi tanpa batas dengan pemulihan point-in-time. Tidak akan kehilangan file lagi</span>
+                        </li>
+                        <li>
+                            <strong>Log Audit</strong>
+                            <span>Jejak aktivitas lengkap — siapa yang mengakses, berbagi, mengubah, atau mendownload file</span>
+                        </li>
+                        <li>
+                            <strong>Kontrol Kepatuhan</strong>
+                            <span>Penuhi persyaratan GDPR, HIPAA, SOC 2, dan ISO 27001 dengan alat kepatuhan bawaan</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="security-visual">
+                        <div class="security-layers">
+                            <div class="sec-layer layer-1">
+                                <span>Lapisan Enkripsi</span>
+                                <div class="layer-badge">AES-256</div>
+                            </div>
+                            <div class="sec-layer layer-2">
+                                <span>Kontrol Akses</span>
+                                <div class="layer-badge">RBAC</div>
+                            </div>
+                            <div class="sec-layer layer-3">
+                                <span>Mesin DLP</span>
+                                <div class="layer-badge">Aktif</div>
+                            </div>
+                            <div class="sec-layer layer-4">
+                                <span>Audit & Pemantauan</span>
+                                <div class="layer-badge">24/7</div>
+                            </div>
+                        </div>
+                        <div class="compliance-badges">
+                            <span class="comp-badge">GDPR</span>
+                            <span class="comp-badge">HIPAA</span>
+                            <span class="comp-badge">SOC 2</span>
+                            <span class="comp-badge">ISO 27001</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: AI & Search -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #9b72cb, #4285f4);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="12" cy="12" r="7" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><path d="M17 17l6 6" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M9 12h6M12 9v6" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/></svg>
+                    </div>
+                    <h3>Kecerdasann Berbasis AI</h3>
+                    <p>Temukan file apa pun dalam hitungan detik dengan AI yang memahami konteks, konten, dan pola kerja Anda. Saran cerdas menempatkan file yang tepat di ujung jari Anda.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Pencarian Bahasa Alami</strong>
+                            <span>Cari seperti Anda berbicara — "budget spreadsheet from last month's meeting with Sarah"</span>
+                        </li>
+                        <li>
+                            <strong>Pencarian Konten (OCR)</strong>
+                            <span>Cari di dalam dokumen, PDF yang dipindai, dan gambar dengan pengindeksan full-text dan OCR</span>
+                        </li>
+                        <li>
+                            <strong>Saran Cerdas</strong>
+                            <span>AI merekomendasikan file yang mungkin Anda butuhkan berdasarkan kalender, email, dan konteks kerja Anda</span>
+                        </li>
+                        <li>
+                            <strong>Tag Otomatis</strong>
+                            <span>AI secara otomatis mengkategorikan dan menandai file untuk organisasi dan penemuan yang lebih mudah</span>
+                        </li>
+                        <li>
+                            <strong>Deteksi Duplikat</strong>
+                            <span>Identifikasi dan kelola file duplikat untuk menjaga penyimpanan tetap bersih dan terorganisir</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="search-visual">
+                        <div class="search-demo">
+                            <div class="search-bar-demo">
+                                <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="7" cy="7" r="5" fill="none" stroke="#9aa0a6" stroke-width="1.5"/><path d="M11 11l3 3" stroke="#9aa0a6" stroke-width="1.5" stroke-linecap="round"/></svg>
+                                <span class="search-query">budget report Q2 <span class="search-cursor">|</span></span>
+                            </div>
+                            <div class="search-results">
+                                <div class="search-result-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="2" width="10" height="12" rx="1.5" fill="none" stroke="#34a853" stroke-width="1"/><path d="M5 5h2v2H5z" fill="#34a853" opacity="0.3"/></svg>
+                                    <div class="result-info">
+                                        <span class="result-name">Q2_Budget_Report_Final.xlsx</span>
+                                        <span class="result-path">Projects > Finance > 2026</span>
+                                    </div>
+                                    <span class="result-match">98%</span>
+                                </div>
+                                <div class="search-result-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="2" width="10" height="12" rx="1.5" fill="none" stroke="#ea4335" stroke-width="1"/></svg>
+                                    <div class="result-info">
+                                        <span class="result-name">Budget_Presentation_Q2.pdf</span>
+                                        <span class="result-path">Shared Drives > Executive</span>
+                                    </div>
+                                    <span class="result-match">92%</span>
+                                </div>
+                                <div class="search-result-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="2" width="10" height="12" rx="1.5" fill="none" stroke="#4285f4" stroke-width="1"/></svg>
+                                    <div class="result-info">
+                                        <span class="result-name">Q2_Budget_Meeting_Notes.docx</span>
+                                        <span class="result-path">Drive Saya > Meetings</span>
+                                    </div>
+                                    <span class="result-match">85%</span>
+                                </div>
+                            </div>
+                            <div class="search-ai-tag">
+                                <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#9b72cb" opacity="0.2"/><path d="M4 6l1.5 1.5L8 5" fill="none" stroke="#9b72cb" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                AI-powered results
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5: Admin & Private Deployment -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #1a73e8, #34a853);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="6" y="12" width="16" height="12" rx="2" fill="white" opacity="0.9"/><path d="M10 12V9a4 4 0 018 0v3" fill="none" stroke="white" stroke-width="2" opacity="0.7"/><circle cx="14" cy="18" r="2" fill="#1a73e8" opacity="0.5"/></svg>
+                    </div>
+                    <h3>Administrasi & Deployment</h3>
+                    <p>Kontrol penuh atas infrastruktur penyimpanan Anda. Deploy di server Anda sendiri, kelola kuota, tegakkan kebijakan, dan integrasikan dengan sistem yang sudah ada.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Deployment Privat</strong>
+                            <span>On-premise, private cloud, atau hybrid — jaga semua data dalam infrastruktur Anda sendiri</span>
+                        </li>
+                        <li>
+                            <strong>Kuota Penyimpanan</strong>
+                            <span>Tetapkan batas penyimpanan per-pengguna, per-departemen, atau per-proyek dengan peringatan dan pengarsipan otomatis</span>
+                        </li>
+                        <li>
+                            <strong>Kebijakan Retensi</strong>
+                            <span>Konfigurasi aturan retensi data untuk kepatuhan — arsipkan atau hapus otomatis berdasarkan usia atau tipe</span>
+                        </li>
+                        <li>
+                            <strong>Alat Migrasi</strong>
+                            <span>Migrasi dengan mulus dari Google Drive, OneDrive, Dropbox, atau sumber WebDAV/S3 apa pun</span>
+                        </li>
+                        <li>
+                            <strong>API & WebDAV</strong>
+                            <span>REST API lengkap, dukungan protokol WebDAV, dan antarmuka kompatibel S3 untuk integrasi</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="admin-visual">
+                        <div class="admin-dashboard">
+                            <div class="admin-dash-header">
+                                <span>Administrasi Penyimpanan</span>
+                                <span class="admin-status-badge">
+                                    <span class="status-dot-green"></span> Healthy
+                                </span>
+                            </div>
+                            <div class="admin-dash-stats">
+                                <div class="dash-stat">
+                                    <span class="dash-stat-value">24.7 TB</span>
+                                    <span class="dash-stat-label">Total Penyimpanan</span>
+                                </div>
+                                <div class="dash-stat">
+                                    <span class="dash-stat-value">3,412</span>
+                                    <span class="dash-stat-label">Pengguna Aktif</span>
+                                </div>
+                                <div class="dash-stat">
+                                    <span class="dash-stat-value">1.2M</span>
+                                    <span class="dash-stat-label">Total File</span>
+                                </div>
+                            </div>
+                            <div class="admin-dash-chart">
+                                <div class="storage-usage-bar">
+                                    <div class="usage-segment" style="width: 35%; background: #4285f4;" title="Dokumen"></div>
+                                    <div class="usage-segment" style="width: 25%; background: #34a853;" title="Media"></div>
+                                    <div class="usage-segment" style="width: 20%; background: #fbbc04;" title="Arsip"></div>
+                                    <div class="usage-segment" style="width: 10%; background: #ea4335;" title="Lainnya"></div>
+                                </div>
+                                <div class="usage-legend">
+                                    <span><i style="background:#4285f4;"></i>Dokumen 35%</span>
+                                    <span><i style="background:#34a853;"></i>Media 25%</span>
+                                    <span><i style="background:#fbbc04;"></i>Arsip 20%</span>
+                                    <span><i style="background:#ea4335;"></i>Lainnya 10%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Features Grid -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Dan masih banyak lagi</h2>
+                <p>Semua fitur yang Anda butuhkan untuk manajemen file enterprise</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2v6l3-3M12 8l-3-3" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M20 14v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+                    <h5>Upload Drag & Drop</h5>
+                    <p>Upload file dan seluruh struktur folder dengan drag and drop sederhana</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M3 12h4l3-9 4 18 3-9h4" fill="none" stroke="#ea4335" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h5>Feed Aktivitas</h5>
+                    <p>Feed real-time dari semua aktivitas file — edit, berbagi, komentar, dan download</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M3 9h18M9 9v12" stroke="#34a853" stroke-width="1.2"/></svg>
+                    <h5>Pratinjau File</h5>
+                    <p>Pratinjau 100+ tipe file di browser tanpa download — Office, PDF, CAD, video</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M4 22v-7" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>Watermark</h5>
+                    <p>Watermark dinamis pada pratinjau dan download untuk melindungi file rahasia</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M12 7v5l3 3" fill="none" stroke="#fbbc04" stroke-width="1.8" stroke-linecap="round"/></svg>
+                    <h5>Kontrol Versi</h5>
+                    <p>Riwayat versi tanpa batas dengan perbandingan diff dan rollback satu klik</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2" fill="none" stroke="#1a73e8" stroke-width="1.5"/><circle cx="7" cy="12" r="1.5" fill="#1a73e8"/><path d="M11 12h6" stroke="#1a73e8" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>Tempat Sampah</h5>
+                    <p>File yang dihapus disimpan selama 90 hari dengan kemampuan admin untuk memulihkan atau menghapus secara permanen</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" fill="none" stroke="#ea4335" stroke-width="1.5" stroke-linecap="round"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" fill="none" stroke="#ea4335" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>Tautan Berbagi</h5>
+                    <p>Tautan yang dilindungi kata sandi dengan tanggal kedaluwarsa dan batas download</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="#34a853" stroke-width="1.5" opacity="0.6"/></svg>
+                    <h5>Integrasi Workup</h5>
+                    <p>Akses file yang mulus dari Messenger, Email, Approval, dan aplikasi OortCloud lainnya</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mengapa memilih Cloud Disk?</h2>
+                <p>Lihat bagaimana kami dibandingkan dengan solusi penyimpanan cloud lainnya</p>
+            </div>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Fitur</th>
+                            <th class="highlight-col">Cloud Disk</th>
+                            <th>Google Drive</th>
+                            <th>OneDrive</th>
+                            <th>Dropbox</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Deployment Privat</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Penyimpanan Tanpa Batas</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="partial">Tambahan</span></td>
+                        </tr>
+                        <tr>
+                            <td>Pencarian Berbasis AI</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="check">&#10003;</span></td>
+                            <td><span class="partial">Dasar</span></td>
+                            <td><span class="partial">Dasar</span></td>
+                        </tr>
+                        <tr>
+                            <td>Enkripsi Sisi Klien</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="partial">Sebagian</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="check">&#10003;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Ukuran File Maks</td>
+                            <td class="highlight-col"><strong>100 GB</strong></td>
+                            <td>5 TB</td>
+                            <td>250 GB</td>
+                            <td>50 GB</td>
+                        </tr>
+                        <tr>
+                            <td>Integrasi Super App</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="partial">Workspace</span></td>
+                            <td><span class="partial">M365</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Kontrol Kedaulatan Data</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="partial">Sebagian</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                        <tr>
+                            <td>WebDAV & S3 API</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>Harga sederhana dan skalabel</h2>
+                <p>Mulai gratis, bayar hanya untuk yang Anda gunakan</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Starter</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">$5</span>
+                            <span class="price-period">/user/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>100 GB penyimpanan per pengguna</li>
+                        <li>Berbagi file & permission</li>
+                        <li>Sinkronisasi desktop & mobile</li>
+                        <li>Pencarian dasar</li>
+                        <li>Dukungan email</li>
+                    </ul>
+                    <a href="#" class="btn-secondary pricing-btn">Mulai Uji Coba Gratis</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Paling Populer</div>
+                    <div class="pricing-header">
+                        <h4>Business</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">$10</span>
+                            <span class="price-period">/user/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Penyimpanan tanpa batas</li>
+                        <li>Pencarian & tagging berbasis AI</li>
+                        <li>Drive Bersama</li>
+                        <li>DLP & log audit</li>
+                        <li>Konsol admin</li>
+                        <li>Dukungan prioritas</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn btn-green">Mulai Uji Coba Gratis</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Enterprise</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">Kustom</span>
+                            <span class="price-period"></span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Semua fitur Business</li>
+                        <li>Deployment privat</li>
+                        <li>Enkripsi sisi klien</li>
+                        <li>Kebijakan retensi kustom</li>
+                        <li>Manajer akun khusus</li>
+                        <li>Dukungan di tempat & SLA</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary pricing-btn">Hubungi Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Siap menyederhanakan manajemen file?</h2>
+                <p>Bergabunglah dengan 500+ organisasi yang mempercayakan Cloud Disk untuk penyimpanan dan kolaborasi yang aman dan cerdas.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">Mulai Uji Coba Gratis</a>
+                    <a href="#" class="btn-secondary btn-large">Bicara dengan Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36">
+                    <p class="footer-tagline">Membangun masa depan teknologi enterprise.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Produk</h5>
+                    <a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a>
+                    <a href="workup.html">Workup</a>
+                    <a href="oortai.html">OORT.AI</a>
+                    <a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a>
+                    <a href="classroom.html">Cloud Classroom</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Solusi</h5>
+                    <a href="messenger.html">Instant Messenger</a>
+                    <a href="#">Cloud Disk</a>
+                    <a href="email.html">Email</a>
+                    <a href="approval.html">Intelligent Approval</a>
+                    <a href="dispatch.html">Command & Dispatch</a>
+                    <a href="fieldmanager.html">Field Manager</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Perusahaan</h5>
+                    <a href="about.html">Tentang Kami</a>
+                    <a href="#">Karir</a>
+                    <a href="#">Blog</a>
+                    <a href="contact.html">Kontak</a>
+                    <a href="#">Kebijakan Privasi</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OortCloud Technology. Semua hak dilindungi.</p>
+                <div class="footer-social">
+                    <a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a>
+                    <a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a>
+                    <a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

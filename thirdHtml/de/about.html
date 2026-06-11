@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über OortCloud – Unternehmens-KI & Cloud-Technologie</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="alternate" hreflang="de" href="https://oortcloudsmart.com/de/about.html">
+    <link rel="alternate" hreflang="en" href="https://oortcloudsmart.com/en/about.html">
+    <link rel="alternate" hreflang="ar" href="https://oortcloudsmart.com/ar/about.html">
+    <link rel="alternate" hreflang="x-default" href="https://oortcloudsmart.com/en/about.html">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">Produkte</a>
+                <a href="index.html#platform">Plattform</a>
+                <a href="index.html#enterprise">Unternehmen</a>
+                <a href="about.html" class="active">Über uns</a>
+            </div>
+            <a href="index.html#get-started" class="nav-cta">Jetzt starten</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="Sprache wechseln">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">EN</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item active" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    Anmelden
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">Benutzer</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Dashboard
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            Abmelden
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menü umschalten"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <h1>Technologie, die <span class="gradient-text-about">Ergebnisse liefert</span>, nicht nur Werkzeuge</h1>
+                <p class="about-hero-desc">OortCloud ist ein Unternehmen für Unternehmenstechnologie, das intelligente Cloud-Plattformen und KI-Agenten entwickelt, die die Arbeitsweise von Organisationen transformieren. Wir glauben, dass die Zukunft Unternehmen gehört, die KI einsetzen, um vollständige Arbeit zu liefern – nicht Software, die sie erfordert.</p>
+            </div>
+        </div>
+        <div class="about-hero-visual">
+            <div class="floating-orbs">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-grid">
+                <div class="mission-content">
+                    <h2>Unsere Mission</h2>
+                    <p class="mission-statement">Unternehmen mit intelligenter Cloud-Infrastruktur und KI-gesteuerter Automatisierung zu befähigen, die Komplexität durch Klarheit ersetzt und Routineabläufe in automatisierte Ergebnisse verwandelt.</p>
+                    <p class="mission-detail">OortCloud wurde 2019 in Shenzhen, China, gegründet und hat sich von einem Anbieter privater Cloud-Lösungen zu einem umfassenden Unternehmens-KI-Plattformunternehmen entwickelt. Wir bedienen Regierungsbehörden, öffentliche Sicherheitsstellen, Gesundheitssysteme, Bildungseinrichtungen und kommerzielle Unternehmen weltweit.</p>
+                </div>
+                <div class="mission-stats">
+                    <div class="mission-stat">
+                        <span class="ms-number">300+</span>
+                        <span class="ms-label">Unternehmensprodukte</span>
+                    </div>
+                    <div class="mission-stat">
+                        <span class="ms-number">150 Mio.+</span>
+                        <span class="ms-label">Betreute Nutzer</span>
+                    </div>
+                    <div class="mission-stat">
+                        <span class="ms-number">2019</span>
+                        <span class="ms-label">Gegründet</span>
+                    </div>
+                    <div class="mission-stat">
+                        <span class="ms-number">AAA</span>
+                        <span class="ms-label">Kreditrating</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do -->
+    <section class="whatwedo-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Was wir tun</h2>
+                <p>Wir entwickeln Technologie, die reale Geschäftsprobleme über drei Säulen löst</p>
+            </div>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="18" fill="none" stroke="#4285f4" stroke-width="3"/><circle cx="24" cy="24" r="6" fill="#4285f4" opacity="0.3"/><circle cx="24" cy="10" r="3" fill="#4285f4"/><circle cx="36" cy="30" r="3" fill="#1a73e8"/><circle cx="12" cy="30" r="3" fill="#8ab4f8"/></svg>
+                    </div>
+                    <h3>Intelligente Cloud-Plattform</h3>
+                    <p>Private Cloud-Infrastruktur, aPaaS-Anwendungsplattformen und Bereitstellungslösungen für Organisationen, die Datensouveränität und betriebliche Kontrolle fordern. Unsere Plattformen treiben die digitale Transformation für Unternehmen jeder Größe voran.</p>
+                    <div class="pillar-products">
+                        <a href="clouddisk.html">Cloud-Speicher</a>
+                        <a href="email.html">E-Mail</a>
+                        <a href="workup.html">Workup</a>
+                    </div>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="32" rx="6" fill="none" stroke="#9b72cb" stroke-width="3"/><circle cx="24" cy="20" r="6" fill="#9b72cb" opacity="0.3"/><path d="M16 34c0-5 3.5-8 8-8s8 3 8 8" fill="none" stroke="#9b72cb" stroke-width="2.5"/><circle cx="36" cy="12" r="4" fill="none" stroke="#7c4dff" stroke-width="2"/><path d="M34 12h-4" stroke="#7c4dff" stroke-width="1.5" stroke-dasharray="2"/></svg>
+                    </div>
+                    <h3>Unternehmens-KI-Agenten</h3>
+                    <p>Neun spezialisierte KI-Agenten, die routinemäßige Unternehmensaufgaben übernehmen – von Büroadministration und Programmierung bis hin zu Kundenservice und Betrieb. Wir liefern erledigte Arbeit, nicht nur KI-Fähigkeiten.</p>
+                    <div class="pillar-products">
+                        <a href="oortai.html">OORT.AI</a>
+                        <a href="classroom.html">Cloud Klassenzimmer</a>
+                    </div>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48"><path d="M24 6l16 9v18l-16 9-16-9V15l16-9z" fill="none" stroke="#34a853" stroke-width="3"/><path d="M24 6v36M8 15l16 9 16-9" fill="none" stroke="#34a853" stroke-width="2" opacity="0.4"/></svg>
+                    </div>
+                    <h3>Betrieb & Kommandosteuerung</h3>
+                    <p>Missionskritische Systeme für Echtzeitüberwachung, Ressourcenkoordination und Vorfallmanagement. Speziell entwickelt für Organisationen, die zuverlässiges Lagebewusstsein und schnelle Reaktionsfähigkeiten benötigen.</p>
+                    <div class="pillar-products">
+                        <a href="dispatch.html">Kommando & Einsatzleitung</a>
+                        <a href="approval.html">Intelligente Genehmigung</a>
+                        <a href="messenger.html">Messenger</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Unser Weg</h2>
+                <p>Von privaten Cloud-Lösungen zur globalen Unternehmens-KI-Plattform</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2025</span>
+                        <h4>Die Zukunft der Unternehmens-KI</h4>
+                        <p>Wegbereiter für den Wandel von „KI als Werkzeug“ zu „KI als Dienstleistung“ – Bereitstellung vollständiger betrieblicher Ergebnisse durch autonome Unternehmensagenten.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2024</span>
+                        <h4>Globale Expansion</h4>
+                        <p>Start der OORT.SH-Entwicklerplattform. Internationale Expansion mit lokalisierten Produkten für Überseemärkte. Über 150 Millionen kumulierte Nutzer erreicht.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2023</span>
+                        <h4>KI-Agenten-Plattform</h4>
+                        <p>Start von OORT.AI mit neun spezialisierten Unternehmensagenten. Einführung der VLStream-Plattform für visuelle KI unter MIT-Open-Source-Lizenz. Anerkennung als Technologie-KMU auf nationaler Ebene.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2022</span>
+                        <h4>Plattformerweiterung</h4>
+                        <p>AAA-Kreditrating erreicht. Produktpalette auf über 300 Unternehmensanwendungen erweitert. Zertifiziert nach ISO 9001, ISO 14001 und ISO 45001.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2021</span>
+                        <h4>Start der Workup-Super-App</h4>
+                        <p>Veröffentlichung des All-in-One-Unternehmensarbeitsplatzes mit integriertem Messaging, E-Mail, Genehmigung, Speicher und Klassenzimmer. Strategische Partnerschaften mit Huawei und CETC etabliert.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2020</span>
+                        <h4>Erste Unternehmensbereitstellungen</h4>
+                        <p>Start der zentralen Cloud-Plattform und Einsatzleitungslösungen. Gewinnung erster Unternehmens- und Regierungskunden mit privater Bereitstellungsarchitektur.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2019</span>
+                        <h4>Gründung in Shenzhen</h4>
+                        <p>OortCloud gegründet mit Fokus auf private Cloud-Infrastruktur und intelligente Anwendungsentwicklung für Unternehmens- und öffentliche Sicherheitssektoren.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Was uns leitet</h2>
+                <p>Die Prinzipien hinter jedem Produkt, das wir entwickeln</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-number">01</div>
+                    <h4>Ergebnisse statt Werkzeuge</h4>
+                    <p>Wir entwickeln KI, die erledigte Arbeit liefert, nicht Software, die mehr Arbeit schafft. Unser Ziel ist es, den betrieblichen Aufwand zu reduzieren, nicht Komplexitätsebenen hinzuzufügen.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-number">02</div>
+                    <h4>Sicherheit als Standard</h4>
+                    <p>Datensouveränität im Unternehmen ist nicht verhandelbar. Jedes Produkt unterstützt private Bereitstellung, Ende-zu-Ende-Verschlüsselung und Compliance mit globalen Standards.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-number">03</div>
+                    <h4>Integration zuerst</h4>
+                    <p>Isolierte Werkzeuge schaffen Silos. Wir entwickeln Produkte, die nahtlos zusammenarbeiten – mit gemeinsamen Kontexten, Daten und Workflows über die gesamte Plattform hinweg.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-number">04</div>
+                    <h4>Unternehmensanpassungsfähigkeit</h4>
+                    <p>Jede Organisation ist anders. Unsere Plattformen passen sich an komplexe Berechtigungssysteme, bestehende Infrastruktur und einzigartige betriebliche Anforderungen an.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-number">05</div>
+                    <h4>Offene Innovation</h4>
+                    <p>Wir tragen zur Open-Source-Community durch VLStream (MIT-lizenziert) und OORT.SH bei, weil wir glauben, dass offene Zusammenarbeit Innovation für alle beschleunigt.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-number">06</div>
+                    <h4>Globales Denken</h4>
+                    <p>In Shenzhen entwickelt, für die Welt gestaltet. Wir schaffen Technologie, die Grenzen, Sprachen und Branchen überwindet – für Unternehmen, wo immer sie tätig sind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners & Certifications -->
+    <section class="partners-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Vertraut von Branchenführern</h2>
+                <p>Strategische Partnerschaften und Zertifizierungen, die unser Engagement für Exzellenz bestätigen</p>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-badge">
+                    <div class="pb-icon"><svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="4" fill="none" stroke="#ea4335" stroke-width="2"/><path d="M9 14h10M14 9v10" stroke="#ea4335" stroke-width="2" stroke-linecap="round"/></svg></div>
+                    <strong>Huawei Cloud Partner</strong>
+                    <span>Strategische Technologie-Zusammenarbeit</span>
+                </div>
+                <div class="partner-badge">
+                    <div class="pb-icon"><svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="10" fill="none" stroke="#4285f4" stroke-width="2"/><path d="M10 14l3 3 5-6" fill="none" stroke="#4285f4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                    <strong>ISO 9001 zertifiziert</strong>
+                    <span>Qualitätsmanagementsystem</span>
+                </div>
+                <div class="partner-badge">
+                    <div class="pb-icon"><svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 4L6 8v6c0 6 4 11 8 12 4-1 8-6 8-12V8l-8-4z" fill="none" stroke="#34a853" stroke-width="2"/></svg></div>
+                    <strong>ISO 14001 & 45001</strong>
+                    <span>Umwelt- & Sicherheitsstandards</span>
+                </div>
+                <div class="partner-badge">
+                    <div class="pb-icon"><svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 4l3 6h6l-5 4.5 2 6.5L14 17.5 8 21l2-6.5L5 10h6z" fill="none" stroke="#fbbc04" stroke-width="2" stroke-linejoin="round"/></svg></div>
+                    <strong>AAA-Kreditrating</strong>
+                    <span>Exzellenz in der Unternehmenskreditwürdigkeit</span>
+                </div>
+                <div class="partner-badge">
+                    <div class="pb-icon"><svg width="28" height="28" viewBox="0 0 28 28"><rect x="6" y="6" width="16" height="16" rx="3" fill="none" stroke="#9b72cb" stroke-width="2"/><path d="M10 10h8M10 14h8M10 18h5" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+                    <strong>Nationales Technologie-KMU</strong>
+                    <span>Staatlich anerkannte Innovation</span>
+                </div>
+                <div class="partner-badge">
+                    <div class="pb-icon"><svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="10" fill="none" stroke="#1a73e8" stroke-width="2"/><path d="M14 8v6l4 3" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round"/></svg></div>
+                    <strong>CETC-Zusammenarbeit</strong>
+                    <span>Partnerschaft mit China Electronics</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries -->
+    <section class="industries-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Branchen, die wir bedienen</h2>
+                <p>Unternehmenstechnologielösungen, angepasst für vielfältige betriebliche Umgebungen</p>
+            </div>
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <svg width="32" height="32" viewBox="0 0 32 32"><rect x="4" y="8" width="24" height="18" rx="3" fill="none" stroke="#4285f4" stroke-width="2.5"/><path d="M4 14h24" stroke="#4285f4" stroke-width="1.5"/><rect x="7" y="17" width="7" height="5" rx="1" fill="#4285f4" opacity="0.2"/></svg>
+                    <h5>Regierung & Öffentliche Sicherheit</h5>
+                    <p>Digitale Verwaltung, Einsatzleitung und sichere Kollaborationsplattformen</p>
+                </div>
+                <div class="industry-card">
+                    <svg width="32" height="32" viewBox="0 0 32 32"><path d="M16 4l12 6v12l-12 6-12-6V10l12-6z" fill="none" stroke="#34a853" stroke-width="2.5"/><path d="M16 4v24M4 10l12 6 12-6" fill="none" stroke="#34a853" stroke-width="1.5" opacity="0.4"/></svg>
+                    <h5>Unternehmen & Konzerne</h5>
+                    <p>Einheitlicher Arbeitsbereich, KI-Automatisierung und Prozessoptimierung im großen Maßstab</p>
+                </div>
+                <div class="industry-card">
+                    <svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="14" r="6" fill="none" stroke="#ea4335" stroke-width="2.5"/><path d="M8 28c0-5 3.5-8 8-8s8 3 8 8" fill="none" stroke="#ea4335" stroke-width="2.5"/><path d="M22 10a4 4 0 014 0" fill="none" stroke="#ea4335" stroke-width="2" stroke-linecap="round" opacity="0.5"/></svg>
+                    <h5>Gesundheitswesen</h5>
+                    <p>Sichere Patientendaten, Remote-Zusammenarbeit und betriebliche Koordination</p>
+                </div>
+                <div class="industry-card">
+                    <svg width="32" height="32" viewBox="0 0 32 32"><rect x="6" y="4" width="20" height="24" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/><path d="M10 10h12M10 14h12M10 18h8M10 22h5" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>Bildung</h5>
+                    <p>Cloud-Klassenzimmer, Lernmanagement und Campusverwaltung</p>
+                </div>
+                <div class="industry-card">
+                    <svg width="32" height="32" viewBox="0 0 32 32"><rect x="4" y="10" width="24" height="16" rx="2" fill="none" stroke="#fbbc04" stroke-width="2.5"/><path d="M4 16h24" stroke="#fbbc04" stroke-width="1.5"/><path d="M10 6h12v4H10z" fill="none" stroke="#fbbc04" stroke-width="2"/></svg>
+                    <h5>Fertigung</h5>
+                    <p>Betriebsüberwachung, Einsatzleitungssysteme und Lieferketten-Intelligenz</p>
+                </div>
+                <div class="industry-card">
+                    <svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12" fill="none" stroke="#1a73e8" stroke-width="2.5"/><path d="M16 4c5 5 7 8 7 12s-2 7-7 12" fill="none" stroke="#1a73e8" stroke-width="1.5"/><path d="M4 16h24" stroke="#1a73e8" stroke-width="1.5"/></svg>
+                    <h5>Multinationale Organisationen</h5>
+                    <p>Globale Zusammenarbeit, Mehrsprachunterstützung und verteilte Betriebsabläufe</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Lassen Sie uns gemeinsam die Zukunft gestalten</h2>
+                <p>Ob Sie nach Enterprise-Cloud-Lösungen, KI-Automatisierung oder operativen Kommandosystemen suchen – wir sind bereit zu helfen.</p>
+                <div class="cta-buttons">
+                    <a href="index.html#products" class="btn-primary btn-large">Produkte entdecken</a>
+                    <a href="contact.html" class="btn-secondary btn-large">Kontaktieren Sie uns</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36"><p class="footer-tagline">Wir gestalten die Zukunft der Unternehmenstechnologie.</p></div>
+                <div class="footer-links"><h5>Produkte</h5><a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a><a href="workup.html">Workup</a><a href="oortai.html">OORT.AI</a><a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a><a href="classroom.html">Cloud Klassenzimmer</a></div>
+                <div class="footer-links"><h5>Lösungen</h5><a href="messenger.html">Instant Messenger</a><a href="clouddisk.html">Cloud-Speicher</a><a href="email.html">E-Mail</a><a href="approval.html">Intelligente Genehmigung</a><a href="dispatch.html">Kommando & Einsatzleitung</a><a href="fieldmanager.html">Feldmanager</a></div>
+                <div class="footer-links"><h5>Unternehmen</h5><a href="about.html">Über uns</a><a href="#">Karriere</a><a href="#">Blog</a><a href="contact.html">Kontakt</a><a href="#">Datenschutzerklärung</a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 OortCloud Technology. Alle Rechte vorbehalten.</p><div class="footer-social"><a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a><a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a><a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a></div></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Classroom - منصة التعلم المرئي للمؤسسات | OortCloud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="classroom.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="alternate" hreflang="ar" href="https://oortcloudsmart.com/ar/classroom.html">
+    <link rel="alternate" hreflang="en" href="https://oortcloudsmart.com/en/classroom.html">
+    <link rel="alternate" hreflang="x-default" href="https://oortcloudsmart.com/en/classroom.html">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40"></a>
+            <div class="nav-links">
+                <a href="index.html#products">المنتجات</a>
+                <a href="index.html#platform">المنصة</a>
+                <a href="index.html#enterprise">المؤسسات</a>
+                <a href="index.html#about">عن الشركة</a>
+            </div>
+            <a href="#get-started" class="nav-cta">ابدأ مجاناً</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="تبديل اللغة">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">AR</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item active" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    تسجيل الدخول
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">مستخدم</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            لوحة التحكم
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            تسجيل الخروج
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="تبديل القائمة"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="classroom-hero">
+        <div class="hero-bg-pattern"></div>
+        <div class="container">
+            <div class="classroom-hero-content">
+                <div class="product-breadcrumb">
+                    <a href="index.html">المنتجات</a>
+                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M10 3l-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <span>Cloud Classroom</span>
+                </div>
+                <h1>حيث تنبض المعرفة <span class="gradient-text-red">بالحياة</span></h1>
+                <p class="hero-tagline">منصة التعلم المرئي المؤسسية التي تمكّن المؤسسات من إنشاء ومشاركة وإدارة المعرفة على نطاق واسع. بث مباشر، فيديو حسب الطلب، وتدريب تفاعلي — في مكان واحد.</p>
+                <div class="hero-actions">
+                    <a href="#get-started" class="btn-primary btn-large btn-red">ابدأ التجربة المجانية</a>
+                    <a href="#features" class="btn-secondary btn-large">شاهد كيف يعمل</a>
+                </div>
+            </div>
+            <div class="classroom-hero-visual">
+                <div class="video-player-mockup">
+                    <div class="player-screen">
+                        <div class="player-content">
+                            <div class="play-button-large">
+                                <svg width="60" height="60" viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="rgba(255,255,255,0.95)" stroke="none"/><polygon points="24,18 24,42 44,30" fill="#ea4335"/></svg>
+                            </div>
+                            <div class="player-overlay-text">جلسة تدريب مؤسسية</div>
+                        </div>
+                        <div class="player-controls">
+                            <div class="progress-bar"><div class="progress-fill" style="width: 35%;"></div></div>
+                            <div class="controls-row">
+                                <div class="controls-left">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><polygon points="3,2 3,14 13,8" fill="white"/></svg>
+                                    <span class="time-display">١٢:٣٤ / ٣٥:٢٠</span>
+                                </div>
+                                <div class="controls-right">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><rect x="1" y="4" width="14" height="8" rx="1" fill="none" stroke="white" stroke-width="1.2"/><path d="M5 7h6M5 9h4" stroke="white" stroke-width="0.8"/></svg>
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 3h10v10H3z" fill="none" stroke="white" stroke-width="1.2" rx="1"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-sidebar">
+                        <div class="sidebar-title">محتويات الدورة</div>
+                        <div class="chapter-item active">
+                            <span class="chapter-num">٠١</span>
+                            <div class="chapter-info"><span class="chapter-name">المقدمة والنظرة العامة</span><span class="chapter-dur">٥:٢٠</span></div>
+                        </div>
+                        <div class="chapter-item playing">
+                            <span class="chapter-num">٠٢</span>
+                            <div class="chapter-info"><span class="chapter-name">المفاهيم الأساسية</span><span class="chapter-dur">٣٥:٢٠</span></div>
+                            <div class="playing-indicator"><span></span><span></span><span></span></div>
+                        </div>
+                        <div class="chapter-item">
+                            <span class="chapter-num">٠٣</span>
+                            <div class="chapter-info"><span class="chapter-name">التطبيق العملي</span><span class="chapter-dur">٢٨:١٥</span></div>
+                        </div>
+                        <div class="chapter-item">
+                            <span class="chapter-num">٠٤</span>
+                            <div class="chapter-info"><span class="chapter-name">التقييم والاختبار</span><span class="chapter-dur">١٥:٠٠</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Impact Stats -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-item"><span class="impact-number">+١٠ مليون</span><span class="impact-label">جلسة تدريبية مقدمة</span></div>
+                <div class="impact-item"><span class="impact-number">+٥٠٠</span><span class="impact-label">عميل مؤسسي</span></div>
+                <div class="impact-item"><span class="impact-number">+٥٠ ألف</span><span class="impact-label">دورة تم إنشاؤها</span></div>
+                <div class="impact-item"><span class="impact-number">٩٨٪</span><span class="impact-label">رضا المستخدمين</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="usecases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>مصممة لطريقة تعلّم المؤسسات</h2>
+                <p>من تأهيل الموظفين إلى تعليم العملاء، Cloud Classroom يتكيف مع كل سيناريو تعليمي</p>
+            </div>
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon"><svg viewBox="0 0 48 48" width="40" height="40"><rect x="6" y="10" width="36" height="24" rx="4" fill="none" stroke="#ea4335" stroke-width="2.5"/><circle cx="24" cy="22" r="6" fill="#ea4335" opacity="0.15"/><polygon points="22,19 22,25 27,22" fill="#ea4335"/><path d="M14 38h20" stroke="#ea4335" stroke-width="2" stroke-linecap="round"/></svg></div>
+                    <h4>البث المباشر</h4>
+                    <p>بث جلسات تدريبية مباشرة وندوات إلكترونية لآلاف المشاركين مع تفاعل فوري.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon"><svg viewBox="0 0 48 48" width="40" height="40"><rect x="8" y="8" width="32" height="32" rx="4" fill="none" stroke="#4285f4" stroke-width="2.5"/><path d="M16 18h16M16 24h12M16 30h8" stroke="#4285f4" stroke-width="2" stroke-linecap="round"/><circle cx="36" cy="36" r="8" fill="white" stroke="#34a853" stroke-width="2.5"/><path d="M33 36l2 2 4-4" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                    <h4>دورات حسب الطلب</h4>
+                    <p>إنشاء دورات فيديو منظمة مع فصول واختبارات وشهادات. المتعلمون يتقدمون بسرعتهم.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon"><svg viewBox="0 0 48 48" width="40" height="40"><circle cx="16" cy="16" r="6" fill="none" stroke="#fbbc04" stroke-width="2.5"/><circle cx="32" cy="16" r="6" fill="none" stroke="#fbbc04" stroke-width="2.5"/><circle cx="24" cy="32" r="6" fill="none" stroke="#fbbc04" stroke-width="2.5"/><path d="M20 20l4 8M28 20l-4 8" stroke="#fbbc04" stroke-width="1.5" stroke-dasharray="3"/></svg></div>
+                    <h4>مشاركة المعرفة</h4>
+                    <p>تمكين الموظفين من مشاركة خبراتهم عبر مقاطع فيديو قصيرة ودروس تعليمية.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon"><svg viewBox="0 0 48 48" width="40" height="40"><path d="M12 38V18l12-8 12 8v20" fill="none" stroke="#9b72cb" stroke-width="2.5" stroke-linejoin="round"/><rect x="18" y="26" width="12" height="12" rx="1" fill="none" stroke="#9b72cb" stroke-width="2"/><path d="M24 26v12M18 32h12" stroke="#9b72cb" stroke-width="1.5"/></svg></div>
+                    <h4>الجامعة المؤسسية</h4>
+                    <p>بناء أكاديمية تعليمية خاصة بعلامتك التجارية مع بوابات ومسارات ومناهج مخصصة.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon"><svg viewBox="0 0 48 48" width="40" height="40"><rect x="8" y="14" width="14" height="10" rx="2" fill="none" stroke="#34a853" stroke-width="2"/><rect x="26" y="14" width="14" height="10" rx="2" fill="none" stroke="#34a853" stroke-width="2"/><rect x="8" y="28" width="14" height="10" rx="2" fill="none" stroke="#34a853" stroke-width="2"/><rect x="26" y="28" width="14" height="10" rx="2" fill="none" stroke="#34a853" stroke-width="2"/></svg></div>
+                    <h4>الفصل الافتراضي</h4>
+                    <p>فصول تفاعلية مع مؤتمرات فيديو ومشاركة الشاشة وسبورة بيضاء وغرف فرعية.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon"><svg viewBox="0 0 48 48" width="40" height="40"><path d="M10 38l6-10 6 6 8-14 8 10" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="38" r="2" fill="#1a73e8"/><circle cx="30" cy="20" r="2" fill="#1a73e8"/><circle cx="38" cy="30" r="2" fill="#1a73e8"/></svg></div>
+                    <h4>التحليلات والتتبع</h4>
+                    <p>تحليلات تعليمية شاملة — تتبع معدلات الإكمال والمشاركة ودرجات الاختبارات.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>نظام تعليمي متكامل</h2>
+                <p>كل أداة تحتاجها مؤسستك لتقديم تدريب عالمي المستوى</p>
+            </div>
+
+            <!-- Feature 1: Video Management -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #ff6d63);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="3" y="6" width="22" height="16" rx="3" fill="white" opacity="0.9"/><polygon points="12,10 12,18 19,14" fill="#ea4335" opacity="0.7"/></svg>
+                    </div>
+                    <h3>إدارة المحتوى المرئي</h3>
+                    <p>رفع وتحويل وإدارة محتوى الفيديو على نطاق مؤسسي. دعم جميع التنسيقات مع تحسين تلقائي للجودة وبث متكيف.</p>
+                    <ul class="feature-list">
+                        <li><strong>تحويل ذكي</strong><span>تحويل تلقائي متعدد الجودة مع بث متكيف (HLS/DASH) لأي جهاز</span></li>
+                        <li><strong>مكتبة المحتوى</strong><span>تنظيم الفيديوهات بالفئات والوسوم وقوائم التشغيل والمسلسلات</span></li>
+                        <li><strong>حماية المحتوى (DRM)</strong><span>حماية الملكية الفكرية بالتشفير والعلامات المائية ومنع التحميل</span></li>
+                        <li><strong>ترجمة ومتعدد اللغات</strong><span>ترجمات تلقائية بالذكاء الاصطناعي ومسارات صوتية متعددة</span></li>
+                        <li><strong>تسريع CDN</strong><span>توصيل محتوى عالمي مع تخزين مؤقت للتشغيل السلس</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="video-mgmt-visual">
+                        <div class="video-grid-demo">
+                            <div class="video-thumb"><div class="thumb-img" style="background: linear-gradient(135deg, #667eea, #764ba2);"></div><span class="thumb-duration">١٢:٣٤</span><div class="thumb-info"><span class="thumb-title">دليل التأهيل</span><span class="thumb-meta">٢.٤ ألف مشاهدة &bull; منذ يومين</span></div></div>
+                            <div class="video-thumb"><div class="thumb-img" style="background: linear-gradient(135deg, #f093fb, #f5576c);"></div><span class="thumb-duration">٢٨:١٥</span><div class="thumb-info"><span class="thumb-title">تدريب المنتج</span><span class="thumb-meta">١.٨ ألف مشاهدة &bull; منذ أسبوع</span></div></div>
+                            <div class="video-thumb"><div class="thumb-img" style="background: linear-gradient(135deg, #4facfe, #00f2fe);"></div><span class="thumb-duration">٤٥:٠٠</span><div class="thumb-info"><span class="thumb-title">ورشة الأمان</span><span class="thumb-meta">٣.١ ألف مشاهدة &bull; منذ ٣ أيام</span></div></div>
+                            <div class="video-thumb"><div class="thumb-img" style="background: linear-gradient(135deg, #43e97b, #38f9d7);"></div><span class="thumb-duration">١٨:٤٢</span><div class="thumb-info"><span class="thumb-title">مهارات القيادة</span><span class="thumb-meta">٩٥٦ مشاهدة &bull; منذ ٥ أيام</span></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Live Streaming -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="4" fill="white"/><path d="M8 8a9 9 0 000 12M20 8a9 9 0 010 12" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/></svg>
+                    </div>
+                    <h3>البث المباشر المؤسسي</h3>
+                    <p>بث لآلاف المشاركين بجودة استوديو. مثالي لاجتماعات الشركة وإطلاق المنتجات والتدريب.</p>
+                    <ul class="feature-list">
+                        <li><strong>تأخير شبه معدوم</strong><span>بث بتأخير أقل من ثانية للتفاعل الفوري مع أي حجم جمهور</span></li>
+                        <li><strong>خلط متعدد المصادر</strong><span>التبديل بين الكاميرات ومشاركة الشاشة والشرائح في الوقت الفعلي</span></li>
+                        <li><strong>تفاعل مباشر</strong><span>دردشة فورية واستطلاعات وأسئلة وأجوبة ورفع اليد أثناء البث</span></li>
+                        <li><strong>تسجيل تلقائي</strong><span>تسجيل تلقائي لجميع الجلسات المباشرة للمشاهدة لاحقاً</span></li>
+                        <li><strong>بث متزامن</strong><span>البث في نفس الوقت إلى Cloud Classroom ومنصات خارجية</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="live-visual">
+                        <div class="live-demo">
+                            <div class="live-badge-indicator"><span class="live-dot"></span> مباشر</div>
+                            <div class="live-screen">
+                                <div class="live-speaker">
+                                    <div class="speaker-avatar"><svg width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="20" r="10" fill="rgba(255,255,255,0.2)"/><path d="M10 42c0-8 6-14 14-14s14 6 14 14" fill="rgba(255,255,255,0.15)"/></svg></div>
+                                    <span class="speaker-name">أحمد محمد - نائب رئيس الهندسة</span>
+                                </div>
+                            </div>
+                            <div class="live-chat">
+                                <div class="chat-msg"><span class="chat-author">سارة م.</span><span class="chat-text">رؤى رائعة حول البنية الجديدة!</span></div>
+                                <div class="chat-msg"><span class="chat-author">خالد ر.</span><span class="chat-text">متى سيتوفر هذا؟</span></div>
+                                <div class="chat-msg"><span class="chat-author">نورة ك.</span><span class="chat-text">هل يمكنكم مشاركة الشرائح؟</span></div>
+                            </div>
+                            <div class="live-stats"><span>👥 ٢,٨٤٧ يشاهدون</span><span>💬 ٣٤٢ رسالة</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Learning Paths & Certification -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #4285f4);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 4l10 6v4c0 7-4 12-10 14C8 26 4 21 4 14v-4l10-6z" fill="white" opacity="0.2"/><path d="M10 14l3 3 5-5" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>مسارات التعلم والشهادات</h3>
+                    <p>تصميم رحلات تعليمية منظمة مع متطلبات مسبقة ومعالم وتقييمات وشهادات.</p>
+                    <ul class="feature-list">
+                        <li><strong>مسارات تعلم منظمة</strong><span>إنشاء مناهج متعددة الدورات مع متطلبات وبوابات تقدم</span></li>
+                        <li><strong>اختبارات وتقييمات</strong><span>أنواع أسئلة متعددة — اختيار متعدد، ملء الفراغات، مقالات، وامتحانات موقوتة</span></li>
+                        <li><strong>شهادات رقمية</strong><span>إنشاء تلقائي لشهادات بعلامتك التجارية مع رموز QR للتحقق</span></li>
+                        <li><strong>تدريب إلزامي</strong><span>تعيين دورات مطلوبة مع مواعيد نهائية وتذكيرات وسير عمل تصعيد</span></li>
+                        <li><strong>نقاط ورصيد</strong><span>تعلم مُحفّز بنظام نقاط ولوحات متصدرين وشارات إنجاز</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="path-visual">
+                        <div class="learning-path-demo">
+                            <div class="path-node completed">
+                                <div class="path-node-icon"><svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="#34a853"/><path d="M6 10l3 3 5-5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                                <div class="path-node-info"><strong>الأساسيات</strong><span>مكتمل</span></div>
+                            </div>
+                            <div class="path-connector done"></div>
+                            <div class="path-node completed">
+                                <div class="path-node-icon"><svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="#34a853"/><path d="M6 10l3 3 5-5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                                <div class="path-node-info"><strong>المتوسط</strong><span>مكتمل</span></div>
+                            </div>
+                            <div class="path-connector active"></div>
+                            <div class="path-node current">
+                                <div class="path-node-icon"><svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="none" stroke="#4285f4" stroke-width="2"/><circle cx="10" cy="10" r="4" fill="#4285f4"/></svg></div>
+                                <div class="path-node-info"><strong>المتقدم</strong><span>قيد التقدم — ٦٠٪</span></div>
+                            </div>
+                            <div class="path-connector"></div>
+                            <div class="path-node">
+                                <div class="path-node-icon"><svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="none" stroke="#e8eaed" stroke-width="2"/></svg></div>
+                                <div class="path-node-info"><strong>امتحان الشهادة</strong><span>مقفل</span></div>
+                            </div>
+                        </div>
+                        <div class="certificate-preview">
+                            <div class="cert-border"><div class="cert-content">
+                                <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2l3 6h6l-5 4 2 6-6-4-6 4 2-6-5-4h6l3-6z" fill="#fbbc04"/></svg>
+                                <span class="cert-title">شهادة إتمام</span>
+                                <span class="cert-course">الهندسة المتقدمة</span>
+                                <span class="cert-name">أحمد محمد</span>
+                            </div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>أسعار مرنة تنمو معك</h2>
+                <p>ابدأ مجاناً وتوسع حسب احتياجات مؤسستك</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>المبتدئ</h4>
+                        <div class="pricing-price"><span class="price-amount">$٥</span><span class="price-period">/مستخدم/شهر</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>حتى ١٠٠ مستخدم</li>
+                        <li>٥٠ جيجابايت تخزين فيديو</li>
+                        <li>دورات فيديو حسب الطلب</li>
+                        <li>تحليلات أساسية</li>
+                        <li>دعم البريد الإلكتروني</li>
+                    </ul>
+                    <a href="#" class="btn-secondary pricing-btn">ابدأ التجربة المجانية</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">الأكثر شعبية</div>
+                    <div class="pricing-header">
+                        <h4>الأعمال</h4>
+                        <div class="pricing-price"><span class="price-amount">$١٢</span><span class="price-period">/مستخدم/شهر</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>مستخدمون غير محدودين</li>
+                        <li>١ تيرابايت تخزين فيديو</li>
+                        <li>بث مباشر (1080p)</li>
+                        <li>شهادات واختبارات</li>
+                        <li>لوحة تحليلات كاملة</li>
+                        <li>دعم ذو أولوية</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn">ابدأ التجربة المجانية</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>المؤسسات</h4>
+                        <div class="pricing-price"><span class="price-amount">مخصص</span><span class="price-period"></span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>كل مزايا خطة الأعمال</li>
+                        <li>نشر خاص</li>
+                        <li>تخزين غير محدود</li>
+                        <li>بث مباشر 4K</li>
+                        <li>تكاملات مخصصة</li>
+                        <li>مدير نجاح مخصص</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary pricing-btn">تواصل مع المبيعات</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>ابدأ ببناء ثقافة التعلم اليوم</h2>
+                <p>انضم إلى آلاف المؤسسات التي تقدم تدريباً مؤثراً مع Cloud Classroom.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">ابدأ التجربة المجانية</a>
+                    <a href="#" class="btn-secondary btn-large">اطلب عرضاً توضيحياً</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36"><p class="footer-tagline">نبني مستقبل تقنية المؤسسات.</p></div>
+                <div class="footer-links"><h5>المنتجات</h5><a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a><a href="workup.html">Workup</a><a href="oortai.html">OORT.AI</a><a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a><a href="#">Cloud Classroom</a></div>
+                <div class="footer-links"><h5>الحلول</h5><a href="messenger.html">المراسلة الفورية</a><a href="clouddisk.html">Cloud Disk</a><a href="email.html">البريد الإلكتروني</a><a href="approval.html">الموافقات الذكية</a><a href="dispatch.html">القيادة والتوجيه</a><a href="fieldmanager.html">مدير الميدان</a></div>
+                <div class="footer-links"><h5>الشركة</h5><a href="about.html">عن الشركة</a><a href="#">الوظائف</a><a href="#">المدونة</a><a href="contact.html">تواصل معنا</a><a href="#">سياسة الخصوصية</a></div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ٢٠٢٦ OortCloud Technology. جميع الحقوق محفوظة.</p>
+                <div class="footer-social">
+                    <a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a>
+                    <a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a>
+                    <a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

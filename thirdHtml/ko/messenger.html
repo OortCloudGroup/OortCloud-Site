@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인스턴트 메신저 - 기업용 팀 커뮤니케이션 | OortCloud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="messenger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="alternate" hreflang="ko" href="https://oortcloudsmart.com/ko/">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">제품</a>
+                <a href="index.html#platform">플랫폼</a>
+                <a href="index.html#enterprise">엔터프라이즈</a>
+                <a href="index.html#about">소개</a>
+            </div>
+            <a href="#get-started" class="nav-cta">무료로 시작</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="언어 전환">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">KO</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item active" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    로그인
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">사용자</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            대시보드
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            로그아웃
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="메뉴 전환">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="im-hero">
+        <div class="container">
+            <div class="im-hero-grid">
+                <div class="im-hero-content">
+                    <div class="product-breadcrumb">
+                        <a href="index.html">제품</a>
+                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <span>Instant Messenger</span>
+                    </div>
+                    <h1>팀이 <span class="gradient-text-teal">연결되고 함께 성장하는</span> 공간</h1>
+                    <p class="im-hero-desc">팀을 하나로 모으는 기업용 메시징. 다이렉트 메시지, 그룹 스페이스, 스레드 대화, 그리고 모든 OortCloud 제품과의 깊은 통합 — 비즈니스를 위한 안전한 보안.</p>
+                    <div class="hero-actions">
+                        <a href="#get-started" class="btn-primary btn-large btn-teal">무료 체험 시작</a>
+                        <a href="#features" class="btn-secondary btn-large">기능 살펴보기</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            종단간 암호화
+                        </span>
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            프라이빗 배포 지원
+                        </span>
+                    </div>
+                </div>
+                <div class="im-hero-visual">
+                    <div class="chat-mockup">
+                        <div class="chat-sidebar">
+                            <div class="chat-sidebar-header">
+                                <div class="user-avatar-sm" style="background:#4285f4;">JS</div>
+                                <span class="sidebar-user-name">John Smith</span>
+                                <div class="online-dot"></div>
+                            </div>
+                            <div class="chat-search-bar">
+                                <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="5.5" cy="5.5" r="4" fill="none" stroke="#9aa0a6" stroke-width="1.2"/><path d="M8.5 8.5l2.5 2.5" stroke="#9aa0a6" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                <span>메시지 검색</span>
+                            </div>
+                            <div class="chat-nav-section">
+                                <span class="nav-section-title">스페이스</span>
+                                <div class="chat-nav-item active">
+                                    <span class="nav-icon space-icon">#</span>
+                                    <span>엔지니어링</span>
+                                    <span class="unread-badge">3</span>
+                                </div>
+                                <div class="chat-nav-item">
+                                    <span class="nav-icon space-icon">#</span>
+                                    <span>제품</span>
+                                </div>
+                                <div class="chat-nav-item">
+                                    <span class="nav-icon space-icon">#</span>
+                                    <span>일반</span>
+                                </div>
+                            </div>
+                            <div class="chat-nav-section">
+                                <span class="nav-section-title">다이렉트 메시지</span>
+                                <div class="chat-nav-item">
+                                    <div class="user-avatar-xs" style="background:#34a853;">SC</div>
+                                    <span>Sarah Chen</span>
+                                </div>
+                                <div class="chat-nav-item">
+                                    <div class="user-avatar-xs" style="background:#ea4335;">MR</div>
+                                    <span>Mike Roberts</span>
+                                    <span class="unread-badge">1</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-main">
+                            <div class="chat-main-header">
+                                <span class="chat-channel-name"># 엔지니어링</span>
+                                <span class="chat-members">24명</span>
+                            </div>
+                            <div class="chat-messages">
+                                <div class="chat-message">
+                                    <div class="msg-avatar" style="background:#34a853;">SC</div>
+                                    <div class="msg-content">
+                                        <div class="msg-header">
+                                            <span class="msg-author">Sarah Chen</span>
+                                            <span class="msg-time">오전 10:24</span>
+                                        </div>
+                                        <p class="msg-text">v2.4를 스테이징에 배포했습니다. QA팀에서 확인해 주시겠어요? 🚀</p>
+                                    </div>
+                                </div>
+                                <div class="chat-message">
+                                    <div class="msg-avatar" style="background:#9b72cb;">AK</div>
+                                    <div class="msg-content">
+                                        <div class="msg-header">
+                                            <span class="msg-author">Alex Kim</span>
+                                            <span class="msg-time">오전 10:26</span>
+                                        </div>
+                                        <p class="msg-text">확인하겠습니다! 지금 테스트 스위트 실행할게요.</p>
+                                        <div class="msg-reaction">
+                                            <span class="reaction">👍 2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chat-message">
+                                    <div class="msg-avatar" style="background:#4285f4;">JS</div>
+                                    <div class="msg-content">
+                                        <div class="msg-header">
+                                            <span class="msg-author">John Smith</span>
+                                            <span class="msg-time">오전 10:28</span>
+                                        </div>
+                                        <p class="msg-text">팀 모두 수고했습니다! 릴리스 노트입니다:</p>
+                                        <div class="msg-attachment">
+                                            <svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="1.5" width="10" height="11" rx="1.5" fill="none" stroke="#4285f4" stroke-width="1"/><path d="M4 4.5h6M4 6.5h4" stroke="#4285f4" stroke-width="0.8" stroke-linecap="round"/></svg>
+                                            <span>release_notes_v2.4.md</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-input">
+                                <div class="input-actions">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="none" stroke="#9aa0a6" stroke-width="1.2"/><path d="M7 4.5v5M4.5 7h5" stroke="#9aa0a6" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                </div>
+                                <span class="input-placeholder">메시지 입력 #엔지니어링</span>
+                                <div class="input-send">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7l10-5-3 5 3 5z" fill="#4285f4" opacity="0.8"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Benefits Bar -->
+    <section class="benefits-bar">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.4 8.4 0 01-3.8-.9L3 21l1.9-5.7A8.4 8.4 0 014 11.5 8.5 8.5 0 018.7 3.9 8.4 8.4 0 0112.5 3h.5a8.5 8.5 0 018 8v.5z" fill="none" stroke="#34a853" stroke-width="1.8"/></svg>
+                    <div>
+                        <strong>실시간 메시징</strong>
+                        <span>입력 표시기 및 읽음 확인과 함께 즉시 전달</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" fill="none" stroke="#4285f4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <strong>팀 스페이스</strong>
+                        <span>프로젝트, 팀 및 주제별 체계적인 채널</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="#9b72cb" stroke-width="1.8"/><path d="M3 9h18M9 3v18" stroke="#9b72cb" stroke-width="1.2" opacity="0.4"/><path d="M12 12l3 3M12 12l-3 3M12 12V7" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <div>
+                        <strong>리치 미디어</strong>
+                        <span>파일, 이미지, 비디오 및 음성 메시지 공유</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V7l-8-5z" fill="none" stroke="#ea4335" stroke-width="1.8"/><path d="M9 12l2 2 4-4" fill="none" stroke="#ea4335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <strong>기업 보안</strong>
+                        <span>E2E 암호화, DLP 및 규정 준수 제어</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>현대적 팀을 위해 설계된 커뮤니케이션</h2>
+                <p>팀이 소통하고 협업하고 보조를 맞추는 데 필요한 모든 도구</p>
+            </div>
+
+            <!-- Feature 1: Messaging -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #4285f4);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M6 8c0-2 1.5-3 3-3h10c1.5 0 3 1 3 3v8c0 2-1.5 3-3 3h-3l-4 4v-4H9c-1.5 0-3-1-3-3V8z" fill="white" opacity="0.9"/><circle cx="11" cy="12" r="1.2" fill="#34a853"/><circle cx="14" cy="12" r="1.2" fill="#34a853"/><circle cx="17" cy="12" r="1.2" fill="#34a853"/></svg>
+                    </div>
+                    <h3>강력한 메시징</h3>
+                    <p>현대적 팀이 기대하는 모든 기능을 갖춘 실시간 메시징 — 스레드, 반응, 멘션, 대화를 체계적으로 유지하는 스마트 포맷팅.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>스레드 대화</strong>
+                            <span>주 채널의 소음을 줄이는 답장 스레드로 토론을 집중적으로 유지</span>
+                        </li>
+                        <li>
+                            <strong>리치 텍스트 및 마크다운</strong>
+                            <span>굵게, 기울임꼴, 코드 블록, 목록 및 삽입된 링크로 메시지 포맷팅</span>
+                        </li>
+                        <li>
+                            <strong>@멘션 및 알림</strong>
+                            <span>스마트 알림 라우팅 및 우선순위 레벨로 개인 또는 그룹 태그</span>
+                        </li>
+                        <li>
+                            <strong>반응 및 이모지</strong>
+                            <span>이모지, 커스텀 반응 및 빠른 확인으로 메시지에 반응</span>
+                        </li>
+                        <li>
+                            <strong>메시지 작업</strong>
+                            <span>모든 메시지에 고정, 북마크, 전달, 예약 및 알림 설정</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="messaging-visual">
+                        <div class="thread-demo">
+                            <div class="thread-parent">
+                                <div class="tp-avatar" style="background:#4285f4;">JD</div>
+                                <div class="tp-content">
+                                    <strong>Jake Davis</strong>
+                                    <p>새 API 디자인에 대해 어떻게 생각하세요? 초안을 리포에 푸시했습니다.</p>
+                                    <div class="tp-reactions">
+                                        <span class="reaction">👀 4</span>
+                                        <span class="reaction">💬 답글 3개</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="thread-replies">
+                                <div class="thread-reply">
+                                    <div class="tp-avatar small" style="background:#34a853;">LL</div>
+                                    <div class="tp-content small">
+                                        <strong>Lisa Lee</strong>
+                                        <p>멋져요! auth 엔드포인트에 대해 한 가지 제안이 있습니다...</p>
+                                    </div>
+                                </div>
+                                <div class="thread-reply">
+                                    <div class="tp-avatar small" style="background:#ea4335;">MK</div>
+                                    <div class="tp-content small">
+                                        <strong>Mark K.</strong>
+                                        <p>+1, 페이지네이션 접근 방식이 견고합니다 👍</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Spaces & Channels -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #4285f4, #9b72cb);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="9" height="9" rx="2" fill="white" opacity="0.9"/><rect x="15" y="4" width="9" height="9" rx="2" fill="white" opacity="0.6"/><rect x="4" y="15" width="9" height="9" rx="2" fill="white" opacity="0.6"/><rect x="15" y="15" width="9" height="9" rx="2" fill="white" opacity="0.4"/></svg>
+                    </div>
+                    <h3>스페이스 및 채널</h3>
+                    <p>팀, 프로젝트 또는 주제별로 대화를 정리하세요. 스페이스는 공유 파일, 작업 및 고정된 자원으로 팀에 협업 공간을 제공합니다.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>공개 및 비공개 스페이스</strong>
+                            <span>전사 주제를 위한 공개 스페이스, 팀 및 민감한 토론을 위한 비공개 스페이스</span>
+                        </li>
+                        <li>
+                            <strong>주제 채널</strong>
+                            <span>새 그룹 생성 없이 집중 토론을 위한 스페이스 내 하위 채널</span>
+                        </li>
+                        <li>
+                            <strong>공유 자원</strong>
+                            <span>모든 스페이스 멤버가 쉽게 접근할 수 있도록 중요한 파일, 링크 및 문서 고정</span>
+                        </li>
+                        <li>
+                            <strong>멤버 관리</strong>
+                            <span>역할 기반 권한 — 관리자, 중재자 및 커스텀 접근 레벨의 멤버</span>
+                        </li>
+                        <li>
+                            <strong>스페이스 탐색</strong>
+                            <span>스마트 추천으로 조직 내 공개 스페이스를 탐색하고 참여</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="spaces-visual">
+                        <div class="spaces-grid-demo">
+                            <div class="space-card-demo">
+                                <div class="space-icon" style="background: #4285f4;">#</div>
+                                <div class="space-info">
+                                    <strong>엔지니어링</strong>
+                                    <span>24명 &bull; 지금 활성</span>
+                                </div>
+                            </div>
+                            <div class="space-card-demo">
+                                <div class="space-icon" style="background: #34a853;">#</div>
+                                <div class="space-info">
+                                    <strong>제품 디자인</strong>
+                                    <span>12명 &bull; 5분 전</span>
+                                </div>
+                            </div>
+                            <div class="space-card-demo">
+                                <div class="space-icon" style="background: #ea4335;">#</div>
+                                <div class="space-info">
+                                    <strong>마케팅</strong>
+                                    <span>18명 &bull; 1시간 전</span>
+                                </div>
+                            </div>
+                            <div class="space-card-demo">
+                                <div class="space-icon" style="background: #fbbc04;">#</div>
+                                <div class="space-info">
+                                    <strong>일반</strong>
+                                    <span>156명 &bull; 지금 활성</span>
+                                </div>
+                            </div>
+                            <div class="space-card-demo private">
+                                <div class="space-icon" style="background: #9b72cb;">🔒</div>
+                                <div class="space-info">
+                                    <strong>리더십</strong>
+                                    <span>8명 &bull; 비공개</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Voice & Video -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="7" width="18" height="14" rx="3" fill="white" opacity="0.9"/><path d="M23 11l4-2v8l-4-2" fill="white" opacity="0.6"/><circle cx="14" cy="14" r="3" fill="#ea4335" opacity="0.3"/></svg>
+                    </div>
+                    <h3>음성 및 화상 통화</h3>
+                    <p>모든 대화에서 즉시 음성 또는 화상 통화를 시작하세요. HD 화질, 화면 공유, 미팅 녹음 — 별도 앱이 필요 없습니다.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>원클릭 통화</strong>
+                            <span>모든 채팅에서 즉시 음성 또는 화상 통화 시작 — 1:1 또는 그룹, 최대 100명</span>
+                        </li>
+                        <li>
+                            <strong>화면 공유</strong>
+                            <span>주석 도구로 전체 화면 또는 특정 창을 공유</span>
+                        </li>
+                        <li>
+                            <strong>미팅 녹음</strong>
+                            <span>통화를 녹음하고 AI 생성 스크립트와 함께 클라우드 디스크에 자동 저장</span>
+                        </li>
+                        <li>
+                            <strong>음성 메시지</strong>
+                            <span>입력이 불편할 때 음성 메시지 전송 — 검색 가능성을 위한 자동 스크립트</span>
+                        </li>
+                        <li>
+                            <strong>가상 배경</strong>
+                            <span>모든 화상 통화 환경을 위한 전문적 배경 및 흐림 효과</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="video-visual">
+                        <div class="video-call-demo">
+                            <div class="video-grid">
+                                <div class="video-participant">
+                                    <div class="vp-placeholder" style="background: linear-gradient(135deg, #1a1f36, #2d1b4e);">
+                                        <div class="vp-avatar" style="background:#4285f4;">JS</div>
+                                    </div>
+                                    <span class="vp-name">John Smith</span>
+                                </div>
+                                <div class="video-participant">
+                                    <div class="vp-placeholder" style="background: linear-gradient(135deg, #1a2f36, #1b4e2d);">
+                                        <div class="vp-avatar" style="background:#34a853;">SC</div>
+                                    </div>
+                                    <span class="vp-name">Sarah Chen</span>
+                                </div>
+                                <div class="video-participant">
+                                    <div class="vp-placeholder" style="background: linear-gradient(135deg, #2f1a36, #4e1b2d);">
+                                        <div class="vp-avatar" style="background:#ea4335;">MR</div>
+                                    </div>
+                                    <span class="vp-name">Mike R.</span>
+                                </div>
+                                <div class="video-participant">
+                                    <div class="vp-placeholder" style="background: linear-gradient(135deg, #36341a, #4e4b1b);">
+                                        <div class="vp-avatar" style="background:#fbbc04;">LK</div>
+                                    </div>
+                                    <span class="vp-name">Lisa K.</span>
+                                </div>
+                            </div>
+                            <div class="video-controls">
+                                <div class="vc-btn"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2v10M4 5l3-3 3 3" fill="none" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+                                <div class="vc-btn"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="4" y="3" width="6" height="8" rx="3" fill="none" stroke="white" stroke-width="1.2"/><path d="M7 11v2M5 13h4" stroke="white" stroke-width="1" stroke-linecap="round"/></svg></div>
+                                <div class="vc-btn end-call"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M1 6c0-1 2-3 6-3s6 2 6 3v2c0 .5-.5 1-1 1h-2c-.5 0-1-.5-1-1V7c-1-.3-2.7-.3-4 0v1c0 .5-.5 1-1 1H2c-.5 0-1-.5-1-1V6z" fill="white"/></svg></div>
+                                <div class="vc-btn"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="3" width="10" height="8" rx="1.5" fill="none" stroke="white" stroke-width="1.2"/><path d="M5 7h4" stroke="white" stroke-width="1" stroke-linecap="round"/></svg></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: File Sharing & Integration -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #fbbc04, #34a853);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M6 8c0-1 .5-2 2-2h4l2 2h6c1.5 0 2 1 2 2v10c0 1-.5 2-2 2H8c-1.5 0-2-1-2-2V8z" fill="white" opacity="0.9"/><path d="M11 14h6M14 11v6" stroke="#fbbc04" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/></svg>
+                    </div>
+                    <h3>파일 공유 및 통합</h3>
+                    <p>대화에서 바로 파일을 공유하고 미리보기로 확인하고, 채팅을 떠나지 않고 문서에서 협업하고, 즐겨 찾는 도구와 연결하세요.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>인라인 파일 미리보기</strong>
+                            <span>이미지, PDF, 비디오 및 문서를 채팅에서 바로 미리보기 — 다운로드 불필요</span>
+                        </li>
+                        <li>
+                            <strong>클라우드 디스크 통합</strong>
+                            <span>실시간 권한 제어 및 버전 추적으로 클라우드 디스크의 파일 공유</span>
+                        </li>
+                        <li>
+                            <strong>봇 및 워크플로 통합</strong>
+                            <span>지능형 결재, 작업 봇, CI/CD 알림 및 커스텀 웹훅과 연결</span>
+                        </li>
+                        <li>
+                            <strong>앱 마켓플레이스</strong>
+                            <span>마켓플레이스에서 프로젝트 관리, 설문조사, 스탠드업 봇 등의 앱 설치</span>
+                        </li>
+                        <li>
+                            <strong>슬래시 명령어</strong>
+                            <span>/명령어로 빠른 작업 — 작업 생성, 알림 설정, 설문조사 시작, 파일 검색</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="integrations-visual">
+                        <div class="integrations-demo">
+                            <div class="int-header">연결된 앱</div>
+                            <div class="int-grid">
+                                <div class="int-app">
+                                    <div class="int-icon" style="background: linear-gradient(135deg, #4285f4, #34a853);">CD</div>
+                                    <span>Cloud Disk</span>
+                                </div>
+                                <div class="int-app">
+                                    <div class="int-icon" style="background: linear-gradient(135deg, #fbbc04, #ea4335);">IA</div>
+                                    <span>결재</span>
+                                </div>
+                                <div class="int-app">
+                                    <div class="int-icon" style="background: linear-gradient(135deg, #ea4335, #9b72cb);">CC</div>
+                                    <span>Classroom</span>
+                                </div>
+                                <div class="int-app">
+                                    <div class="int-icon" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">EM</div>
+                                    <span>이메일</span>
+                                </div>
+                                <div class="int-app">
+                                    <div class="int-icon" style="background: linear-gradient(135deg, #5f6368, #3c4043);">GH</div>
+                                    <span>GitHub</span>
+                                </div>
+                                <div class="int-app">
+                                    <div class="int-icon" style="background: linear-gradient(135deg, #1a73e8, #4285f4);">CI</div>
+                                    <span>CI/CD</span>
+                                </div>
+                            </div>
+                            <div class="int-bot-msg">
+                                <div class="bot-icon">🤖</div>
+                                <div class="bot-content">
+                                    <strong>결재 봇</strong>
+                                    <p>Alex Chen의 새 요청: 구매 요청 (₩8,500,000)</p>
+                                    <div class="bot-actions">
+                                        <button class="bot-btn approve">승인</button>
+                                        <button class="bot-btn view">상세 보기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5: Security & Admin -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #1a73e8, #174ea6);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 3L5 8v7c0 6.3 4 11.2 9 12.7 5-1.5 9-6.4 9-12.7V8L14 3z" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><path d="M10 14l3 3 5-5" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>기업용 보안 및 관리</h3>
+                    <p>보안을 중시하는 조직을 위해 구축되었습니다. 데이터, 사용자 및 규정 준수에 대한 완전한 통제 — 최대 주권을 위한 프라이빗 배포 지원.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>종단간 암호화</strong>
+                            <span>전송 중 및 저장 시 모든 메시지 암호화. 민감한 채팅을 위한 선택적 클라이언트 측 암호화</span>
+                        </li>
+                        <li>
+                            <strong>데이터 유출 방지</strong>
+                            <span>신용카드 및 개인정보와 같은 민감한 정보의 공유를 자동으로 탐지 및 차단</span>
+                        </li>
+                        <li>
+                            <strong>메시지 보존</strong>
+                            <span>보존 정책 설정 — 30/60/90일 후 자동 삭제 또는 무기한 보존</span>
+                        </li>
+                        <li>
+                            <strong>규정 준수 및 eDiscovery</strong>
+                            <span>규제 준수를 위한 검색, 내보내기 및 법적 보존 기능이 포함된 완전한 메시지 아카이브</span>
+                        </li>
+                        <li>
+                            <strong>프라이빗 배포</strong>
+                            <span>최대 데이터 통제를 위한 에어갭 지원으로 자체 인프라에 배포</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="security-visual">
+                        <div class="security-panel">
+                            <div class="sec-panel-header">보안 대시보드</div>
+                            <div class="sec-metrics">
+                                <div class="sec-metric">
+                                    <span class="sec-metric-icon" style="color:#34a853;">●</span>
+                                    <span>암호화</span>
+                                    <strong>활성</strong>
+                                </div>
+                                <div class="sec-metric">
+                                    <span class="sec-metric-icon" style="color:#34a853;">●</span>
+                                    <span>DLP 정책</span>
+                                    <strong>적용 중</strong>
+                                </div>
+                                <div class="sec-metric">
+                                    <span class="sec-metric-icon" style="color:#34a853;">●</span>
+                                    <span>규정 준수</span>
+                                    <strong>준수</strong>
+                                </div>
+                                <div class="sec-metric">
+                                    <span class="sec-metric-icon" style="color:#fbbc04;">●</span>
+                                    <span>보존</span>
+                                    <strong>90일</strong>
+                                </div>
+                            </div>
+                            <div class="sec-blocked">
+                                <span class="sec-blocked-title">오늘 차단된 위협</span>
+                                <div class="sec-blocked-stats">
+                                    <div class="blocked-item">
+                                        <span class="blocked-num">23</span>
+                                        <span>민감한 데이터</span>
+                                    </div>
+                                    <div class="blocked-item">
+                                        <span class="blocked-num">7</span>
+                                        <span>피싱 링크</span>
+                                    </div>
+                                    <div class="blocked-item">
+                                        <span class="blocked-num">2</span>
+                                        <span>멀웨어 파일</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Features -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>그리고 더 많은 기능</h2>
+                <p>기업용 팀 커뮤니케이션을 위해 필요한 모든 기능</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M21 21l-4.35-4.35" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>전체 검색</h5>
+                    <p>필터 및 날짜 범위로 모든 메시지, 파일 및 스페이스에서 검색</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M2 12h20M12 2c3 3 4.5 6 4.5 10s-1.5 7-4.5 10c-3-3-4.5-6-4.5-10S9 5 12 2z" fill="none" stroke="#ea4335" stroke-width="1.2"/></svg>
+                    <h5>다국어 지원</h5>
+                    <p>실시간 메시지 번역 및 40개 이상의 인터페이스 언어 지원</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M12 7v5l3 3" fill="none" stroke="#34a853" stroke-width="1.8" stroke-linecap="round"/></svg>
+                    <h5>상태 및 프레즌스</h5>
+                    <p>커스텀 상태, 가용성 및 근무 시간을 자동 DND 모드로 설정</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M4 22v-7" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>공지사항</h5>
+                    <p>읽음 추적 및 확인 기능으로 중요한 메시지를 브로드캐스트</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M3 10h18" stroke="#fbbc04" stroke-width="1.2"/><path d="M8 18v2M16 18v2" stroke="#fbbc04" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>데스크톱 및 모바일</h5>
+                    <p>푸시 알림 및 오프라인 접근이 가능한 모든 플랫폼의 네이티브 앱</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="#1a73e8" stroke-width="1.5"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="#1a73e8" stroke-width="1.5" opacity="0.6"/></svg>
+                    <h5>무제한 기록</h5>
+                    <p>스토리지 제한이나 메시지 제한 없이 전체 검색 가능한 메시지 기록</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M9 7h6M9 11h6M9 15h4" stroke="#ea4335" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <h5>작업 및 알림</h5>
+                    <p>메시지에서 작업 생성, 팀원에게 할당 및 진행 상황 추적</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    <h5>크로스 플랫폼 동기화</h5>
+                    <p>모든 기기에서 원활한 동기화 — 중단했던 대화를 이어가세요</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>모든 팀 규모에 맞는 요금제</h2>
+                <p>무료로 시작하고, 팀 성장에 맞춰 확장하세요</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Starter</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">₩3,000</span>
+                            <span class="price-period">/사용자/월</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>최대 100명</li>
+                        <li>무제한 메시징</li>
+                        <li>사용자당 5 GB 파일 스토리지</li>
+                        <li>1:1 음성 및 화상 통화</li>
+                        <li>기본 검색</li>
+                    </ul>
+                    <a href="#" class="btn-secondary pricing-btn">무료 체험 시작</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">가장 인기</div>
+                    <div class="pricing-header">
+                        <h4>Business</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">₩8,000</span>
+                            <span class="price-period">/사용자/월</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>무제한 사용자</li>
+                        <li>그룹 화상 통화 (100명)</li>
+                        <li>무제한 파일 스토리지</li>
+                        <li>화면 공유 및 녹음</li>
+                        <li>관리 콘솔 및 DLP</li>
+                        <li>우선 지원</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn btn-teal">무료 체험 시작</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Enterprise</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">맞춤 견적</span>
+                            <span class="price-period"></span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Business의 모든 기능</li>
+                        <li>프라이빗 배포</li>
+                        <li>E2E 암호화</li>
+                        <li>eDiscovery 및 법적 보존</li>
+                        <li>커스텀 통합</li>
+                        <li>전담 계정 매니저</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary pricing-btn">영업팀 문의</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>팀 커뮤니케이션을 혁신할 준비가 되셨나요?</h2>
+                <p>안전하고 원활한 협업을 위해 Instant Messenger를 신뢰하는 전 세계 조직에 합류하세요.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">무료 체험 시작</a>
+                    <a href="#" class="btn-secondary btn-large">데모 요청</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36">
+                    <p class="footer-tagline">기업 기술의 미래를 구축합니다.</p>
+                </div>
+                <div class="footer-links"><h5>제품</h5><a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a><a href="workup.html">Workup</a><a href="oortai.html">OORT.AI</a><a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a><a href="classroom.html">Cloud Classroom</a></div>
+                <div class="footer-links"><h5>솔루션</h5><a href="#">인스턴트 메신저</a><a href="clouddisk.html">클라우드 디스크</a><a href="email.html">이메일</a><a href="approval.html">지능형 결재</a><a href="dispatch.html">지휘 및 파견</a><a href="fieldmanager.html">현장 관리자</a></div>
+                <div class="footer-links"><h5>회사</h5><a href="about.html">회사 소개</a><a href="#">채용</a><a href="#">블로그</a><a href="contact.html">문의</a><a href="#">개인정보 처리방침</a></div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OortCloud Technology. 모든 권리 보유.</p>
+                <div class="footer-social">
+                    <a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a>
+                    <a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a>
+                    <a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

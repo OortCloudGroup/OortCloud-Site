@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" hreflang="ko" href="https://oortcloudsmart.com/ko/">
+    <title>클라우드 클래스룸 - 엔터프라이즈 비디오 학습 플랫폼 | OortCloud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="classroom.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">제품</a>
+                <a href="index.html#platform">플랫폼</a>
+                <a href="index.html#enterprise">엔터프라이즈</a>
+                <a href="index.html#about">소개</a>
+            </div>
+            <a href="#get-started" class="nav-cta">무료로 시작</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="언어 전환">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">KO</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item active" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    로그인
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">사용자</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            대시보드
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            로그아웃
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="메뉴 전환">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section - YouTube style bold hero -->
+    <header class="classroom-hero">
+        <div class="hero-bg-pattern"></div>
+        <div class="container">
+            <div class="classroom-hero-content">
+                <div class="product-breadcrumb">
+                    <a href="index.html">제품</a>
+                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <span>클라우드 클래스룸</span>
+                </div>
+                <h1>지식이 <span class="gradient-text-red">살아나는</span> 곳</h1>
+                <p class="hero-tagline">조직이 대규모로 지식을 생성, 공유, 관리할 수 있도록 지원하는 엔터프라이즈 비디오 학습 플랫폼입니다. 라이브 스트리밍, 온디맨드 비디오, 인터랙티브 교육을 한 곳에서 제공합니다.</p>
+                <div class="hero-actions">
+                    <a href="#get-started" class="btn-primary btn-large btn-red">무료 체험 시작</a>
+                    <a href="#features" class="btn-secondary btn-large">작동 방식 보기</a>
+                </div>
+            </div>
+            <div class="classroom-hero-visual">
+                <div class="video-player-mockup">
+                    <div class="player-screen">
+                        <div class="player-content">
+                            <div class="play-button-large">
+                                <svg width="60" height="60" viewBox="0 0 60 60">
+                                    <circle cx="30" cy="30" r="28" fill="rgba(255,255,255,0.95)" stroke="none"/>
+                                    <polygon points="24,18 24,42 44,30" fill="#ea4335"/>
+                                </svg>
+                            </div>
+                            <div class="player-overlay-text">엔터프라이즈 교육 세션</div>
+                        </div>
+                        <div class="player-controls">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 35%;"></div>
+                            </div>
+                            <div class="controls-row">
+                                <div class="controls-left">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><polygon points="3,2 3,14 13,8" fill="white"/></svg>
+                                    <span class="time-display">12:34 / 35:20</span>
+                                </div>
+                                <div class="controls-right">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><rect x="1" y="4" width="14" height="8" rx="1" fill="none" stroke="white" stroke-width="1.2"/><path d="M5 7h6M5 9h4" stroke="white" stroke-width="0.8"/></svg>
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 3h12v10H2z" fill="none" stroke="white" stroke-width="1.2"/><path d="M6 3v10M10 3v10" stroke="white" stroke-width="0.8" opacity="0.5"/></svg>
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 3h10v10H3z" fill="none" stroke="white" stroke-width="1.2" rx="1"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-sidebar">
+                        <div class="sidebar-title">과정 목차</div>
+                        <div class="chapter-item active">
+                            <span class="chapter-num">01</span>
+                            <div class="chapter-info">
+                                <span class="chapter-name">소개 및 개요</span>
+                                <span class="chapter-dur">5:20</span>
+                            </div>
+                        </div>
+                        <div class="chapter-item playing">
+                            <span class="chapter-num">02</span>
+                            <div class="chapter-info">
+                                <span class="chapter-name">핵심 개념</span>
+                                <span class="chapter-dur">35:20</span>
+                            </div>
+                            <div class="playing-indicator"><span></span><span></span><span></span></div>
+                        </div>
+                        <div class="chapter-item">
+                            <span class="chapter-num">03</span>
+                            <div class="chapter-info">
+                                <span class="chapter-name">실습</span>
+                                <span class="chapter-dur">28:15</span>
+                            </div>
+                        </div>
+                        <div class="chapter-item">
+                            <span class="chapter-num">04</span>
+                            <div class="chapter-info">
+                                <span class="chapter-name">평가 및 퀴즈</span>
+                                <span class="chapter-dur">15:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Impact Stats - YouTube style -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <span class="impact-number">10M+</span>
+                    <span class="impact-label">교육 세션 제공</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">500+</span>
+                    <span class="impact-label">기업 고객</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">50K+</span>
+                    <span class="impact-label">생성된 과정</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">98%</span>
+                    <span class="impact-label">사용자 만족도</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases - Inspired by YouTube "How it works" -->
+    <section class="usecases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>조직이 학습하는 방식에 맞게 구축</h2>
+                <p>신입 직원 온보딩부터 고객 교육까지, 클라우드 클래스룸은 모든 학습 시나리오에 적응합니다</p>
+            </div>
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="6" y="10" width="36" height="24" rx="4" fill="none" stroke="#ea4335" stroke-width="2.5"/>
+                            <circle cx="24" cy="22" r="6" fill="#ea4335" opacity="0.15"/>
+                            <polygon points="22,19 22,25 27,22" fill="#ea4335"/>
+                            <path d="M14 38h20" stroke="#ea4335" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>라이브 스트리밍</h4>
+                    <p>실시간 상호작용으로 수천 명의 참가자에게 동시에 라이브 교육 세션, 타운홀, 웨비나를 방송합니다.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="8" y="8" width="32" height="32" rx="4" fill="none" stroke="#4285f4" stroke-width="2.5"/>
+                            <path d="M16 18h16M16 24h12M16 30h8" stroke="#4285f4" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="36" cy="36" r="8" fill="white" stroke="#34a853" stroke-width="2.5"/>
+                            <path d="M33 36l2 2 4-4" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h4>온디맨드 과정</h4>
+                    <p>챕터, 퀴즈, 수료증이 포함된 구조화된 비디오 과정을 만듭니다. 학습자가 언제든지 자신의 속도에 맞춰 학습합니다.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <circle cx="16" cy="16" r="6" fill="none" stroke="#fbbc04" stroke-width="2.5"/>
+                            <circle cx="32" cy="16" r="6" fill="none" stroke="#fbbc04" stroke-width="2.5"/>
+                            <circle cx="24" cy="32" r="6" fill="none" stroke="#fbbc04" stroke-width="2.5"/>
+                            <path d="M20 20l4 8M28 20l-4 8" stroke="#fbbc04" stroke-width="1.5" stroke-dasharray="3"/>
+                        </svg>
+                    </div>
+                    <h4>지식 공유</h4>
+                    <p>마이크로 비디오, 튜토리얼, 모범 사례를 통해 직원이 전문 지식을 공유할 수 있도록 지원합니다. 살아 있는 지식 기반을 구축합니다.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <path d="M12 38V18l12-8 12 8v20" fill="none" stroke="#9b72cb" stroke-width="2.5" stroke-linejoin="round"/>
+                            <rect x="18" y="26" width="12" height="12" rx="1" fill="none" stroke="#9b72cb" stroke-width="2"/>
+                            <path d="M24 26v12M18 32h12" stroke="#9b72cb" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h4>기업 대학</h4>
+                    <p>맞춤 포털, 학습 경로, 부서, 역할 기반 커리큘럼을 갖춘 브랜드 학습 아카데미를 구축합니다.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="8" y="14" width="14" height="10" rx="2" fill="none" stroke="#34a853" stroke-width="2"/>
+                            <rect x="26" y="14" width="14" height="10" rx="2" fill="none" stroke="#34a853" stroke-width="2"/>
+                            <rect x="8" y="28" width="14" height="10" rx="2" fill="none" stroke="#34a853" stroke-width="2"/>
+                            <rect x="26" y="28" width="14" height="10" rx="2" fill="none" stroke="#34a853" stroke-width="2"/>
+                            <circle cx="15" cy="19" r="2" fill="#34a853" opacity="0.5"/>
+                            <circle cx="33" cy="19" r="2" fill="#34a853" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <h4>가상 교실</h4>
+                    <p>화상 회의, 화면 공유, 화이트보드, 소회의실, 실시간 Q&A를 지원하는 인터랙티브 라이브 클래스입니다.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <path d="M10 38l6-10 6 6 8-14 8 10" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="10" cy="38" r="2" fill="#1a73e8"/>
+                            <circle cx="16" cy="28" r="2" fill="#1a73e8"/>
+                            <circle cx="22" cy="34" r="2" fill="#1a73e8"/>
+                            <circle cx="30" cy="20" r="2" fill="#1a73e8"/>
+                            <circle cx="38" cy="30" r="2" fill="#1a73e8"/>
+                        </svg>
+                    </div>
+                    <h4>분석 및 추적</h4>
+                    <p>종합적인 학습 분석 — 수료율, 참여도, 퀴즈 점수를 추적하고 컴플라이언스 보고서를 생성합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>완전한 학습 생태계</h2>
+                <p>세계적 수준의 교육과 훈련을 제공하는 데 필요한 모든 도구</p>
+            </div>
+
+            <!-- Feature 1: Video Management -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #ff6d63);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="3" y="6" width="22" height="16" rx="3" fill="white" opacity="0.9"/><polygon points="12,10 12,18 19,14" fill="#ea4335" opacity="0.7"/></svg>
+                    </div>
+                    <h3>비디오 콘텐츠 관리</h3>
+                    <p>엔터프라이즈 규모로 비디오 콘텐츠를 업로드, 트랜스코딩, 관리합니다. 모든 주요 형식을 지원하며 자동 품질 최적화와 적응형 스트리밍을 제공합니다.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>스마트 트랜스코딩</strong>
+                            <span>모든 기기와 네트워크에 맞는 적응형 스트리밍(HLS/DASH)으로 자동 다중 비트레이트 트랜스코딩</span>
+                        </li>
+                        <li>
+                            <strong>콘텐츠 라이브러리</strong>
+                            <span>카테고리, 태그, 재생목록, 시리즈로 비디오를 정리합니다. 모든 콘텐츠에 대한 전문 검색</span>
+                        </li>
+                        <li>
+                            <strong>DRM 및 접근 제어</strong>
+                            <span>암호화, 워터마킹, 다운로드 방지로 지적 재산을 보호합니다</span>
+                        </li>
+                        <li>
+                            <strong>자막 및 다국어</strong>
+                            <span>AI로 자동 생성된 자막, 수동 자막 업로드, 다국어 오디오 트랙</span>
+                        </li>
+                        <li>
+                            <strong>CDN 가속</strong>
+                            <span>전 세계 어디서나 원활한 재생을 위한 엣지 캐싱 글로벌 콘텐츠 전송</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="video-mgmt-visual">
+                        <div class="video-grid-demo">
+                            <div class="video-thumb">
+                                <div class="thumb-img" style="background: linear-gradient(135deg, #667eea, #764ba2);"></div>
+                                <span class="thumb-duration">12:34</span>
+                                <div class="thumb-info">
+                                    <span class="thumb-title">온보딩 가이드</span>
+                                    <span class="thumb-meta">2.4K 조회 &bull; 2일 전</span>
+                                </div>
+                            </div>
+                            <div class="video-thumb">
+                                <div class="thumb-img" style="background: linear-gradient(135deg, #f093fb, #f5576c);"></div>
+                                <span class="thumb-duration">28:15</span>
+                                <div class="thumb-info">
+                                    <span class="thumb-title">제품 교육</span>
+                                    <span class="thumb-meta">1.8K 조회 &bull; 1주 전</span>
+                                </div>
+                            </div>
+                            <div class="video-thumb">
+                                <div class="thumb-img" style="background: linear-gradient(135deg, #4facfe, #00f2fe);"></div>
+                                <span class="thumb-duration">45:00</span>
+                                <div class="thumb-info">
+                                    <span class="thumb-title">보안 워크숍</span>
+                                    <span class="thumb-meta">3.1K 조회 &bull; 3일 전</span>
+                                </div>
+                            </div>
+                            <div class="video-thumb">
+                                <div class="thumb-img" style="background: linear-gradient(135deg, #43e97b, #38f9d7);"></div>
+                                <span class="thumb-duration">18:42</span>
+                                <div class="thumb-info">
+                                    <span class="thumb-title">리더십 스킬</span>
+                                    <span class="thumb-meta">956 조회 &bull; 5일 전</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Live Streaming -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="4" fill="white"/><path d="M8 8a9 9 0 000 12M20 8a9 9 0 010 12" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/><path d="M5 5a14 14 0 000 18M23 5a14 14 0 010 18" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/></svg>
+                    </div>
+                    <h3>엔터프라이즈 라이브 스트리밍</h3>
+                    <p>스튜디오 품질 스트리밍으로 수천 명에게 방송합니다. 전체 회의, 제품 출시, 교육 세션, 외부 이벤트에 적합합니다.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>초저지연</strong>
+                            <span>모든 규모의 시청자와 실시간 상호작용을 위한 서브초 지연 스트리밍</span>
+                        </li>
+                        <li>
+                            <strong>다중 소스 믹싱</strong>
+                            <span>카메라, 화면 공유, 슬라이드, 사전 녹화된 콘텐츠 간 실시간 전환</span>
+                        </li>
+                        <li>
+                            <strong>라이브 상호작용</strong>
+                            <span>방송 중 실시간 채팅, 설문, Q&A, 손들기, 이모지 반응</span>
+                        </li>
+                        <li>
+                            <strong>자동 녹화</strong>
+                            <span>모든 라이브 세션을 자동 녹화하여 챕터 마커와 함께 온디맨드 재생</span>
+                        </li>
+                        <li>
+                            <strong>동시 방송</strong>
+                            <span>클라우드 클래스룸과 외부 플랫폼(YouTube, LinkedIn Live)에 동시 스트리밍</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="live-visual">
+                        <div class="live-demo">
+                            <div class="live-badge-indicator">
+                                <span class="live-dot"></span> LIVE
+                            </div>
+                            <div class="live-screen">
+                                <div class="live-speaker">
+                                    <div class="speaker-avatar">
+                                        <svg width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="20" r="10" fill="rgba(255,255,255,0.2)"/><path d="M10 42c0-8 6-14 14-14s14 6 14 14" fill="rgba(255,255,255,0.15)"/></svg>
+                                    </div>
+                                    <span class="speaker-name">John Smith - 엔지니어링 부사장</span>
+                                </div>
+                            </div>
+                            <div class="live-chat">
+                                <div class="chat-msg">
+                                    <span class="chat-author">Sarah M.</span>
+                                    <span class="chat-text">새 아키텍처에 대한 훌륭한 인사이트입니다!</span>
+                                </div>
+                                <div class="chat-msg">
+                                    <span class="chat-author">Mike R.</span>
+                                    <span class="chat-text">언제 사용할 수 있나요?</span>
+                                </div>
+                                <div class="chat-msg">
+                                    <span class="chat-author">Lisa K.</span>
+                                    <span class="chat-text">슬라이드를 공유해 주시겠어요?</span>
+                                </div>
+                            </div>
+                            <div class="live-stats">
+                                <span>👥 2,847명 시청 중</span>
+                                <span>💬 342개 메시지</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Learning Paths & Certification -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #4285f4);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 4l10 6v4c0 7-4 12-10 14C8 26 4 21 4 14v-4l10-6z" fill="white" opacity="0.2"/><path d="M10 14l3 3 5-5" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>학습 경로 및 인증</h3>
+                    <p>선수 과목, 마일스톤, 평가, 수료증을 갖춘 구조화된 학습 여정을 설계합니다. 숙달도를 추적하고 컴플라이언스를 보장합니다.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>구조화된 학습 경로</strong>
+                            <span>선수 과목과 진행 게이트를 갖춘 다중 과정 커리큘럼을 만듭니다</span>
+                        </li>
+                        <li>
+                            <strong>시험 및 평가</strong>
+                            <span>객관식, 빈칸 채우기, 논술, 실기 과제, 시간 제한 시험 등 다양한 유형</span>
+                        </li>
+                        <li>
+                            <strong>디지털 수료증</strong>
+                            <span>과정 완료 시 인증 QR 코드가 포함된 브랜드 수료증을 자동 생성합니다</span>
+                        </li>
+                        <li>
+                            <strong>필수 교육</strong>
+                            <span>기한, 알림, 에스컬레이션 워크플로로 필수 과정을 배정합니다</span>
+                        </li>
+                        <li>
+                            <strong>학점 및 포인트</strong>
+                            <span>학점 시스템, 리더보드, 업적 배지로 게임화된 학습</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="path-visual">
+                        <div class="learning-path-demo">
+                            <div class="path-node completed">
+                                <div class="path-node-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="#34a853"/><path d="M6 10l3 3 5-5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <div class="path-node-info">
+                                    <strong>기초</strong>
+                                    <span>완료</span>
+                                </div>
+                            </div>
+                            <div class="path-connector done"></div>
+                            <div class="path-node completed">
+                                <div class="path-node-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="#34a853"/><path d="M6 10l3 3 5-5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <div class="path-node-info">
+                                    <strong>중급</strong>
+                                    <span>완료</span>
+                                </div>
+                            </div>
+                            <div class="path-connector active"></div>
+                            <div class="path-node current">
+                                <div class="path-node-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="none" stroke="#4285f4" stroke-width="2"/><circle cx="10" cy="10" r="4" fill="#4285f4"/></svg>
+                                </div>
+                                <div class="path-node-info">
+                                    <strong>고급</strong>
+                                    <span>진행 중 — 60%</span>
+                                </div>
+                            </div>
+                            <div class="path-connector"></div>
+                            <div class="path-node">
+                                <div class="path-node-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="none" stroke="#e8eaed" stroke-width="2"/></svg>
+                                </div>
+                                <div class="path-node-info">
+                                    <strong>인증 시험</strong>
+                                    <span>잠김</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="certificate-preview">
+                            <div class="cert-border">
+                                <div class="cert-content">
+                                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2l3 6h6l-5 4 2 6-6-4-6 4 2-6-5-4h6l3-6z" fill="#fbbc04"/></svg>
+                                    <span class="cert-title">수료증</span>
+                                    <span class="cert-course">고급 엔지니어링</span>
+                                    <span class="cert-name">Jane Cooper</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: Admin & Analytics -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #9b72cb, #4285f4);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="3" fill="white" opacity="0.2"/><path d="M8 18l4-6 4 4 4-8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>인사이트 및 관리</h3>
+                    <p>학습 성과에 대한 완전한 가시성을 확보합니다. 강력한 대시보드, 세분화된 권한, 모든 규모의 조직을 위한 엔터프라이즈급 사용자 관리를 제공합니다.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>학습 분석 대시보드</strong>
+                            <span>참여도, 수료율, 소요 시간, 인기 콘텐츠, 학습 트렌드를 추적합니다</span>
+                        </li>
+                        <li>
+                            <strong>부서 관리</strong>
+                            <span>독립 포털과 콘텐츠 가시성으로 부서, 팀, 역할별로 정리합니다</span>
+                        </li>
+                        <li>
+                            <strong>권한 시스템</strong>
+                            <span>관리자, 강사, 관리자, 학습자 역할 기반 접근 제어</span>
+                        </li>
+                        <li>
+                            <strong>컴플라이언스 보고</strong>
+                            <span>필수 교육 수료 및 인증 상태에 대한 감사 보고서를 생성합니다</span>
+                        </li>
+                        <li>
+                            <strong>API 및 통합</strong>
+                            <span>HRIS, SSO (SAML/OIDC), LTI 및 기타 엔터프라이즈 시스템과 연동합니다</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="analytics-visual">
+                        <div class="analytics-panel">
+                            <div class="analytics-header">
+                                <span>학습 분석</span>
+                                <span class="analytics-period">최근 30일</span>
+                            </div>
+                            <div class="analytics-kpis">
+                                <div class="kpi">
+                                    <span class="kpi-value">89%</span>
+                                    <span class="kpi-label">수료율</span>
+                                    <span class="kpi-trend up">+12%</span>
+                                </div>
+                                <div class="kpi">
+                                    <span class="kpi-value">4.2h</span>
+                                    <span class="kpi-label">평균 시간/사용자</span>
+                                    <span class="kpi-trend up">+8%</span>
+                                </div>
+                                <div class="kpi">
+                                    <span class="kpi-value">1,247</span>
+                                    <span class="kpi-label">활성 학습자</span>
+                                    <span class="kpi-trend up">+23%</span>
+                                </div>
+                            </div>
+                            <div class="analytics-chart">
+                                <svg viewBox="0 0 280 80" width="100%" height="80">
+                                    <polyline points="0,60 40,50 80,55 120,35 160,40 200,20 240,25 280,10" fill="none" stroke="#4285f4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <polyline points="0,60 40,50 80,55 120,35 160,40 200,20 240,25 280,10" fill="url(#chartGradient)" opacity="0.1"/>
+                                    <defs>
+                                        <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0%" stop-color="#4285f4"/>
+                                            <stop offset="100%" stop-color="#4285f4" stop-opacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Features Grid -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>엔터프라이즈 학습을 위한 모든 것</h2>
+                <p>클라우드 클래스룸을 완전한 솔루션으로 만드는 추가 기능</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="2" y="6" width="9" height="12" rx="1.5" fill="none" stroke="#ea4335" stroke-width="1.5"/><rect x="13" y="6" width="9" height="12" rx="1.5" fill="none" stroke="#ea4335" stroke-width="1.5"/><polygon points="6,10 6,14 8,12" fill="#ea4335" opacity="0.5"/></svg>
+                    <h5>PiP(픽처인픽처)</h5>
+                    <p>사용자 정의 레이아웃으로 강사와 슬라이드를 동시에 표시합니다</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M2 12h20M12 2c3 3 4.5 6 4.5 10s-1.5 7-4.5 10c-3-3-4.5-6-4.5-10S9 5 12 2z" fill="none" stroke="#4285f4" stroke-width="1.2"/></svg>
+                    <h5>글로벌 CDN</h5>
+                    <p>위치에 관계없이 버퍼 없는 재생을 위한 전 세계 엣지 노드</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M8 12h8M12 8v8" stroke="#34a853" stroke-width="1.8" stroke-linecap="round"/></svg>
+                    <h5>SCORM/xAPI</h5>
+                    <p>업계 표준 e-러닝 패키지를 가져오고 상호작용을 추적합니다</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    <h5>반응형 플레이어</h5>
+                    <p>오프라인 다운로드를 지원하며 데스크탑, 태블릿, 모바일에 최적화된 화면</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M5 20c0-4 3-7 7-7s7 3 7 7" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M16 3l2 2-2 2" stroke="#fbbc04" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+                    <h5>강사 도구</h5>
+                    <p>주석, 화이트보드, 화면 녹화, 프레젠테이션 모드</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="#1a73e8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    <h5>오프라인 학습</h5>
+                    <p>오프라인 접근을 위해 과정을 다운로드하고 온라인 복귀 시 동기화합니다</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01" stroke="#ea4335" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>AI 어시스턴트</h5>
+                    <p>과정 콘텐츠로 학습된 AI 기반 Q&A 봿으로 학습자 질문에 답변합니다</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1" fill="none" stroke="#34a853" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" rx="1" fill="none" stroke="#34a853" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" rx="1" fill="none" stroke="#34a853" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" rx="1" fill="none" stroke="#34a853" stroke-width="1.5"/></svg>
+                    <h5>화이트 라벨</h5>
+                    <p>로고, 색상, 도메인, 로그인 페이지까지 완전히 커스터마이즈 가능한 브랜딩</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial / Social Proof -->
+    <section class="social-proof-section">
+        <div class="container">
+            <div class="proof-content">
+                <div class="quote-mark">"</div>
+                <blockquote>클라우드 클래스룸은 전 세계 30개 이상의 사무실에서 교육 제공 방식을 혁신시켰습니다. 라이브 스트리밍 품질과 학습 분석은 이전에는 없었던 가시성을 제공했습니다.</blockquote>
+                <div class="quote-author">
+                    <div class="author-avatar">VP</div>
+                    <div class="author-info">
+                        <strong>학습 및 개발 부사장</strong>
+                        <span>포춘 500대 기술 기업</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section class="integration-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>기존 도구와 원활하게 연동</h2>
+                <p>OortCloud 생태계 및 서드파티 플랫폼과의 원활한 통합</p>
+            </div>
+            <div class="integration-grid">
+                <div class="integration-item">
+                    <div class="integration-icon" style="background: linear-gradient(135deg, #4285f4, #9b72cb);">W</div>
+                    <span>Workup</span>
+                </div>
+                <div class="integration-item">
+                    <div class="integration-icon" style="background: linear-gradient(135deg, #34a853, #4285f4);">IM</div>
+                    <span>메신저</span>
+                </div>
+                <div class="integration-item">
+                    <div class="integration-icon" style="background: linear-gradient(135deg, #4285f4, #34a853);">CD</div>
+                    <span>클라우드 디스크</span>
+                </div>
+                <div class="integration-item">
+                    <div class="integration-icon" style="background: linear-gradient(135deg, #fbbc04, #ea4335);">IA</div>
+                    <span>결재</span>
+                </div>
+                <div class="integration-item">
+                    <div class="integration-icon" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">E</div>
+                    <span>이메일</span>
+                </div>
+                <div class="integration-item">
+                    <div class="integration-icon" style="background: linear-gradient(135deg, #1a73e8, #174ea6);">SSO</div>
+                    <span>SAML/OIDC</span>
+                </div>
+                <div class="integration-item">
+                    <div class="integration-icon" style="background: linear-gradient(135deg, #5f6368, #3c4043);">API</div>
+                    <span>REST API</span>
+                </div>
+                <div class="integration-item">
+                    <div class="integration-icon" style="background: linear-gradient(135deg, #9b72cb, #ea4335);">LTI</div>
+                    <span>LTI 1.3</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>모든 조직을 위한 요금제</h2>
+                <p>무료로 시작하여 성장에 맞게 확장하세요</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Starter</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">₩5,000</span>
+                            <span class="price-period">/사용자/월</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>최대 100명 사용자</li>
+                        <li>50GB 비디오 저장소</li>
+                        <li>온디맨드 비디오 과정</li>
+                        <li>기본 분석</li>
+                        <li>이메일 지원</li>
+                    </ul>
+                    <a href="#" class="btn-secondary pricing-btn">무료 체험 시작</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">가장 인기</div>
+                    <div class="pricing-header">
+                        <h4>Business</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">₩12,000</span>
+                            <span class="price-period">/사용자/월</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>무제한 사용자</li>
+                        <li>1TB 비디오 저장소</li>
+                        <li>라이브 스트리밍 (1080p)</li>
+                        <li>인증 및 시험</li>
+                        <li>전체 분석 대시보드</li>
+                        <li>우선 지원</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn">무료 체험 시작</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Enterprise</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">맞춤 견적</span>
+                            <span class="price-period"></span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Business의 모든 기능</li>
+                        <li>프라이빗 배포</li>
+                        <li>무제한 저장소</li>
+                        <li>4K 라이브 스트리밍</li>
+                        <li>사용자 정의 통합</li>
+                        <li>전담 성공 관리자</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary pricing-btn">영업 문의</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>지금 학습 문화를 시작하세요</h2>
+                <p>클라우드 클래스룸으로 영향력 있는 교육을 제공하는 수천 개의 조직에 합류하세요.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">무료 체험 시작</a>
+                    <a href="#" class="btn-secondary btn-large">데모 요청</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36">
+                    <p class="footer-tagline">기업 기술의 미래를 구축합니다.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>제품</h5>
+                    <a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a>
+                    <a href="workup.html">Workup</a>
+                    <a href="oortai.html">OORT.AI</a>
+                    <a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a>
+                    <a href="#">Cloud Classroom</a>
+                </div>
+                <div class="footer-links">
+                    <h5>솔루션</h5>
+                    <a href="messenger.html">인스턴트 메신저</a>
+                    <a href="clouddisk.html">클라우드 디스크</a>
+                    <a href="email.html">이메일</a>
+                    <a href="approval.html">지능형 결재</a>
+                    <a href="dispatch.html">지휘 및 파견</a>
+                    <a href="fieldmanager.html">현장 관리자</a>
+                </div>
+                <div class="footer-links">
+                    <h5>회사</h5>
+                    <a href="about.html">회사 소개</a>
+                    <a href="#">채용</a>
+                    <a href="#">블로그</a>
+                    <a href="contact.html">문의</a>
+                    <a href="#">개인정보 처리방침</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OortCloud Technology. 모든 권리 보유.</p>
+                <div class="footer-social">
+                    <a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a>
+                    <a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a>
+                    <a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

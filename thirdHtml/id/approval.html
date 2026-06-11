@@ -1,0 +1,880 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Approval - Manajemen Alur Kerja Enterprise | OortCloud</title>
+    <link rel="alternate" hreflang="en" href="https://oortcloudsmart.com/en/" />
+    <link rel="alternate" hreflang="zh" href="https://oortcloudsmart.com/zh/siteNew/" />
+    <link rel="alternate" hreflang="es" href="https://oortcloudsmart.com/es/" />
+    <link rel="alternate" hreflang="ar" href="https://oortcloudsmart.com/ar/" />
+    <link rel="alternate" hreflang="de" href="https://oortcloudsmart.com/de/" />
+    <link rel="alternate" hreflang="fr" href="https://oortcloudsmart.com/fr/" />
+    <link rel="alternate" hreflang="ja" href="https://oortcloudsmart.com/ja/" />
+    <link rel="alternate" hreflang="pt" href="https://oortcloudsmart.com/pt/" />
+    <link rel="alternate" hreflang="ru" href="https://oortcloudsmart.com/ru/" />
+    <link rel="alternate" hreflang="ko" href="https://oortcloudsmart.com/ko/" />
+    <link rel="alternate" hreflang="id" href="https://oortcloudsmart.com/id/" />
+    <link rel="alternate" hreflang="tr" href="https://oortcloudsmart.com/tr/" />
+    <link rel="alternate" hreflang="x-default" href="https://oortcloudsmart.com/en/" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="approval.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">Produk</a>
+                <a href="index.html#platform">Platform</a>
+                <a href="index.html#enterprise">Enterprise</a>
+                <a href="index.html#about">Tentang</a>
+            </div>
+            <a href="#get-started" class="nav-cta">Mulai Gratis</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="Ganti Bahasa">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">ID</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item active" data-lang="id"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item active" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    Login
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">Pengguna</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Dashboard
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="approval-hero">
+        <div class="container">
+            <div class="approval-hero-grid">
+                <div class="approval-hero-content">
+                    <div class="product-breadcrumb">
+                        <a href="index.html">Produk</a>
+                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <span>Intelligent Approval</span>
+                    </div>
+                    <h1>Otomatiskan keputusan, <span class="gradient-text-amber">percepat bisnis</span></h1>
+                    <p class="approval-hero-desc">Manajemen alur kerja enterprise yang mengubah proses persetujuan kompleks menjadi alur kerja yang efisien dan terotomasi. Perancang alur visual, formulir cerdas, dan routing berbasis AI — dapatkan persetujuan lebih cepat.</p>
+                    <div class="hero-actions">
+                        <a href="#get-started" class="btn-primary btn-large btn-amber">Mulai Uji Coba Gratis</a>
+                        <a href="#features" class="btn-secondary btn-large">Lihat Cara Kerjanya</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            60% siklus persetujuan lebih cepat
+                        </span>
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Pembuat alur tanpa kode
+                        </span>
+                    </div>
+                </div>
+                <div class="approval-hero-visual">
+                    <div class="workflow-mockup">
+                        <div class="workflow-canvas">
+                            <div class="wf-node wf-start">
+                                <div class="wf-node-icon start-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="#34a853"/><polygon points="6.5,5 6.5,11 11,8" fill="white"/></svg>
+                                </div>
+                                <span>Kirim</span>
+                            </div>
+                            <div class="wf-connector"></div>
+                            <div class="wf-node wf-approver">
+                                <div class="wf-node-icon approver-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="6" r="3" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M3 14c0-3 2-5 5-5s5 2 5 5" fill="none" stroke="#4285f4" stroke-width="1.5"/></svg>
+                                </div>
+                                <span>Manajer</span>
+                                <span class="wf-status approved">Disetujui</span>
+                            </div>
+                            <div class="wf-connector"></div>
+                            <div class="wf-node wf-condition">
+                                <div class="wf-node-icon condition-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 2l6 6-6 6-6-6z" fill="none" stroke="#fbbc04" stroke-width="1.5"/></svg>
+                                </div>
+                                <span>Amount > $5K?</span>
+                            </div>
+                            <div class="wf-branch">
+                                <div class="wf-branch-line left">
+                                    <span class="branch-label">Yes</span>
+                                </div>
+                                <div class="wf-branch-line right">
+                                    <span class="branch-label">No</span>
+                                </div>
+                            </div>
+                            <div class="wf-branch-nodes">
+                                <div class="wf-node wf-approver small">
+                                    <div class="wf-node-icon approver-icon">
+                                        <svg width="14" height="14" viewBox="0 0 16 16"><circle cx="8" cy="6" r="3" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M3 14c0-3 2-5 5-5s5 2 5 5" fill="none" stroke="#9b72cb" stroke-width="1.5"/></svg>
+                                    </div>
+                                    <span>VP Keuangan</span>
+                                    <span class="wf-status pending">Menunggu</span>
+                                </div>
+                                <div class="wf-node wf-end small">
+                                    <div class="wf-node-icon end-icon">
+                                        <svg width="14" height="14" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="#34a853" opacity="0.2" stroke="#34a853" stroke-width="1.5"/><path d="M5 8l2 2 4-4" fill="none" stroke="#34a853" stroke-width="1.5" stroke-linecap="round"/></svg>
+                                    </div>
+                                    <span>Selesai</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="workflow-sidebar-panel">
+                            <div class="wf-panel-title">Detail Persetujuan</div>
+                            <div class="wf-detail-item">
+                                <span class="wf-detail-label">Tipe</span>
+                                <span class="wf-detail-value">Permintaan Pembelian</span>
+                            </div>
+                            <div class="wf-detail-item">
+                                <span class="wf-detail-label">Jumlah</span>
+                                <span class="wf-detail-value">$8,500.00</span>
+                            </div>
+                            <div class="wf-detail-item">
+                                <span class="wf-detail-label">Dikirim oleh</span>
+                                <span class="wf-detail-value">Alex Chen</span>
+                            </div>
+                            <div class="wf-detail-item">
+                                <span class="wf-detail-label">Status</span>
+                                <span class="wf-detail-value status-active">Sedang Berlangsung</span>
+                            </div>
+                            <div class="wf-timeline">
+                                <div class="timeline-item done">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span>Dikirim</span>
+                                        <span class="timeline-time">10:24 AM</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item done">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span>Manajer menyetujui</span>
+                                        <span class="timeline-time">11:05 AM</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item current">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span>Tinjauan VP Keuangan</span>
+                                        <span class="timeline-time">Menunggu...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Impact Stats -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <span class="impact-number">60%</span>
+                    <span class="impact-label">Siklus persetujuan lebih cepat</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">90%</span>
+                    <span class="impact-label">Pengurangan pekerjaan manual</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">200+</span>
+                    <span class="impact-label">Template siap pakai</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">100%</span>
+                    <span class="impact-label">Visibilitas proses</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="usecases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Otomatiskan proses bisnis apa pun</h2>
+                <p>Dari permintaan cuti sederhana hingga alur kerja pengadaan multi-departemen yang kompleks</p>
+            </div>
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="10" y="8" width="28" height="32" rx="4" fill="none" stroke="#fbbc04" stroke-width="2.5"/>
+                            <path d="M18 18h12M18 24h8M18 30h10" stroke="#fbbc04" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="14" cy="18" r="1.5" fill="#fbbc04"/>
+                            <circle cx="14" cy="24" r="1.5" fill="#fbbc04"/>
+                            <circle cx="14" cy="30" r="1.5" fill="#fbbc04"/>
+                        </svg>
+                    </div>
+                    <h4>Pengeluaran & Penggantian</h4>
+                    <p>Otomatiskan klaim pengeluaran dengan OCR struk, pemeriksaan kebijakan, dan persetujuan multi-level berdasarkan ambang batas jumlah.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="8" y="12" width="32" height="24" rx="4" fill="none" stroke="#4285f4" stroke-width="2.5"/>
+                            <path d="M16 20h16M16 26h12M16 32h8" stroke="#4285f4" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M8 18h32" stroke="#4285f4" stroke-width="1.5" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <h4>Pesanan Pembelian</h4>
+                    <p>Sederhanakan pengadaan dengan pemilihan vendor, validasi anggaran, dan routing otomatis ke pemberi persetujuan yang tepat.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <circle cx="24" cy="18" r="8" fill="none" stroke="#34a853" stroke-width="2.5"/>
+                            <path d="M12 38c0-7 5-12 12-12s12 5 12 12" fill="none" stroke="#34a853" stroke-width="2.5"/>
+                            <path d="M30 16l3-3M32 20h4" stroke="#34a853" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Manajemen SDM & Cuti</h4>
+                    <p>Tangani permintaan cuti, onboarding, offboarding, dan perubahan karyawan dengan alur kerja SDM yang terotomasi.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <path d="M12 14h24v20H12z" fill="none" stroke="#ea4335" stroke-width="2.5" rx="3"/>
+                            <path d="M12 14l12 10 12-10" fill="none" stroke="#ea4335" stroke-width="2"/>
+                            <path d="M20 38l4-4 4 4" fill="none" stroke="#ea4335" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Kontrak & Dokumen</h4>
+                    <p>Tinjau, redline, dan setujui kontrak dengan pelacakan versi, tanda tangan elektronik, dan pemeriksaan kepatuhan.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="8" y="10" width="14" height="14" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/>
+                            <rect x="26" y="10" width="14" height="14" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/>
+                            <rect x="16" y="26" width="14" height="14" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/>
+                            <path d="M22 17h4M23 24v4" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2"/>
+                        </svg>
+                    </div>
+                    <h4>Permintaan IT & Akses</h4>
+                    <p>Kelola akses sistem, provisioning perangkat lunak, dan permintaan infrastruktur dengan penegakan kebijakan keamanan.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <path d="M10 38V18l14-8 14 8v20" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linejoin="round"/>
+                            <path d="M18 38v-10h12v10" fill="none" stroke="#1a73e8" stroke-width="2"/>
+                            <path d="M20 22h8" stroke="#1a73e8" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Fasilitas & Admin</h4>
+                    <p>Room bookings, maintenance requests, visitor passes, and office supply orders — semua terotomasi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mesin alur kerja yang powerful, tanpa kode</h2>
+                <p>Rancang proses persetujuan yang kompleks dengan alat visual yang intuitif — tanpa perlu developer</p>
+            </div>
+
+            <!-- Feature 1: Visual Flow Designer -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #fbbc04, #ea4335);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="4" fill="white" opacity="0.2"/><circle cx="10" cy="10" r="3" fill="white" opacity="0.9"/><circle cx="18" cy="18" r="3" fill="white" opacity="0.9"/><path d="M12 11l4 5" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/></svg>
+                    </div>
+                    <h3>Perancang Alur Visual</h3>
+                    <p>Pembuat alur kerja drag-and-drop yang mengubah proses kompleks menjadi flowchart visual yang jelas. Rancang, uji, dan deploy alur persetujuan dalam hitungan menit — bukan minggu.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Kanvas Drag-and-Drop</strong>
+                            <span>Bangun alur secara visual dengan node persetujuan, kondisi, cabang, dan jalur paralel</span>
+                        </li>
+                        <li>
+                            <strong>Percabangan Kondisional</strong>
+                            <span>Arahkan persetujuan berdasarkan jumlah, departemen, peran, atau nilai field kustom</span>
+                        </li>
+                        <li>
+                            <strong>Persetujuan Paralel & Sekuensial</strong>
+                            <span>Konfigurasi rantai persetujuan multi-level, counter-sign, or-sign, dan sekuensial</span>
+                        </li>
+                        <li>
+                            <strong>Pemberi Persetujuan Dinamis</strong>
+                            <span>Tetapkan pemberi persetujuan otomatis berdasarkan hierarki organisasi, kepala departemen, atau peran proyek</span>
+                        </li>
+                        <li>
+                            <strong>Template Alur</strong>
+                            <span>200+ template siap pakai untuk proses bisnis umum — kustomisasi dan deploy langsung</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="designer-visual">
+                        <div class="designer-canvas">
+                            <div class="canvas-toolbar">
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5" fill="none" stroke="#5f6368" stroke-width="1.2"/></svg></div>
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="2" width="10" height="10" rx="2" fill="none" stroke="#5f6368" stroke-width="1.2"/></svg></div>
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2l5 5-5 5-5-5z" fill="none" stroke="#5f6368" stroke-width="1.2"/></svg></div>
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10M7 2v10" stroke="#5f6368" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+                            </div>
+                            <div class="canvas-flow">
+                                <div class="flow-node fn-start">Mulai</div>
+                                <div class="flow-arrow"></div>
+                                <div class="flow-node fn-task">Isi Formulir</div>
+                                <div class="flow-arrow"></div>
+                                <div class="flow-node fn-approval">Manajer Langsung</div>
+                                <div class="flow-arrow"></div>
+                                <div class="flow-node fn-condition">Cek Anggaran</div>
+                                <div class="flow-split">
+                                    <div class="split-branch">
+                                        <span class="split-label">&gt;$10K</span>
+                                        <div class="flow-node fn-approval small">Direktur</div>
+                                    </div>
+                                    <div class="split-branch">
+                                        <span class="split-label">&le;$10K</span>
+                                        <div class="flow-node fn-end small">Selesai</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Smart Forms -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #4285f4, #34a853);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="3" width="18" height="22" rx="3" fill="white" opacity="0.9"/><path d="M9 9h10M9 13h7M9 17h8" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/><rect x="9" y="20" width="4" height="2" rx="1" fill="#34a853" opacity="0.7"/></svg>
+                    </div>
+                    <h3>Pembuat Formulir Cerdas</h3>
+                    <p>Buat formulir cerdas yang beradaptasi dengan input pengguna. Tipe field yang kaya, aturan validasi, perhitungan otomatis, dan tautan data membuat pengumpulan data menjadi mudah.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Tipe Field yang Kaya</strong>
+                            <span>Teks, angka, tanggal, dropdown, upload file, lokasi, tanda tangan, tabel, dan 30+ tipe field</span>
+                        </li>
+                        <li>
+                            <strong>Logika Kondisional</strong>
+                            <span>Tampilkan/sembunyikan field, atur aturan wajib, dan isi data otomatis berdasarkan pilihan sebelumnya</span>
+                        </li>
+                        <li>
+                            <strong>Perhitungan Otomatis</strong>
+                            <span>Formula bawaan untuk total, pajak, diskon, dan perhitungan bisnis yang kompleks</span>
+                        </li>
+                        <li>
+                            <strong>Tautan Data</strong>
+                            <span>Tarik data dari sistem lain — direktori karyawan, database proyek, catatan anggaran</span>
+                        </li>
+                        <li>
+                            <strong>Dioptimalkan untuk Mobile</strong>
+                            <span>Formulir tampil sempurna di mobile dengan tangkapan kamera, lokasi GPS, dan dukungan offline</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="form-visual">
+                        <div class="form-demo">
+                            <div class="form-header">
+                                <span>Permintaan Pembelian</span>
+                                <span class="form-badge">Draf</span>
+                            </div>
+                            <div class="form-body">
+                                <div class="form-field">
+                                    <label>Departemen</label>
+                                    <div class="field-select">Engineering <svg width="10" height="10" viewBox="0 0 10 10"><path d="M3 4l2 2 2-2" fill="none" stroke="#9aa0a6" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+                                </div>
+                                <div class="form-field">
+                                    <label>Deskripsi Barang</label>
+                                    <div class="field-input">MacBook Pro 16" untuk karyawan baru</div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-field half">
+                                        <label>Jumlah</label>
+                                        <div class="field-input">5</div>
+                                    </div>
+                                    <div class="form-field half">
+                                        <label>Harga Satuan</label>
+                                        <div class="field-input">$2,499</div>
+                                    </div>
+                                </div>
+                                <div class="form-field calculated">
+                                    <label>Total Jumlah</label>
+                                    <div class="field-calculated">$12,495.00</div>
+                                    <span class="calc-note">Dihitung otomatis</span>
+                                </div>
+                                <div class="form-field">
+                                    <label>Lampiran</label>
+                                    <div class="field-upload">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 10V3M5 5l3-3 3 3M3 10v3h10v-3" fill="none" stroke="#9aa0a6" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        <span>Letakkan file atau klik untuk upload</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Intelligent Routing -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #9b72cb, #4285f4);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="10" fill="white" opacity="0.2"/><path d="M9 14l3 3 7-7" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Routing Cerdas & Otomasi</h3>
+                    <p>Routing berbasis AI secara otomatis menentukan pemberi persetujuan yang tepat, mengeskalasi permintaan yang terlambat, dan menangani pengecualian — sehingga tidak ada yang terlewat.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Auto-Routing berdasarkan Struktur Organisasi</strong>
+                            <span>Secara otomatis arahkan ke manajer langsung pengirim, skip-level, atau kepala departemen</span>
+                        </li>
+                        <li>
+                            <strong>Batas Waktu & Eskalasi</strong>
+                            <span>Tetapkan SLA untuk setiap langkah — ingatkan otomatis, eskalasi, atau setujui otomatis saat batas waktu lewat</span>
+                        </li>
+                        <li>
+                            <strong>Delegasi & Proxy</strong>
+                            <span>Pemberi persetujuan dapat mendelegasikan ke orang lain saat cuti dengan permission proxy berbatas waktu</span>
+                        </li>
+                        <li>
+                            <strong>Persetujuan Massal</strong>
+                            <span>Tinjau dan setujui beberapa permintaan sekaligus dengan tindakan massal dan persetujuan cepat</span>
+                        </li>
+                        <li>
+                            <strong>Tarik Kembali & Cabut</strong>
+                            <span>Pengirim dapat menarik kembali permintaan; admin dapat mencabut persetujuan dengan jejak audit lengkap</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="routing-visual">
+                        <div class="routing-demo">
+                            <div class="routing-header">Mesin Auto-Routing</div>
+                            <div class="routing-rules">
+                                <div class="rule-item">
+                                    <div class="rule-condition">IF amount &le; $1,000</div>
+                                    <div class="rule-arrow">→</div>
+                                    <div class="rule-action">Manajer Langsung</div>
+                                </div>
+                                <div class="rule-item">
+                                    <div class="rule-condition">IF amount $1K - $10K</div>
+                                    <div class="rule-arrow">→</div>
+                                    <div class="rule-action">Manager + Director</div>
+                                </div>
+                                <div class="rule-item highlight">
+                                    <div class="rule-condition">IF amount &gt; $10,000</div>
+                                    <div class="rule-arrow">→</div>
+                                    <div class="rule-action">Manager + VP + CFO</div>
+                                </div>
+                            </div>
+                            <div class="routing-extras">
+                                <div class="extra-tag">
+                                    <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="none" stroke="#ea4335" stroke-width="1.2"/><path d="M6 3.5v3l2 1" fill="none" stroke="#ea4335" stroke-width="1" stroke-linecap="round"/></svg>
+                                    SLA: 24h per step
+                                </div>
+                                <div class="extra-tag">
+                                    <svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 2v4l3 2" fill="none" stroke="#fbbc04" stroke-width="1.2" stroke-linecap="round"/><circle cx="6" cy="6" r="5" fill="none" stroke="#fbbc04" stroke-width="1.2"/></svg>
+                                    Auto-escalate after 48h
+                                </div>
+                                <div class="extra-tag">
+                                    <svg width="12" height="12" viewBox="0 0 12 12"><path d="M3 6l2 2 4-4" fill="none" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    Auto-approve if &lt; $100
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: Analytics & Monitoring -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #1a73e8);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="3" fill="white" opacity="0.2"/><path d="M8 18l4-5 4 3 4-8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Analitik & Process Mining</h3>
+                    <p>Visibilitas penuh ke setiap proses persetujuan. Identifikasi hambatan, ukur efisiensi, dan terus optimalkan alur kerja Anda dengan insight berbasis data.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Dasbor Real-Time</strong>
+                            <span>Pantau permintaan yang menunggu, disetujui, ditolak, dan terlambat di semua proses</span>
+                        </li>
+                        <li>
+                            <strong>Deteksi Hambatan</strong>
+                            <span>AI mengidentifikasi di mana persetujuan macet dan menyarankan optimasi</span>
+                        </li>
+                        <li>
+                            <strong>Analitik Waktu Siklus</strong>
+                            <span>Lacak waktu persetujuan rata-rata berdasarkan proses, departemen, dan pemberi persetujuan individu</span>
+                        </li>
+                        <li>
+                            <strong>Laporan Kepatuhan</strong>
+                            <span>Hasilkan laporan audit untuk kepatuhan SOX, ISO, dan persyaratan kepatuhan khusus industri</span>
+                        </li>
+                        <li>
+                            <strong>Ekspor & Integrasi</strong>
+                            <span>Ekspor data ke alat BI, atau kirim event ke sistem eksternal melalui webhook</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="analytics-visual">
+                        <div class="analytics-panel">
+                            <div class="analytics-header">
+                                <span>Analitik Proses</span>
+                                <span class="analytics-period">Bulan Ini</span>
+                            </div>
+                            <div class="analytics-kpis">
+                                <div class="kpi">
+                                    <span class="kpi-value">847</span>
+                                    <span class="kpi-label">Total Permintaan</span>
+                                    <span class="kpi-trend up">+18%</span>
+                                </div>
+                                <div class="kpi">
+                                    <span class="kpi-value">4.2h</span>
+                                    <span class="kpi-label">Rata-rata Waktu Siklus</span>
+                                    <span class="kpi-trend up">-32%</span>
+                                </div>
+                                <div class="kpi">
+                                    <span class="kpi-value">96%</span>
+                                    <span class="kpi-label">Tingkat Persetujuan</span>
+                                    <span class="kpi-trend up">+3%</span>
+                                </div>
+                            </div>
+                            <div class="analytics-bars">
+                                <div class="ana-bar-item">
+                                    <span class="bar-label">Pengeluaran</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 85%; background: #fbbc04;"></div></div>
+                                    <span class="bar-value">312</span>
+                                </div>
+                                <div class="ana-bar-item">
+                                    <span class="bar-label">Pembelian</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 65%; background: #4285f4;"></div></div>
+                                    <span class="bar-value">238</span>
+                                </div>
+                                <div class="ana-bar-item">
+                                    <span class="bar-label">Cuti</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 50%; background: #34a853;"></div></div>
+                                    <span class="bar-value">184</span>
+                                </div>
+                                <div class="ana-bar-item">
+                                    <span class="bar-label">Lainnya</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 30%; background: #9b72cb;"></div></div>
+                                    <span class="bar-value">113</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5: Mobile & Notifications -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #9b72cb);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="8" y="3" width="12" height="22" rx="3" fill="white" opacity="0.9"/><circle cx="14" cy="21" r="1.5" fill="#ea4335" opacity="0.5"/><path d="M11 7h6" stroke="#ea4335" stroke-width="1" opacity="0.3" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Mobile-First & Notifikasi</h3>
+                    <p>Setujui dari mana saja dari perangkat apa pun. Notifikasi push real-time, pesan dalam aplikasi, dan integrasi Workup memastikan pemberi persetujuan tidak melewatkan permintaan.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Persetujuan Mobile</strong>
+                            <span>Aplikasi mobile lengkap — tinjau detail, tambahkan komentar, dan setujui dengan satu ketukan</span>
+                        </li>
+                        <li>
+                            <strong>Notifikasi Push</strong>
+                            <span>Peringatan instan melalui push, email, SMS, dan Messenger saat tindakan diperlukan</span>
+                        </li>
+                        <li>
+                            <strong>Persetujuan via Chat</strong>
+                            <span>Setujui langsung dari Instant Messenger atau Workup tanpa membuka aplikasi</span>
+                        </li>
+                        <li>
+                            <strong>Dukungan Offline</strong>
+                            <span>Tinjau dan setujui bahkan tanpa internet — sinkron saat koneksi pulih</span>
+                        </li>
+                        <li>
+                            <strong>Integrasi Workup</strong>
+                            <span>Tertanam dalam super app Workup untuk akses alur kerja harian yang mulus</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="mobile-visual">
+                        <div class="phone-mockup">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <div class="phone-header">
+                                    <span>Persetujuan</span>
+                                    <span class="phone-badge">3</span>
+                                </div>
+                                <div class="phone-card">
+                                    <div class="phone-card-header">
+                                        <div class="pc-avatar" style="background: #4285f4;">AC</div>
+                                        <div class="pc-info">
+                                            <strong>Alex Chen</strong>
+                                            <span>Permintaan Pembelian &bull; $8,500</span>
+                                        </div>
+                                    </div>
+                                    <div class="phone-card-actions">
+                                        <button class="pc-btn reject">Tolak</button>
+                                        <button class="pc-btn approve">Setujui</button>
+                                    </div>
+                                </div>
+                                <div class="phone-card">
+                                    <div class="phone-card-header">
+                                        <div class="pc-avatar" style="background: #34a853;">LW</div>
+                                        <div class="pc-info">
+                                            <strong>Lisa Wang</strong>
+                                            <span>Permintaan Cuti &bull; 3 days</span>
+                                        </div>
+                                    </div>
+                                    <div class="phone-card-actions">
+                                        <button class="pc-btn reject">Tolak</button>
+                                        <button class="pc-btn approve">Setujui</button>
+                                    </div>
+                                </div>
+                                <div class="phone-card">
+                                    <div class="phone-card-header">
+                                        <div class="pc-avatar" style="background: #fbbc04;">MR</div>
+                                        <div class="pc-info">
+                                            <strong>Mike Roberts</strong>
+                                            <span>Klaim Pengeluaran &bull; $342</span>
+                                        </div>
+                                    </div>
+                                    <div class="phone-card-actions">
+                                        <button class="pc-btn reject">Tolak</button>
+                                        <button class="pc-btn approve">Setujui</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Features Grid -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Semua untuk alur kerja enterprise</h2>
+                <p>Kemampuan tambahan yang menjadikan Intelligent Approval solusi yang lengkap</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="none" stroke="#fbbc04" stroke-width="1.5" rx="2"/><path d="M9 9h6v6H9z" fill="#fbbc04" opacity="0.2"/><path d="M4 9h16M9 4v16" stroke="#fbbc04" stroke-width="1"/></svg>
+                    <h5>Cetak & Ekspor</h5>
+                    <p>Ekspor persetujuan ke PDF dengan riwayat lengkap, atau cetak dokumen terformat</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M8 12h8M12 8v8" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>Field Kustom</h5>
+                    <p>Perluas formulir dengan tipe field kustom, tabel pencarian, dan logika bisnis</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    <h5>API & Webhooks</h5>
+                    <p>Picu persetujuan dari sistem eksternal dan kirim hasil melalui REST API</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/></svg>
+                    <h5>Multi-Bahasa</h5>
+                    <p>Internasionalisasi penuh — formulir dan alur mendukung 20+ bahasa</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M12 6v6l4 2" fill="none" stroke="#ea4335" stroke-width="1.8" stroke-linecap="round"/></svg>
+                    <h5>Manajemen SLA</h5>
+                    <p>Tetapkan target waktu respons per proses dengan aturan eskalasi otomatis</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V7l-8-5z" fill="none" stroke="#1a73e8" stroke-width="1.5"/><path d="M9 12l2 2 4-4" fill="none" stroke="#1a73e8" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>Tanda Tangan Elektronik</h5>
+                    <p>Tanda tangan elektronik yang mengikat secara hukum dengan verifikasi sertifikat</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M5 20c0-4 3-7 7-7s7 3 7 7" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M16 4l2 2-2 2" stroke="#fbbc04" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+                    <h5>Aturan Delegasi</h5>
+                    <p>Atur delegasi otomatis saat pemberi persetujuan sedang cuti atau tidak tersedia</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    <h5>Ekspor Data</h5>
+                    <p>Ekspor semua data persetujuan ke Excel, CSV, atau hubungkan ke data warehouse Anda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>Paket yang tumbuh bersama Anda</h2>
+                <p>Mulai gratis, upgrade seiring skala alur kerja Anda</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Starter</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">$4</span>
+                            <span class="price-period">/user/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Hingga 50 pengguna</li>
+                        <li>10 alur kerja kustom</li>
+                        <li>Pembuat formulir dasar</li>
+                        <li>Notifikasi email</li>
+                        <li>Dukungan email</li>
+                    </ul>
+                    <a href="#" class="btn-secondary pricing-btn">Mulai Uji Coba Gratis</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Paling Populer</div>
+                    <div class="pricing-header">
+                        <h4>Business</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">$9</span>
+                            <span class="price-period">/user/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Pengguna tanpa batas</li>
+                        <li>Alur kerja tanpa batas</li>
+                        <li>Formulir & routing canggih</li>
+                        <li>Dasbor analitik</li>
+                        <li>Akses API</li>
+                        <li>Dukungan prioritas</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn btn-amber">Mulai Uji Coba Gratis</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Enterprise</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">Kustom</span>
+                            <span class="price-period"></span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Semua fitur Business</li>
+                        <li>Deployment privat</li>
+                        <li>Integrasi kustom</li>
+                        <li>Tanda tangan elektronik & DLP</li>
+                        <li>Manajer kesuksesan khusus</li>
+                        <li>Pelatihan di tempat</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary pricing-btn">Hubungi Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Siap menyederhanakan persetujuan Anda?</h2>
+                <p>Bergabunglah dengan ratusan organisasi yang menghilangkan hambatan persetujuan dengan Intelligent Approval.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">Mulai Uji Coba Gratis</a>
+                    <a href="#" class="btn-secondary btn-large">Minta Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36">
+                    <p class="footer-tagline">Membangun masa depan teknologi enterprise.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Produk</h5>
+                    <a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a>
+                    <a href="workup.html">Workup</a>
+                    <a href="oortai.html">OORT.AI</a>
+                    <a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a>
+                    <a href="classroom.html">Cloud Classroom</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Solusi</h5>
+                    <a href="messenger.html">Instant Messenger</a>
+                    <a href="clouddisk.html">Cloud Disk</a>
+                    <a href="email.html">Email</a>
+                    <a href="#">Intelligent Approval</a>
+                    <a href="dispatch.html">Command & Dispatch</a>
+                    <a href="fieldmanager.html">Field Manager</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Perusahaan</h5>
+                    <a href="about.html">Tentang Kami</a>
+                    <a href="#">Karir</a>
+                    <a href="#">Blog</a>
+                    <a href="contact.html">Kontak</a>
+                    <a href="#">Kebijakan Privasi</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OortCloud Technology. Semua hak dilindungi.</p>
+                <div class="footer-social">
+                    <a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a>
+                    <a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a>
+                    <a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

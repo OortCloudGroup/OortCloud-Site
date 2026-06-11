@@ -1,0 +1,816 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Classroom - Plateforme de formation vidéo pour entreprises | OortCloud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="classroom.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="Logo OortCloud" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">Produits</a>
+                <a href="index.html#platform">Plateforme</a>
+                <a href="index.html#enterprise">Entreprise</a>
+                <a href="index.html#about">À propos</a>
+            </div>
+            <a href="#get-started" class="nav-cta">Commencer gratuitement</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="Changer de langue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">EN</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item active" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    Connexion
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">User</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Tableau de bord
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            Déconnexion
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Basculer le menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section - YouTube style bold hero -->
+    <header class="classroom-hero">
+        <div class="hero-bg-pattern"></div>
+        <div class="container">
+            <div class="classroom-hero-content">
+                <div class="product-breadcrumb">
+                    <a href="index.html">Produits</a>
+                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <span>Cloud Classroom</span>
+                </div>
+                <h1>Là où le savoir <span class="gradient-text-red">prend vie</span></h1>
+                <p class="hero-tagline">La plateforme vidéo d'apprentissage d'entreprise qui permet aux organisations de créer, partager et gérer les connaissances à grande échelle. Diffusion en direct, vidéo à la demande, formation interactive — tout au même endroit.</p>
+                <div class="hero-actions">
+                    <a href="#get-started" class="btn-primary btn-large btn-red">Essai gratuit</a>
+                    <a href="#features" class="btn-secondary btn-large">Découvrir le fonctionnement</a>
+                </div>
+            </div>
+            <div class="classroom-hero-visual">
+                <div class="video-player-mockup">
+                    <div class="player-screen">
+                        <div class="player-content">
+                            <div class="play-button-large">
+                                <svg width="60" height="60" viewBox="0 0 60 60">
+                                    <circle cx="30" cy="30" r="28" fill="rgba(255,255,255,0.95)" stroke="none"/>
+                                    <polygon points="24,18 24,42 44,30" fill="#ea4335"/>
+                                </svg>
+                            </div>
+                            <div class="player-overlay-text">Session de formation entreprise</div>
+                        </div>
+                        <div class="player-controls">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 35%;"></div>
+                            </div>
+                            <div class="controls-row">
+                                <div class="controls-left">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><polygon points="3,2 3,14 13,8" fill="white"/></svg>
+                                    <span class="time-display">12:34 / 35:20</span>
+                                </div>
+                                <div class="controls-right">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><rect x="1" y="4" width="14" height="8" rx="1" fill="none" stroke="white" stroke-width="1.2"/><path d="M5 7h6M5 9h4" stroke="white" stroke-width="0.8"/></svg>
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 3h12v10H2z" fill="none" stroke="white" stroke-width="1.2"/><path d="M6 3v10M10 3v10" stroke="white" stroke-width="0.8" opacity="0.5"/></svg>
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 3h10v10H3z" fill="none" stroke="white" stroke-width="1.2" rx="1"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-sidebar">
+                        <div class="sidebar-title">Contenu du cours</div>
+                        <div class="chapter-item active">
+                            <span class="chapter-num">01</span>
+                            <div class="chapter-info">
+                                <span class="chapter-name">Introduction et aperçu</span>
+                                <span class="chapter-dur">5:20</span>
+                            </div>
+                        </div>
+                        <div class="chapter-item playing">
+                            <span class="chapter-num">02</span>
+                            <div class="chapter-info">
+                                <span class="chapter-name">Concepts fondamentaux</span>
+                                <span class="chapter-dur">35:20</span>
+                            </div>
+                            <div class="playing-indicator"><span></span><span></span><span></span></div>
+                        </div>
+                        <div class="chapter-item">
+                            <span class="chapter-num">03</span>
+                            <div class="chapter-info">
+                                <span class="chapter-name">Pratique guidée</span>
+                                <span class="chapter-dur">28:15</span>
+                            </div>
+                        </div>
+                        <div class="chapter-item">
+                            <span class="chapter-num">04</span>
+                            <div class="chapter-info">
+                                <span class="chapter-name">Évaluation et quiz</span>
+                                <span class="chapter-dur">15:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Impact Stats - YouTube style -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <span class="impact-number">10M+</span>
+                    <span class="impact-label">Sessions de formation dispensées</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">500+</span>
+                    <span class="impact-label">Clients entreprises</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">50K+</span>
+                    <span class="impact-label">Cours créés</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">98%</span>
+                    <span class="impact-label">Satisfaction utilisateurs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases - Inspired by YouTube "How it works" -->
+    <section class="usecases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Conçu pour la façon dont les organisations apprennent</h2>
+                <p>De l'intégration des employés à la formation client, Cloud Classroom s'adapte à chaque scénario d'apprentissage</p>
+            </div>
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="6" y="10" width="36" height="24" rx="4" fill="none" stroke="#ea4335" stroke-width="2.5"/>
+                            <circle cx="24" cy="22" r="6" fill="#ea4335" opacity="0.15"/>
+                            <polygon points="22,19 22,25 27,22" fill="#ea4335"/>
+                            <path d="M14 38h20" stroke="#ea4335" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Diffusion en direct</h4>
+                    <p>Diffusez des sessions de formation en direct, des réunions générales et des webinaires à des milliers de participants simultanément avec interaction en temps réel.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="8" y="8" width="32" height="32" rx="4" fill="none" stroke="#4285f4" stroke-width="2.5"/>
+                            <path d="M16 18h16M16 24h12M16 30h8" stroke="#4285f4" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="36" cy="36" r="8" fill="white" stroke="#34a853" stroke-width="2.5"/>
+                            <path d="M33 36l2 2 4-4" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h4>Cours à la demande</h4>
+                    <p>Créez des cours vidéo structurés avec chapitres, quiz et certificats. Les apprenants progressent à leur rythme, à tout moment et en tout lieu.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <circle cx="16" cy="16" r="6" fill="none" stroke="#fbbc04" stroke-width="2.5"/>
+                            <circle cx="32" cy="16" r="6" fill="none" stroke="#fbbc04" stroke-width="2.5"/>
+                            <circle cx="24" cy="32" r="6" fill="none" stroke="#fbbc04" stroke-width="2.5"/>
+                            <path d="M20 20l4 8M28 20l-4 8" stroke="#fbbc04" stroke-width="1.5" stroke-dasharray="3"/>
+                        </svg>
+                    </div>
+                    <h4>Partage de connaissances</h4>
+                    <p>Permettez aux employés de partager leur expertise via des micro-vidéos, tutoriels et bonnes pratiques. Construisez une base de connaissances vivante.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <path d="M12 38V18l12-8 12 8v20" fill="none" stroke="#9b72cb" stroke-width="2.5" stroke-linejoin="round"/>
+                            <rect x="18" y="26" width="12" height="12" rx="1" fill="none" stroke="#9b72cb" stroke-width="2"/>
+                            <path d="M24 26v12M18 32h12" stroke="#9b72cb" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h4>Université d'entreprise</h4>
+                    <p>Créez votre propre académie de formation avec portails personnalisés, parcours d'apprentissage, départements et programmes par rôle.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="8" y="14" width="14" height="10" rx="2" fill="none" stroke="#34a853" stroke-width="2"/>
+                            <rect x="26" y="14" width="14" height="10" rx="2" fill="none" stroke="#34a853" stroke-width="2"/>
+                            <rect x="8" y="28" width="14" height="10" rx="2" fill="none" stroke="#34a853" stroke-width="2"/>
+                            <rect x="26" y="28" width="14" height="10" rx="2" fill="none" stroke="#34a853" stroke-width="2"/>
+                            <circle cx="15" cy="19" r="2" fill="#34a853" opacity="0.5"/>
+                            <circle cx="33" cy="19" r="2" fill="#34a853" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <h4>Classe virtuelle</h4>
+                    <p>Classes en direct interactives avec visioconférence, partage d'écran, tableau blanc, salles de groupe et questions-réponses en temps réel.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <path d="M10 38l6-10 6 6 8-14 8 10" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="10" cy="38" r="2" fill="#1a73e8"/>
+                            <circle cx="16" cy="28" r="2" fill="#1a73e8"/>
+                            <circle cx="22" cy="34" r="2" fill="#1a73e8"/>
+                            <circle cx="30" cy="20" r="2" fill="#1a73e8"/>
+                            <circle cx="38" cy="30" r="2" fill="#1a73e8"/>
+                        </svg>
+                    </div>
+                    <h4>Analytique et suivi</h4>
+                    <p>Analytique d'apprentissage complète — suivez les taux d'achèvement, l'engagement, les scores aux quiz et générez des rapports de conformité.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Un écosystème d'apprentissage complet</h2>
+                <p>Tous les outils dont votre organisation a besoin pour offrir une formation de classe mondiale</p>
+            </div>
+
+            <!-- Feature 1: Video Management -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #ff6d63);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="3" y="6" width="22" height="16" rx="3" fill="white" opacity="0.9"/><polygon points="12,10 12,18 19,14" fill="#ea4335" opacity="0.7"/></svg>
+                    </div>
+                    <h3>Gestion de contenu vidéo</h3>
+                    <p>Téléversez, transcodez et gérez le contenu vidéo à l'échelle de l'entreprise. Support de tous les formats majeurs avec optimisation automatique de la qualité et streaming adaptatif.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Transcodage intelligent</strong>
+                            <span>Transcodage multi-débit automatique avec streaming adaptatif (HLS/DASH) pour tout appareil et réseau</span>
+                        </li>
+                        <li>
+                            <strong>Bibliothèque de contenu</strong>
+                            <span>Organisez les vidéos par catégories, tags, playlists et séries. Recherche plein texte dans tout le contenu</span>
+                        </li>
+                        <li>
+                            <strong>DRM et contrôle d'accès</strong>
+                            <span>Protégez la propriété intellectuelle avec chiffrement, filigrane et prévention du téléchargement</span>
+                        </li>
+                        <li>
+                            <strong>Sous-titres et multilingue</strong>
+                            <span>Sous-titres générés automatiquement par IA, import de sous-titres manuels et pistes audio multilingues</span>
+                        </li>
+                        <li>
+                            <strong>Accélération CDN</strong>
+                            <span>Diffusion mondiale du contenu avec mise en cache en périphérie pour une lecture fluide partout dans le monde</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="video-mgmt-visual">
+                        <div class="video-grid-demo">
+                            <div class="video-thumb">
+                                <div class="thumb-img" style="background: linear-gradient(135deg, #667eea, #764ba2);"></div>
+                                <span class="thumb-duration">12:34</span>
+                                <div class="thumb-info">
+                                    <span class="thumb-title">Guide d'intégration</span>
+                                    <span class="thumb-meta">2.4K views &bull; 2 days ago</span>
+                                </div>
+                            </div>
+                            <div class="video-thumb">
+                                <div class="thumb-img" style="background: linear-gradient(135deg, #f093fb, #f5576c);"></div>
+                                <span class="thumb-duration">28:15</span>
+                                <div class="thumb-info">
+                                    <span class="thumb-title">Formation produit</span>
+                                    <span class="thumb-meta">1.8K views &bull; 1 week ago</span>
+                                </div>
+                            </div>
+                            <div class="video-thumb">
+                                <div class="thumb-img" style="background: linear-gradient(135deg, #4facfe, #00f2fe);"></div>
+                                <span class="thumb-duration">45:00</span>
+                                <div class="thumb-info">
+                                    <span class="thumb-title">Atelier sécurité</span>
+                                    <span class="thumb-meta">3.1K views &bull; 3 days ago</span>
+                                </div>
+                            </div>
+                            <div class="video-thumb">
+                                <div class="thumb-img" style="background: linear-gradient(135deg, #43e97b, #38f9d7);"></div>
+                                <span class="thumb-duration">18:42</span>
+                                <div class="thumb-info">
+                                    <span class="thumb-title">Compétences en leadership</span>
+                                    <span class="thumb-meta">956 views &bull; 5 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Live Streaming -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="4" fill="white"/><path d="M8 8a9 9 0 000 12M20 8a9 9 0 010 12" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/><path d="M5 5a14 14 0 000 18M23 5a14 14 0 010 18" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/></svg>
+                    </div>
+                    <h3>Diffusion en direct entreprise</h3>
+                    <p>Diffusez à des milliers de participants avec un streaming de qualité studio. Parfait pour les réunions générales, lancements de produits, formations et événements externes.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Latence ultra-faible</strong>
+                            <span>Streaming à latence sub-seconde pour interaction en temps réel avec des audiences de toute taille</span>
+                        </li>
+                        <li>
+                            <strong>Mixage multi-sources</strong>
+                            <span>Basculez entre caméras, partages d'écran, diapositives et contenu préenregistré en temps réel</span>
+                        </li>
+                        <li>
+                            <strong>Interaction en direct</strong>
+                            <span>Chat en temps réel, sondages, questions-réponses, levée de main et réactions emoji pendant les diffusions</span>
+                        </li>
+                        <li>
+                            <strong>Enregistrement automatique</strong>
+                            <span>Enregistrement automatique de toutes les sessions en direct pour relecture à la demande avec marqueurs de chapitres</span>
+                        </li>
+                        <li>
+                            <strong>Diffusion simultanée</strong>
+                            <span>Diffusion simultanée vers Cloud Classroom et les plateformes externes (YouTube, LinkedIn Live)</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="live-visual">
+                        <div class="live-demo">
+                            <div class="live-badge-indicator">
+                                <span class="live-dot"></span> LIVE
+                            </div>
+                            <div class="live-screen">
+                                <div class="live-speaker">
+                                    <div class="speaker-avatar">
+                                        <svg width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="20" r="10" fill="rgba(255,255,255,0.2)"/><path d="M10 42c0-8 6-14 14-14s14 6 14 14" fill="rgba(255,255,255,0.15)"/></svg>
+                                    </div>
+                                    <span class="speaker-name">John Smith - VP Ingénierie</span>
+                                </div>
+                            </div>
+                            <div class="live-chat">
+                                <div class="chat-msg">
+                                    <span class="chat-author">Sarah M.</span>
+                                    <span class="chat-text">Excellentes idées sur la nouvelle architecture !</span>
+                                </div>
+                                <div class="chat-msg">
+                                    <span class="chat-author">Mike R.</span>
+                                    <span class="chat-text">Quand est-ce que ce sera disponible ?</span>
+                                </div>
+                                <div class="chat-msg">
+                                    <span class="chat-author">Lisa K.</span>
+                                    <span class="chat-text">Pouvez-vous partager les diapositives ?</span>
+                                </div>
+                            </div>
+                            <div class="live-stats">
+                                <span>👥 2,847 watching</span>
+                                <span>💬 342 messages</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Learning Paths & Certification -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #4285f4);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 4l10 6v4c0 7-4 12-10 14C8 26 4 21 4 14v-4l10-6z" fill="white" opacity="0.2"/><path d="M10 14l3 3 5-5" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Parcours d'apprentissage et certification</h3>
+                    <p>Concevez des parcours d'apprentissage structurés avec prérequis, jalons, évaluations et certificats. Suivez la maîtrise et assurez la conformité.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Parcours structurés</strong>
+                            <span>Créez des cursus multi-cours avec prérequis et paliers de progression</span>
+                        </li>
+                        <li>
+                            <strong>Examens et évaluations</strong>
+                            <span>Types de questions multiples — QCM, texte à trous, dissertation, travaux pratiques et examens chronométrés</span>
+                        </li>
+                        <li>
+                            <strong>Certificats numériques</strong>
+                            <span>Génération automatique de certificats personnalisés à la fin du cours avec codes QR de vérification</span>
+                        </li>
+                        <li>
+                            <strong>Formation obligatoire</strong>
+                            <span>Assignez des cours obligatoires avec échéances, rappels et workflows d'escalade</span>
+                        </li>
+                        <li>
+                            <strong>Crédits et points</strong>
+                            <span>Apprentissage ludifié avec systèmes de crédits, classements et badges de réussite</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="path-visual">
+                        <div class="learning-path-demo">
+                            <div class="path-node completed">
+                                <div class="path-node-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="#34a853"/><path d="M6 10l3 3 5-5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <div class="path-node-info">
+                                    <strong>Fondamentaux</strong>
+                                    <span>Terminé</span>
+                                </div>
+                            </div>
+                            <div class="path-connector done"></div>
+                            <div class="path-node completed">
+                                <div class="path-node-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="#34a853"/><path d="M6 10l3 3 5-5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <div class="path-node-info">
+                                    <strong>Intermédiaire</strong>
+                                    <span>Terminé</span>
+                                </div>
+                            </div>
+                            <div class="path-connector active"></div>
+                            <div class="path-node current">
+                                <div class="path-node-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="none" stroke="#4285f4" stroke-width="2"/><circle cx="10" cy="10" r="4" fill="#4285f4"/></svg>
+                                </div>
+                                <div class="path-node-info">
+                                    <strong>Avancé</strong>
+                                    <span>En cours — 60%</span>
+                                </div>
+                            </div>
+                            <div class="path-connector"></div>
+                            <div class="path-node">
+                                <div class="path-node-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="none" stroke="#e8eaed" stroke-width="2"/></svg>
+                                </div>
+                                <div class="path-node-info">
+                                    <strong>Examen de certification</strong>
+                                    <span>Verrouillé</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="certificate-preview">
+                            <div class="cert-border">
+                                <div class="cert-content">
+                                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2l3 6h6l-5 4 2 6-6-4-6 4 2-6-5-4h6l3-6z" fill="#fbbc04"/></svg>
+                                    <span class="cert-title">Certificat de réussite</span>
+                                    <span class="cert-course">Ingénierie avancée</span>
+                                    <span class="cert-name">Jane Cooper</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: Admin & Analytics -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #9b72cb, #4285f4);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="3" fill="white" opacity="0.2"/><path d="M8 18l4-6 4 4 4-8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Analyses et administration</h3>
+                    <p>Obtenez une visibilité complète sur les résultats d'apprentissage. Tableaux de bord puissants, permissions granulaires et gestion des utilisateurs de niveau entreprise pour toute organisation.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Tableau de bord analytique</strong>
+                            <span>Suivez l'engagement, les taux d'achèvement, le temps passé, le contenu populaire et les tendances d'apprentissage</span>
+                        </li>
+                        <li>
+                            <strong>Gestion des départements</strong>
+                            <span>Organisez par département, équipe ou rôle avec portails indépendants et visibilité du contenu</span>
+                        </li>
+                        <li>
+                            <strong>Système de permissions</strong>
+                            <span>Accès par rôle — administrateurs, instructeurs, managers, apprenants avec permissions personnalisées</span>
+                        </li>
+                        <li>
+                            <strong>Rapports de conformité</strong>
+                            <span>Générez des rapports d'audit pour l'achèvement des formations obligatoires et le statut des certifications</span>
+                        </li>
+                        <li>
+                            <strong>API et intégrations</strong>
+                            <span>Connexion avec SIRH, SSO (SAML/OIDC), LTI et autres systèmes d'entreprise</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="analytics-visual">
+                        <div class="analytics-panel">
+                            <div class="analytics-header">
+                                <span>Analytique d'apprentissage</span>
+                                <span class="analytics-period">30 derniers jours</span>
+                            </div>
+                            <div class="analytics-kpis">
+                                <div class="kpi">
+                                    <span class="kpi-value">89%</span>
+                                    <span class="kpi-label">Taux d'achèvement</span>
+                                    <span class="kpi-trend up">+12%</span>
+                                </div>
+                                <div class="kpi">
+                                    <span class="kpi-value">4.2h</span>
+                                    <span class="kpi-label">Temps moy./utilisateur</span>
+                                    <span class="kpi-trend up">+8%</span>
+                                </div>
+                                <div class="kpi">
+                                    <span class="kpi-value">1,247</span>
+                                    <span class="kpi-label">Apprenants actifs</span>
+                                    <span class="kpi-trend up">+23%</span>
+                                </div>
+                            </div>
+                            <div class="analytics-chart">
+                                <svg viewBox="0 0 280 80" width="100%" height="80">
+                                    <polyline points="0,60 40,50 80,55 120,35 160,40 200,20 240,25 280,10" fill="none" stroke="#4285f4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <polyline points="0,60 40,50 80,55 120,35 160,40 200,20 240,25 280,10" fill="url(#chartGradient)" opacity="0.1"/>
+                                    <defs>
+                                        <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0%" stop-color="#4285f4"/>
+                                            <stop offset="100%" stop-color="#4285f4" stop-opacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Features Grid -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tout pour la formation en entreprise</h2>
+                <p>Fonctionnalités supplémentaires qui font de Cloud Classroom la solution complète</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="2" y="6" width="9" height="12" rx="1.5" fill="none" stroke="#ea4335" stroke-width="1.5"/><rect x="13" y="6" width="9" height="12" rx="1.5" fill="none" stroke="#ea4335" stroke-width="1.5"/><polygon points="6,10 6,14 8,12" fill="#ea4335" opacity="0.5"/></svg>
+                    <h5>Image dans l'image</h5>
+                    <p>Affichez l'instructeur et les diapositives simultanément avec des mises en page personnalisables</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M2 12h20M12 2c3 3 4.5 6 4.5 10s-1.5 7-4.5 10c-3-3-4.5-6-4.5-10S9 5 12 2z" fill="none" stroke="#4285f4" stroke-width="1.2"/></svg>
+                    <h5>CDN mondial</h5>
+                    <p>Nœuds de périphérie dans le monde entier pour une lecture sans mise en mémoire tampon</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M8 12h8M12 8v8" stroke="#34a853" stroke-width="1.8" stroke-linecap="round"/></svg>
+                    <h5>SCORM/xAPI</h5>
+                    <p>Importez des packages e-learning aux standards de l'industrie et suivez les interactions</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    <h5>Lecteur adaptatif</h5>
+                    <p>Visionnage optimisé sur bureau, tablette et mobile avec téléchargement hors ligne</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M5 20c0-4 3-7 7-7s7 3 7 7" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M16 3l2 2-2 2" stroke="#fbbc04" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+                    <h5>Outils instructeur</h5>
+                    <p>Annotation, tableau blanc, enregistrement d'écran et mode présentation</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="#1a73e8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    <h5>Apprentissage hors ligne</h5>
+                    <p>Téléchargez des cours pour un accès hors ligne avec synchronisation au retour en ligne</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01" stroke="#ea4335" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>Assistant IA</h5>
+                    <p>Bot Q&R piloté par l'IA, entraîné sur le contenu des cours pour répondre aux questions des apprenants</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1" fill="none" stroke="#34a853" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" rx="1" fill="none" stroke="#34a853" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" rx="1" fill="none" stroke="#34a853" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" rx="1" fill="none" stroke="#34a853" stroke-width="1.5"/></svg>
+                    <h5>Marque blanche</h5>
+                    <p>Personnalisation complète de la marque — logo, couleurs, domaine et page de connexion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial / Social Proof -->
+    <section class="social-proof-section">
+        <div class="container">
+            <div class="proof-content">
+                <div class="quote-mark">"</div>
+                <blockquote>Cloud Classroom a transformé notre façon de dispenser la formation dans plus de 30 bureaux mondiaux. La qualité du streaming en direct et l'analytique d'apprentissage nous ont donné une visibilité inédite.</blockquote>
+                <div class="quote-author">
+                    <div class="author-avatar">VP</div>
+                    <div class="author-info">
+                        <strong>VP Formation et Développement</strong>
+                        <span>Entreprise technologique Fortune 500</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section class="integration-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Compatible avec vos outils existants</h2>
+                <p>Intégration transparente avec l'écosystème OortCloud et les plateformes tierces</p>
+            </div>
+            <div class="integration-grid">
+                <div class="integration-item">
+                    <div class="integration-icon" style="background: linear-gradient(135deg, #4285f4, #9b72cb);">W</div>
+                    <span>Workup</span>
+                </div>
+                <div class="integration-item">
+                    <div class="integration-icon" style="background: linear-gradient(135deg, #34a853, #4285f4);">IM</div>
+                    <span>Messenger</span>
+                </div>
+                <div class="integration-item">
+                    <div class="integration-icon" style="background: linear-gradient(135deg, #4285f4, #34a853);">CD</div>
+                    <span>Cloud Disk</span>
+                </div>
+                <div class="integration-item">
+                    <div class="integration-icon" style="background: linear-gradient(135deg, #fbbc04, #ea4335);">IA</div>
+                    <span>Approbation</span>
+                </div>
+                <div class="integration-item">
+                    <div class="integration-icon" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">E</div>
+                    <span>Email</span>
+                </div>
+                <div class="integration-item">
+                    <div class="integration-icon" style="background: linear-gradient(135deg, #1a73e8, #174ea6);">SSO</div>
+                    <span>SAML/OIDC</span>
+                </div>
+                <div class="integration-item">
+                    <div class="integration-icon" style="background: linear-gradient(135deg, #5f6368, #3c4043);">API</div>
+                    <span>REST API</span>
+                </div>
+                <div class="integration-item">
+                    <div class="integration-icon" style="background: linear-gradient(135deg, #9b72cb, #ea4335);">LTI</div>
+                    <span>LTI 1.3</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>Des forfaits pour chaque organisation</h2>
+                <p>Commencez gratuitement, évoluez selon vos besoins</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Starter</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">$5</span>
+                            <span class="price-period">/utilisateur/mois</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Jusqu'à 100 utilisateurs</li>
+                        <li>50 Go de stockage vidéo</li>
+                        <li>Cours vidéo à la demande</li>
+                        <li>Analytique de base</li>
+                        <li>Support par e-mail</li>
+                    </ul>
+                    <a href="#" class="btn-secondary pricing-btn">Essai gratuit</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Le plus populaire</div>
+                    <div class="pricing-header">
+                        <h4>Business</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">$12</span>
+                            <span class="price-period">/utilisateur/mois</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Utilisateurs illimités</li>
+                        <li>1 To de stockage vidéo</li>
+                        <li>Diffusion en direct (1080p)</li>
+                        <li>Certifications et examens</li>
+                        <li>Tableau de bord analytique complet</li>
+                        <li>Support prioritaire</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn">Essai gratuit</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Enterprise</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">Sur mesure</span>
+                            <span class="price-period"></span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Tout le forfait Business</li>
+                        <li>Déploiement privé</li>
+                        <li>Stockage illimité</li>
+                        <li>Diffusion en direct 4K</li>
+                        <li>Intégrations personnalisées</li>
+                        <li>Responsable de compte dédié</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary pricing-btn">Contactez-nous</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Commencez à construire votre culture d'apprentissage dès aujourd'hui</h2>
+                <p>Rejoignez des milliers d'organisations qui offrent une formation percutante avec Cloud Classroom.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">Essai gratuit</a>
+                    <a href="#" class="btn-secondary btn-large">Demander une démo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="Logo OortCloud" height="36">
+                    <p class="footer-tagline">Construire l'avenir de la technologie d'entreprise.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Produits</h5>
+                    <a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a>
+                    <a href="workup.html">Workup</a>
+                    <a href="oortai.html">OORT.AI</a>
+                    <a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a>
+                    <a href="#">Cloud Classroom</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Solutions</h5>
+                    <a href="messenger.html">Instant Messenger</a>
+                    <a href="clouddisk.html">Cloud Disk</a>
+                    <a href="email.html">Email</a>
+                    <a href="approval.html">Approbation intelligente</a>
+                    <a href="dispatch.html">Commandement et dispatch</a>
+                    <a href="fieldmanager.html">Field Manager</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Entreprise</h5>
+                    <a href="about.html">À propos</a>
+                    <a href="#">Carrières</a>
+                    <a href="#">Blog</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OortCloud Technology. Tous droits réservés.</p>
+                <div class="footer-social">
+                    <a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a>
+                    <a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a>
+                    <a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

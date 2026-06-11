@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workup - 올인원 엔터프라이즈 슈퍼 앱 | OortCloud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="workup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="alternate" hreflang="ko" href="https://oortcloudsmart.com/ko/">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">제품</a>
+                <a href="index.html#platform">플랫폼</a>
+                <a href="index.html#enterprise">엔터프라이즈</a>
+                <a href="index.html#about">소개</a>
+            </div>
+            <a href="#get-started" class="nav-cta">시작하기</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="언어 전환">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">KO</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item active" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    로그인
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">사용자</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            대시보드
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            로그아웃
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="메뉴 전환"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="workup-hero">
+        <div class="container">
+            <div class="workup-hero-grid">
+                <div class="workup-hero-content">
+                    <div class="product-breadcrumb">
+                        <a href="index.html">제품</a>
+                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <span>Workup</span>
+                    </div>
+                    <h1>팀에 필요한 모든 것을 <span class="gradient-text-workup">하나의 앱에</span></h1>
+                    <p class="workup-hero-desc">메신저, 결재, Classroom, Drive, Mail과 확장 가능한 서브 앱 및 미니 앱 생태계를 통합한 올인원 엔터프라이즈 슈퍼 앱입니다. 한 번의 로그인, 하나의 인터페이스, 문맥 전환 제로.</p>
+                    <div class="hero-actions">
+                        <a href="#get-started" class="btn-primary btn-large btn-workup">무료 체험 시작</a>
+                        <a href="#apps" class="btn-secondary btn-large">앱 탐색</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span class="trust-badge"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="2" width="10" height="10" rx="2" fill="none" stroke="#4285f4" stroke-width="1.3"/><path d="M2 5h10" stroke="#4285f4" stroke-width="1"/><rect x="3.5" y="6.5" width="3" height="3" rx="0.5" fill="#4285f4" opacity="0.5"/></svg> 6개 이상의 내장 앱</span>
+                        <span class="trust-badge"><svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5" fill="none" stroke="#34a853" stroke-width="1.3"/><path d="M4 7h6M7 4v6" stroke="#34a853" stroke-width="1.2" stroke-linecap="round"/></svg> 확장 가능한 미니 앱</span>
+                        <span class="trust-badge"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2l5 3v4c0 3-2.2 5.5-5 6-2.8-.5-5-3-5-6V5l5-3z" fill="none" stroke="#ea4335" stroke-width="1.3"/></svg> 엔터프라이즈 보안</span>
+                    </div>
+                </div>
+                <div class="workup-hero-visual">
+                    <div class="superapp-mockup">
+                        <div class="sa-header">
+                            <div class="sa-header-left">
+                                <div class="sa-logo-mark">W</div>
+                                <span class="sa-title">Workup</span>
+                            </div>
+                            <div class="sa-header-right">
+                                <div class="sa-search">
+                                    <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="5.5" cy="5.5" r="3.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M8 8l2.5 2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                    <span>검색...</span>
+                                </div>
+                                <div class="sa-avatar">JD</div>
+                            </div>
+                        </div>
+                        <div class="sa-body">
+                            <div class="sa-sidebar">
+                                <div class="sa-nav-item active">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 5l5-3 5 3v6a1 1 0 01-1 1H3a1 1 0 01-1-1V5z" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+                                    <span>홈</span>
+                                </div>
+                                <div class="sa-nav-item">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 4c0-1 .8-1.5 1.5-1.5h5c.7 0 1.5.5 1.5 1.5v5c0 1-.8 1.5-1.5 1.5H7l-2 2v-2H4.5C3.8 10.5 3 10 3 9V4z" fill="none" stroke="currentColor" stroke-width="1.1"/></svg>
+                                    <span>Messenger</span>
+                                </div>
+                                <div class="sa-nav-item">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="4" width="10" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M2 5.5l5 3 5-3" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+                                    <span>메일</span>
+                                </div>
+                                <div class="sa-nav-item">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2l1.5 3H12l-2.5 2 1 3L7 8.5 3.5 10l1-3L2 5h3.5z" fill="none" stroke="currentColor" stroke-width="1.1"/></svg>
+                                    <span>결재</span>
+                                </div>
+                                <div class="sa-nav-item">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><rect x="3" y="2" width="8" height="10" rx="1" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M5 5h4M5 7h4M5 9h2" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"/></svg>
+                                    <span>Drive</span>
+                                </div>
+                                <div class="sa-nav-item">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="3" width="10" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.1"/><circle cx="7" cy="9" r="0.8" fill="currentColor"/></svg>
+                                    <span>Classroom</span>
+                                </div>
+                                <div class="sa-nav-divider"></div>
+                                <div class="sa-nav-item mini">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="2" width="4.5" height="4.5" rx="1" fill="none" stroke="currentColor" stroke-width="1"/><rect x="7.5" y="2" width="4.5" height="4.5" rx="1" fill="none" stroke="currentColor" stroke-width="1"/><rect x="2" y="7.5" width="4.5" height="4.5" rx="1" fill="none" stroke="currentColor" stroke-width="1"/><rect x="7.5" y="7.5" width="4.5" height="4.5" rx="1" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+                                    <span>미니 앱</span>
+                                </div>
+                            </div>
+                            <div class="sa-main">
+                                <div class="sa-welcome">
+                                    <span class="sa-greeting">안녕하세요, John</span>
+                                    <span class="sa-date">5월 28일 수요일</span>
+                                </div>
+                                <div class="sa-widgets">
+                                    <div class="sa-widget msg-widget">
+                                        <span class="widget-title">메시지</span>
+                                        <span class="widget-count">5건 미읽음</span>
+                                    </div>
+                                    <div class="sa-widget approval-widget">
+                                        <span class="widget-title">결재</span>
+                                        <span class="widget-count">3건 대기 중</span>
+                                    </div>
+                                    <div class="sa-widget drive-widget">
+                                        <span class="widget-title">최근 파일</span>
+                                        <span class="widget-count">2분 전 업데이트</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Integrated Apps Bar -->
+    <section class="apps-bar" id="apps">
+        <div class="container">
+            <div class="apps-bar-grid">
+                <div class="app-bar-item">
+                    <div class="abi-icon" style="background: linear-gradient(135deg, #34a853, #4285f4);">
+                        <svg width="20" height="20" viewBox="0 0 20 20"><path d="M4 6c0-1.5 1.2-2.5 2.5-2.5h7c1.3 0 2.5 1 2.5 2.5v6c0 1.5-1.2 2.5-2.5 2.5H11l-3 3v-3H6.5C5.2 15 4 14 4 12.5V6z" fill="white" opacity="0.9"/></svg>
+                    </div>
+                    <strong>Messenger</strong>
+                    <span>팀 커뮤니케이션</span>
+                </div>
+                <div class="app-bar-item">
+                    <div class="abi-icon" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">
+                        <svg width="20" height="20" viewBox="0 0 20 20"><rect x="3" y="5" width="14" height="10" rx="2" fill="white" opacity="0.9"/><path d="M3 7l7 4.5 7-4.5" fill="none" stroke="#ea4335" stroke-width="1.2" opacity="0.6"/></svg>
+                    </div>
+                    <strong>Mail</strong>
+                    <span>기업 이메일</span>
+                </div>
+                <div class="app-bar-item">
+                    <div class="abi-icon" style="background: linear-gradient(135deg, #fbbc04, #f09800);">
+                        <svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 3l2 4h4l-3.5 3 1 4L10 12l-3.5 2 1-4L4 7h4z" fill="white" opacity="0.9"/></svg>
+                    </div>
+                    <strong>Approval</strong>
+                    <span>워크플로우 자동화</span>
+                </div>
+                <div class="app-bar-item">
+                    <div class="abi-icon" style="background: linear-gradient(135deg, #34a853, #1a73e8);">
+                        <svg width="20" height="20" viewBox="0 0 20 20"><rect x="4" y="3" width="12" height="14" rx="2" fill="white" opacity="0.9"/><path d="M7 7h6M7 10h6M7 13h4" stroke="#34a853" stroke-width="1" stroke-linecap="round" opacity="0.6"/></svg>
+                    </div>
+                    <strong>Drive</strong>
+                    <span>클라우드 스토리지</span>
+                </div>
+                <div class="app-bar-item">
+                    <div class="abi-icon" style="background: linear-gradient(135deg, #ea4335, #9b72cb);">
+                        <svg width="20" height="20" viewBox="0 0 20 20"><rect x="3" y="4" width="14" height="12" rx="2" fill="white" opacity="0.9"/><circle cx="10" cy="13" r="1" fill="#ea4335" opacity="0.6"/><path d="M3 8h14" stroke="#ea4335" stroke-width="0.8" opacity="0.4"/></svg>
+                    </div>
+                    <strong>Classroom</strong>
+                    <span>학습 및 교육</span>
+                </div>
+                <div class="app-bar-item">
+                    <div class="abi-icon" style="background: linear-gradient(135deg, #4285f4, #9b72cb);">
+                        <svg width="20" height="20" viewBox="0 0 20 20"><rect x="3" y="3" width="6" height="6" rx="1.5" fill="white" opacity="0.9"/><rect x="11" y="3" width="6" height="6" rx="1.5" fill="white" opacity="0.7"/><rect x="3" y="11" width="6" height="6" rx="1.5" fill="white" opacity="0.7"/><rect x="11" y="11" width="6" height="6" rx="1.5" fill="white" opacity="0.5"/></svg>
+                    </div>
+                    <strong>Mini Apps</strong>
+                    <span>확장 가능한 생태계</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>하나의 통합 워크스페이스, 마찰 제로</h2>
+                <p>단절된 도구 간의 전환을 멈추세요. Workup은 모든 것을 통합하여 팀이 중요한 일에 집중할 수 있게 합니다.</p>
+            </div>
+            <div class="benefits-grid-3">
+                <div class="benefit-card">
+                    <div class="benefit-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12" fill="none" stroke="#4285f4" stroke-width="2.5"/><path d="M10 16h12M16 10v12" stroke="#4285f4" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>통합 로그인</h4>
+                    <p>하나의 계정, 하나의 로그인. 메신저, 메일, 드라이브, Classroom, 결재 및 모든 미니 앱을 하나의 신원으로 접근합니다.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32"><path d="M8 12l8-6 8 6v10a2 2 0 01-2 2H10a2 2 0 01-2-2V12z" fill="none" stroke="#34a853" stroke-width="2.5"/><path d="M13 24v-6h6v6" fill="none" stroke="#34a853" stroke-width="2"/></svg>
+                    </div>
+                    <h4>통합 홈</h4>
+                    <p>모든 통합 앱의 알림, 작업, 메시지, 결재를 집계하는 맞춤형 대시보드입니다.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32"><rect x="6" y="6" width="8" height="8" rx="2" fill="none" stroke="#ea4335" stroke-width="2.5"/><rect x="18" y="6" width="8" height="8" rx="2" fill="none" stroke="#fbbc04" stroke-width="2.5"/><rect x="6" y="18" width="8" height="8" rx="2" fill="none" stroke="#9b72cb" stroke-width="2.5"/><rect x="18" y="18" width="8" height="8" rx="2" fill="none" stroke="#34a853" stroke-width="2.5"/></svg>
+                    </div>
+                    <h4>미니 앱 생태계</h4>
+                    <p>서브 앱과 미니 앱으로 Workup을 확장하세요 — 팀이 직접 만든 커스텀 도구나 마켓플레이스에서 설치한 앱을 활용합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>단순 번들이 아닌 깊이 통합된 경험</h2>
+                <p>Workup의 모든 앱은 맥락, 데이터, 워크플로우를 공유하여 단일 도구로는 불가능한 경험을 만듭니다</p>
+            </div>
+
+            <!-- Feature 1: Integrated Messenger -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #4285f4);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M6 10c0-2.5 2-4 4-4h8c2 0 4 1.5 4 4v5c0 2.5-2 4-4 4h-2l-3 3v-3H10c-2 0-4-1.5-4-4V10z" fill="white" opacity="0.3" stroke="white" stroke-width="2"/><circle cx="11" cy="13" r="1.2" fill="white"/><circle cx="14" cy="13" r="1.2" fill="white"/><circle cx="17" cy="13" r="1.2" fill="white"/></svg>
+                    </div>
+                    <h3>통합 메신저</h3>
+                    <p>모든 워크플로우에 스며든 실시간 팀 커뮤니케이션. 결재에서 대화를 시작하고, Drive 파일을 공유하고, 회의를 시작하세요 — 채팅을 떠나지 않고 모두 가능합니다.</p>
+                    <ul class="feature-list">
+                        <li><strong>크로스앱 맥락</strong><span>대화에서 바로 Drive 파일 공유, 결재 실행, Classroom 시작</span></li>
+                        <li><strong>스마트 알림</strong><span>모든 통합 앱의 우선순위 필터링이 적용된 통합 알림 센터</span></li>
+                        <li><strong>채널 및 그룹</strong><span>팀, 프로젝트, 주제별 정리된 공간과 스레드 토론</span></li>
+                        <li><strong>리치 미디어</strong><span>음성 메시지, 동영상 클립, 화면 녹화, 문서 미리보기를 인라인으로 제공</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="integrated-chat-visual">
+                        <div class="ic-panel">
+                            <div class="ic-header">
+                                <span class="ic-channel"># 제품팀</span>
+                                <span class="ic-members">12명</span>
+                            </div>
+                            <div class="ic-messages">
+                                <div class="ic-msg">
+                                    <div class="ic-avatar" style="background:#4285f4;">A</div>
+                                    <div class="ic-content">
+                                        <span class="ic-name">Alice Chen</span>
+                                        <p>Q3 로드맵이 확정되었습니다. 지금 문서를 공유합니다.</p>
+                                        <div class="ic-attachment drive">
+                                            <svg width="12" height="12" viewBox="0 0 12 12"><rect x="2" y="2" width="8" height="8" rx="1.5" fill="none" stroke="#34a853" stroke-width="1"/></svg>
+                                            <span>Q3_Roadmap.docx</span>
+                                            <span class="att-source">Drive에서</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ic-msg">
+                                    <div class="ic-avatar" style="background:#ea4335;">B</div>
+                                    <div class="ic-content">
+                                        <span class="ic-name">Bob Kim</span>
+                                        <p>멋집니다! 지금 예산 결재를 올리겠습니다.</p>
+                                        <div class="ic-attachment approval">
+                                            <svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 1.5l1.2 2.5H10L8 6l.5 2.5L6 7l-2.5 1.5L4 6 1.5 4H5z" fill="none" stroke="#fbbc04" stroke-width="0.8"/></svg>
+                                            <span>예산 결재 #238</span>
+                                            <span class="att-source">대기 중</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Unified Mail -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="7" width="20" height="14" rx="3" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><path d="M4 10l10 6.5L24 10" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>기업용 메일</h3>
+                    <p>워크스페이스에 원활하게 연결된 전문 이메일. 캘린더 이벤트로 메시지를 예약하고, Drive 파일을 첨부하고, 원클릭으로 이메일을 결재 워크플로우로 전환합니다.</p>
+                    <ul class="feature-list">
+                        <li><strong>깊은 캘린더 통합</strong><span>회의 요청을 자동 감지하여 한 탭으로 캘린더 이벤트 생성</span></li>
+                        <li><strong>Drive 첨부</strong><span>파일 사본 대신 Drive 링크 공유 — 항상 최신 버전 전송</span></li>
+                        <li><strong>이메일에서 결재로</strong><span>모든 이메일을 추적과 알림이 포함된 공식 결재 요청으로 전환</span></li>
+                        <li><strong>스마트 카테고리</strong><span>우선순위, 발신자, 콘텐츠 유형에 따른 AI 기반 받은 편지함 정리</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="mail-integration-visual">
+                        <div class="mi-panel">
+                            <div class="mi-header">
+                                <span class="mi-title">받은 편지함</span>
+                                <span class="mi-count">3건 미읽음</span>
+                            </div>
+                            <div class="mi-messages">
+                                <div class="mi-email unread">
+                                    <div class="mi-sender">Sarah Park</div>
+                                    <div class="mi-subject">계약 검토 - Q3 벤더</div>
+                                    <div class="mi-actions">
+                                        <span class="mi-action-btn approve">결재 생성</span>
+                                        <span class="mi-action-btn">Drive에 저장</span>
+                                    </div>
+                                </div>
+                                <div class="mi-email unread">
+                                    <div class="mi-sender">팀 캘린더</div>
+                                    <div class="mi-subject">스프린트 검토 - 내일 오후 2시</div>
+                                    <div class="mi-actions">
+                                        <span class="mi-action-btn meet">회의 참여</span>
+                                    </div>
+                                </div>
+                                <div class="mi-email">
+                                    <div class="mi-sender">DevOps Bot</div>
+                                    <div class="mi-subject">배포 #847 성공</div>
+                                    <div class="mi-actions">
+                                        <span class="mi-action-btn">세부 정보 보기</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Smart Approval -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #fbbc04, #f09800);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 4l3 6h6l-5 4 2 6-6-3.5L8 20l2-6-5-4h6z" fill="white" opacity="0.2" stroke="white" stroke-width="2" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>스마트 결재 워크플로우</h3>
+                    <p>메신저, 이메일, Drive 등 모든 앱에서 결재를 실행하여 의사결정을 간소화합니다. 진행 상황을 추적하고 알림을 설정하고 완전한 감사 추적을 유지합니다.</p>
+                    <ul class="feature-list">
+                        <li><strong>다중 소스 트리거</strong><span>채팅, 이메일, Drive, 모든 미니 앱에서 결재 시작</span></li>
+                        <li><strong>시각적 플로우 빌더</strong><span>조건, 병렬 경로, 에스컬레이션이 포함된 드래그 앤 드롭 결재 체인</span></li>
+                        <li><strong>모바일 결재</strong><span>어디서든 검토하고 결재 — 모바일에서 스와이프로 결재</span></li>
+                        <li><strong>감사 및 규정 준수</strong><span>규제 및 내부 준수를 위한 완전한 타임스탬프 기록</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="approval-flow-visual">
+                        <div class="af-panel">
+                            <div class="af-header">결재 플로우</div>
+                            <div class="af-flow">
+                                <div class="af-step completed">
+                                    <div class="af-step-dot"></div>
+                                    <div class="af-step-content">
+                                        <strong>제출 완료</strong>
+                                        <span>John Doe &bull; 2시간 전</span>
+                                    </div>
+                                </div>
+                                <div class="af-connector"></div>
+                                <div class="af-step completed">
+                                    <div class="af-step-dot"></div>
+                                    <div class="af-step-content">
+                                        <strong>관리자 승인</strong>
+                                        <span>Lisa Wang &bull; 1시간 전</span>
+                                    </div>
+                                </div>
+                                <div class="af-connector"></div>
+                                <div class="af-step current">
+                                    <div class="af-step-dot"></div>
+                                    <div class="af-step-content">
+                                        <strong>재무 검토</strong>
+                                        <span>대기 중 &bull; David Lee</span>
+                                    </div>
+                                </div>
+                                <div class="af-connector pending"></div>
+                                <div class="af-step pending">
+                                    <div class="af-step-dot"></div>
+                                    <div class="af-step-content">
+                                        <strong>최종 승인</strong>
+                                        <span>운영 부사장</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: Cloud Drive -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #1a73e8);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="5" width="18" height="18" rx="3" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><path d="M10 10h8M10 14h8M10 18h5" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>통합 클라우드 드라이브</h3>
+                    <p>플랫폼 전체에서 파일을 저장, 공유, 협업합니다. Drive는 메신저, 메일, 결재, Classroom에 깊이 내장되어 항상 문맥에서 파일에 접근할 수 있습니다.</p>
+                    <ul class="feature-list">
+                        <li><strong>인앱 미리보기</strong><span>앱을 떠나지 않고 문서, 스프레드시트, 프레젠테이션 미리보기</span></li>
+                        <li><strong>맥락적 공유</strong><span>대화 참여자, 결재 검토자, Classroom 학생에게 자동 공유</span></li>
+                        <li><strong>버전 기록</strong><span>완전한 버전 기록과 롤백 기능으로 모든 변경 사항 추적</span></li>
+                        <li><strong>스마트 정리</strong><span>콘텐츠와 사용 패턴에 기반한 AI 기반 태깅 및 폴더 제안</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="drive-integration-visual">
+                        <div class="di-panel">
+                            <div class="di-header">
+                                <span>클라우드 드라이브</span>
+                                <span class="di-storage">42.3 GB / 100 GB</span>
+                            </div>
+                            <div class="di-files">
+                                <div class="di-file">
+                                    <div class="di-file-icon doc"></div>
+                                    <div class="di-file-info">
+                                        <strong>Q3_Roadmap.docx</strong>
+                                        <span>#제품팀에서 공유 &bull; 2시간 전</span>
+                                    </div>
+                                </div>
+                                <div class="di-file">
+                                    <div class="di-file-icon sheet"></div>
+                                    <div class="di-file-info">
+                                        <strong>Budget_2026.xlsx</strong>
+                                        <span>결재 #238에 첨부 &bull; 4시간 전</span>
+                                    </div>
+                                </div>
+                                <div class="di-file">
+                                    <div class="di-file-icon pdf"></div>
+                                    <div class="di-file-info">
+                                        <strong>Vendor_Contract.pdf</strong>
+                                        <span>메일로 수신 &bull; 어제</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5: Mini-Apps Ecosystem -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #4285f4, #9b72cb);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="8" height="8" rx="2" fill="white" opacity="0.7"/><rect x="16" y="4" width="8" height="8" rx="2" fill="white" opacity="0.5"/><rect x="4" y="16" width="8" height="8" rx="2" fill="white" opacity="0.5"/><rect x="16" y="16" width="8" height="8" rx="2" fill="white" opacity="0.3"/></svg>
+                    </div>
+                    <h3>미니 앱 및 서브 앱</h3>
+                    <p>비즈니스에 맞는 커스텀 애플리케이션으로 Workup을 확장하세요. SDK로 경량 미니 앱을 만들거나, 마켓플레이스에서 설치하거나, 타사 서비스를 통합합니다.</p>
+                    <ul class="feature-list">
+                        <li><strong>앱 마켓플레이스</strong><span>HR, 재무, CRM 등을 위한 사전 제작된 미니 앱 검색 및 설치</span></li>
+                        <li><strong>로우코드 빌더</strong><span>시각적 도구로 커스텀 미니 앱 생성 — 깊은 코딩 불필요</span></li>
+                        <li><strong>깊은 플랫폼 통합</strong><span>미니 앱이 메신저, Drive, 결재 API에 접근하여 원활한 워크플로우 구현</span></li>
+                        <li><strong>샌드박스 보안</strong><span>각 미니 앱은 권한 기반 데이터 접근으로 격리 실행</span></li>
+                        <li><strong>엔터프라이즈 앱 관리</strong><span>조직 전체의 배포, 업데이트, 접근 권한에 대한 관리자 제어</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="miniapp-visual">
+                        <div class="ma-panel">
+                            <div class="ma-header">미니 앱 스토어</div>
+                            <div class="ma-grid">
+                                <div class="ma-app">
+                                    <div class="ma-icon" style="background:#4285f4;">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="4" width="10" height="8" rx="1" fill="none" stroke="white" stroke-width="1.2"/><path d="M3 6h10" stroke="white" stroke-width="0.8"/></svg>
+                                    </div>
+                                    <span class="ma-name">CRM</span>
+                                    <span class="ma-status installed">설치됨</span>
+                                </div>
+                                <div class="ma-app">
+                                    <div class="ma-icon" style="background:#34a853;">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5" fill="none" stroke="white" stroke-width="1.2"/><path d="M8 5v3l2 1.5" stroke="white" stroke-width="1" stroke-linecap="round"/></svg>
+                                    </div>
+                                    <span class="ma-name">출근 관리</span>
+                                    <span class="ma-status installed">설치됨</span>
+                                </div>
+                                <div class="ma-app">
+                                    <div class="ma-icon" style="background:#ea4335;">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 12l3-4 3 2 3-5" fill="none" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                    </div>
+                                    <span class="ma-name">분석</span>
+                                    <span class="ma-status installed">설치됨</span>
+                                </div>
+                                <div class="ma-app">
+                                    <div class="ma-icon" style="background:#fbbc04;">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="3" width="10" height="10" rx="2" fill="none" stroke="white" stroke-width="1.2"/><path d="M6 8h4M8 6v4" stroke="white" stroke-width="1" stroke-linecap="round"/></svg>
+                                    </div>
+                                    <span class="ma-name">커스텀 앱</span>
+                                    <span class="ma-status add">+ 추가</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cross-App Features -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>통합의 힘</h2>
+                <p>모든 것이 하나로 통합되어 있기에 가능한 기능들</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M12 7v5l4 2" fill="none" stroke="#4285f4" stroke-width="1.8" stroke-linecap="round"/></svg><h5>통합 검색</h5><p>하나의 검색창에서 메시지, 이메일, 파일, 결재, 미니 앱을 모두 검색</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V7l-8-5z" fill="none" stroke="#ea4335" stroke-width="1.5"/></svg><h5>통합 보안</h5><p>단일 보안 정책, 하나의 관리자 콘솔, 모든 앱에 일관된 DLP 및 규정 준수</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="6" width="7" height="12" rx="1.5" fill="none" stroke="#34a853" stroke-width="1.5"/><rect x="14" y="4" width="7" height="16" rx="1.5" fill="none" stroke="#34a853" stroke-width="1.5"/></svg><h5>크로스 디바이스 동기화</h5><p>데스크탑, 모바일, 웹에서 원활한 경험 — 중단한 곳에서 바로 이어서</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="8" cy="12" r="3" fill="none" stroke="#9b72cb" stroke-width="1.5"/><circle cx="16" cy="12" r="3" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M11 12h2" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg><h5>공유 연락처</h5><p>하나의 연락처 디렉토리가 메신저, 메일, 결재 라우팅, Classroom 명단을 구동</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="#fbbc04" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg><h5>워크플로우 자동화</h5><p>여러 앱에 걸친 자동화 워크플로우 생성 — 플랫폼 전체에서 작업 실행</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" fill="none" stroke="#1a73e8" stroke-width="1.5"/><path d="M2 12h20M12 2c3 3 4.5 6 4.5 10s-1.5 7-4.5 10" fill="none" stroke="#1a73e8" stroke-width="1.2"/></svg><h5>다국어 지원</h5><p>모든 통합 앱에서 20개 이상의 언어를 완벽 지원</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M4 12h16M12 4v16" stroke="#34a853" stroke-width="1" opacity="0.4"/></svg><h5>관리자 콘솔</h5><p>사용자 관리, 권한, 정책, 분석을 위한 중앙화된 관리자 콘솔</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="#ea4335" stroke-width="1.5" opacity="0.6"/></svg><h5>오픈 API</h5><p>모든 앱 모듈에 대한 REST API — 커스텀 통합을 구축하고 플랫폼을 확장</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>모든 팀 규모에 맞는 요금제</h2>
+                <p>무료로 시작하고, 성장에 따라 확장하세요</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Team</h4>
+                        <div class="price-amount">₩15,000</div>
+                        <span class="price-period">사용자 / 월</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>메신저 + 메일 + 드라이브</li>
+                        <li>기본 결재 워크플로우</li>
+                        <li>사용자당 10GB 스토리지</li>
+                        <li>3개 미니 앱 포함</li>
+                        <li>표준 지원</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn">시작하기</a>
+                </div>
+                <div class="pricing-card popular">
+                    <span class="popular-badge">가장 인기</span>
+                    <div class="pricing-header">
+                        <h4>Business</h4>
+                        <div class="price-amount">₩35,000</div>
+                        <span class="price-period">사용자 / 월</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>모든 통합 앱</li>
+                        <li>고급 결재 빌더</li>
+                        <li>사용자당 100GB 스토리지</li>
+                        <li>무제한 미니 앱</li>
+                        <li>교육용 Classroom</li>
+                        <li>우선 지원</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn btn-workup">무료 체험 시작</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Enterprise</h4>
+                        <div class="price-amount">맞춤 견적</div>
+                        <span class="price-period">맞춤 요금</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Business의 모든 기능</li>
+                        <li>프라이빗 배포 옵션</li>
+                        <li>무제한 스토리지</li>
+                        <li>맞춤 미니 앱 개발</li>
+                        <li>엔터프라이즈 SSO 및 규정 준수</li>
+                        <li>전담 성공 매니저</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary pricing-btn">문의하기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>워크스페이스를 통합할 준비가 되셨나요?</h2>
+                <p>단절된 도구를 하나의 지능형 플랫폼로 대체하세요. 무료 체험을 시작하고 통합의 차이를 경험하세요.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">무료 체험 시작</a>
+                    <a href="#" class="btn-secondary btn-large">데모 예약</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36"><p class="footer-tagline">기업 기술의 미래를 구축합니다.</p></div>
+                <div class="footer-links"><h5>제품</h5><a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a><a href="#">Workup</a><a href="oortai.html">OORT.AI</a><a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a><a href="classroom.html">Cloud Classroom</a></div>
+                <div class="footer-links"><h5>솔루션</h5><a href="messenger.html">인스턴트 메신저</a><a href="clouddisk.html">클라우드 디스크</a><a href="email.html">이메일</a><a href="approval.html">지능형 결재</a><a href="dispatch.html">지휘 및 파견</a><a href="fieldmanager.html">현장 관리자</a></div>
+                <div class="footer-links"><h5>회사</h5><a href="about.html">회사 소개</a><a href="#">채용</a><a href="#">블로그</a><a href="contact.html">문의</a><a href="#">개인정보 처리방침</a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 OortCloud Technology. 모든 권리 보유.</p><div class="footer-social"><a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a><a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a><a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a></div></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

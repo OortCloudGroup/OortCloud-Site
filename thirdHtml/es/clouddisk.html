@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" hreflang="en" href="https://oortcloudsmart.com/en/clouddisk">
+    <link rel="alternate" hreflang="es" href="https://oortcloudsmart.com/es/clouddisk">
+    <link rel="alternate" hreflang="x-default" href="https://oortcloudsmart.com/en/clouddisk">
+    <title>Disco en la nube - Almacenamiento en la nube empresarial seguro | OortCloud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="clouddisk.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">Productos</a>
+                <a href="index.html#platform">Plataforma</a>
+                <a href="index.html#enterprise">Empresa</a>
+                <a href="index.html#about">Acerca de</a>
+            </div>
+            <a href="#get-started" class="nav-cta">Comenzar gratis</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="Switch Language">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">ES</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item active" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    Iniciar sesión
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">Usuario</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Panel de control
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            Cerrar sesión
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="disk-hero">
+        <div class="container">
+            <div class="disk-hero-grid">
+                <div class="disk-hero-content">
+                    <div class="product-breadcrumb">
+                        <a href="index.html">Productos</a>
+                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <span>Disco en la nube</span>
+                    </div>
+                    <h1>Almacena, comparte y colabora — <span class="gradient-text-green">de forma segura</span></h1>
+                    <p class="disk-hero-desc">Almacenamiento en nube empresarial que mantiene los archivos de tu equipo seguros, organizados y accesibles desde cualquier lugar. Con búsqueda impulsada por IA, colaboración en tiempo real y soporte de despliegue privado.</p>
+                    <div class="hero-actions">
+                        <a href="#get-started" class="btn-primary btn-large btn-green">Iniciar prueba gratuita</a>
+                        <a href="#features" class="btn-secondary btn-large">Explorar funciones</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 1l2 3h3.5l-2.5 3 1 3.5L8 8.5 4 10.5l1-3.5L2.5 4H6l2-3z" fill="#fbbc04"/></svg>
+                            Más de 500 empresas confían en nosotros
+                        </span>
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Cifrado de extremo a extremo
+                        </span>
+                    </div>
+                </div>
+                <div class="disk-hero-visual">
+                    <div class="file-explorer-mockup">
+                        <div class="explorer-header">
+                            <div class="explorer-dots"><span></span><span></span><span></span></div>
+                            <div class="explorer-path">
+                                <svg width="14" height="14" viewBox="0 0 16 16"><path d="M2 4c0-1 .5-1.5 1.5-1.5h3.5l1.5 1.5h5c1 0 1.5.5 1.5 1.5v7c0 1-.5 1.5-1.5 1.5h-10C2.5 14 2 13.5 2 12.5V4z" fill="none" stroke="#4285f4" stroke-width="1.2"/></svg>
+                                <span>Mi unidad</span>
+                                <svg width="10" height="10" viewBox="0 0 10 10"><path d="M3 4l2 2 2-2" fill="none" stroke="#9aa0a6" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                <span>Projects</span>
+                            </div>
+                            <div class="explorer-actions">
+                                <div class="view-toggle">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1" y="1" width="5" height="5" rx="1" fill="#4285f4"/><rect x="8" y="1" width="5" height="5" rx="1" fill="#4285f4" opacity="0.5"/><rect x="1" y="8" width="5" height="5" rx="1" fill="#4285f4" opacity="0.5"/><rect x="8" y="8" width="5" height="5" rx="1" fill="#4285f4" opacity="0.3"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explorer-body">
+                            <div class="explorer-sidebar">
+                                <div class="sidebar-nav-item active">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><path d="M1 3.5c0-.8.4-1.2 1.2-1.2h2.8l1.2 1.2h4c.8 0 1.2.4 1.2 1.2v5.6c0 .8-.4 1.2-1.2 1.2H2.2c-.8 0-1.2-.4-1.2-1.2V3.5z" fill="#4285f4" opacity="0.2" stroke="#4285f4" stroke-width="0.8"/></svg>
+                                    My Drive
+                                </div>
+                                <div class="sidebar-nav-item">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="5" r="2.5" fill="none" stroke="#5f6368" stroke-width="0.8"/><path d="M3.5 12c0-2 1.5-3.5 3.5-3.5s3.5 1.5 3.5 3.5" fill="none" stroke="#5f6368" stroke-width="0.8"/></svg>
+                                    Compartido conmigo
+                                </div>
+                                <div class="sidebar-nav-item">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5.5" fill="none" stroke="#5f6368" stroke-width="0.8"/><path d="M7 4v3l2 1.5" fill="none" stroke="#5f6368" stroke-width="0.8" stroke-linecap="round"/></svg>
+                                    Reciente
+                                </div>
+                                <div class="sidebar-nav-item">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2l1.2 2.4h2.8l-2 2 .8 2.6L7 7.5 4.2 9l.8-2.6-2-2h2.8L7 2z" fill="none" stroke="#5f6368" stroke-width="0.8"/></svg>
+                                    Destacados
+                                </div>
+                                <div class="sidebar-nav-item">
+                                    <svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 3.5h8M3 7h8M3 10.5h5" stroke="#5f6368" stroke-width="0.8" stroke-linecap="round"/></svg>
+                                    Papelera
+                                </div>
+                                <div class="sidebar-storage">
+                                    <div class="storage-bar"><div class="storage-fill" style="width: 42%;"></div></div>
+                                    <span>4,2 TB de 10 TB usados</span>
+                                </div>
+                            </div>
+                            <div class="explorer-files">
+                                <div class="file-row header-row">
+                                    <span>Nombre</span>
+                                    <span>Modificado</span>
+                                    <span>Tamaño</span>
+                                </div>
+                                <div class="file-row folder-row">
+                                    <div class="file-name">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 4c0-.8.4-1.2 1.2-1.2h3l1.2 1.2h5.4c.8 0 1.2.4 1.2 1.2v6.4c0 .8-.4 1.2-1.2 1.2H3.2c-.8 0-1.2-.4-1.2-1.2V4z" fill="#4285f4" opacity="0.8"/></svg>
+                                        <span>Diseño de producto</span>
+                                    </div>
+                                    <span class="file-meta">Hoy</span>
+                                    <span class="file-meta">—</span>
+                                </div>
+                                <div class="file-row folder-row">
+                                    <div class="file-name">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 4c0-.8.4-1.2 1.2-1.2h3l1.2 1.2h5.4c.8 0 1.2.4 1.2 1.2v6.4c0 .8-.4 1.2-1.2 1.2H3.2c-.8 0-1.2-.4-1.2-1.2V4z" fill="#34a853" opacity="0.8"/></svg>
+                                        <span>Docs de ingeniería</span>
+                                    </div>
+                                    <span class="file-meta">Ayer</span>
+                                    <span class="file-meta">—</span>
+                                </div>
+                                <div class="file-row">
+                                    <div class="file-name">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="2" width="10" height="12" rx="1.5" fill="none" stroke="#ea4335" stroke-width="1"/><path d="M5 5h6M5 7h6M5 9h4" stroke="#ea4335" stroke-width="0.7" stroke-linecap="round"/></svg>
+                                        <span>Q2 Strategy.pdf</span>
+                                    </div>
+                                    <span class="file-meta">May 24</span>
+                                    <span class="file-meta">2.4 MB</span>
+                                </div>
+                                <div class="file-row">
+                                    <div class="file-name">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="2" width="10" height="12" rx="1.5" fill="none" stroke="#34a853" stroke-width="1"/><path d="M5 5h2v2H5zM8 5h3M5 8h6M5 11h4" stroke="#34a853" stroke-width="0.7" stroke-linecap="round"/></svg>
+                                        <span>Budget_2026.xlsx</span>
+                                    </div>
+                                    <span class="file-meta">May 22</span>
+                                    <span class="file-meta">856 KB</span>
+                                </div>
+                                <div class="file-row">
+                                    <div class="file-name">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="2" width="10" height="12" rx="1.5" fill="none" stroke="#4285f4" stroke-width="1"/><path d="M5 6h6M5 8h4M5 10h5" stroke="#4285f4" stroke-width="0.7" stroke-linecap="round"/></svg>
+                                        <span>Meeting_Notes.docx</span>
+                                    </div>
+                                    <span class="file-meta">May 20</span>
+                                    <span class="file-meta">124 KB</span>
+                                </div>
+                                <div class="file-row">
+                                    <div class="file-name">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="2" width="10" height="12" rx="1.5" fill="none" stroke="#9b72cb" stroke-width="1"/><rect x="5" y="5" width="6" height="4" rx="0.5" fill="#9b72cb" opacity="0.2"/></svg>
+                                        <span>Presentation.pptx</span>
+                                    </div>
+                                    <span class="file-meta">May 18</span>
+                                    <span class="file-meta">8.7 MB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Key Benefits -->
+    <section class="benefits-bar">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V7l-8-5z" fill="none" stroke="#34a853" stroke-width="1.8"/><path d="M9 12l2 2 4-4" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <strong>Seguridad empresarial</strong>
+                        <span>Cifrado AES-256, arquitectura de conocimiento cero</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" fill="none" stroke="#4285f4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <strong>Colaboración en tiempo real</strong>
+                        <span>Coedita archivos con tu equipo simultáneamente</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" fill="none" stroke="#9b72cb" stroke-width="1.8"/><path d="M21 21l-4.35-4.35" stroke="#9b72cb" stroke-width="1.8" stroke-linecap="round"/><path d="M8 11h6M11 8v6" stroke="#9b72cb" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/></svg>
+                    <div>
+                        <strong>Búsqueda impulsada por IA</strong>
+                        <span>Encuentra cualquier archivo instantáneamente con búsqueda inteligente</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="#ea4335" stroke-width="1.8"/><path d="M4 12h16M12 4v16" stroke="#ea4335" stroke-width="1.2" opacity="0.4"/><circle cx="8" cy="8" r="1.5" fill="#ea4335"/><circle cx="16" cy="16" r="1.5" fill="#ea4335"/></svg>
+                    <div>
+                        <strong>Despliegue privado</strong>
+                        <span>On-premise o nube híbrida, tú eliges</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Todo lo que tu equipo necesita para gestionar archivos</h2>
+                <p>Almacenamiento seguro, colaboración potente y organización inteligente en una sola plataforma</p>
+            </div>
+
+            <!-- Feature 1: File Storage & Sync -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #4285f4, #34a853);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M8 22h12l4-7-5-9H9l-5 9 4 7z" fill="white" opacity="0.9"/><path d="M4 15h20" stroke="white" stroke-width="1" opacity="0.4"/></svg>
+                    </div>
+                    <h3>Almacenamiento ilimitado y sincronización</h3>
+                    <p>Almacena cualquier tipo de archivo sin límites de tamaño. La sincronización automática en todos tus dispositivos asegura que siempre tengas la última versión al alcance de tu mano.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Capacidad ilimitada</strong>
+                            <span>Sin límites por archivo ni de almacenamiento total — almacena todo lo que tu organización necesite</span>
+                        </li>
+                        <li>
+                            <strong>Sincronización inteligente</strong>
+                            <span>Accede a archivos bajo demanda sin llenar el almacenamiento local. Los archivos se descargan solo al abrirlos</span>
+                        </li>
+                        <li>
+                            <strong>Apps de escritorio y móvil</strong>
+                            <span>Apps nativas para Windows, macOS, Linux, iOS y Android con acceso sin conexión</span>
+                        </li>
+                        <li>
+                            <strong>Soporte de archivos grandes</strong>
+                            <span>Sube archivos de hasta 100GB con subidas reanudables y verificación de integridad</span>
+                        </li>
+                        <li>
+                            <strong>Copia de seguridad automática</strong>
+                            <span>Respalda continuamente carpetas seleccionadas de tu computadora a la nube</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="sync-visual">
+                        <div class="sync-diagram">
+                            <div class="sync-center-node">
+                                <svg width="36" height="36" viewBox="0 0 36 36"><path d="M6 22a10 10 0 01-.5-9.5A10 10 0 0128 10.5 7 7 0 0129 24H6z" fill="#4285f4" opacity="0.15" stroke="#4285f4" stroke-width="1.5"/></svg>
+                                <span>Disco en la nube</span>
+                            </div>
+                            <div class="sync-devices">
+                                <div class="sync-device">
+                                    <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="14" rx="2" fill="none" stroke="#5f6368" stroke-width="1.5"/><path d="M8 22h12" stroke="#5f6368" stroke-width="1.5" stroke-linecap="round"/><path d="M14 18v4" stroke="#5f6368" stroke-width="1.5"/></svg>
+                                    <span>Escritorio</span>
+                                </div>
+                                <div class="sync-device">
+                                    <svg width="28" height="28" viewBox="0 0 28 28"><rect x="8" y="3" width="12" height="22" rx="2.5" fill="none" stroke="#5f6368" stroke-width="1.5"/><circle cx="14" cy="21" r="1.2" fill="#5f6368"/></svg>
+                                    <span>Móvil</span>
+                                </div>
+                                <div class="sync-device">
+                                    <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="6" width="20" height="14" rx="2" fill="none" stroke="#5f6368" stroke-width="1.5"/><path d="M10 23h8" stroke="#5f6368" stroke-width="1.5" stroke-linecap="round"/></svg>
+                                    <span>Tableta</span>
+                                </div>
+                            </div>
+                            <div class="sync-arrows">
+                                <div class="sync-arrow a1"></div>
+                                <div class="sync-arrow a2"></div>
+                                <div class="sync-arrow a3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Sharing & Collaboration -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #fbbc04);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="10" cy="10" r="4" fill="white" opacity="0.9"/><circle cx="18" cy="10" r="4" fill="white" opacity="0.6"/><path d="M4 22c0-4 3-6 6-6s6 2 6 6" fill="white" opacity="0.7"/><path d="M16 22c0-4 3-6 6-6s4 2 4 6" fill="white" opacity="0.5"/></svg>
+                    </div>
+                    <h3>Compartir y colaboración</h3>
+                    <p>Comparte archivos y carpetas con permisos granulares. Colabora en tiempo real con tu equipo, socios y partes interesadas externas — de forma segura.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Permisos granulares</strong>
+                            <span>Propietario, Editor, Comentarista, Visualizador — controla exactamente quién puede hacer qué</span>
+                        </li>
+                        <li>
+                            <strong>Unidades compartidas</strong>
+                            <span>Espacios de almacenamiento propiedad del equipo donde los archivos pertenecen al equipo, no a individuos</span>
+                        </li>
+                        <li>
+                            <strong>Compartir externamente</strong>
+                            <span>Comparte con colaboradores externos mediante enlaces seguros con expiración y protección por contraseña</span>
+                        </li>
+                        <li>
+                            <strong>Coedición en tiempo real</strong>
+                            <span>Múltiples usuarios editan documentos simultáneamente con indicadores de presencia y comentarios</span>
+                        </li>
+                        <li>
+                            <strong>Flujos de aprobación</strong>
+                            <span>Integra con Aprobación Inteligente para procesos de revisión y firma de documentos</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="collab-visual">
+                        <div class="share-panel">
+                            <div class="share-header">
+                                <span>Compartir "Estrategia_Q2.pdf"</span>
+                            </div>
+                            <div class="share-input">
+                                <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="5" r="2.5" fill="none" stroke="#9aa0a6" stroke-width="1"/><path d="M3 12c0-2.5 1.8-4 4-4s4 1.5 4 4" fill="none" stroke="#9aa0a6" stroke-width="1"/></svg>
+                                <span class="share-placeholder">Añadir personas o grupos</span>
+                            </div>
+                            <div class="share-people">
+                                <div class="share-person">
+                                    <div class="person-avatar" style="background: #4285f4;">JC</div>
+                                    <div class="person-info">
+                                        <span class="person-name">Jane Cooper</span>
+                                        <span class="person-email">jane@company.com</span>
+                                    </div>
+                                    <span class="person-role">Editor</span>
+                                </div>
+                                <div class="share-person">
+                                    <div class="person-avatar" style="background: #34a853;">MR</div>
+                                    <div class="person-info">
+                                        <span class="person-name">Mike Richards</span>
+                                        <span class="person-email">mike@company.com</span>
+                                    </div>
+                                    <span class="person-role">Visualizador</span>
+                                </div>
+                                <div class="share-person">
+                                    <div class="person-avatar" style="background: #ea4335;">SK</div>
+                                    <div class="person-info">
+                                        <span class="person-name">Sarah Kim</span>
+                                        <span class="person-email">sarah@partner.io</span>
+                                    </div>
+                                    <span class="person-role">Comentarista</span>
+                                </div>
+                            </div>
+                            <div class="share-link">
+                                <svg width="14" height="14" viewBox="0 0 14 14"><path d="M6 8a3 3 0 004 1l1-1a3 3 0 000-4l-1-1a3 3 0 00-4 0" fill="none" stroke="#4285f4" stroke-width="1.2" stroke-linecap="round"/><path d="M8 6a3 3 0 00-4-1l-1 1a3 3 0 000 4l1 1a3 3 0 004 0" fill="none" stroke="#4285f4" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                <span>Copiar enlace</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Security & Compliance -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 3L5 8v7c0 6.3 4 11.2 9 12.7 5-1.5 9-6.4 9-12.7V8L14 3z" fill="white" opacity="0.9"/><path d="M10 14l3 3 5-5" fill="none" stroke="#ea4335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Seguridad y cumplimiento</h3>
+                    <p>Protección de nivel empresarial para tus datos más sensibles. Múltiples capas de seguridad aseguran que tus archivos estén a salvo de accesos no autorizados y pérdida de datos.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Cifrado AES-256</strong>
+                            <span>Archivos cifrados en reposo y en tránsito. Cifrado del lado del cliente disponible para máxima seguridad</span>
+                        </li>
+                        <li>
+                            <strong>Prevención de pérdida de datos (DLP)</strong>
+                            <span>Detecta y protege automáticamente información sensible — tarjetas de crédito, datos personales, secretos comerciales</span>
+                        </li>
+                        <li>
+                            <strong>Historial de versiones</strong>
+                            <span>Historial de versiones ilimitado con recuperación a un punto en el tiempo. Nunca pierdas un archivo</span>
+                        </li>
+                        <li>
+                            <strong>Registros de auditoría</strong>
+                            <span>Registro completo de actividad — quién accedió, compartió, modificó o descargó cualquier archivo</span>
+                        </li>
+                        <li>
+                            <strong>Controles de cumplimiento</strong>
+                            <span>Cumple requisitos GDPR, HIPAA, SOC 2 e ISO 27001 con herramientas de cumplimiento integradas</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="security-visual">
+                        <div class="security-layers">
+                            <div class="sec-layer layer-1">
+                                <span>Capa de cifrado</span>
+                                <div class="layer-badge">AES-256</div>
+                            </div>
+                            <div class="sec-layer layer-2">
+                                <span>Control de acceso</span>
+                                <div class="layer-badge">RBAC</div>
+                            </div>
+                            <div class="sec-layer layer-3">
+                                <span>Motor DLP</span>
+                                <div class="layer-badge">Activo</div>
+                            </div>
+                            <div class="sec-layer layer-4">
+                                <span>Auditoría y monitoreo</span>
+                                <div class="layer-badge">24/7</div>
+                            </div>
+                        </div>
+                        <div class="compliance-badges">
+                            <span class="comp-badge">GDPR</span>
+                            <span class="comp-badge">HIPAA</span>
+                            <span class="comp-badge">SOC 2</span>
+                            <span class="comp-badge">ISO 27001</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: AI & Search -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #9b72cb, #4285f4);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="12" cy="12" r="7" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><path d="M17 17l6 6" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M9 12h6M12 9v6" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/></svg>
+                    </div>
+                    <h3>Inteligencia impulsada por IA</h3>
+                    <p>Encuentra cualquier archivo en segundos con IA que entiende contexto, contenido y tus patrones de trabajo. Las sugerencias inteligentes ponen los archivos correctos al alcance de tu mano.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Búsqueda en lenguaje natural</strong>
+                            <span>Busca como hablas — "hoja de presupuesto de la reunión del mes pasado con Sara"</span>
+                        </li>
+                        <li>
+                            <strong>Búsqueda de contenido (OCR)</strong>
+                            <span>Busca dentro de documentos, PDFs escaneados e imágenes con indexación de texto completo y OCR</span>
+                        </li>
+                        <li>
+                            <strong>Sugerencias inteligentes</strong>
+                            <span>La IA recomienda archivos que podrías necesitar basándose en tu calendario, correos y contexto de trabajo</span>
+                        </li>
+                        <li>
+                            <strong>Etiquetado automático</strong>
+                            <span>La IA categoriza y etiqueta archivos automáticamente para una organización y descubrimiento más fáciles</span>
+                        </li>
+                        <li>
+                            <strong>Detección de duplicados</strong>
+                            <span>Identifica y gestiona archivos duplicados para mantener tu almacenamiento limpio y organizado</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="search-visual">
+                        <div class="search-demo">
+                            <div class="search-bar-demo">
+                                <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="7" cy="7" r="5" fill="none" stroke="#9aa0a6" stroke-width="1.5"/><path d="M11 11l3 3" stroke="#9aa0a6" stroke-width="1.5" stroke-linecap="round"/></svg>
+                                <span class="search-query">budget report Q2 <span class="search-cursor">|</span></span>
+                            </div>
+                            <div class="search-results">
+                                <div class="search-result-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="2" width="10" height="12" rx="1.5" fill="none" stroke="#34a853" stroke-width="1"/><path d="M5 5h2v2H5z" fill="#34a853" opacity="0.3"/></svg>
+                                    <div class="result-info">
+                                        <span class="result-name">Q2_Budget_Report_Final.xlsx</span>
+                                        <span class="result-path">Projects > Finance > 2026</span>
+                                    </div>
+                                    <span class="result-match">98%</span>
+                                </div>
+                                <div class="search-result-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="2" width="10" height="12" rx="1.5" fill="none" stroke="#ea4335" stroke-width="1"/></svg>
+                                    <div class="result-info">
+                                        <span class="result-name">Budget_Presentation_Q2.pdf</span>
+                                        <span class="result-path">Shared Drives > Executive</span>
+                                    </div>
+                                    <span class="result-match">92%</span>
+                                </div>
+                                <div class="search-result-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="2" width="10" height="12" rx="1.5" fill="none" stroke="#4285f4" stroke-width="1"/></svg>
+                                    <div class="result-info">
+                                        <span class="result-name">Q2_Budget_Meeting_Notes.docx</span>
+                                        <span class="result-path">My Drive > Meetings</span>
+                                    </div>
+                                    <span class="result-match">85%</span>
+                                </div>
+                            </div>
+                            <div class="search-ai-tag">
+                                <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#9b72cb" opacity="0.2"/><path d="M4 6l1.5 1.5L8 5" fill="none" stroke="#9b72cb" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                Resultados impulsados por IA
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5: Admin & Private Deployment -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #1a73e8, #34a853);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="6" y="12" width="16" height="12" rx="2" fill="white" opacity="0.9"/><path d="M10 12V9a4 4 0 018 0v3" fill="none" stroke="white" stroke-width="2" opacity="0.7"/><circle cx="14" cy="18" r="2" fill="#1a73e8" opacity="0.5"/></svg>
+                    </div>
+                    <h3>Administración y despliegue</h3>
+                    <p>Control total sobre tu infraestructura de almacenamiento. Despliega en tus propios servidores, gestiona cuotas, aplica políticas e integra con tus sistemas existentes.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Despliegue privado</strong>
+                            <span>On-premise, nube privada o híbrido — mantén todos los datos dentro de tu propia infraestructura</span>
+                        </li>
+                        <li>
+                            <strong>Cuotas de almacenamiento</strong>
+                            <span>Establece límites por usuario, departamento o proyecto con alertas y archivado automático</span>
+                        </li>
+                        <li>
+                            <strong>Políticas de retención</strong>
+                            <span>Configura reglas de retención de datos para cumplimiento — archiva o elimina automáticamente según antigüedad o tipo</span>
+                        </li>
+                        <li>
+                            <strong>Herramientas de migración</strong>
+                            <span>Migra sin problemas desde Google Drive, OneDrive, Dropbox o cualquier fuente WebDAV/S3</span>
+                        </li>
+                        <li>
+                            <strong>API y WebDAV</strong>
+                            <span>API REST completa, soporte de protocolo WebDAV e interfaz compatible con S3 para integraciones</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="admin-visual">
+                        <div class="admin-dashboard">
+                            <div class="admin-dash-header">
+                                <span>Administración de almacenamiento</span>
+                                <span class="admin-status-badge">
+                                    <span class="status-dot-green"></span> Saludable
+                                </span>
+                            </div>
+                            <div class="admin-dash-stats">
+                                <div class="dash-stat">
+                                    <span class="dash-stat-value">24.7 TB</span>
+                                    <span class="dash-stat-label">Almacenamiento total</span>
+                                </div>
+                                <div class="dash-stat">
+                                    <span class="dash-stat-value">3,412</span>
+                                    <span class="dash-stat-label">Usuarios activos</span>
+                                </div>
+                                <div class="dash-stat">
+                                    <span class="dash-stat-value">1.2M</span>
+                                    <span class="dash-stat-label">Total de archivos</span>
+                                </div>
+                            </div>
+                            <div class="admin-dash-chart">
+                                <div class="storage-usage-bar">
+                                    <div class="usage-segment" style="width: 35%; background: #4285f4;" title="Documents"></div>
+                                    <div class="usage-segment" style="width: 25%; background: #34a853;" title="Media"></div>
+                                    <div class="usage-segment" style="width: 20%; background: #fbbc04;" title="Archives"></div>
+                                    <div class="usage-segment" style="width: 10%; background: #ea4335;" title="Other"></div>
+                                </div>
+                                <div class="usage-legend">
+                                    <span><i style="background:#4285f4;"></i>Documentos 35%</span>
+                                    <span><i style="background:#34a853;"></i>Multimedia 25%</span>
+                                    <span><i style="background:#fbbc04;"></i>Archivos 20%</span>
+                                    <span><i style="background:#ea4335;"></i>Otros 10%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Features Grid -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Y mucho más</h2>
+                <p>Todas las funciones que necesitas para la gestión de archivos empresariales</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2v6l3-3M12 8l-3-3" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M20 14v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+                    <h5>Subida con arrastrar y soltar</h5>
+                    <p>Sube archivos y estructuras de carpetas completas con simple arrastrar y soltar</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M3 12h4l3-9 4 18 3-9h4" fill="none" stroke="#ea4335" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h5>Feed de actividad</h5>
+                    <p>Feed en tiempo real de toda la actividad de archivos — ediciones, compartidos, comentarios y descargas</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M3 9h18M9 9v12" stroke="#34a853" stroke-width="1.2"/></svg>
+                    <h5>Vista previa de archivos</h5>
+                    <p>Previsualiza más de 100 tipos de archivo en el navegador sin descargar — Office, PDF, CAD, vídeo</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M4 22v-7" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>Marca de agua</h5>
+                    <p>Marcas de agua dinámicas en vistas previas y descargas para proteger archivos confidenciales</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M12 7v5l3 3" fill="none" stroke="#fbbc04" stroke-width="1.8" stroke-linecap="round"/></svg>
+                    <h5>Control de versiones</h5>
+                    <p>Historial de versiones ilimitado con comparación de diferencias y reversión con un clic</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2" fill="none" stroke="#1a73e8" stroke-width="1.5"/><circle cx="7" cy="12" r="1.5" fill="#1a73e8"/><path d="M11 12h6" stroke="#1a73e8" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>Papelera de reciclaje</h5>
+                    <p>Archivos eliminados retenidos por 90 días con capacidad de administrador para recuperar o eliminar permanentemente</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" fill="none" stroke="#ea4335" stroke-width="1.5" stroke-linecap="round"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" fill="none" stroke="#ea4335" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>Enlaces compartidos</h5>
+                    <p>Enlaces protegidos por contraseña con fechas de expiración y límites de descarga</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="#34a853" stroke-width="1.5" opacity="0.6"/></svg>
+                    <h5>Integración Workup</h5>
+                    <p>Acceso fluido a archivos desde Messenger, Email, Aprobación y otras apps OortCloud</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Por qué elegir Disco en la nube?</h2>
+                <p>Mira cómo nos comparamos con otras soluciones de almacenamiento en la nube</p>
+            </div>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Función</th>
+                            <th class="highlight-col">Disco en la nube</th>
+                            <th>Google Drive</th>
+                            <th>OneDrive</th>
+                            <th>Dropbox</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Despliegue privado</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Almacenamiento ilimitado</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="partial">Complemento</span></td>
+                        </tr>
+                        <tr>
+                            <td>Búsqueda impulsada por IA</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="check">&#10003;</span></td>
+                            <td><span class="partial">Básico</span></td>
+                            <td><span class="partial">Básico</span></td>
+                        </tr>
+                        <tr>
+                            <td>Cifrado del lado del cliente</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="partial">Parcial</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="check">&#10003;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Tamaño máximo de archivo</td>
+                            <td class="highlight-col"><strong>100 GB</strong></td>
+                            <td>5 TB</td>
+                            <td>250 GB</td>
+                            <td>50 GB</td>
+                        </tr>
+                        <tr>
+                            <td>Integración Super App</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="partial">Workspace</span></td>
+                            <td><span class="partial">M365</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Control de soberanía de datos</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="partial">Parcial</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                        <tr>
+                            <td>WebDAV & S3 API</td>
+                            <td class="highlight-col"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>Precios simples y escalables</h2>
+                <p>Comienza gratis, paga solo por lo que uses</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Inicial</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">$5</span>
+                            <span class="price-period">/usuario/mes</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>100 GB de almacenamiento por usuario</li>
+                        <li>Compartir archivos y permisos</li>
+                        <li>Sincronización escritorio y móvil</li>
+                        <li>Búsqueda básica</li>
+                        <li>Soporte por correo</li>
+                    </ul>
+                    <a href="#" class="btn-secondary pricing-btn">Iniciar prueba gratuita</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Más popular</div>
+                    <div class="pricing-header">
+                        <h4>Negocio</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">$10</span>
+                            <span class="price-period">/usuario/mes</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Almacenamiento ilimitado</li>
+                        <li>Búsqueda y etiquetado con IA</li>
+                        <li>Unidades compartidas</li>
+                        <li>DLP y registros de auditoría</li>
+                        <li>Consola de administración</li>
+                        <li>Soporte prioritario</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn btn-green">Iniciar prueba gratuita</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Empresa</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">Personalizado</span>
+                            <span class="price-period"></span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Todo lo de Negocio</li>
+                        <li>Despliegue privado</li>
+                        <li>Cifrado del lado del cliente</li>
+                        <li>Políticas de retención personalizadas</li>
+                        <li>Gestor de cuenta dedicado</li>
+                        <li>Soporte en sitio y SLA</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary pricing-btn">Contactar ventas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para simplificar la gestión de archivos?</h2>
+                <p>Únete a más de 500 organizaciones que confían en Disco en la nube para almacenamiento y colaboración seguros e inteligentes.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">Iniciar prueba gratuita</a>
+                    <a href="#" class="btn-secondary btn-large">Hablar con ventas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36">
+                    <p class="footer-tagline">Construyendo el futuro de la tecnología empresarial.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Productos</h5>
+                    <a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a>
+                    <a href="workup.html">Workup</a>
+                    <a href="oortai.html">OORT.AI</a>
+                    <a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a>
+                    <a href="classroom.html">Aula en la nube</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Soluciones</h5>
+                    <a href="messenger.html">Mensajería instantánea</a>
+                    <a href="#">Disco en la nube</a>
+                    <a href="email.html">Correo electrónico</a>
+                    <a href="approval.html">Aprobación inteligente</a>
+                    <a href="dispatch.html">Comando y Despacho</a>
+                    <a href="fieldmanager.html">Gestor de campo</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Empresa</h5>
+                    <a href="about.html">Acerca de nosotros</a>
+                    <a href="#">Carreras</a>
+                    <a href="#">Blog</a>
+                    <a href="contact.html">Contacto</a>
+                    <a href="#">Política de privacidad</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OortCloud Technology. Todos los derechos reservados.</p>
+                <div class="footer-social">
+                    <a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a>
+                    <a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a>
+                    <a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

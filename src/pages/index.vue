@@ -1,12 +1,17 @@
-<template>
+﻿<template>
   <div />
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
+const DEFAULT_LANGUAGE = 'en'
+const STATIC_LANGUAGE_CODES = ['en', 'es', 'ar', 'de', 'fr', 'ja', 'pt', 'ru', 'ko', 'id', 'tr']
+const SUPPORTED_LANGUAGE_CODES = ['zh', ...STATIC_LANGUAGE_CODES]
 
+// 根据浏览器语言匹配站点首页路径
 const detectTargetPath = () => {
   if (typeof window === 'undefined') {
     return '/en/'
@@ -16,15 +21,23 @@ const detectTargetPath = () => {
     ? window.navigator.languages
     : [window.navigator.language]
 
-  const matchedLanguage = browserLanguages.find(language => typeof language === 'string' && language.length > 0) || 'en'
+  const matchedLanguage = browserLanguages
+    .map(language => language?.toLowerCase().split(/[-_]/)[0])
+    .find(language => SUPPORTED_LANGUAGE_CODES.includes(language || '')) || DEFAULT_LANGUAGE
 
-  return matchedLanguage.toLowerCase().startsWith('zh') ? '/zh/siteNew/' : '/en/'
+  return matchedLanguage === 'zh' ? '/zh/siteNew/' : `/${matchedLanguage}/`
 }
-// 这里因为en 目录下的是AI生成的不是框架里里的路由页面了 使用需要使用跳转方法
-if (detectTargetPath() === '/en/') {
-  window.location.href = '/en/'
-} else {
-  router.replace(detectTargetPath())
-}
+
+onMounted(() => {
+  const targetPath = detectTargetPath()
+
+  // AI 生成的多语言静态页不走框架内路由，使用浏览器地址跳转
+  if (targetPath === '/zh/siteNew/') {
+    router.replace(targetPath)
+    return
+  }
+
+  window.location.href = targetPath
+})
 
 </script>

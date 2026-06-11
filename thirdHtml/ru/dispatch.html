@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Команда и диспетчеризация — Централизованное управление операциями | OortCloud</title>
+    <link rel="alternate" hreflang="ru" href="">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dispatch.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Google+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">Продукты</a>
+                <a href="index.html#platform">Платформа</a>
+                <a href="index.html#enterprise">Предприятиям</a>
+                <a href="about.html">О компании</a>
+            </div>
+            <a href="#get-started" class="nav-cta">Связаться с отделом продаж</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="Сменить язык">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">RU</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item active" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    Войти
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">Пользователь</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Панель управления
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            Выйти
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Переключить меню"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="dispatch-hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="container">
+            <div class="dispatch-hero-content">
+                <div class="product-breadcrumb">
+                    <a href="index.html">Продукты</a>
+                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <span>Команда и диспетчеризация</span>
+                </div>
+                <h1>Управляйте каждой операцией из <span class="gradient-text-navy">единого центра</span></h1>
+                <p class="dispatch-hero-desc">Централизованная платформа командного управления для мониторинга в реальном времени, распределения ресурсов и реагирования на инциденты. Координируйте команды, управляйте событиями и поддерживайте полную ситуационную осведомлённость — всё из единой панели управления.</p>
+                <div class="hero-actions">
+                    <a href="#get-started" class="btn-primary btn-large btn-navy">Запросить демонстрацию</a>
+                    <a href="#features" class="btn-secondary btn-large">Обзор возможностей</a>
+                </div>
+            </div>
+            <div class="dispatch-hero-visual">
+                <div class="command-center-mockup">
+                    <div class="cc-header">
+                        <div class="cc-header-left">
+                            <span class="cc-title">Командный центр</span>
+                            <span class="cc-status"><span class="status-dot-live"></span> LIVE</span>
+                        </div>
+                        <div class="cc-header-right">
+                            <span class="cc-time">14:32:07</span>
+                            <span class="cc-date">28 мая 2026</span>
+                        </div>
+                    </div>
+                    <div class="cc-body">
+                        <div class="cc-map">
+                            <div class="map-grid">
+                                <div class="map-pin pin-1"><span class="pin-pulse"></span></div>
+                                <div class="map-pin pin-2"><span class="pin-pulse"></span></div>
+                                <div class="map-pin pin-3"></div>
+                                <div class="map-pin pin-4"></div>
+                                <div class="map-pin pin-5"><span class="pin-pulse"></span></div>
+                            </div>
+                            <div class="map-overlay-stats">
+                                <div class="map-stat"><span class="ms-num">23</span><span class="ms-label">Активные единицы</span></div>
+                                <div class="map-stat"><span class="ms-num">5</span><span class="ms-label">Инциденты</span></div>
+                                <div class="map-stat"><span class="ms-num">98%</span><span class="ms-label">Покрытие</span></div>
+                            </div>
+                        </div>
+                        <div class="cc-sidebar-panel">
+                            <div class="cc-incident-list">
+                                <div class="cc-incident priority-high">
+                                    <span class="incident-priority">ВЫСОКИЙ</span>
+                                    <div class="incident-info">
+                                        <strong>ДТП — Шоссе 101</strong>
+                                        <span>3 единицы направлены</span>
+                                    </div>
+                                </div>
+                                <div class="cc-incident priority-medium">
+                                    <span class="incident-priority">СРЕДНИЙ</span>
+                                    <div class="incident-info">
+                                        <strong>Техобслуживание оборудования</strong>
+                                        <span>Запланировано — Зона B</span>
+                                    </div>
+                                </div>
+                                <div class="cc-incident priority-low">
+                                    <span class="incident-priority">НИЗКИЙ</span>
+                                    <div class="incident-info">
+                                        <strong>Плановая проверка</strong>
+                                        <span>1 единица назначена</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Impact Stats -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <span class="impact-number">40%</span>
+                    <span class="impact-label">Быстрее время реагирования</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">Реальное время</span>
+                    <span class="impact-label">Ситуационная осведомлённость</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">10 тыс.+</span>
+                    <span class="impact-label">Одновременных ресурсов</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">99,99%</span>
+                    <span class="impact-label">Доступность системы</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="usecases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Командование и контроль для любого сценария</h2>
+                <p>От ежедневных операций до реагирования на критические инциденты — одна платформа справляется со всем</p>
+            </div>
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="24" r="16" fill="none" stroke="#1a73e8" stroke-width="2.5"/><circle cx="24" cy="24" r="4" fill="#1a73e8"/><path d="M24 12v4M24 32v4M12 24h4M32 24h4" stroke="#1a73e8" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>Мониторинг в реальном времени</h4>
+                    <p>GPS-отслеживание, данные IoT-датчиков, видеонаблюдение и обновления статуса на единой географической панели.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40"><path d="M14 18h20v16H14z" fill="none" stroke="#ea4335" stroke-width="2.5" rx="2"/><path d="M18 18v-4a6 6 0 0112 0v4" fill="none" stroke="#ea4335" stroke-width="2.5"/><circle cx="24" cy="27" r="2.5" fill="#ea4335"/><path d="M24 29.5v3" stroke="#ea4335" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>Реагирование на инциденты</h4>
+                    <p>Быстрое создание инцидентов, классификация приоритетов, диспетчеризация команд и процессы эскалации для критических событий.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="16" cy="16" r="6" fill="none" stroke="#34a853" stroke-width="2.5"/><circle cx="32" cy="16" r="6" fill="none" stroke="#34a853" stroke-width="2.5"/><circle cx="24" cy="34" r="6" fill="none" stroke="#34a853" stroke-width="2.5"/><path d="M20 20l4 10M28 20l-4 10" stroke="#34a853" stroke-width="1.5" stroke-dasharray="3"/></svg>
+                    </div>
+                    <h4>Планирование ресурсов</h4>
+                    <p>Оптимизация распределения персонала, транспорта и оборудования с учётом доступности, местоположения и квалификации.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40"><rect x="8" y="10" width="32" height="22" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/><path d="M8 16h32" stroke="#9b72cb" stroke-width="1.5"/><rect x="12" y="20" width="10" height="8" rx="1" fill="#9b72cb" opacity="0.2"/><rect x="26" y="20" width="10" height="8" rx="1" fill="#9b72cb" opacity="0.2"/></svg>
+                    </div>
+                    <h4>Видеонаблюдение</h4>
+                    <p>Интеграция видеопотоков с камер, воспроизведение записей и обнаружение аномалий на базе ИИ из централизованной консоли.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40"><path d="M12 14c0-2 1.5-3 3-3h18c1.5 0 3 1 3 3v12c0 2-1.5 3-3 3h-4l-5 5v-5h-9c-1.5 0-3-1-3-3V14z" fill="none" stroke="#fbbc04" stroke-width="2.5"/><path d="M18 19h12M18 23h8" stroke="#fbbc04" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>Мультиканальная связь</h4>
+                    <p>Голос, видео, сообщения и вещание по радио, телефону и сетям передачи данных в едином интерфейсе.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40"><path d="M10 38l6-10 6 6 8-16 8 12" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="38" r="2" fill="#1a73e8"/><circle cx="16" cy="28" r="2" fill="#1a73e8"/><circle cx="38" cy="30" r="2" fill="#1a73e8"/></svg>
+                    </div>
+                    <h4>Аналитика и отчётность</h4>
+                    <p>Операционные панели, отслеживание KPI, постинцидентный анализ и автоматическая отчётность для соответствия.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Полный спектр командных возможностей</h2>
+                <p>Создано для организаций, которым необходим операционный контроль в реальном времени</p>
+            </div>
+
+            <!-- Feature 1: Situational Awareness -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #1a73e8, #174ea6);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="10" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><circle cx="14" cy="14" r="3" fill="white"/><path d="M14 6v3M14 19v3M6 14h3M19 14h3" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/></svg>
+                    </div>
+                    <h3>Ситуационная осведомлённость в реальном времени</h3>
+                    <p>Единая операционная картина, объединяющая GPS-отслеживание, IoT-датчики, видеопотоки и данные о состоянии на интерактивной географической карте. Знайте, что происходит повсюду, в реальном времени.</p>
+                    <ul class="feature-list">
+                        <li><strong>Интерактивная ГИС-карта</strong><span>Многослойная географическая визуализация со спутниковым, рельефным и пользовательскими слоями</span></li>
+                        <li><strong>GPS-отслеживание в реальном времени</strong><span>Текущее местоположение всего персонала, транспорта и активов с историей перемещений</span></li>
+                        <li><strong>Интеграция IoT и датчиков</strong><span>Подключение экологических датчиков, сигнализаций, систем контроля доступа и любых IoT-устройств</span></li>
+                        <li><strong>Геозоны и оповещения</strong><span>Определение зон и автоматические оповещения при входе или выходе ресурсов из зон</span></li>
+                        <li><strong>Многоэкранный дисплей</strong><span>Поддержка видеостен и многомониторных компоновок командного центра</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="gis-visual">
+                        <div class="gis-map-demo">
+                            <div class="gis-layers">
+                                <div class="gis-zone zone-a"></div>
+                                <div class="gis-zone zone-b"></div>
+                            </div>
+                            <div class="gis-pins">
+                                <div class="gis-pin vehicle" style="top:30%;left:25%;"><svg width="16" height="16" viewBox="0 0 16 16"><rect x="2" y="6" width="12" height="6" rx="2" fill="#4285f4"/><circle cx="5" cy="12" r="1.5" fill="#333"/><circle cx="11" cy="12" r="1.5" fill="#333"/></svg></div>
+                                <div class="gis-pin vehicle" style="top:55%;left:60%;"><svg width="16" height="16" viewBox="0 0 16 16"><rect x="2" y="6" width="12" height="6" rx="2" fill="#34a853"/><circle cx="5" cy="12" r="1.5" fill="#333"/><circle cx="11" cy="12" r="1.5" fill="#333"/></svg></div>
+                                <div class="gis-pin person" style="top:40%;left:45%;"><svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="4" r="2.5" fill="#ea4335"/><path d="M2 11c0-2.5 1.8-4 4-4s4 1.5 4 4" fill="#ea4335"/></svg></div>
+                                <div class="gis-pin alert" style="top:20%;left:70%;"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1l6 11H1z" fill="#fbbc04"/><path d="M7 5v3M7 9.5v.5" stroke="#1a1a1a" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+                            </div>
+                            <div class="gis-legend">
+                                <span><i style="background:#4285f4;"></i>Транспорт</span>
+                                <span><i style="background:#ea4335;"></i>Персонал</span>
+                                <span><i style="background:#fbbc04;"></i>Оповещения</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Dispatch & Scheduling -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #1a73e8);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="6" width="20" height="16" rx="3" fill="white" opacity="0.2"/><path d="M4 11h20" stroke="white" stroke-width="1.5"/><path d="M9 4v4M19 4v4" stroke="white" stroke-width="2" stroke-linecap="round"/><rect x="7" y="14" width="4" height="3" rx="1" fill="white" opacity="0.8"/><rect x="12" y="14" width="4" height="3" rx="1" fill="white" opacity="0.5"/></svg>
+                    </div>
+                    <h3>Интеллектуальная диспетчеризация и планирование</h3>
+                    <p>Движок диспетчеризации на базе ИИ, автоматически назначающий нужные ресурсы на нужные задачи с учётом близости, возможностей, загрузки и приоритетов.</p>
+                    <ul class="feature-list">
+                        <li><strong>Умная автодиспетчеризация</strong><span>ИИ рекомендует оптимальное распределение ресурсов по расстоянию, навыкам и доступности</span></li>
+                        <li><strong>Drag-and-drop планирование</strong><span>Визуальная доска планирования в стиле Ганта для смен, маршрутов и назначений</span></li>
+                        <li><strong>Очередь приоритетов</strong><span>Автоматическая приоритезация с настраиваемыми правилами эскалации и отслеживанием SLA</span></li>
+                        <li><strong>Планирование мощностей</strong><span>Прогнозирование спроса и оптимизация штатного расписания на основе исторических данных</span></li>
+                        <li><strong>Мобильная диспетчеризация</strong><span>Полевые работники получают задания на мобильное устройство с навигацией, формами и обновлениями</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="dispatch-visual">
+                        <div class="dispatch-board">
+                            <div class="dispatch-board-header">Очередь диспетчеризации</div>
+                            <div class="dispatch-item high">
+                                <div class="di-priority">P1</div>
+                                <div class="di-info">
+                                    <strong>Экстренное реагирование — Сектор 7</strong>
+                                    <span>ETA: 4 мин &bull; Единица Alpha-3</span>
+                                </div>
+                                <div class="di-status dispatched">Направлен</div>
+                            </div>
+                            <div class="dispatch-item medium">
+                                <div class="di-priority">P2</div>
+                                <div class="di-info">
+                                    <strong>Запрос на обслуживание — Здание C</strong>
+                                    <span>ETA: 15 мин &bull; Команда Bravo</span>
+                                </div>
+                                <div class="di-status enroute">В пути</div>
+                            </div>
+                            <div class="dispatch-item low">
+                                <div class="di-priority">P3</div>
+                                <div class="di-info">
+                                    <strong>Плановое патрулирование — Зона Восток</strong>
+                                    <span>Запланировано: 15:00 &bull; Единица Charlie-1</span>
+                                </div>
+                                <div class="di-status scheduled">Запланирован</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Communication -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="4" fill="white"/><path d="M8 8a9 9 0 000 12M20 8a9 9 0 010 12" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/><path d="M5 5a14 14 0 000 18M23 5a14 14 0 010 18" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/></svg>
+                    </div>
+                    <h3>Унифицированные коммуникации</h3>
+                    <p>Разрушьте коммуникационные барьеры. Голос, видео, сообщения и вещание в одном интерфейсе — совместимость с радиосистемами, телефонами и сетями передачи данных.</p>
+                    <ul class="feature-list">
+                        <li><strong>Push-to-Talk (PTT)</strong><span>Мгновенная голосовая связь с отдельными лицами или группами, как традиционное радио</span></li>
+                        <li><strong>Видеоконференции</strong><span>Запуск специальных видеозвонков или запланированных брифингов до 500 участников</span></li>
+                        <li><strong>Групповое вещание</strong><span>Отправка оповещений и объявлений всем единицам, определённым зонам или настраиваемым группам</span></li>
+                        <li><strong>Радиошлюз</strong><span>Соединение цифровых и аналоговых радиосистем для бесшовной совместимости</span></li>
+                        <li><strong>Интеграция с мессенджером</strong><span>Тематические сообщения, обмен файлами и каналы координации через Oort Messenger</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="comm-visual">
+                        <div class="comm-panel">
+                            <div class="comm-header">Коммуникации</div>
+                            <div class="comm-channels">
+                                <div class="comm-channel active">
+                                    <div class="ch-icon ptt"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="4" y="2" width="6" height="7" rx="3" fill="none" stroke="white" stroke-width="1.2"/><path d="M7 9v2M5 11h4" stroke="white" stroke-width="1" stroke-linecap="round"/></svg></div>
+                                    <div class="ch-info"><strong>Все единицы</strong><span>PTT-канал</span></div>
+                                    <span class="ch-live">LIVE</span>
+                                </div>
+                                <div class="comm-channel">
+                                    <div class="ch-icon video"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="1" y="4" width="8" height="6" rx="1" fill="none" stroke="white" stroke-width="1.2"/><path d="M9 6l3-1.5v5L9 8" fill="none" stroke="white" stroke-width="1.2"/></svg></div>
+                                    <div class="ch-info"><strong>Командный брифинг</strong><span>Видео &bull; 12 участников</span></div>
+                                </div>
+                                <div class="comm-channel">
+                                    <div class="ch-icon msg"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 4c0-1 .5-1.5 1.5-1.5h7c1 0 1.5.5 1.5 1.5v5c0 1-.5 1.5-1.5 1.5H7l-2.5 2v-2H3.5C2.5 10.5 2 10 2 9V4z" fill="none" stroke="white" stroke-width="1.2"/></svg></div>
+                                    <div class="ch-info"><strong>Полевые обновления</strong><span>Мессенджер &bull; 8 новых</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: Incident Management -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #fbbc04, #ea4335);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 4l10 18H4z" fill="white" opacity="0.2" stroke="white" stroke-width="2" stroke-linejoin="round"/><path d="M14 11v5M14 19v1" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Управление инцидентами</h3>
+                    <p>Полное управление жизненным циклом инцидента от обнаружения до разрешения. Стандартные операционные процедуры, процессы эскалации и постинцидентный анализ.</p>
+                    <ul class="feature-list">
+                        <li><strong>Создание и классификация инцидентов</strong><span>Быстрое создание инцидентов с типом, приоритетом, местоположением и зоной воздействия</span></li>
+                        <li><strong>Стандартные операционные процедуры</strong><span>Предопределённые планы реагирования с автоназначением ресурсов и уведомлениями</span></li>
+                        <li><strong>Процессы эскалации</strong><span>Эскалация по времени и условиям на более высокие уровни командования</span></li>
+                        <li><strong>Хронология и журнал</strong><span>Полная хронологическая запись всех действий, коммуникаций и решений</span></li>
+                        <li><strong>Постинцидентный обзор</strong><span>Автоматические отчёты с воспроизведением хронологии, анализом KPI и рекомендациями</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="incident-visual">
+                        <div class="incident-panel">
+                            <div class="incident-panel-header">
+                                <span>Инцидент №2847</span>
+                                <span class="incident-badge high">ВЫСОКИЙ ПРИОРИТЕТ</span>
+                            </div>
+                            <div class="incident-details">
+                                <div class="id-row"><span class="id-label">Тип</span><span class="id-value">Дорожный инцидент</span></div>
+                                <div class="id-row"><span class="id-label">Местоположение</span><span class="id-value">Шоссе 101, км 42</span></div>
+                                <div class="id-row"><span class="id-label">Единицы</span><span class="id-value">Alpha-3, Bravo-7, Мед-2</span></div>
+                                <div class="id-row"><span class="id-label">Статус</span><span class="id-value status-active">Активен — Реагирование</span></div>
+                            </div>
+                            <div class="incident-timeline">
+                                <div class="it-item done"><span class="it-dot"></span><span class="it-text">14:22 — Инцидент зарегистрирован</span></div>
+                                <div class="it-item done"><span class="it-dot"></span><span class="it-text">14:23 — Единицы направлены</span></div>
+                                <div class="it-item done"><span class="it-dot"></span><span class="it-text">14:27 — Первая единица на месте</span></div>
+                                <div class="it-item current"><span class="it-dot"></span><span class="it-text">14:32 — Оценка обстановки</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5: Analytics & Admin -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #9b72cb, #1a73e8);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="3" fill="white" opacity="0.2"/><path d="M8 18l4-5 4 3 4-8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Аналитика и администрирование</h3>
+                    <p>Операционная аналитика для оптимизации производительности. Исторический анализ, предиктивная аналитика и комплексные инструменты администрирования для полного контроля платформы.</p>
+                    <ul class="feature-list">
+                        <li><strong>Операционная панель</strong><span>KPI времени реагирования, уровня решения, использования ресурсов и покрытия</span></li>
+                        <li><strong>Исторический анализ</strong><span>Запросы и анализ прошлых инцидентов, моделей диспетчеризации и перемещений ресурсов</span></li>
+                        <li><strong>Предиктивная аналитика</strong><span>ИИ прогнозирует модели спроса и предлагает оптимальное размещение ресурсов</span></li>
+                        <li><strong>Пользовательские отчёты</strong><span>Автоматическая генерация отчётов для соответствия, операционного обзора и планирования</span></li>
+                        <li><strong>Ролевое администрирование</strong><span>Детальные разрешения для операторов, диспетчеров, руководителей и администраторов</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="analytics-visual">
+                        <div class="ops-dashboard">
+                            <div class="ops-header">Обзор операций</div>
+                            <div class="ops-kpis">
+                                <div class="ops-kpi"><span class="kpi-val">3,2 мин</span><span class="kpi-lbl">Ср. время ответа</span></div>
+                                <div class="ops-kpi"><span class="kpi-val">94%</span><span class="kpi-lbl">SLA выполнен</span></div>
+                                <div class="ops-kpi"><span class="kpi-val">87%</span><span class="kpi-lbl">Использование</span></div>
+                            </div>
+                            <div class="ops-chart">
+                                <svg viewBox="0 0 200 60" width="100%"><polyline points="0,45 30,40 60,35 90,20 120,25 150,15 180,18 200,10" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round"/><polyline points="0,45 30,40 60,35 90,20 120,25 150,15 180,18 200,10" fill="url(#opsGrad)" opacity="0.15"/><defs><linearGradient id="opsGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a73e8"/><stop offset="100%" stop-color="#1a73e8" stop-opacity="0"/></linearGradient></defs></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Features -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Платформа корпоративного уровня</h2>
+                <p>Создана для критически важных операций без компромиссов по надёжности</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V7l-8-5z" fill="none" stroke="#1a73e8" stroke-width="1.5"/></svg><h5>Высокая доступность</h5><p>99,99% доступности с активным кластерированием и автоматическим переключением</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M4 12h16M12 4v16" stroke="#ea4335" stroke-width="1" opacity="0.4"/></svg><h5>Частное развёртывание</h5><p>Развёртывание на собственных серверах или в частном облаке для полного суверенитета данных</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M2 12h20M12 2c3 3 4.5 6 4.5 10s-1.5 7-4.5 10" fill="none" stroke="#34a853" stroke-width="1.2"/></svg><h5>Несколько объектов</h5><p>Федеративная архитектура, объединяющая несколько командных центров</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg><h5>API и интеграция</h5><p>REST API, вебхуки и готовые коннекторы для CAD, ERP и ГИС-систем</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="2" y="6" width="9" height="12" rx="1.5" fill="none" stroke="#fbbc04" stroke-width="1.5"/><rect x="13" y="4" width="9" height="16" rx="1.5" fill="none" stroke="#fbbc04" stroke-width="1.5"/></svg><h5>Мобильное командование</h5><p>Полнофункциональное мобильное приложение для полевых командиров и удалённых операций</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#1a73e8" stroke-width="1.5"/><path d="M12 7v5l3 3" fill="none" stroke="#1a73e8" stroke-width="1.8" stroke-linecap="round"/></svg><h5>Журнал аудита</h5><p>Полный журнал всех действий с временными метками для подотчётности и контроля</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M4 22v-7" stroke="#ea4335" stroke-width="1.5" stroke-linecap="round"/></svg><h5>Механизм оповещений</h5><p>Настраиваемые оповещения по местоположению, времени, статусу и пользовательским правилам</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="#34a853" stroke-width="1.5" opacity="0.6"/></svg><h5>Масштабируемая архитектура</h5><p>Обработка 10 000+ одновременных ресурсов с горизонтальным масштабированием</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / CTA -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>Адаптировано для вашей организации</h2>
+                <p>Команда и диспетчеризация настраивается для каждого развёртывания. Свяжитесь с нами для персонального решения.</p>
+            </div>
+            <div class="enterprise-cta-card">
+                <div class="ent-card-content">
+                    <h3>Корпоративное развёртывание</h3>
+                    <p>Каждая организация имеет уникальные операционные требования. Наша команда работает с вами над проектированием, развёртыванием и оптимизацией идеальной системы командования.</p>
+                    <ul class="ent-features">
+                        <li>Индивидуальная архитектура развёртывания</li>
+                        <li>Интеграция с существующими системами</li>
+                        <li>Обучение и поддержка на объекте</li>
+                        <li>Выделенная команда сопровождения</li>
+                        <li>Индивидуальный SLA и поддержка 24/7</li>
+                    </ul>
+                </div>
+                <div class="ent-card-action">
+                    <a href="#" class="btn-primary btn-large btn-navy">Запланировать консультацию</a>
+                    <a href="#" class="btn-secondary btn-large">Скачать брошюру</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Готовы модернизировать ваши операции?</h2>
+                <p>Узнайте, как Команда и диспетчеризация может преобразить вашу операционную эффективность с помощью персональной демонстрации.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">Запросить демонстрацию</a>
+                    <a href="#" class="btn-secondary btn-large">Связаться со специалистом</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36"><p class="footer-tagline">Создаём будущее корпоративных технологий.</p></div>
+                <div class="footer-links"><h5>Продукты</h5><a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a><a href="workup.html">Workup</a><a href="oortai.html">OORT.AI</a><a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a><a href="classroom.html">Cloud Classroom</a></div>
+                <div class="footer-links"><h5>Решения</h5><a href="messenger.html">Мессенджер</a><a href="clouddisk.html">Облачный диск</a><a href="email.html">Электронная почта</a><a href="approval.html">Интеллектуальное согласование</a><a href="#">Команда и диспетчеризация</a><a href="fieldmanager.html">Управление полевыми операциями</a></div>
+                <div class="footer-links"><h5>Компания</h5><a href="about.html">О нас</a><a href="#">Карьера</a><a href="#">Блог</a><a href="contact.html">Контакты</a><a href="#">Политика конфиденциальности</a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 OortCloud Technology. Все права защищены.</p><div class="footer-social"><a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a><a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a><a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a></div></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

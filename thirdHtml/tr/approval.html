@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akıllı Onay - Kurumsal İş Akışı Yönetimi | OortCloud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="approval.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="alternate" hreflang="en" href="https://oortcloudsmart.com/en/approval.html" />
+    <link rel="alternate" hreflang="tr" href="https://oortcloudsmart.com/tr/approval.html" />
+    <link rel="alternate" hreflang="x-default" href="https://oortcloudsmart.com/en/approval.html" />
+    <style>:root { --font-primary: 'Noto Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }</style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">Ürünler</a>
+                <a href="index.html#platform">Platform</a>
+                <a href="index.html#enterprise">Kurumsal</a>
+                <a href="index.html#about">Hakkında</a>
+            </div>
+            <a href="#get-started" class="nav-cta">Ücretsiz Başlayın</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="Dil Değiştir">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">TR</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item active" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    Giriş Yap
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">Kullanıcı</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Kontrol Paneli
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            Çıkış Yap
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menüyü aç/kapat">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="approval-hero">
+        <div class="container">
+            <div class="approval-hero-grid">
+                <div class="approval-hero-content">
+                    <div class="product-breadcrumb">
+                        <a href="index.html">Ürünler</a>
+                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <span>Akıllı Onay</span>
+                    </div>
+                    <h1>Kararları otomatikleştirin, <span class="gradient-text-amber">işinizi hızlandırın</span></h1>
+                    <p class="approval-hero-desc">Karmaşık onay süreçlerini akıcı, otomatik iş akışlarına dönüştüren kurumsal iş akışı yönetimi. Görsel akış tasarımcısı, akıllı formlar ve yapay zeka destekli yönlendirme — onayları daha hızlı alın.</p>
+                    <div class="hero-actions">
+                        <a href="#get-started" class="btn-primary btn-large btn-amber">Ücretsiz Deneyin</a>
+                        <a href="#features" class="btn-secondary btn-large">Nasıl Çalıştığını Görün</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            %60 daha hızlı onay döngüleri
+                        </span>
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Kodsuz akış oluşturucu
+                        </span>
+                    </div>
+                </div>
+                <div class="approval-hero-visual">
+                    <div class="workflow-mockup">
+                        <div class="workflow-canvas">
+                            <div class="wf-node wf-start">
+                                <div class="wf-node-icon start-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="#34a853"/><polygon points="6.5,5 6.5,11 11,8" fill="white"/></svg>
+                                </div>
+                                <span>Gönder</span>
+                            </div>
+                            <div class="wf-connector"></div>
+                            <div class="wf-node wf-approver">
+                                <div class="wf-node-icon approver-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="6" r="3" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M3 14c0-3 2-5 5-5s5 2 5 5" fill="none" stroke="#4285f4" stroke-width="1.5"/></svg>
+                                </div>
+                                <span>Yönetici</span>
+                                <span class="wf-status approved">Onaylandı</span>
+                            </div>
+                            <div class="wf-connector"></div>
+                            <div class="wf-node wf-condition">
+                                <div class="wf-node-icon condition-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 2l6 6-6 6-6-6z" fill="none" stroke="#fbbc04" stroke-width="1.5"/></svg>
+                                </div>
+                                <span>Tutar > 5.000$?</span>
+                            </div>
+                            <div class="wf-branch">
+                                <div class="wf-branch-line left">
+                                    <span class="branch-label">Evet</span>
+                                </div>
+                                <div class="wf-branch-line right">
+                                    <span class="branch-label">Hayır</span>
+                                </div>
+                            </div>
+                            <div class="wf-branch-nodes">
+                                <div class="wf-node wf-approver small">
+                                    <div class="wf-node-icon approver-icon">
+                                        <svg width="14" height="14" viewBox="0 0 16 16"><circle cx="8" cy="6" r="3" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M3 14c0-3 2-5 5-5s5 2 5 5" fill="none" stroke="#9b72cb" stroke-width="1.5"/></svg>
+                                    </div>
+                                    <span>Finans Müdürü</span>
+                                    <span class="wf-status pending">Beklemede</span>
+                                </div>
+                                <div class="wf-node wf-end small">
+                                    <div class="wf-node-icon end-icon">
+                                        <svg width="14" height="14" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="#34a853" opacity="0.2" stroke="#34a853" stroke-width="1.5"/><path d="M5 8l2 2 4-4" fill="none" stroke="#34a853" stroke-width="1.5" stroke-linecap="round"/></svg>
+                                    </div>
+                                    <span>Tamamlandı</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="workflow-sidebar-panel">
+                            <div class="wf-panel-title">Onay Detayları</div>
+                            <div class="wf-detail-item">
+                                <span class="wf-detail-label">Tür</span>
+                                <span class="wf-detail-value">Satın Alma Talebi</span>
+                            </div>
+                            <div class="wf-detail-item">
+                                <span class="wf-detail-label">Tutar</span>
+                                <span class="wf-detail-value">$8,500.00</span>
+                            </div>
+                            <div class="wf-detail-item">
+                                <span class="wf-detail-label">Gönderen</span>
+                                <span class="wf-detail-value">Alex Chen</span>
+                            </div>
+                            <div class="wf-detail-item">
+                                <span class="wf-detail-label">Durum</span>
+                                <span class="wf-detail-value status-active">Devam Ediyor</span>
+                            </div>
+                            <div class="wf-timeline">
+                                <div class="timeline-item done">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span>Gönderildi</span>
+                                        <span class="timeline-time">10:24 AM</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item done">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span>Yönetici onayladı</span>
+                                        <span class="timeline-time">11:05 AM</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item current">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span>Finans Müdürü incelemesi</span>
+                                        <span class="timeline-time">Bekleniyor...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Impact Stats -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <span class="impact-number">60%</span>
+                    <span class="impact-label">Daha hızlı onay döngüleri</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">90%</span>
+                    <span class="impact-label">Manuel iş azaltma</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">200+</span>
+                    <span class="impact-label">Hazır şablon</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">100%</span>
+                    <span class="impact-label">Süreç görünürlüğü</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="usecases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Her iş sürecini otomatikleştirin</h2>
+                <p>Basit izin taleplerinden karmaşık çok departmanlı satın alma iş akışlarına kadar</p>
+            </div>
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="10" y="8" width="28" height="32" rx="4" fill="none" stroke="#fbbc04" stroke-width="2.5"/>
+                            <path d="M18 18h12M18 24h8M18 30h10" stroke="#fbbc04" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="14" cy="18" r="1.5" fill="#fbbc04"/>
+                            <circle cx="14" cy="24" r="1.5" fill="#fbbc04"/>
+                            <circle cx="14" cy="30" r="1.5" fill="#fbbc04"/>
+                        </svg>
+                    </div>
+                    <h4>Harcama ve Geri Ödeme</h4>
+                    <p>Makbuz OCR, politika kontrolleri ve tutar eşiklerine dayalı çok seviyeli onay ile harcama taleplerini otomatikleştirin.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="8" y="12" width="32" height="24" rx="4" fill="none" stroke="#4285f4" stroke-width="2.5"/>
+                            <path d="M16 20h16M16 26h12M16 32h8" stroke="#4285f4" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M8 18h32" stroke="#4285f4" stroke-width="1.5" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <h4>Satın Alma Siparişleri</h4>
+                    <p>Tedarikçi seçimi, bütçe doğrulama ve doğru onaylayıcılara otomatik yönlendirme ile satın alma süreçlerini kolaylaştırın.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <circle cx="24" cy="18" r="8" fill="none" stroke="#34a853" stroke-width="2.5"/>
+                            <path d="M12 38c0-7 5-12 12-12s12 5 12 12" fill="none" stroke="#34a853" stroke-width="2.5"/>
+                            <path d="M30 16l3-3M32 20h4" stroke="#34a853" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>İK ve İzin Yönetimi</h4>
+                    <p>Otomatik İK iş akışları ile izin talepleri, işe alım, işten ayrılma ve çalışan değişikliklerini yönetin.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <path d="M12 14h24v20H12z" fill="none" stroke="#ea4335" stroke-width="2.5" rx="3"/>
+                            <path d="M12 14l12 10 12-10" fill="none" stroke="#ea4335" stroke-width="2"/>
+                            <path d="M20 38l4-4 4 4" fill="none" stroke="#ea4335" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Sözleşme ve Belge</h4>
+                    <p>Versiyon takibi, e-imza ve uyumluluk kontrolleri ile sözleşmeleri inceleyin, düzenleyin ve onaylayın.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="8" y="10" width="14" height="14" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/>
+                            <rect x="26" y="10" width="14" height="14" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/>
+                            <rect x="16" y="26" width="14" height="14" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/>
+                            <path d="M22 17h4M23 24v4" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2"/>
+                        </svg>
+                    </div>
+                    <h4>BT ve Erişim Talepleri</h4>
+                    <p>Güvenlik politikası uygulamasıyla sistem erişimi, yazılım sağlama ve altyapı taleplerini yönetin.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <path d="M10 38V18l14-8 14 8v20" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linejoin="round"/>
+                            <path d="M18 38v-10h12v10" fill="none" stroke="#1a73e8" stroke-width="2"/>
+                            <path d="M20 22h8" stroke="#1a73e8" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Tesisler ve İdari İşler</h4>
+                    <p>Oda rezervasyonları, bakım talepleri, ziyaretçi kartları ve ofis malzeme siparişleri — hepsi otomatik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Güçlü iş akışı motoru, kod gerektirmez</h2>
+                <p>Sezgisel görsel araçlarla karmaşık onay süreçlerini tasarlayın — geliştirici gerekmez</p>
+            </div>
+
+            <!-- Feature 1: Visual Flow Designer -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #fbbc04, #ea4335);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="4" fill="white" opacity="0.2"/><circle cx="10" cy="10" r="3" fill="white" opacity="0.9"/><circle cx="18" cy="18" r="3" fill="white" opacity="0.9"/><path d="M12 11l4 5" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/></svg>
+                    </div>
+                    <h3>Görsel Akış Tasarımcısı</h3>
+                    <p>Karmaşık süreçleri net, görsel akış şemalarına dönüştüren sürükle-bırak iş akışı oluşturucu. Onay akışlarını haftalar değil, dakikalar içinde tasarlayın, test edin ve devreye alın.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Sürükle-Bırak Tuval</strong>
+                            <span>Onay düğümleri, koşullar, dallanmalar ve paralel yollarla akışları görsel olarak oluşturun</span>
+                        </li>
+                        <li>
+                            <strong>Koşullu Dallanma</strong>
+                            <span>Tutar, departman, rol veya herhangi bir özel alan değerine göre onayları yönlendirin</span>
+                        </li>
+                        <li>
+                            <strong>Paralel ve Sıralı Onaylar</strong>
+                            <span>Çok seviyeli, karşı imza, veya-imza ve sıralı onay zincirleri yapılandırın</span>
+                        </li>
+                        <li>
+                            <strong>Dinamik Onaylayıcılar</strong>
+                            <span>Organizasyon hiyerarşisi, departman başkanı veya proje rolüne göre onaylayıcıları otomatik atayın</span>
+                        </li>
+                        <li>
+                            <strong>Akış Şablonları</strong>
+                            <span>Yaygın iş süreçleri için 200+ hazır şablon — özelleştirin ve anında devreye alın</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="designer-visual">
+                        <div class="designer-canvas">
+                            <div class="canvas-toolbar">
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5" fill="none" stroke="#5f6368" stroke-width="1.2"/></svg></div>
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="2" width="10" height="10" rx="2" fill="none" stroke="#5f6368" stroke-width="1.2"/></svg></div>
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2l5 5-5 5-5-5z" fill="none" stroke="#5f6368" stroke-width="1.2"/></svg></div>
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10M7 2v10" stroke="#5f6368" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+                            </div>
+                            <div class="canvas-flow">
+                                <div class="flow-node fn-start">Başla</div>
+                                <div class="flow-arrow"></div>
+                                <div class="flow-node fn-task">Formu Doldur</div>
+                                <div class="flow-arrow"></div>
+                                <div class="flow-node fn-approval">Doğrudan Yönetici</div>
+                                <div class="flow-arrow"></div>
+                                <div class="flow-node fn-condition">Bütçe Kontrolü</div>
+                                <div class="flow-split">
+                                    <div class="split-branch">
+                                        <span class="split-label">&gt;$10K</span>
+                                        <div class="flow-node fn-approval small">Direktör</div>
+                                    </div>
+                                    <div class="split-branch">
+                                        <span class="split-label">&le;$10K</span>
+                                        <div class="flow-node fn-end small">Bitti</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Smart Forms -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #4285f4, #34a853);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="3" width="18" height="22" rx="3" fill="white" opacity="0.9"/><path d="M9 9h10M9 13h7M9 17h8" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/><rect x="9" y="20" width="4" height="2" rx="1" fill="#34a853" opacity="0.7"/></svg>
+                    </div>
+                    <h3>Akıllı Form Oluşturucu</h3>
+                    <p>Kullanıcı girişine uyum sağlayan akıllı formlar oluşturun. Zengin alan türleri, doğrulama kuralları, otomatik hesaplama ve veri bağlantısı ile veri toplama zahmetsiz hale gelir.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Zengin Alan Türleri</strong>
+                            <span>Metin, sayı, tarih, açılır liste, dosya yükleme, konum, imza, tablo ve 30+ alan türü</span>
+                        </li>
+                        <li>
+                            <strong>Koşullu Mantık</strong>
+                            <span>Önceki seçimlere göre alanları gösterin/gizleyin, zorunluluk kuralları ayarlayın ve verileri otomatik doldurun</span>
+                        </li>
+                        <li>
+                            <strong>Otomatik Hesaplama</strong>
+                            <span>Toplam, vergi, indirim ve karmaşık iş hesaplamaları için yerleşik formüller</span>
+                        </li>
+                        <li>
+                            <strong>Veri Bağlantısı</strong>
+                            <span>Diğer sistemlerden veri çekin — çalışan dizini, proje veritabanı, bütçe kayıtları</span>
+                        </li>
+                        <li>
+                            <strong>Mobil Optimize</strong>
+                            <span>Formlar kamera çekimi, GPS konumu ve çevrimdışı destekle mobilde mükemmel görüntülenir</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="form-visual">
+                        <div class="form-demo">
+                            <div class="form-header">
+                                <span>Satın Alma Talebi</span>
+                                <span class="form-badge">Taslak</span>
+                            </div>
+                            <div class="form-body">
+                                <div class="form-field">
+                                    <label>Departman</label>
+                                    <div class="field-select">Engineering <svg width="10" height="10" viewBox="0 0 10 10"><path d="M3 4l2 2 2-2" fill="none" stroke="#9aa0a6" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+                                </div>
+                                <div class="form-field">
+                                    <label>Ürün Açıklaması</label>
+                                    <div class="field-input">Yeni işe alımlar için MacBook Pro 16"</div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-field half">
+                                        <label>Miktar</label>
+                                        <div class="field-input">5</div>
+                                    </div>
+                                    <div class="form-field half">
+                                        <label>Birim Fiyat</label>
+                                        <div class="field-input">$2,499</div>
+                                    </div>
+                                </div>
+                                <div class="form-field calculated">
+                                    <label>Toplam Tutar</label>
+                                    <div class="field-calculated">$12,495.00</div>
+                                    <span class="calc-note">Otomatik hesaplandı</span>
+                                </div>
+                                <div class="form-field">
+                                    <label>Ekler</label>
+                                    <div class="field-upload">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 10V3M5 5l3-3 3 3M3 10v3h10v-3" fill="none" stroke="#9aa0a6" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        <span>Dosyaları bırakın veya yüklemek için tıklayın</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Intelligent Routing -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #9b72cb, #4285f4);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="10" fill="white" opacity="0.2"/><path d="M9 14l3 3 7-7" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Akıllı Yönlendirme ve Otomasyon</h3>
+                    <p>Yapay zeka destekli yönlendirme, doğru onaylayıcıları otomatik olarak belirler, gecikmiş talepleri escalate eder ve istisnaları yönetir — böylece hiçbir şey gözden kaçmaz.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Organizasyon Şemasına Göre Otomatik Yönlendirme</strong>
+                            <span>Gönderenin doğrudan yöneticisine, üst yöneticisine veya departman başkanına otomatik yönlendirin</span>
+                        </li>
+                        <li>
+                            <strong>Son Tarih ve Eskalasyon</strong>
+                            <span>Her adım için SLA'ler belirleyin — son tarih geçtiğinde otomatik hatırlatma, eskalasyon veya otomatik onay</span>
+                        </li>
+                        <li>
+                            <strong>Yetki Devri ve Vekâlet</strong>
+                            <span>Onaylayıcılar tatildeyken yetkiyi başkalarına devredebilir, süre sınırlı vekâlet izinleriyle</span>
+                        </li>
+                        <li>
+                            <strong>Toplu Onay</strong>
+                            <span>Toplu işlemler ve hızlı onay ile birden fazla talebi aynı anda inceleyin ve onaylayın</span>
+                        </li>
+                        <li>
+                            <strong>Geri Alma ve İptal</strong>
+                            <span>Gönderenler talepleri geri alabilir; yöneticiler tam denetim izi ile onayları iptal edebilir</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="routing-visual">
+                        <div class="routing-demo">
+                            <div class="routing-header">Otomatik Yönlendirme Motoru</div>
+                            <div class="routing-rules">
+                                <div class="rule-item">
+                                    <div class="rule-condition">EĞER tutar &le; 1.000$</div>
+                                    <div class="rule-arrow">→</div>
+                                    <div class="rule-action">Doğrudan Yönetici</div>
+                                </div>
+                                <div class="rule-item">
+                                    <div class="rule-condition">EĞER tutar 1.000$ - 10.000$</div>
+                                    <div class="rule-arrow">→</div>
+                                    <div class="rule-action">Yönetici + Direktör</div>
+                                </div>
+                                <div class="rule-item highlight">
+                                    <div class="rule-condition">EĞER tutar &gt; 10.000$</div>
+                                    <div class="rule-arrow">→</div>
+                                    <div class="rule-action">Yönetici + Başkan Yard. + CFO</div>
+                                </div>
+                            </div>
+                            <div class="routing-extras">
+                                <div class="extra-tag">
+                                    <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="none" stroke="#ea4335" stroke-width="1.2"/><path d="M6 3.5v3l2 1" fill="none" stroke="#ea4335" stroke-width="1" stroke-linecap="round"/></svg>
+                                    SLA: Adım başına 24s
+                                </div>
+                                <div class="extra-tag">
+                                    <svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 2v4l3 2" fill="none" stroke="#fbbc04" stroke-width="1.2" stroke-linecap="round"/><circle cx="6" cy="6" r="5" fill="none" stroke="#fbbc04" stroke-width="1.2"/></svg>
+                                    48s sonra otomatik eskalasyon
+                                </div>
+                                <div class="extra-tag">
+                                    <svg width="12" height="12" viewBox="0 0 12 12"><path d="M3 6l2 2 4-4" fill="none" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    &lt; 100$ ise otomatik onay
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: Analytics & Monitoring -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #1a73e8);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="3" fill="white" opacity="0.2"/><path d="M8 18l4-5 4 3 4-8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Analitik ve Süreç Madenciliği</h3>
+                    <p>Her onay sürecinin tam görünürlüğü. Darboğazları tespit edin, verimliliği ölçün ve veriye dayalı içgörülerle iş akışlarınızı sürekli optimize edin.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Gerçek Zamanlı Gösterge Paneli</strong>
+                            <span>Tüm süreçlerde bekleyen, onaylanmış, reddedilmiş ve gecikmiş talepleri izleyin</span>
+                        </li>
+                        <li>
+                            <strong>Darboğaz Tespiti</strong>
+                            <span>Yapay zeka, onayların nerede takıldığını belirler ve optimizasyon önerileri sunar</span>
+                        </li>
+                        <li>
+                            <strong>Döngü Süresi Analitiği</strong>
+                            <span>Süreç, departman ve bireysel onaylayıcı bazında ortalama onay süresini takip edin</span>
+                        </li>
+                        <li>
+                            <strong>Uyumluluk Raporları</strong>
+                            <span>SOX, ISO ve sektöre özel uyumluluk gereksinimleri için denetim raporları oluşturun</span>
+                        </li>
+                        <li>
+                            <strong>Dışa Aktarma ve Entegrasyon</strong>
+                            <span>Verileri BI araçlarına aktarın veya web kancaları aracılığıyla dış sistemlere olay gönderin</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="analytics-visual">
+                        <div class="analytics-panel">
+                            <div class="analytics-header">
+                                <span>Süreç Analitiği</span>
+                                <span class="analytics-period">Bu Ay</span>
+                            </div>
+                            <div class="analytics-kpis">
+                                <div class="kpi">
+                                    <span class="kpi-value">847</span>
+                                    <span class="kpi-label">Toplam Talep</span>
+                                    <span class="kpi-trend up">+18%</span>
+                                </div>
+                                <div class="kpi">
+                                    <span class="kpi-value">4.2h</span>
+                                    <span class="kpi-label">Ort. Döngü Süresi</span>
+                                    <span class="kpi-trend up">-32%</span>
+                                </div>
+                                <div class="kpi">
+                                    <span class="kpi-value">96%</span>
+                                    <span class="kpi-label">Onay Oranı</span>
+                                    <span class="kpi-trend up">+3%</span>
+                                </div>
+                            </div>
+                            <div class="analytics-bars">
+                                <div class="ana-bar-item">
+                                    <span class="bar-label">Harcama</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 85%; background: #fbbc04;"></div></div>
+                                    <span class="bar-value">312</span>
+                                </div>
+                                <div class="ana-bar-item">
+                                    <span class="bar-label">Satın Alma</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 65%; background: #4285f4;"></div></div>
+                                    <span class="bar-value">238</span>
+                                </div>
+                                <div class="ana-bar-item">
+                                    <span class="bar-label">İzin</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 50%; background: #34a853;"></div></div>
+                                    <span class="bar-value">184</span>
+                                </div>
+                                <div class="ana-bar-item">
+                                    <span class="bar-label">Diğer</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 30%; background: #9b72cb;"></div></div>
+                                    <span class="bar-value">113</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5: Mobile & Notifications -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #9b72cb);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="8" y="3" width="12" height="22" rx="3" fill="white" opacity="0.9"/><circle cx="14" cy="21" r="1.5" fill="#ea4335" opacity="0.5"/><path d="M11 7h6" stroke="#ea4335" stroke-width="1" opacity="0.3" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Mobil Öncelikli ve Bildirimler</h3>
+                    <p>Herhangi bir cihazdan hareket halindeyken onaylayın. Gerçek zamanlı anlık bildirimler, uygulama içi mesajlaşma ve Workup entegrasyonu, onaylayıcıların hiçbir talebi kaçırmamasını sağlar.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Mobil Onay</strong>
+                            <span>Tam özellikli mobil uygulama — detayları inceleyin, yorum ekleyin ve tek dokunuşla onaylayın</span>
+                        </li>
+                        <li>
+                            <strong>Anlık Bildirimler</strong>
+                            <span>İşlem gerektiğinde push, e-posta, SMS ve Messenger üzerinden anlık uyarılar</span>
+                        </li>
+                        <li>
+                            <strong>Sohbet Üzerinden Onay</strong>
+                            <span>Uygulamayı açmadan Anlık Mesajlaşma veya Workup üzerinden doğrudan onaylayın</span>
+                        </li>
+                        <li>
+                            <strong>Çevrimdışı Destek</strong>
+                            <span>İnternet olmadan bile inceleyin ve onaylayın — bağlantı geri geldiğinde senkronize edilir</span>
+                        </li>
+                        <li>
+                            <strong>Workup Entegrasyonu</strong>
+                            <span>Günlük iş akışı erişimi için Workup süper uygulamasına yerleştirilmiştir</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="mobile-visual">
+                        <div class="phone-mockup">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <div class="phone-header">
+                                    <span>Onaylar</span>
+                                    <span class="phone-badge">3</span>
+                                </div>
+                                <div class="phone-card">
+                                    <div class="phone-card-header">
+                                        <div class="pc-avatar" style="background: #4285f4;">AC</div>
+                                        <div class="pc-info">
+                                            <strong>Alex Chen</strong>
+                                            <span>Satın Alma Talebi &bull; 8.500$</span>
+                                        </div>
+                                    </div>
+                                    <div class="phone-card-actions">
+                                        <button class="pc-btn reject">Reddet</button>
+                                        <button class="pc-btn approve">Onayla</button>
+                                    </div>
+                                </div>
+                                <div class="phone-card">
+                                    <div class="phone-card-header">
+                                        <div class="pc-avatar" style="background: #34a853;">LW</div>
+                                        <div class="pc-info">
+                                            <strong>Lisa Wang</strong>
+                                            <span>İzin Talebi &bull; 3 gün</span>
+                                        </div>
+                                    </div>
+                                    <div class="phone-card-actions">
+                                        <button class="pc-btn reject">Reddet</button>
+                                        <button class="pc-btn approve">Onayla</button>
+                                    </div>
+                                </div>
+                                <div class="phone-card">
+                                    <div class="phone-card-header">
+                                        <div class="pc-avatar" style="background: #fbbc04;">MR</div>
+                                        <div class="pc-info">
+                                            <strong>Mike Roberts</strong>
+                                            <span>Harcama Talebi &bull; 342$</span>
+                                        </div>
+                                    </div>
+                                    <div class="phone-card-actions">
+                                        <button class="pc-btn reject">Reddet</button>
+                                        <button class="pc-btn approve">Onayla</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Features Grid -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kurumsal iş akışı için her şey</h2>
+                <p>Akıllı Onay'ı eksiksiz çözüm yapan ek yetenekler</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="none" stroke="#fbbc04" stroke-width="1.5" rx="2"/><path d="M9 9h6v6H9z" fill="#fbbc04" opacity="0.2"/><path d="M4 9h16M9 4v16" stroke="#fbbc04" stroke-width="1"/></svg>
+                    <h5>Yazdır ve Dışa Aktar</h5>
+                    <p>Onayları tam geçmişiyle PDF olarak dışa aktarın veya biçimlendirilmiş belgeleri yazdırın</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M8 12h8M12 8v8" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>Özel Alanlar</h5>
+                    <p>Formları özel alan türleri, arama tabloları ve iş mantığı ile genişletin</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    <h5>API ve Web Kancaları</h5>
+                    <p>Dış sistemlerden onayları tetikleyin ve sonuçları REST API üzerinden gönderin</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/></svg>
+                    <h5>Çoklu Dil</h5>
+                    <p>Tam uluslararasılaştırma — formlar ve akışlar 20+ dili destekler</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M12 6v6l4 2" fill="none" stroke="#ea4335" stroke-width="1.8" stroke-linecap="round"/></svg>
+                    <h5>SLA Yönetimi</h5>
+                    <p>Otomatik eskalasyon kurallarıyla süreç başına yanıt süresi hedefleri belirleyin</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V7l-8-5z" fill="none" stroke="#1a73e8" stroke-width="1.5"/><path d="M9 12l2 2 4-4" fill="none" stroke="#1a73e8" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>E-İmza</h5>
+                    <p>Sertifika doğrulamalı yasal olarak bağlayıcı elektronik imzalar</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M5 20c0-4 3-7 7-7s7 3 7 7" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M16 4l2 2-2 2" stroke="#fbbc04" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+                    <h5>Yetki Devri Kuralları</h5>
+                    <p>Onaylayıcılar izindeyken veya erişilemez olduğunda otomatik yetki devri ayarlayın</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    <h5>Veri Dışa Aktarma</h5>
+                    <p>Tüm onay verilerini Excel, CSV olarak dışa aktarın veya veri deponuza bağlanın</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sizinle büyüyen planlar</h2>
+                <p>Ücretsiz başlayın, iş akışlarınız ölçeklendikçe yükseltin</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Başlangıç</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">$4</span>
+                            <span class="price-period">/kullanıcı/ay</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>50'ye kadar kullanıcı</li>
+                        <li>10 özel iş akışı</li>
+                        <li>Temel form oluşturucu</li>
+                        <li>E-posta bildirimleri</li>
+                        <li>E-posta desteği</li>
+                    </ul>
+                    <a href="#" class="btn-secondary pricing-btn">Ücretsiz Deneyin</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">En Popüler</div>
+                    <div class="pricing-header">
+                        <h4>İş</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">$9</span>
+                            <span class="price-period">/kullanıcı/ay</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Sınırsız kullanıcı</li>
+                        <li>Sınırsız iş akışı</li>
+                        <li>Gelişmiş form ve yönlendirme</li>
+                        <li>Analitik gösterge paneli</li>
+                        <li>API erişimi</li>
+                        <li>Öncelikli destek</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn btn-amber">Ücretsiz Deneyin</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Kurumsal</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">Özel</span>
+                            <span class="price-period"></span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>İş'teki her şey</li>
+                        <li>Özel dağıtım</li>
+                        <li>Özel entegrasyonlar</li>
+                        <li>E-imza ve DLP</li>
+                        <li>Özel başarı yöneticisi</li>
+                        <li>Yerinde eğitim</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary pricing-btn">Satış İletişimi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Onay süreçlerinizi kolaylaştırmaya hazır mısınız?</h2>
+                <p>Akıllı Onay ile onay darboğazlarını ortadan kaldıran yüzlerce kuruluşa katılın.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">Ücretsiz Deneyin</a>
+                    <a href="#" class="btn-secondary btn-large">Demo Talep Edin</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36">
+                    <p class="footer-tagline">Kurumsal teknolojinin geleceğini inşa ediyoruz.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Ürünler</h5>
+                    <a href="https://vls.oortcloudsmart.com/tr/" target="_blank">VLStream</a>
+                    <a href="workup.html">Workup</a>
+                    <a href="oortai.html">OORT.AI</a>
+                    <a href="https://sh.oortcloudsmart.com/tr/" target="_blank">OORT.SH</a>
+                    <a href="classroom.html">Bulut Sınıf</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Çözümler</h5>
+                    <a href="messenger.html">Anlık Mesajlaşma</a>
+                    <a href="clouddisk.html">Bulut Disk</a>
+                    <a href="email.html">E-posta</a>
+                    <a href="#">Akıllı Onay</a>
+                    <a href="dispatch.html">Komuta ve Sevk</a>
+                    <a href="fieldmanager.html">Saha Yöneticisi</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Şirket</h5>
+                    <a href="about.html">Hakkımızda</a>
+                    <a href="#">Kariyer</a>
+                    <a href="#">Blog</a>
+                    <a href="contact.html">İletişim</a>
+                    <a href="#">Gizlilik Politikası</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OortCloud Technology. Tüm hakları saklıdır.</p>
+                <div class="footer-social">
+                    <a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a>
+                    <a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a>
+                    <a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
