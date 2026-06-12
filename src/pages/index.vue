@@ -25,17 +25,18 @@ const detectTargetPath = () => {
     .map(language => language?.toLowerCase().split(/[-_]/)[0])
     .find(language => SUPPORTED_LANGUAGE_CODES.includes(language || '')) || DEFAULT_LANGUAGE
 
-  return matchedLanguage === 'zh' ? '/zh/siteNew/' : `/${matchedLanguage}/`
+  // return matchedLanguage === 'zh' ? '/zh/siteNew/' : `/${matchedLanguage}/`
+  return matchedLanguage === 'zh' ? '/ch/' : `/${matchedLanguage}/`
 }
 
 onMounted(() => {
   const targetPath = detectTargetPath()
 
-  // AI 生成的多语言静态页不走框架内路由，使用浏览器地址跳转
-  if (targetPath === '/zh/siteNew/') {
-    router.replace(targetPath)
-    return
-  }
+  // // AI 生成的多语言静态页不走框架内路由，使用浏览器地址跳转
+  // if (targetPath === '/zh/siteNew/') {
+  //   router.replace(targetPath)
+  //   return
+  // }
 
   window.location.href = targetPath
 })

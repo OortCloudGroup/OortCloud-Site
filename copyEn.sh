@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+﻿#!/usr/bin/env bash
 
 # 这个脚本将 AI 生成的 thirdHtml 多语言目录复制到 dist 对应语言目录中
 # 以便在生成静态站点时包含这些多语言静态文件
@@ -7,7 +7,7 @@ set -euo pipefail
 
 SOURCE_DIR="thirdHtml"
 TARGET_ROOT="dist"
-LANGUAGES=("en" "es" "ar" "de" "fr" "ja" "pt" "ru" "ko" "id" "tr")
+LANGUAGES=("en" "es" "ar" "de" "fr" "ja" "pt" "ru" "ko" "id" "tr", "ch")
 
 if [ ! -d "$SOURCE_DIR" ]; then
   echo "[copyEn] 未找到源目录: $SOURCE_DIR，跳过复制。"

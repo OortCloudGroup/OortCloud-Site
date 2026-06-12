@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OORT.AI - 企业 AI 智能体平台 | OortCloud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="oortai.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="alternate" hreflang="zh" href="https://oortcloudsmart.com/zh/siteNew/oortai.html">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">产品</a>
+                <a href="index.html#platform">平台</a>
+                <a href="index.html#enterprise">企业版</a>
+                <a href="index.html#about">关于我们</a>
+            </div>
+            <a href="#get-started" class="nav-cta">立即开始</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="切换语言">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">中文</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item active" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    登录
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">用户</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            控制台
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            退出登录
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="切换菜单"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="ai-hero">
+        <div class="ai-hero-bg"></div>
+        <div class="container">
+            <div class="ai-hero-grid">
+                <div class="ai-hero-content">
+                    <div class="product-breadcrumb">
+                        <a href="index.html">产品</a>
+                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <span>OORT.AI</span>
+                    </div>
+                    <h1>交付成果的 <span class="gradient-text-ai">AI 智能体</span>，而非仅仅是工具</h1>
+                    <p class="ai-hero-desc">企业自动化智能体平台，涵盖 AI 办公、AI 编程、AI 运维、智能客服和智能体管理。适配复杂的企业权限体系——部署的是完成工作的 AI，而非需要人去操作的软件。</p>
+                    <div class="hero-actions">
+                        <a href="#get-started" class="btn-primary btn-large btn-ai">免费试用</a>
+                        <a href="#agents" class="btn-secondary btn-large">探索智能体</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span class="trust-badge"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1l1.5 3 3.5.5-2.5 2.5.5 3.5L7 9l-3 1.5.5-3.5L2 4.5 5.5 4z" fill="#9b72cb"/></svg> 9 大专业智能体</span>
+                        <span class="trust-badge"><svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M5 7l1.5 1.5L9 5.5" fill="none" stroke="#9b72cb" stroke-width="1.3" stroke-linecap="round"/></svg> 企业权限适配</span>
+                        <span class="trust-badge"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="4" width="10" height="7" rx="1.5" fill="none" stroke="#9b72cb" stroke-width="1.3"/><path d="M2 6h10" stroke="#9b72cb" stroke-width="1"/></svg> 私有化部署</span>
+                    </div>
+                </div>
+                <div class="ai-hero-visual">
+                    <div class="agent-hub-mockup">
+                        <div class="hub-header">
+                            <span class="hub-title">OORT.AI 智能体中心</span>
+                            <div class="hub-status"><span class="status-dot-active"></span> 9 个智能体运行中</div>
+                        </div>
+                        <div class="hub-body">
+                            <div class="agent-orbit">
+                                <div class="orbit-center">
+                                    <svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12" fill="url(#aiCoreGrad)" opacity="0.9"/><path d="M12 16l3 3 5-6" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="aiCoreGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#9b72cb"/><stop offset="100%" stop-color="#4285f4"/></linearGradient></defs></svg>
+                                </div>
+                                <div class="orbit-agent agent-1" title="办公">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="2" width="10" height="12" rx="1.5" fill="white" opacity="0.9"/><path d="M5.5 5h5M5.5 7.5h5M5.5 10h3" stroke="#9b72cb" stroke-width="0.8" stroke-linecap="round"/></svg>
+                                </div>
+                                <div class="orbit-agent agent-2" title="编程">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M5 5L2.5 8 5 11M11 5l2.5 3L11 11" fill="none" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round"/><path d="M9 3l-2 10" stroke="#4285f4" stroke-width="1" stroke-linecap="round"/></svg>
+                                </div>
+                                <div class="orbit-agent agent-3" title="客服">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 6c0-3 2.5-4 5-4s5 1 5 4v2c0 2-1.5 3-3 3h-1l-2 2v-2H5c-1.5 0-2-1-2-3V6z" fill="none" stroke="#34a853" stroke-width="1.2"/></svg>
+                                </div>
+                                <div class="orbit-agent agent-4" title="运维">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5" fill="none" stroke="#ea4335" stroke-width="1.2"/><path d="M8 5v3l2 1.5" fill="none" stroke="#ea4335" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                </div>
+                                <div class="orbit-agent agent-5" title="营销">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 12l3-4 3 2 4-7" fill="none" stroke="#fbbc04" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                            </div>
+                            <div class="hub-task-feed">
+                                <div class="task-item completed">
+                                    <span class="task-agent">办公</span>
+                                    <span class="task-desc">Q3 报告已起草</span>
+                                    <span class="task-status">完成</span>
+                                </div>
+                                <div class="task-item active">
+                                    <span class="task-agent">编程</span>
+                                    <span class="task-desc">API 审查进行中</span>
+                                    <span class="task-status">运行中</span>
+                                </div>
+                                <div class="task-item completed">
+                                    <span class="task-agent">客服</span>
+                                    <span class="task-desc">142 工单已解决</span>
+                                    <span class="task-status">完成</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Impact Stats -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <span class="impact-number">9</span>
+                    <span class="impact-label">专业 AI 智能体</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">80%</span>
+                    <span class="impact-label">常规任务自动化</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">24/7</span>
+                    <span class="impact-label">持续运行</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">100%</span>
+                    <span class="impact-label">数据自主权</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agent Categories -->
+    <section class="agents-section" id="agents">
+        <div class="container">
+            <div class="section-header">
+                <h2>九大专业智能体，统一平台管理</h2>
+                <p>每个智能体为企业工作流量身打造，兼具严谨流程与灵活创意</p>
+            </div>
+            <div class="agents-grid">
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #9b72cb, #7c4dff);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="4" width="18" height="20" rx="2.5" fill="white" opacity="0.9"/><path d="M9 9h10M9 13h10M9 17h6" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>AI 办公</h4>
+                    <p>文档起草、数据汇总、日程管理和审批流程支持。自动化重复行政事务。</p>
+                    <div class="agent-tasks">
+                        <span>文档起草</span>
+                        <span>数据报表</span>
+                        <span>日程管理</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #4285f4, #1a73e8);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M9 8L5 14l4 6M19 8l4 6-4 6" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M16 5l-4 18" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/></svg>
+                    </div>
+                    <h4>AI 编程</h4>
+                    <p>代码生成、漏洞扫描、脚本优化和技术文档编写。加速开发工作流。</p>
+                    <div class="agent-tasks">
+                        <span>代码生成</span>
+                        <span>安全扫描</span>
+                        <span>文档编写</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #ea4335, #ff6e40);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="9" fill="none" stroke="white" stroke-width="2.5"/><path d="M14 9v5l3 2" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>AI 运维</h4>
+                    <p>系统监控、数据日志整理、故障诊断和维护报告。自动化保障基础设施健康。</p>
+                    <div class="agent-tasks">
+                        <span>系统监控</span>
+                        <span>故障诊断</span>
+                        <span>运维报告</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #34a853, #00c853);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M6 10c0-3.5 3.5-5 8-5s8 1.5 8 5v4c0 3-2.5 5-5 5h-2l-3 3v-3H9c-2 0-3-2-3-5v-4z" fill="white" opacity="0.9"/><circle cx="11" cy="12" r="1.2" fill="#34a853"/><circle cx="14" cy="12" r="1.2" fill="#34a853"/><circle cx="17" cy="12" r="1.2" fill="#34a853"/></svg>
+                    </div>
+                    <h4>智能客服</h4>
+                    <p>常规咨询处理、工单记录、工单自动化和 FAQ 管理。提供即时、一致的客户支持。</p>
+                    <div class="agent-tasks">
+                        <span>自动回复</span>
+                        <span>工单分配</span>
+                        <span>知识库</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #fbbc04, #f09800);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M6 20l4-6 4 4 5-9 3 5" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h4>AI 营销</h4>
+                    <p>市场情报、推广内容、受众细分和营销素材优化。数据驱动的大规模营销。</p>
+                    <div class="agent-tasks">
+                        <span>内容创作</span>
+                        <span>受众细分</span>
+                        <span>数据分析</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #00bcd4, #0097a7);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="10" r="5" fill="white" opacity="0.9"/><path d="M7 22c0-4 3-6 7-6s7 2 7 6" fill="white" opacity="0.7"/></svg>
+                    </div>
+                    <h4>AI 人事</h4>
+                    <p>简历筛选、入职自动化、考勤追踪、培训材料创建和人力数据管理。</p>
+                    <div class="agent-tasks">
+                        <span>招聘</span>
+                        <span>入职</span>
+                        <span>培训</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #ff5722, #e64a19);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="6" width="18" height="16" rx="2" fill="none" stroke="white" stroke-width="2.5"/><path d="M5 11h18" stroke="white" stroke-width="1.5"/><rect x="8" y="14" width="5" height="4" rx="1" fill="white" opacity="0.7"/></svg>
+                    </div>
+                    <h4>AI 培训</h4>
+                    <p>定制化课件开发、标准化教学脚本和评估指标汇总，赋能企业学习。</p>
+                    <div class="agent-tasks">
+                        <span>课件开发</span>
+                        <span>考核评估</span>
+                        <span>认证管理</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #607d8b, #455a64);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="8" fill="none" stroke="white" stroke-width="2.5"/><circle cx="14" cy="14" r="3" fill="white" opacity="0.8"/><path d="M14 8v2M14 18v2M8 14h2M18 14h2" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>AI 感知</h4>
+                    <p>多模态处理图像、文本和语音数据。自动识别、分类和整理非结构化内容。</p>
+                    <div class="agent-tasks">
+                        <span>图像识别</span>
+                        <span>自然语言处理</span>
+                        <span>语音处理</span>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-card-icon" style="background: linear-gradient(135deg, #3f51b5, #303f9f);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="8" width="18" height="12" rx="2" fill="none" stroke="white" stroke-width="2.5"/><circle cx="14" cy="6" r="2" fill="white" opacity="0.7"/><path d="M9 14h2M13 14h2M17 14h2" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>AI 会议</h4>
+                    <p>自动转写、行动项提取、任务分解和会后执行追踪。不再遗漏任何跟进事项。</p>
+                    <div class="agent-tasks">
+                        <span>会议转写</span>
+                        <span>行动项</span>
+                        <span>会后跟进</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>为企业级 AI 部署而生</h2>
+                <p>从智能体创建到权限管理，AI 运营所需的一切</p>
+            </div>
+
+            <!-- Feature 1: Agent Creation & Management -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #9b72cb, #4285f4);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="8" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><path d="M11 14h6M14 11v6" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>智能体创建与管理</h3>
+                    <p>通过可视化工作流构建器创建、部署和管理 AI 智能体。无需编码——定义行为、设置护栏，然后启动与现有工具集成的智能体。</p>
+                    <ul class="feature-list">
+                        <li><strong>可视化智能体构建器</strong><span>拖拽式工作流设计器，用于创建智能体行为和决策树</span></li>
+                        <li><strong>智能体市场</strong><span>预置常见企业场景的智能体模板，可直接定制使用</span></li>
+                        <li><strong>版本控制</strong><span>追踪变更、回滚配置、A/B 测试智能体行为</span></li>
+                        <li><strong>性能监控</strong><span>任务完成率、准确率和资源利用率的实时指标</span></li>
+                        <li><strong>多智能体编排</strong><span>将多个智能体串联，处理复杂的多步骤工作流</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="agent-builder-visual">
+                        <div class="builder-panel">
+                            <div class="builder-header">智能体构建器</div>
+                            <div class="builder-canvas">
+                                <div class="builder-node trigger">
+                                    <span class="node-icon">&#9889;</span>
+                                    <span class="node-label">触发器</span>
+                                </div>
+                                <div class="builder-connector"></div>
+                                <div class="builder-node process">
+                                    <span class="node-icon">&#9881;</span>
+                                    <span class="node-label">处理</span>
+                                </div>
+                                <div class="builder-connector"></div>
+                                <div class="builder-node action">
+                                    <span class="node-icon">&#10003;</span>
+                                    <span class="node-label">执行</span>
+                                </div>
+                            </div>
+                            <div class="builder-sidebar">
+                                <div class="builder-component">
+                                    <span>文档解析器</span>
+                                </div>
+                                <div class="builder-component">
+                                    <span>决策门控</span>
+                                </div>
+                                <div class="builder-component">
+                                    <span>API 连接器</span>
+                                </div>
+                                <div class="builder-component active">
+                                    <span>输出格式化</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Enterprise Permission System -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #fbbc04);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 4L6 8v6c0 6 4 11 8 12 4-1 8-6 8-12V8l-8-4z" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><path d="M11 14l2 2 4-4" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>企业权限架构</h3>
+                    <p>部署尊重现有组织层级的 AI。精细化访问控制确保智能体仅在授权范围内访问数据和执行操作。</p>
+                    <ul class="feature-list">
+                        <li><strong>基于角色的智能体访问</strong><span>将智能体分配到部门、团队或个人，权限自动继承</span></li>
+                        <li><strong>数据范围控制</strong><span>限制每个智能体可读取、处理和输出的数据范围</span></li>
+                        <li><strong>操作授权</strong><span>定义智能体可自主执行与需审批后方可执行的操作</span></li>
+                        <li><strong>审计与合规</strong><span>所有智能体操作的完整审计追踪，满足法规合规要求</span></li>
+                        <li><strong>SSO 与目录集成</strong><span>与 LDAP、Active Directory 和 SAML 无缝集成</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="permission-visual">
+                        <div class="perm-panel">
+                            <div class="perm-header">权限矩阵</div>
+                            <div class="perm-tree">
+                                <div class="perm-org">
+                                    <div class="perm-node root">
+                                        <span class="perm-dot"></span>
+                                        <span>组织</span>
+                                    </div>
+                                    <div class="perm-branch">
+                                        <div class="perm-node dept">
+                                            <span class="perm-dot"></span>
+                                            <span>工程部</span>
+                                            <span class="perm-badge">5 个智能体</span>
+                                        </div>
+                                        <div class="perm-node dept">
+                                            <span class="perm-dot"></span>
+                                            <span>市场部</span>
+                                            <span class="perm-badge">3 个智能体</span>
+                                        </div>
+                                        <div class="perm-node dept">
+                                            <span class="perm-dot"></span>
+                                            <span>客服部</span>
+                                            <span class="perm-badge">4 个智能体</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="perm-access-list">
+                                <div class="perm-access-item"><span class="pa-icon read"></span><span>读取：客户记录</span><span class="pa-status granted">已授权</span></div>
+                                <div class="perm-access-item"><span class="pa-icon write"></span><span>写入：客服工单</span><span class="pa-status granted">已授权</span></div>
+                                <div class="perm-access-item"><span class="pa-icon exec"></span><span>执行：退款操作</span><span class="pa-status review">需审批</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: AI Office -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #9b72cb, #7c4dff);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="4" width="18" height="20" rx="2.5" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><path d="M9 9h10M9 13h10M9 17h6" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>AI 办公自动化</h3>
+                    <p>将行政事务转化为自动化工作流。从起草文档到汇总数据、管理审批——AI 办公助手全面胜任。</p>
+                    <ul class="feature-list">
+                        <li><strong>智能文档起草</strong><span>根据简要指令或模板生成合同、报告和备忘录</span></li>
+                        <li><strong>数据汇总</strong><span>自动将多来源数据整合为统一格式的报告</span></li>
+                        <li><strong>智能日程管理</strong><span>AI 辅助日历管理、会议协调和冲突解决</span></li>
+                        <li><strong>审批流程支持</strong><span>起草提交、附上支撑材料并路由至审批链</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="office-visual">
+                        <div class="office-demo">
+                            <div class="office-header">AI 办公智能体</div>
+                            <div class="office-conversation">
+                                <div class="office-msg user">
+                                    <span class="office-msg-label">您</span>
+                                    <p>使用销售和运营数据库，起草 Q3 财务汇总报告。</p>
+                                </div>
+                                <div class="office-msg agent">
+                                    <span class="office-msg-label">AI 办公</span>
+                                    <p>报告已生成。核心发现：</p>
+                                    <ul>
+                                        <li>营收环比增长 23%</li>
+                                        <li>运营成本降低 8%</li>
+                                        <li>已附上 3 条建议</li>
+                                    </ul>
+                                    <div class="office-output">
+                                        <span class="output-file"><svg width="12" height="12" viewBox="0 0 12 12"><rect x="2" y="1" width="8" height="10" rx="1" fill="none" stroke="currentColor" stroke-width="1"/><path d="M4 4h4M4 6h4M4 8h2" stroke="currentColor" stroke-width="0.7" stroke-linecap="round"/></svg> Q3_汇总报告.pdf</span>
+                                        <span class="output-file"><svg width="12" height="12" viewBox="0 0 12 12"><rect x="2" y="1" width="8" height="10" rx="1" fill="none" stroke="currentColor" stroke-width="1"/><path d="M4 4h4M4 6h4M4 8h2" stroke="currentColor" stroke-width="0.7" stroke-linecap="round"/></svg> 数据附录.xlsx</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: AI Programming -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #4285f4, #1a73e8);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M9 8L5 14l4 6M19 8l4 6-4 6" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M16 5l-4 18" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/></svg>
+                    </div>
+                    <h3>AI 编程助手</h3>
+                    <p>用理解代码库的 AI 赋能开发团队。生成代码、扫描漏洞、优化脚本并生成技术文档。</p>
+                    <ul class="feature-list">
+                        <li><strong>上下文感知代码生成</strong><span>生成符合项目编码规范的函数、类和模块</span></li>
+                        <li><strong>漏洞扫描</strong><span>持续安全分析，提供 OWASP Top 10 及以上修复建议</span></li>
+                        <li><strong>脚本优化</strong><span>分析和重构代码，提升性能、可读性和可维护性</span></li>
+                        <li><strong>API 文档</strong><span>自动生成并维护 API 文档、变更日志和开发指南</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="code-visual">
+                        <div class="code-panel">
+                            <div class="code-header">
+                                <div class="code-dots"><span></span><span></span><span></span></div>
+                                <span class="code-filename">api_service.py</span>
+                            </div>
+                            <div class="code-body">
+                                <div class="code-line"><span class="ln">1</span><span class="kw">async def</span> <span class="fn">process_order</span>(order_id):</div>
+                                <div class="code-line"><span class="ln">2</span>    order = <span class="kw">await</span> db.get(order_id)</div>
+                                <div class="code-line"><span class="ln">3</span>    <span class="kw">if</span> order.status == <span class="str">"pending"</span>:</div>
+                                <div class="code-line ai-generated"><span class="ln">4</span>        <span class="comment"># AI: 新增验证逻辑</span></div>
+                                <div class="code-line ai-generated"><span class="ln">5</span>        <span class="kw">await</span> validate_inventory(order)</div>
+                                <div class="code-line ai-generated"><span class="ln">6</span>        <span class="kw">await</span> charge_payment(order)</div>
+                                <div class="code-line ai-generated"><span class="ln">7</span>        order.status = <span class="str">"confirmed"</span></div>
+                                <div class="code-line"><span class="ln">8</span>    <span class="kw">return</span> order</div>
+                            </div>
+                            <div class="code-ai-badge">
+                                <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="4" fill="#9b72cb" opacity="0.8"/><path d="M4 6l1.5 1.5L8 5" fill="none" stroke="white" stroke-width="1" stroke-linecap="round"/></svg>
+                                <span>AI 生成 4 行代码 &bull; 安全已检查</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5: Intelligent Customer Service -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #00c853);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M6 10c0-3.5 3.5-5 8-5s8 1.5 8 5v4c0 3-2.5 5-5 5h-2l-3 3v-3H9c-2 0-3-2-3-5v-4z" fill="white" opacity="0.2" stroke="white" stroke-width="2"/><circle cx="11" cy="12" r="1.5" fill="white"/><circle cx="14" cy="12" r="1.5" fill="white"/><circle cx="17" cy="12" r="1.5" fill="white"/></svg>
+                    </div>
+                    <h3>智能客服</h3>
+                    <p>用理解上下文、维护对话历史并知道何时升级的 AI 即时解决客户咨询。提供一致、全天候的大规模支持。</p>
+                    <ul class="feature-list">
+                        <li><strong>多渠道支持</strong><span>在统一系统中处理来自聊天、邮件、电话和社交媒体的咨询</span></li>
+                        <li><strong>智能工单分配</strong><span>自动分类问题并即时路由至合适的客服或部门</span></li>
+                        <li><strong>知识库 AI</strong><span>自学习知识库，基于解决数据持续优化回答质量</span></li>
+                        <li><strong>人工转接</strong><span>需要时可将完整上下文无缝转交给人工客服</span></li>
+                        <li><strong>满意度分析</strong><span>追踪 CSAT、解决时长，识别服务改进方向</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="cs-visual">
+                        <div class="cs-panel">
+                            <div class="cs-header">客服仪表盘</div>
+                            <div class="cs-stats-row">
+                                <div class="cs-stat"><span class="cs-val">142</span><span class="cs-lbl">今日已解决</span></div>
+                                <div class="cs-stat"><span class="cs-val">98%</span><span class="cs-lbl">满意度评分</span></div>
+                                <div class="cs-stat"><span class="cs-val">&lt;30秒</span><span class="cs-lbl">平均响应</span></div>
+                            </div>
+                            <div class="cs-conversation">
+                                <div class="cs-msg customer">
+                                    <span class="cs-name">客户</span>
+                                    <p>我想退回订单 #4521</p>
+                                </div>
+                                <div class="cs-msg ai">
+                                    <span class="cs-name">AI 智能体</span>
+                                    <p>已找到订单 #4521。您的退货符合条件。我已发起退货流程并将退货标签发送至您的邮箱。退款将在 3-5 个工作日内处理。</p>
+                                    <span class="cs-auto-badge">自动解决</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Features -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>开箱即用的企业级能力</h2>
+                <p>安全、合规和弹性内建于每一层</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V7l-8-5z" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M9 12l2 2 4-4" fill="none" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg><h5>私有化部署</h5><p>本地或私有云——数据永不离开您的基础设施</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M3 10h18" stroke="#4285f4" stroke-width="1"/><circle cx="7" cy="7" r="1" fill="#4285f4"/><circle cx="10" cy="7" r="1" fill="#4285f4"/></svg><h5>自定义知识库</h5><p>用企业专有数据、SOP 和行业知识训练智能体</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M8 12h8M12 8v8" stroke="#34a853" stroke-width="1.5" stroke-linecap="round"/></svg><h5>多语言支持</h5><p>智能体理解并以 20+ 种语言流畅回复</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="#ea4335" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg><h5>API 集成</h5><p>REST API、Webhook 及 ERP/CRM/自定义系统连接器</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M12 7v5l3 3" fill="none" stroke="#fbbc04" stroke-width="1.8" stroke-linecap="round"/></svg><h5>持续学习</h5><p>智能体通过反馈循环和性能优化持续进步</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M4 22v-7" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round"/></svg><h5>合规就绪</h5><p>内建 SOC 2、GDPR 及行业特定合规框架</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="2" y="6" width="9" height="12" rx="1.5" fill="none" stroke="#1a73e8" stroke-width="1.5"/><rect x="13" y="4" width="9" height="16" rx="1.5" fill="none" stroke="#1a73e8" stroke-width="1.5"/></svg><h5>移动端访问</h5><p>随时随地从任何设备管理和交互智能体</p></div>
+                <div class="mini-feature"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="#34a853" stroke-width="1.5"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="#34a853" stroke-width="1.5" opacity="0.6"/></svg><h5>弹性架构</h5><p>水平自动扩展，支持数千并发任务</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>立即开启自动化</h2>
+                <p>选择适合您组织需求的方案</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>入门版</h4>
+                        <div class="price-amount">$49</div>
+                        <span class="price-period">每用户 / 月</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>含 3 个 AI 智能体</li>
+                        <li>每月 5,000 次任务</li>
+                        <li>基础知识库</li>
+                        <li>邮件支持</li>
+                        <li>标准集成</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn">立即开始</a>
+                </div>
+                <div class="pricing-card popular">
+                    <span class="popular-badge">最受欢迎</span>
+                    <div class="pricing-header">
+                        <h4>商业版</h4>
+                        <div class="price-amount">$99</div>
+                        <span class="price-period">每用户 / 月</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>全部 9 个 AI 智能体</li>
+                        <li>无限任务</li>
+                        <li>自定义知识库</li>
+                        <li>优先支持</li>
+                        <li>高级集成</li>
+                        <li>智能体工作流构建器</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn btn-ai">免费试用</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>企业版</h4>
+                        <div class="price-amount">定制</div>
+                        <span class="price-period">量身定制价格</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>包含商业版全部功能</li>
+                        <li>私有化部署</li>
+                        <li>定制智能体开发</li>
+                        <li>企业 SSO 与权限</li>
+                        <li>专属客户成功团队</li>
+                        <li>定制 SLA</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary pricing-btn">联系销售</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>准备好部署真正工作的 AI 了吗？</h2>
+                <p>体验交付完成工作的企业 AI 智能体——而非仅仅是工具。立即开始免费试用。</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">免费试用</a>
+                    <a href="#" class="btn-secondary btn-large">预约演示</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36"><p class="footer-tagline">构建企业科技的未来。</p></div>
+                <div class="footer-links"><h5>产品</h5><a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a><a href="workup.html">Workup</a><a href="#">OORT.AI</a><a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a><a href="classroom.html">云课堂</a></div>
+                <div class="footer-links"><h5>解决方案</h5><a href="messenger.html">即时通讯</a><a href="clouddisk.html">云盘</a><a href="email.html">企业邮箱</a><a href="approval.html">智能审批</a><a href="dispatch.html">指挥调度</a><a href="fieldmanager.html">外勤管理</a></div>
+                <div class="footer-links"><h5>公司</h5><a href="about.html">关于我们</a><a href="#">招贤纳士</a><a href="#">博客</a><a href="contact.html">联系我们</a><a href="#">隐私政策</a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 OortCloud Technology. 保留所有权利。</p><div class="footer-social"><a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a><a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a><a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a></div></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

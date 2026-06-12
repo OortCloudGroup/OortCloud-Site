@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Manager - Póster del Producto</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .poster {
+    width: 800px;
+    min-height: 2000px;
+    background: linear-gradient(175deg, #0a0e1a 0%, #0d1529 25%, #091322 50%, #060d1a 75%, #040810 100%);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+  }
+
+  /* Background grid pattern */
+  .poster::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 0;
+  }
+
+  /* Glow orbs */
+  .glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .glow-orb.top-right {
+    width: 300px; height: 300px;
+    background: rgba(0, 150, 255, 0.12);
+    top: -50px; right: -50px;
+  }
+  .glow-orb.mid-left {
+    width: 250px; height: 250px;
+    background: rgba(0, 255, 200, 0.08);
+    top: 600px; left: -80px;
+  }
+  .glow-orb.bottom {
+    width: 350px; height: 350px;
+    background: rgba(0, 100, 255, 0.1);
+    bottom: 100px; right: -100px;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    padding: 50px 48px;
+  }
+
+  /* ---- HEADER ---- */
+  .header {
+    margin-bottom: 24px;
+  }
+  .logo-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .logo-icon {
+    width: 48px; height: 48px;
+    background: linear-gradient(135deg, #00b4ff, #0066cc);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 24px rgba(0, 150, 255, 0.3);
+  }
+  .logo-icon svg { width: 28px; height: 28px; }
+  .logo-text {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: #fff;
+  }
+
+  .divider-line {
+    height: 1px;
+    background: linear-gradient(90deg, #00b4ff 0%, rgba(0,180,255,0.1) 100%);
+    margin-bottom: 32px;
+  }
+
+  .hero-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+  }
+  .hero-title .highlight {
+    background: linear-gradient(90deg, #00d4ff, #0088ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .tagline {
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.7);
+    max-width: 600px;
+    margin-bottom: 36px;
+  }
+
+  /* ---- HERO IMAGE ---- */
+  .hero-image-wrapper {
+    position: relative;
+    margin: 0 -48px 40px;
+    border-top: 1px solid rgba(0, 180, 255, 0.15);
+    border-bottom: 1px solid rgba(0, 180, 255, 0.15);
+  }
+  .hero-image-wrapper img {
+    width: 100%;
+    display: block;
+  }
+  .hero-image-wrapper::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 120px;
+    background: linear-gradient(transparent, #0d1529);
+    z-index: 1;
+  }
+  .hero-image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 60px;
+    background: linear-gradient(#0d1529, transparent);
+    z-index: 1;
+  }
+
+  /* ---- STATS BAR ---- */
+  .stats-bar {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 44px;
+  }
+  .stat-item {
+    flex: 1;
+    text-align: center;
+    padding: 20px 10px;
+    background: rgba(0, 150, 255, 0.06);
+    border: 1px solid rgba(0, 180, 255, 0.12);
+    border-radius: 12px;
+  }
+  .stat-number {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #00d4ff, #0088ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .stat-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 4px;
+  }
+
+  /* ---- SECTION TITLE ---- */
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #00b4ff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    line-height: 1.2;
+  }
+
+  /* ---- FEATURE CARDS ---- */
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 44px;
+  }
+  .feature-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(0, 180, 255, 0.1);
+    border-radius: 16px;
+    padding: 28px 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+  .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    border-radius: 4px 0 0 4px;
+  }
+  .feature-card.workforce::before { background: linear-gradient(180deg, #00d4ff, #0066cc); }
+  .feature-card.fleet::before { background: linear-gradient(180deg, #ff8800, #cc5500); }
+  .feature-card.facility::before { background: linear-gradient(180deg, #00cc88, #008855); }
+  .feature-card.tracking::before { background: linear-gradient(180deg, #aa66ff, #6633cc); }
+  .feature-card.ai-vision::before { background: linear-gradient(180deg, #ff4466, #cc2244); }
+  .feature-card.im-channel::before { background: linear-gradient(180deg, #44aaff, #2266dd); }
+
+  .feature-icon {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  .feature-icon svg { width: 24px; height: 24px; }
+  .workforce .feature-icon { background: rgba(0, 180, 255, 0.12); }
+  .fleet .feature-icon { background: rgba(255, 136, 0, 0.12); }
+  .facility .feature-icon { background: rgba(0, 204, 136, 0.12); }
+  .tracking .feature-icon { background: rgba(170, 102, 255, 0.12); }
+  .ai-vision .feature-icon { background: rgba(255, 68, 102, 0.12); }
+  .im-channel .feature-icon { background: rgba(68, 170, 255, 0.12); }
+
+  .feature-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .feature-desc {
+    font-size: 13px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.55);
+  }
+
+  /* ---- SHOWCASE GALLERY ---- */
+  .showcase { margin-bottom: 44px; }
+  .showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .showcase-item {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 180, 255, 0.15);
+    background: rgba(255,255,255,0.02);
+  }
+  .showcase-item img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+  }
+  .showcase-caption {
+    padding: 14px 18px;
+    background: rgba(0, 20, 50, 0.6);
+    border-top: 1px solid rgba(0, 180, 255, 0.1);
+  }
+  .showcase-caption-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+  }
+  .showcase-caption-desc {
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.5;
+  }
+
+  /* ---- CAPABILITIES LIST ---- */
+  .capabilities {
+    margin-bottom: 44px;
+  }
+  .cap-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 24px;
+  }
+  .cap-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+  }
+  .cap-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #00b4ff;
+    box-shadow: 0 0 8px rgba(0, 180, 255, 0.4);
+    flex-shrink: 0;
+  }
+
+  /* ---- WORKFLOW ---- */
+  .workflow {
+    margin-bottom: 44px;
+  }
+  .workflow-steps {
+    display: flex;
+    gap: 0;
+    align-items: flex-start;
+  }
+  .workflow-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+  }
+  .workflow-step::after {
+    content: '';
+    position: absolute;
+    top: 22px;
+    right: -50%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(0,180,255,0.4), rgba(0,180,255,0.05));
+    z-index: 0;
+  }
+  .workflow-step:last-child::after { display: none; }
+  .step-num {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: rgba(0, 150, 255, 0.1);
+    border: 2px solid rgba(0, 180, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #00d4ff;
+    margin: 0 auto 12px;
+    position: relative;
+    z-index: 1;
+  }
+  .step-label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .step-desc {
+    font-size: 11px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.5;
+  }
+
+  /* ---- CTA / FOOTER ---- */
+  .footer {
+    border-top: 1px solid rgba(0, 180, 255, 0.1);
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .cta-block {}
+  .cta-text {
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 12px;
+  }
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #0088ff, #0055cc);
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 24px rgba(0, 100, 255, 0.3);
+  }
+  .footer-brand {
+    text-align: right;
+  }
+  .footer-brand-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 3px;
+  }
+  .footer-url {
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+    margin-top: 4px;
+  }
+
+  /* ---- DECORATIVE ELEMENTS ---- */
+  .deco-line-h {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0,180,255,0.15), transparent);
+    margin: 36px 0;
+  }
+
+  .corner-marks {
+    position: absolute;
+    width: 24px; height: 24px;
+    border: 2px solid rgba(0, 180, 255, 0.2);
+  }
+  .corner-marks.tl { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+  .corner-marks.tr { top: 20px; right: 20px; border-left: none; border-bottom: none; }
+  .corner-marks.bl { bottom: 20px; left: 20px; border-right: none; border-top: none; }
+  .corner-marks.br { bottom: 20px; right: 20px; border-left: none; border-top: none; }
+</style>
+</head>
+<body>
+
+<div class="poster">
+  <!-- Decorative -->
+  <div class="glow-orb top-right"></div>
+  <div class="glow-orb mid-left"></div>
+  <div class="glow-orb bottom"></div>
+  <div class="corner-marks tl"></div>
+  <div class="corner-marks tr"></div>
+  <div class="corner-marks bl"></div>
+  <div class="corner-marks br"></div>
+
+  <div class="content">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="logo-row">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+            <line x1="12" y1="22" x2="12" y2="15.5"/>
+            <polyline points="22 8.5 12 15.5 2 8.5"/>
+            <polyline points="2 15.5 12 8.5 22 15.5"/>
+            <line x1="12" y1="2" x2="12" y2="8.5"/>
+          </svg>
+        </div>
+        <div class="logo-text">FIELD MANAGER</div>
+      </div>
+      <div class="divider-line"></div>
+      <div class="tagline">Plataforma Unificada de Operaciones de Campo</div>
+      <h1 class="hero-title">
+        Comando.<br/>
+        Despacho.<br/>
+        <span class="highlight">Control.</span>
+      </h1>
+      <p class="description">
+        Una plataforma de gestión de campo de nueva generación que unifica el despacho de personal,
+        la coordinación de flotas, la supervisión de instalaciones, el seguimiento de trayectorias en tiempo real,
+        las alertas visuales con IA y la integración de canales IM
+        en una única interfaz de comando inteligente.
+      </p>
+    </div>
+
+    <!-- Hero Image -->
+    <div class="hero-image-wrapper">
+      <img src="field-manager-poster-hero.png" alt="Descripción general de la plataforma Field Manager"/>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-number">360°</div>
+        <div class="stat-label">Conciencia Situacional</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">Tiempo Real</div>
+        <div class="stat-label">Seguimiento y Despacho</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">Todo en Uno</div>
+        <div class="stat-label">Plataforma de Comando</div>
+      </div>
+    </div>
+
+    <div class="deco-line-h"></div>
+
+    <!-- Product Showcase -->
+    <div class="showcase">
+      <div class="section-label">PRESENTACIÓN DEL PRODUCTO</div>
+      <h2 class="section-title">Interfaz de Comando Panorámica</h2>
+      <div class="showcase-grid">
+        <div class="showcase-item">
+          <img src="field-cmd-center.png" alt="Panel del Centro de Comando"/>
+          <div class="showcase-caption">
+            <div class="showcase-caption-title">Centro de Comando Inteligente</div>
+            <div class="showcase-caption-desc">Conciencia situacional de toda la ciudad con capas en tiempo real de personal, vehículos e instalaciones</div>
+          </div>
+        </div>
+        <div class="showcase-item">
+          <img src="field-infographic.png" alt="Resumen de Módulos de Funciones"/>
+          <div class="showcase-caption">
+            <div class="showcase-caption-title">Matriz de Funciones Unificada</div>
+            <div class="showcase-caption-desc">Módulos de personal, flota, instalaciones y seguimiento trabajando en coordinación perfecta</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="deco-line-h"></div>
+
+    <!-- Core Features -->
+    <div class="section-label">Módulos Principales</div>
+    <h2 class="section-title">Seis Pilares de la<br/>Gestión de Campo</h2>
+
+    <div class="features-grid">
+      <!-- Workforce -->
+      <div class="feature-card workforce">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <div class="feature-title">Gestión de Personal</div>
+        <div class="feature-desc">
+          Visibilidad en tiempo real de todo el personal en campo. Asigne tareas, monitoree el estado
+          y coordine equipos desde un panel de despacho unificado con control de acceso por roles.
+        </div>
+      </div>
+
+      <!-- Fleet -->
+      <div class="feature-card fleet">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#ff8800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="3" width="15" height="13"/>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+        </div>
+        <div class="feature-title">Operaciones de Flota</div>
+        <div class="feature-desc">
+          Rastree, despache y optimice su flota de campo en tiempo real. Monitoree el estado
+          de los vehículos, niveles de combustible y eficiencia de rutas con integración GPS en vivo.
+        </div>
+      </div>
+
+      <!-- Facility -->
+      <div class="feature-card facility">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00cc88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+            <line x1="12" y1="18" x2="12" y2="18"/>
+            <line x1="9" y1="6" x2="15" y2="6"/>
+            <line x1="9" y1="10" x2="15" y2="10"/>
+            <line x1="9" y1="14" x2="15" y2="14"/>
+          </svg>
+        </div>
+        <div class="feature-title">Supervisión de Instalaciones</div>
+        <div class="feature-desc">
+          Monitoreo integral de sitios de campo e infraestructura. Controle el acceso,
+          el cumplimiento de seguridad, el estado de equipos y las condiciones ambientales de un vistazo.
+        </div>
+      </div>
+
+      <!-- Tracking -->
+      <div class="feature-card tracking">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#aa66ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+          </svg>
+        </div>
+        <div class="feature-title">Seguimiento de Trayectorias</div>
+        <div class="feature-desc">
+          Visualice patrones de movimiento y rutas históricas de personal y vehículos.
+          Alertas de geocercas, análisis de reproducción y optimización predictiva de rutas.
+        </div>
+      </div>
+
+      <!-- AI Vision -->
+      <div class="feature-card ai-vision">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#ff4466" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+            <line x1="12" y1="1" x2="12" y2="4"/>
+            <line x1="12" y1="20" x2="12" y2="23"/>
+            <line x1="1" y1="12" x2="4" y2="12"/>
+            <line x1="20" y1="12" x2="23" y2="12"/>
+          </svg>
+        </div>
+        <div class="feature-title">Alertas con Visión IA</div>
+        <div class="feature-desc">
+          Aproveche los modelos fundamentales de visión para analizar transmisiones de cámaras en tiempo real.
+          Detecte automáticamente riesgos de seguridad, incumplimientos normativos y anomalías
+          con activación de alertas instantáneas.
+        </div>
+      </div>
+
+      <!-- IM Channel -->
+      <div class="feature-card im-channel">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#44aaff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            <line x1="9" y1="8" x2="15" y2="8"/>
+            <line x1="9" y1="12" x2="13" y2="12"/>
+          </svg>
+        </div>
+        <div class="feature-title">Integración de Canales IM</div>
+        <div class="feature-desc">
+          Envíe actualizaciones de operaciones de campo directamente a los canales IM corporativos.
+          Los gerentes remotos se mantienen informados con notificaciones en tiempo real, despacho
+          de comandos y comunicación bidireccional instantánea.
+        </div>
+      </div>
+    </div>
+
+    <div class="deco-line-h"></div>
+
+    <!-- Capabilities -->
+    <div class="capabilities">
+      <div class="section-label">Capacidades Clave</div>
+      <h2 class="section-title">Diseñado para el Campo</h2>
+      <div class="cap-list">
+        <div class="cap-item"><span class="cap-dot"></span>Seguimiento GPS de personal en tiempo real</div>
+        <div class="cap-item"><span class="cap-dot"></span>Asignación inteligente de tareas y rutas</div>
+        <div class="cap-item"><span class="cap-dot"></span>Alertas de mantenimiento y estado vehicular</div>
+        <div class="cap-item"><span class="cap-dot"></span>Geocercas y notificaciones por zona</div>
+        <div class="cap-item"><span class="cap-dot"></span>Panel de instalaciones multisitio</div>
+        <div class="cap-item"><span class="cap-dot"></span>Reproducción de trayectorias históricas</div>
+        <div class="cap-item"><span class="cap-dot"></span>Despacho de emergencia y escalación</div>
+        <div class="cap-item"><span class="cap-dot"></span>Modo sin conexión para zonas remotas</div>
+        <div class="cap-item"><span class="cap-dot"></span>Acceso y permisos basados en roles</div>
+        <div class="cap-item"><span class="cap-dot"></span>Integración con sensores IoT</div>
+        <div class="cap-item"><span class="cap-dot"></span>Detección de riesgos con visión IA</div>
+        <div class="cap-item"><span class="cap-dot"></span>Notificaciones push y comandos IM</div>
+      </div>
+    </div>
+
+    <div class="deco-line-h"></div>
+
+    <!-- Workflow -->
+    <div class="workflow">
+      <div class="section-label">Cómo Funciona</div>
+      <h2 class="section-title">Del Despacho a la Entrega</h2>
+      <div class="workflow-steps">
+        <div class="workflow-step">
+          <div class="step-num">1</div>
+          <div class="step-label">Asignar</div>
+          <div class="step-desc">Asigne personal<br/>y vehículos a sitios</div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">2</div>
+          <div class="step-label">Despachar</div>
+          <div class="step-desc">Dirija equipos por<br/>rutas optimizadas</div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">3</div>
+          <div class="step-label">Monitorear</div>
+          <div class="step-desc">Rastree el avance y<br/>condiciones del sitio en vivo</div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">4</div>
+          <div class="step-label">Analizar</div>
+          <div class="step-desc">Revise trayectorias<br/>y optimice operaciones</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="deco-line-h"></div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="cta-block">
+        <div class="cta-text">¿Listo para transformar sus operaciones de campo?</div>
+        <div class="cta-button">
+          Solicitar una Demo
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </div>
+      </div>
+      <div class="footer-brand">
+        <div class="footer-brand-name">FIELD MANAGER</div>
+        <div class="footer-url">https://www.oortcloudsmart.com</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
