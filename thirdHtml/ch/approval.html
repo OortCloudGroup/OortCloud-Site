@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能审批 - 企业工作流管理 | OortCloud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="approval.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="alternate" hreflang="zh" href="https://oortcloudsmart.com/zh/siteNew/approval.html">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="40">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">产品</a>
+                <a href="index.html#platform">平台</a>
+                <a href="index.html#enterprise">企业版</a>
+                <a href="about.html">关于我们</a>
+            </div>
+            <a href="#get-started" class="nav-cta">免费开始</a>
+            <div class="nav-right">
+                <div class="nav-lang" id="langSwitch" title="切换语言">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">中文</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en"><span class="nav-lang-item-flag">🇺🇸</span><span class="nav-lang-item-label">English</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item active" data-lang="zh"><span class="nav-lang-item-flag">🇨🇳</span><span class="nav-lang-item-label">中文</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="es"><span class="nav-lang-item-flag">🇪🇸</span><span class="nav-lang-item-label">Español</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ar"><span class="nav-lang-item-flag">🇸🇦</span><span class="nav-lang-item-label">العربية</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="de"><span class="nav-lang-item-flag">🇩🇪</span><span class="nav-lang-item-label">Deutsch</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="fr"><span class="nav-lang-item-flag">🇫🇷</span><span class="nav-lang-item-label">Français</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ja"><span class="nav-lang-item-flag">🇯🇵</span><span class="nav-lang-item-label">日本語</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="pt"><span class="nav-lang-item-flag">🇧🇷</span><span class="nav-lang-item-label">Português</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="nav-lang-item" data-lang="ru"><span class="nav-lang-item-flag">🇷🇺</span><span class="nav-lang-item-label">Русский</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="ko"><span class="nav-lang-item-flag">🇰🇷</span><span class="nav-lang-item-label">한국어</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="id"><span class="nav-lang-item-flag">🇮🇩</span><span class="nav-lang-item-label">Indonesia</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                                <div class="nav-lang-item" data-lang="tr"><span class="nav-lang-item-flag">🇹🇷</span><span class="nav-lang-item-label">Türkçe</span><svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    </div>
+                </div>
+                <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" class="nav-login" id="navLogin" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    登录
+                </a>
+                <div class="nav-user" id="navUser">
+                    <div class="nav-avatar" id="navAvatar">U</div>
+                    <span class="nav-username" id="navUsername">用户</span>
+                    <div class="nav-user-dropdown" id="navDropdown">
+                        <a href="http://platform.szkingdom.cloud:6080/bus/apaas-web/desktopHome/index.html" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            控制台
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <button id="navLogout">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            退出登录
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="切换菜单">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="approval-hero">
+        <div class="container">
+            <div class="approval-hero-grid">
+                <div class="approval-hero-content">
+                    <div class="product-breadcrumb">
+                        <a href="index.html">产品</a>
+                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <span>智能审批</span>
+                    </div>
+                    <h1>自动化决策，<span class="gradient-text-amber">加速业务</span></h1>
+                    <p class="approval-hero-desc">企业工作流管理，将复杂的审批流程转化为精简、自动化的工作流。可视化流程设计器、智能表单和AI驱动的路由——让审批更快完成。</p>
+                    <div class="hero-actions">
+                        <a href="#get-started" class="btn-primary btn-large btn-amber">开始免费试用</a>
+                        <a href="#features" class="btn-secondary btn-large">了解运作方式</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            审批周期加快60%
+                        </span>
+                        <span class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            零代码流程构建器
+                        </span>
+                    </div>
+                </div>
+                <div class="approval-hero-visual">
+                    <div class="workflow-mockup">
+                        <div class="workflow-canvas">
+                            <div class="wf-node wf-start">
+                                <div class="wf-node-icon start-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="#34a853"/><polygon points="6.5,5 6.5,11 11,8" fill="white"/></svg>
+                                </div>
+                                <span>提交</span>
+                            </div>
+                            <div class="wf-connector"></div>
+                            <div class="wf-node wf-approver">
+                                <div class="wf-node-icon approver-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="6" r="3" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M3 14c0-3 2-5 5-5s5 2 5 5" fill="none" stroke="#4285f4" stroke-width="1.5"/></svg>
+                                </div>
+                                <span>经理</span>
+                                <span class="wf-status approved">已批准</span>
+                            </div>
+                            <div class="wf-connector"></div>
+                            <div class="wf-node wf-condition">
+                                <div class="wf-node-icon condition-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 2l6 6-6 6-6-6z" fill="none" stroke="#fbbc04" stroke-width="1.5"/></svg>
+                                </div>
+                                <span>金额 > $5K？</span>
+                            </div>
+                            <div class="wf-branch">
+                                <div class="wf-branch-line left">
+                                    <span class="branch-label">是</span>
+                                </div>
+                                <div class="wf-branch-line right">
+                                    <span class="branch-label">否</span>
+                                </div>
+                            </div>
+                            <div class="wf-branch-nodes">
+                                <div class="wf-node wf-approver small">
+                                    <div class="wf-node-icon approver-icon">
+                                        <svg width="14" height="14" viewBox="0 0 16 16"><circle cx="8" cy="6" r="3" fill="none" stroke="#9b72cb" stroke-width="1.5"/><path d="M3 14c0-3 2-5 5-5s5 2 5 5" fill="none" stroke="#9b72cb" stroke-width="1.5"/></svg>
+                                    </div>
+                                    <span>财务副总裁</span>
+                                    <span class="wf-status pending">待审批</span>
+                                </div>
+                                <div class="wf-node wf-end small">
+                                    <div class="wf-node-icon end-icon">
+                                        <svg width="14" height="14" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="#34a853" opacity="0.2" stroke="#34a853" stroke-width="1.5"/><path d="M5 8l2 2 4-4" fill="none" stroke="#34a853" stroke-width="1.5" stroke-linecap="round"/></svg>
+                                    </div>
+                                    <span>完成</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="workflow-sidebar-panel">
+                            <div class="wf-panel-title">审批详情</div>
+                            <div class="wf-detail-item">
+                                <span class="wf-detail-label">类型</span>
+                                <span class="wf-detail-value">采购申请</span>
+                            </div>
+                            <div class="wf-detail-item">
+                                <span class="wf-detail-label">金额</span>
+                                <span class="wf-detail-value">$8,500.00</span>
+                            </div>
+                            <div class="wf-detail-item">
+                                <span class="wf-detail-label">提交人</span>
+                                <span class="wf-detail-value">Alex Chen</span>
+                            </div>
+                            <div class="wf-detail-item">
+                                <span class="wf-detail-label">状态</span>
+                                <span class="wf-detail-value status-active">进行中</span>
+                            </div>
+                            <div class="wf-timeline">
+                                <div class="timeline-item done">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span>已提交</span>
+                                        <span class="timeline-time">上午 10:24</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item done">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span>经理已批准</span>
+                                        <span class="timeline-time">上午 11:05</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item current">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span>财务副总裁审核</span>
+                                        <span class="timeline-time">等待中...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Impact Stats -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <span class="impact-number">60%</span>
+                    <span class="impact-label">审批周期加快</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">90%</span>
+                    <span class="impact-label">人工工作减少</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">200+</span>
+                    <span class="impact-label">预设模板</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">100%</span>
+                    <span class="impact-label">流程可视化</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="usecases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>自动化任何业务流程</h2>
+                <p>从简单的请假申请到复杂的多部门采购工作流</p>
+            </div>
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="10" y="8" width="28" height="32" rx="4" fill="none" stroke="#fbbc04" stroke-width="2.5"/>
+                            <path d="M18 18h12M18 24h8M18 30h10" stroke="#fbbc04" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="14" cy="18" r="1.5" fill="#fbbc04"/>
+                            <circle cx="14" cy="24" r="1.5" fill="#fbbc04"/>
+                            <circle cx="14" cy="30" r="1.5" fill="#fbbc04"/>
+                        </svg>
+                    </div>
+                    <h4>费用与报销</h4>
+                    <p>通过票据OCR、政策检查和基于金额阈值的多级审批，自动化费用报销流程。</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="8" y="12" width="32" height="24" rx="4" fill="none" stroke="#4285f4" stroke-width="2.5"/>
+                            <path d="M16 20h16M16 26h12M16 32h8" stroke="#4285f4" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M8 18h32" stroke="#4285f4" stroke-width="1.5" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <h4>采购订单</h4>
+                    <p>通过供应商选择、预算验证和自动路由至合适的审批人，简化采购流程。</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <circle cx="24" cy="18" r="8" fill="none" stroke="#34a853" stroke-width="2.5"/>
+                            <path d="M12 38c0-7 5-12 12-12s12 5 12 12" fill="none" stroke="#34a853" stroke-width="2.5"/>
+                            <path d="M30 16l3-3M32 20h4" stroke="#34a853" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>人事与假期管理</h4>
+                    <p>通过自动化HR工作流处理请假申请、入职、离职和员工变更。</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <path d="M12 14h24v20H12z" fill="none" stroke="#ea4335" stroke-width="2.5" rx="3"/>
+                            <path d="M12 14l12 10 12-10" fill="none" stroke="#ea4335" stroke-width="2"/>
+                            <path d="M20 38l4-4 4 4" fill="none" stroke="#ea4335" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>合同与文档</h4>
+                    <p>通过版本追踪、电子签名和合规检查，审核、标注和审批合同。</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <rect x="8" y="10" width="14" height="14" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/>
+                            <rect x="26" y="10" width="14" height="14" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/>
+                            <rect x="16" y="26" width="14" height="14" rx="3" fill="none" stroke="#9b72cb" stroke-width="2.5"/>
+                            <path d="M22 17h4M23 24v4" stroke="#9b72cb" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2"/>
+                        </svg>
+                    </div>
+                    <h4>IT与权限申请</h4>
+                    <p>通过安全策略执行，管理系统访问、软件配置和基础设施申请。</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <path d="M10 38V18l14-8 14 8v20" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linejoin="round"/>
+                            <path d="M18 38v-10h12v10" fill="none" stroke="#1a73e8" stroke-width="2"/>
+                            <path d="M20 22h8" stroke="#1a73e8" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>设施与行政</h4>
+                    <p>会议室预订、维修申请、访客通行证和办公用品订购——全部自动化。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>强大的工作流引擎，零代码即可使用</h2>
+                <p>使用直观的可视化工具设计复杂的审批流程——无需开发人员参与</p>
+            </div>
+
+            <!-- Feature 1: Visual Flow Designer -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #fbbc04, #ea4335);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="4" fill="white" opacity="0.2"/><circle cx="10" cy="10" r="3" fill="white" opacity="0.9"/><circle cx="18" cy="18" r="3" fill="white" opacity="0.9"/><path d="M12 11l4 5" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/></svg>
+                    </div>
+                    <h3>可视化流程设计器</h3>
+                    <p>拖拽式工作流构建器，将复杂流程转化为清晰的可视化流程图。几分钟内完成审批流程的设计、测试和部署——而非数周。</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>拖拽画布</strong>
+                            <span>使用审批节点、条件、分支和并行路径可视化构建流程</span>
+                        </li>
+                        <li>
+                            <strong>条件分支</strong>
+                            <span>基于金额、部门、角色或任何自定义字段值路由审批</span>
+                        </li>
+                        <li>
+                            <strong>并行与顺序审批</strong>
+                            <span>配置多级、会签、或签和顺序审批链</span>
+                        </li>
+                        <li>
+                            <strong>动态审批人</strong>
+                            <span>基于组织架构、部门负责人或项目角色自动分配审批人</span>
+                        </li>
+                        <li>
+                            <strong>流程模板</strong>
+                            <span>200+预设常用业务流程模板——即刻自定义并部署</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="designer-visual">
+                        <div class="designer-canvas">
+                            <div class="canvas-toolbar">
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5" fill="none" stroke="#5f6368" stroke-width="1.2"/></svg></div>
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="2" width="10" height="10" rx="2" fill="none" stroke="#5f6368" stroke-width="1.2"/></svg></div>
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2l5 5-5 5-5-5z" fill="none" stroke="#5f6368" stroke-width="1.2"/></svg></div>
+                                <div class="toolbar-item"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10M7 2v10" stroke="#5f6368" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+                            </div>
+                            <div class="canvas-flow">
+                                <div class="flow-node fn-start">开始</div>
+                                <div class="flow-arrow"></div>
+                                <div class="flow-node fn-task">填写表单</div>
+                                <div class="flow-arrow"></div>
+                                <div class="flow-node fn-approval">直属经理</div>
+                                <div class="flow-arrow"></div>
+                                <div class="flow-node fn-condition">预算检查</div>
+                                <div class="flow-split">
+                                    <div class="split-branch">
+                                        <span class="split-label">&gt;$10K</span>
+                                        <div class="flow-node fn-approval small">总监</div>
+                                    </div>
+                                    <div class="split-branch">
+                                        <span class="split-label">&le;$10K</span>
+                                        <div class="flow-node fn-end small">完成</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Smart Forms -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #4285f4, #34a853);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="5" y="3" width="18" height="22" rx="3" fill="white" opacity="0.9"/><path d="M9 9h10M9 13h7M9 17h8" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/><rect x="9" y="20" width="4" height="2" rx="1" fill="#34a853" opacity="0.7"/></svg>
+                    </div>
+                    <h3>智能表单构建器</h3>
+                    <p>创建能根据用户输入自适应的智能表单。丰富的字段类型、验证规则、自动计算和数据关联，让数据收集变得轻松。</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>丰富的字段类型</strong>
+                            <span>文本、数字、日期、下拉、文件上传、位置、签名、表格等30+种字段类型</span>
+                        </li>
+                        <li>
+                            <strong>条件逻辑</strong>
+                            <span>根据之前的选择显示/隐藏字段、设置必填规则和自动填充数据</span>
+                        </li>
+                        <li>
+                            <strong>自动计算</strong>
+                            <span>内置合计、税额、折扣和复杂业务计算公式</span>
+                        </li>
+                        <li>
+                            <strong>数据关联</strong>
+                            <span>从其他系统拉取数据——员工目录、项目数据库、预算记录</span>
+                        </li>
+                        <li>
+                            <strong>移动端优化</strong>
+                            <span>表单在移动端完美呈现，支持摄像头拍摄、GPS定位和离线使用</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="form-visual">
+                        <div class="form-demo">
+                            <div class="form-header">
+                                <span>采购申请</span>
+                                <span class="form-badge">草稿</span>
+                            </div>
+                            <div class="form-body">
+                                <div class="form-field">
+                                    <label>部门</label>
+                                    <div class="field-select">工程部 <svg width="10" height="10" viewBox="0 0 10 10"><path d="M3 4l2 2 2-2" fill="none" stroke="#9aa0a6" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+                                </div>
+                                <div class="form-field">
+                                    <label>物品描述</label>
+                                    <div class="field-input">MacBook Pro 16" 新员工配备</div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-field half">
+                                        <label>数量</label>
+                                        <div class="field-input">5</div>
+                                    </div>
+                                    <div class="form-field half">
+                                        <label>单价</label>
+                                        <div class="field-input">$2,499</div>
+                                    </div>
+                                </div>
+                                <div class="form-field calculated">
+                                    <label>总金额</label>
+                                    <div class="field-calculated">$12,495.00</div>
+                                    <span class="calc-note">自动计算</span>
+                                </div>
+                                <div class="form-field">
+                                    <label>附件</label>
+                                    <div class="field-upload">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 10V3M5 5l3-3 3 3M3 10v3h10v-3" fill="none" stroke="#9aa0a6" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        <span>拖放文件或点击上传</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Intelligent Routing -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #9b72cb, #4285f4);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="10" fill="white" opacity="0.2"/><path d="M9 14l3 3 7-7" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>智能路由与自动化</h3>
+                    <p>AI驱动的路由自动确定合适的审批人、升级逾期请求并处理异常——确保没有任何遗漏。</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>按组织架构自动路由</strong>
+                            <span>自动路由至提交人的直属经理、跳级上级或部门负责人</span>
+                        </li>
+                        <li>
+                            <strong>截止日期与升级</strong>
+                            <span>为每个步骤设置SLA——到期自动提醒、升级或自动批准</span>
+                        </li>
+                        <li>
+                            <strong>委托与代理</strong>
+                            <span>审批人可在休假期间将权限委托给他人，支持设定时间范围</span>
+                        </li>
+                        <li>
+                            <strong>批量审批</strong>
+                            <span>通过批量操作和快速审批，一次性审核和批准多个请求</span>
+                        </li>
+                        <li>
+                            <strong>撤回与撤销</strong>
+                            <span>提交人可撤回请求；管理员可撤销审批，并保留完整审计记录</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="routing-visual">
+                        <div class="routing-demo">
+                            <div class="routing-header">自动路由引擎</div>
+                            <div class="routing-rules">
+                                <div class="rule-item">
+                                    <div class="rule-condition">如果金额 &le; $1,000</div>
+                                    <div class="rule-arrow">→</div>
+                                    <div class="rule-action">直属经理</div>
+                                </div>
+                                <div class="rule-item">
+                                    <div class="rule-condition">如果金额 $1K - $10K</div>
+                                    <div class="rule-arrow">→</div>
+                                    <div class="rule-action">经理 + 总监</div>
+                                </div>
+                                <div class="rule-item highlight">
+                                    <div class="rule-condition">如果金额 &gt; $10,000</div>
+                                    <div class="rule-arrow">→</div>
+                                    <div class="rule-action">经理 + 副总裁 + CFO</div>
+                                </div>
+                            </div>
+                            <div class="routing-extras">
+                                <div class="extra-tag">
+                                    <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="none" stroke="#ea4335" stroke-width="1.2"/><path d="M6 3.5v3l2 1" fill="none" stroke="#ea4335" stroke-width="1" stroke-linecap="round"/></svg>
+                                    SLA：每步24小时
+                                </div>
+                                <div class="extra-tag">
+                                    <svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 2v4l3 2" fill="none" stroke="#fbbc04" stroke-width="1.2" stroke-linecap="round"/><circle cx="6" cy="6" r="5" fill="none" stroke="#fbbc04" stroke-width="1.2"/></svg>
+                                    48小时后自动升级
+                                </div>
+                                <div class="extra-tag">
+                                    <svg width="12" height="12" viewBox="0 0 12 12"><path d="M3 6l2 2 4-4" fill="none" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    低于$100自动批准
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: Analytics & Monitoring -->
+            <div class="feature-block reverse">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #34a853, #1a73e8);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="3" fill="white" opacity="0.2"/><path d="M8 18l4-5 4 3 4-8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>分析与流程挖掘</h3>
+                    <p>全面可视化每个审批流程。识别瓶颈、衡量效率，并通过数据驱动的洞察持续优化工作流。</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>实时仪表板</strong>
+                            <span>监控所有流程中待审批、已批准、已拒绝和逾期的请求</span>
+                        </li>
+                        <li>
+                            <strong>瓶颈检测</strong>
+                            <span>AI识别审批卡点位置并建议优化方案</span>
+                        </li>
+                        <li>
+                            <strong>周期时间分析</strong>
+                            <span>按流程、部门和个人审批人追踪平均审批时间</span>
+                        </li>
+                        <li>
+                            <strong>合规报告</strong>
+                            <span>生成SOX、ISO和行业特定合规要求的审计报告</span>
+                        </li>
+                        <li>
+                            <strong>导出与集成</strong>
+                            <span>将数据导出至BI工具，或通过webhook将事件推送至外部系统</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="analytics-visual">
+                        <div class="analytics-panel">
+                            <div class="analytics-header">
+                                <span>流程分析</span>
+                                <span class="analytics-period">本月</span>
+                            </div>
+                            <div class="analytics-kpis">
+                                <div class="kpi">
+                                    <span class="kpi-value">847</span>
+                                    <span class="kpi-label">总请求数</span>
+                                    <span class="kpi-trend up">+18%</span>
+                                </div>
+                                <div class="kpi">
+                                    <span class="kpi-value">4.2h</span>
+                                    <span class="kpi-label">平均周期时间</span>
+                                    <span class="kpi-trend up">-32%</span>
+                                </div>
+                                <div class="kpi">
+                                    <span class="kpi-value">96%</span>
+                                    <span class="kpi-label">批准率</span>
+                                    <span class="kpi-trend up">+3%</span>
+                                </div>
+                            </div>
+                            <div class="analytics-bars">
+                                <div class="ana-bar-item">
+                                    <span class="bar-label">费用</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 85%; background: #fbbc04;"></div></div>
+                                    <span class="bar-value">312</span>
+                                </div>
+                                <div class="ana-bar-item">
+                                    <span class="bar-label">采购</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 65%; background: #4285f4;"></div></div>
+                                    <span class="bar-value">238</span>
+                                </div>
+                                <div class="ana-bar-item">
+                                    <span class="bar-label">请假</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 50%; background: #34a853;"></div></div>
+                                    <span class="bar-value">184</span>
+                                </div>
+                                <div class="ana-bar-item">
+                                    <span class="bar-label">其他</span>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 30%; background: #9b72cb;"></div></div>
+                                    <span class="bar-value">113</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5: Mobile & Notifications -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <div class="feature-icon-badge" style="background: linear-gradient(135deg, #ea4335, #9b72cb);">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="8" y="3" width="12" height="22" rx="3" fill="white" opacity="0.9"/><circle cx="14" cy="21" r="1.5" fill="#ea4335" opacity="0.5"/><path d="M11 7h6" stroke="#ea4335" stroke-width="1" opacity="0.3" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>移动优先与通知</h3>
+                    <p>随时随地在任何设备上审批。实时推送通知、应用内消息和Workup集成，确保审批人不会错过任何请求。</p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>移动审批</strong>
+                            <span>功能完整的移动应用——查看详情、添加评论，一键审批</span>
+                        </li>
+                        <li>
+                            <strong>推送通知</strong>
+                            <span>需要操作时，通过推送、邮件、短信和即时通讯即时提醒</span>
+                        </li>
+                        <li>
+                            <strong>聊天审批</strong>
+                            <span>直接从即时通讯或Workup审批，无需打开应用</span>
+                        </li>
+                        <li>
+                            <strong>离线支持</strong>
+                            <span>即使没有网络也可以查看和审批——恢复连接后自动同步</span>
+                        </li>
+                        <li>
+                            <strong>Workup集成</strong>
+                            <span>嵌入Workup超级应用中，无缝接入日常工作流</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="mobile-visual">
+                        <div class="phone-mockup">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <div class="phone-header">
+                                    <span>审批</span>
+                                    <span class="phone-badge">3</span>
+                                </div>
+                                <div class="phone-card">
+                                    <div class="phone-card-header">
+                                        <div class="pc-avatar" style="background: #4285f4;">AC</div>
+                                        <div class="pc-info">
+                                            <strong>Alex Chen</strong>
+                                            <span>采购申请 &bull; $8,500</span>
+                                        </div>
+                                    </div>
+                                    <div class="phone-card-actions">
+                                        <button class="pc-btn reject">拒绝</button>
+                                        <button class="pc-btn approve">批准</button>
+                                    </div>
+                                </div>
+                                <div class="phone-card">
+                                    <div class="phone-card-header">
+                                        <div class="pc-avatar" style="background: #34a853;">LW</div>
+                                        <div class="pc-info">
+                                            <strong>Lisa Wang</strong>
+                                            <span>请假申请 &bull; 3天</span>
+                                        </div>
+                                    </div>
+                                    <div class="phone-card-actions">
+                                        <button class="pc-btn reject">拒绝</button>
+                                        <button class="pc-btn approve">批准</button>
+                                    </div>
+                                </div>
+                                <div class="phone-card">
+                                    <div class="phone-card-header">
+                                        <div class="pc-avatar" style="background: #fbbc04;">MR</div>
+                                        <div class="pc-info">
+                                            <strong>Mike Roberts</strong>
+                                            <span>费用报销 &bull; $342</span>
+                                        </div>
+                                    </div>
+                                    <div class="phone-card-actions">
+                                        <button class="pc-btn reject">拒绝</button>
+                                        <button class="pc-btn approve">批准</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Features Grid -->
+    <section class="more-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>企业工作流所需的一切功能</h2>
+                <p>更多能力让智能审批成为完整的解决方案</p>
+            </div>
+            <div class="mini-features-grid">
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="none" stroke="#fbbc04" stroke-width="1.5" rx="2"/><path d="M9 9h6v6H9z" fill="#fbbc04" opacity="0.2"/><path d="M4 9h16M9 4v16" stroke="#fbbc04" stroke-width="1"/></svg>
+                    <h5>打印与导出</h5>
+                    <p>导出审批记录为PDF含完整历史，或打印格式化文档</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" fill="none" stroke="#4285f4" stroke-width="1.5"/><path d="M8 12h8M12 8v8" stroke="#4285f4" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>自定义字段</h5>
+                    <p>通过自定义字段类型、查找表和业务逻辑扩展表单</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    <h5>API与Webhook</h5>
+                    <p>从外部系统触发审批，并通过REST API推送结果</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" rx="1" fill="none" stroke="#9b72cb" stroke-width="1.5"/></svg>
+                    <h5>多语言</h5>
+                    <p>完整的国际化支持——表单和流程支持20+种语言</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z" fill="none" stroke="#ea4335" stroke-width="1.5"/><path d="M12 6v6l4 2" fill="none" stroke="#ea4335" stroke-width="1.8" stroke-linecap="round"/></svg>
+                    <h5>SLA管理</h5>
+                    <p>为每个流程定义响应时间目标，支持自动升级规则</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V7l-8-5z" fill="none" stroke="#1a73e8" stroke-width="1.5"/><path d="M9 12l2 2 4-4" fill="none" stroke="#1a73e8" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h5>电子签名</h5>
+                    <p>具有证书验证的具有法律效力的电子签名</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M5 20c0-4 3-7 7-7s7 3 7 7" fill="none" stroke="#fbbc04" stroke-width="1.5"/><path d="M16 4l2 2-2 2" stroke="#fbbc04" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+                    <h5>委托规则</h5>
+                    <p>设置审批人休假或不在时自动委托规则</p>
+                </div>
+                <div class="mini-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="#34a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    <h5>数据导出</h5>
+                    <p>将所有审批数据导出至Excel、CSV或连接至数据仓库</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>随您成长的方案</h2>
+                <p>免费开始，随着工作流规模升级</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>入门版</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">$4</span>
+                            <span class="price-period">/用户/月</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>最多50位用户</li>
+                        <li>10个自定义工作流</li>
+                        <li>基础表单构建器</li>
+                        <li>邮件通知</li>
+                        <li>邮件支持</li>
+                    </ul>
+                    <a href="#" class="btn-secondary pricing-btn">开始免费试用</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">最受欢迎</div>
+                    <div class="pricing-header">
+                        <h4>商业版</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">$9</span>
+                            <span class="price-period">/用户/月</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>无限用户</li>
+                        <li>无限工作流</li>
+                        <li>高级表单与路由</li>
+                        <li>分析仪表板</li>
+                        <li>API访问</li>
+                        <li>优先支持</li>
+                    </ul>
+                    <a href="#" class="btn-primary pricing-btn btn-amber">开始免费试用</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>企业版</h4>
+                        <div class="pricing-price">
+                            <span class="price-amount">定制</span>
+                            <span class="price-period"></span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>包含商业版所有功能</li>
+                        <li>私有化部署</li>
+                        <li>自定义集成</li>
+                        <li>电子签名与DLP</li>
+                        <li>专属客户成功经理</li>
+                        <li>现场培训</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary pricing-btn">联系销售</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>准备好简化您的审批流程了吗？</h2>
+                <p>加入数百家已通过智能审批消除审批瓶颈的组织。</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-large">开始免费试用</a>
+                    <a href="#" class="btn-secondary btn-large">申请演示</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img class="logo-icon" src="https://oortcloudsmart.com/asset/logo1.SMrFzNnm.png" alt="OortCloud Logo" height="36">
+                    <p class="footer-tagline">构建企业科技的未来。</p>
+                </div>
+                <div class="footer-links">
+                    <h5>产品</h5>
+                    <a href="https://vls.oortcloudsmart.com/en/" target="_blank">VLStream</a>
+                    <a href="workup.html">Workup</a>
+                    <a href="oortai.html">OORT.AI</a>
+                    <a href="https://sh.oortcloudsmart.com/en/" target="_blank">OORT.SH</a>
+                    <a href="classroom.html">云课堂</a>
+                </div>
+                <div class="footer-links">
+                    <h5>解决方案</h5>
+                    <a href="messenger.html">即时通讯</a>
+                    <a href="clouddisk.html">云盘</a>
+                    <a href="email.html">企业邮箱</a>
+                    <a href="#">智能审批</a>
+                    <a href="dispatch.html">指挥调度</a>
+                    <a href="fieldmanager.html">外勤管理</a>
+                </div>
+                <div class="footer-links">
+                    <h5>公司</h5>
+                    <a href="about.html">关于我们</a>
+                    <a href="#">招贤纳士</a>
+                    <a href="#">博客</a>
+                    <a href="contact.html">联系我们</a>
+                    <a href="#">隐私政策</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OortCloud Technology. 保留所有权利。</p>
+                <div class="footer-social">
+                    <a href="https://x.com/zhngxulin311636" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg></a>
+                    <a href="https://www.linkedin.com/in/xuelian-zhang-88b1633b3/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></svg></a>
+                    <a href="https://github.com/OortCloudGroup" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
