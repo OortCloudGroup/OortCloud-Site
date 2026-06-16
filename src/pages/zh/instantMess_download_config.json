@@ -1,0 +1,32 @@
+{
+  "im": {
+    "sdk": "https://github.com/OortCloudGroup/SDK-Demo/releases",
+    "demo": "https://github.com/OortCloudGroup/SDK-Demo/releases",
+    "log": "https://github.com/OortCloudGroup/SDK-Demo/releases"
+  },
+  "appMarket": {
+    "sdk": "https://github.com/OortCloudGroup/SDK-Demo/releases",
+    "demo": "https://github.com/OortCloudGroup/SDK-Demo/releases",
+    "log": "https://github.com/OortCloudGroup/SDK-Demo/releases"
+  },
+  "imAppMarket": {
+    "sdk": "",
+    "demo": "",
+    "log": ""
+  },
+  "audioVideo": {
+    "sdk": "",
+    "demo": "",
+    "log": ""
+  },
+  "imAppMarketAudioVideo": {
+    "sdk": "",
+    "demo": "",
+    "log": ""
+  },
+  "homeImAppMarketAudioVideo": {
+    "sdk": "",
+    "demo": "",
+    "log": ""
+  }
+}

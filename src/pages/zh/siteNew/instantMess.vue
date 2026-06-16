@@ -92,91 +92,21 @@
           下载
         </div>
         <div class="cl_list">
-          <div class="w1380 flexRowAC cl_list_jc">
-            <div class="cl_item">
-              <img class="cl_item_img" src="@/assets/software/instantMess/icon_dow_yhql.png" />
-              <span class="cl_item_title">IM</span>
-              <span class="cl_item_v">版本号：V3.1.06</span>
+          <div v-for="(row, rowIndex) in downloadRows" :key="rowIndex" class="w1380 flexRowAC cl_list_jc">
+            <div v-for="item in row" :key="item.key" class="cl_item">
+              <img class="cl_item_img" :src="item.icon" />
+              <span class="cl_item_title">{{ item.title }}</span>
+              <span class="cl_item_v">版本号：{{ item.version }}</span>
               <div class="cl_item_bt">
-                <span class="cl_bt cl_item_bt1">SDK下载</span>
-                <span class="cl_bt cl_item_bt2">Demo下载</span>
+                <a class="cl_bt cl_item_bt1" :href="getDownloadLink(item.key, 'sdk')" target="_blank" rel="noopener">
+                  SDK下载
+                </a>
+                <a class="cl_bt cl_item_bt2" :href="getDownloadLink(item.key, 'demo')" target="_blank" rel="noopener">
+                  Demo下载
+                </a>
               </div>
               <div class="cl_item_b">
-                <span class="cl_item_d">Demo下载</span>
-                <span class="cl_item_line" />
-                <span class="cl_item_d">更新日志</span>
-              </div>
-            </div>
-            <div class="cl_item">
-              <img class="cl_item_img" src="@/assets/software/instantMess/icon_dow_yhql2.png" />
-              <span class="cl_item_title">应用市场</span>
-              <span class="cl_item_v">版本号：V3.1.06</span>
-              <div class="cl_item_bt">
-                <span class="cl_bt cl_item_bt1">SDK下载</span>
-                <span class="cl_bt cl_item_bt2">Demo下载</span>
-              </div>
-              <div class="cl_item_b">
-                <span class="cl_item_d">Demo下载</span>
-                <span class="cl_item_line" />
-                <span class="cl_item_d">更新日志</span>
-              </div>
-            </div>
-            <div class="cl_item">
-              <img class="cl_item_img" src="@/assets/software/instantMess/icon_dow_yhql.png" />
-              <span class="cl_item_title">IM+应用市场</span>
-              <span class="cl_item_v">版本号：V3.1.06</span>
-              <div class="cl_item_bt">
-                <span class="cl_bt cl_item_bt1">SDK下载</span>
-                <span class="cl_bt cl_item_bt2">Demo下载</span>
-              </div>
-              <div class="cl_item_b">
-                <span class="cl_item_d">Demo下载</span>
-                <span class="cl_item_line" />
-                <span class="cl_item_d">更新日志</span>
-              </div>
-            </div>
-          </div>
-          <div class="w1380 flexRowAC cl_list_jc">
-            <div class="cl_item">
-              <img class="cl_item_img" src="@/assets/software/instantMess/icon_dow_yhql.png" />
-              <span class="cl_item_title">音视频</span>
-              <span class="cl_item_v">版本号：V3.1.06</span>
-              <div class="cl_item_bt">
-                <span class="cl_bt cl_item_bt1">SDK下载</span>
-                <span class="cl_bt cl_item_bt2">Demo下载</span>
-              </div>
-              <div class="cl_item_b">
-                <span class="cl_item_d">Demo下载</span>
-                <span class="cl_item_line" />
-                <span class="cl_item_d">更新日志</span>
-              </div>
-            </div>
-            <div class="cl_item">
-              <img class="cl_item_img" src="@/assets/software/instantMess/icon_dow_yhql2.png" />
-              <span class="cl_item_title">IM+应用市场+音视频</span>
-              <span class="cl_item_v">版本号：V3.1.06</span>
-              <div class="cl_item_bt">
-                <span class="cl_bt cl_item_bt1">SDK下载</span>
-                <span class="cl_bt cl_item_bt2">Demo下载</span>
-              </div>
-              <div class="cl_item_b">
-                <span class="cl_item_d">Demo下载</span>
-                <span class="cl_item_line" />
-                <span class="cl_item_d">更新日志</span>
-              </div>
-            </div>
-            <div class="cl_item">
-              <img class="cl_item_img" src="@/assets/software/instantMess/icon_dow_yhql.png" />
-              <span class="cl_item_title">首页+IM+应用市场+音视频</span>
-              <span class="cl_item_v">版本号：V3.1.06</span>
-              <div class="cl_item_bt">
-                <span class="cl_bt cl_item_bt1">SDK下载</span>
-                <span class="cl_bt cl_item_bt2">Demo下载</span>
-              </div>
-              <div class="cl_item_b">
-                <span class="cl_item_d">Demo下载</span>
-                <span class="cl_item_line" />
-                <span class="cl_item_d">更新日志</span>
+                <a class="cl_item_d" :href="getDownloadLink(item.key, 'log')" target="_blank" rel="noopener">更新日志</a>
               </div>
             </div>
           </div>
@@ -323,6 +253,7 @@
 
 <script setup>
 import { onMounted, onUnmounted, ref, computed } from 'vue'
+import downloadConfig from '../instantMess_download_config.json'
 import product5_1 from '@/assets/VLimg2.0/product5_1.png'
 import product5_2 from '@/assets/VLimg2.0/product5_2.png'
 import product5_3 from '@/assets/VLimg2.0/product5_3.png'
@@ -334,6 +265,8 @@ import bg1 from '@/assets/software/instantMess/jstx_zhdzsy_bg.png'
 import bg2 from '@/assets/software/instantMess/workup_aqtx_bg.png'
 import bg3 from '@/assets/software/instantMess/workup_yysphy_bg2.png'
 import bg4 from '@/assets/software/instantMess/workup_yysphy_bg.png'
+import iconDowYhql from '@/assets/software/instantMess/icon_dow_yhql.png'
+import iconDowYhql2 from '@/assets/software/instantMess/icon_dow_yhql2.png'
 
 definePageMeta({
   layout: 'site-new'
@@ -344,6 +277,31 @@ const downloadPDF = () => {
   link.href = '/documents/移动通讯平台V1.0技术白皮书（盖章，扫描）.pdf'
   link.download = '移动通讯平台V1.0技术白皮书（盖章，扫描）.pdf'
   link.click()
+}
+
+const DEFAULT_DOWNLOAD_LINKS = {
+  sdk: '',
+  demo: '',
+  log: ''
+}
+
+const downloadLinkConfig = ref(downloadConfig)
+
+const downloadRows = [
+  [
+    { key: 'im', title: 'IM', version: 'V1.0.0', icon: iconDowYhql, showDemoEntry: true },
+    { key: 'appMarket', title: '应用市场', version: 'V1.0.0', icon: iconDowYhql2 },
+    { key: 'imAppMarket', title: 'IM+应用市场', version: 'V1.0.0', icon: iconDowYhql }
+  ],
+  [
+    { key: 'audioVideo', title: '音视频', version: 'V1.0.0', icon: iconDowYhql },
+    { key: 'imAppMarketAudioVideo', title: 'IM+应用市场+音视频', version: 'V1.0.0', icon: iconDowYhql2 },
+    { key: 'homeImAppMarketAudioVideo', title: '首页+IM+应用市场+音视频', version: 'V1.0.0', icon: iconDowYhql }
+  ]
+]
+
+const getDownloadLink = (itemKey, linkKey) => {
+  return downloadLinkConfig.value[itemKey]?.[linkKey] || DEFAULT_DOWNLOAD_LINKS[linkKey]
 }
 
 let p5Arr = ref([])
@@ -430,8 +388,17 @@ const handleScroll = () => {
   }
 }
 
-onMounted(() => {
+onMounted(async() => {
   window.addEventListener('scroll', handleScroll)
+
+  try {
+    const res = await fetch('https://myoumuamua.com/mystatic/instantMess_download_config.json')
+    const data = await res.json()
+    if (data) {
+      downloadLinkConfig.value = data
+    }
+  } catch {
+  }
 })
 
 onUnmounted(() => {
@@ -917,18 +884,22 @@ onUnmounted(() => {
         border-radius: 8px;
         font-size: 18px;
         font-weight: bold;
+        text-decoration: none;
       }
       .cl_item_bt1{
         background: #2278FF;
         box-shadow: 0 4px 10px 0 #2278FF33;
         color: #FFFFFF;
+        cursor: pointer;
       }
 
       .cl_item_bt2{
         background: #FFFFFF;
         border: 1px solid #2278FF;
         color: #2278FF;
+        cursor: pointer;
       }
+
     }
     .cl_item_b{
       display: flex;
@@ -938,6 +909,7 @@ onUnmounted(() => {
         color: #2278FF;
         font-size: 16px;
         line-height: 24px;
+        text-decoration: none;
       }
       .cl_item_line{
         width: 1px;
