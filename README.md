@@ -1,7 +1,7 @@
 # OortCloud 官网
 
 <p align="center">
-  <img src="src/public/img/home/bg_2.png" alt="OortCloud 官网首页" width="100%" />
+  <img src="src/assets/software/gw_img.png" alt="OortCloud 官网首页" width="100%" />
 </p>
 
 <p align="center">
@@ -40,15 +40,6 @@
 - 产品白皮书、彩页、演示视频、技术资料下载。
 - 支持中英文等多语种页面入口。
 
-## 页面预览
-
-| 官网首页 | 智能体首页 |
-| --- | --- |
-| <img src="src/public/img/home/jwb.png" alt="警务宝一体机" width="420" /> | <img src="src/assets/software/gw_img.png" alt="OortCloud Super AI Agent" width="420" /> |
-
-| 指挥调度 | 私有云办公 |
-| --- | --- |
-| <img src="src/public/img/home/yzt_bg.png" alt="指挥调度一张图" width="420" /> | <img src="src/public/img/home/sypt.png" alt="私有云部署的移动安全办公云平台" width="420" /> |
 
 ## 技术栈
 
