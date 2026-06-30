@@ -4,9 +4,7 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { useRouter } from 'vue-router'
 
-const router = useRouter()
 const DEFAULT_LANGUAGE = 'en'
 const STATIC_LANGUAGE_CODES = ['en', 'es', 'ar', 'de', 'fr', 'ja', 'pt', 'ru', 'ko', 'id', 'tr']
 const SUPPORTED_LANGUAGE_CODES = ['zh', ...STATIC_LANGUAGE_CODES]
