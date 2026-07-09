@@ -262,17 +262,92 @@
       产品集群
     </div>
     <div class="website">
-      <el-tabs v-model="activeName" class="demo-tabs" @tab-click="handleClick">
+      <div class="website-switcher">
+        <div
+          v-for="row in productRows"
+          :key="row.key"
+          :class="[
+            'website-switcher__row',
+            `website-switcher__row--${row.items.length}`,
+            row.className
+          ]"
+        >
+          <div class="website-switcher__label">
+            {{ row.label }}
+          </div>
+          <div class="website-switcher__list">
+            <div
+              v-for="productKey in row.items"
+              :key="productKey"
+              :class="[
+                'website-switcher__item',
+                { 'website-switcher__item--active': activeName === productKey }
+              ]"
+              @click="setActiveProduct(productKey)"
+            >
+              <div class="website-switcher__logo">
+                <img
+                  :class="productTabs[productKey].logoClass"
+                  :src="
+                    activeName === productKey
+                      ? productTabs[productKey].iconActive
+                      : productTabs[productKey].iconInactive
+                  "
+                  alt=""
+                />
+                {{ productTabs[productKey].title }}
+              </div>
+              <div class="website-switcher__desc">
+                {{ productTabs[productKey].description }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <el-tabs v-model="activeName" class="website-panels">
         <el-tab-pane name="first">
           <template v-if="activeName === 'first'" #label>
             <div class="logo">
               <img class="img1" src="/public/img/about/product_img2.png" alt="" />OortCloud
             </div>
-            奥尔特云新一代生产力平台
+            人工智能驱动的自动化决策操作系统
           </template>
           <template v-else #label>
             <div class="logo">
               <img class="img1" src="/public/img/about/product_img1.png" alt="" />OortCloud
+            </div>
+            人工智能驱动的自动化决策操作系统
+          </template>
+          <div class="box2">
+            <div class="left">
+              <div class="lianjie bgc1">
+                <a href="https://www.oortcloudsmart.com/" target="_blank">
+                  https://www.oortcloudsmart.com/
+                </a>
+              </div>
+              <div class="fontSize1 space1">
+                OortCloud<br />
+                人工智能驱动的自动化决策操作系统<br />
+              </div>
+              <div class="detail" @click="goToDetail1">
+                了解详情
+              </div>
+            </div>
+            <div class="right">
+              <img src="/public/img/about/product_img_b1.png" alt="" />
+            </div>
+          </div>
+        </el-tab-pane>
+        <el-tab-pane name="first1">
+          <template v-if="activeName === 'first1'" #label>
+            <div class="logo">
+              <img class="img1" src="/public/img/about/product_wo1.png" alt="" />OortCloud
+            </div>
+            奥尔特云新一代生产力平台
+          </template>
+          <template v-else #label>
+            <div class="logo">
+              <img class="img1" src="/public/img/about/product_wo.png" alt="" />OortCloud
             </div>
             奥尔特云新一代生产力平台
           </template>
@@ -377,6 +452,41 @@
             </div>
           </div>
         </el-tab-pane>
+        <el-tab-pane name="third1">
+          <template v-if="activeName === 'third1'" #label>
+            <div class="logo">
+              <img class="img2" src="/public/img/about/product_img6.png" alt="" />OORT.DA
+            </div>
+            面向 AI时代 的新型数据底座
+          </template>
+          <template v-else #label>
+            <div class="logo">
+              <img class="img2" src="/public/img/about/product_img5.png" alt="" />OORT.AI
+            </div>
+            万物智能、自主服务 — 场景化实战智能体平台
+          </template>
+          <div class="box2">
+            <div class="left">
+              <div class="lianjie bgc1">
+                <a href="https://www.oortcloudsmart.com/" target="_blank">
+                  https://www.oortcloudsmart.com/
+                </a>
+              </div>
+              <div class="fontSize1 space1">
+                OORT.DA 数据平台
+              </div>
+              <div class="fontSize1 space2">
+                面向<span class="blue">AI时代</span>的新型数据底座
+              </div>
+              <div class="detail" @click="goToDetail3">
+                了解详情
+              </div>
+            </div>
+            <div class="right">
+              <img src="/public/img/about/product_img_b3.png" alt="" />
+            </div>
+          </div>
+        </el-tab-pane>
         <el-tab-pane name="fourth">
           <template v-if="activeName === 'fourth'" #label>
             <div class="logo">
@@ -421,6 +531,18 @@
 <script setup>
 import { NTabs, NTabPane, NGrid, NGridItem } from 'naive-ui'
 import { ref } from 'vue'
+import productImg1 from '../../../public/img/about/product_img1.png'
+import productImg2 from '../../../public/img/about/product_img2.png'
+import productImg3 from '../../../public/img/about/product_img3.png'
+import productImg4 from '../../../public/img/about/product_img4.png'
+import productImg5 from '../../../public/img/about/product_img5.png'
+import productImg6 from '../../../public/img/about/product_img6.png'
+import productImg7 from '../../../public/img/about/product_img7.png'
+import productImg8 from '../../../public/img/about/product_img8.png'
+import productImg9 from '../../../public/img/about/product_img9.png'
+import productImg10 from '../../../public/img/about/product_img10.png'
+import productWo from '../../../public/img/about/product_wo.png'
+import productWo1 from '../../../public/img/about/product_wo1.png'
 
 const activeTab = ref('chap1')
 
@@ -428,6 +550,74 @@ const onClickTab = (val) => {
   activeTab.value = val
 }
 const activeName = ref('first')
+const productRows = [
+  {
+    key: 'application',
+    label: '\u5E94\u7528',
+    className: 'website-switcher__row--application',
+    items: ['first', 'first1']
+  },
+  {
+    key: 'platform',
+    label: '\u5E73\u53F0',
+    className: 'website-switcher__row--platform',
+    items: ['second', 'third', 'third1']
+  },
+  {
+    key: 'foundation',
+    label: '\u5E95\u5EA7',
+    className: 'website-switcher__row--foundation',
+    items: ['fourth']
+  }
+]
+const productTabs = {
+  first: {
+    title: 'OortCloud',
+    description: '\u4EBA\u5DE5\u667A\u80FD\u9A71\u52A8\u7684\u81EA\u52A8\u5316\u51B3\u7B56\u64CD\u4F5C\u7CFB\u7EDF',
+    iconActive: productImg2,
+    iconInactive: productImg1,
+    logoClass: 'img1'
+  },
+  first1: {
+    title: 'Workup',
+    description: '\u5965\u5C14\u7279\u4E91\u65B0\u4E00\u4EE3\u751F\u4EA7\u529B\u5E73\u53F0',
+    iconActive: productWo1,
+    iconInactive: productWo,
+    logoClass: 'img1'
+  },
+  second: {
+    title: 'VLStream',
+    description: '\u51B3\u7B56\u5F0F\u0041\u0049\u89C6\u9891\u6C47\u805A\u8C03\u5EA6\u5E73\u53F0',
+    iconActive: productImg4,
+    iconInactive: productImg3,
+    logoClass: 'img2'
+  },
+  third: {
+    title: 'OORT.AI',
+    description: '\u4E07\u7269\u667A\u80FD\u3001\u81EA\u4E3B\u670D\u52A1\u002D\u573A\u666F\u5316\u5B9E\u6218\u667A\u80FD\u4F53\u5E73\u53F0',
+    iconActive: productImg10,
+    iconInactive: productImg9,
+    logoClass: 'img2'
+  },
+  third1: {
+    title: 'OORT.DA',
+    description: '\u9762\u5411\u0020\u0041\u0049\u65F6\u4EE3\u0020\u7684\u65B0\u578B\u6570\u636E\u5E93\u5E95\u5EA7',
+    iconActive: productImg6,
+    iconInactive: productImg5,
+    logoClass: 'img2'
+  },
+  fourth: {
+    title: 'OORT.SH',
+    description: '\u9762\u5411\u5F00\u53D1\u8005\u201C\u79CD\u4E0B\u667A\u6167\u6811\uFF0C\u7ED3\u51FA\u767E\u679C\u201D',
+    iconActive: productImg8,
+    iconInactive: productImg7,
+    logoClass: 'img3'
+  }
+}
+
+const setActiveProduct = (name) => {
+  activeName.value = name
+}
 
 const goToDetail1 = () => {
   window.open('https://www.oortcloudsmart.com/')
@@ -480,57 +670,145 @@ const goToDetail4 = () => {
 </script>
 
 <style lang="scss" scoped>
-:deep(.el-tabs__nav-scroll){
+.website{
   display: flex;
-  justify-content: center;
-  height: 100px;
-}
-:deep(.el-tabs__item){
-  display: flex;
-  padding-right: 100px;
   flex-direction: column;
-  justify-content: flex-start;
-  font-size: 16px;
-  font-weight: 400;
-  color: #9DA0A6;
-  .logo{
-    font-size: 28px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    .img1{
-      width: 40px;
-      height: 48px;
-      margin-right: 16px;
-    }
-    .img2{
-      width: 48px;
-      height: 48px;
-      margin-right: 16px;
-    }
-    .img3{
-      width: 45px;
-      height: 48px;
-      margin-right: 16px;
-    }
+  align-items: center;
+}
+.website-switcher{
+  width: min(1200px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.website-switcher__row{
+  width: 100%;
+  height: 188px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+.website-switcher__row--application{
+  background-color: #F4FAFF;
+  .website-switcher__label{
+    color: #2278FF;
   }
-
 }
-:deep(.el-tabs__item:hover){
+.website-switcher__row--platform{
+  background-color: #FEFFF4;
+  .website-switcher__label{
+    color: #C7AA3A;
+  }
+}
+.website-switcher__row--foundation{
+  background-color: #F4FFFD;
+  .website-switcher__label{
+    color: #22B8A6;
+  }
+}
+.website-switcher__label{
+  width: 28px;
+  flex-shrink: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 6px;
+}
+.website-switcher__list{
+  flex: 1;
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  margin: 0 auto;
+}
+.website-switcher__row--2{
+  .website-switcher__list{
+    max-width: 820px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.website-switcher__row--3{
+  .website-switcher__list{
+    max-width: 980px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.website-switcher__row--1{
+  .website-switcher__list{
+    max-width: 420px;
+    grid-template-columns: minmax(0, 420px);
+  }
+}
+.website-switcher__item{
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 108px;
+  padding: 12px 0 24px;
   color: #9DA0A6;
+  cursor: pointer;
+  justify-self: center;
 }
-:deep(.el-tabs__item.is-active){
+.website-switcher__item::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  height: 2px;
+  background-color: transparent;
+}
+.website-switcher__item--active{
   color: #2278FF;
 }
-
-:deep(#tab-second.is-active) {
-  color: #FF5E10 !important;
+.website-switcher__item--active::after{
+  background-color: #2278FF;
+}
+.website-switcher__logo{
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  .img1{
+    width: 40px;
+    height: 48px;
+    margin-right: 16px;
+  }
+  .img2{
+    width: 48px;
+    height: 48px;
+    margin-right: 16px;
+  }
+  .img3{
+    width: 45px;
+    height: 48px;
+    margin-right: 16px;
+  }
+}
+.website-switcher__desc{
+  margin-top: 14px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: inherit;
+}
+.website-panels{
+  width: 100%;
 }
 :deep(.el-tabs__header){
-  margin: 0;
+  display: none;
 }
 :deep(.el-tabs__content){
+  width: 100%;
   background-color: #F2F5FA;
 }
 
