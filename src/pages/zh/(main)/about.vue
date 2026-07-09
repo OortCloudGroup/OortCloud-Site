@@ -281,7 +281,8 @@
               :key="productKey"
               :class="[
                 'website-switcher__item',
-                { 'website-switcher__item--active': activeName === productKey }
+                { 'website-switcher__item--active': activeName === productKey },
+                { 'seco1': activeName === 'second' && productKey === 'second' }
               ]"
               @click="setActiveProduct(productKey)"
             >
@@ -334,7 +335,7 @@
               </div>
             </div>
             <div class="right">
-              <img src="/public/img/about/product_img_b1.png" alt="" />
+              <img src="/public/img/about/unLogin_img_oc.png" alt="" />
             </div>
           </div>
         </el-tab-pane>
@@ -373,7 +374,7 @@
               </div>
             </div>
             <div class="right">
-              <img src="/public/img/about/product_img_b1.png" alt="" />
+              <img src="/public/img/about/unLogin_img_wo.png" alt="" />
             </div>
           </div>
         </el-tab-pane>
@@ -406,7 +407,7 @@
               <div class="fontSize2 space1">
                 面向视觉IoT场景奥尔特云VLStream视觉赋能平台
               </div>
-              <div class="detail" @click="goToDetail2">
+              <div class="detail sebg1" @click="goToDetail2">
                 了解详情
               </div>
             </div>
@@ -436,7 +437,7 @@
                 </a>
               </div>
               <div class="fontSize1 space1">
-                OORT.AI 智能体平台
+                OORT.AI 数智平台
               </div>
               <div class="fontSize1 space2">
                 <!-- 面向<span class="blue">AI时代</span>的新型数据底座 -->
@@ -448,7 +449,7 @@
               </div>
             </div>
             <div class="right">
-              <img src="/public/img/about/product_img_b3.png" alt="" />
+              <img src="/public/img/about/unLogin_img_ai.png" alt="" />
             </div>
           </div>
         </el-tab-pane>
@@ -772,6 +773,10 @@ const goToDetail4 = () => {
 .website-switcher__item--active::after{
   background-color: #2278FF;
 }
+
+.website-switcher__item--active.seco1::after{
+  background-color: #FF5E10;
+}
 .website-switcher__logo{
   display: flex;
   align-items: center;
@@ -890,8 +895,17 @@ const goToDetail4 = () => {
   border-radius: 8px;
   margin-top: 60px;
   font-size:18px;
-  color:#fff;
+  color: #fff;
 }
+
+.sebg1 {
+  background-color: #FF5E10;
+}
+
+.seco1 {
+  color: #FF5E10;
+}
+
 .tabs {
   padding: 60px 0;
   padding-bottom: 160px;
