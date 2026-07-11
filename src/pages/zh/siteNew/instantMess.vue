@@ -304,6 +304,15 @@ const getDownloadLink = (itemKey, linkKey) => {
   return downloadLinkConfig.value[itemKey]?.[linkKey] || DEFAULT_DOWNLOAD_LINKS[linkKey]
 }
 
+/**
+ * 解析远程下载配置，兼容对象或数组末尾多余的逗号。
+ * @param {string} configText 远程配置文本
+ * @returns {Record<string, Record<string, string>>} 下载配置
+ */
+const parseDownloadConfig = (configText) => {
+  return JSON.parse(configText.replace(/,\s*([}\]])/g, '$1'))
+}
+
 let p5Arr = ref([])
 p5Arr.value = [
   { t: 'Windows', d: '版本号：V3.1.06', flag: false, img: product5_1 },
@@ -393,11 +402,15 @@ onMounted(async() => {
 
   try {
     const res = await fetch('https://myoumuamua.com/mystatic/instantMess_download_config.json')
-    const data = await res.json()
+    if (!res.ok) {
+      throw new Error(`远程下载配置请求失败：${res.status}`)
+    }
+    const data = parseDownloadConfig(await res.text())
     if (data) {
       downloadLinkConfig.value = data
     }
   } catch {
+    downloadLinkConfig.value = downloadConfig
   }
 })
 
