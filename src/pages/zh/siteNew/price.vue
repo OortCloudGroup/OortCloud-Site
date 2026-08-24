@@ -19,9 +19,6 @@
             {{ item.annual_price_desc }}
           <!-- <span class="title3" style="color: #818089;">/年</span> -->
           </div>
-          <div class="item-3 title3" style="color: #666;">
-            折合{{ (item.annual_price / 1200).toFixed(2) }}/月
-          </div>
           <div class="item-4 title3">
             {{ item.remark }}
           </div>
