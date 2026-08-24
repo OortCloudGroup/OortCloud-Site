@@ -18,10 +18,10 @@
 
     <!-- 操作按钮 -->
     <div class="btn-group">
-      <button class="btn btn-primary">
+      <button class="btn btn-primary" @click="viewDetail">
         查看详情
       </button>
-      <button class="btn btn-default">
+      <button class="btn btn-default" @click="continueBuy">
         继续选购
       </button>
     </div>
@@ -53,19 +53,35 @@
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router'
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { orderDetail } from '@/api'
 
 definePageMeta({
   layout: 'site-new'
 })
 
-const route = useRoute()
-// 解析路由参数，默认空对象防止解析报错
-const orderInfo = JSON.parse(sessionStorage.getItem('orderInfo'))
+const router = useRouter()
+const orderInfo = ref(JSON.parse(sessionStorage.getItem('orderInfo') || '{}'))
 
-// 可选：在控制台打印数据，方便调试
-console.log('订单信息：', orderInfo)
-console.log('订单信息222：', route.query.order_info)
+// 查看详情：调用订单详情接口并刷新展示
+const viewDetail = async() => {
+  if (!orderInfo.value?.order_no) return
+  try {
+    const res = await orderDetail({ order_no: orderInfo.value.order_no })
+    if (res.code === 200 && res.data?.order_info) {
+      orderInfo.value = res.data.order_info
+      sessionStorage.setItem('orderInfo', JSON.stringify(res.data.order_info))
+    }
+  } catch (err) {
+    console.log('获取订单详情失败：', err)
+  }
+}
+
+// 继续选购：跳转定价页
+const continueBuy = () => {
+  router.push('/zh/siteNew/price')
+}
 </script>
 
 <style scoped lang="scss">
