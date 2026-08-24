@@ -13,7 +13,7 @@
         v-for="(itd,i) in navList"
         :key="i"
         class="nav_title"
-        :class="{nav_t_line:(isActPath===itd.path&&(itd.title.includes(propTemp) || i>2 || itd.classify)) || isActPath===itd.path&& !!mainTitle}"
+        :class="{nav_t_line: isActPath===itd.path && (propTemp ? itd.title.includes(propTemp) : (i>2 || itd.classify || !!mainTitle))}"
         @click="navClick(itd)"
       >
         <span>{{ itd.title }}</span>
