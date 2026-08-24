@@ -1,9 +1,10 @@
 
 import { ofetch } from 'ofetch'
+import config from '@/config'
 
 // 创建请求实例
 const request = ofetch.create({
-  baseURL: 'http://192.168.60.76:32620/bus',
+  baseURL: config.busURL + '/bus',
   timeout: 10000, // 超时时间
   headers: {
     'Content-Type': 'application/json'
