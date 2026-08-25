@@ -97,7 +97,7 @@ yarn lint
 
 ```bash
 # 图片网关地址，可选
-NUXT_PUBLIC_IMAGE_GATEWAY=https://workup-dev.myoumuamua.com:6433
+NUXT_PUBLIC_IMAGE_GATEWAY=https://workup.oortcloudsmart.com:2443
 ```
 
 ## 部署说明

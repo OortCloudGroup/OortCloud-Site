@@ -328,7 +328,7 @@ const getFeatureValue = (packageName, serviceName, featureName) => {
 
 const addBuyFn = (id) => {
   if (!token.value) {
-    window.open('https://workup-dev.myoumuamua.com:6433/bus/apaas-web/loginPage/index.html?appname=OortCloud Site&redirect_uri=' + encodeURIComponent('https://oortcloudsmart.com/zh/siteNew/'), '_blank')
+    window.open('https://workup.oortcloudsmart.com:2443/bus/apaas-web/loginPage/index.html?appname=OortCloud Site&redirect_uri=' + encodeURIComponent('https://oortcloudsmart.com/zh/siteNew/'), '_blank')
     return
   }
   drawer.value = true
@@ -337,7 +337,7 @@ const addBuyFn = (id) => {
 
 const buyFn = async(id) => {
   if (!token.value) {
-    window.open('https://workup-dev.myoumuamua.com:6433/bus/apaas-web/loginPage/index.html?appname=OortCloud Site&redirect_uri=' + encodeURIComponent('https://oortcloudsmart.com/zh/siteNew/'), '_blank')
+    window.open('https://workup.oortcloudsmart.com:2443/bus/apaas-web/loginPage/index.html?appname=OortCloud Site&redirect_uri=' + encodeURIComponent('https://oortcloudsmart.com/zh/siteNew/'), '_blank')
     return
   }
   try {
@@ -375,7 +375,7 @@ const buyFn = async(id) => {
 
 const ownBuy = () => {
   if (!token.value) {
-    window.open('https://workup-dev.myoumuamua.com:6433/bus/apaas-web/loginPage/index.html?appname=OortCloud Site&redirect_uri=' + encodeURIComponent('https://oortcloudsmart.com/zh/siteNew/'), '_blank')
+    window.open('https://workup.oortcloudsmart.com:2443/bus/apaas-web/loginPage/index.html?appname=OortCloud Site&redirect_uri=' + encodeURIComponent('https://oortcloudsmart.com/zh/siteNew/'), '_blank')
     return
   }
   drawer.value = true

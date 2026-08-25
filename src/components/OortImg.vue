@@ -14,7 +14,7 @@ const { src } = toRefs(props)
 
 // 旧网关地址
 const OLD_GATEWAY = 'http://183.62.103.20:21410'
-const NEW_GATEWAY = 'https://workup-dev.myoumuamua.com:6433'
+const NEW_GATEWAY = 'https://workup.oortcloudsmart.com:2443'
 
 // 处理后的图片地址
 const processedSrc = computed(() => {
