@@ -68,6 +68,15 @@ export const mealCompare = (data) => {
   })
 }
 
+// 批量查询当前用户套餐购买资格
+export const purchaseEligibility = (data) => {
+  return request('/apaas-appstore/platformPackages/v1/purchaseEligibility', {
+    method: 'POST',
+    body: data,
+    headers: { accessToken: token.value }
+  })
+}
+
 // 创建统一收银台订单
 export const createOrder = (data) => {
   return request('/apaas-appstore/checkout/v1/createOrder', {

@@ -12,7 +12,7 @@
         <img v-else src="@/assets/img/fail.png" alt="" class="green-dot" />
       </div>
       <h2 class="result-title">
-        {{ orderInfo.status === 1 ? '支付成功！' : '支付失败' }}
+        {{ orderInfo.status === 1 ? (Number(orderInfo.pay_amount) === 0 ? '开通成功！' : '支付成功！') : '支付失败' }}
       </h2>
     </div>
 

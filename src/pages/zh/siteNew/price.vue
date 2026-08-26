@@ -16,7 +16,7 @@
             </div>
           </div>
           <div class="item-2 title2">
-            {{ item.annual_price_desc }}
+            {{ item.pricing_type === 1 ? '免费' : item.annual_price_desc }}
           <!-- <span class="title3" style="color: #818089;">/年</span> -->
           </div>
           <div class="item-4 title3">
@@ -28,9 +28,22 @@
           </div>
         </div>
         <div class="item_content">
-          <div class="item-6" :class="{yellow_buy: item.name === '企业版'}" @click="buyFn(item.id)">
-            立即购买
-          </div>
+          <el-tooltip
+            :disabled="!(token && item.can_purchase === false && item.reason)"
+            :content="item.reason"
+            placement="top"
+          >
+            <div
+              class="item-6"
+              :class="{
+                yellow_buy: item.name === '企业版',
+                disabled: token && item.can_purchase === false
+              }"
+              @click="buyFn(item)"
+            >
+              {{ getBuyBtnText(item) }}
+            </div>
+          </el-tooltip>
           <div class="item-7" :class="{yewllow_meal: item.name === '企业版'}">
             <div class="meal" @click="mealDetail(item.id)">
               <img src="@/assets/software/tcxq.png" alt="" />套餐详情
@@ -245,13 +258,15 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 import { useSessionStorage } from '@vueuse/core'
 import priceDetail from './priceDetail.vue'
 import buyDrawer from './buyDrawer.vue'
 import payDrawer from './payDrawer.vue'
 
-import { mealList, mealCompare, createOrder } from '@/api'
+import { mealList, mealCompare, createOrder, purchaseEligibility, orderDetail } from '@/api'
 
+const router = useRouter()
 const token = useSessionStorage('accessToken', '')
 const list = ref([])
 const id = ref(1)
@@ -260,6 +275,7 @@ const drawer = ref(false)
 const drawer2 = ref(false)
 const orderData = ref({})
 const platformId = ref(1)
+const eligibilityMap = ref({})
 
 onMounted(() => {
   getMealCompare()
@@ -273,10 +289,47 @@ const getMealList = async() => {
       pagesize: 10
     }
     const res = await mealList(data)
-    list.value = res.data.list
+    list.value = (res.data.list || []).map(item => ({
+      ...item,
+      can_purchase: true,
+      reason: ''
+    }))
+    if (token.value) {
+      await fetchPurchaseEligibility()
+    }
   } catch (err) {
     console.error('获取套餐列表失败:', err)
   }
+}
+
+// 批量查询购买资格，并合并到套餐卡片
+const fetchPurchaseEligibility = async() => {
+  const ids = list.value.map(item => item.id).filter(Boolean)
+  if (!ids.length || !token.value) return
+  try {
+    const res = await purchaseEligibility({ platform_package_ids: ids })
+    const map = {}
+    ;(res.data?.list || []).forEach((item) => {
+      map[item.platform_package_id] = item
+    })
+    eligibilityMap.value = map
+    list.value = list.value.map((item) => {
+      const eligibility = map[item.id]
+      if (!eligibility) return item
+      return {
+        ...item,
+        can_purchase: eligibility.can_purchase,
+        reason: eligibility.reason || '',
+        pricing_type: eligibility.pricing_type ?? item.pricing_type
+      }
+    })
+  } catch (err) {
+    console.error('查询购买资格失败:', err)
+  }
+}
+
+const getBuyBtnText = (item) => {
+  return item.pricing_type === 1 ? '免费开通' : '立即购买'
 }
 
 const getMealCompare = async() => {
@@ -335,9 +388,18 @@ const addBuyFn = (id) => {
   platformId.value = id
 }
 
-const buyFn = async(id) => {
+const buyFn = async(item) => {
   if (!token.value) {
     window.open('https://workup.oortcloudsmart.com:2443/bus/apaas-web/loginPage/index.html?appname=OortCloud Site&redirect_uri=' + encodeURIComponent('https://oortcloudsmart.com/zh/siteNew/'), '_blank')
+    return
+  }
+  // 已登录但资格未刷新时再查一次
+  if (!eligibilityMap.value[item.id]) {
+    await fetchPurchaseEligibility()
+  }
+  const current = list.value.find(pkg => pkg.id === item.id) || item
+  if (current.can_purchase === false) {
+    ElMessage.warning(current.reason || '当前不可购买该套餐')
     return
   }
   try {
@@ -345,7 +407,7 @@ const buyFn = async(id) => {
     const items = [
       {
         item_type: 3,
-        platform_package_id: id,
+        platform_package_id: item.id,
         purchase_years: 1
       }
     ]
@@ -364,12 +426,49 @@ const buyFn = async(id) => {
     }
 
     const res = await createOrder(data)
-    if (res.code === 200) {
-      orderData.value = res.data
-      drawer2.value = true
+    if (res.code !== 200) {
+      // 重复购买被拒等业务错误：刷新资格并禁用按钮
+      const msg = res.msg || '创建订单失败'
+      ElMessage.error(msg)
+      if (msg.includes('仅允许购买一次') || msg.includes('重复购买')) {
+        await fetchPurchaseEligibility()
+      }
+      return
     }
+
+    const orderInfo = res.data?.order_info || {}
+    const isFree = current.pricing_type === 1 || (orderInfo.status === 1 && Number(orderInfo.pay_amount) === 0)
+
+    // 免费套餐：不展示支付方式、不调用支付服务，直接查订单详情进入结果页
+    if (isFree) {
+      let detailInfo = orderInfo
+      if (orderInfo.order_no) {
+        try {
+          const detailRes = await orderDetail({ order_no: orderInfo.order_no })
+          if (detailRes.code === 200 && detailRes.data?.order_info) {
+            detailInfo = detailRes.data.order_info
+          }
+        } catch (err) {
+          console.error('获取订单详情失败：', err)
+        }
+      }
+      sessionStorage.setItem('orderInfo', JSON.stringify(detailInfo))
+      ElMessage.success('开通成功')
+      await fetchPurchaseEligibility()
+      router.push({ path: '/zh/siteNew/pay' })
+      return
+    }
+
+    // 付费订单：进入支付
+    orderData.value = res.data
+    drawer2.value = true
   } catch (error) {
     console.error('创建订单失败：', error)
+    const msg = error?.data?.msg || error?.message || ''
+    if (msg.includes('仅允许购买一次') || msg.includes('重复购买')) {
+      ElMessage.error(msg)
+      await fetchPurchaseEligibility()
+    }
   }
 }
 
@@ -1240,6 +1339,14 @@ const handleClose = () => {
     font-size: 16px;
     font-weight: 500;
     margin-top: 30px;
+    &.disabled{
+      cursor: not-allowed;
+      background: #A0AEC0 !important;
+      color: #fff !important;
+      box-shadow: none;
+      opacity: 0.85;
+      border: none;
+    }
   }
   .item-7{
     display: flex;
