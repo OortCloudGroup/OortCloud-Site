@@ -344,13 +344,13 @@
             <div class="logo">
               <img class="img1" src="/public/img/about/product_wo1.png" alt="" />OortCloud
             </div>
-            奥尔特云新一代生产力平台
+            从海量数据到使用 Workup 构建智能决策中枢
           </template>
           <template v-else #label>
             <div class="logo">
               <img class="img1" src="/public/img/about/product_wo.png" alt="" />OortCloud
             </div>
-            奥尔特云新一代生产力平台
+            从海量数据到使用 Workup 构建智能决策中枢
           </template>
           <div class="box2">
             <div class="left">
@@ -581,7 +581,7 @@ const productTabs = {
   },
   first1: {
     title: 'Workup',
-    description: '\u5965\u5C14\u7279\u4E91\u65B0\u4E00\u4EE3\u751F\u4EA7\u529B\u5E73\u53F0',
+    description: '\u4ECE\u6D77\u91CF\u6570\u636E\u5230\u4F7F\u7528 Workup \u6784\u5EFA\u667A\u80FD\u51B3\u7B56\u4E2D\u67A2',
     iconActive: productWo1,
     iconInactive: productWo,
     logoClass: 'img1'
