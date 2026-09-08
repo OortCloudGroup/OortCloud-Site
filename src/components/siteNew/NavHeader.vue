@@ -20,55 +20,95 @@
       </div>
     </div>
     <div class="flexRowAC nav_r">
+      <el-tooltip v-if="isLogin && !!userInfo" :content="isFullscreen ? '退出全屏' : '全屏'" placement="bottom">
+        <img class="right_info_nine" :src="isFullscreen ? exitFullscreenIcon : fullscreenIcon" alt="全屏" @click="toggle" />
+      </el-tooltip>
+      <el-dropdown v-if="isLogin && !!userInfo" class="lang_switch" trigger="hover" @command="handleLocaleCommand">
+        <img class="right_info_nine" :src="langIcon" alt="语言" />
+        <template #dropdown>
+          <el-dropdown-menu class="lang_menu">
+            <el-dropdown-item command="zh" :disabled="currentLocale === 'zh'">
+              <span>简体中文</span>
+              <el-icon><ArrowRight /></el-icon>
+            </el-dropdown-item>
+            <el-dropdown-item command="en" :disabled="currentLocale === 'en'">
+              <span>English</span>
+              <el-icon><ArrowRight /></el-icon>
+            </el-dropdown-item>
+          </el-dropdown-menu>
+        </template>
+      </el-dropdown>
       <NuxtLink v-if="!userInfo" :to="gotoLoginURL" target="_blank">
         <div class="login_but">
           <span>登录/注册</span>
         </div>
       </NuxtLink>
-      <el-dropdown v-else trigger="hover" @command="handleUserCommand">
-        <div class="user_info">
-          <img :src="userPhoto" alt="" />
-          <span>{{ userName }}</span>
-        </div>
-        <template #dropdown>
-          <el-dropdown-menu>
-            <el-dropdown-item command="switchAccount">
-              切换账号
-            </el-dropdown-item>
-            <el-dropdown-item command="logout">
-              退出登录
-            </el-dropdown-item>
-          </el-dropdown-menu>
-        </template>
-      </el-dropdown>
-      <el-popover v-if="isLogin" placement="bottom" trigger="click" popper-class="popover_panel">
+      <template v-else>
+        <span class="right_info_tips">欢迎您</span>
+        <el-dropdown trigger="hover" @command="handleUserCommand">
+          <div class="user_info">
+            <img :src="userPhoto" alt="" />
+            <span>{{ userName }}</span>
+          </div>
+          <template #dropdown>
+            <el-dropdown-menu class="user_card_menu">
+              <div class="user_card_head">
+                <img :src="userPhoto" alt="" />
+                <div class="user_card_head_info">
+                  <div class="user_card_name">
+                    {{ userName }}
+                  </div>
+                  <div class="user_card_tag" :class="{ 'is_real': realNameStatus === 1 }">
+                    {{ realNameStatus === 1 ? '已实名' : '未实名' }}
+                  </div>
+                </div>
+              </div>
+              <el-dropdown-item command="switchAccount" class="user_card_action">
+                <span>切换账号</span>
+                <el-icon><ArrowRight /></el-icon>
+              </el-dropdown-item>
+              <el-dropdown-item command="logout" class="user_card_action">
+                <span>退出登录</span>
+                <el-icon><ArrowRight /></el-icon>
+              </el-dropdown-item>
+            </el-dropdown-menu>
+          </template>
+        </el-dropdown>
+      </template>
+      <el-popover v-if="isLogin && !!userInfo" placement="bottom" trigger="click" popper-class="popover_panel">
         <template #reference>
-          <img class="right_info_nine" src="@/assets/navheader/nightpointpng.png" />
+          <img class="right_info_nine" src="@/assets/navheader/nine.svg" alt="应用" />
         </template>
         <commonRightPoPover />
       </el-popover>
-      <!--      <el-dropdown v-if="langText" :hide-on-click="false" @command="toggleLang">-->
-      <!--        <div class="flexRowAC langBox">-->
-      <!--          <img class="demo_img" src="@/assets/VLimg/lang.png" alt="" />-->
-      <!--          <div class="langBoxT">-->
-      <!--            {{ langText }}-->
-      <!--          </div>-->
-      <!--          <el-icon color="#333">-->
-      <!--            <CaretBottom />-->
-      <!--          </el-icon>-->
-      <!--        </div>-->
-      <!--        <template #dropdown>-->
-      <!--          <el-dropdown-menu>-->
-      <!--            <el-dropdown-item command="zh" :disabled="lang==='zh'">-->
-      <!--              简体中文-->
-      <!--            </el-dropdown-item>-->
-      <!--            <el-dropdown-item command="en" :disabled="lang==='en'">-->
-      <!--              English-->
-      <!--            </el-dropdown-item>-->
-      <!--          </el-dropdown-menu>-->
-      <!--        </template>-->
-      <!--      </el-dropdown>-->
+      <el-popover v-if="isLogin && !!userInfo" v-model:visible="moreVisible" placement="bottom" trigger="click" :width="260" popper-class="popover_panel_more">
+        <template #reference>
+          <img class="right_info_nine" src="@/assets/navheader/nine_more.svg" alt="菜单" />
+        </template>
+        <commonRightPopoverMore v-if="moreVisible" @more-opr="handleMoreOpr" />
+      </el-popover>
     </div>
+    <!--      <el-dropdown v-if="langText" :hide-on-click="false" @command="toggleLang">-->
+    <!--        <div class="flexRowAC langBox">-->
+    <!--          <img class="demo_img" src="@/assets/VLimg/lang.png" alt="" />-->
+    <!--          <div class="langBoxT">-->
+    <!--            {{ langText }}-->
+    <!--          </div>-->
+    <!--          <el-icon color="#333">-->
+    <!--            <CaretBottom />-->
+    <!--          </el-icon>-->
+    <!--        </div>-->
+    <!--        <template #dropdown>-->
+    <!--          <el-dropdown-menu>-->
+    <!--            <el-dropdown-item command="zh" :disabled="lang==='zh'">-->
+    <!--              简体中文-->
+    <!--            </el-dropdown-item>-->
+    <!--            <el-dropdown-item command="en" :disabled="lang==='en'">-->
+    <!--              English-->
+    <!--            </el-dropdown-item>-->
+    <!--          </el-dropdown-menu>-->
+    <!--        </template>-->
+    <!--      </el-dropdown>-->
   </div>
 </template>
 
@@ -76,10 +116,15 @@
 import { ref, onMounted, onBeforeUnmount, computed, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 
-import { useSessionStorage } from '@vueuse/core'
+import { useSessionStorage, useFullscreen, StorageSerializers } from '@vueuse/core'
 import { ofetch } from 'ofetch'
 import { ElMessage } from 'element-plus'
+import { ArrowRight } from '@element-plus/icons-vue'
 import commonRightPoPover from './components/commonRightPoPover.vue'
+import commonRightPopoverMore from './components/commonRightPopoverMore.vue'
+import fullscreenIcon from '@/assets/navheader/fullscreen.svg'
+import exitFullscreenIcon from '@/assets/navheader/exit-fullscreen.svg'
+import langIcon from '@/assets/navheader/lang.svg'
 import defaultAvatar from '@/assets/navheader/person.png'
 import config from '@/config/index.js'
 // import { useI18n } from 'vue-i18n'
@@ -117,7 +162,8 @@ const isLoading = ref(false)
 const isCheckingLogin = ref(false)
 const accessTokenStorage = useSessionStorage('accessToken', '')
 const tenantIdStorage = useSessionStorage('tenantId', '')
-const userInfoStorage = useSessionStorage('userInfo', null)
+// 显式指定 object 序列化：初始值 null 时 vueuse 推断为 any（不做 JSON），存对象会变成 "[object Object]"，导致九宫格取不到 user_id
+const userInfoStorage = useSessionStorage('userInfo', null, { serializer: StorageSerializers.object })
 const phoneStorage = useSessionStorage('phone', '')
 const realNameStorage = useSessionStorage('realName', '')
 const emailStorage = useSessionStorage('email', '')
@@ -501,6 +547,43 @@ const handleUserCommand = (command) => {
   }
 }
 
+// 网页全屏（对齐 console_manage 的 useFullscreen）
+const { isFullscreen, toggle } = useFullscreen()
+
+// 菜单弹层（nine_more）操作
+const moreVisible = ref(false)
+const handleMoreOpr = (action) => {
+  if (action === 'switchAccount') {
+    logoutSSO(true)
+    return
+  }
+  if (action === 'logout') {
+    logoutSSO(false)
+    return
+  }
+  if (action === 'privacy') {
+    window.open('/zh/siteNew/privacy', '_blank')
+  }
+}
+
+// 中英文切换（对齐官网底部语言切换逻辑）
+const currentLocale = computed(() => {
+  return route.path.startsWith('/zh') ? 'zh' : 'en'
+})
+// 实名认证状态（对齐 pc_ui switchAccountPover：identity_type===2 的 status，1 为已实名）
+const realNameStatus = computed(() => {
+  const arr = userInfo.value?.user_ident_info?.user_ident || []
+  const realNameItem = arr.find(item => item.identity_type === 2)
+  return realNameItem ? realNameItem.status : 0
+})
+const handleLocaleCommand = (value) => {
+  if (value === 'zh') {
+    router.push('/zh/siteNew/')
+    return
+  }
+  window.location.href = '/en/'
+}
+
 const checkLoginStatus = async() => {
   if (isCheckingLogin.value) return !!userInfo.value
   isCheckingLogin.value = true
@@ -561,10 +644,117 @@ onBeforeUnmount(() => {
   width: 400px!important;
   background-color: #EDF3F9!important;
   border-radius: 10px!important;
+  padding: 0!important;
 }
 
 .popover_panel .el-popper__arrow:before {
   background-color: #EDF3F9!important;
+}
+
+.popover_panel_more {
+  background-color: #EDF3F9!important;
+  border-radius: 10px!important;
+  padding: 0!important;
+}
+
+.popover_panel_more .el-popper__arrow:before {
+  background-color: #EDF3F9!important;
+}
+
+/* 用户 hover 下拉卡片（对标 pc_ui switchAccountPover；PX 固定防 vw 缩放） */
+.user_card_menu {
+  width: 300PX !important;
+  padding: 0 !important;
+  border-radius: 10PX !important;
+  overflow: hidden;
+}
+
+.user_card_head {
+  display: flex;
+  align-items: center;
+  padding: 20PX 16PX;
+
+  img {
+    width: 48PX;
+    height: 48PX;
+    border-radius: 50%;
+    background: #e1e1e1;
+    margin-right: 12PX;
+    object-fit: cover;
+  }
+}
+
+.user_card_head_info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.user_card_name {
+  font-size: 16PX;
+  font-weight: bold;
+  color: #222;
+  word-break: break-all;
+}
+
+.user_card_tag {
+  margin-top: 4PX;
+  padding: 2PX 4PX;
+  width: fit-content;
+  background: #C7CFE2;
+  font-size: 12PX;
+  color: #fff;
+}
+
+.user_card_tag.is_real {
+  background: #0dcb69;
+}
+
+.user_card_action.el-dropdown-menu__item {
+  justify-content: space-between;
+  padding: 12PX 16PX;
+  font-size: 14PX;
+  color: #222;
+  background: #EDF3F9;
+  border-top: 1PX solid #e3e9f0;
+}
+
+.user_card_action.el-dropdown-menu__item:not(.is-disabled):hover,
+.user_card_action.el-dropdown-menu__item:not(.is-disabled):focus {
+  background: #dde3ea;
+  color: #222;
+}
+
+/* 语言切换下拉（与用户卡片/菜单弹层同款行式风格；PX 固定防 vw 缩放） */
+.lang_menu {
+  width: 180PX !important;
+  padding: 0 !important;
+  border-radius: 10PX !important;
+  overflow: hidden;
+  background-color: #EDF3F9;
+}
+
+.lang_menu .el-dropdown-menu__item {
+  justify-content: space-between;
+  padding: 12PX 16PX;
+  font-size: 14PX;
+  color: #222;
+  background: #EDF3F9;
+}
+
+.lang_menu .el-dropdown-menu__item + .el-dropdown-menu__item {
+  border-top: 1PX solid #e3e9f0;
+}
+
+.lang_menu .el-dropdown-menu__item:not(.is-disabled):hover,
+.lang_menu .el-dropdown-menu__item:not(.is-disabled):focus {
+  background: #dde3ea;
+  color: #222;
+}
+
+.lang_menu .el-dropdown-menu__item.is-disabled {
+  color: #999;
+  background: #EDF3F9;
 }
 
 </style>
@@ -594,16 +784,17 @@ onBeforeUnmount(() => {
 }
 
 .right_info_nine {
-  width: 46px;
-  height: 46px;
-  margin: 0 12px;
+  width: 30px;
+  height: 30px;
+  margin: 0;
   cursor: pointer;
-  border-radius: 0;
+  border-radius: 4px;
   transition: border-radius 0.5s ease; /* 添加过渡效果 */
 }
 
 .right_info_nine:hover {
   border-radius: 50%;
+  background-color: #00000015;
 }
 
 :deep(.el-tooltip__trigger:focus-visible) {
@@ -678,7 +869,8 @@ onBeforeUnmount(() => {
 
   .nav_r {
     justify-content: end;
-    width: 200px;
+    width: auto;
+    gap: 12px;
   }
 
   .navLogo {
@@ -714,6 +906,17 @@ onBeforeUnmount(() => {
     background: #CCC;
     margin-left: 17px;
   }
+}
+
+.right_info_tips {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  white-space: nowrap;
+}
+
+.lang_switch {
+  margin: 0;
 }
 
 .user_info {

@@ -1,211 +1,155 @@
 <template>
   <div class="pover_right">
     <div class="pover_apps">
-      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html?toPage=person" target="_blank">
-        <div class="pover_apps_item" @click="gotoApp('person')">
-          <img src="@/assets/navheader/person.png" alt="" />
-          <div class="pover_apps_item_name">
-            个人中心
-          </div>
-        </div>
-      </NuxtLink>
-      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
-        <div class="pover_apps_item">
-          <img src="@/assets/navheader/scl.png" alt="" />
-          <div class="pover_apps_item_name">
-            智能体
-          </div>
-        </div>
-      </NuxtLink>
-      <NuxtLink to="https://ai.oortcloudsmart.com/zh/" target="_blank">
-        <div class="pover_apps_item">
-          <img src="@/assets/navheader/product_img10.png" alt="" />
-          <div class="pover_apps_item_name">
-            OORT.AI
-          </div>
-        </div>
-      </NuxtLink>
-      <NuxtLink to="https://vls.oortcloudsmart.com/zh/" target="_blank">
-        <div class="pover_apps_item">
-          <img src="@/assets/navheader/vls.png" alt="" />
-          <div class="pover_apps_item_name">
-            VLStream
-          </div>
-        </div>
-      </NuxtLink>
-      <NuxtLink to=" https://sh.oortcloudsmart.com/zh/" target="_blank">
-        <div class="pover_apps_item">
-          <img src="@/assets/navheader/oortsh.png" alt="" />
-          <div class="pover_apps_item_name">
-            OORT.SH
-          </div>
-        </div>
-      </NuxtLink>
-      <div class="pover_apps_item">
-        <img src="@/assets/navheader/oortone.png" alt="" />
+      <div v-for="(item,index) in appList" :key="index" class="pover_apps_item" @click="gotoApp(item)">
+        <img v-if="item.icon_url" :src="item.icon_url" alt="" />
+        <img v-else src="@/assets/navheader/person.png" alt="" />
         <div class="pover_apps_item_name">
-          OortCloudOne
+          {{ item.applabel }}
         </div>
       </div>
-      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
-        <div class="pover_apps_item">
-          <!-- <img src="@/assets/navheader/yp.png" alt="" /> -->
-          <img src="@/assets/site/homeApp_yp.png" alt="" />
-          <div class="pover_apps_item_name">
-            云盘
-          </div>
-        </div>
-      </NuxtLink>
-      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
-        <div class="pover_apps_item">
-          <img src="@/assets/navheader/yxc.png" alt="" />
-          <div class="pover_apps_item_name">
-            云相册
-          </div>
-        </div>
-      </NuxtLink>
-      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
-        <div class="pover_apps_item">
-          <img src="@/assets/navheader/ywd.png" alt="" />
-          <div class="pover_apps_item_name">
-            云文档
-          </div>
-        </div>
-      </NuxtLink>
-      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
-        <div class="pover_apps_item">
-          <img src="@/assets/navheader/wqd.png" alt="" />
-          <div class="pover_apps_item_name">
-            云清单
-          </div>
-        </div>
-      </NuxtLink>
-      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
-        <div class="pover_apps_item">
-          <img src="@/assets/navheader/ybwl.png" alt="" />
-          <div class="pover_apps_item_name">
-            云备忘录
-          </div>
-        </div>
-      </NuxtLink>
-      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
-        <div class="pover_apps_item">
-          <img src="@/assets/navheader/dzyj.png" alt="" />
-          <div class="pover_apps_item_name">
-            电子邮件
-          </div>
-        </div>
-      </NuxtLink>
-      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
-        <div class="pover_apps_item">
-          <img src="@/assets/navheader/txl.png" alt="" />
-          <div class="pover_apps_item_name">
-            通讯录
-          </div>
-        </div>
-      </NuxtLink>
-      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
-        <div class="pover_apps_item">
-          <img src="@/assets/navheader/news.png" alt="" />
-          <div class="pover_apps_item_name">
-            新闻推送
-          </div>
-        </div>
-      </NuxtLink>
-      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
-        <div class="pover_apps_item">
-          <!-- <img src="@/assets/navheader/ykt.png" alt="" /> -->
-          <img src="@/assets/site/homeApp_a5.png" alt="" />
-          <div class="pover_apps_item_name">
-            云课堂
-          </div>
-        </div>
-      </NuxtLink>
-      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
-        <div class="pover_apps_item">
-          <img src="@/assets/navheader/jstx.png" alt="" />
-          <div class="pover_apps_item_name">
-            即时通讯
-          </div>
-        </div>
-      </NuxtLink>
-      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
-        <div class="pover_apps_item">
-          <img src="@/assets/site/homeApp_a7.png" alt="" />
-          <div class="pover_apps_item_name">
-            智慧审批
-          </div>
-        </div>
-      </NuxtLink>
-      <NuxtLink to="http://oort.oortcloudsmart.com:23410/bus/apaas-web/console_manage/index.html" target="_blank">
-        <div class="pover_apps_item">
-          <img src="@/assets/site/homeApp_sphy.png" alt="" />
-          <div class="pover_apps_item_name">
-            视频会议
-          </div>
-        </div>
-      </NuxtLink>
+      <div v-if="appList.length === 0" class="no_data">
+        <span>{{ loading ? '加载中...' : '暂无应用' }}</span>
+      </div>
     </div>
+    <!-- 更多应用跳转到PC应用市场 -->
     <div class="more_apps">
-      <div class="more_apps_tips" @click="handleMoreApps">
-        <span>更多OORT应用</span>
+      <div class="more_apps_tips" @click="moreApps">
+        <span>更多应用</span>
       </div>
     </div>
-    <!-- <div class="pover_more">
-      <div class="pover_more_item" @click="moreOpr('resetPassword')">
-        <span>重置密码</span>
-        <el-icon><ArrowRightBold /></el-icon>
-      </div>
-      <div class="pover_more_item" @click="moreOpr('changeTheme')">
-        <span>切换主题</span>
-        <el-icon><ArrowRightBold /></el-icon>
-      </div>
-      <div class="pover_more_item" @click="moreOpr('changeTenant')">
-        <span>切换租户</span>
-        <el-icon><ArrowRightBold /></el-icon>
-      </div>
-      <div class="pover_more_item" @click="moreOpr('logout')">
-        <span>退出登录</span>
-        <el-icon><ArrowRightBold /></el-icon>
-      </div>
-    </div> -->
   </div>
 </template>
 
 <script setup>
-// import { ArrowRightBold } from '@element-plus/icons-vue'
-// import { useRouter } from 'vue-router'
+import { ref, onMounted } from 'vue'
+import { ofetch } from 'ofetch'
+import { useSessionStorage, StorageSerializers } from '@vueuse/core'
+import { ElMessage } from 'element-plus'
+import config from '@/config/index.js'
 
-// const emits = defineEmits(['moreOpr'])
-// const moreOpr = (action) => {
-//   emits('moreOpr', action)
-// }
+const accessTokenStorage = useSessionStorage('accessToken', '')
+// 显式 object 序列化，与 NavHeader 写入端保持一致（null 初始值会被 vueuse 推断为 any，读回对象会异常）
+const userInfoStorage = useSessionStorage('userInfo', null, { serializer: StorageSerializers.object })
+const appList = ref([])
+const loading = ref(false)
 
-// const router = useRouter()
-
-const isLoggedIn = () => {
-  const token = localStorage.getItem('token') || localStorage.getItem('access_token')
-  return !!token // 有token则认为已登录
-}
-
-const handleMoreApps = () => {
-  if (!isLoggedIn()) {
-    window.open('/zh/siteNew/software/unLogin', '_blank')
+const getAuthHeaders = () => {
+  return {
+    'Content-Type': 'application/json',
+    tenantId: useSessionStorage('tenantId', '').value || '',
+    accesstoken: accessTokenStorage.value || '',
+    appid: config.ssoAppId,
+    secretkey: config.ssoSecretKey,
+    requesttype: 'app'
   }
 }
-const gotoApp = (action) => {
-  switch (action) {
-    case 'person':
-      break
+
+// 获取我的pc应用列表（对齐 console_manage 的 myPcList）
+const getMyPCAppList = async() => {
+  loading.value = true
+  try {
+    const res = await ofetch(config.busURL + '/bus/apaas-admin-platform/client/module/mypclist', {
+      method: 'POST',
+      body: {
+        accessToken: accessTokenStorage.value,
+        uuid: userInfoStorage.value?.user_id || userInfoStorage.value?.userId || '',
+        pageNum: 1,
+        pageSize: 999
+      },
+      headers: getAuthHeaders()
+    })
+    if (res.code === 200) {
+      const tempArr = res.data.list || []
+      tempArr.forEach((group) => {
+        group.app_list && group.app_list.forEach((itd) => {
+          appList.value.push(itd)
+        })
+      })
+    }
+  } catch (error) {
+    console.error('获取应用列表失败:', error)
+  } finally {
+    loading.value = false
   }
 }
+
+const verifyLogin = async() => {
+  try {
+    const res = await ofetch(config.busURL + '/bus/apaas-sso/sso/v1/verifyToken', {
+      method: 'POST',
+      body: {
+        accessToken: accessTokenStorage.value
+      },
+      headers: getAuthHeaders()
+    })
+    return res.code === 200
+  } catch (error) {
+    console.error('token验证失败:', error)
+    return false
+  }
+}
+
+// 打开应用前校验token，携带accessToken与fromWhere跳转（对齐 console_manage）
+const gotoApp = async(item) => {
+  const isValid = await verifyLogin()
+  if (!isValid) {
+    ElMessage.warning('用户信息失效， 请重新登录')
+    return
+  }
+  const token = accessTokenStorage.value
+  const tempObj = {
+    accessToken: token,
+    fromWhere: 'console_manage'
+  }
+  window.sessionStorage.setItem('tempObj', JSON.stringify(tempObj))
+  let appendStr = '?accessToken=' + token + '&fromWhere=console_manage'
+  if (item.apk_url && item.apk_url.includes('?')) {
+    appendStr = '&accessToken=' + token + '&fromWhere=console_manage'
+  }
+
+  let target = '_blank'
+  let windowFeatures = 'popup,location=no'
+  if (item.open_mod === 1) {
+    target = '_blank'
+    windowFeatures = ''
+  }
+  if (item.open_mod === 2) {
+    target = '_self'
+  }
+  if (item.open_mod === 3) {
+    target = item.applabel
+  }
+  if (item.apk_url && (item.apk_url.includes('http') || item.apk_url.includes('//'))) {
+    window.open(item.apk_url + appendStr, target, windowFeatures)
+  } else {
+    window.open(config.busURL + config.frontURLStr + item.apk_url + appendStr, target, windowFeatures)
+  }
+}
+
+const moreApps = async() => {
+  const isValid = await verifyLogin()
+  if (!isValid) {
+    ElMessage.warning('用户信息失效， 请重新登录')
+    return
+  }
+  const token = accessTokenStorage.value
+  window.sessionStorage.setItem('tempObj', JSON.stringify({
+    accessToken: token,
+    fromWhere: 'console_manage'
+  }))
+  window.open(config.busURL + config.frontURLStr + '/app_market/index.html#/moreApp?accessToken=' + token + '&fromWhere=console_manage', '_blank')
+}
+
+onMounted(() => {
+  getMyPCAppList()
+})
 
 </script>
 
 <style lang="scss">
-
 .pover_right {
-  border-radius: 10px;
+  border-radius: 4px;
   background-color: #EDF3F9;
   display: flex;
   flex-direction: column;
@@ -215,17 +159,31 @@ const gotoApp = (action) => {
 .pover_apps {
   display: flex;
   margin: 0 auto;
-  display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 98%;
-  background-color: #fff;
-  border-radius: 10px;
+  background-color: transparent;
+  border-radius: 4px;
+  max-height: 50vh;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #dde3ea transparent;
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #dde3ea;
+    border-radius: 3px;
+  }
 }
 
 .pover_apps_item:hover {
-  background-color: #EDF3F9;
-  border-radius: 10px;
+  background-color: #dde3ea;
+  border-radius: 4px;
 }
 
 .pover_apps_item {
@@ -243,36 +201,21 @@ const gotoApp = (action) => {
   }
   div {
     margin-top: 10px;
-    font-size: 18px;
+    /* 大写 PX 不参与 postcss-px-to-viewport 转换，浮层文字恒定像素不随视口放大 */
+    font-size: 14PX;
     color: #3D3D3D;
   }
 }
 
-.pover_more {
-  width: 98%;
-  border-radius: 10px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-}
-
-.pover_more_item:hover{
-  background-color: #EDF3F9;
-  border-radius: 10px;
-}
-
-.pover_more_item {
-  cursor: pointer;
+.no_data {
+  width: 100%;
+  height: 160px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 32px;
-  margin: 4px 8px;
-  padding:0  12px;;
-  background-color: #fff;
+  justify-content: center;
   span {
-    font-size: 18px;
-    color: #3D3D3D;
+    font-size: 16px;
+    color: #999;
   }
 }
 
@@ -290,12 +233,11 @@ const gotoApp = (action) => {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding:2px 12px;
+  padding: 2px 12px;
   cursor: pointer;
   span {
     color: #2278FF;
-    font-size: 18px;
+    font-size: 14PX;
   }
 }
-
 </style>
