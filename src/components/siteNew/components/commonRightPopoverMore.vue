@@ -1,5 +1,22 @@
 <template>
   <div class="pover_right_more">
+    <div v-if="hasIndustryConfig" class="pover_more_item" @click="changeIndustry">
+      <div class="pover_more_item_title">
+        <div>
+          <img src="@/assets/navheader/popover_hy.png" />
+          <span>
+            <template v-if="selectedIndustryName">
+              <span v-if="selectedIndustry?.set_type === 1">行业</span>
+              <span v-if="selectedIndustry?.set_type === 2">场景</span>
+              <span v-if="selectedIndustry?.set_type === 3">职能</span>
+              <span>（{{ selectedIndustryName }}）</span>
+            </template>
+            <template v-else>场景选择</template>
+          </span>
+        </div>
+        <el-icon><ArrowRightBold /></el-icon>
+      </div>
+    </div>
     <div class="pover_more_item" @click="emits('moreOpr', 'privacy')">
       <div class="pover_more_item_title">
         <div>
@@ -31,9 +48,61 @@
 </template>
 
 <script setup>
+import { computed, onMounted, ref } from 'vue'
 import { ArrowRightBold } from '@element-plus/icons-vue'
 
+import { getLastIndustry, getMyIndustryList } from '@/api/modules/industryScene'
+
 const emits = defineEmits(['moreOpr'])
+const props = defineProps({
+  accessToken: {
+    type: String,
+    default: ''
+  },
+  tenantId: {
+    type: String,
+    default: ''
+  },
+  userInfo: {
+    type: Object,
+    default: () => ({})
+  }
+})
+const selectedIndustry = ref(null)
+const hasIndustryConfig = ref(false)
+const selectedIndustryName = computed(() => {
+  return selectedIndustry.value?.industryName || selectedIndustry.value?.name || ''
+})
+const auth = computed(() => ({
+  accessToken: props.accessToken,
+  tenantId: props.tenantId
+}))
+
+const changeIndustry = () => {
+  emits('moreOpr', 'changeHY')
+}
+
+/** 获取用户可选配置及当前生效场景。 */
+const loadIndustryInfo = async() => {
+  if (!props.accessToken) return
+  try {
+    const listRes = await getMyIndustryList(auth.value)
+    if (listRes.code === 200) {
+      const list = listRes.data?.list || {}
+      hasIndustryConfig.value = [list.hyConfig, list.cjConfig, list.znConfig]
+        .some(configList => Array.isArray(configList) && configList.length > 0)
+    }
+    const entityId = props.userInfo?.user_id || props.userInfo?.userId || ''
+    const selectedRes = await getLastIndustry(auth.value, entityId)
+    if (selectedRes.code === 200) {
+      selectedIndustry.value = selectedRes.data
+    }
+  } catch {
+    selectedIndustry.value = null
+  }
+}
+
+onMounted(loadIndustryInfo)
 </script>
 
 <style lang="scss" scoped>

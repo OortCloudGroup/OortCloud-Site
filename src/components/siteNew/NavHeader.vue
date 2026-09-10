@@ -85,7 +85,13 @@
         <template #reference>
           <img class="right_info_nine" src="@/assets/navheader/nine_more.svg" alt="菜单" />
         </template>
-        <commonRightPopoverMore v-if="moreVisible" @more-opr="handleMoreOpr" />
+        <commonRightPopoverMore
+          v-if="moreVisible"
+          :access-token="accessToken"
+          :tenant-id="tenantId"
+          :user-info="userInfo"
+          @more-opr="handleMoreOpr"
+        />
       </el-popover>
     </div>
     <!--      <el-dropdown v-if="langText" :hide-on-click="false" @command="toggleLang">-->
@@ -109,6 +115,23 @@
     <!--          </el-dropdown-menu>-->
     <!--        </template>-->
     <!--      </el-dropdown>-->
+    <el-dialog
+      v-model="industryVisible"
+      title="场景选择"
+      width="52%"
+      top="5vh"
+      append-to-body
+      destroy-on-close
+      :close-on-click-modal="false"
+    >
+      <ChangeHYRight
+        v-if="industryVisible"
+        :access-token="accessToken"
+        :tenant-id="tenantId"
+        :user-info="userInfo"
+        @close-dialog="industryVisible = false"
+      />
+    </el-dialog>
   </div>
 </template>
 
@@ -120,6 +143,7 @@ import { useSessionStorage, useFullscreen, StorageSerializers } from '@vueuse/co
 import { ofetch } from 'ofetch'
 import { ElMessage } from 'element-plus'
 import { ArrowRight } from '@element-plus/icons-vue'
+import ChangeHYRight from './components/ChangeHYRight.vue'
 import commonRightPoPover from './components/commonRightPoPover.vue'
 import commonRightPopoverMore from './components/commonRightPopoverMore.vue'
 import fullscreenIcon from '@/assets/navheader/fullscreen.svg'
@@ -552,7 +576,13 @@ const { isFullscreen, toggle } = useFullscreen()
 
 // 菜单弹层（nine_more）操作
 const moreVisible = ref(false)
+const industryVisible = ref(false)
 const handleMoreOpr = (action) => {
+  if (action === 'changeHY') {
+    moreVisible.value = false
+    industryVisible.value = true
+    return
+  }
   if (action === 'switchAccount') {
     logoutSSO(true)
     return
