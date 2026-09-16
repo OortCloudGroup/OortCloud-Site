@@ -181,7 +181,8 @@ const route = useRoute()
 const ACCESS_TOKEN_SYNC_KEY = 'oortAccessToken'
 const TENANT_ID_SYNC_KEY = 'oortTenantId'
 const verifyTimer = ref(null)
-const userInfo = ref(null)
+// 登录用户信息：Nuxt useState 全局共享，供首页 Start 按钮等需读取登录态的组件消费
+const userInfo = useState('siteUserInfo', () => null)
 const isLoading = ref(false)
 const isCheckingLogin = ref(false)
 const accessTokenStorage = useSessionStorage('accessToken', '')
@@ -576,7 +577,8 @@ const { isFullscreen, toggle } = useFullscreen()
 
 // 菜单弹层（nine_more）操作
 const moreVisible = ref(false)
-const industryVisible = ref(false)
+// 场景选择弹框：全局共享，首页 Start 按钮（无当前场景时）也复用同一个弹框
+const industryVisible = useState('siteSceneDialogVisible', () => false)
 const handleMoreOpr = (action) => {
   if (action === 'changeHY') {
     moreVisible.value = false

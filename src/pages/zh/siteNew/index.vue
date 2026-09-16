@@ -33,7 +33,10 @@
             and moves you from idea to impact with less friction and more flow.
           </div>
           <div class="header_left_buttom">
-            <nuxt-link class="buttom1" to="http://oort.oortcloudsmart.com:23410" target="_blank">
+            <div v-if="isLogin" class="buttom1" @click="handleStart">
+              Start
+            </div>
+            <nuxt-link v-else class="buttom1" to="http://oort.oortcloudsmart.com:23410" target="_blank">
               Sign in
             </nuxt-link>
             <nuxt-link class="buttom2" to="/zh/siteNew/industy/buy">
@@ -260,7 +263,11 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+import { useSessionStorage } from '@vueuse/core'
+import { getLastIndustry, getMyIndustryList } from '@/api/modules/industryScene'
+import { buildIndustryHomepageUrl, getIndustryHomepageUrl } from '@/utils/industryScene'
 // import homeApp_a1 from '@/assets/site/homeApp_a1.png'
 // import homeApp_a2 from '@/assets/site/homeApp_a2.png'
 // import homeApp_a3 from '@/assets/site/homeApp_a3.png'
@@ -300,6 +307,46 @@ import gz from '@/assets/img/gz.png'
 definePageMeta({
   layout: 'site-new'
 })
+
+const route = useRoute()
+// 登录态与场景选择弹框由 NavHeader 统一维护（Nuxt useState 全局共享），首页只消费
+const siteUserInfo = useState('siteUserInfo', () => null)
+const siteSceneDialogVisible = useState('siteSceneDialogVisible', () => false)
+const accessTokenStorage = useSessionStorage('accessToken', '')
+const tenantIdStorage = useSessionStorage('tenantId', '')
+const starting = ref(false)
+const getQueryValue = value => Array.isArray(value) ? value[0] : value
+const isLogin = computed(() => !!siteUserInfo.value)
+const auth = computed(() => ({
+  accessToken: accessTokenStorage.value || getQueryValue(route.query.access_token) || '',
+  tenantId: tenantIdStorage.value || getQueryValue(route.query.tenant_id) || ''
+}))
+
+// 已登录后按钮为 Start：点击直达当前生效场景（行业 / 场景 / 职能）的首页
+const handleStart = async() => {
+  if (starting.value) return
+  starting.value = true
+  try {
+    const entityId = siteUserInfo.value?.user_id || siteUserInfo.value?.userId || ''
+    const selectedRes = await getLastIndustry(auth.value, entityId)
+    const currentId = selectedRes?.code === 200 ? selectedRes.data?.industry_id : ''
+    const listRes = await getMyIndustryList(auth.value)
+    const list = listRes?.code === 200 ? (listRes.data?.list || {}) : {}
+    const allConfig = [...(list.hyConfig || []), ...(list.cjConfig || []), ...(list.znConfig || [])]
+    const currentScene = allConfig.find(item => item.industry_id === currentId)
+    const homepageUrl = buildIndustryHomepageUrl(getIndustryHomepageUrl(currentScene))
+    if (homepageUrl) {
+      window.location.href = homepageUrl
+      return
+    }
+    // 没有当前生效场景（或场景未配置首页）时，打开场景选择弹框让用户先选场景
+    siteSceneDialogVisible.value = true
+  } catch {
+    siteSceneDialogVisible.value = true
+  } finally {
+    starting.value = false
+  }
+}
 
 let appList = ref([])
 appList.value = [
