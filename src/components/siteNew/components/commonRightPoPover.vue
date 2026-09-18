@@ -189,21 +189,29 @@ onMounted(() => {
 .pover_apps_item {
   width: 100px;
   height: 100px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 8px 6px;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 8px;
   cursor: pointer;
   img {
     height: 48px;
     width: auto;
+    flex-shrink: 0;
   }
-  div {
-    margin-top: 10px;
+  .pover_apps_item_name {
+    margin-top: 8px;
     /* 大写 PX 不参与 postcss-px-to-viewport 转换，浮层文字恒定像素不随视口放大 */
     font-size: 14PX;
     color: #3D3D3D;
+    text-align: center;
+    line-height: 18PX;
+    height: 36PX; /* 固定两行高度，同行图标基线一致 */
+    overflow: hidden;
+    word-break: break-all;
   }
 }
 
