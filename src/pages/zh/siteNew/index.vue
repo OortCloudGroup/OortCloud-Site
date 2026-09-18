@@ -109,6 +109,71 @@
         </div>
       </div>
     </div>
+    <div class="productBox w1380 tokenPlanBox">
+      <div class="tokenPlan">
+        <div class="tokenPlan_header">
+          <img class="tokenPlan_logo" src="@/assets/img/tokenPlan/logo.png" alt="" />
+          <span class="tokenPlan_name">OortCloud Token Plan</span>
+          <span class="tokenPlan_sub">欢迎订阅</span>
+        </div>
+        <div class="tokenPlan_desc">
+          欢迎使用 OortCloud！订阅 OortCloud Token Plan，20元/月起，Qwen, DeepSeek, Kimi, GLM等顶级模型尝鲜，更有OortCodex和DSH For OortCloud Work以及VLStream数据分析生态共享额度，高效开启AI生产力。<br />
+          开始使用，登录你的 OortCloud 账户。获得强大模型、高质量的工程、成本分析等。
+        </div>
+        <div class="tokenPlan_btns">
+          <div v-if="isLogin" class="tokenPlan_btn primary" @click="handleStart">
+            立即使用
+          </div>
+          <nuxt-link v-else class="tokenPlan_btn primary" to="http://oort.oortcloudsmart.com:23410" target="_blank">
+            立即使用
+          </nuxt-link>
+          <nuxt-link class="tokenPlan_btn secondary" to="/zh/siteNew/price">
+            升级订阅
+          </nuxt-link>
+        </div>
+        <div class="tokenPlan_carousel">
+          <n-carousel
+            autoplay
+            draggable
+            :interval="2000"
+            dot-placement="bottom"
+            :show-arrow="false"
+          >
+            <img
+              v-for="(item, i) in tokenPlanBanners"
+              :key="i"
+              class="tokenPlan_carousel_img"
+              :src="item"
+              alt=""
+            />
+            <template #dots="{ total, currentIndex, to }">
+              <div class="tokenPlan_dots">
+                <button
+                  v-for="idx in total"
+                  :key="idx"
+                  type="button"
+                  class="tokenPlan_dot"
+                  :class="{ active: idx - 1 === currentIndex }"
+                  @click="to(idx - 1)"
+                >
+                  <img
+                    :src="idx - 1 === currentIndex ? tokenPlanDotActive : tokenPlanDot"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </template>
+          </n-carousel>
+        </div>
+        <div class="tokenPlan_footer">
+          VLStream在线体验网址:
+          <a href="https://vlstream.oortcloudsmart.com:2443/bus/vls-ui/login" target="_blank" rel="noopener noreferrer">
+            https://vlstream.oortcloudsmart.com:2443/bus/vls-ui/login
+          </a>
+          默认账号密码: admin / Codex@123456
+        </div>
+      </div>
+    </div>
     <div class="productBox w1380" style="padding-bottom: 0px;">
       <div class="proT" style="padding-bottom: 40px;">
         想象一下，<span class="vlsUs vlsUs2">海量商业智能体</span> 尽在您的指尖
@@ -266,6 +331,7 @@
 import { ref, computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useSessionStorage } from '@vueuse/core'
+import { NCarousel } from 'naive-ui'
 import { getLastIndustry, getMyIndustryList } from '@/api/modules/industryScene'
 import { buildIndustryHomepageUrl, getIndustryHomepageUrl } from '@/utils/industryScene'
 // import homeApp_a1 from '@/assets/site/homeApp_a1.png'
@@ -303,6 +369,13 @@ import yw from '@/assets/img/yw.png'
 import hr from '@/assets/img/hr.png'
 import hy from '@/assets/img/hy.png'
 import gz from '@/assets/img/gz.png'
+import tokenBannerOortCodex from '@/assets/img/tokenPlan/oortcodex.png'
+import tokenBannerDsh from '@/assets/img/tokenPlan/dsh.png'
+import tokenBannerVlstream from '@/assets/img/tokenPlan/vlstream.png'
+import tokenBannerAiManga from '@/assets/img/tokenPlan/ai-manga.png'
+import tokenBannerAiCamera from '@/assets/img/tokenPlan/ai-camera.png'
+import tokenPlanDot from '@/assets/img/tokenPlan/dot.png'
+import tokenPlanDotActive from '@/assets/img/tokenPlan/dot-active.png'
 
 definePageMeta({
   layout: 'site-new'
@@ -351,16 +424,16 @@ const handleStart = async() => {
 let appList = ref([])
 appList.value = [
 
-  { t: '通用', dec: '自然对话，智能生成文档 / 表格 / PPT', img: ty },
-  { t: '办公', dec: 'AI 生成公文，解读政策辅助审批', img: bg },
-  { t: '营销', dec: 'AI 生成话术，分析画像策划活动', img: yx },
+  { t: 'OortCodex', dec: '把想法变成现实的能力属于每一个人', img: ty },
+  { t: 'DSH For Oortcloud Work', dec: '工作任务自动完成', img: bg },
+  { t: 'OortCodex IDE', dec: '面向高效的软件工程化交付场景', img: bc },
 
-  { t: '编程', dec: 'AI 智能编码，高效生成与调试代码', img: bc },
-  { t: '运维', dec: 'AI 故障排查，监控预警 7×24 小时', img: yw },
-  { t: 'HR', dec: 'AI 筛选简历，面试邀约绩效分析', img: hr },
+  { t: '营销', dec: 'AI 生成话术，分析回放展示活动', img: yx },
+  { t: '运维', dec: 'AI 故障排查，流程监控 7*24 小时', img: yw },
+  { t: 'HR', dec: 'AI 筛选简历，面试意向绩效分析', img: hr },
 
   { t: '会议', dec: 'AI 生成纪要，多语言实时转写', img: hy },
-  { t: '感知', dec: '多模态理解，智能预判用户需求', img: gz }
+  { t: '感知', dec: '多模态理解，智能研判资产安全', img: gz }
 ]
 // appList.value = [
 //   { t: '通知公告', img: homeApp_a1 },
@@ -387,6 +460,14 @@ appList.value = [
 //   { t: '打卡签到', img: homeApp_d4 },
 //   { t: '云相册', img: homeApp_d5 }
 // ]
+
+const tokenPlanBanners = [
+  tokenBannerOortCodex,
+  tokenBannerDsh,
+  tokenBannerVlstream,
+  tokenBannerAiManga,
+  tokenBannerAiCamera
+]
 
 const appListRef = ref(null)
 const canScrollLeft = ref(false)
@@ -1227,6 +1308,154 @@ background-image: url("@/assets/software/icon_tou_2.png");
     font-size: 16px;
     color: #97a3b6;
     line-height: 22px;
+  }
+}
+
+.tokenPlanBox {
+  padding-bottom: 40px;
+}
+
+.tokenPlan {
+  text-align: left;
+  padding: 40px 48px 32px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+
+  .tokenPlan_header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .tokenPlan_logo {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+
+  .tokenPlan_name {
+    font-size: 48px;
+    font-weight: 600;
+    color: #2278FF;
+  }
+
+  .tokenPlan_sub {
+    font-size: 48px;
+    font-weight: 600;
+    color: #3D3D3D
+  }
+
+  .tokenPlan_desc {
+    font-size: 24px;
+    line-height: 36px;
+    color: #333333;
+    margin-bottom: 40px;
+    max-width: 1190px;
+  }
+
+  .tokenPlan_btns {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+
+  .tokenPlan_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 168px;
+    height: 64px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &.primary {
+      background: #2278FF;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(34, 120, 255, 0.35);
+    }
+
+    &.secondary {
+      background: #F0F0F0;
+      color: #333;
+    }
+  }
+
+  .tokenPlan_carousel {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+
+    :deep(.n-carousel) {
+      position: relative;
+      border-radius: 12px;
+    }
+  }
+
+  .tokenPlan_dots {
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 2;
+  }
+
+  .tokenPlan_dot {
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    line-height: 0;
+    transition: opacity 0.2s;
+
+    img {
+      display: block;
+      width: 8px;
+      height: 8px;
+      object-fit: contain;
+    }
+
+    &.active img {
+      width: 28px;
+      height: 8px;
+    }
+  }
+
+  .tokenPlan_carousel_img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: grab;
+  }
+
+  .tokenPlan_footer {
+    font-size: 20px;
+    line-height: 36px;
+    color: #333333;
+    word-break: break-all;
+
+    a {
+      color: #2278FF;
+      text-decoration: none;
+    }
   }
 }
 
