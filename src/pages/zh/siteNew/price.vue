@@ -1,1564 +1,1138 @@
 <template>
-  <div class="home_page vls">
-    <div class="platTop page-start">
-      <div class="VLStream">
-        超值<span style="color: #2278FF;">低价</span> <span class="vlsUs">不是做梦!</span>
+  <div class="token-plan-page">
+    <div class="hero">
+      <div class="hero-title">
+        <img class="hero-logo" src="@/assets/img/tokenPlan/logo.png" alt="" />
+        <span class="hero-name">OortCloud Token Plan</span>
+        <span class="hero-sub">欢迎订阅</span>
       </div>
-      <div>选择一个合适您的套餐</div>
+      <p class="hero-desc">
+        欢迎使用 OortCloud！订阅 OortCloud Token Plan，20元/月起，Qwen, DeepSeek, Kimi, GLM等顶级模型尝鲜，更有OortCodex和DSH For OortCloud Work以及VLStream数据分析生态共享额度，高效开启AI生产力。<br />
+        开始使用，登录你的 OortCloud 账户。获得强大模型、高质量的工程、成本分析等。
+      </p>
     </div>
-    <div class="priceBox">
-      <div v-for="item in list" :key="item.id" class="item" :class="{yellow: item.name === '企业版'}">
+
+    <div class="segmented-wrap">
+      <div class="segmented" role="tablist" aria-label="定价方案切换">
+        <button
+          type="button"
+          role="tab"
+          :class="{ active: priceTab === 'sub' }"
+          @click="setTab('sub')"
+        >
+          个人订阅
+        </button>
+        <button
+          type="button"
+          role="tab"
+          :class="{ active: priceTab === 'ent' }"
+          @click="setTab('ent')"
+        >
+          企业订阅
+        </button>
+        <button
+          type="button"
+          role="tab"
+          :class="{ active: priceTab === 'card' }"
+          @click="setTab('card')"
+        >
+          会员卡
+        </button>
+      </div>
+      <button class="redeem-entry" type="button" @click="membershipRedeemOpen = true">
+        使用会员卡 <span aria-hidden="true">🎁</span>
+      </button>
+    </div>
+
+    <!-- 个人订阅 -->
+    <div v-show="priceTab === 'sub'" class="pane">
+      <div v-if="upgrade.status === 'loading'" class="plans-state">
+        正在查询可升级套餐…
+      </div>
+      <div v-else-if="upgrade.status === 'error'" class="plans-state error">
+        <span>可升级套餐加载失败，请重试</span>
+        <button type="button" class="btn ghost sm" @click="refreshUpgradeOptions">
+          重试
+        </button>
+      </div>
+      <template v-else>
+        <div class="plans">
+          <!-- Free -->
+          <div class="plan" :class="{ current: upgrade.status === 'ready' && !!upgrade.currentPlan }">
+            <h4>Free</h4>
+            <div class="price">
+              <b>¥0</b><span>/月</span>
+            </div>
+            <div class="tag">
+              {{ planCopy.free.tag }}
+            </div>
+            <ul>
+              <li v-for="(f, i) in freeFeatures" :key="i">
+                <img class="feat-check" src="@/assets/img/tokenPlan/check-double.png" alt="" /><span>{{ f }}</span>
+              </li>
+            </ul>
+            <a
+              v-if="!(upgrade.status === 'ready' && upgrade.currentPlan)"
+              class="btn ghost"
+              :href="DOWNLOAD_URL"
+              download
+            >免费下载</a>
+            <button v-else type="button" class="btn ghost" disabled>
+              仅可升级
+            </button>
+          </div>
+
+          <!-- Pro / Pro+ / Ultra -->
+          <div
+            v-for="card in visiblePlanCards"
+            :key="(card.option && card.option.id) || card.key"
+            class="plan"
+            :class="{
+              featured: card.key === 'pro' && !card.disabled,
+              current: card.disabled
+            }"
+          >
+            <span v-if="card.key === 'pro' && !card.disabled" class="flag">最受欢迎</span>
+            <h4>{{ (card.option && card.option.title) || planCopy[card.key].title }}</h4>
+            <div class="price">
+              <b>{{ optionPrice(card.option, card.key) }}</b>
+              <span>/月</span>
+            </div>
+            <div class="tag">
+              {{ (card.option && card.option.subtitle) || planCopy[card.key].tag }}
+            </div>
+            <ul>
+              <li v-for="(f, i) in planFeatures(card.key, card.option)" :key="i">
+                <img class="feat-check" src="@/assets/img/tokenPlan/check-double.png" alt="" /><span>{{ f }}</span>
+              </li>
+            </ul>
+            <button
+              type="button"
+              class="btn primary"
+              :disabled="card.disabled"
+              @click="subscribe(card)"
+            >
+              {{ card.disabled ? (card.current ? '当前订阅' : '仅可升级') : '立即订阅' }}
+            </button>
+          </div>
+        </div>
+      </template>
+
+      <!-- Credit Pack -->
+      <div id="credit-pack" class="credit-pack">
+        <h4>Credit Pack · 加量包</h4>
+        <div class="cp-sub">
+          追加 Credits，适用于 Pro / Pro+ / Ultra 订阅用户 · 两款产品通用
+        </div>
+        <div class="cp-rate">
+          <b>¥{{ fmtNum(unitPrice) }}</b>
+          <span>/ {{ fmtNum(unitCredits) }} Credits · 进入公共钱包 · 无独立到期时间</span>
+        </div>
+        <div class="stepper-row">
+          <span class="qty-label">购买数量</span>
+          <div class="stepper">
+            <button type="button" :disabled="qty <= MIN" @click="step(-1)">
+              −
+            </button>
+            <input v-model.number="qty" type="number" :min="MIN" :max="MAX" @change="onQtyInput" />
+            <button type="button" :disabled="qty >= MAX" @click="step(1)">
+              +
+            </button>
+          </div>
+        </div>
+        <div class="cp-summary">
+          <div class="cp-line">
+            <span>Credits 总量</span><span>{{ fmtNum(totalCredits) }} Credits</span>
+          </div>
+          <div class="cp-line">
+            <span>数量</span>
+            <span>{{ qty }} pack{{ qty > 1 ? 's' : '' }} × {{ fmtNum(unitCredits) }} Credits</span>
+          </div>
+          <div class="cp-line total">
+            <span>总计</span><b>¥{{ fmtNum(total) }}</b>
+          </div>
+        </div>
+        <button type="button" class="btn primary lg" @click="buyPack">
+          自选购买
+        </button>
+        <p class="cp-note">
+          *在已选套餐基础上，灵活补充额外资源与功能，满足阶段性扩容或个性化需求，无需更换主套餐。
+        </p>
+      </div>
+
+      <div class="enterprise-band">
         <div>
-          <div class="item-1 title1">
-            {{ item.name }}
-            <div v-if="item.name === '企业版'" class="Popular">
-              热门推荐
-            </div>
+          <h4>{{ tr('pricing.enterprise.title') }}</h4>
+          <p>{{ tr('pricing.enterprise.desc') }}</p>
+        </div>
+        <a class="btn primary slim" :href="SALES_MAIL">{{ tr('pricing.enterprise.btn') }}</a>
+      </div>
+
+      <div class="compare-head">
+        <div class="compare-pill">
+          版本功能对比
+        </div>
+        <h2>为你的业务需求找到正确的<br />订阅套餐</h2>
+        <div class="compare-link">
+          <img src="@/assets/img/tokenPlan/daochu.png" alt="" />导出PDF文件查看 &gt;
+        </div>
+      </div>
+
+      <div id="compare" class="compare-card">
+        <div
+          v-for="(group, gIdx) in compareGroups"
+          :key="gIdx"
+          class="compare-group"
+        >
+          <div class="group-title">
+            {{ group.name }}
           </div>
-          <div class="item-2 title2">
-            {{ item.pricing_type === 1 ? '免费' : item.annual_price_desc }}
-          <!-- <span class="title3" style="color: #818089;">/年</span> -->
-          </div>
-          <div class="item-4 title3">
-            {{ item.remark }}
-          </div>
-          <div v-for="(value,index) in item.highlights" :key="index" class="item-5 title3 ">
-            <!-- <img src="@/assets/software/double-yes.png" alt="" /> -->
-            {{ value }}
-          </div>
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>功能项</th>
+                <th v-for="col in compareCols" :key="col.key" :class="{ hot: col.key === 'pro' }">
+                  <div class="col-name">
+                    {{ col.title }}
+                  </div>
+                  <div class="col-price">
+                    {{ col.price }}/月
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(row, rIdx) in group.rows" :key="rIdx">
+                <td>{{ row.label }}</td>
+                <template v-if="row.spanAll">
+                  <td colspan="4" class="span-all">
+                    {{ row.cells[0].text }}
+                  </td>
+                </template>
+                <template v-else>
+                  <td
+                    v-for="(cell, cIdx) in row.cells"
+                    :key="cIdx"
+                    :class="{ hot: compareCols[cIdx] && compareCols[cIdx].key === 'pro' }"
+                  >
+                    <img v-if="cell.type === 'yes'" class="yes" src="@/assets/img/tokenPlan/check-square.png" alt="" />
+                    <span v-else-if="cell.type === 'no'" class="no">—</span>
+                    <span v-else>{{ cell.text }}</span>
+                  </td>
+                </template>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="item_content">
-          <el-tooltip
-            :disabled="!(token && item.can_purchase === false && item.reason)"
-            :content="item.reason"
-            placement="top"
-          >
-            <div
-              class="item-6"
-              :class="{
-                yellow_buy: item.name === '企业版',
-                disabled: token && item.can_purchase === false
-              }"
-              @click="buyFn(item)"
-            >
-              {{ getBuyBtnText(item) }}
-            </div>
-          </el-tooltip>
-          <div class="item-7" :class="{yewllow_meal: item.name === '企业版'}">
-            <div class="meal" @click="mealDetail(item.id)">
-              <img src="@/assets/software/tcxq.png" alt="" />套餐详情
-            </div>
-            <div class="meal" @click="addBuyFn(item.id)">
-              <img src="@/assets/software/zzgm.png" alt="" />增值购买
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="w1380">
-      <div class="optional" @click="ownBuy">
-        自选购买
-      </div>
-      <div class="descripe">
-        *在已选套餐基础上，灵活补充额外资源与功能，满足阶段性扩容或个性化需求，无需更换主套餐。
-      </div>
-    </div>
-    <div class="contrast">
-      <div class="contrast_tiitle">
-        套餐对比
-      </div>
-      为你的业务需求找到正确的<br />订阅套餐
-    </div>
-    <div
-      v-for="(serviceItem, sIdx) in serviceList"
-      :key="sIdx"
-      class="w1380 compare-table"
-    >
-      <div class="app-title">
-        <oort-img :src="serviceItem.icon_url" alt="" style="width:36px;height:36px;margin-right:10px;" />
-        {{ serviceItem.display_name }}
-      </div>
-      <table class="im-table">
-        <thead>
-          <tr>
-            <th class="center-text">
-              功能项
-            </th>
-            <th
-              v-for="pkg in packageColumns"
-              :key="pkg"
-            >
-              {{ pkg }}
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr
-            v-for="(feat, fIdx) in serviceItem.feature_config_views"
-            :key="fIdx"
-          >
-            <td class="center-text">
-              {{ feat.display_name }}
-            </td>
-            <td
-              v-for="pkg in packageColumns"
-              :key="pkg"
-            >
-              {{ getFeatureValue(pkg, serviceItem.display_name, feat.display_name) || '-' }}
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <!-- <div class="platTop w1380">
-      <div class="VLStream us1">
-        <span class="vlsUs us1s"><span>标准</span> 和 <span>定制</span> 服务计划，</span> 均为单一费用涵盖所有 OortCloud 应用程序
-      </div>
-    </div> -->
-    <!-- <div class="proTitleBox priceIconBox w1380 flexRowAC" style="justify-content: space-between">
-      <div class="priceIconIt flexRowAC">
-        <img class="priceImg" src="@/assets/software/price_c1.png" alt="" />
-        <div class="priceTi">
-          个人效率工具
-        </div>
-      </div>
-      <div class="priceIconIt flexRowAC">
-        <img class="priceImg" src="@/assets/software/price_c2.png" alt="" />
-        <div class="priceTi">
-          培训学习
-        </div>
-      </div>
-      <div class="priceIconIt flexRowAC">
-        <img class="priceImg" src="@/assets/software/price_c3.png" alt="" />
-        <div class="priceTi">
-          指挥调度
-        </div>
-      </div>
-      <div class="priceIconIt flexRowAC">
-        <img class="priceImg" src="@/assets/software/price_c4.png" alt="" />
-        <div class="priceTi">
-          行政智慧后勤
-        </div>
-      </div>
-      <div class="priceIconIt flexRowAC">
-        <img class="priceImg" src="@/assets/software/price_c5.png" alt="" />
-        <div class="priceTi">
-          生产力工具
-        </div>
-      </div>
-      <div class="priceIconIt flexRowAC">
-        <img class="priceImg" src="@/assets/software/price_c6.png" alt="" />
-        <div class="priceTi">
-          业务管理
-        </div>
-      </div>
-      <div class="priceIconIt flexRowAC">
-        <img class="priceImg" src="@/assets/software/price_c7.png" alt="" />
-        <div class="priceTi">
-          队伍建设
-        </div>
-      </div>
-      <div class="priceIconIt flexRowAC">
-        <img class="priceImg" src="@/assets/software/price_c8.png" alt="" />
-        <div class="priceTi">
-          IOT
-        </div>
-      </div>
-    </div> -->
-    <!-- <div class="proTitleBox lineBox w1380 flexRowAC">
-      <div class="line" />
-      还有更多
-      <img class="lineImg" src="@/assets/software/price_icon.png" alt="" />
-      <div class="line" />
-    </div>
-    <div class="proTitleBox w1380 plan">
-      <div class="plan_t">
-        所有计划享有 <span style="color: #2278FF;font-weight: bold; ">无限技术支持</span>、托管以及系统维护。
-        <br />
-        无任何隐藏费用，功能和数据使用无限制：享受真正的透明定价！
-      </div>
-      <div class="plan_t">
-        (*)折扣有效期为12个月，适用于订购的初始用户。
-        <br />
-        (**)不包括OortCloud.sh的托管费用。
-      </div>
-      <div class="flexRowAC useBox" style="justify-content: center">
-        <div class="seeMore">
-          安排演示
-        </div>
-      </div>
-    </div> -->
-    <div class="proTitleBox w1380 flexRowAC" style="justify-content: flex-start;">
-      <div>
-        有疑问<span style="color: #FFB53B">?</span>
-        <div class="pri_why">
-          如果此页面上没有符合您的问题的答案，请联系我们 <span style="color: #2278FF">客户经理</span>
-        </div>
-      </div>
-    </div>
-    <div class="advantBox w1380">
-      <div class="flexRowAC advantIt">
-        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num1.png" alt="" />
-        我真的可以用统一的价格访问上百的应用程序和模块吗？
-      </div>
-      <div class="flexRowAC advantIt">
-        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num2.png" alt="" />
-        订阅中包含的内容有什么
-      </div>
-      <div class="flexRowAC advantIt">
-        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num3.png" alt="" />
-        什么是自主托管/OortCould.sh?
-      </div>
-      <div class="flexRowAC advantIt">
-        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num4.png" alt="" />
-        单一应用程序免费计划是否支持多公司或使用定制应用程序?
-      </div>
-      <div class="flexRowAC advantIt">
-        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num5.png" alt="" />
-        为什么在单一应用程序免费计划中，我有多个应用程序?
-      </div>
-      <div class="flexRowAC advantIt">
-        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num6.png" alt="" />
-        我在哪里可以找到实施服务，花费是多少?
-      </div>
-      <div class="flexRowAC advantIt">
-        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num7.png" alt="" />
-        标准计划和定制计划的区别是什么?
-      </div>
-      <div class="flexRowAC advantIt">
-        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num8.png" alt="" />
-        标准计划和定制计划的区别是什么?
-      </div>
-      <div class="flexRowAC advantIt">
-        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num9.png" alt="" />
-        我是否可以从托管计划(OortCloud Online)切换到OortCloud 企业版或反向切换?
-      </div>
-      <div class="flexRowAC advantIt">
-        <img class="advantBoxImg" src="@/assets/software/mobilePolice_num10.png" alt="" />
-        什么是外部API?
       </div>
     </div>
 
-    <el-dialog
-      v-model="dialogVisible"
-      width="1200px"
-      destroy-on-close
-      top="5vh"
-    >
-      <priceDetail :id="id" />
-    </el-dialog>
-    <el-drawer v-model="drawer" size="90%" @close="handleClose">
-      <buyDrawer ref="buyDrawerRef" :platform-id="platformId" />
-    </el-drawer>
-    <el-drawer v-model="drawer2" size="90%" @close="handleDrawerClose">
-      <payDrawer :order-data="orderData" />
-    </el-drawer>
+    <!-- 企业订阅 -->
+    <div v-show="priceTab === 'ent'" class="pane">
+      <EnterprisePlansPanel :active="priceTab === 'ent'" />
+    </div>
+
+    <!-- 会员卡 -->
+    <div v-show="priceTab === 'card'" class="pane">
+      <MembershipCardsPanel :active="priceTab === 'card'" />
+    </div>
+
+    <section class="faq-section">
+      <h2 class="faq-title">
+        有疑问<span class="qmark">？</span>
+      </h2>
+      <div class="faq-bar">
+        <p>
+          如果页面上没有找到你的问题，请联系我们
+          <a :href="SALES_MAIL">客户经理</a>
+        </p>
+        <button type="button" class="expand-all" @click="toggleAllFaq">
+          {{ allFaqOpen ? '全部收起' : '全部展开' }}
+        </button>
+      </div>
+      <div class="faq-list">
+        <div
+          v-for="(item, i) in faqItems"
+          :key="i"
+          class="faq-item"
+          :class="{ open: openFaq.has(i) }"
+        >
+          <button type="button" class="faq-q" @click="toggleFaq(i)">
+            <span class="faq-no">{{ String(i + 1).padStart(2, '0') }}</span>
+            <span class="faq-text">{{ item.q }}</span>
+            <img
+              class="faq-pm"
+              :src="openFaq.has(i) ? faqExpandIcon : faqCollapseIcon"
+              alt=""
+            />
+          </button>
+          <div v-show="openFaq.has(i)" class="faq-a">
+            <p v-for="(para, pIdx) in item.a" :key="pIdx">
+              {{ para }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <h2>{{ tr('pricing.cta.title') }}</h2>
+      <p>{{ tr('pricing.cta.sub') }}</p>
+      <div class="cta-actions">
+        <a class="btn primary slim" :href="SALES_MAIL">{{ tr('pricing.cta.contact') }}</a>
+        <a class="btn ghost slim" href="/zh/siteNew/">{{ tr('pricing.cta.backHome') }}</a>
+      </div>
+    </section>
+
+    <TokenPlanPayModal />
+    <MembershipRedeemModal
+      :open="membershipRedeemOpen"
+      @close="membershipRedeemOpen = false"
+      @buy="goBuyMembershipCard"
+    />
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { useRouter } from 'vue-router'
-import { useSessionStorage } from '@vueuse/core'
-import priceDetail from './priceDetail.vue'
-import buyDrawer from './buyDrawer.vue'
-import payDrawer from './payDrawer.vue'
-
-import { mealList, mealCompare, createOrder, purchaseEligibility, orderDetail } from '@/api'
-
-const router = useRouter()
-const token = useSessionStorage('accessToken', '')
-const list = ref([])
-const id = ref(1)
-const compareData = ref({})
-const drawer = ref(false)
-const drawer2 = ref(false)
-const orderData = ref({})
-const platformId = ref(1)
-const eligibilityMap = ref({})
-
-onMounted(() => {
-  getMealCompare()
-  getMealList()
-})
-
-const getMealList = async() => {
-  try {
-    const data = {
-      page: 1,
-      pagesize: 10
-    }
-    const res = await mealList(data)
-    list.value = (res.data.list || []).map(item => ({
-      ...item,
-      can_purchase: true,
-      reason: ''
-    }))
-    if (token.value) {
-      await fetchPurchaseEligibility()
-    }
-  } catch (err) {
-    console.error('获取套餐列表失败:', err)
-  }
-}
-
-// 批量查询购买资格，并合并到套餐卡片
-const fetchPurchaseEligibility = async() => {
-  const ids = list.value.map(item => item.id).filter(Boolean)
-  if (!ids.length || !token.value) return
-  try {
-    const res = await purchaseEligibility({ platform_package_ids: ids })
-    const map = {}
-    ;(res.data?.list || []).forEach((item) => {
-      map[item.platform_package_id] = item
-    })
-    eligibilityMap.value = map
-    list.value = list.value.map((item) => {
-      const eligibility = map[item.id]
-      if (!eligibility) return item
-      return {
-        ...item,
-        can_purchase: eligibility.can_purchase,
-        reason: eligibility.reason || '',
-        pricing_type: eligibility.pricing_type ?? item.pricing_type
-      }
-    })
-  } catch (err) {
-    console.error('查询购买资格失败:', err)
-  }
-}
-
-const getBuyBtnText = (item) => {
-  return item.pricing_type === 1 ? '免费开通' : '立即购买'
-}
-
-const getMealCompare = async() => {
-  try {
-    const res = await mealCompare({})
-    compareData.value = res.data
-    buildTableData()
-  } catch (err) {
-    console.error('获取套餐对比:', err)
-  }
-}
-const mealDetail = (data) => {
-  dialogVisible.value = true
-  id.value = data
-}
+import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
+import faqCollapseIcon from '@/assets/img/tokenPlan/faq-collapse.png'
+import faqExpandIcon from '@/assets/img/tokenPlan/faq-expand.png'
+import TokenPlanPayModal from '@/components/siteNew/tokenPlan/TokenPlanPayModal.vue'
+import MembershipCardsPanel from '@/components/siteNew/tokenPlan/MembershipCardsPanel.vue'
+import EnterprisePlansPanel from '@/components/siteNew/tokenPlan/EnterprisePlansPanel.vue'
+import MembershipRedeemModal from '@/components/siteNew/tokenPlan/MembershipRedeemModal.vue'
+import { useWritable } from '@/utils/tokenPlan/useWritable.js'
+import { tr } from '@/utils/tokenPlan/i18n.js'
+import {
+  creditsRate,
+  packInfo,
+  upgradeOptions,
+  refreshUpgradeOptions,
+  startSubscribe,
+  startPackPurchase,
+  initSubscription
+} from '@/utils/tokenPlan/subscription.js'
 
 definePageMeta({
   layout: 'site-new'
 })
-const dialogVisible = ref(false)
 
-const packageColumns = ref([])
-const serviceList = ref([])
+const DOWNLOAD_URL =
+  'https://gitcode.com/OortCloudGroup/OortStudio/releases/download/v1.0.12/OortCloud%20AI%20Studio.exe'
+const SALES_MAIL = 'mailto:sales@oortcodex.com'
 
-// 构建表格结构
-const buildTableData = () => {
-  const pkgViews = compareData.value?.platform_package_views || []
-  if (!pkgViews.length) return
-
-  // 套餐列名
-  packageColumns.value = pkgViews.map(p => p.display_name)
-
-  // 取第一个套餐下的服务作为结构基准
-  const basePackage = pkgViews[0]
-  serviceList.value = basePackage.service_views || []
+const TAB_BY_HASH = {
+  '#personal-subscription': 'sub',
+  '#enterprise-subscription': 'ent',
+  '#membership-card': 'card'
+}
+const HASH_BY_TAB = {
+  sub: '#personal-subscription',
+  ent: '#enterprise-subscription',
+  card: '#membership-card'
 }
 
-const getFeatureValue = (packageName, serviceName, featureName) => {
-  const pkgViews = compareData.value?.platform_package_views || []
-  const pkg = pkgViews.find(p => p.display_name === packageName)
-  if (!pkg) return '-'
+const priceTab = ref('sub')
+const membershipRedeemOpen = ref(false)
+const pack = useWritable(packInfo)
+const rateStore = useWritable(creditsRate)
+const upgrade = useWritable(upgradeOptions)
 
-  const service = pkg.service_views.find(s => s.display_name === serviceName)
-  if (!service) return '-'
+const PLAN_PRICE = { free: 0, pro: 20, proPlus: 60, ultra: 200 }
+const PLAN_TITLE = { free: null, pro: 'Pro', proPlus: 'Pro+', ultra: 'Ultra' }
+const PAID_PLAN_KEYS = ['pro', 'proPlus', 'ultra']
 
-  const feat = service.feature_config_views.find(f => f.display_name === featureName)
-  return feat?.display_value || '-'
+const planCopy = {
+  free: { title: 'Free', price: '¥0', tag: '免费适用于轻度使用' },
+  pro: { title: 'Pro', price: '¥20', tag: '个人开发者的主力选择' },
+  proPlus: { title: 'Pro+', price: '¥60', tag: '高强度开发与小型团队' },
+  ultra: { title: 'Ultra', price: '¥200', tag: '专业团队与极客' }
+}
+// plan feature lists come from pricing dict via tr()
+
+const freeFeatures = computed(() => tr('pricing.plans.free.features') || [])
+
+const unitPrice = computed(() => {
+  const n = Number(pack.value?.unitPrice)
+  return n > 0 ? n : 20
+})
+const unitCredits = computed(() => {
+  const n = Number(pack.value?.unitCredits)
+  return n > 0 ? n : 2000
+})
+const rate = computed(() => {
+  const n = Number(rateStore.value)
+  return n > 0 && isFinite(n) ? n : 25
+})
+
+const MIN = 1
+const MAX = 50
+const qty = ref(1)
+const totalCredits = computed(() => qty.value * unitCredits.value)
+const total = computed(() => Math.round(qty.value * unitPrice.value * 100) / 100)
+
+function fmtNum(n) {
+  return Number(n).toLocaleString('en-US', { maximumFractionDigits: 2 })
+}
+function creditsForPrice(price) {
+  return Math.round(Number(price) * rate.value * 1000000) / 1000000
+}
+function planCredits(key) {
+  return fmtNum(creditsForPrice(PLAN_PRICE[key]))
+}
+function planFeatures(key, option) {
+  const apiCredits = Number(option && option.total_credits)
+  const credits = isFinite(apiCredits) && apiCredits > 0 ? fmtNum(apiCredits) : planCredits(key)
+  const feats = tr('pricing.plans.' + key + '.features') || []
+  return feats.map(f => (typeof f === 'string' ? f.replace(/\{credits\}/g, credits) : f))
+}
+function optionKey(option, index) {
+  const level = Number(option && option.level)
+  if (level === 1) return 'pro'
+  if (level === 2) return 'proPlus'
+  if (level >= 3) return 'ultra'
+  const title = String((option && option.title) || '').trim().toLowerCase().replace(/\s+/g, '')
+  if (title === 'pro+' || title === 'proplus') return 'proPlus'
+  if (title === 'ultra') return 'ultra'
+  return PAID_PLAN_KEYS[Math.min(index, PAID_PLAN_KEYS.length - 1)]
+}
+function optionPrice(option, key) {
+  if (!option) return planCopy[key].price
+  const amount = option.price_amount_cny != null ? option.price_amount_cny : option.price_amount
+  const n = Number(amount)
+  return '¥' + (isFinite(n) ? n.toLocaleString('en-US', { maximumFractionDigits: 2 }) : '0')
 }
 
-const addBuyFn = (id) => {
-  if (!token.value) {
-    window.open('https://workup.oortcloudsmart.com:2443/bus/apaas-web/loginPage/index.html?appname=OortCloud Site&redirect_uri=' + encodeURIComponent('https://oortcloudsmart.com/zh/siteNew/'), '_blank')
-    return
+const visiblePlanCards = computed(() => {
+  const u = upgrade.value || { status: 'public' }
+  if (u.status === 'ready') {
+    return (u.plans || []).map((option, index) => ({
+      key: optionKey(option, index),
+      option,
+      current: !!(u.currentPlan && String(u.currentPlan.id) === String(option.id)),
+      disabled: !(u.purchasableIds || []).includes(String(option.id))
+    }))
   }
-  drawer.value = true
-  platformId.value = id
+  return PAID_PLAN_KEYS.map(key => ({ key, option: null, current: false, disabled: false }))
+})
+
+function clampQty(v) {
+  return Math.max(MIN, Math.min(MAX, parseInt(v, 10) || MIN))
+}
+function step(d) {
+  qty.value = clampQty(qty.value + d)
+}
+function onQtyInput() {
+  qty.value = clampQty(qty.value)
+}
+function subscribe(card) {
+  if (card.disabled) return
+  const option = card.option
+  startSubscribe(null, {
+    planId: option && option.id,
+    planTitle: (option && option.title) || PLAN_TITLE[card.key],
+    plan: option
+  })
+}
+function buyPack() {
+  startPackPurchase(qty.value)
 }
 
-const buyFn = async(item) => {
-  if (!token.value) {
-    window.open('https://workup.oortcloudsmart.com:2443/bus/apaas-web/loginPage/index.html?appname=OortCloud Site&redirect_uri=' + encodeURIComponent('https://oortcloudsmart.com/zh/siteNew/'), '_blank')
-    return
-  }
-  // 已登录但资格未刷新时再查一次
-  if (!eligibilityMap.value[item.id]) {
-    await fetchPurchaseEligibility()
-  }
-  const current = list.value.find(pkg => pkg.id === item.id) || item
-  if (current.can_purchase === false) {
-    ElMessage.warning(current.reason || '当前不可购买该套餐')
-    return
-  }
-  try {
-    const request_id = generate36UniqueKey()
-    const items = [
+const compareCols = [
+  { key: 'free', title: 'Free', price: '¥0' },
+  { key: 'pro', title: 'Pro', price: '¥20' },
+  { key: 'proPlus', title: 'Pro+', price: '¥60' },
+  { key: 'ultra', title: 'Ultra', price: '¥200' }
+]
+
+function cellText(text) {
+  return { type: 'text', text }
+}
+function cellYes() { return { type: 'yes' } }
+function cellNo() { return { type: 'no' } }
+
+const compareGroups = computed(() => [
+  {
+    name: tr('pricing.compare.groups.usage'),
+    rows: [
       {
-        item_type: 3,
-        platform_package_id: item.id,
-        purchase_years: 1
+        label: tr('pricing.compare.rows.monthlyCredits'),
+        cells: [
+          cellText(tr('pricing.compare.vals.trial300')),
+          cellText(planCredits('pro')),
+          cellText(planCredits('proPlus')),
+          cellText(planCredits('ultra'))
+        ]
+      },
+      {
+        label: tr('pricing.compare.rows.seats'),
+        cells: [cellNo(), cellText('1'), cellText('3'), cellText('10')]
+      },
+      {
+        label: tr('pricing.compare.rows.autonomous'),
+        cells: [cellNo(), cellYes(), cellYes(), cellYes()]
       }
     ]
-    const data = {
-      request_id,
-      order_type: 1,
-      pay_mode: 1,
-      currency: 'CNY',
-      terms_agreement: [
-        {
-          terms_id: 'privacy-v1',
-          channel: 'web'
-        }
-      ],
-      items
-    }
-
-    const res = await createOrder(data)
-    if (res.code !== 200) {
-      // 重复购买被拒等业务错误：刷新资格并禁用按钮
-      const msg = res.msg || '创建订单失败'
-      ElMessage.error(msg)
-      if (msg.includes('仅允许购买一次') || msg.includes('重复购买')) {
-        await fetchPurchaseEligibility()
+  },
+  {
+    name: tr('pricing.compare.groups.coding'),
+    rows: [
+      {
+        label: tr('pricing.compare.rows.completion'),
+        cells: [cellText(tr('pricing.compare.vals.limited')), cellYes(), cellYes(), cellYes()]
+      },
+      {
+        label: tr('pricing.compare.rows.chatAgent'),
+        cells: [cellText(tr('pricing.compare.vals.limited')), cellYes(), cellYes(), cellYes()]
+      },
+      {
+        label: tr('pricing.compare.rows.questWiki'),
+        cells: [cellText(tr('pricing.compare.vals.limited')), cellYes(), cellYes(), cellYes()]
       }
-      return
-    }
-
-    const orderInfo = res.data?.order_info || {}
-    const isFree = current.pricing_type === 1 || (orderInfo.status === 1 && Number(orderInfo.pay_amount) === 0)
-
-    // 免费套餐：不展示支付方式、不调用支付服务，直接查订单详情进入结果页
-    if (isFree) {
-      let detailInfo = orderInfo
-      if (orderInfo.order_no) {
-        try {
-          const detailRes = await orderDetail({ order_no: orderInfo.order_no })
-          if (detailRes.code === 200 && detailRes.data?.order_info) {
-            detailInfo = detailRes.data.order_info
-          }
-        } catch (err) {
-          console.error('获取订单详情失败：', err)
-        }
+    ]
+  },
+  {
+    name: tr('pricing.compare.groups.governance'),
+    rows: [
+      {
+        label: tr('pricing.compare.rows.dashboard'),
+        cells: [cellNo(), cellYes(), cellYes(), cellYes()]
+      },
+      {
+        label: tr('pricing.compare.rows.sso'),
+        cells: [cellNo(), cellNo(), cellYes(), cellYes()]
+      },
+      {
+        label: tr('pricing.compare.rows.audit'),
+        cells: [cellNo(), cellNo(), cellNo(), cellYes()]
+      },
+      {
+        label: tr('pricing.compare.rows.privateDeploy'),
+        spanAll: true,
+        cells: [
+          cellText(
+            tr('pricing.compare.vals.enterprise').replace(
+              '{link}',
+              tr('pricing.compare.vals.enterpriseLinkText')
+            )
+          )
+        ]
       }
-      sessionStorage.setItem('orderInfo', JSON.stringify(detailInfo))
-      ElMessage.success('开通成功')
-      await fetchPurchaseEligibility()
-      router.push({ path: '/zh/siteNew/pay' })
-      return
-    }
+    ]
+  },
+  {
+    name: tr('pricing.compare.groups.support'),
+    rows: [
+      {
+        label: tr('pricing.compare.rows.supportLevel'),
+        cells: [
+          cellText(tr('pricing.compare.vals.community')),
+          cellText(tr('pricing.compare.vals.standard')),
+          cellText(tr('pricing.compare.vals.priority')),
+          cellText(tr('pricing.compare.vals.dedicated'))
+        ]
+      }
+    ]
+  }
+])
 
-    // 付费订单：进入支付
-    orderData.value = res.data
-    drawer2.value = true
-  } catch (error) {
-    console.error('创建订单失败：', error)
-    const msg = error?.data?.msg || error?.message || ''
-    if (msg.includes('仅允许购买一次') || msg.includes('重复购买')) {
-      ElMessage.error(msg)
-      await fetchPurchaseEligibility()
-    }
+const faqItems = computed(() => tr('pricing.faq.items') || [])
+const openFaq = ref(new Set())
+const allFaqOpen = computed(() => faqItems.value.length > 0 && openFaq.value.size === faqItems.value.length)
+
+function toggleFaq(i) {
+  const next = new Set(openFaq.value)
+  if (next.has(i)) next.delete(i)
+  else next.add(i)
+  openFaq.value = next
+}
+function toggleAllFaq() {
+  if (allFaqOpen.value) {
+    openFaq.value = new Set()
+  } else {
+    openFaq.value = new Set(faqItems.value.map((_, i) => i))
   }
 }
 
-const ownBuy = () => {
-  if (!token.value) {
-    window.open('https://workup.oortcloudsmart.com:2443/bus/apaas-web/loginPage/index.html?appname=OortCloud Site&redirect_uri=' + encodeURIComponent('https://oortcloudsmart.com/zh/siteNew/'), '_blank')
-    return
-  }
-  drawer.value = true
-  platformId.value = 0
-}
-
-const handleDrawerClose = () => {
-  orderData.value = {} // 清空数据
-}
-// 生成36位唯一标识符
-const generate36UniqueKey = () => {
-  const timestamp = Date.now().toString()
-  const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-  let randomStr = ''
-  const needLength = 36 - timestamp.length
-  for (let i = 0; i < needLength; i++) {
-    randomStr += chars.charAt(Math.floor(Math.random() * chars.length))
-  }
-  let result = (timestamp + randomStr).split('').sort(() => Math.random() - 0.5).join('')
-  return result.slice(0, 36)
-}
-
-const buyDrawerRef = ref(null)
-
-// 关闭抽屉时清空子组件勾选状态
-const handleClose = () => {
-  if (buyDrawerRef.value) {
-    buyDrawerRef.value.resetChecked()
+function setTab(next) {
+  if (priceTab.value === next) return
+  priceTab.value = next
+  if (typeof history !== 'undefined') {
+    history.replaceState(history.state, '', HASH_BY_TAB[next])
   }
 }
+function syncFromHash() {
+  const tab = TAB_BY_HASH[String(location.hash || '')]
+  if (tab && tab !== priceTab.value) priceTab.value = tab
+}
+function goBuyMembershipCard() {
+  membershipRedeemOpen.value = false
+  setTab('card')
+}
 
+onMounted(() => {
+  window.addEventListener('hashchange', syncFromHash)
+  syncFromHash()
+  initSubscription()
+})
+onUnmounted(() => {
+  window.removeEventListener('hashchange', syncFromHash)
+})
+
+watch(qty, (v) => {
+  if (v !== clampQty(v)) qty.value = clampQty(v)
+})
 </script>
 
 <style scoped lang="scss">
-
-.home_page {
-  position: relative;
-}
-
-.w1380 {
-  width: 1380px;
+.token-plan-page {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 48px 24px 80px;
+  color: #0f172a;
 }
-
-// 查看更多
-//.seeMore {
-//  display: inline-block;
-//  padding: 24px 50px;
-//  color: #fff;
-//  border: 1px solid #2278FF;
-//  border-radius: 8px;
-//  background: #2278FF;
-//  box-shadow: 0px 4px 10px 0px #FF5E1033;
-//  font-weight: bold;
-//  font-size: 18px;
-//}
-
-.platTop {
+.hero {
   text-align: center;
-  padding: 110px 0;
-
-  .plat {
-    display: inline-block;
-    padding: 12px 24px;
-    color: #FF5E10;
-    font-size: 18px;
-    border-radius: 18px;
-    border: 1px solid #E9E9E9;
-  }
-
-  .VLStream_top {
-    height: 66px;
-    width: auto;
-  }
-
-  .VLStream {
-    color: #333;
-    font-weight: bold;
-    font-size: 78px;
-    padding-bottom: 30px;
-    position: relative;
-
-    .VLStream_img {
-      width: 222px;
-      height: 222px;
-      position: absolute;
-      right: 336px;
-      top: -50px;
-    }
-  }
-
-  .plat_a {
-    color: #333333;
-    font-weight: bold;
-    font-size: 58px;
-  }
-
-  .plat_cent {
-    padding: 20px 0 50px;
-    color: #717781;
-    font-size: 18px;
-  }
+  margin-bottom: 36px;
 }
-
-.useBox {
+.hero-title {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
-
-  .seeMore {
-    padding: 24px 50px;
-    color: #fff;
-    border: 1px solid #2278FF;
-    border-radius: 8px;
-    background: #2278FF;
-    //box-shadow: 0px 4px 10px 0px #FF5E1033;
-    font-weight: bold;
-    font-size: 18px;
-  }
-
-  .u1 {
-    color: #333;
-    background-color: #F4F4F4;
-    border: 1px solid #F4F4F4;
-  }
-
-  .seeMore.u2 {
-    display: flex;
-    gap: 10px;
-    border: 1px solid #333;
-    background-color: #333;
-
-    .u2_img {
-      width: 28px;
-      height: 26px;
-    }
-  }
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
 }
-
-.WebRTC {
-  gap: 24px;
-  padding-bottom: 80px;
-  animation: scroll 35s linear infinite;
-
-  .webItem {
-    width: auto;
-    height: 120px;
-    border-radius: 16px;
-    background: #E8F7FC;
-    color: #5C6C00;
-    gap: 14px;
-    flex-wrap: nowrap;
-  }
+.hero-logo {
+  width: 60px;
+  height: 60px;
 }
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.webBottomImg {
-  padding: 70px 0 110px;
-  height: initial;
-
-  .wBImg {
-    width: 100%;
-    height: initial;
-    border-radius: 24px;
-  }
-}
-
-.CloudBox {
-  padding-bottom: 100px;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  .cl_t {
-    letter-spacing: 0;
-    padding-top: 30px;
-    padding-bottom: 40px;
-    color: #333333;
-    font-weight: bold;
-    font-size: 54px;
-    line-height: 82px;
-  }
-
-  .cl_d {
-    padding-bottom: 24px;
-    color: #717781;
-    font-size: 20px;
-  }
-
-  .CloudL {
-    width: 500px;
-  }
-
-  .CloudR {
-    width: 700px;
-    height: auto;
-
-    .CloudRImg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .CloudR2 {
-    width: 700px;
-    height: 700px;
-  }
-}
-
-.ipcBox.CloudBox {
-  padding-bottom: 120px;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  .CloudL {
-    width: 450px;
-    text-align: right;
-    padding-top: 60px;
-  }
-}
-
-.ipcView.CloudBox {
-  .CloudR {
-    height: 460px;
-  }
-}
-
-.productBox {
-  text-align: center;
-  padding-bottom: 140px;
-
-  .proT {
-    padding-bottom: 60px;
-    color: #3D3D3D;
-    font-weight: bold;
-    font-size: 58px;
-  }
-
-  .prod {
-    padding-bottom: 60px;
-    color: #717781;
-    font-size: 20px;
-  }
-
-  .productImg {
-    width: 100%;
-    height: 600px;
-    padding-bottom: 60px;
-
-    .proImg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .product1 {
-    text-align: left;
-    color: #fff;
-    width: auto;
-    height: 510px;
-    background-color: #fff;
-    border-radius: 24px;
-    background: linear-gradient(135deg, #0C1F40 0%, #252734 98%);
-    padding: 40px;
-
-    .pro1_1 {
-      width: 46px;
-      height: 48px;
-      margin-bottom: 46px;
-    }
-
-    .pro1_1_s {
-      padding-bottom: 50px;
-      gap: 12px;
-      color: #FFFFFF;
-      font-weight: bold;
-      font-size: 24px;
-
-      .pro1_1_s_b {
-        color: #FFFFFF;
-        font-size: 14px;
-        border-radius: 4px;
-        border: 0.5px solid #FFFFFF;
-        padding: 4px 10px;
-      }
-    }
-
-    .pro1_2 {
-      gap: 12px;
-      padding-bottom: 30px;
-
-      .pro1_2_i {
-        width: 16px;
-        height: 16px;
-      }
-    }
-
-    .pro3 {
-      padding-top: 35px;
-      gap: 30px;
-
-      .pro3_btn {
-        flex: 1;
-        padding: 20px 0;
-        justify-content: center;
-        background-color: #fff;
-        border-radius: 4px;
-        color: #333;
-        font-weight: bold;
-        font-size: 18px;
-      }
-
-      .pro3_btn.p3b {
-        background-color: transparent;
-        border: 1px solid #fff;
-        color: #fff;
-      }
-    }
-  }
-
-  .product2Out {
-    padding-bottom: 0;
-    height: 220px;
-    justify-content: center;
-    background-image: url('@/assets/software/downloadBG.png');
-    background-size: 100% 100%;
-
-    .product2Out_it {
-      opacity: 1;
-      color: #333333;
-      font-size: 16px;
-
-      .pro2o_l {
-        padding-left: 12px;
-        width: 600px;
-        height: 54px;
-        background-color: #F0F0F0;
-
-        .pro2o_l_l {
-          width: 34px;
-          height: 34px;
-          margin-right: 12px;
-        }
-      }
-
-      .pro2o_2 {
-        width: 100px;
-        line-height: 54px;
-        color: #fff;
-        height: 54px;
-        background-color: #2278FF;
-      }
-    }
-  }
-
-  .product3Out.productImg {
-    height: initial;
-    margin-bottom: 60px;
-    padding: 40px;
-    border-radius: 24px;
-    background: linear-gradient(180deg, #FEF9F6 0%, #FFFFFF 100%);
-    border: 1px solid #001F5019;
-
-    .p3Box {
-      justify-content: space-between;
-
-      .p3 {
-        width: 358px;
-        height: 170px;
-      }
-    }
-
-    .p3_title {
-      padding-top: 40px;
-      text-align: left;
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .ps_desc {
-      padding-top: 16px;
-      padding-left: 60px;
-      width: 900px;
-      color: #3D3D3D;
-      font-size: 20px;
-      text-align: left;
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: 40px;
-        top: 26px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: #333;
-      }
-    }
-  }
-
-  .p4Out {
-    width: auto;
-    height: 870px;
-  }
-
-  .p5Out {
-    flex-wrap: wrap;
-    gap: 40px;
-
-    .p5Item {
-      padding: 50px 0;
-      flex-direction: column;
-      border-radius: 40px;
-      background: #FFFFFF;
-      box-shadow: 0px 0px 48px 0px #07005714;
-      width: 300px;
-      height: 300px;
-      flex-shrink: 0;
-      gap: 10px;
-      position: relative;
-    }
-
-    .p5Iimg {
-      width: 110px;
-      height: 110px;
-    }
-
-    .p5t {
-      color: #3D3D3D;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .p5d {
-      color: #717781;
-      font-size: 14px;
-    }
-
-    .proCode {
-      width: 70px;
-      height: 70px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      border-radius: 0px 0px 0px 0px;
-    }
-  }
-}
-
-.ipcView.dev {
-  .CloudL {
-    width: 100%;
-  }
-
-  .terminal {
-    border-radius: 24px;
-    background: linear-gradient(180deg, #FEF9F6 0%, #FFFFFF 100%);
-    border: 1px solid #001F5019;
-    margin-bottom: 20px;
-    width: 100%;
-    padding: 30px;
-
-    .terminalImg {
-      width: 62px;
-      height: 62px;
-    }
-
-    .terminalT {
-      padding-top: 30px;
-      color: #333333;
-      font-weight: bold;
-      font-size: 28px;
-    }
-
-    .terminalD {
-      padding-top: 30px;
-      color: #717781;
-      font-size: 18px;
-    }
-  }
-
-  .cloud.terminal {
-    border-radius: 24px;
-    background: linear-gradient(180deg, #F9FFF7 0%, #FFFFFF 98%);
-    border: 1px solid #001F5019;
-  }
-}
-
-.proTitleBox {
-  justify-content: center;
-  color: #3D3D3D;
-  font-weight: bold;
-  font-size: 58px;
-  padding-top: 100px;
-}
-
-.mb_h_t {
-  padding-bottom: 20px;
-
-  .VLStream_top {
-    width: 445px;
-    height: auto;
-  }
-}
-
-.mb_h_d {
-  color: #797F88;
-  font-weight: normal;
-  font-size: 18px;
-  padding-bottom: 160px;
-}
-
-.advantBox {
-  padding-bottom: 160px;
-
-  .advantIt {
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
-    color: #333;
-    font-weight: normal;
-    font-size: 20px;
-    text-align: left;
-    border: 1px solid #E4E4E7;
-    background-color: rgba(255, 255, 255, 0.02);
-  }
-
-  .advantBoxImg {
-    width: 40px;
-    height: 36px;
-    flex-shrink: 0;
-    margin-right: 20px;
-  }
-}
-
-.vlsUs {
-  opacity: 1;
-  border-radius: 0px;
-  background: linear-gradient(270deg, rgba(16, 208, 127, 0.04) 0%, rgba(16, 208, 127, 0.32) 100%);
-  border-left: 6px solid #923BFF;
-  padding-left: 10px;
-  color: #333;
-}
-
-.pri_why {
-  padding: 20px 0 40px;
-  color: #333;
-  font-weight: normal;
-  font-size: 20px;
-}
-
-.VLStream.us1 {
-  color: #333333;
-  font-weight: normal;
-  font-size: 32px;
-  text-align: center;
-
-  .us1s {
-    padding: 20px 12px;
-    >span{
-      font-weight: bold;
-    }
-  }
-}
-
-.proTitleBox.plan {
-  .plan_t {
-    padding-bottom: 48px;
-    color: #333;
-    font-weight: normal;
-    font-size: 24px;
-    text-align: center;
-  }
-}
-
-.lineBox {
-  justify-content: space-between;
+.hero-name {
+  font-size: 48px;
+  font-weight: 600;
   color: #2278FF;
-  font-size: 20px;
-  padding: 0 10px 60px;
-
-  .line {
-    width: calc(50% - 74px);
-    height: 1px;
-    background-color: #2278FF;
-  }
-
-  .lineImg {
-    width: 24px;
-    height: 24px;
-    background-color: #2278FF;
-    border-radius: 50%;
-  }
 }
-
-.priceIconBox {
-  padding-bottom: 60px;
-
-  .priceIconIt {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .priceImg {
-    width: 74px;
-    height: 74px;
-  }
-
-  .priceTi {
-    color: #333;
-    font-weight: normal;
-    font-size: 20px;
-    text-align: center;
-  }
+.hero-sub {
+  font-size: 48px;
+  font-weight: 600;
+  color: #3D3D3D;
 }
-
-.priceTBox {
-  padding-top: 0;
-  flex-direction: column;
-
-  .price_tabs {
-    width: 300px;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 10px 16px;
-    border-radius: 6px;
-    background-color: #F5F9FF;
-
-    .pt_btn {
-      cursor: pointer;
-      width: 132px;
-      height: 52px;
-      line-height: 52px;
-      border-radius: 6px;
-
-      &.act {
-        color: #fff;
-        background-color: #2278FF;
-      }
+.hero-desc {
+  width: 1190px;
+  margin: 0 auto;
+  font-size: 24px;
+  line-height: 36px;
+  color: #333333;
+}
+.segmented-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 36px;
+}
+.segmented {
+  display: inline-flex;
+  padding: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 130px;
+  background: #fff;
+  button {
+    border: none;
+    background: transparent;
+    padding: 16px 60px;
+    border-radius: 999px;
+    font-size: 24px;
+    line-height: 36px;
+    color: #666666;
+    cursor: pointer;
+    transition: all 0.2s;
+    &.active {
+      background: #2278FF;
+      color: #fff;
     }
   }
-
-  .price_cont {
-    width: 100%;
+}
+.redeem-entry {
+  position: absolute;
+  right: 0;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  &:hover { color: #2278FF; }
+}
+.pane { min-height: 200px; }
+.plans-state {
+  text-align: center;
+  padding: 48px 20px;
+  color: #64748b;
+  &.error {
+    display: flex;
+    gap: 12px;
     justify-content: center;
-    padding-top: 20px;
-    gap: 20px;
-
-    .p_c_it {
-      cursor: pointer;
+    align-items: center;
+  }
+}
+.plans {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 41px;
+}
+.plan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  background: #F9F9F9;
+  padding: 32px;
+  &.featured {
+    border-color: #2278FF;
+    box-shadow: 0 0 0 1px #2278FF;
+  }
+  &.current { opacity: 0.6; }
+  h4 {
+    margin: 0 0 12px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+    color: #333333;
+  }
+  .price {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 6px;
+    b {
+      font-weight: 500;
+      font-size: 32px;
       color: #333333;
-      width: 384px;
-      flex-shrink: 0;
-      padding: 40px 20px;
-      height: 680px;
-      border-radius: 24px;
-      background: #FFFFFF;
-      border: 1px solid #E4E4E7;
-
-      .pcIt_t1 {
-        padding-bottom: 24px;
-        gap: 14px;
-        font-weight: normal;
-        font-size: 16px;
-        text-align: left;
-
-        .pcIt_t1_dot {
-          width: 12px;
-          height: 12px;
-          background-color: #2278FF;
-          border-radius: 50%;
-        }
       }
-
-      .pcIt_t {
-        text-align: left;
-      }
-
-      .pcIt_l {
-        padding: 44px 0;
-        gap: 8px;
-
-        .line {
-          flex: 1;
-          height: 1px;
-          background-color: #2278FF;
-        }
-
-        .lineImg {
-          width: 20px;
-          height: 20px;
-          background-color: #2278FF;
-          border-radius: 50%;
-        }
-      }
-
-      .pcIt_t1_out {
-        height: 220px;
-
-      }
-
-      .pcIt_m {
-        padding-top: 40px;
-        font-weight: bold;
-        font-size: 38px;
-        text-align: left;
-
-        > span {
-          font-size: 14px;
-          font-weight: normal;
-
-        }
-      }
-
-      .pcIt_tbtn {
-        margin-top: 16px;
-        border-radius: 24px;
-        height: 72px;
-        line-height: 72px;
-        color: #fff;
-        background-color: #2278FF;
-        border: 1px solid #fff;
-      }
-
-      .pcIt_tbtn.btn3 {
-        color: #2278FF;
-        height: 70px;
-        line-height: 70px;
-        background-color: #fff;
-        border: 1px solid #2278FF;
-      }
-
-      .pcIt_tbtn.btn1 {
-        color: #2278FF;
-        font-weight: bold;
-        height: 70px;
-        line-height: 70px;
-        background-color: #fff;
-        border: 1px solid #2278FF;
-      }
-
-      .pcIt_tbtn.btn2 {
-        height: 70px;
-        line-height: 70px;
-        border: 1px solid #fff;
-      }
+    span {
+      font-weight: 400;
+      font-size: 16px;
+      color: #666666
     }
-    .p_c_it_s{
+  }
+  .tag {
+    font-size: 16px;
+    line-height: 160%;
+    color: #333333;
+    margin-bottom: 18px;
+    min-height: 36px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 22px;
+    display: grid;
+    gap: 10px;
+    flex: 1;
+    li {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      font-size: 16px;
+      line-height: 160%;
+      color: #333333;
+      img.feat-check { width: 24px; height: 24px; margin-top: 0; flex: none; object-fit: contain; }
+    }
+  }
+}
+.flag {
+  position: absolute;
+  top: -1px;
+  right: 16px;
+  background: #2278FF;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 0 0 8px 8px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  border-radius: 60px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+  &.primary {
+    width: 100%;
+    border: none;
+    background: #2278FF;
+    color: #fff;
+    &:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+  }
+  &.ghost {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    background: #fff;
+    color: #334155;
+    &:disabled { opacity: 0.55; cursor: not-allowed; }
+  }
+  &.sm {
+    width: auto;
+    height: 34px;
+    padding: 0 14px;
+  }
+  &.lg {
+    height: 48px;
+    font-size: 15px;
+  }
+}
+.credit-pack {
+  width: 826px;
+  margin: 28px auto 0;
+  border-radius: 16px;
+  background: #F9F9F9;
+  padding: 20px;
+  h4 {
+    margin: 0 0 11px;
+    font-size: 32px;
+    font-weight: 500;
+    color: #3D3D3D;
+  }
+  .cp-sub {
+    font-size: 16px;
+    line-height: 160%;
+    color: #3D3D3D;
+    margin-bottom: 32px;
+  }
+  .cp-rate {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+    b {
+      font-weight: 500;
+      font-size: 32px;
+      color: #333333
+    }
+    span {
+      font-weight: 400;
+      font-size: 16px;
+      color: #666666
+    }
+  }
+}
+.stepper-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 32px;
+  .qty-label {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 160%;
+    color: #3D3D3D;
+  }
+}
+.stepper {
+  display: inline-flex;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  button, input {
+    border: none;
+    background: #fff;
+    height: 36px;
+  }
+  button {
+    width: 36px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #334155;
+    &:disabled { opacity: 0.4; cursor: not-allowed; }
+  }
+  input {
+    width: 56px;
+    text-align: center;
+    border-left: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+    font-size: 14px;
+  }
+}
+.cp-summary {
+  margin-bottom: 18px;
+  .cp-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 160%;
+    color: #3D3D3D;
+    padding: 5px 0;
+    &.total b {
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 160%;
       color: #2278FF;
     }
   }
-
-  .p_c_it.p2 {
-    color: #fff;
-    border-radius: 24px;
-    background: #2278FF;
-
-    .pcIt_l > .line {
-      background-color: #fff;
-    }
-
-    .p_c_it_s {
-      color: #333;
-    }
-  }
 }
-.page-start{
-  height: 220px;
-  // background: url(@/assets/software/price-bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 0;
-  padding-top: 140px;
-  color: #333;
-  font-size: 24px;
-}
-
-.title1{
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.title2{
-  font-size: 32px;
-  font-weight: 500;
-}
-
-.title3{
+.cp-note {
+  margin: 14px 0 0;
   font-size: 16px;
-  font-weight: 400;
+  line-height: 24px;
+  color: #666666;
 }
-
-.priceBox{
-  padding: 0 140px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+.btn.slim {
+  width: auto;
+  min-width: 120px;
+  padding: 0 20px;
 }
-
-.item{
-  border-radius: 16px;
-  color: #333;
-  background-color: #E8F0FE;
-  box-sizing: border-box;
-  padding: 32px;
-  width: 390px;
+.enterprise-band {
+  margin-top: 28px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  .item-1{
-    margin-bottom: 30px;
+  gap: 20px;
+  flex-wrap: wrap;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #f0f7ff 0%, #f8fafc 100%);
+  padding: 22px 24px;
+  h4 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  p {
+    margin: 0;
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.55;
+    max-width: 720px;
+  }
+}
+.compare-head {
+  text-align: center;
+  margin: 56px 0 24px;
+  .compare-pill {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 99px;
+    border: 1px solid #2278FF;
+    color: #2278FF;
+    line-height: 160%;
+    font-size: 18px;
+    margin-bottom: 24px;
+    cursor: pointer;
+  }
+  h2 {
+    margin: 0 0 12px;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 72px;
+    color: #333333;
+  }
+  .compare-link {
     display: flex;
     align-items: center;
-    .Popular{
-      font-size: 14px;
-      font-weight: 500;
-      color: #333;
-      background-color: #FECE02;
-      padding: 5px 15px;
-      margin-left: 15px;
-      border-radius: 99px;
-    }
-  }
-  .item-2{
-    margin-bottom: 10px;
-  }
-  .item-3{
-    margin-bottom: 25px;
-  }
-  .item-4{
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  }
-  .item-5{
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    justify-content: center;
+    gap: 4px;
+    color: #2278FF;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
     img{
       width: 24px;
       height: 24px;
-      margin-right: 10px;
-    }
-  }
-  .item-6{
-    cursor: pointer;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 12px;
-    text-align: center;
-    background-color: #2278FF;
-    color: #fff;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 500;
-    margin-top: 30px;
-    &.disabled{
-      cursor: not-allowed;
-      background: #A0AEC0 !important;
-      color: #fff !important;
-      box-shadow: none;
-      opacity: 0.85;
-      border: none;
-    }
-  }
-  .item-7{
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    color: #2278FF;
-    margin-top: 20px;
-    .meal{
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-    }
-    img{
-      width: 20px;
-      height: 20px;
-      margin-right: 5px;
     }
   }
 }
-
-.item:hover{
-  // border: 1px solid #2278FF;
-  box-shadow: 0px 0px 24px 0px rgba(65, 50, 224, 0.6);
-}
-
-.yellow{
-  border: 1px solid #FECE04;
-  // box-shadow: 0px 0px 24px 0px rgba(254, 206, 2, 0.6);
-  background-color: rgba(254, 206, 2, 0.2);
-
-}
-.yellow_buy{
-  color: #333 !important;
-  background: linear-gradient(106deg, #FFDB43 26%, #F5A10A 79%);
-  box-sizing: border-box;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: inset 0px 0px 21px 0px rgba(254, 206, 2, 0.2);
-}
-.yewllow_meal{
-  color: #F5A10A !important;
-  img{
-    filter: hue-rotate(180deg) saturate(1.0) brightness(1.4);
-  }
-}
-
-.optional{
-  cursor: pointer;
-  padding: 12px 50px;
-  border-radius: 8px;
-  background-color: #2278FF;
-  width: fit-content;
-  margin: 40px auto;
-  margin-bottom: 20px;
-  color: #fff;
-}
-.descripe{
-  text-align: center;
-  color: #666666;
-}
-.contrast{
-  font-size: 48px;
-  font-weight: bold;
-  text-align: center;
-  color: #333;
-  margin-top: 150px;
-  margin-bottom: 40px;
-  .contrast_tiitle{
-    margin: 0 auto;
-    width: fit-content;
-    padding:  5px 16px;
-    font-size: 18px;
-    font-weight: normal;
-    color: #2278FF;
-    border: 1px solid #2278FF;
-    border-radius: 99px;
-    margin-bottom: 20px;
-  }
-}
-
-.table-container {
-  width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  position: relative;
-  margin-bottom: 100px;
-}
-
-.highlight{
-  top: 12px;
-  left: 570px;
-  position: absolute;
-  width: 250px;
-  height: 95%;
-  border: 1px solid #FFFFFF;
-  box-shadow: inset 0px 0px 40px 0px #2278FF;
-  border-radius: 16px;
-}
-
-.version-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  color: #e0e0e0;
-  font-size: 14px;
-  table-layout: fixed;
-}
-
-.version-table thead th {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 30px 12px;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 500;
-  color: #fff;
-  position: relative;
-}
-
-.version-table tbody td {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 20px 12px;
-  font-size: 16px;
-  text-align: center;
-  vertical-align: middle;
-  transition: background-color 0.2s;
-}
-
-.version-table tbody tr:last-child td {
-  border-bottom: none;
-}
-
-:deep(.el-drawer){
-  background-color: #f7f7f7;
-}
-:deep(.el-drawer__header){
-  margin-bottom: 0;
-}
-
-.im-table-container {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.table-header {
+.compare-card {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
+  flex-direction: column;
+  gap: 40px;
+  background: transparent;
 }
-
-.header-icon {
-  width: 48px;
-  height: 48px;
-  background: #4080FF;
-  border-radius: 12px;
-  padding: 8px;
-  box-sizing: border-box;
+.compare-group {
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  overflow: hidden;
+  .group-title {
+    padding: 16px 22px 8px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #2278FF;
+  }
 }
-
-.header-title {
-  font-size: 24px;
-  font-weight: 600;
-  color: #1d2129;
-}
-
-.im-table {
+.compare-table {
   width: 100%;
   border-collapse: collapse;
-  text-align: center;
-}
-
-.im-table th,
-.im-table td {
-  padding: 16px 20px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-  color: #1d2129;
-}
-
-.im-table th {
-  font-weight: 600;
-  background: #f7f8fa;
-}
-
-.im-table tr:last-child td {
-  border-bottom: none;
-}
-
-.center-text {
-  text-align: left !important;
-  width: 280px;
-}
-.compare-table{
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
-  margin-bottom: 50px;
-  .app-title{
-    display: flex;
-    align-items: center;
-    padding: 20px 20px;
-    font-size: 18px;
+  th, td {
+    padding: 12px 16px;
+    text-align: center;
+    font-size: 16px;
+    color: #333333;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  th:first-child,
+  td:first-child {
+    text-align: left;
+    width: 28%;
+  }
+  thead th {
+    background: #FAFAFA;
     font-weight: 600;
-    background: #f7f8fa;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    img{
-      width: 36px;
-      height: 36px;
-      margin-right: 10px;
+    color: #333333;
+    .col-name { font-size: 16px; }
+    .col-price {
+      margin-top: 2px;
+      font-size: 12px;
+      color: #94a3b8;
+      font-weight: 500;
     }
   }
+  tbody tr:last-child td { border-bottom: none; }
+  .hot {
+    background: #E7F4EB;
+  }
+  thead th.hot {
+    background: #E7F4EB;
+  }
+  .yes {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    vertical-align: middle;
+  }
+  .no { color: #cbd5e1; font-size: 16px; }
+  .span-all {
+    text-align: left !important;
+    color: #64748b;
+  }
+}
+.faq-section {
+  margin-top: 64px;
+}
+.faq-title {
+  margin: 0 0 20px;
+  font-size: 58px;
+  font-weight: bold;
+  line-height: 88px;
+  color: #333333;
+  .qmark { color: #FFB233 }
+}
+.faq-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 30px;
+    color: #333333;
+    a {
+      color: #2278FF !important;
+      text-decoration: none;
+    }
+  }
+  .expand-all {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 30px;
+    color: #2278FF;
+    cursor: pointer;
+  }
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.faq-item {
+  border: 1px solid #E4E4E7;
+  border-radius: 16px;
+  &.open .faq-q { color: #0f172a; }
+}
+.faq-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+.faq-no {
+  flex: none;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2278FF;
+  font-variant-numeric: tabular-nums;
+  min-width: 36px;
+}
+.faq-text {
+  flex: 1;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 30px;
+  color: #333333;
+}
+.faq-pm {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.faq-a {
+  padding: 0 4px 18px 54px;
+  p {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(51, 51, 51, 0.8);
+    &:last-child { margin-bottom: 0; }
+  }
+}
+.cta-band {
+  margin-top: 48px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #f8fafc;
+  padding: 40px 24px;
+  h2 {
+    margin: 0 0 10px;
+    font-size: 26px;
+    font-weight: 700;
+  }
+  p {
+    margin: 0 0 20px;
+    color: #64748b;
+    font-size: 14px;
+  }
+}
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 </style>
