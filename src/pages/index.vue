@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div />
 </template>
 
@@ -23,8 +23,8 @@ const detectTargetPath = () => {
     .map(language => language?.toLowerCase().split(/[-_]/)[0])
     .find(language => SUPPORTED_LANGUAGE_CODES.includes(language || '')) || DEFAULT_LANGUAGE
 
-  // return matchedLanguage === 'zh' ? '/zh/siteNew/' : `/${matchedLanguage}/`
-  return matchedLanguage === 'zh' ? '/ch/' : `/${matchedLanguage}/`
+  return matchedLanguage === 'zh' ? '/zh/siteNew/' : `/${matchedLanguage}/`
+  // return matchedLanguage === 'zh' ? '/ch/' : `/${matchedLanguage}/`
 }
 
 onMounted(() => {

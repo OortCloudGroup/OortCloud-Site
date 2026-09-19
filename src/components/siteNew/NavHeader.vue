@@ -115,23 +115,8 @@
     <!--          </el-dropdown-menu>-->
     <!--        </template>-->
     <!--      </el-dropdown>-->
-    <el-dialog
-      v-model="industryVisible"
-      title="场景选择"
-      width="52%"
-      top="5vh"
-      append-to-body
-      destroy-on-close
-      :close-on-click-modal="false"
-    >
-      <ChangeHYRight
-        v-if="industryVisible"
-        :access-token="accessToken"
-        :tenant-id="tenantId"
-        :user-info="userInfo"
-        @close-dialog="industryVisible = false"
-      />
-    </el-dialog>
+  <!-- 场景选择弹框由 RightInfo SDK 自带（遮罩 / 面板 / 标题栏 / 关闭按钮），
+       不再使用 el-dialog；由 siteSceneDialogVisible 统一驱动，见下方 watch -->
   </div>
 </template>
 
@@ -143,9 +128,9 @@ import { useSessionStorage, useFullscreen, StorageSerializers } from '@vueuse/co
 import { ofetch } from 'ofetch'
 import { ElMessage } from 'element-plus'
 import { ArrowRight } from '@element-plus/icons-vue'
-import ChangeHYRight from './components/ChangeHYRight.vue'
 import commonRightPoPover from './components/commonRightPoPover.vue'
 import commonRightPopoverMore from './components/commonRightPopoverMore.vue'
+import { closeRightInfoDialog, destroyRightInfoSdk, openRightInfoDialog } from '@/utils/rightInfoSdk'
 import fullscreenIcon from '@/assets/navheader/fullscreen.svg'
 import exitFullscreenIcon from '@/assets/navheader/exit-fullscreen.svg'
 import langIcon from '@/assets/navheader/lang.svg'
@@ -579,10 +564,46 @@ const { isFullscreen, toggle } = useFullscreen()
 const moreVisible = ref(false)
 // 场景选择弹框：全局共享，首页 Start 按钮（无当前场景时）也复用同一个弹框
 const industryVisible = useState('siteSceneDialogVisible', () => false)
+// 打开状态加锁，避免重复触发导致 SDK 重复加载数据
+const openingScene = ref(false)
+
+/** 调起 RightInfo SDK 场景选择弹框。 */
+const openSceneDialog = async() => {
+  if (openingScene.value) return
+  const entityId = userInfo.value?.user_id || userInfo.value?.userId || ''
+  openingScene.value = true
+  try {
+    await openRightInfoDialog({
+      accessToken: accessToken.value,
+      tenantId: tenantId.value,
+      userId: entityId
+    }, {
+      // SDK 弹框关闭后同步复位共享状态，保证下次可再次打开
+      onClose: () => {
+        industryVisible.value = false
+      }
+    })
+  } catch (error) {
+    ElMessage.error(error?.message || '场景选择打开失败，请稍后重试')
+    industryVisible.value = false
+  } finally {
+    openingScene.value = false
+  }
+}
+
+// 监听共享状态：菜单入口与首页 Start 入口统一在此调起 SDK 弹框
+watch(industryVisible, (visible) => {
+  if (visible) {
+    openSceneDialog()
+    return
+  }
+  closeRightInfoDialog()
+})
+
 const handleMoreOpr = (action) => {
   if (action === 'changeHY') {
+    // 只需要关闭菜单弹层，场景选择弹框由 commonRightPopoverMore 置位后触发
     moreVisible.value = false
-    industryVisible.value = true
     return
   }
   if (action === 'switchAccount') {
@@ -666,6 +687,8 @@ onBeforeUnmount(() => {
   }
   window.removeEventListener('focus', handleWindowFocus)
   window.removeEventListener('storage', handleStorageChange)
+  // 释放 SDK 的 Shadow DOM、尺寸监听与定时器
+  destroyRightInfoSdk()
 })
 
 </script>
@@ -915,14 +938,6 @@ onBeforeUnmount(() => {
     height: 24px;
     background-size: cover;
     margin-right: 8px;
-  }
-}
-
-:deep(.el-dialog){
-  padding: 0;
-
-  .el-dialog__header{
-    padding: 0;
   }
 }
 

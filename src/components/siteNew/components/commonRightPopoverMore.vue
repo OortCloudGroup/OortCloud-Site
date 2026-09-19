@@ -78,8 +78,14 @@ const auth = computed(() => ({
   tenantId: props.tenantId
 }))
 
+// 场景选择弹框：Nuxt useState 全局共享，NavHeader 统一监听并调起 RightInfo SDK 弹框。
+// 首页 Start 按钮在没有当前生效场景时也会置为 true，复用同一个弹框入口。
+const sceneDialogVisible = useState('siteSceneDialogVisible', () => false)
+
 const changeIndustry = () => {
+  // 先通知父组件关闭菜单弹层，再触发场景选择弹框
   emits('moreOpr', 'changeHY')
+  sceneDialogVisible.value = true
 }
 
 /** 获取用户可选配置及当前生效场景。 */
