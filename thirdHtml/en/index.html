@@ -205,49 +205,49 @@
         </div>
     </header>
 
-    <!-- Featured Product -->
+    <!-- Featured Product Carousel (aligned with zh siteNew tokenPlan carousel) -->
     <section class="featured-section" id="platform">
         <div class="container">
-            <div class="featured-card">
-                <div class="featured-content">
-                    <span class="featured-badge">Featured</span>
-                    <h2>VLStream</h2>
-                    <p class="featured-desc">The all-in-one visual AI development platform. Integrate data labeling, model training and deployment in a single workflow. Supporting the full YOLO series from YOLOv5 to YOLOv26.</p>
-                    <ul class="featured-list">
-                        <li>End-to-end AI pipeline</li>
-                        <li>Full YOLO model support (v5 - v26)</li>
-                        <li>Data labeling & annotation</li>
-                        <li>One-click model deployment</li>
-                    </ul>
-                    <a href="https://vls.oortcloudsmart.com/en/" target="_blank" class="btn-primary">Learn more</a>
-                </div>
-                <div class="featured-visual">
-                    <div class="vlstream-graphic">
-                        <div class="ai-node node-center">
-                            <svg viewBox="0 0 48 48" width="48" height="48">
-                                <rect x="4" y="4" width="40" height="40" rx="8" fill="#4285f4" opacity="0.1"/>
-                                <path d="M14 34V14h6l4 12 4-12h6v20h-5V21l-4 13h-3l-4-13v13h-4z" fill="#4285f4"/>
-                            </svg>
-                        </div>
-                        <div class="ai-node node-tl">
-                            <svg viewBox="0 0 32 32" width="32" height="32"><rect x="2" y="2" width="28" height="28" rx="6" fill="#34a853" opacity="0.15"/><path d="M8 16h16M16 8v16" stroke="#34a853" stroke-width="2.5" stroke-linecap="round"/></svg>
-                        </div>
-                        <div class="ai-node node-tr">
-                            <svg viewBox="0 0 32 32" width="32" height="32"><rect x="2" y="2" width="28" height="28" rx="6" fill="#ea4335" opacity="0.15"/><circle cx="16" cy="16" r="6" fill="none" stroke="#ea4335" stroke-width="2"/><path d="M16 12v4l3 2" stroke="#ea4335" stroke-width="2" stroke-linecap="round"/></svg>
-                        </div>
-                        <div class="ai-node node-bl">
-                            <svg viewBox="0 0 32 32" width="32" height="32"><rect x="2" y="2" width="28" height="28" rx="6" fill="#fbbc04" opacity="0.15"/><path d="M10 22l4-6 4 4 4-8" stroke="#fbbc04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </div>
-                        <div class="ai-node node-br">
-                            <svg viewBox="0 0 32 32" width="32" height="32"><rect x="2" y="2" width="28" height="28" rx="6" fill="#9b72cb" opacity="0.15"/><path d="M10 16h12M10 12h8M10 20h10" stroke="#9b72cb" stroke-width="2" stroke-linecap="round"/></svg>
-                        </div>
-                        <svg class="connection-lines" viewBox="0 0 300 250">
-                            <line x1="150" y1="125" x2="50" y2="40" stroke="#4285f4" stroke-width="1" opacity="0.3" stroke-dasharray="4"/>
-                            <line x1="150" y1="125" x2="250" y2="40" stroke="#ea4335" stroke-width="1" opacity="0.3" stroke-dasharray="4"/>
-                            <line x1="150" y1="125" x2="50" y2="210" stroke="#fbbc04" stroke-width="1" opacity="0.3" stroke-dasharray="4"/>
-                            <line x1="150" y1="125" x2="250" y2="210" stroke="#9b72cb" stroke-width="1" opacity="0.3" stroke-dasharray="4"/>
-                        </svg>
+            <div class="featured-carousel" data-interval="2000" aria-roledescription="carousel">
+                <div class="featured-carousel-track">
+                    <div class="featured-carousel-slide is-active">
+                        <img src="images/carousel/token-plan.png" alt="OortCodex" draggable="false" />
                     </div>
+                    <div class="featured-carousel-slide">
+                        <img src="images/carousel/oortcodex.png" alt="DSH For OortCloud Work" draggable="false" />
+                    </div>
+                    <div class="featured-carousel-slide">
+                        <img src="images/carousel/ai-manga.png" alt="VLStream Video AI" draggable="false" />
+                    </div>
+                    <div class="featured-carousel-slide">
+                        <img src="images/carousel/vlstream.png" alt="AI Manga Workshop" draggable="false" />
+                    </div>
+                    <div class="featured-carousel-slide">
+                        <img src="images/carousel/dsh.png" alt="OortCloud Token Plan" draggable="false" />
+                    </div>
+                    <div class="featured-carousel-slide">
+                        <img src="images/carousel/ai-camera.png" alt="Open Source AI IP Camera" draggable="false" />
+                    </div>
+                </div>
+                <div class="featured-carousel-dots" role="tablist" aria-label="Carousel pagination">
+                    <button type="button" class="featured-carousel-dot is-active" aria-label="Go to slide 1" aria-selected="true">
+                        <img src="images/carousel/dot-active.png" alt="" />
+                    </button>
+                    <button type="button" class="featured-carousel-dot" aria-label="Go to slide 2" aria-selected="false">
+                        <img src="images/carousel/dot.png" alt="" />
+                    </button>
+                    <button type="button" class="featured-carousel-dot" aria-label="Go to slide 3" aria-selected="false">
+                        <img src="images/carousel/dot.png" alt="" />
+                    </button>
+                    <button type="button" class="featured-carousel-dot" aria-label="Go to slide 4" aria-selected="false">
+                        <img src="images/carousel/dot.png" alt="" />
+                    </button>
+                    <button type="button" class="featured-carousel-dot" aria-label="Go to slide 5" aria-selected="false">
+                        <img src="images/carousel/dot.png" alt="" />
+                    </button>
+                    <button type="button" class="featured-carousel-dot" aria-label="Go to slide 6" aria-selected="false">
+                        <img src="images/carousel/dot.png" alt="" />
+                    </button>
                 </div>
             </div>
         </div>

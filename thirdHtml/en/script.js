@@ -15,12 +15,92 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe product cards and sections
 document.addEventListener('DOMContentLoaded', () => {
-    const animateElements = document.querySelectorAll('.product-card, .stat-item, .featured-card');
+    const animateElements = document.querySelectorAll('.product-card, .stat-item, .featured-carousel');
     animateElements.forEach((el, index) => {
         el.style.opacity = '0';
         el.style.animationDelay = `${index * 0.1}s`;
         observer.observe(el);
     });
+
+    // Featured banner carousel (aligned with zh n-carousel: autoplay 2s + bottom dots)
+    const initFeaturedCarousel = () => {
+        const root = document.querySelector('.featured-carousel');
+        if (!root) return;
+
+        const slides = Array.from(root.querySelectorAll('.featured-carousel-slide'));
+        const dots = Array.from(root.querySelectorAll('.featured-carousel-dot'));
+        if (slides.length === 0) return;
+
+        const intervalMs = Number(root.dataset.interval) || 2000;
+        const dotSrc = 'images/carousel/dot.png';
+        const dotActiveSrc = 'images/carousel/dot-active.png';
+        let current = slides.findIndex(slide => slide.classList.contains('is-active'));
+        if (current < 0) current = 0;
+        let timer = null;
+
+        const goTo = (index) => {
+            current = (index + slides.length) % slides.length;
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('is-active', i === current);
+            });
+            dots.forEach((dot, i) => {
+                const active = i === current;
+                dot.classList.toggle('is-active', active);
+                dot.setAttribute('aria-selected', active ? 'true' : 'false');
+                const img = dot.querySelector('img');
+                if (img) img.src = active ? dotActiveSrc : dotSrc;
+            });
+        };
+
+        const start = () => {
+            stop();
+            timer = window.setInterval(() => goTo(current + 1), intervalMs);
+        };
+
+        const stop = () => {
+            if (timer) {
+                window.clearInterval(timer);
+                timer = null;
+            }
+        };
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                goTo(i);
+                start();
+            });
+        });
+
+        // Drag / swipe like zh n-carousel draggable
+        let startX = 0;
+        let dragging = false;
+        root.addEventListener('pointerdown', (e) => {
+            dragging = true;
+            startX = e.clientX;
+            root.setPointerCapture?.(e.pointerId);
+            stop();
+        });
+        root.addEventListener('pointerup', (e) => {
+            if (!dragging) return;
+            dragging = false;
+            const delta = e.clientX - startX;
+            if (Math.abs(delta) > 40) {
+                goTo(current + (delta < 0 ? 1 : -1));
+            }
+            start();
+        });
+        root.addEventListener('pointercancel', () => {
+            dragging = false;
+            start();
+        });
+        root.addEventListener('mouseenter', stop);
+        root.addEventListener('mouseleave', start);
+
+        goTo(current);
+        start();
+    };
+
+    initFeaturedCarousel();
 
     // Mobile menu toggle
     const mobileBtn = document.querySelector('.mobile-menu-btn');

@@ -550,74 +550,79 @@ a {
     to { transform: rotate(360deg); }
 }
 
-/* ===== Featured Section ===== */
+/* ===== Featured Section (image carousel) ===== */
 .featured-section {
     padding: 80px 0;
     background: #fff;
 }
 
-.featured-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-    background: linear-gradient(135deg, #f0f4ff, #fef7ff);
-    border-radius: var(--radius-xl);
-    padding: 60px;
-    border: 1px solid var(--gray-300);
-}
-
-.featured-badge {
-    display: inline-block;
-    background: var(--blue);
-    color: white;
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 16px;
-}
-
-.featured-content h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 16px;
-    letter-spacing: -0.01em;
-}
-
-.featured-desc {
-    font-size: 1.05rem;
-    color: var(--gray-700);
-    margin-bottom: 24px;
-    line-height: 1.7;
-}
-
-.featured-list {
-    list-style: none;
-    margin-bottom: 32px;
-}
-
-.featured-list li {
-    padding: 6px 0;
-    padding-left: 24px;
+.featured-carousel {
     position: relative;
-    color: var(--gray-900);
-    font-size: 0.95rem;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    user-select: none;
 }
 
-.featured-list li::before {
-    content: '';
+.featured-carousel-track {
+    position: relative;
+    width: 100%;
+}
+
+.featured-carousel-slide {
+    display: none;
+    width: 100%;
+}
+
+.featured-carousel-slide.is-active {
+    display: block;
+    animation: featuredFadeIn 0.45s ease;
+}
+
+.featured-carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: grab;
+}
+
+.featured-carousel-dots {
     position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 2;
+}
+
+.featured-carousel-dot {
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    line-height: 0;
+    transition: opacity 0.2s;
+}
+
+.featured-carousel-dot img {
+    display: block;
     width: 8px;
     height: 8px;
-    border-radius: 50%;
-    background: var(--blue);
-    opacity: 0.7;
+    object-fit: contain;
+}
+
+.featured-carousel-dot.is-active img {
+    width: 28px;
+    height: 8px;
+}
+
+@keyframes featuredFadeIn {
+    from { opacity: 0.35; }
+    to { opacity: 1; }
 }
 
 .btn-primary {
@@ -657,53 +662,6 @@ a {
 .btn-large {
     padding: 16px 36px;
     font-size: 1rem;
-}
-
-/* Featured Visual */
-.featured-visual {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.vlstream-graphic {
-    position: relative;
-    width: 300px;
-    height: 250px;
-}
-
-.ai-node {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
-    padding: 12px;
-}
-
-.node-center {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 16px;
-    box-shadow: var(--shadow-lg);
-    z-index: 2;
-}
-
-.node-tl { top: 0; left: 0; }
-.node-tr { top: 0; right: 0; }
-.node-bl { bottom: 0; left: 0; }
-.node-br { bottom: 0; right: 0; }
-
-.connection-lines {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
 }
 
 /* ===== Products Section ===== */
@@ -991,13 +949,8 @@ a {
 
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
-    .featured-card {
-        grid-template-columns: 1fr;
-        padding: 40px;
-    }
-
-    .featured-visual {
-        display: none;
+    .featured-carousel-dots {
+        bottom: 12px;
     }
 
     .stats-grid {
@@ -1064,7 +1017,6 @@ a {
     }
 
     .section-header h2,
-    .featured-content h2,
     .cta-content h2 {
         font-size: 1.8rem;
     }
