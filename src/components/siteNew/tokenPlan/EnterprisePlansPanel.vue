@@ -16,7 +16,20 @@
     </div>
     <template v-else>
       <div class="ent-grid">
-        <div v-for="p in plans" :key="p.key" class="ent-item">
+        <div
+          v-for="p in plans"
+          :key="p.key"
+          class="ent-item"
+          :class="{ featured: isFeatured(p) }"
+        >
+          <span v-if="isFeatured(p)" class="flag">最受欢迎</span>
+          <div v-if="isFeatured(p)" class="plan-deco-wrap" aria-hidden="true">
+            <img
+              class="plan-deco"
+              src="@/assets/img/tokenPlan/popular-deco.png"
+              alt=""
+            />
+          </div>
           <div class="head">
             <h4>{{ p.title }}</h4>
             <p v-if="p.subtitle" class="sub">
@@ -132,6 +145,10 @@ const plans = computed(() => (entList.value || []).map(p => ({
   key: p.id == null ? p.title : p.id
 })))
 
+function isFeatured(p) {
+  return String((p && p.title) || '').includes('标准')
+}
+
 const UNIT_KEYS = { month: 1, year: 1, day: 1, hour: 1 }
 function durationText(p) {
   if (!p.durationValue || !UNIT_KEYS[p.durationUnit]) return ''
@@ -172,14 +189,20 @@ function reloadPack() {
   grid-template-columns: repeat(auto-fit, 320px);
   gap: 24px;
   justify-content: center;
+  padding-top: 16px;
 }
 .ent-item {
+  position: relative;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   background: #F9F9F9;
   padding: 32px;
   display: flex;
   flex-direction: column;
+  &.featured {
+    border-color: #2278FF;
+    box-shadow: 0 0 0 1px #2278FF;
+  }
   .head h4 {
     margin: 0 0 12px;
     font-size: 20px;
@@ -240,6 +263,38 @@ function reloadPack() {
     font-weight: 500;
     &:disabled { opacity: 0.55; cursor: not-allowed; }
   }
+}
+.flag {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2278FF;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 5px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+  z-index: 1;
+}
+.plan-deco-wrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  pointer-events: none;
+  z-index: 0;
+}
+.plan-deco {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 140px;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
 }
 .ent-contact {
   box-sizing: border-box;

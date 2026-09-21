@@ -96,6 +96,13 @@
             }"
           >
             <span v-if="card.key === 'pro' && !card.disabled" class="flag">最受欢迎</span>
+            <div v-if="card.key === 'pro' && !card.disabled" class="plan-deco-wrap" aria-hidden="true">
+              <img
+                class="plan-deco"
+                src="@/assets/img/tokenPlan/popular-deco.png"
+                alt=""
+              />
+            </div>
             <h4>{{ (card.option && card.option.title) || planCopy[card.key].title }}</h4>
             <div class="price">
               <b>{{ optionPrice(card.option, card.key) }}</b>
@@ -781,6 +788,23 @@ watch(qty, (v) => {
   border-radius: 999px;
   white-space: nowrap;
   z-index: 1;
+}
+.plan-deco-wrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  pointer-events: none;
+  z-index: 0;
+}
+.plan-deco {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 140px;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
 }
 .btn {
   display: inline-flex;
