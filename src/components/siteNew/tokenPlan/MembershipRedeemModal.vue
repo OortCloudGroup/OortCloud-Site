@@ -1,14 +1,20 @@
 <template>
   <div v-if="open" class="mask" role="presentation" @keydown="onKeydown">
     <button class="backdrop" type="button" aria-label="关闭" @click="emitClose" />
-    <section class="modal" role="dialog" aria-modal="true">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="member-redeem-title">
       <header>
-        <h2>使用会员卡</h2>
+        <h2 id="member-redeem-title">
+          使用会员卡
+        </h2>
         <button class="close" type="button" aria-label="关闭" @click="emitClose">
           ×
         </button>
       </header>
       <div class="body">
+        <div class="ticket" aria-hidden="true">
+          <span>兑换卡</span>
+          <i />
+        </div>
         <label for="member-redeem-input"><em>*</em> 兑换码</label>
         <input
           id="member-redeem-input"
@@ -108,13 +114,15 @@ function onKeydown(e) {
   position: fixed;
   inset: 0;
   z-index: 4100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+  padding: 24px;
 }
 .backdrop {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
   border: none;
   background: rgba(15, 23, 42, 0.45);
   cursor: pointer;
@@ -122,86 +130,173 @@ function onKeydown(e) {
 .modal {
   position: relative;
   z-index: 1;
-  width: min(480px, calc(100vw - 32px));
+  width: min(520px, 100%);
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
   background: #fff;
-  border-radius: 16px;
-  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
   box-shadow: 0 24px 64px rgba(15, 23, 42, 0.18);
   header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 20px;
+    padding: 14px 18px;
     border-bottom: 1px solid #e2e8f0;
-    h2 { margin: 0; font-size: 18px; }
+    h2 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: #0f172a;
+    }
   }
   .close {
+    width: 30px;
+    height: 30px;
     border: none;
     background: transparent;
     font-size: 24px;
-    color: #64748b;
+    font-weight: 300;
+    color: #0f172a;
     cursor: pointer;
+    line-height: 1;
   }
 }
 .body {
-  padding: 20px;
+  padding: 16px 18px 20px;
   label {
     display: block;
-    font-size: 13px;
-    font-weight: 600;
-    color: #475569;
-    margin-bottom: 8px;
-    em { color: #ef4444; font-style: normal; }
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: #64748b;
+    em {
+      color: #ef4444;
+      font-style: normal;
+    }
   }
   input {
-    width: 100%;
-    height: 42px;
-    border: 1px solid #cbd5e1;
-    border-radius: 10px;
-    padding: 0 12px;
-    font-size: 14px;
-    margin-bottom: 14px;
     box-sizing: border-box;
+    width: 100%;
+    height: 38px;
+    padding: 0 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #0f172a;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    &:focus {
+      border-color: #2278FF;
+      outline: none;
+    }
+  }
+}
+.ticket {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 140px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  padding: 18px;
+  border-radius: 10px;
+  color: #d6e6ff;
+  background: #1a4f9c;
+  font-size: 22px;
+  font-weight: 600;
+  box-sizing: border-box;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background: rgba(34, 120, 255, 0.18);
+  }
+  &::before {
+    left: 0;
+    right: 0;
+    top: 54%;
+    height: 6px;
+  }
+  &::after {
+    top: 0;
+    bottom: 0;
+    right: 15%;
+    width: 6px;
+  }
+  i {
+    position: absolute;
+    top: 18px;
+    right: calc(15% - 28px);
+    width: 60px;
+    height: 60px;
+    border: 6px solid #7eb3ff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px rgba(34, 120, 255, 0.15);
+  }
+  span {
+    position: relative;
+    z-index: 1;
   }
 }
 .notice {
-  background: #f8fafc;
-  border-radius: 10px;
+  margin-top: 12px;
   padding: 12px 14px;
-  margin-bottom: 14px;
-  strong { font-size: 13px; color: #334155; }
-  ul {
-    margin: 8px 0 0;
-    padding-left: 18px;
-    font-size: 12.5px;
-    color: #64748b;
-    line-height: 1.6;
+  border-radius: 8px;
+  background: #f8fafc;
+  strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    color: #0f172a;
   }
-  .warn { color: #b45309; }
+  ul {
+    margin: 0;
+    padding-left: 16px;
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.7;
+  }
+  li { list-style: disc; }
+  .warn { color: #e4a72c; }
 }
-.error { color: #ef4444; font-size: 13px; margin: 0 0 12px; }
+.error {
+  margin: 10px 0 0;
+  color: #ef4444;
+  font-size: 12px;
+}
 .submit {
   width: 100%;
-  height: 44px;
+  height: 38px;
+  margin-top: 14px;
   border: none;
-  border-radius: 10px;
+  border-radius: 24px;
   background: #2278FF;
   color: #fff;
+  font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  &:disabled { opacity: 0.5; cursor: not-allowed; }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 }
 .buy-tip {
+  margin: 12px 0 0;
   text-align: center;
-  margin: 14px 0 0;
-  font-size: 13px;
-  color: #64748b;
+  font-size: 12px;
+  color: #94a3b8;
   button {
+    margin-left: 6px;
     border: none;
     background: transparent;
     color: #2278FF;
     font-weight: 600;
     cursor: pointer;
   }
+}
+@media (max-width: 760px) {
+  .mask { padding: 12px; }
+  .modal { max-height: calc(100vh - 24px); }
+  .ticket { height: 110px; }
 }
 </style>

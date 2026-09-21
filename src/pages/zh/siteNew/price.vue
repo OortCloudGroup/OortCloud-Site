@@ -7,7 +7,7 @@
         <span class="hero-sub">欢迎订阅</span>
       </div>
       <p class="hero-desc">
-        欢迎使用 OortCloud！订阅 OortCloud Token Plan，20元/月起，Qwen, DeepSeek, Kimi, GLM等顶级模型尝鲜，更有OortCodex和DSH For OortCloud Work以及VLStream数据分析生态共享额度，高效开启AI生产力。<br />
+        欢迎使用 OortCloud！订阅 OortCloud Token Plan，20元/月起，Qwen, DeepSeek, Kimi, GLM等顶级模型尝鲜，更有<span class="hero-hl">OortCodex</span>和<span class="hero-hl">DSH For OortCloud Work</span>以及<span class="hero-hl">VLStream数据分析生态</span>共享额度，高效开启AI生产力。<br />
         开始使用，登录你的 OortCloud 账户。获得强大模型、高质量的工程、成本分析等。
       </p>
     </div>
@@ -80,6 +80,9 @@
             <button v-else type="button" class="btn ghost" disabled>
               仅可升级
             </button>
+            <p v-if="upgrade.status === 'ready' && upgrade.currentPlan" class="plan-upgrade-tip">
+              当前仅支持升级至更高等级套餐
+            </p>
           </div>
 
           <!-- Pro / Pro+ / Ultra -->
@@ -114,6 +117,9 @@
             >
               {{ card.disabled ? (card.current ? '当前订阅' : '仅可升级') : '立即订阅' }}
             </button>
+            <p v-if="card.disabled" class="plan-upgrade-tip">
+              当前仅支持升级至更高等级套餐
+            </p>
           </div>
         </div>
       </template>
@@ -155,10 +161,11 @@
         <button type="button" class="btn primary lg" @click="buyPack">
           自选购买
         </button>
-        <p class="cp-note">
-          *在已选套餐基础上，灵活补充额外资源与功能，满足阶段性扩容或个性化需求，无需更换主套餐。
-        </p>
       </div>
+
+      <p class="tax-note">
+        *在已选套餐基础上，灵活补充额外资源与功能，满足阶段性扩容或个性化需求，无需更换主套餐。
+      </p>
 
       <div class="enterprise-band">
         <div>
@@ -586,7 +593,7 @@ watch(qty, (v) => {
 
 <style scoped lang="scss">
 .token-plan-page {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 48px 24px 80px;
   color: #0f172a;
@@ -608,21 +615,30 @@ watch(qty, (v) => {
   height: 60px;
 }
 .hero-name {
-  font-size: 48px;
-  font-weight: 600;
-  color: #2278FF;
+  font-size: 60px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #2278ff 0%, #8851f6f7 54%, #d231eef0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .hero-sub {
-  font-size: 48px;
-  font-weight: 600;
+  font-size: 60px;
+  font-weight: bold;
   color: #3D3D3D;
 }
 .hero-desc {
-  width: 1190px;
+  width: 930px;
+  max-width: 100%;
   margin: 0 auto;
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 32px;
   color: #333333;
+
+  .hero-hl {
+    color: #2278FF;
+  }
 }
 .segmented-wrap {
   position: relative;
@@ -680,7 +696,9 @@ watch(qty, (v) => {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
-  margin-bottom: 41px;
+  margin: 0 auto 41px;
+  padding-top: 16px;
+  justify-content: center;
 }
 .plan {
   position: relative;
@@ -721,7 +739,7 @@ watch(qty, (v) => {
     font-size: 16px;
     line-height: 160%;
     color: #333333;
-    margin-bottom: 18px;
+    margin-bottom: 8px;
     min-height: 36px;
   }
   ul {
@@ -729,7 +747,7 @@ watch(qty, (v) => {
     padding: 0;
     margin: 0 0 22px;
     display: grid;
-    gap: 10px;
+    gap: 0;
     flex: 1;
     li {
       display: flex;
@@ -742,16 +760,27 @@ watch(qty, (v) => {
     }
   }
 }
+.plan-upgrade-tip {
+  margin: 10px 0 0;
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
 .flag {
   position: absolute;
-  top: -1px;
-  right: 16px;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
   background: #2278FF;
   color: #fff;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 0 0 8px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 5px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+  z-index: 1;
 }
 .btn {
   display: inline-flex;
@@ -792,13 +821,13 @@ watch(qty, (v) => {
   }
 }
 .credit-pack {
-  width: 826px;
+  width: 700px;
   margin: 28px auto 0;
   border-radius: 16px;
   background: #F9F9F9;
-  padding: 20px;
+  padding: 24px 28px 20px;
   h4 {
-    margin: 0 0 11px;
+    margin: 0 0 6px;
     font-size: 32px;
     font-weight: 500;
     color: #3D3D3D;
@@ -806,14 +835,15 @@ watch(qty, (v) => {
   .cp-sub {
     font-size: 16px;
     line-height: 160%;
-    color: #3D3D3D;
-    margin-bottom: 32px;
+    color: #666666;
+    margin-bottom: 16px;
   }
   .cp-rate {
     display: flex;
     align-items: baseline;
     flex-wrap: wrap;
-    margin-bottom: 32px;
+    gap: 6px;
+    margin-bottom: 16px;
     b {
       font-weight: 500;
       font-size: 32px;
@@ -831,9 +861,9 @@ watch(qty, (v) => {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  margin-bottom: 32px;
+  margin-bottom: 12px;
   .qty-label {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: normal;
     line-height: 160%;
     color: #3D3D3D;
@@ -866,58 +896,81 @@ watch(qty, (v) => {
   }
 }
 .cp-summary {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
+  padding-top: 12px;
+  border-top: 1px dashed #e2e8f0;
+  display: grid;
+  gap: 8px;
   .cp-line {
     display: flex;
     justify-content: space-between;
-    gap: 12px;
-    font-size: 18px;
-    font-weight: normal;
-    line-height: 160%;
-    color: #3D3D3D;
-    padding: 5px 0;
-    &.total b {
-      font-size: 18px;
-      font-weight: normal;
-      line-height: 160%;
-      color: #2278FF;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #64748b;
+    padding: 0;
+    span:last-child {
+      color: #333333;
+    }
+    &.total {
+      margin-top: 4px;
+      color: #333333;
+      font-size: 16px;
+      b {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1;
+        color: #2278FF;
+      }
     }
   }
 }
-.cp-note {
-  margin: 14px 0 0;
-  font-size: 16px;
-  line-height: 24px;
+.tax-note {
+  max-width: 720px;
+  margin: 28px auto 0;
+  text-align: center;
   color: #666666;
+  font-size: 13px;
+  line-height: 1.6;
 }
 .btn.slim {
   width: auto;
   min-width: 120px;
-  padding: 0 20px;
+  height: 44px;
+  padding: 0 24px;
+  font-size: 15px;
+  font-weight: 600;
 }
 .enterprise-band {
-  margin-top: 28px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 980px;
+  margin: 40px auto 0;
+  padding: 26px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 24px;
   flex-wrap: wrap;
-  border: 1px solid #e2e8f0;
-  border-radius: 14px;
-  background: linear-gradient(90deg, #f0f7ff 0%, #f8fafc 100%);
-  padding: 22px 24px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 16px;
+  background: #F9F9F9;
   h4 {
     margin: 0 0 6px;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 17px;
+    font-weight: 600;
     color: #0f172a;
   }
   p {
     margin: 0;
-    font-size: 13px;
+    font-size: 13.5px;
     color: #64748b;
     line-height: 1.55;
-    max-width: 720px;
+    max-width: 640px;
+  }
+  .btn {
+    flex: none;
   }
 }
 .compare-head {

@@ -62,6 +62,10 @@
                   :disabled="controlsLocked || !isMethodEnabled(pay.plan, 'wechat_direct')"
                   @click="switchToMethod('wechat_direct')"
                 >
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="#2AAE67" aria-hidden="true">
+                    <path d="M9.4 4.2C5.3 4.2 2 6.9 2 10.2c0 1.9 1.1 3.6 2.8 4.7l-.7 2.2 2.5-1.3c.6.2 1.3.3 2 .3h.4a5 5 0 0 1-.2-1.4c0-3.2 3-5.8 6.8-5.8h.3c-.7-2.7-3.6-4.7-6.5-4.7zM7 8.1c.5 0 .9.4.9.9s-.4.9-.9.9-.9-.4-.9-.9.4-.9.9-.9zm4.8 0c.5 0 .9.4.9.9s-.4.9-.9.9-.9-.4-.9-.9.4-.9.9-.9z" />
+                    <path d="M22 14.6c0-2.8-2.7-5-6-5s-6 2.2-6 5 2.7 5 6 5c.6 0 1.2-.1 1.7-.2l2.1 1.1-.6-1.9c1.7-.9 2.8-2.4 2.8-4zm-8.1-.9c-.4 0-.8-.3-.8-.8 0-.4.4-.8.8-.8s.8.4.8.8-.4.8-.8.8zm4.2 0c-.4 0-.8-.3-.8-.8 0-.4.4-.8.8-.8s.8.4.8.8-.4.8-.8.8z" />
+                  </svg>
                   微信
                 </button>
                 <button
@@ -70,6 +74,10 @@
                   :disabled="controlsLocked || !isMethodEnabled(pay.plan, 'alipay_direct')"
                   @click="switchToMethod('alipay_direct')"
                 >
+                  <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                    <rect x="1.5" y="1.5" width="21" height="21" rx="5" fill="#1677FF" />
+                    <text x="12" y="16.2" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff">支</text>
+                  </svg>
                   支付宝
                 </button>
               </div>
@@ -217,7 +225,7 @@ function onQtyChange(e) {
 .modal {
   position: relative;
   z-index: 1;
-  width: min(860px, calc(100vw - 32px));
+  width: min(620px, calc(100vw - 32px));
   max-height: calc(100vh - 48px);
   overflow: auto;
   background: #fff;
@@ -244,28 +252,53 @@ h3 {
   color: #0f172a;
 }
 .pay-bill-layout {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 26px;
+}
+.pay-bill-info {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 .m-summary {
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   padding: 14px 16px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  background: #f8fafc;
   .row {
     display: flex;
     justify-content: space-between;
-    gap: 12px;
+    align-items: flex-start;
+    gap: 16px;
     font-size: 14px;
     color: #64748b;
-    padding: 6px 0;
-    .desc { text-align: right; max-width: 60%; color: #334155; }
+    padding: 4px 0;
+    > span:last-child {
+      color: #334155;
+      text-align: right;
+    }
+    .desc {
+      text-align: right;
+      max-width: 70%;
+      color: #334155;
+      line-height: 1.55;
+      white-space: normal;
+    }
     &.big {
-      margin-top: 6px;
-      padding-top: 10px;
-      border-top: 1px solid #e2e8f0;
-      b { color: #2278FF; font-size: 22px; }
+      margin-top: 8px;
+      padding-top: 12px;
+      border-top: 1px dashed #cbd5e1;
+      color: #0f172a;
+      font-weight: 700;
+      font-size: 16px;
+      align-items: center;
+      b {
+        color: #2278FF;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1;
+      }
     }
   }
 }
@@ -324,6 +357,16 @@ h3 {
     cursor: pointer;
     font-weight: 600;
     color: #334155;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    svg {
+      width: 24px;
+      height: 24px;
+      flex: none;
+      display: block;
+    }
     &.is-selected {
       border-color: #2278FF;
       background: rgba(34, 120, 255, 0.06);
@@ -333,17 +376,23 @@ h3 {
   }
 }
 .pay-bill-qr {
+  flex: none;
+  width: 272px;
   text-align: center;
   .m-sub { font-size: 13px; color: #64748b; margin: 0 0 12px; }
 }
 .qr-box {
+  width: 240px;
   min-height: 200px;
+  margin: 0 auto 12px;
+  padding: 16px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
-  background: #f8fafc;
+  background: #fff;
 }
 .qr-loading { color: #64748b; font-size: 14px; }
 .pay-status { margin-top: 10px; font-size: 13px; color: #475569; }
@@ -358,6 +407,7 @@ h3 {
   font-size: 12px;
   color: #94a3b8;
   line-height: 1.5;
+  text-align: center;
 }
 .pay-result {
   text-align: center;
