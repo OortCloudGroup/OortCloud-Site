@@ -76,7 +76,7 @@
       <video class="wBImg" src="/documents/演示视频.mp4" controls autoplay muted />
     </div> -->
     <div class="productBox w1380" style="padding-bottom: 10px;">
-      <div class="appSlider">
+      <div class="appSlider" :class="{ 'is-start': !canScrollLeft, 'is-end': !canScrollRight }">
         <div class="appSlider_controls">
           <img
             class="sliderBtn prev"
@@ -109,7 +109,7 @@
         </div>
       </div>
     </div>
-    <div class="productBox w1380 tokenPlanBox">
+    <div class="productBox w1190 tokenPlanBox">
       <div class="tokenPlan">
         <div class="tokenPlan_header">
           <img class="tokenPlan_logo" src="@/assets/img/tokenPlan/logo.png" alt="" />
@@ -117,7 +117,7 @@
           <span class="tokenPlan_sub">欢迎订阅</span>
         </div>
         <div class="tokenPlan_desc">
-          欢迎使用 OortCloud！订阅 OortCloud Token Plan，20元/月起，Qwen, DeepSeek, Kimi, GLM等顶级模型尝鲜，更有OortCodex和DSH For OortCloud Work以及VLStream数据分析生态共享额度，高效开启AI生产力。<br />
+          欢迎使用 OortCloud！订阅 OortCloud Token Plan，20元/月起，Qwen, DeepSeek, Kimi, GLM等顶级模型尝鲜，更有<span class="tokenPlan_hl">OortCodex</span>和<span class="tokenPlan_hl">DSH For OortCloud Work</span>以及<span class="tokenPlan_hl">VLStream数据分析生态</span>共享额度，高效开启AI生产力。<br />
           开始使用，登录你的 OortCloud 账户。获得强大模型、高质量的工程、成本分析等。
         </div>
         <div class="tokenPlan_btns">
@@ -166,20 +166,21 @@
           </n-carousel>
         </div>
         <div class="tokenPlan_footer">
-          VLStream在线体验网址:
+          <span>VLStream在线体验网址:</span>
           <a href="https://vlstream.oortcloudsmart.com:2443/bus/vls-ui/login" target="_blank" rel="noopener noreferrer">
+            <img class="tokenPlan_footer_icon" src="@/assets/img/tokenPlan/link.png" alt="" />
             https://vlstream.oortcloudsmart.com:2443/bus/vls-ui/login
           </a>
-          默认账号密码: admin / Codex@123456
+          <span>默认账号密码: admin / Codex@123456</span>
         </div>
       </div>
     </div>
-    <div class="productBox w1380" style="padding-bottom: 0px;">
+    <div class="productBox w1190" style="padding-bottom: 0px;">
       <div class="proT" style="padding-bottom: 40px;">
         想象一下，<span class="vlsUs vlsUs2">海量商业智能体</span> 尽在您的指尖
       </div>
     </div>
-    <div class="proTitleBox w1380 plan">
+    <div class="proTitleBox w1190 plan">
       <div class="plan_t">
         有什么需要改进吗?我们有相应的智能体来满足您的需求。
         <br />
@@ -191,34 +192,34 @@
         尽情想象，当每个人都能拥有方便工作的合适工具，并实现完美整合时，将会带来何等影响!
       </div>
     </div>
-    <div class="productBox w1380">
+    <div class="productBox w1190">
       <div class="proT" style="padding-bottom: 0px;">
         提升您的 <span style="color: #2278FF;">工作品质</span>
       </div>
-      <div class="w1380 webBottomImg2">
+      <div class="w1190 webBottomImg2">
         <video class="wBImg" src="/documents/首页.mp4" controls autoplay muted />
       </div>
     </div>
-    <div class="productBox w1380">
+    <div class="productBox w1190">
       <div class="proT">
         促进生产力的程序
       </div>
-      <div class="w1380 webBottomImg">
+      <div class="w1190 webBottomImg">
         <img class="wBImg" src="@/assets/software/home.png" alt="" />
       </div>
       <div class="proT_d">
         <span class="vlsUs vlsUs3">体验真正极速 </span>，告别繁琐数据录入，智能 AI助手，用户界面更快90 亳秒内搞定全部操作--比眨眼还快。
       </div>
     </div>
-    <div class="productBox w1380">
+    <div class="productBox w1190">
       <div class="proT">
         集技术之大成的平台
       </div>
-      <div class="w1380 webBottomImg">
+      <div class="w1190 webBottomImg">
         <img class="wBImg" src="@/assets/software/home1.png" alt="" />
       </div>
     </div>
-    <div class="productBox w1380">
+    <div class="productBox w1190">
       <div class="proT">
         企业<span style="color: #2278FF;">软件</span> 应该如此!
       </div>
@@ -253,10 +254,15 @@
             无专有数据格式，只有
             PostgreSQL，数据完全属于您！没有软件束缚，您可以拥有源代码、GitHub访问权限，自由选择在我们的基础设施上托管，或者自行搭建在本地。
           </div>
-          <div class="softIt_btn flexRowAC">
+          <a
+            class="softIt_btn flexRowAC"
+            href="https://github.com/OortCloudGroup"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img class="softIt_btn_img" src="@/assets/VLimg2.0/GitHub.png" alt="" />
             在GitHub关注我们
-          </div>
+          </a>
           <img class="softIt_img" src="@/assets/homeImg/home_bg2.png" alt="" />
         </div>
         <div class="softIt it2 flexRowAC">
@@ -287,7 +293,7 @@
           <div class="softIt_d d1">
             基于其开源开发模式，OortCloud 拥有强大的商业应用程序商店。试想一下，无论何种业务需求，都能轻松获取相应的应用程序。
           </div>
-          <div class="softIt_btn flexRowAC">
+          <div class="softIt_btn flexRowAC" @click="browseCommunityApps">
             浏览社群应用程序
           </div>
           <img class="softIt_img" src="@/assets/homeImg/home_bg5.png" alt="" />
@@ -304,7 +310,7 @@
         </div>
       </div>
     </div>
-    <div class="productBox use_t w1380">
+    <div class="productBox use_t w1190">
       <div class="proT" style="padding-bottom: 20px;">
         全球 <span style="color: #2278FF;">1.200万</span> 用户
       </div>
@@ -313,7 +319,7 @@
       </div>
       <img class="use_t_img" src="@/assets/software/home2.png" alt="" />
     </div>
-    <div class="productBox w1380">
+    <div class="productBox w1190">
       <div class="proT">
         <span style="color: #2278FF;">释放</span> 您的无限增潜能
       </div>
@@ -334,6 +340,7 @@ import { useSessionStorage } from '@vueuse/core'
 import { NCarousel } from 'naive-ui'
 import { getLastIndustry, getMyIndustryList } from '@/api/modules/industryScene'
 import { buildIndustryHomepageUrl, getIndustryHomepageUrl } from '@/utils/industryScene'
+import config from '@/config/index.js'
 // import homeApp_a1 from '@/assets/site/homeApp_a1.png'
 // import homeApp_a2 from '@/assets/site/homeApp_a2.png'
 // import homeApp_a3 from '@/assets/site/homeApp_a3.png'
@@ -421,11 +428,27 @@ const handleStart = async() => {
   }
 }
 
+const browseCommunityApps = () => {
+  if (!isLogin.value) {
+    navigateTo('/zh/siteNew/software/unLogin')
+    return
+  }
+  const token = auth.value.accessToken
+  window.sessionStorage.setItem('tempObj', JSON.stringify({
+    accessToken: token,
+    fromWhere: 'console_manage'
+  }))
+  window.open(
+    config.busURL + config.frontURLStr + '/app_market/index.html#/moreApp?accessToken=' + token + '&fromWhere=console_manage',
+    '_blank'
+  )
+}
+
 let appList = ref([])
 appList.value = [
 
   { t: 'OortCodex', dec: '把想法变成现实的能力属于每一个人', img: ty },
-  { t: 'DSH For Oortcloud Work', dec: '工作任务自动完成', img: bg },
+  { t: 'DSH For OortCloud Work', dec: '工作任务自动完成', img: bg },
   { t: 'OortCodex IDE', dec: '面向高效的软件工程化交付场景', img: bc },
 
   { t: '营销', dec: 'AI 生成话术，分析回放展示活动', img: yx },
@@ -463,9 +486,9 @@ appList.value = [
 
 const tokenPlanBanners = [
   tokenBannerOortCodex,
-  tokenBannerDsh,
-  tokenBannerVlstream,
   tokenBannerAiManga,
+  tokenBannerVlstream,
+  tokenBannerDsh,
   tokenBannerAiCamera
 ]
 
@@ -504,6 +527,11 @@ onMounted(() => {
 
 .w1380 {
   width: 1380px;
+  margin: 0 auto;
+}
+
+.w1190 {
+  width: 1190px;
   margin: 0 auto;
 }
 
@@ -1000,7 +1028,8 @@ background-image: url("@/assets/software/icon_tou_2.png");
     padding-bottom: 48px;
     color: #333333;
     font-weight: normal;
-    font-size: 24px;
+    line-height: 30px;
+    font-size: 20px;
     text-align: center;
   }
 }
@@ -1052,7 +1081,7 @@ background-image: url("@/assets/software/icon_tou_2.png");
 }
 
 .softBox {
-  align-items: flex-start;
+  align-items: stretch;
   flex-wrap: wrap;
   text-align: left;
   gap: 40px;
@@ -1062,7 +1091,8 @@ background-image: url("@/assets/software/icon_tou_2.png");
     flex-direction: column;
     align-items: flex-start;
     width: calc(50% - 104px);
-    height: calc(700px - 44px);
+    min-height: calc(700px - 44px);
+    height: auto;
     padding: 40px 40px 0;
     border-radius: 36px;
     background: #FCFCE8;
@@ -1111,6 +1141,8 @@ background-image: url("@/assets/software/icon_tou_2.png");
     border-radius: 12px;
     color: #fff;
     background-color: #2278FF;
+    text-decoration: none;
+    cursor: pointer;
 
     .softIt_btn_img {
       width: 28px;
@@ -1120,7 +1152,7 @@ background-image: url("@/assets/software/icon_tou_2.png");
   }
 
   .softIt_img {
-    margin: 0 -40px 0 auto;
+    margin: auto -40px 0 auto;
     height: 278px;
     width: auto;
     border-radius: 12px;
@@ -1235,6 +1267,37 @@ background-image: url("@/assets/software/icon_tou_2.png");
   position: relative;
   padding-bottom: 100px;
 
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 100px;
+    width: 120px;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 0.2s;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(269deg, #ffffff00 0%, #ffffff 99%);
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(91deg, #ffffff00 0%, #ffffff 99%);
+  }
+
+  &.is-start::before {
+    opacity: 0;
+  }
+
+  &.is-end::after {
+    opacity: 0;
+  }
+
   .appSlider_controls {
     position: absolute;
     bottom: 60px;
@@ -1318,14 +1381,11 @@ background-image: url("@/assets/software/icon_tou_2.png");
 .tokenPlan {
   text-align: left;
   padding: 40px 48px 32px;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(0, 0, 0, 0.04);
 
   .tokenPlan_header {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
     margin-bottom: 16px;
   }
@@ -1338,27 +1398,37 @@ background-image: url("@/assets/software/icon_tou_2.png");
   }
 
   .tokenPlan_name {
-    font-size: 48px;
-    font-weight: 600;
-    color: #2278FF;
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #2278ff 0%, #8851f6f7 54%, #d231eef0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .tokenPlan_sub {
-    font-size: 48px;
-    font-weight: 600;
-    color: #3D3D3D
+    font-size: 60px;
+    font-weight: bold;
+    color: #3D3D3D;
   }
 
   .tokenPlan_desc {
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 32px;
     color: #333333;
-    margin-bottom: 40px;
-    max-width: 1190px;
+    margin: 0 auto 40px;
+    width: 930px;
+    text-align: center;
+
+    .tokenPlan_hl {
+      color: #2278FF;
+    }
   }
 
   .tokenPlan_btns {
     display: flex;
+    justify-content: center;
     gap: 20px;
     margin-bottom: 60px;
   }
@@ -1447,14 +1517,27 @@ background-image: url("@/assets/software/icon_tou_2.png");
   }
 
   .tokenPlan_footer {
-    font-size: 20px;
-    line-height: 36px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 24px;
     color: #333333;
     word-break: break-all;
+
+    .tokenPlan_footer_icon {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin: 0 4px;
+      cursor: pointer;
+    }
 
     a {
       color: #2278FF;
       text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
