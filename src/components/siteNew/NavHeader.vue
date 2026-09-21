@@ -899,7 +899,7 @@ onBeforeUnmount(() => {
   right: 0;
   width: 100%;
   height: 82px;
-  z-index: 10;
+  z-index: 100;
 }
 
 .nav_title::after {

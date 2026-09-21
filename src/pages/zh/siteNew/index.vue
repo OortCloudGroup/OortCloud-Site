@@ -1315,7 +1315,7 @@ background-image: url("@/assets/software/icon_tou_2.png");
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
-    z-index: 10;
+    z-index: 3;
 
     .sliderBtn {
       width: 40px;

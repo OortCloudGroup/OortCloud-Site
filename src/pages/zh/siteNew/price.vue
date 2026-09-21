@@ -1029,6 +1029,7 @@ watch(qty, (v) => {
 }
 .compare-table {
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   th, td {
     padding: 12px 16px;
@@ -1036,11 +1037,16 @@ watch(qty, (v) => {
     font-size: 16px;
     color: #333333;
     border-bottom: 1px solid #f1f5f9;
+    word-break: break-word;
   }
   th:first-child,
   td:first-child {
     text-align: left;
     width: 28%;
+  }
+  th:not(:first-child),
+  td:not(:first-child) {
+    width: 18%;
   }
   thead th {
     background: #FAFAFA;
@@ -1056,10 +1062,10 @@ watch(qty, (v) => {
   }
   tbody tr:last-child td { border-bottom: none; }
   .hot {
-    background: #E7F4EB;
+    background: rgba(34, 120, 255, 0.06);
   }
   thead th.hot {
-    background: #E7F4EB;
+    background: rgba(34, 120, 255, 0.06);
   }
   .yes {
     width: 20px;
