@@ -458,6 +458,17 @@ const loadLoginStorage = (force = false) => {
   tenantIdStorage.value = window.localStorage.getItem(TENANT_ID_SYNC_KEY) || ''
 }
 
+const clearAuthQuery = () => {
+  if (!process.client) return
+  const hasAuthQuery = ['access_token', 'id', 'tenant_id'].some(key => route.query[key] != null)
+  if (!hasAuthQuery) return
+  const query = { ...route.query }
+  delete query.access_token
+  delete query.id
+  delete query.tenant_id
+  router.replace({ path: route.path, query, hash: route.hash })
+}
+
 const resetLoginState = (clearSharedStorage = false) => {
   userInfo.value = null
   userInfoStorage.value = null
@@ -470,6 +481,8 @@ const resetLoginState = (clearSharedStorage = false) => {
     window.localStorage.removeItem(ACCESS_TOKEN_SYNC_KEY)
     window.localStorage.removeItem(TENANT_ID_SYNC_KEY)
     window.localStorage.setItem('oortLogoutAt', String(Date.now()))
+    clearAuthQuery()
+    document.dispatchEvent(new CustomEvent('oort-auth:logout'))
   }
 }
 
@@ -504,6 +517,7 @@ const verifyToken = async() => {
     resetLoginState()
     return false
   }
+  const prevToken = accessTokenStorage.value
   try {
     const res = await ofetch(config.busURL + '/bus/apaas-sso/sso/v1/verifyToken', {
       method: 'POST',
@@ -516,6 +530,11 @@ const verifyToken = async() => {
       accessTokenStorage.value = res.data.accessToken
       tenantIdStorage.value = res.data.tenantId
       syncLoginStorage()
+      clearAuthQuery()
+      // 仅在令牌从无到有或发生变化时通知，避免定时校验重复触发订阅恢复
+      if (process.client && prevToken !== res.data.accessToken) {
+        document.dispatchEvent(new CustomEvent('oort-auth:refreshed'))
+      }
       return true
     }
   } catch (error) {

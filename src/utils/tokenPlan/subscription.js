@@ -1706,6 +1706,7 @@ export function initSubscription() {
   document.addEventListener('oort-auth:logout', () => {
     upgradeRequestSeq += 1
     upgradeOptions.set({ status: 'public', currentPlan: null, plans: null, purchasableIds: [], message: '' })
+    closePayModal()
   })
 
   /* 页面加载先读取 /api/status 的 credits_per_cny，再预热加量包配置：
@@ -1743,15 +1744,11 @@ export function initSubscription() {
     return
   }
   // 路径 B（同页回跳兜底）：未登录点击时被拦截退化为当前页跳转登录，
-  // 登录成功回跳本站 → 页面加载时 auth 消费回调令牌并校验，
+  // 登录成功回跳本站 → 页面加载时 auth 已可从 URL/session 读到令牌，
   // 此处检测到 pending 且已登录即自动打开支付弹窗，无需再次点击。
-  // 页面加载时仅当存在明确的中断购买意图才自动继续；
-  // ensureLoggedIn 内部带防重复跳转标记，未登录时不会反复触发登录跳转。
+  // 未登录时只保留 pending，不再调用 ensureLoggedIn，避免回跳瞬间再次踢回登录页。
   const pending = readPending()
-  if (pending) {
-    ensureLoggedIn().then((loggedIn) => {
-      if (!loggedIn) return // 未登录不打扰用户，选择已保留
-      tryResumePending()
-    })
+  if (pending && isLoggedIn()) {
+    tryResumePending()
   }
 }
