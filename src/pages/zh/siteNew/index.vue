@@ -36,9 +36,9 @@
             <div v-if="isLogin" class="buttom1" @click="handleStart">
               Start
             </div>
-            <nuxt-link v-else class="buttom1" to="http://oort.oortcloudsmart.com:23410" target="_blank">
+            <a v-else class="buttom1" :href="gotoLoginURL" target="_blank" rel="noopener noreferrer">
               Sign in
-            </nuxt-link>
+            </a>
             <nuxt-link class="buttom2" to="/zh/siteNew/industy/buy">
               Buy OortCloud Super AI Agent
             </nuxt-link>
@@ -401,6 +401,16 @@ const auth = computed(() => ({
   accessToken: accessTokenStorage.value || getQueryValue(route.query.access_token) || '',
   tenantId: tenantIdStorage.value || getQueryValue(route.query.tenant_id) || ''
 }))
+const gotoLoginURL = computed(() => {
+  const redirectUri = process.client
+    ? window.location.origin + route.path
+    : 'https://oortcloudsmart.com/zh/siteNew/'
+  return config.busURL +
+    '/bus/apaas-web/loginPage/index.html?appname=' +
+    encodeURIComponent(config.ssoAppName) +
+    '&redirect_uri=' +
+    encodeURIComponent(redirectUri)
+})
 
 // 已登录后按钮为 Start：点击直达当前生效场景（行业 / 场景 / 职能）的首页
 const handleStart = async() => {
