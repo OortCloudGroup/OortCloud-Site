@@ -121,12 +121,14 @@
           开始使用，登录你的 OortCloud 账户。获得强大模型、高质量的工程、成本分析等。
         </div>
         <div class="tokenPlan_btns">
-          <div v-if="isLogin" class="tokenPlan_btn primary" @click="handleStart">
+          <a
+            class="tokenPlan_btn primary"
+            :href="oortCodexUseURL"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             立即使用
-          </div>
-          <nuxt-link v-else class="tokenPlan_btn primary" to="http://oort.oortcloudsmart.com:23410" target="_blank">
-            立即使用
-          </nuxt-link>
+          </a>
           <nuxt-link class="tokenPlan_btn secondary" to="/zh/siteNew/price">
             升级订阅
           </nuxt-link>
@@ -420,6 +422,11 @@ const auth = computed(() => ({
   accessToken: accessTokenStorage.value || getQueryValue(route.query.access_token) || '',
   tenantId: tenantIdStorage.value || getQueryValue(route.query.tenant_id) || ''
 }))
+const oortCodexUseURL = computed(() => {
+  const base = 'https://workup.oortcloudsmart.com:2443/bus/apaas-web/oortcodexweb/index.html'
+  const token = auth.value.accessToken
+  return token ? `${base}?accessToken=${encodeURIComponent(token)}` : base
+})
 const gotoLoginURL = computed(() => {
   const redirectUri = process.client
     ? window.location.origin + route.path
