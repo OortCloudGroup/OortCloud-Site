@@ -618,8 +618,8 @@ watch(qty, (v) => {
   margin-bottom: 16px;
 }
 .hero-logo {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
 }
 .hero-name {
   font-size: 60px;

@@ -215,8 +215,19 @@
       <div class="proT">
         集技术之大成的平台
       </div>
-      <div class="w1190 webBottomImg">
-        <img class="wBImg" src="@/assets/software/home1.png" alt="" />
+      <div class="platformGrid">
+        <div
+          v-for="item in platformDevices"
+          :key="item.name"
+          class="platformGrid_item"
+        >
+          <div class="platformGrid_frame">
+            <img class="platformGrid_img" :src="item.img" :alt="item.name" />
+          </div>
+          <div class="platformGrid_name">
+            {{ item.name }}
+          </div>
+        </div>
       </div>
     </div>
     <div class="productBox w1190">
@@ -376,6 +387,14 @@ import yw from '@/assets/img/yw.png'
 import hr from '@/assets/img/hr.png'
 import hy from '@/assets/img/hy.png'
 import gz from '@/assets/img/gz.png'
+import platformCustomPhone from '@/assets/software/custom-phone.png'
+import platformUnmannedCabinet from '@/assets/software/unmanned-cabinet.png'
+import platformLawRecorder from '@/assets/software/law-recorder.png'
+import platformEBadge from '@/assets/software/e-badge.png'
+import platformELicensePlate from '@/assets/software/e-license-plate.png'
+import platformVlstreamCamera from '@/assets/software/vlstream-camera.png'
+import platformAiPrinter from '@/assets/software/ai-printer.png'
+import tokenBannerTokenPlan from '@/assets/img/tokenPlan/token-plan.png'
 import tokenBannerOortCodex from '@/assets/img/tokenPlan/oortcodex.png'
 import tokenBannerDsh from '@/assets/img/tokenPlan/dsh.png'
 import tokenBannerVlstream from '@/assets/img/tokenPlan/vlstream.png'
@@ -495,11 +514,22 @@ appList.value = [
 // ]
 
 const tokenPlanBanners = [
+  tokenBannerTokenPlan,
   tokenBannerOortCodex,
   tokenBannerAiManga,
   tokenBannerVlstream,
   tokenBannerDsh,
   tokenBannerAiCamera
+]
+
+const platformDevices = [
+  { name: '定制手机', img: platformCustomPhone },
+  { name: '无人值守设备柜', img: platformUnmannedCabinet },
+  { name: '执法记录仪', img: platformLawRecorder },
+  { name: '电子工牌', img: platformEBadge },
+  { name: '电子车牌', img: platformELicensePlate },
+  { name: 'VLStream AI 摄像机', img: platformVlstreamCamera },
+  { name: 'AI 自助打印机', img: platformAiPrinter }
 ]
 
 const appListRef = ref(null)
@@ -699,6 +729,37 @@ onMounted(() => {
     width: 100%;
     height: initial;
     border-radius: 24px;
+  }
+}
+
+.platformGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 70px 36px;
+  padding: 60px 0 110px;
+
+  &_item {
+    width: 232px;
+    height: 240px;
+    text-align: center;
+  }
+
+  &_frame {
+    background: #fff;
+  }
+
+  &_img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  &_name {
+    margin-top: 14px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.4;
   }
 }
 
@@ -1402,8 +1463,8 @@ background-image: url("@/assets/software/icon_tou_2.png");
 
   .tokenPlan_logo {
     flex-shrink: 0;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
   }
 
