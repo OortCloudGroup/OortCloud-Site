@@ -613,7 +613,7 @@ watch(qty, (v) => {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
   flex-wrap: wrap;
   margin-bottom: 16px;
 }

@@ -1443,6 +1443,7 @@ background-image: url("@/assets/software/icon_tou_2.png");
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 8px;
+    white-space: nowrap;
   }
 
   .appItem_s {
@@ -1464,7 +1465,7 @@ background-image: url("@/assets/software/icon_tou_2.png");
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 20px;
     margin-bottom: 16px;
   }
 
