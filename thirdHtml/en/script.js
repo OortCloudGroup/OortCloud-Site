@@ -22,29 +22,59 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Featured banner carousel (aligned with zh n-carousel: autoplay 2s + bottom dots)
+    // Featured banner carousel (match zh n-carousel: slide + 300ms + seamless loop)
     const initFeaturedCarousel = () => {
         const root = document.querySelector('.featured-carousel');
         if (!root) return;
 
-        const slides = Array.from(root.querySelectorAll('.featured-carousel-slide'));
+        const track = root.querySelector('.featured-carousel-track');
+        const realSlides = Array.from(root.querySelectorAll('.featured-carousel-slide'));
         const dots = Array.from(root.querySelectorAll('.featured-carousel-dot'));
-        if (slides.length === 0) return;
+        if (!track || realSlides.length === 0) return;
 
+        const total = realSlides.length;
         const intervalMs = Number(root.dataset.interval) || 2000;
+        const transitionMs = 300;
         const dotSrc = 'images/carousel/dot.png';
         const dotActiveSrc = 'images/carousel/dot-active.png';
-        let current = slides.findIndex(slide => slide.classList.contains('is-active'));
-        if (current < 0) current = 0;
-        let timer = null;
 
-        const goTo = (index) => {
-            current = (index + slides.length) % slides.length;
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('is-active', i === current);
+        // Clone edges for seamless loop (same idea as n-carousel duplicatedable)
+        const firstClone = realSlides[0].cloneNode(true);
+        const lastClone = realSlides[total - 1].cloneNode(true);
+        firstClone.classList.remove('is-active');
+        lastClone.classList.remove('is-active');
+        firstClone.setAttribute('aria-hidden', 'true');
+        lastClone.setAttribute('aria-hidden', 'true');
+        track.insertBefore(lastClone, realSlides[0]);
+        track.appendChild(firstClone);
+
+        // Track indices: [cloneLast, 0..n-1, cloneFirst]
+        let trackIndex = 1;
+        let timer = null;
+        let transitionTimer = null;
+        let inTransition = false;
+        let startX = 0;
+        let deltaX = 0;
+        let dragStartTime = 0;
+        let dragging = false;
+
+        const setTrack = (index, withTransition = true) => {
+            if (withTransition) {
+                root.classList.remove('is-dragging');
+                track.style.transitionDuration = `${transitionMs}ms`;
+            } else {
+                root.classList.add('is-dragging');
+                track.style.transitionDuration = '0ms';
+            }
+            track.style.transform = `translate3d(${-index * 100}%, 0, 0)`;
+        };
+
+        const syncDots = (index) => {
+            realSlides.forEach((slide, i) => {
+                slide.classList.toggle('is-active', i === index);
             });
             dots.forEach((dot, i) => {
-                const active = i === current;
+                const active = i === index;
                 dot.classList.toggle('is-active', active);
                 dot.setAttribute('aria-selected', active ? 'true' : 'false');
                 const img = dot.querySelector('img');
@@ -52,9 +82,56 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         };
 
+        const displayFromTrack = (index) => {
+            if (index === 0) return total - 1;
+            if (index === total + 1) return 0;
+            return index - 1;
+        };
+
+        const normalizeAfterTransition = () => {
+            if (transitionTimer) {
+                window.clearTimeout(transitionTimer);
+                transitionTimer = null;
+            }
+            if (trackIndex === 0) {
+                trackIndex = total;
+                setTrack(trackIndex, false);
+            } else if (trackIndex === total + 1) {
+                trackIndex = 1;
+                setTrack(trackIndex, false);
+            }
+            void track.offsetWidth;
+            root.classList.remove('is-dragging');
+            track.style.transitionDuration = `${transitionMs}ms`;
+            inTransition = false;
+        };
+
+        const goToTrack = (nextTrackIndex, withTransition = true) => {
+            trackIndex = nextTrackIndex;
+            setTrack(trackIndex, withTransition);
+            syncDots(displayFromTrack(trackIndex));
+            if (withTransition) {
+                inTransition = true;
+                if (transitionTimer) window.clearTimeout(transitionTimer);
+                transitionTimer = window.setTimeout(normalizeAfterTransition, transitionMs + 50);
+            } else {
+                inTransition = false;
+            }
+        };
+
+        const goToDisplay = (index) => {
+            const normalized = ((index % total) + total) % total;
+            goToTrack(normalized + 1, true);
+        };
+
+        const next = () => goToTrack(trackIndex + 1, true);
+        const prev = () => goToTrack(trackIndex - 1, true);
+
         const start = () => {
             stop();
-            timer = window.setInterval(() => goTo(current + 1), intervalMs);
+            timer = window.setInterval(() => {
+                if (!dragging && !inTransition) next();
+            }, intervalMs);
         };
 
         const stop = () => {
@@ -64,39 +141,75 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
 
+        track.addEventListener('transitionend', (e) => {
+            if (e.target !== track || e.propertyName !== 'transform') return;
+            normalizeAfterTransition();
+        });
+
         dots.forEach((dot, i) => {
             dot.addEventListener('click', () => {
-                goTo(i);
+                if (inTransition) return;
+                goToDisplay(i);
                 start();
             });
         });
 
-        // Drag / swipe like zh n-carousel draggable
-        let startX = 0;
-        let dragging = false;
         root.addEventListener('pointerdown', (e) => {
+            if (e.pointerType === 'mouse' && e.button !== 0) return;
+            if (inTransition) return;
             dragging = true;
+            deltaX = 0;
             startX = e.clientX;
+            dragStartTime = Date.now();
+            root.classList.add('is-dragging');
+            track.style.transitionDuration = '0ms';
             root.setPointerCapture?.(e.pointerId);
             stop();
         });
-        root.addEventListener('pointerup', (e) => {
+
+        root.addEventListener('pointermove', (e) => {
+            if (!dragging) return;
+            const width = root.offsetWidth || 1;
+            // Match n-carousel: clamp drag within one slide width
+            deltaX = Math.max(-width, Math.min(width, e.clientX - startX));
+            const offset = (-trackIndex * width) + deltaX;
+            track.style.transform = `translate3d(${offset}px, 0, 0)`;
+        });
+
+        const endDrag = () => {
             if (!dragging) return;
             dragging = false;
-            const delta = e.clientX - startX;
-            if (Math.abs(delta) > 40) {
-                goTo(current + (delta < 0 ? 1 : -1));
-            }
-            start();
-        });
-        root.addEventListener('pointercancel', () => {
-            dragging = false;
-            start();
-        });
-        root.addEventListener('mouseenter', stop);
-        root.addEventListener('mouseleave', start);
+            root.classList.remove('is-dragging');
+            track.style.transitionDuration = `${transitionMs}ms`;
 
-        goTo(current);
+            const width = root.offsetWidth || 1;
+            const elapsed = Math.max(Date.now() - dragStartTime, 1);
+            const velocity = deltaX / elapsed; // px per ms
+            // Match n-carousel: >50% width or faster than 0.4px/ms
+            if (deltaX > width / 2 || velocity > 0.4) {
+                prev();
+            } else if (deltaX < -width / 2 || velocity < -0.4) {
+                next();
+            } else {
+                goToTrack(trackIndex, true);
+            }
+            deltaX = 0;
+            start();
+        };
+
+        root.addEventListener('pointerup', endDrag);
+        root.addEventListener('pointercancel', endDrag);
+        root.addEventListener('mouseenter', stop);
+        root.addEventListener('mouseleave', () => {
+            if (dragging) endDrag();
+            else start();
+        });
+
+        goToTrack(1, false);
+        requestAnimationFrame(() => {
+            root.classList.remove('is-dragging');
+            track.style.transitionDuration = `${transitionMs}ms`;
+        });
         start();
     };
 

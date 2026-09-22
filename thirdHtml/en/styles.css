@@ -562,21 +562,26 @@ a {
     border-radius: 12px;
     overflow: hidden;
     user-select: none;
+    touch-action: pan-y;
 }
 
 .featured-carousel-track {
-    position: relative;
+    display: flex;
     width: 100%;
+    will-change: transform;
+    transition-property: transform;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+
+.featured-carousel.is-dragging .featured-carousel-track {
+    transition: none;
 }
 
 .featured-carousel-slide {
-    display: none;
+    flex: 0 0 100%;
     width: 100%;
-}
-
-.featured-carousel-slide.is-active {
-    display: block;
-    animation: featuredFadeIn 0.45s ease;
+    min-width: 100%;
 }
 
 .featured-carousel-slide img {
@@ -586,6 +591,11 @@ a {
     object-fit: cover;
     border-radius: 12px;
     cursor: grab;
+    pointer-events: none;
+}
+
+.featured-carousel.is-dragging .featured-carousel-slide img {
+    cursor: grabbing;
 }
 
 .featured-carousel-dots {
@@ -618,11 +628,6 @@ a {
 .featured-carousel-dot.is-active img {
     width: 28px;
     height: 8px;
-}
-
-@keyframes featuredFadeIn {
-    from { opacity: 0.35; }
-    to { opacity: 1; }
 }
 
 .btn-primary {
